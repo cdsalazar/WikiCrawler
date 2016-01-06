@@ -1,0 +1,98 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Member variable
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In object-oriented programming, a member variable (sometimes called a member field) is a variable that is associated with a specific object, and accessible for all its methods (member functions). In class-based languages, these are distinguished into two types: if there is only one copy of the variable shared with all instances of the class, it is called a class variable or static member variable; while if each instance of the class has its own copy of the variable, the variable is called an instance variable.[1]
+Examples[edit]
+Java
+
+
+class Program
+{
+    static void Main()
+    {
+    	// This is a local variable. Its lifespan
+    	// is determined by lexical scope.
+    	Foo foo;
+    }
+}
+
+class Foo
+{
+    // This is a member variable - a new instance
+    // of this variable will be created for each 
+    // new instance of Foo.  The lifespan of this
+    // variable is equal to the lifespan of "this"
+    // instance of Foo
+    int bar;
+}
+
+C++
+
+
+#include &lt;iostream&gt;
+class Foo {
+    int bar; //Member variable
+  public:
+    void setBar (int newBar) {bar = newBar;}
+};
+
+int main () {
+  Foo rect; //Local variable
+  return 0;
+}
+
+References[edit]
+
+
+^ Richard G. Baldwin (1999-03-10). "Q - What is a member variable?". http://www.dickbaldwin.com/: Richard G Baldwin Programming Tutorials. Retrieved 2011-08-12. A member variable is a member of a class (class variable) or a member of an object instantiated from that class (instance variable). It must be declared within a class, but not within the body of a method of the class.&#160;
+
+
+See also[edit]
+
+Global variable
+Local variable
+
+
+
+
+
+This computer-programming-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Member_variable&amp;oldid=685831701"					
+				Categories: Object-oriented programmingVariable (computer science)Computer programming stubsHidden categories: All stub articles				
+							
+		
+		
+			

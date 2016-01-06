@@ -1,0 +1,243 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Off-side rule
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the programming language syntax feature.  For other uses, see Offside (disambiguation).
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2011)
+
+
+A computer programming language is said to adhere to the off-side rule if blocks in that language are expressed by their indentation.[1][2] The term was coined by Peter J. Landin, after the offside law of football (soccer). This is contrasted with free-form languages, notably curly bracket programming languages, where indentation is not meaningful and indent style is only a matter of convention and code formatting.
+
+
+
+Contents
+
+
+1 Definition
+2 Code examples
+3 Implementation
+4 Alternatives
+5 Off-side rule languages
+6 See also
+7 References
+
+
+
+Definition[edit]
+Peter J. Landin, in an article called "The Next 700 Programming Languages", defined the off-side rule thus: "Any non-whitespace token to the left of the first such token on the previous line is taken to be the start of a new declaration."[3]
+Code examples[edit]
+The following is an example of indentation blocks in Python. Note that the colons are part of the Python language syntax for readability reasons,[4] and are not necessary to implement the off-side rule.
+
+
+ def is_even(a):
+     if a % 2 == 0:
+         print('Even!')
+         return True
+     print('Odd!')
+     return False
+
+Implementation[edit]
+The off-side rule can be implemented in the lexical analysis phase, as in Python, where increasing the indentation results in the lexer outputting an INDENT token, and decreasing the indentation results in the lexer outputting a DEDENT token.[5] These tokens correspond to the opening brace { and closing brace } in languages that use braces for blocks, and means that the phrase grammar does not depend on whether braces or indentation are used. This requires that the lexer hold state, namely the current indentation level, and thus can detect changes in indentation when this changes, and thus the lexical grammar is not context-free&#160;– INDENT/DEDENT depend on the contextual information of previous indentation level.
+Alternatives[edit]
+The primary alternative to delimiting blocks, popularized by C, is to ignore whitespace and mark blocks explicitly with curly brackets (i.e. { and }) or some other delimiter. While this allows for more freedom&#160;– the developer might choose not to indent small pieces of code like the break and continue statements&#160;– sloppily indented code might lead the reader astray.
+Lisp and other S-expression based languages do not differentiate statements from expressions, and parentheses are enough to control the scoping of all statements within the language. As in curly bracket languages, the lengths of the whitespaces are ignored.
+Another alternative is for each block to begin and end with explicit keywords. For example in Pascal blocks start with keyword begin and end with keyword end. In some languages (but not Pascal), this means that newlines are important[citation needed] (unlike in curly brace languages), but the indentation is not. In BASIC and FORTRAN, blocks begin with the block name (such as IF) and end with the block name prepended with END (e.g. END IF). The Bourne shell (sh, and bash) is similar, but the ending of the block is usually given by the name of the block written backward (e.g. case starts a conditional statement and it spans until the matching esac).
+Off-side rule languages[edit]
+
+ABC
+Boo
+BuddyScript
+Cobra
+CoffeeScript
+Converge
+Curry
+F# (if #light "off" is not specified)
+Genie
+Haml
+Haskell[6] (only for where, let, do, or of clauses when braces are omitted)
+ISWIM, the abstract language that introduced the rule
+LiveScript
+Miranda
+MoonScript
+Nemerle
+Nim
+occam
+PROMAL
+PureScript
+Python
+Sass
+Spin
+XL
+Ya
+YAML
+
+See also[edit]
+
+Python syntax and semantics#Indentation
+Prettyprint
+Whitespace
+
+References[edit]
+
+
+^ Hutton, G. (Dec 6, 2012). "Parsing Using Combinators". In Davis, Kei; Hughes, John. Functional Programming: Proceedings of the 1989 Glasgow Workshop 21–23 August 1989, Fraserburgh, Scotland. Springer Science &amp; Business Media. pp.&#160;362–364. Retrieved September 3, 2015.&#160;
+^ Turner, D.A. (August 13, 2013). "Some History of Functional Programming Languages (Invited Talk)". In Loidl, Hans Wolfgang; Peña, Ricardo. Trends in Functional Programming: 13th International Symposium, TFP 2012, St Andrews, UK, June 12-14, 2012, Revised Selected Papers. Springer. p.&#160;8. Retrieved September 3, 2015.&#160;
+^ Landin, P. J. (March 1966). "The next 700 programming languages" (PDF). Comm. ACM 9 (3): 157–166. doi:10.1145/365230.365257.&#160;
+^ Python FAQ on colons
+^ Python Documentation, 2. Lexical analysis: 2.1.8. Indentation
+^ The Haskell Report - Layout
+
+
+This article is based on material taken from the Free On-line Dictionary of Computing prior to 1 November 2008 and incorporated under the "relicensing" terms of the GFDL, version 1.3 or later.
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Off-side_rule&amp;oldid=679284373"					
+				Categories: Programming language topicsHidden categories: Articles needing additional references from December 2011All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from June 2012				
+							
+		
+		
+			

@@ -1,0 +1,490 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Null-terminated string
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Main article: String (computer science) § Null-terminated
+In computer programming, a null-terminated string is a character string stored as an array containing the characters and terminated with a null character ('\0', called NUL in ASCII). Alternative names are C string, which refers to the C programming language and ASCIIZ (note that C strings do not imply the use of ASCII).
+The length of a C string is found by searching for the (first) NUL byte. This can be slow as it takes O(n) (linear time) with respect to the string length. It also means that a NUL cannot be inside the string, as the only NUL is the one marking the end.
+
+
+
+Contents
+
+
+1 History
+2 Implementations
+3 Limitations
+4 Character encodings
+5 Improvements
+6 References
+
+
+
+History[edit]
+Null-terminated strings were produced by the .ASCIZ directive of the PDP-11 assembly languages and the ASCIZ directive of the MACRO-10 macro assembly language for the PDP-10. These predate the development of the C programming language, but other forms of strings were often used.
+At the time C (and the languages that it was derived from) was developed, memory was extremely limited, so using only one byte of overhead to store the length of a string was attractive. The only popular alternative at that time, usually called a "Pascal string" (though also used by early versions of BASIC), used a leading byte to store the length of the string. This allows the string to contain NUL and made finding the length need only one memory access (O(1) (constant) time). However, C designer Dennis Ritchie chose to follow the convention of NUL-termination, already established in BCPL,
+
+to avoid the limitation on the length of a string caused by holding the count in an 8- or 9-bit slot, and partly because maintaining the count seemed, in our experience, less convenient than using a terminator.[1]
+
+This had some influence on CPU instruction set design. Some CPUs in the 1970s and 1980s, such as the Zilog Z80 and the DEC VAX, had dedicated instructions for handling length-prefixed strings. However, as the NUL-terminated string gained traction, CPU designers began to take it into account, as seen for example in IBM's decision to add the "Logical String Assist" instructions to the ES/9000 520 in 1992.
+FreeBSD developer Poul-Henning Kamp, writing in ACM Queue, would later refer to the victory of the C string over use of a 2-byte (not 1-byte) length as "the most expensive one-byte mistake" ever.[2]
+Implementations[edit]
+
+
+
+This section requires expansion. (November 2011)
+
+
+C programming language supports null-terminated strings as the primary string type.[3] There are a lot of functions for string handling in the C standard library.
+Limitations[edit]
+While simple to implement, this representation has been prone to errors and performance problems.
+The NUL termination has historically created security problems.[4] A NUL byte inserted into the middle of a string will truncate it unexpectedly. A common bug was to not allocate the additional space for the NUL, so it was written over adjacent memory. Another was to not write the NUL at all, which was often not detected during testing because a NUL was already there by chance from previous use of the same block of memory. Due to the expense of finding the length, many programs did not bother before copying a string to a fixed-size buffer, causing a buffer overflow if it was too long.
+The inability to store a NUL requires that string data and binary data be kept distinct and handled by different functions (with the latter requiring the length of the data to also be supplied). This can lead to code redundancy and errors when the wrong function is used.
+The speed problems with finding the length can usually be mitigated by combining it with another operation that is O(n) anyway, such as in strlcpy. However, this does not always result in an intuitive API.
+Character encodings[edit]
+Null-terminated strings require of the encoding that it does not use the zero code anywhere.
+It is not possible to store every possible ASCII or UTF-8 string in a null-terminated string, as the encoding of the NUL character is a zero byte.[5][6][7] However, it is common to store the subset of ASCII or UTF-8 -- every character except the NUL character -- in null-terminated strings. Some systems use "modified UTF-8" which encodes the NUL character as two non-zero bytes (0xC0, 0x80) and thus allow all possible strings to be stored. (this is not allowed by the UTF-8 standard as it is a security risk. A C0,80 NUL might be seen as a string terminator in security validation and as a character when used)
+UTF-16 uses 2-byte integers and since either byte may be zero, cannot be stored in a null-terminated byte string. However, some languages implement a string of 16-bit UTF-16 characters, terminated by a 16-bit NUL character. (Again the NUL character, which encodes as a single zero code unit, is the only character that cannot be stored).
+Improvements[edit]
+Many attempts have been made to make C string handling less error prone. One strategy is to add safer and more useful functions such as strdup and strlcpy, while deprecating the use of unsafe functions such as gets. Another is to add an object-oriented wrapper around C strings so that only safe calls can be done.
+On modern systems memory usage is less of a concern, so a multi-byte length is acceptable (if you have so many small strings that the space used by this length is a concern, you will have enough duplicates that a hash table will use even less memory). Most replacements for C strings use a 32-bit or larger length value. Examples include the C++ Standard Template Library std::string, the Qt QString, the MFC CString, and the C-based implementation CFString from Core Foundation as well as its Objective-C sibling NSString from Foundation, both by Apple. More complex structures may also be used to store strings such as the rope.
+References[edit]
+
+
+^ Dennis M. Ritchie (1993). [The development of the C language]. Proc. 2nd History of Programming Languages Conf.
+^ Kamp, Poul-Henning (25 July 2011), "The Most Expensive One-byte Mistake", ACM Queue 9 (7), ISSN&#160;1542-7730, retrieved 2 August 2011&#160;
+^ Richie, Dennis (2003). "The Development of the C Language". Retrieved 9 November 2011.&#160;
+^ Rain Forest Puppy (9 September 1999). "Perl CGI problems". Phrack Magazine (artofhacking.com) 9 (55): 7. Retrieved 6 January 2012.&#160;
+^ "UTF-8, a transformation format of ISO 10646". Retrieved 19 September 2013.&#160;
+^ "Unicode/UTF-8-character table". Retrieved 13 September 2013.&#160;
+^ Kuhn, Markus. "UTF-8 and Unicode FAQ". Retrieved 13 September 2013.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+C programming language
+
+
+
+
+
+
+
+
+
+ANSI C
+
+C89 and C90
+
+
+C99
+C11
+Embedded C
+MISRA C
+
+
+
+
+
+
+
+
+C features
+
+
+
+Functions
+Header files
+Libraries
+Operators
+String
+Syntax
+Preprocessor
+Data types
+
+
+
+
+
+
+
+
+C standard library functions
+
+
+
+Char (ctype.h)
+File I/O (stdio.h)
+Math (math.h)
+Dynamic memory (stdlib.h)
+String (string.h)
+Time (time.h)
+Variadic (stdarg.h)
+POSIX
+
+
+
+
+
+
+
+
+C standard libraries
+
+
+
+Bionic
+
+libhybris
+
+
+dietlibc
+EGLIBC
+glibc
+klibc
+Microsoft Run-time Library
+musl
+Newlib
+uClibc
+BSD libc
+
+
+
+
+
+
+
+
+Compilers
+
+
+
+Comparison of C compilers
+ACK
+Borland Turbo C
+Clang
+GCC
+LCC
+Pelles C
+PCC
+TCC
+Microsoft Visual Studio Express C++
+Watcom C/C++
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Comparison of C IDEs
+Anjuta
+Code::Blocks
+CodeLite
+Eclipse
+Geany
+Microsoft Visual Studio
+NetBeans
+
+
+
+
+
+
+
+
+C and other languages
+
+
+
+Compatibility of C and C++
+Comparison of C and Embedded C
+Comparison of C and Pascal
+Comparison of programming languages
+
+
+
+
+
+
+
+
+Descendant languages
+
+
+
+C++
+C#
+D
+Objective-C
+Alef
+Limbo
+Go
+Vala
+
+
+
+
+
+
+
+
+
+
+
+ Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Null-terminated_string&amp;oldid=667434717"					
+				Categories: String data structuresHidden categories: Articles to be expanded from November 2011All articles to be expandedUse dmy dates from January 2011				
+							
+		
+		
+			

@@ -1,0 +1,153 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Most vexing parse
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				The most vexing parse is a specific form of syntactic ambiguity resolution in the C++ programming language. The term was used by Scott Meyers in Effective STL (2001).[1] It is formally defined in section 8.2 of the C++ language standard.[2]
+
+
+
+Contents
+
+
+1 Example with classes
+2 Example with functions
+3 Uniform initialization syntax
+4 References
+
+
+
+Example with classes[edit]
+An example is:
+
+
+class Timer {
+ public:
+  Timer();
+};
+
+class TimeKeeper {
+ public:
+  TimeKeeper(const Timer&amp; t);
+
+  int get_time();
+};
+
+int main() {
+  TimeKeeper time_keeper(Timer());
+  return time_keeper.get_time();
+}
+
+The line
+
+
+  TimeKeeper time_keeper(Timer());
+
+is ambiguous, since it could be interpreted either as
+
+a variable definition for variable time_keeper of class TimeKeeper, initialized with an anonymous instance of class Timer or
+a function declaration for a function time_keeper which returns an object of type TimeKeeper and has a single (unnamed) parameter which is a function returning type Timer (and taking no input). (See Function object#In C and C++)
+
+Most programmers expect the first, but the C++ standard requires it to be interpreted as the second.
+For example, g++ gives the following error message:
+
+
+$ g++ -c time_keeper.cc
+time_keeper.cc: In function ‘int main()’:
+time_keeper.cc:15: error: request for member ‘get_time’ in ‘time_keeper’, which is
+  of non-class type ‘TimeKeeper(Timer (*)())’
+
+Clang++ provides a warning:
+
+$ clang++ time_keeper.cc
+timekeeper.cc:14:25: warning: parentheses were disambiguated as a function declaration
+      [-Wvexing-parse]
+  TimeKeeper time_keeper(Timer());
+                        ^~~~~~~~~
+timekeeper.cc:14:26: note: add a pair of parentheses to declare a variable
+  TimeKeeper time_keeper(Timer());
+                         ^
+                         (      )
+timekeeper.cc:15:21: error: member reference base type 'TimeKeeper (Timer (*)())' is not a
+      structure or union
+  return time_keeper.get_time();
+         ~~~~~~~~~~~^~~~~~~~~
+
+One way to force the compiler to consider this as a variable definition is to add an extra pair of parentheses:
+
+
+  TimeKeeper time_keeper( (Timer()) );
+
+Example with functions[edit]
+An even simpler example appears when a functional cast is intended to convert an expression for initializing a variable or passing to a constructor parameter
+
+
+void f(double adouble) {
+  int i(int(adouble));
+}
+
+In this case, the parentheses around "adouble" are superfluous and the declaration of "i" is again a function declaration equivalent to the following
+
+
+// takes an integer and returns an integer
+int i(int adouble);
+
+To disambiguate this in favour of a variable declaration, the same technique can be used as for the first case above. Another solution is to use the cast notation:
+
+
+// declares a variable called 'i'
+int i((int) adouble);
+
+Or also to use a named cast:
+
+
+// declares a variable called 'i'
+int i(static_cast&lt;int&gt;(adouble));
+
+Uniform initialization syntax[edit]
+Using the new uniform initialization syntax introduced in C++11 solves this issue (and many more headaches related to initialization styles in C++).
+The problematic code is then unambiguous when braces are used:
+
+
+  TimeKeeper time_keeper{Timer{}};
+
+References[edit]
+
+
+^ Meyers, Scott (2001). Effective STL: 50 Specific Ways to Improve Your Use of the Standard Template Library. Addison-Wesley. ISBN&#160;0-201-74962-9.&#160;
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §8.2 Ambiguity resolution [dcl.ambig.res]
+
+
+
+http://www.informit.com/guides/content.aspx?g=cplusplus&amp;seqNum=439
+http://blog.llvm.org/2010/04/amazing-feats-of-clang-error-recovery.html
+http://arstechnica.com/civis/viewtopic.php?f=20&amp;t=767929
+http://www.stroustrup.com/C++11FAQ.html#uniform-init
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Most_vexing_parse&amp;oldid=685962849"					
+				Categories: C++Hidden categories: Articles with example C++ code				
+							
+		
+		
+			

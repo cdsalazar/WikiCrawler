@@ -1,0 +1,457 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Digital recording
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2009)
+
+
+
+
+
+
+Audio levels display on a digital audio recorder (Zoom H4n)
+
+
+In digital recording, audio signals or video signals are converted into a stream of discrete numbers, representing the changes over time in air pressure for audio, and chroma and luminance values for video, then recorded to a storage device. To play back a digital recording, the numbers are retrieved and converted back into their original analog waveforms.
+
+
+
+Contents
+
+
+1 Timeline history
+2 Process
+3 Recording of bits
+
+3.1 Techniques to record to commercial media
+
+
+4 Concerns with digital audio recording
+
+4.1 Word size
+4.2 Sample rate
+4.3 Error rectification
+
+
+5 See also
+6 References
+
+
+
+Timeline history[edit]
+
+1938: British scientist Alec Reeves files the first patent describing Pulse-code modulation (PCM).[1] It was first developed as a telephony technology.[2]
+1943: Bell Telephone Laboratories develops the first PCM-based digital scrambled speech transmission system, SIGSALY,[3] in response to German interception of military telephone traffic during WWII. The twelve transmission points were retired after the war.
+1957: Max Mathews of Bell develops the process to digitally record sound via computer.
+1967: the first monaural PCM recorder was developed by NHK's research facilities in Japan.[4] The 30&#160;kHz 12-bit device used a compander (similar to DBX Noise Reduction) to extend the dynamic range, and stored the signals on a video tape recorder.
+1969: NHK expands the PCM's capabilities to 2-channel stereo and 32&#160;kHz 13-bit resolution.
+1970: James Russell (inventor) patents the first digital-to-optical recording and playback system, which would later lead to the Compact Disc.[5]
+January 1971: Using NHK'S PCM recording system, engineers at Denon record the first commercial digital recordings, Something by Steve Marcus and Uzu: The World Of Stomu Yamash'ta 2 by Stomu Yamashta.
+1972: Denon unveils the first 8-channel digital recorder, the DN-023R, which is 47.25&#160;kHz 13-bit PCM resolution using a 4-head open reel broadcast video tape recorder.[6] The first recording with this new system is the Smetana Quartet performing Mozart's String Quartets K.458 and K.421, recorded in Tokyo April 24–26. Several other digital LPs follow.
+1975: University of Utah professor Thomas Stockham develops a PCM digital audio recorder of his own design, using computer tape drives as the storage system. He founds the company Soundstream to offer it commercially.
+1976: the prototype Soundstream 37.5&#160;kHz, 16-bit, two channel recorder[7] is used to record the Santa Fe Opera performing Virgil Thompson's opera The Mother of Us All for New World Records.[8] However, the digital recorder is just a backup to the main analog multi-track recorder and the superior analog recording is used for the release by New World Records. The digital tape was presented at the 1976 AES Convention in New York, but never commercially released.
+1977: Denon develops the smaller portable PCM recording system, the DN-034R. Like the DN-023R it records 8 channels at 47.25&#160;kHz, but it uses 14-bits "with emphasis, making it equivalent to 15.5 bits."
+August 28–31, 1977: Soundstream's PCM system runs in the background of a California direct to disc recording session by organist Virgil Fox for Crystal Records. When initially released the resulting LPs were pressed from the direct-to-disc acetate, though the later CD reissue (1987) comes from the digital backup tapes.[9]
+November 28, 1977: Denon brings their DN-034R to New York and records Archie Shepp's On Green Dolphin Street, making it America's first RELEASED digitally-recorded commercial album. When this is released on CD in 1984 by Nippon Columbia it also becomes one of the earliest digital-only CDs. Six other jazz albums are recorded with the DN-034R in New York before it returns to Japan in December.[10]
+April 4–5, 1978: Telarc uses Soundstream's PCM system to record Frederick Fennell and his Eastman Wind Ensemble playing Gustav Holst's Suites for Military Band and George Frideric Handel's Music for the Royal Fireworks. When released on LP this became the first US digitally-recorded classical release.[11]
+June 2, 1978: Sound 80 studios in Minneapolis records the Saint Paul Chamber Orchestra performing Aaron Copland's Appalachian Spring. This session is set up as a direct to disc recording, with an experimental 3M 50.4&#160;kHz digital recorder in the background capturing the session. It is released on LP record as Sound80 Records S80-DLR-101[12] although possibly this release is taken from the direct-to-disc acetate rather than the digital backup. Later the session is re-released on Compact Disc by ProArte.
+June 1978: Sound 80 records Flim and the BB's as another direct to disc recording again with the experimental 3M recorder in the background. This time the acetate is deemed not as good as the digital backup, so the digital master is used for the LP record (Sound80 Records S80-DLR-102). This makes it the first U.S. non-classical digital release. Within 6 months the hand-built 3M digital recorder is disassembled, rendering the non-standard master tape unplayable. Therefore, no Compact Disc reissue is possible.
+1979: the first digital Compact Disc prototype was created in Japan by a joint venture of Sony and Philips.
+1979: the first U.S.-recorded digital album of popular music (with vocals), Bop 'Til You Drop by guitarist Ry Cooder, was released by Warner Bros. Records. The album was recorded in Los Angeles on a 32-track digital machine built by the 3M corporation. Also, Stevie Wonder digitally recorded his soundtrack album, Journey Through the Secret Life of Plants, three months after Cooder's album was released, followed by the Grammy-award self-titled debut album of American singer Christopher Cross which was also 3M digitally recorded album.
+1982: the first digital compact discs are marketed by Sony and Philips,[13] and New England Digital offers the hard disk recorder (Sample-to-Disk) option on the Synclavier, the first commercial hard disk (HDD) recording system.[14] Also that same year, Peter Gabriel releases, Security and The Nightfly released by Donald Fagen, which both were the early full digital recordings.
+1984: Sony released the Sony PCM-501ES digital audio processor, which for the first time allowed consumers to make their own digital recordings, using a VHS or Betamax video tape recorder as the storage media.
+1987: Sony develops Digital Audio Tape
+1990: digital radio begins in Canada, using the L-Band.[15]
+1991: Alesis Digital Audio Tape or ADAT is a tape format used for simultaneously recording eight tracks of digital audio at once, onto Super VHS magnetic tape - a format similar to that used by consumer VCRs. The product was announced in January 1991 at the NAMM convention in Anaheim, California. The first ADAT recorders shipped over a year later in February or March 1992.[16]
+1993: RADAR (audio recorder) Random Access Digital Audio Recorder or RADAR is the first single box device used for simultaneously recording 24 tracks of digital audio at once, onto hard disk drives. The product, manufactured by Creation Technologies (iZ Technology Corporation) was announced in October 1993 at the AES convention in New York, New York. The first RADAR recorders shipped in August 1994.
+1996: optical discs and DVD players begin selling in Japan.
+
+Process[edit]
+Recording
+
+The analog signal is transmitted from the input device to an analog-to-digital converter (ADC).
+The ADC converts this signal by repeatedly measuring the momentary level of the analog (audio) wave and then assigning a binary number with a given quantity of bits (word length) to each measuring point.
+The frequency at which the ADC measures the level of the analog wave is called the sample rate or sampling rate.
+A digital audio sample with a given word length represents the audio level at one moment.
+The longer the word length the more exact is the representation of the original audio wave levelwise.
+The higher the sampling rate the higher the upper cutoff frequency of the digitized audio signal.
+The ADC outputs a sequence of samples that make up a continuous stream of 0s and 1s.
+These numbers are stored onto recording media such as hard drive, optical drive or solid state memory.
+
+Playback
+
+The sequence of numbers is transmitted from storage into a digital-to-analog converter (DAC), which converts the numbers back to an analog signal by sticking together the level information stored in each digital sample, thus rebuilding the original analog wave form.
+This signal is amplified and transmitted to the loudspeakers or video screen.
+
+Recording of bits[edit]
+Even after getting the signal converted to bits, it is still difficult to record; the hardest part is finding a scheme that can record the bits fast enough to keep up with the signal. For example, to record two channels of audio at 44.1 kHz sample rate with a 16 bit word size, the recording software has to handle 1,411,200 bits per second.
+Techniques to record to commercial media[edit]
+For digital cassettes, the read/write head moves as well as the tape in order to maintain a high enough speed to keep the bits at a manageable size.
+For optical disc recording technologies such as CDs or DVDs, a laser is used to burn microscopic holes into the dye layer of the medium. A weaker laser is used to read these signals. This works because the metallic substrate of the disc is reflective, and the unburned dye prevents reflection while the holes in the dye permit it, allowing digital data to be represented.
+Concerns with digital audio recording[edit]
+Word size[edit]
+The number of bits used to represent a single audio wave (the word size) directly affects the achievable noise level of a signal recorded with added dither, or the distortion of an undithered signal.
+
+The number of possible voltage levels at the output is simply the number of values that may be represented by the largest possible number. There are no “in between” values allowed. If there are more bits in the number the waveform is more accurately traced, because each added bit doubles the number of possible values. The distortion is roughly the percentage that the least significant bit represents out of the average value. Distortion in digital systems increases as signal levels decrease, which is the opposite of the behavior of analog systems.[17]
+Sample rate[edit]
+The sample rate is just as important a consideration as the word size. If the sample rate is too low, the sampled signal cannot be reconstructed to the original sound signal.
+To overcome aliasing, the sound signal (or other signal) must be sampled at a rate at least twice that of the highest frequency component in the signal. This is known as the Nyquist-Shannon sampling theorem.
+For recording music-quality audio the following PCM sampling rates are the most common:
+44.1&#160;kHz 48&#160;kHz 88.2&#160;kHz 96&#160;kHz 176.4&#160;kHz 192&#160;kHz
+When making a recording, experienced audio recording and mastering engineers will normally do a master recording at a higher sampling rate (i.e. 88.2, 96, 176.4 or 192&#160;kHz) and then do any editing or mixing at that same higher frequency. High resolution PCM recordings have been released on DVD-Audio (also known as DVD-A), DAD (Digital Audio Disc—which utilizes the stereo PCM audio tracks of a regular DVD), DualDisc (utilizing the DVD-Audio layer), or Blu-ray (Profile 3.0 is the Blu-ray audio standard, although as of mid-2009 it is unclear whether this will ever really be used as an audio-only format). In addition it is nowadays also possible and common to release a high resolution recording directly as either an uncompressed WAV or lossless compressed FLAC file[18] (usually at 24 bits) without down-converting it .
+However, if a CD (the CD Red Book standard is 44.1&#160;kHz 16 bit) is to be made from a recording, then doing the initial recording using a sampling rate of 44.1&#160;kHz is obviously one approach. Another approach that is usually preferred is to use a higher sample rate and then downsample to the final format's sample rate. This is usually done as part of the mastering process. One advantage to the latter approach is that way a high resolution recording can be released, as well as a CD and/or lossy compressed file such as mp3—all from the same master recording.
+Beginning in the 1980s, music that was recorded, mixed and mastered digitally was often labelled using the SPARS code to describe which processes were analog and which were digital.
+Error rectification[edit]
+Main article: Digital data
+One of the advantages of digital recording over analog recording is its resistance to errors.
+See also[edit]
+
+Compact discs use Reed-Solomon error correction
+Cyclic redundancy check (CRC)
+Direct to disk recording
+Magnetic storage
+Multitrack recording
+Parity Computation
+Many bits are stored on RAID storage systems
+4D Audio Recording system
+
+References[edit]
+
+
+^ Robertson, David. Alec Reeves 1902-1971 Privateline.com: Telephone History. Accessed Nov 14, 2009
+^ ARSC Journal, Spring 2008, Thomas Fine
+^ J. V. Boone, J. V., Peterson R. R.: Sigsaly - The Start of the Digital Revolution Accessed Nov 14, 2009
+^ Thomas Fine, ibid.
+^ Inventor of the Week, Michigan Institute of Technology Accessed Nov 14, 2009
+^ Thomas Fine, ibid.
+^ Thomas Fine, ibid.
+^ Soundstream#The company
+^ Virgil Fox The Digital Fox
+^ http://www.jazzdisco.org/archie-shepp/discography/
+^ http://www.arkivmusic.com/classical/album.jsp?album_id=3791
+^ https://www.thespco.org/about-us/recording-discography/
+^ Encyclopædia Britannica: Compact Disc. 2003 Deluxe Edition CD-ROM. Encyclopædia Britannica, Inc.
+^ Synclavier history
+^ University of San Diego: Digital Audio Radio Service (DARS) Accessed Nov 14, 2009
+^ Peterson, George; Robair, Gino [ed.] (1999). Alesis ADAT: The Evolution of a Revolution. Mixbooks. p. 2. ISBN 0-87288-686-7
+^ "Digital Recording". artsites.ucsc.edu. Retrieved 2015-09-29.&#160;
+^ [1]
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Physical audio recording formats
+
+
+
+
+
+
+Analog
+
+
+
+Phonautogram (1857)
+Phonograph cylinder (1877)
+Gramophone record (1894)
+Wire recording (1898)
+Sound-on-film (1919)
+Tefifon (1936)
+Reel-to-reel tape (1940s)
+SoundScriber (1945)
+Gray Audograph (1945)
+Dictabelt (1947)
+LP record (1948)
+45 rpm record (1949)
+On-the-ribs recordings (late 1940s)
+RCA tape cartridge (1958)
+Fidelipac (1959)
+Stereo-Pak (1962)
+Compact Cassette (1963)
+8-track (1964)
+PlayTape (1966)
+Mini-Cassette (1967)
+Microcassette (1969)
+Steno-Cassette (1971)
+Elcaset (1976)
+Picocassette (1985)
+
+
+
+
+
+
+
+
+Digital
+
+
+
+Soundstream (1976)
+X80/ProDigi (1980)
+Compact disc (1982)
+DASH (1982)
+Digital Audio Tape (1987)
+ADAT (1991)
+MiniDisc (1992)
+NT (1992)
+Digital Compact Cassette (1992)
+DA-88 (1993)
+High Definition Compatible Digital (1995)
+5.1 Music Disc (1997)
+Super Audio CD (1999)
+DVD-Audio (2000)
+USB flash drive (as audio format) (2004)
+Hi-MD (2004)
+slotMusic (2008)
+BD-Audio (2008)
+HFPA (2013)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Music technology
+
+
+
+
+
+
+Sound recording
+
+
+
+Microphone
+Microphone preamplifier
+EQ
+Outboard gear
+Audio channel
+Mixing console
+Binaural recording
+Multitrack recording
+Music production
+Music sequencer
+
+
+
+
+
+
+
+
+Recording media
+
+
+
+Gramophone record
+Magnetic tape
+Compact Cassette
+Compact disc
+DAT
+Hard disk
+MiniDisc
+MP3
+Opus
+
+
+
+
+
+
+
+
+Analog recording
+
+
+
+8-track cartridge
+Amplifier
+Cassette deck
+Comparison of analog and digital recording
+Experimental musical instrument
+Loudspeaker
+Phonograph
+Player piano
+Reel-to-reel audio tape recording
+Tape recorder
+
+
+
+
+
+
+
+
+Digital audio
+
+
+
+Digital recording
+Digital signal processing
+
+
+
+
+
+
+
+
+Live music
+
+
+
+Bass instrument amplification
+Effects unit
+Guitar amplifier
+Keyboard amplifier
+PA system
+Radio
+Reverberation
+Sound reinforcement system
+
+
+
+
+
+
+
+
+Electronic music
+
+
+
+Chiptune
+Circuit bending
+Drum machine
+Electronic musical instrument
+MIDI
+Music workstation
+Sampler
+Sequencer
+Sound module
+Synthesizer
+Theremin
+
+
+
+
+
+
+
+
+Software
+
+
+
+Digital audio editor
+Digital audio workstation
+Scorewriter
+Software effect processor
+Software sampler
+Software synthesizer
+
+
+
+
+
+
+
+
+People and organizations
+
+
+
+Audio Engineering Society
+Goji Electronics
+Lejaren Hiller
+IRCAM
+Max Mathews
+Robert Moog
+SMPTE
+STEIM
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+High fidelity
+Home audio
+Home cinema
+NIME
+Vehicle audio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Digital_recording&amp;oldid=685616466"					
+				Categories: Digital audio recordingSoundVideoHidden categories: Articles needing additional references from June 2009All articles needing additional references				
+							
+		
+		
+			

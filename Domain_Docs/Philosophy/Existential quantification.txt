@@ -1,0 +1,254 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Existential quantification
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Existential quantifier)
+												
+					Jump to:					navigation, 					search
+				
+				"Existential quantifier" redirects here. For the symbol conventionally used for this quantifier, see Turned E.
+"∃" redirects here. It is not to be confused with Ǝ.
+In predicate logic, an existential quantification is a type of quantifier, a logical constant which is interpreted as "there exists", "there is at least one", or "for some".
+It is usually denoted by the turned E (∃) logical operator symbol, which, when used together with a predicate variable, is called an existential quantifier ("∃x" or "∃(x)"). Existential quantification is distinct from universal quantification ("for all"), which asserts that the property or relation holds for all members of the domain.
+Symbols are encoded U+2203 ∃ there exists (HTML&#160;&amp;#8707;&#160;·  &amp;exist;&#160;·  as a mathematical symbol) and U+2204 ∄ there does not exist (HTML&#160;&amp;#8708;).
+
+
+
+Contents
+
+
+1 Basics
+2 Properties
+
+2.1 Negation
+2.2 Rules of Inference
+2.3 The empty set
+
+
+3 As adjoint
+4 See also
+5 Notes
+6 References
+
+
+
+Basics[edit]
+Consider a formula that states that some natural number multiplied by itself is 25.
+
+
+
+0·0 = 25, or 1·1 = 25, or 2·2 = 25, or 3·3 = 25, and so on.
+
+
+
+This would seem to be a logical disjunction because of the repeated use of "or". However, the "and so on" makes this impossible to integrate and to interpret as a disjunction in formal logic. Instead, the statement could be rephrased more formally as
+
+
+
+For some natural number n, n·n = 25.
+
+
+
+This is a single statement using existential quantification.
+This statement is more precise than the original one, as the phrase "and so on" does not necessarily include all natural numbers, and nothing more. Since the domain was not stated explicitly, the phrase could not be interpreted formally. In the quantified statement, on the other hand, the natural numbers are mentioned explicitly.
+This particular example is true, because 5 is a natural number, and when we substitute 5 for n, we produce "5·5 = 25", which is true. It does not matter that "n·n = 25" is only true for a single natural number, 5; even the existence of a single solution is enough to prove the existential quantification true. In contrast, "For some even number n, n·n = 25" is false, because there are no even solutions.
+The domain of discourse, which specifies which values the variable n is allowed to take, is therefore of critical importance in a statement's trueness or falseness. Logical conjunctions are used to restrict the domain of discourse to fulfill a given predicate. For example:
+
+
+
+For some positive odd number n, n·n = 25
+
+
+
+is logically equivalent to
+
+
+
+For some natural number n, n is odd and n·n = 25.
+
+
+
+Here, "and" is the logical conjunction.
+In symbolic logic, "∃" (a backwards letter "E" in a sans-serif font) is used to indicate existential quantification.[1] Thus, if P(a, b, c) is the predicate "a·b = c" and  is the set of natural numbers, then
+
+
+
+is the (true) statement
+
+
+
+For some natural number n, n·n = 25.
+
+
+
+Similarly, if Q(n) is the predicate "n is even", then
+
+
+
+is the (false) statement
+
+
+
+For some natural number n, n is even and n·n = 25.
+
+
+
+In mathematics, the proof of a "some" statement may be achieved either by a constructive proof, which exhibits an object satisfying the "some" statement, or by a nonconstructive proof which shows that there must be such an object but without exhibiting one.
+Properties[edit]
+Negation[edit]
+A quantified propositional function is a statement; thus, like statements, quantified functions can be negated. The &#160; symbol is used to denote negation.
+For example, if P(x) is the propositional function "x is between 0 and 1", then, for a domain of discourse X of all natural numbers, the existential quantification "There exists a natural number x which is between 0 and 1" is symbolically stated:
+
+
+
+This can be demonstrated to be irrevocably false. Truthfully, it must be said, "It is not the case that there is a natural number x that is between 0 and 1", or, symbolically:
+
+.
+
+If there is no element of the domain of discourse for which the statement is true, then it must be false for all of those elements. That is, the negation of
+
+
+
+is logically equivalent to "For any natural number x, x is not between 0 and 1", or:
+
+
+
+Generally, then, the negation of a propositional function's existential quantification is a universal quantification of that propositional function's negation; symbolically,
+
+
+
+A common error is stating "all persons are not married" (i.e. "there exists no person who is married") when "not all persons are married" (i.e. "there exists a person who is not married") is intended:
+
+
+
+Negation is also expressible through a statement of "for no", as opposed to "for some":
+
+
+
+Unlike the universal quantifier, the existential quantifier distributes over logical disjunctions:
+
+Rules of Inference[edit]
+
+
+Transformation rules
+
+
+Propositional calculus
+
+
+Rules of inference
+
+
+
+
+Modus ponens&#160;/ Modus tollens
+Biconditional introduction&#160;/ elimination
+Conjunction introduction&#160;/ elimination
+Disjunction introduction&#160;/ elimination
+Disjunctive&#160;/ Hypothetical syllogism
+Constructive&#160;/ Destructive dilemma
+Absorption
+Modus ponendo tollens
+
+
+
+
+Rules of replacement
+
+
+
+
+
+Associativity
+Commutativity
+Distributivity
+Double negation
+De Morgan's laws
+Transposition
+Material implication
+Exportation
+Tautology
+Negation introduction
+
+
+
+
+
+Predicate logic
+
+
+
+
+Universal generalization&#160;/ instantiation
+Existential generalization&#160;/ instantiation
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+A rule of inference is a rule justifying a logical step from hypothesis to conclusion. There are several rules of inference which utilize the existential quantifier.
+Existential introduction (∃I) concludes that, if the propositional function is known to be true for a particular element of the domain of discourse, then it must be true that there exists an element for which the proposition function is true. Symbolically,
+
+
+
+Existential elimination, when conducted in a Fitch style deduction, proceeds by entering a new sub-derivation while substituting an existentially quantified variable for a subject which does not appear within any active sub-derivation. If a conclusion can be reached within this sub-derivation in which the substituted subject does not appear, then one can exit that sub-derivation with that conclusion. The reasoning behind existential elimination (∃E) is as follows: If it is given that there exists an element for which the proposition function is true, and if a conclusion can be reached by giving that element an arbitrary name, that conclusion is necessarily true, as long as it does not contain the name. Symbolically, for an arbitrary c and for a proposition Q in which c does not appear:
+
+
+
+ must be true for all values of c over the same domain X; else, the logic does not follow: If c is not arbitrary, and is instead a specific element of the domain of discourse, then stating P(c) might unjustifiably give more information about that object.
+The empty set[edit]
+The formula  is always false, regardless of P(x). This is because  denotes the empty set, and no x of any description – let alone an x fulfilling a given predicate P(x) – exist in the empty set. See also vacuous truth.
+As adjoint[edit]
+Main article: Universal quantification § As adjoint
+In category theory and the theory of elementary topoi, the existential quantifier can be understood as the left adjoint of a functor between power sets, the inverse image functor of a function between sets; likewise, the universal quantifier is the right adjoint.[2]
+See also[edit]
+
+First-order logic
+List of logic symbols - for the unicode symbol ∃
+Quantifier variance
+Quantifiers
+Uniqueness quantification
+
+Notes[edit]
+
+^ This symbol is also known as the existential operator. It is sometimes represented with V.
+^ Saunders Mac Lane, Ieke Moerdijk, (1992) Sheaves in Geometry and Logic Springer-Verlag. ISBN 0-387-97710-4 See page 58
+
+References[edit]
+
+Hinman, P. (2005). Fundamentals of Mathematical Logic. A K Peters. ISBN&#160;1-56881-262-0.&#160;
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Existential_quantification&amp;oldid=674998911"					
+				Categories: Logic symbolsQuantification				
+							
+		
+		
+			

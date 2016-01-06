@@ -1,0 +1,897 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Java Community Process
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				The Java Community Process (JCP), established in 1998, is a formalized mechanism that allows interested parties to develop standard technical specifications for Java technology. Anyone can become a JCP Member by filling a form available at the JCP website. JCP membership for organizations and commercial entities requires annual fees but is free for individuals.[1]
+The JCP involves the use of Java Specification Requests (JSRs)&#160;– the formal documents that describe proposed specifications and technologies for adding to the Java platform. Formal public reviews of JSRs take place before a JSR becomes final and the JCP Executive Committee votes on it. A final JSR provides a reference implementation that is a free implementation of the technology in source code form and a Technology Compatibility Kit to verify the API specification.
+A JSR describes the JCP itself. As of 2009[update], JSR 215 describes the current version (2.7) of the JCP.
+
+
+
+Contents
+
+
+1 List of JSRs
+2 Criticism
+3 JCP Program and Industry Awards[12]
+4 See also
+5 Notes
+6 External links
+
+
+
+List of JSRs[edit]
+There are hundreds of JSRs. Some of the more visible JSRs include:
+
+
+JSR #
+Specification or Technology
+Reference implementations
+Other implementations
+
+
+1
+Real-Time Specification for Java (RTSJ) 1.0
+
+
+
+
+3
+Java Management Extensions (JMX) 1.0, 1.1, &amp; 1.2[2]
+
+
+5
+Java API for XML Processing (JAXP) 1.0
+
+
+
+
+8
+OSGI Open Services Gateway Specification
+
+
+9
+Jiro (Federated Management Architecture Specification) 1.0
+
+
+12
+Java Data Objects (JDO) 1.0
+
+
+13
+Improved BigDecimal (Java Platform, Standard Edition#java.math)
+
+
+14
+Add Generic Types To The Java Programming Language (as of J2SE 5.0)
+
+
+16
+Java EE Connector Architecture (JCA) 1.0
+
+
+19
+Enterprise JavaBeans (EJB) 2.0
+
+
+22
+JAIN SLEE API Specification (JSLEE) 1.0
+
+
+30
+Connected Limited Device Configuration (CLDC) 1.0 for Java ME
+
+
+31
+Java Architecture for XML Binding (JAXB) 1.0
+
+
+32
+JAIN SIP API Specification (JSIP) 1.0, 1.1 and 1.2 for Java ME
+
+
+36
+Connected Device Configuration (CDC) 1.0 for Java ME
+
+
+37
+Mobile Information Device Profile (MIDP) 1.0 for Java ME
+
+
+40
+Java Metadata Interface (JMI) 1.0
+
+
+41
+A Simple Assertion Facility (as of J2SE 1.4)
+
+
+47
+Logging API Specification (as of J2SE 1.4)
+
+
+48
+WBEM Services Specification (as of J2SE 1.4)
+
+
+51
+New I/O APIs for the Java Platform (NIO) (as of J2SE 1.4)
+Grizzly, netty
+
+
+52
+JavaServer Pages Standard Tag Library (JSTL) 1.0 and 1.1[3]
+
+
+53
+Java Servlet 2.3 and JavaServer Pages (JSP) 1.2 Specifications
+
+
+54
+Java Database Connectivity (JDBC) 3.0
+
+
+56
+Java Network Launching Protocol and API (JNLP) 1.0, 1.5 and 6.0[4] (Java Web Start)
+
+
+58
+Java 2 Platform, Enterprise Edition (J2EE) 1.3
+
+
+59
+Java 2 Platform, Standard Edition (J2SE) 1.4 (Merlin)
+
+
+63
+Java API for XML Processing (JAXP) 1.1 and 1.2[5]
+
+
+68
+Java Platform, Micro Edition (Java ME) 1.0
+
+
+73
+Java Data Mining API (JDM) 1.0
+
+
+75
+PDA Optional Packages for the J2ME Platform
+
+
+77
+J2EE Management
+
+
+80
+Java USB API
+
+
+82
+Java APIs for Bluetooth
+
+
+88
+Java EE Application Deployment
+
+
+93
+Java API for XML Registries (JAXR) 1.0
+
+
+94
+Java Rules Engine API
+
+
+102
+Java Document Object Model (JDOM) 1.0
+
+
+110
+Java APIs for WSDL (WSDL4J) 1.0
+
+
+112
+Java EE Connector Architecture (JCA) 1.5
+
+
+113
+Java Speech API 2 (JSAPI2)
+
+
+114
+Java Database Connectivity (JDBC) Rowset Implementations
+
+
+116
+SIP Servlet API 1.0
+
+
+118
+Mobile Information Device Profile (MIDP) 2.0 for Java ME
+
+
+120
+Wireless Messaging API (WMA)
+
+
+121
+Application Isolation API
+
+
+127
+JavaServer Faces (JSF) 1.0 and 1.1[6]
+
+
+133
+Java Memory Model and Thread Specification Revision
+
+
+135
+Java Mobile Media API (MMAPI) for Java ME
+
+
+139
+Connected Limited Device Configuration (CLDC) 1.1 for Java ME
+
+
+140
+Service Location Protocol (SLP) API for Java
+
+
+141
+Session Description Protocol (SDP) API for Java
+
+
+151
+Java 2 Platform, Enterprise Edition (J2EE) 1.4
+
+
+152
+JavaServer Pages (JSP) 2.0
+
+
+153
+Enterprise JavaBeans (EJB) 2.1
+
+
+154
+Java Servlet 2.4 and 2.5 Specifications[7]
+
+
+160
+Java Management Extensions (JMX) Remote API 1.0
+
+
+163
+Java Platform Profiling Architecture (JPPA), which includes (among other specifications) the specification of Java Virtual Machine Tools Interface
+
+
+166
+Concurrency Utilities (as of J2SE 5.0 java.util.concurrent, java.util.concurrent.atomic and java.util.concurrent.locks)
+
+
+168
+Portlet specification 1.0
+
+
+170
+Content repository API for Java (JCR) 1.0
+
+
+172
+Web Services Specification for Java ME
+
+
+173
+StAX (Streaming API for XML)
+
+
+175
+A Metadata Facility for the Java Programming Language
+
+
+176
+Java 2 Platform, Standard Edition (J2SE) 5.0 (Tiger)
+
+
+177
+Security and Trust Services API for J2ME (SATSA)
+
+
+179
+Location API 1.0 for Java ME
+
+
+180
+Session Initiation Protocol (SIP) API for Java ME
+
+
+181
+Web Services Metadata for the Java Platform
+
+
+184
+Mobile 3D Graphics API for Java ME 1.0 and 1.1
+
+
+185
+Java Technology for the Wireless Industry (JTWI)
+
+
+187
+Instant messaging (Java ME and Java SE)
+
+
+198
+A Standard Extension API for Integrated Development Environments
+
+
+199
+Java Compiler API
+
+
+200
+Pack200 Network Transfer Format for Java Archives
+
+
+201
+Extending the Java Programming Language with Enumerations, Autoboxing, Enhanced for loops and Static Import (as of J2SE 5.0)
+
+
+202
+Java Class File Specification Update
+
+
+203
+More New I/O APIs for the Java Platform (NIO2)
+
+
+204
+Unicode Supplementary Character Support (as of J2SE 5.0 adds support for Unicode 3.1)
+
+
+205
+Wireless Messaging API 2.0 (WMA) 2.0
+
+
+206
+Java API for XML Processing (JAXP) 1.3
+
+
+208
+Java Business Integration (JBI) 1.0
+
+
+211
+Content Handler API
+
+
+215
+Java Community Process (JCP) 2.6
+
+
+218
+Connected Device Configuration (CDC) 1.1 for Java ME
+
+
+219
+Foundation Profile 1.1
+
+
+220
+Enterprise JavaBeans (EJB) 3.0
+
+
+221
+Java Database Connectivity (JDBC) 4.0
+
+
+222
+Java Architecture for XML Binding (JAXB) 2.0
+
+
+223
+Scripting for the Java Platform for Java SE 6
+
+
+224
+Java API for XML Web Services (JAX-WS), successor of JAX-RPC
+
+
+225
+XQuery API for Java (XQJ)
+
+
+226
+Scalable 2D Vector Graphics API for Java ME
+
+
+229
+Payment API (PAPI)
+
+
+231
+Java Bindings for OpenGL
+
+
+234
+Advanced Multimedia Supplements API for Java ME
+
+
+235
+Service Data Objects (SDO)
+
+
+239
+Java Bindings for OpenGL ES
+
+
+240
+JAIN SLEE API Specification (JSLEE) 1.1
+
+
+241
+The Groovy Programming Language
+
+
+243
+Java Data Objects (JDO) 2.0
+
+
+244
+Java Platform, Enterprise Edition (Java EE) 5
+
+
+245
+JavaServer Pages (JSP) 2.1
+
+
+247
+Java Data Mining API (JDM) 2.0
+
+
+248
+Mobile Service Architecture
+
+
+249
+Mobile Service Architecture 2
+
+
+250
+Common Annotations for the Java Platform (for the Metadata facility for Java)
+
+
+252
+JavaServer Faces (JSF) 1.2
+
+
+253
+Mobile Telephony API (MTA)
+
+
+255
+Java Management Extensions (JMX) 2.0
+
+
+256
+Mobile Sensor API
+
+
+257
+Contactless Communication API (NFC)
+
+
+260
+Javadoc Tag Technology Update
+
+
+269
+Pluggable Annotations Processing API (for the Metadata facility for Java)
+
+
+270
+Java Platform, Standard Edition (Java SE) 6 (Mustang)
+
+
+271
+Mobile Information Device Profile (MIDP) 3.0 for Java ME
+
+
+274
+The BeanShell Scripting Language
+
+
+275
+Units specification (see Units of Measurement)
+
+
+276
+Design-time Metadata for JavaServer Faces Components
+
+
+277
+Java Module System
+
+
+280
+XML API for Java ME
+
+
+281
+IMS Services API (See IMS)
+
+
+282
+Real-Time Specification for Java (RTSJ) 1.1
+
+
+283
+Content repository API for Java (JCR) 2.0
+
+
+286
+Portlet Specification 2.0
+
+
+289
+SIP Servlet API 1.1
+
+
+290
+Java Language &amp; XML User Interface Markup Integration (XML-UI)
+
+
+291
+Dynamic Component Support for Java SE (see OSGi)
+
+
+292
+Supporting Dynamically Typed Languages on the JavaTM Platform
+
+
+293
+Location API 2.0 for Java ME
+
+
+294
+Improved Modularity Support in the Java Programming Language
+
+
+296
+Swing Application Framework (Java SE 7)
+
+
+299
+Contexts and Dependency Injection for the Java EE platform (CDI)
+Weld
+Open WebBeans
+
+
+301
+JSF Portlet Bridge
+
+
+303
+Bean Validation
+Hibernate Validator
+
+
+307
+Network Mobility and Mobile Data API (not official as of July, 20th, 2007 but official release is planned for 2. Q. 2008
+
+
+308
+Annotations on Java Types (Java SE 8)
+
+
+311
+Java API for RESTful Web Services (JAX-RS) 1.0 and 1.1
+
+
+314
+JavaServer Faces (JSF) 2.0
+Mojarra JavaServer Faces
+Apache MyFaces
+
+
+316
+Java Platform, Enterprise Edition (Java EE) 6
+
+
+317
+Java Persistence API (JPA) 2.0
+EclipseLink
+Hibernate, openJPA
+
+
+322
+Java EE Connector Architecture (JCA) 1.6
+
+
+325
+IMS Communication Enablers (ICE) (See IMS)
+
+
+330
+Dependency Injection for Java
+
+
+336
+Java Platform, Standard Edition ("Java SE")
+[OpenJDK 7]
+?
+
+
+343
+Java Message Service 2.0 (JMS)
+
+
+352
+Java Batch
+
+
+354
+Java Money &amp; Currency API
+
+
+356
+Java API for WebSocket
+
+
+
+
+
+901
+The Java Language Specification, Third Edition (JLS) (as of J2SE 5.0 incorporates changes from JSRs 14, 41, 133, 175, 201, and 204)
+
+
+907
+Java Transaction API (JTA) 1.0 and 1.1
+
+
+912
+Java 3D API 1.3
+
+
+913
+Java Community Process (JCP) 2.0, 2.1 &amp; 2.5.[8]
+
+
+914
+Java Message Service (JMS) API 1.0 and 1.1
+
+
+924
+Java Virtual Machine Specification, Second Edition (JVM) (as of J2SE 5.0).[9]
+OpenJDK
+
+
+926
+Java 3D API 1.5
+
+
+
+
+Criticism[edit]
+The JCP's executive board has been characterized as a "rubber stamp organization" since Oracle acquired Sun Microsystems, the original developer of the language.[10] The Apache Software Foundation resigned its seat on the board in December 2010 because Oracle was unwilling to license the Technology Compatibility Kit for Apache's version of Java.[11]
+JCP Program and Industry Awards[12][edit]
+10th Annual JCP Award Winners:[13] JCP Member/Participant of the Year: London Java Community and SouJava * Winner * For their historic contribution to the Adopt a JSR program and supporting Java developers through the JCP.
+Outstanding Spec Lead: Victor Grazi, Credit Suisse (JSR 354 | Java Money &amp; Currency API) * Winner * For his dedicated, focused expertise in solving issues representing money and currencies.
+See also[edit]
+
+
+
+
+Java portal
+
+
+
+
+JDK Enhancement Proposal
+
+Notes[edit]
+
+
+^ "Becoming a JCP Member". Retrieved 11 June 2011.&#160;
+^ JSR 3 originally specified the JMX 1.0 release. Two subsequent "final" releases have provided JMX 1.1 and JMX 1.2. JMX 2.0 is specified by JSR 255.
+^ JSR 52 originally specified the JSTL 1.0 release. A subsequent maintenance release provided JSTL 1.1.
+^ JSR 56 originally specified the JNLP 1.0 release. A subsequent "final" release [1] provided JNLP 1.5, which was primarily a maintenance release. As of February, 2006, the JNLP 6.0 maintenance release has been completed but not finalized.
+^ JSR 63 originally specified the JAXP 1.1 release. A subsequent maintenance release of JSR 63 provided the JAXP 1.2 specification.[2] JAXP 1.3 is specified by JSR 206.
+^ JSR 127 originally specified the JSF 1.0 release. A subsequent maintenance release provided the JSF 1.1 specification.[3] JSF 1.2 is specified by JSR 252.
+^ JSR 154 originally specified the Java Servlet 2.4 release. As of February, 2006 a maintenance draft of the 2.5 servlet specification is under review, scheduled to close on March 20, 2006.
+^ JSR 913 originally specified JCP 2.0. It was subsequently amended by various changes to voting rules to produce version 2.1 and then further changed by licensing rules, policy, and processes to get to version 2.5. JCP 2.6 is defined by JSR 215.[4]
+^ JSR 924 originally specified changes to the JVM to support changes in J2SE 5.0. As of 2006[update] a maintenance update to support changes proposed by JSR 202 is underway.
+^ Handy, Alex. "Java is open, but is the process?". SD Times. Retrieved 21 September 2011.&#160;
+^ Whiting, Rick. "http://www.crn.com/news/applications-os/228800169/apache-quits-java-governing-board-over-dispute-with-oracle.htm". CRN. Retrieved 21 September 2011.&#160;
+^ The Java Community Process(SM) Program - Press &amp; Success - News Stories. Jcp.org. Retrieved on 2013-07-17.
+^ The Java Community Process(SM) Program - Press &amp; Success - News Stories. Jcp.org. Retrieved on 2013-07-17.
+
+
+External links[edit]
+
+Java Community Process home page
+List of all JSRs rated final
+List of all JSRs
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Java
+
+
+
+
+
+
+Java platforms
+
+
+
+Java language
+JVM
+Micro Edition
+Standard Edition
+Enterprise Edition
+Java Card
+Android SDK
+
+
+
+
+
+
+
+
+
+
+
+Oracle technologies
+
+
+
+Squawk
+Java Development Kit
+OpenJDK
+Java virtual machine
+JavaFX
+Maxine VM
+
+
+
+
+
+
+
+
+Platform technologies
+
+
+
+Applets
+Servlets
+MIDlets
+JSP
+Web Start (JNLP)
+
+
+
+
+
+
+
+
+Major third-party technologies
+
+
+
+Eclipse
+GNU Classpath
+GWT
+Harmony
+Hibernate
+IcedTea
+Jazelle
+Spring
+Struts
+TopLink
+WildFly
+
+
+
+
+
+
+
+
+History
+
+
+
+Java version history
+Java Community Process
+Sun Microsystems
+Free Java implementations
+
+
+
+
+
+
+
+
+Major programming languages
+
+
+
+BeanShell
+Clojure
+Groovy
+Oxygene
+Java Tcl
+JRuby
+Jython
+Processing
+Rhino
+Scala
+more…
+
+
+
+
+
+
+
+
+Java conferences
+
+
+
+JavaOne
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Java_Community_Process&amp;oldid=674424572"					
+				Categories: Java platformJava specification requestsHidden categories: Articles containing potentially dated statements from 2006All articles containing potentially dated statementsArticles containing potentially dated statements from 2009				
+							
+		
+		
+			

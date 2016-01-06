@@ -1,0 +1,314 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Dynamic programming language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about a class of programming languages.  For the method for reducing the running time of algorithms, see Dynamic programming.
+
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs attention from an expert on the subject. Please add a reason or a talk parameter to this template to explain the issue with the article. Consider associating this request with a WikiProject. (January 2015)
+
+
+
+
+
+
+
+This article's factual accuracy is disputed. Please help to ensure that disputed statements are reliably sourced. See the relevant discussion on the talk page. (March 2012)
+
+
+
+
+
+
+
+This article may be confusing or unclear to readers. Please help us clarify the article; suggestions may be found on the talk page. (October 2009)
+
+
+
+
+
+
+
+
+Dynamic programming language is a term used in computer science to describe a class of high-level programming languages which, at runtime, execute many common programming behaviors that static programming languages perform during compilation. These behaviors could include extension of the program, by adding new code, by extending objects and definitions, or by modifying the type system. Although similar behaviours can be emulated in nearly any language, with varying degrees of difficulty, complexity and performance costs, dynamic languages provide direct tools to make use of them. Many of these features were first implemented as native features in the Lisp programming language.
+Most dynamic languages are also dynamically typed, but not all are. Dynamic languages are frequently (but not always) referred to as "scripting languages", although the term "scripting language" in its narrowest sense refers to languages specific to a given run-time environment.
+
+
+
+Contents
+
+
+1 Examples
+2 Implementation
+
+2.1 Eval
+2.2 Object runtime alteration
+2.3 Functional programming
+
+2.3.1 Closures
+2.3.2 Continuations
+
+
+2.4 Reflection
+2.5 Macros
+
+
+3 See also
+4 References
+5 External links
+6 Further reading
+
+
+
+Examples[edit]
+Popular dynamic programming languages include JavaScript, Python, Ruby, PHP, Lua and Perl. The following are generally considered dynamic languages:
+
+ActionScript
+BeanShell[1]
+Cobolscript
+Clojure
+ColdFusion Markup Language
+Common Lisp and most other Lisps
+Dylan
+E
+Gambas
+Groovy[2]
+Java (using Reflection)
+JavaScript
+Julia
+Lua
+MATLAB / Octave
+Objective-C
+Perl
+PHP
+Powershell
+Python
+R
+Ruby
+Smalltalk
+SuperCollider
+Tcl
+VBScript
+Wolfram Language
+
+Implementation[edit]
+
+
+
+This section requires expansion. (October 2009)
+
+
+Eval[edit]
+Some dynamic languages offer an eval function. This function takes a string parameter containing code in the language, and executes it. If this code stands for an expression, the resulting value is returned. However, Erik Meijer and Peter Drayton suggest that programmers "use eval as a poor man's substitute for higher-order functions."[3]
+Object runtime alteration[edit]
+A type or object system can typically be modified during runtime in a dynamic language. This can mean generating new objects from a runtime definition or based on mixins of existing types or objects. This can also refer to changing the inheritance or type tree, and thus altering the way that existing types behave (especially with respect to the invocation of methods).
+Functional programming[edit]
+Functional programming concepts are a feature of many dynamic languages, and also derive from Lisp.
+Closures[edit]
+One of the most widely used aspects of functional programming in dynamic languages is the closure, which allows creating a new instance of a function which retains access to the context in which it was created. A simple example of this is generating a function for scanning text for a word:
+
+function new_scanner (word)
+  temp_function = function (input)
+    scan_for_text (input, word)
+  end function
+  return temp_function
+end function
+
+Note that the inner function has no name, and is instead stored in the variable temp_function. Each time new_scanner is executed, it will return a new function which remembers the value of the word parameter that was passed in when it was defined.
+Closures[4] are one of the core tools of functional programming, and many languages support at least this degree of functional programming.
+Continuations[edit]
+Another feature of some dynamic languages is the continuation. Continuations represent execution states that can be re-invoked. For example, a parser might return an intermediate result and a continuation that, when invoked, will continue to parse the input. Continuations interact in very complex ways with scoping, especially with respect to closures. For this reason, many dynamic languages do not provide continuations.
+Reflection[edit]
+Reflection is common in many dynamic languages, and typically involves analysis of the types and metadata of generic or polymorphic data. It can, however, also include full evaluation and modification of a program's code as data, such as the features that Lisp provides in analyzing S-expressions.
+Macros[edit]
+A limited number of dynamic programming languages provide features which combine code introspection (the ability to examine classes, functions and keywords to know what they are, what they do and what they know) and eval in a feature called macros. Most programmers today who are aware of the term macro have encountered them in C or C++, where they are a static feature which are built in a small subset of the language, and are capable only of string substitutions on the text of the program. In dynamic languages, however, they provide access to the inner workings of the compiler, and full access to the interpreter, virtual machine, or runtime, allowing the definition of language-like constructs which can optimize code or modify the syntax or grammar of the language.
+Assembly, C, C++, early Java, and FORTRAN do not generally fit into this category.
+See also[edit]
+
+Comparison of programming languages
+Name binding
+
+References[edit]
+
+
+^ Chapter 24. Dynamic language support. Static.springsource.org. Retrieved on 2013-07-17.
+^ &lt;http://groovy.codehaus.org/
+^ Meijer, Erik and Peter Drayton (2005), Static Typing Where Possible, Dynamic Typing When Needed: The End of the Cold War Between Programming Languages, Microsoft Corporation, CiteSeerX: 10.1.1.69.5966&#160;
+^ See example of use on p.330 of Larry Wall's Programming Perl ISBN 0-596-00027-8
+
+
+External links[edit]
+(Many use the term "scripting languages".)
+
+Are Scripting Languages Any Good? A Validation of Perl, Python, Rexx, and Tcl against C, C++, and Java (PDF) — 2003 study
+A Slightly Skeptical View on Scripting Languages by Dr. Nikolai Bezroukov
+"Programming is Hard - Let's Go Scripting" by Larry Wall - Perl.com transcript of his State of the Onion speech.
+Scripting on the Java platform — JavaWorld
+
+Further reading[edit]
+
+Laurence Tratt, Dynamically Typed Languages, Advances in Computers, vol. 77, pages 149-184, July 2009
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Dynamic_programming_language&amp;oldid=691191487"					
+				Categories: Evaluation strategyHidden categories: Articles needing expert attention with no reason or talk parameterArticles needing unspecified expert attentionArticles needing expert attention from January 2015All articles needing expert attentionAccuracy disputes from March 2012All accuracy disputesWikipedia articles needing clarification from October 2009All Wikipedia articles needing clarificationArticles to be expanded from October 2009All articles to be expanded				
+							
+		
+		
+			

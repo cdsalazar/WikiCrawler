@@ -1,0 +1,92 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Code generation (compiler)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Code generator)
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (November 2006)
+
+
+In computing, code generation is the process by which a compiler's code generator converts some intermediate representation of source code into a form (e.g., machine code) that can be readily executed by a machine.
+Sophisticated compilers typically perform multiple passes over various intermediate forms. This multi-stage process is used because many algorithms for code optimization are easier to apply one at a time, or because the input to one optimization relies on the completed processing performed by another optimization. This organization also facilitates the creation of a single compiler that can target multiple architectures, as only the last of the code generation stages (the backend) needs to change from target to target. (For more information on compiler design, see Compiler.)
+The input to the code generator typically consists of a parse tree or an abstract syntax tree. The tree is converted into a linear sequence of instructions, usually in an intermediate language such as three-address code. Further stages of compilation may or may not be referred to as "code generation", depending on whether they involve a significant change in the representation of the program. (For example, a peephole optimization pass would not likely be called "code generation", although a code generator might incorporate a peephole optimization pass.)
+
+
+
+Contents
+
+
+1 Major tasks in code generation
+2 Runtime code generation
+3 Related concepts
+
+3.1 Reflection
+
+
+4 See also
+5 References
+
+
+
+Major tasks in code generation[edit]
+In addition to the basic conversion from an intermediate representation into a linear sequence of machine instructions, a typical code generator tries to optimize the generated code in some way.
+Tasks which are typically part of a sophisticated compiler's "code generation" phase include:
+
+Instruction selection: which instructions to use.
+Instruction scheduling: in which order to put those instructions. Scheduling is a speed optimization that can have a critical effect on pipelined machines.
+Register allocation: the allocation of variables to processor registers[1]
+Debug data generation if required so the code can be debugged.
+
+Instruction selection is typically carried out by doing a recursive postorder traversal on the abstract syntax tree, matching particular tree configurations against templates; for example, the tree W&#160;:= ADD(X,MUL(Y,Z)) might be transformed into a linear sequence of instructions by recursively generating the sequences for t1&#160;:= X and t2&#160;:= MUL(Y,Z), and then emitting the instruction ADD W, t1, t2.
+In a compiler that uses an intermediate language, there may be two instruction selection stages — one to convert the parse tree into intermediate code, and a second phase much later to convert the intermediate code into instructions from the instruction set of the target machine. This second phase does not require a tree traversal; it can be done linearly, and typically involves a simple replacement of intermediate-language operations with their corresponding opcodes. However, if the compiler is actually a language translator (for example, one that converts Eiffel to C), then the second code-generation phase may involve building a tree from the linear intermediate code.
+Runtime code generation[edit]
+When code generation occurs at runtime, as in just-in-time compilation (JIT), it is important that the entire process be efficient with respect to space and time. For example, when regular expressions are interpreted and used to generate code at runtime, a non-deterministic finite state machine is often generated instead of a deterministic one, because usually the former can be created more quickly and occupies less memory space than the latter. Despite its generally generating less efficient code, JIT code generation can take advantage of profiling information that is available only at runtime.
+Related concepts[edit]
+The fundamental task of taking input in one language and producing output in a non-trivially different language can be understood in terms of the core transformational operations of formal language theory. Consequently, some techniques that were originally developed for use in compilers have come to be employed in other ways as well. For example, YACC (Yet Another Compiler Compiler) takes input in Backus-Naur form and converts it to a parser in C. Though it was originally created for automatic generation of a parser for a compiler, yacc is also often used to automate writing code that needs to be modified each time specifications are changed. (For example, see.[2])
+Many integrated development environments (IDEs) support some form of automatic source code generation, often using algorithms in common with compiler code generators, although commonly less complicated. (See also: Program transformation, Data transformation.)
+Reflection[edit]
+In general, a syntax and semantic analyzer tries to retrieve the structure of the program from the source code, while a code generator uses this structural information (e.g., data types) to produce code. In other words, the former adds information while the latter loses some of the information. One consequence of this information loss is that reflection becomes difficult or even impossible. To counter this problem, code generators often embed syntactic and semantic information in addition to the code necessary for execution.
+See also[edit]
+
+Automatic programming
+Comparison of code generation tools
+Source to source compilation: automatic translation of a computer program from one programming language to another
+
+References[edit]
+
+
+^ Aho, Alfred V.; Ravi Sethi; Jeffrey D. Ullman (1987). Compilers: Principles, Techniques, and Tools. Addison-Wesley. p.&#160;15. ISBN&#160;0-201-10088-6.&#160; |access-date= requires |url= (help)
+^ Code Generation: The Real Lesson of Rails. Artima.com (2006-03-16). Retrieved on 2013-08-10.
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Code_generation_(compiler)&amp;oldid=689696022"					
+				Categories: Machine codeCompiler constructionHidden categories: Pages using citations with accessdate and no URLArticles needing additional references from November 2006All articles needing additional references				
+							
+		
+		
+			

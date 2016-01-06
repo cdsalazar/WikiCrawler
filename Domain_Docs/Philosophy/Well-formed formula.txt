@@ -1,0 +1,405 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Well-formed formula
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Formula (mathematical logic))
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+This diagram shows the syntactic entities which may be constructed from formal languages. The symbols and strings of symbols may be broadly divided into nonsense and well-formed formulas. A formal language can be thought of as identical to the set of its well-formed formulas. The set of well-formed formulas may be broadly divided into theorems and non-theorems.
+
+
+In mathematical logic, a well-formed formula, shortly wff, often simply formula, is a word (i.e. a finite sequence of symbols from a given alphabet) that is part of a formal language.[1] A formal language can be considered to be identical to the set containing all and only its formulas.
+A formula is a syntactic formal object that can be given a semantic meaning by means of semantics.
+
+
+
+Contents
+
+
+1 Introduction
+2 Propositional calculus
+3 Predicate logic
+4 Atomic and open formulas
+5 Closed formulas
+6 Properties applicable to formulas
+7 Usage of the terminology
+8 See also
+9 Notes
+10 References
+11 External links
+
+
+
+Introduction[edit]
+A key use of formulae is in propositional logic and predicate logics such as first-order logic. In those contexts, a formula is a string of symbols φ for which it makes sense to ask "is φ true?", once any free variables in φ have been instantiated. In formal logic, proofs can be represented by sequences of formulas with certain properties, and the final formula in the sequence is what is proven.
+Although the term "formula" may be used for written marks (for instance, on a piece of paper or chalkboard), it is more precisely understood as the sequence being expressed, with the marks being a token instance of formula. It is not necessary for the existence of a formula that there be any actual tokens of it. A formal language may thus have an infinite number of formulas regardless whether each formula has a token instance. Moreover, a single formula may have more than one token instance, if it is written more than once.
+Formulas are quite often interpreted as propositions (as, for instance, in propositional logic). However formulas are syntactic entities, and as such must be specified in a formal language without regard to any interpretation of them. An interpreted formula may be the name of something, an adjective, an adverb, a preposition, a phrase, a clause, an imperative sentence, a string of sentences, a string of names, etc.[broken citation]. A formula may even turn out to be nonsense, if the symbols of the language are specified so that it does. Furthermore, a formula need not be given any interpretation.
+Propositional calculus[edit]
+The formulas of propositional calculus, also called propositional formulas,[2] are expressions such as . Their definition begins with the arbitrary choice of a set V of propositional variables. The alphabet consists of the letters in V along with the symbols for the propositional connectives and parentheses "(" and ")", all of which are assumed to not be in V. The formulas will be certain expressions (that is, strings of symbols) over this alphabet.
+The formulas are inductively defined as follows:
+
+Each propositional variable is, on its own, a formula.
+If φ is a formula, then φ is a formula.
+If φ and ψ are formulas, and • is any binary connective, then ( φ • ψ) is a formula. Here • could be (but is not limited to) the usual operators ∨, ∧, →, or ↔.
+
+This definition can also be written as a formal grammar in Backus–Naur form, provided the set of variables is finite:
+
+&lt;alpha set&gt;&#160;::= p | q | r | s | t | u | ... (the arbitrary finite set of propositional variables)
+&lt;form&gt;&#160;::= &lt;alpha set&gt; | &lt;form&gt; | (&lt;form&gt;&lt;form&gt;) | (&lt;form&gt;&lt;form&gt;) | (&lt;form&gt;&lt;form&gt;) | (&lt;form&gt;&lt;form&gt;)
+
+Using this grammar, the sequence of symbols
+
+(((p  q)  (r  s))  (q  s))
+
+is a formula, because it is grammatically correct. The sequence of symbols
+
+((p  q)(qq))p))
+
+is not a formula, because it does not conform to the grammar.
+A complex formula may be difficult to read, owing to, for example, the proliferation of parentheses. To alleviate this last phenomenon, precedence rules (akin to the standard mathematical order of operations) are assumed among the operators, making some operators more binding than others. For example, assuming the precedence (from most binding to least binding) 1.  &#160; 2. &#160; 3. &#160; 4. . Then the formula
+
+(((p  q)  (r  s))  (q  s))
+
+may be abbreviated as
+
+p  q  r  s  q  s
+
+This is, however, only a convention used to simplify the written representation of a formula. If the precedence was assumed, for example, to be left-right associative, in following order: 1.  &#160; 2. &#160; 3. &#160; 4. , then the same formula above (without parentheses) would be rewritten as
+
+(p  (q  r))  (s  ((q)  (s)))
+
+Predicate logic[edit]
+The definition of a formula in first-order logic  is relative to the signature of the theory at hand. This signature specifies the constant symbols, relation symbols, and function symbols of the theory at hand, along with the arities of the function and relation symbols.
+The definition of a formula comes in several parts. First, the set of terms is defined recursively. Terms, informally, are expressions that represent objects from the domain of discourse.
+
+Any variable is a term.
+Any constant symbol from the signature is a term
+an expression of the form f(t1,...,tn), where f is an n-ary function symbol, and t1,...,tn are terms, is again a term.
+
+The next step is to define the atomic formulas.
+
+If t1 and t2 are terms then t1=t2 is an atomic formula
+If R is an n-ary relation symbol, and t1,...,tn are terms, then R(t1,...,tn) is an atomic formula
+
+Finally, the set of formulas is defined to be the smallest set containing the set of atomic formulas such that the following holds:
+
+ is a formula when  is a formula
+ and  are formulas when  and  are formulas;
+ is a formula when  is a variable and  is a formula;
+ is a formula when  is a variable and  is a formula (alternatively,  could be defined as an abbreviation for ).
+
+If a formula has no occurrences of  or , for any variable , then it is called quantifier-free. An existential formula is a formula starting with a sequence of existential quantification followed by a quantifier-free formula.
+Atomic and open formulas[edit]
+Main article: Atomic formula
+An atomic formula is a formula that contains no logical connectives nor quantifiers, or equivalently a formula that has no strict subformulas. The precise form of atomic formulas depends on the formal system under consideration; for propositional logic, for example, the atomic formulas are the propositional variables. For predicate logic, the atoms are predicate symbols together with their arguments, each argument being a term.
+According to some terminology, an open formula is formed by combining atomic formulas using only logical connectives, to the exclusion of quantifiers.[3] This has not to be confused with a formula which is not closed.
+Closed formulas[edit]
+Main article: Sentence (mathematical logic)
+A closed formula, also ground formula or sentence, is a formula in which there are no free occurrences of any variable. If A is a formula of a first-order language in which the variables v1, ..., vn have free occurrences, then A preceded by v1 ... vn is a closure of A.
+Properties applicable to formulas[edit]
+
+A formula A in a language  is valid if it is true for every interpretation of .
+A formula A in a language  is satisfiable if it is true for some interpretation of .
+A formula A of the language of arithmetic is decidable if it represents a decidable set, i.e. if there is an effective method which, given a substitution of the free variables of A, says that either the resulting instance of A is provable or its negation is.
+
+Usage of the terminology[edit]
+In earlier works on mathematical logic (e.g. by Church[4]), formulas referred to any strings of symbols and among these strings, well-formed formulas were the strings that followed the formation rules of (correct) formulas.
+Several authors simply say formula.[5][6][7][8] Modern usages (especially in the context of computer science with mathematical software such as model checkers, automated theorem provers, interactive theorem provers) tend to retain of the notion of formula only the algebraic concept and to leave the question of well-formedness, i.e. of the concrete string representation of formulas (using this or that symbol for connectives and quantifiers, using this or that parenthesizing convention, using Polish or infix notation, etc.) as a mere notational problem.
+However, the expression well-formed formulas can still be found in various works,[9][10][11] these authors using the name well-formed formula without necessarily opposing it to the old sense of formula as arbitrary string of symbols so that it is no longer common in mathematical logic to refer to arbitrary strings of symbols in the old sense of formulas.
+The expression "well-formed formulas" (WFF) also pervaded in popular culture. Indeed, WFF is part of an esoteric pun used in the name of the academic game "WFF 'N PROOF: The Game of Modern Logic," by Layman Allen,[12] developed while he was at Yale Law School (he was later a professor at the University of Michigan). The suite of games is designed to teach the principles of symbolic logic to children (in Polish notation).[13] Its name is an echo of whiffenpoof, a nonsense word used as a cheer at Yale University made popular in The Whiffenpoof Song and The Whiffenpoofs.[14]
+See also[edit]
+
+
+
+
+Logic portal
+
+
+
+
+Ground expression
+
+Notes[edit]
+
+
+^ Formulas are a standard topic in introductory logic, and are covered by all introductory textbooks, including Enderton (2001), Gamut (1990), and Kleene (1967)
+^ First-order logic and automated theorem proving, Melvin Fitting, Springer, 1996 [1]
+^ Handbook of the history of logic, (Vol 5, Logic from Russell to Church), Tarski's logic by Keith Simmons, D. Gabbay and J. Woods Eds, p568 [2].
+^ Alonzo Church, [1996] (1944), Introduction to mathematical logic, page 49
+^ Hilbert, David; Ackermann, Wilhelm (1950) [1937], Principles of Mathematical Logic, New York: Chelsea
+^ Hodges, Wilfrid (1997), A shorter model theory, Cambridge University Press, ISBN 978-0-521-58713-6
+^ Barwise, Jon, ed. (1982), Handbook of Mathematical Logic, Studies in Logic and the Foundations of Mathematics, Amsterdam: North-Holland, ISBN 978-0-444-86388-1
+^ Cori, Rene; Lascar, Daniel (2000), Mathematical Logic: A Course with Exercises, Oxford University Press, ISBN 978-0-19-850048-3
+^ Enderton, Herbert [2001] (1972), A mathematical introduction to logic (2nd ed.), Boston, MA: Academic Press, ISBN 978-0-12-238452-3
+^ R. L. Simpson (1999), Essentials of Symbolic Logic, page 12
+^ Mendelson, Elliott [2010] (1964), An Introduction to Mathematical Logic (5th ed.), London: Chapman &amp; Hall
+^ Ehrenburg 2002
+^ More technically, propositional logic using the Fitch-style calculus.
+^ Allen (1965) acknowledges the pun.
+
+
+References[edit]
+
+Allen, Layman E. (1965), "Toward Autotelic Learning of Mathematical Logic by the WFF 'N PROOF Games", Mathematical Learning: Report of a Conference Sponsored by the Committee on Intellective Processes Research of the Social Science Research Council, Monographs of the Society for Research in Child Development 30 (1): 29–41&#160;
+Boolos, George; Burgess, John; Jeffrey, Richard (2002), Computability and Logic (4th ed.), Cambridge University Press, ISBN&#160;978-0-521-00758-0&#160;
+Ehrenberg, Rachel (Spring 2002). "He's Positively Logical". Michigan Today (University of Michigan). Retrieved 2007-08-19.&#160;
+Enderton, Herbert (2001), A mathematical introduction to logic (2nd ed.), Boston, MA: Academic Press, ISBN&#160;978-0-12-238452-3&#160;
+Gamut, L.T.F. (1990), Logic, Language, and Meaning, Volume 1: Introduction to Logic, University Of Chicago Press, ISBN&#160;0-226-28085-3&#160;
+Hodges, Wilfrid (2001), "Classical Logic I: First-Order Logic", in Goble, Lou, The Blackwell Guide to Philosophical Logic, Blackwell, ISBN&#160;978-0-631-20692-7&#160;
+Hofstadter, Douglas (1980), Gödel, Escher, Bach: An Eternal Golden Braid, Penguin Books, ISBN&#160;978-0-14-005579-5&#160;
+Kleene, Stephen Cole (2002) [1967], Mathematical logic, New York: Dover Publications, ISBN&#160;978-0-486-42533-7, MR&#160;1950307&#160;
+Rautenberg, Wolfgang (2010), A Concise Introduction to Mathematical Logic (3rd ed.), New York: Springer Science+Business Media, doi:10.1007/978-1-4419-1221-3, ISBN&#160;978-1-4419-1220-6&#160;
+
+External links[edit]
+
+Well-Formed Formula for First Order Predicate Logic - includes a short Java quiz.
+Well-Formed Formula at ProvenMath
+WFF N PROOF game site
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Mathematical logic
+
+
+
+
+
+
+General
+
+
+
+Formal language
+Formation rule
+Formal system
+Deductive system
+Formal proof
+Formal semantics
+Well-formed formula
+Set
+Element
+Class
+Classical logic
+Axiom
+Natural deduction
+Rule of inference
+Relation
+Theorem
+Logical consequence
+Axiomatic system
+Type theory
+Symbol
+Syntax
+Theory
+
+
+
+
+
+
+
+
+Traditional logic
+
+
+
+Proposition
+Inference
+Argument
+Validity
+Cogency
+Syllogism
+Square of opposition
+Venn diagram
+
+
+
+
+
+
+
+
+
+Propositional
+calculus
+Boolean logic
+
+
+
+
+Boolean functions
+Propositional calculus
+Propositional formula
+Logical connectives
+Truth tables
+
+
+
+
+
+
+
+
+Predicate logic
+
+
+
+First-order
+Quantifiers
+Predicate
+Second-order
+Monadic predicate calculus
+
+
+
+
+
+
+
+
+Naive set theory
+
+
+
+Set
+Empty set
+Enumeration
+Extensionality
+Finite set
+Infinite set
+Subset
+Power set
+Countable set
+Uncountable set
+Recursive set
+Domain
+Range
+Map
+Function
+Relation
+Ordered pair
+
+
+
+
+
+
+
+
+Set theory
+
+
+
+Foundations of mathematics
+Zermelo–Fraenkel set theory
+Axiom of choice
+General set theory
+Kripke–Platek set theory
+Von Neumann–Bernays–Gödel set theory
+Morse–Kelley set theory
+Tarski–Grothendieck set theory
+
+
+
+
+
+
+
+
+Model theory
+
+
+
+Model
+Interpretation
+Non-standard model
+Finite model theory
+Truth value
+Validity
+
+
+
+
+
+
+
+
+Proof theory
+
+
+
+Formal proof
+Deductive system
+Formal system
+Theorem
+Logical consequence
+Rule of inference
+Syntax
+
+
+
+
+
+
+
+
+Computability
+theory
+
+
+
+Recursion
+Recursive set
+Recursively enumerable set
+Decision problem
+Church–Turing thesis
+Computable function
+Primitive recursive function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Well-formed_formula&amp;oldid=660313819"					
+				Categories: Formal languagesMetalogicSyntax (logic)Mathematical logicLogical expressionsHidden categories: Articles with unsourced statements from March 2011				
+							
+		
+		
+			

@@ -1,0 +1,198 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Run-time type information
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer programming, RTTI (Run-Time Type Information, or Run-Time Type Identification[1]) refers to a C++ mechanism that exposes information about an object's data type at runtime. Run-time type information can apply to simple data types, such as integers and characters, or to generic types. This is a C++ specialization of a more general concept called type introspection. Similar mechanisms are also known in other programming languages, such as Delphi (Object Pascal).
+In the original C++ design, Bjarne Stroustrup did not include run-time type information, because he thought this mechanism was frequently misused.[2]
+
+
+
+Contents
+
+
+1 Overview
+2 typeid
+
+2.1 Example
+
+
+3 dynamic_cast and Java cast
+
+3.1 Example
+
+
+4 See also
+5 External links
+6 References
+
+
+
+Overview[edit]
+The dynamic_cast&lt;&gt; operation and typeid operator in C++ are part of RTTI.
+The C++ run-time type information permits performing safe typecasts and manipulate type information at run time.
+RTTI is available only for classes which are polymorphic, which means they have at least one virtual method. In practice, this is not a limitation because base classes must have a virtual destructor to allow objects of derived classes to perform proper cleanup if they are deleted from a base pointer.
+RTTI is optional with some compilers; the programmer can choose at compile time whether to include the function. There may be a resource cost to making RTTI available even if the program does not use it.
+typeid[edit]
+The typeid keyword is used to determine the class of an object at run time. It returns a reference to std::type_info object, which exists until the end of the program.[3] The use of typeid, in a non-polymorphic context, is often preferred over dynamic_cast&lt;class_type&gt; in situations where just the class information is needed, because typeid is a constant-time procedure, whereas dynamic_cast must traverse the class derivation lattice of its argument at runtime.[citation needed] Some aspects of the returned object are implementation-defined, such as std::type_info::name(), and cannot be relied on across compilers to be consistent.
+Objects of class std::bad_typeid are thrown when the expression for typeid is the result of applying the unary * operator on a null pointer. Whether an exception is thrown for other null reference arguments is implementation-dependent. In other words, for the exception to be guaranteed, the expression must take the form typeid(*p) where p is any expression resulting in a null pointer.
+Example[edit]
+
+
+#include &lt;iostream&gt;    // cout
+#include &lt;typeinfo&gt;    // for 'typeid'
+
+class Person {
+public:
+   virtual ~Person() {}
+};
+
+class Employee : public Person {
+};
+
+int main() 
+{
+   Person person;
+   Employee employee;
+   Person* ptr = &amp;employee;
+   Person&amp; ref = employee;
+   // The string returned by typeid::name is implementation-defined
+   std::cout &lt;&lt; typeid(person).name() &lt;&lt; std::endl;   // Person (statically known at compile-time)
+   std::cout &lt;&lt; typeid(employee).name() &lt;&lt; std::endl; // Employee (statically known at compile-time)
+   std::cout &lt;&lt; typeid(ptr).name() &lt;&lt; std::endl;      // Person* (statically known at compile-time)
+   std::cout &lt;&lt; typeid(*ptr).name() &lt;&lt; std::endl;     // Employee (looked up dynamically at run-time
+                                                      //           because it is the dereference of a
+                                                      //           pointer to a polymorphic class)
+   std::cout &lt;&lt; typeid(ref).name() &lt;&lt; std::endl;      // Employee (references can also be polymorphic)
+
+   Person* p = nullptr;
+   try {
+      typeid(*p); // not undefined behavior; throws std::bad_typeid
+   }
+   catch (...) {
+   }
+
+   Person&amp; pRef = *p; // Undefined behavior: dereferencing null
+   typeid(pRef);      // does not meet requirements to throw std::bad_typeid
+                      // because the expression for typeid is not the result
+                      // of applying the unary * operator
+}
+
+Output (exact output varies by system):
+
+Person
+Employee
+Person*
+Employee
+Employee
+
+dynamic_cast and Java cast[edit]
+The dynamic_cast operator in C++ is used for downcasting a reference or pointer to a more specific type in the class hierarchy. Unlike the static_cast, the target of the dynamic_cast must be a pointer or reference to class. Unlike static_cast and C-style typecast (where type check is made during compilation), a type safety check is performed at runtime. If the types are not compatible, an exception will be thrown (when dealing with references) or a null pointer will be returned (when dealing with pointers).
+A Java typecast behaves similarly; if the object being cast is not actually an instance of the target type, and cannot be converted to one by a language-defined method, an instance of java.lang.ClassCastException will be thrown.[4]
+Example[edit]
+Suppose some function takes an object of type A as its argument, and wishes to perform some additional operation if the object passed is an instance of B, a subclass of A. This can be accomplished using dynamic_cast as follows.
+
+
+#include &lt;typeinfo&gt; // For std::bad_cast
+#include &lt;iostream&gt; // For std::cout, std::err, std::endl etc.
+
+class A {
+public:
+    // Since RTTI is included in the virtual method table there should be at least one virtual function.
+    virtual ~A() { };
+    void methodSpecificToA() { std::cout &lt;&lt; "Method specific for A was invoked" &lt;&lt; std::endl; };
+};
+ 
+class B : public A {
+public:
+    void methodSpecificToB() { std::cout &lt;&lt; "Method specific for B was invoked" &lt;&lt; std::endl; };
+    virtual ~B() { };
+};
+ 
+void my_function(A&amp; my_a)
+{
+    try {
+        B&amp; my_b = dynamic_cast&lt;B&amp;&gt;(my_a); // cast will be successful only for B type objects.
+        my_b.methodSpecificToB();
+    }
+    catch (const std::bad_cast&amp; e) {
+        std::cerr &lt;&lt; "  Exception " &lt;&lt; e.what() &lt;&lt; " thrown." &lt;&lt; std::endl;
+        std::cerr &lt;&lt; "  Object is not of type B" &lt;&lt; std::endl;
+    }
+}
+
+int main()
+{
+    A *arrayOfA[3];          // Array of pointers to base class (A)
+    arrayOfA[0] = new B();   // Pointer to B object
+    arrayOfA[1] = new B();   // Pointer to B object
+    arrayOfA[2] = new A();   // Pointer to A object
+    for (int i = 0; i &lt; 3; i++) {
+        my_function(*arrayOfA[i]);
+        delete arrayOfA[i];  // delete object to prevent memory leak
+    }
+}
+
+Console output:
+
+Method specific for B was invoked
+Method specific for B was invoked
+Exception std::bad_cast thrown.
+Object is not of type B
+
+A similar version of my_function can be written with pointers instead of references:
+
+
+void my_function(A* my_a)
+{
+    B* my_b = dynamic_cast&lt;B*&gt;(my_a);
+
+    if (my_b != nullptr)
+        my_b-&gt;methodSpecificToB();
+    else
+        std::cerr &lt;&lt; "  Object is not B type" &lt;&lt; std::endl;
+}
+
+See also[edit]
+
+Reflection
+
+External links[edit]
+
+dynamic_cast operator at IBM Mac OS X Compilers
+dynamic_cast operator at MSDN
+
+References[edit]
+
+^ Sun Microsystems (2000). "Runtime Type Identification". C++ Programming Guide. Oracle. Retrieved 16 April 2015.&#160;
+^ Bjarne Stroustrup. "A History of C++: 1979—1991" (PDF). p.&#160;50. Retrieved 2009-05-18.&#160;
+^ C++ standard (ISO/IEC14882) section 5.2.8 [expr.typeid], 18.5.1 [lib.type.info] -- http://cs.nyu.edu/courses/fall11/CSCI-GA.2110-003/documents/c++2003std.pdf
+^ http://docs.oracle.com/javase/8/docs/api/java/lang/ClassCastException.html
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Run-time_type_information&amp;oldid=691210333"					
+				Categories: C++Class (computer programming)Data typesHidden categories: All articles with unsourced statementsArticles with unsourced statements from April 2015Articles with example C++ code				
+							
+		
+		
+			

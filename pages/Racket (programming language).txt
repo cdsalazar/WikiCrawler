@@ -1,0 +1,309 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Racket (programming language)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+Racket
+
+
+
+
+
+
+
+
+
+DrRacket on Ubuntu GNU/Linux
+
+
+
+
+
+Paradigm
+Multi-paradigm: functional, procedural, modular, object-oriented, logic, reflective, meta
+
+
+Designed&#160;by
+PLT Inc.
+
+
+Developer
+PLT Inc.
+
+
+First&#160;appeared
+1994
+
+
+Stable release
+6.2.1[1] / August&#160;10, 2015; 3 months ago&#160;(2015-08-10)
+
+
+Typing discipline
+Dynamic, strong, static
+
+
+Platform
+x86, PowerPC, SPARC, MIPS, ARM
+
+
+OS
+Cross-platform
+
+
+License
+LGPL
+
+
+Filename extensions
+.rkt, .rktl, .rktd, .scrbl, .plt, .ss, .scm
+
+
+Website
+racket-lang.org
+
+
+Dialects
+
+
+Typed Racket, Lazy Racket, Scribble, FrTime, more
+
+
+Influenced by
+
+
+Scheme, Eiffel[2]
+
+
+Influenced
+
+
+Scheme,[3] Rust,[4] Clojure[5]
+
+
+Racket (formerly named PLT Scheme) is a general purpose, multi-paradigm programming language in the Lisp/Scheme family. One of its design goals is to serve as a platform for language creation, design, and implementation.[6][7] The language is used in a variety of contexts such as scripting, general-purpose programming, computer science education, and research.
+The platform provides an implementation of the Racket language (including a sophisticated run-time system,[8] various libraries, JIT compiler, and more) along with a development environment called DrRacket (formerly named DrScheme) written in Racket itself.[9] The IDE and an accompanying programming curriculum is used in the ProgramByDesign outreach program, an attempt to turn computing and programming into "an indispensable part of the liberal arts curriculum".[10][11] The core language is known for its extensive macro system which enables the creation of embedded and domain-specific languages, language constructs such as classes or modules, and separate dialects of Racket with different semantics.[12][13][14][15]
+The platform distribution is free and open source software distributed under the LGPL license.[16] Extensions and packages written by the community are uploaded to Racket's centralized package catalog.
+
+
+
+Contents
+
+
+1 History
+
+1.1 Development
+1.2 Version history
+1.3 Racket
+
+
+2 Features
+
+2.1 Macros and extensibility
+
+
+3 Programming environment
+
+3.1 DrRacket IDE
+
+
+4 Code examples
+5 Applications and practical use
+6 References
+7 Further reading
+8 External links
+
+8.1 Tutorials
+8.2 Style guide
+8.3 Website and documentation
+
+
+
+
+
+History[edit]
+Development[edit]
+Matthias Felleisen founded PLT in the mid 1990s, first as a research group, soon after as a project dedicated to the production of pedagogic materials for novice programmers (lectures, exercises/projects, software). In January 1995, the group decided to develop a pedagogic programming environment based on Scheme. Matthew Flatt cobbled together MrEd—the original virtual machine for Racket—from libscheme,[17] wxWidgets, and a few other free systems.[18] In the years that followed, a team including Flatt, Robby Findler, Shriram Krishnamurthi, Cormac Flanagan, and many others produced DrScheme, a programming environment for novice Scheme programmers and a research environment for soft typing.[9] The main development language that DrScheme supported was called PLT Scheme.
+In parallel, the team started conducting workshops for high school teachers, training them in program design and functional programming. Field tests with these teachers and their students provided essential clues for the direction of the development.
+Over the following years, PLT added teaching languages, an algebraic stepper,[19] a transparent read-eval-print loop, a constructor-based printer, and many other innovations to DrScheme, producing an application-quality pedagogic program development environment. By 2001, the core team (Felleisen, Findler, Flatt, Krishnamurthi) had also written and published their first textbook, How to Design Programs, based on their teaching philosophy.
+Version history[edit]
+The first generation of PLT Scheme revisions introduced features for programming in the large with both modules and classes. Version 42 introduced units — a first-class module system — to complement classes for large scale development.[20] The class system gained features (e.g. Java-style interfaces) and also lost several features (e.g. multiple inheritance) throughout these versions.[13] The language evolved throughout a number of successive versions, and gaining milestone popularity in Version 53, leading to extensive work and the following Version 100, which would be equivalent to a "1.0" release in current popular version systems.
+The next major revision was named Version 200, which introduced a new default module system that cooperates with macros.[20] In particular, the module system ensures that run-time and compile-time computation are separated to support a "tower of languages."[21] Unlike units, these modules are not first-class objects.
+Version 300 introduced Unicode support, foreign library support, and refinements to the class system.[20] Later on, the 300 series improved the performance of the language runtime with an addition of a JIT compiler and a switch to a default generational garbage collection.
+By the next major release, the project had switched to a more conventional sequence-based version numbering. Version 4.0 introduced the #lang shorthand to specify the language that a module is written in. In addition, the revision introduced immutable pairs and lists, support for fine-grained parallelism, and a statically-typed dialect.[22]
+Racket[edit]
+On June 7, 2010, PLT Scheme was renamed Racket.[23] The renaming coincided with the release of Version 5.0. Subsequently, the GUI backend was rewritten in Racket from C++ in Version 5.1 using native UI toolkits on all platforms.[18] Version 5.2 included a background syntax checking tool, a new plotting library, a database library, and a new extended REPL.[24] Version 5.3 included a new submodule feature for optionally loaded modules,[25] new optimization tools, a JSON library, and other features.[26] Version 5.3.1 introduced major improvements to DrRacket: the background syntax checker was turned on by default and a new documentation preview tool was added.[27]
+Features[edit]
+Main article: Racket features
+Racket's core language includes macros, modules, lexical closures, tail calls, delimited continuations,[28] parameters (fluid variables), software contracts,[29] green and OS threads,[30][31][32] and more. The language also comes with primitives, such as eventspaces and custodians, which control resource management and enables the language to act like an operating system for loading and managing other programs.[8] Further extensions to the language are created with the powerful macro system, which together with the module system and custom parsers can control all aspects of a language.[33] Unlike programming languages that lack macro systems, most language constructs in Racket are written on top of the base language using macros. These include a mixin class system,[13] a component (or module) system as expressive as ML's,[14] and pattern matching.
+In addition, the language features the first contract system for a higher-order language.[34] Racket's contract system is inspired by the Design by Contract work for Eiffel and extends it to work for higher-order values such as first-class functions, objects, reference cells, and so on. For example, an object that is checked by a contract can be ensured to make contract checks when its methods are eventually invoked.
+Racket's compiler is a bytecode compiler that translates to an internal bytecode format that is run by the Racket virtual machine. On x86 and PowerPC platforms, the bytecode is further compiled using a JIT compiler at runtime.
+Since 2004, the language has also shipped with PLaneT, a package manager that is integrated into the module system so that third-party libraries can be transparently imported and used. Additionally, PLaneT has a built-in versioning policy to prevent dependency hell.[35]
+At the end of 2014, much of Racket's code was moved into a new packaging system separate from the main code base. This new packaging system is serviced by a client program called raco. The new package system provides fewer features than PLaneT; a blog post by Jay McCarthy on the Racket blog explains the rationale for the change and how to duplicate the older system.[36]
+Macros and extensibility[edit]
+See also: Racket language extensions
+The feature that distinguishes Racket from other languages in the Lisp family is its integrated language extensibility. Racket's extensibility features are built into the module system to allow context-sensitive and module-level control over syntax.[15] For example, the #%app syntactic form can be overridden to change the semantics of function application. Similarly, the #%module-begin form allows arbitrary static analysis of the entire module.[15] Since any module can be used as a language, via the #lang notation, this effectively means a programmer can control virtually any aspect of the language.
+The module-level extensibility features are combined with a Scheme-like hygienic macro system, which provides more features than Lisp's S-expression manipulation system,[37][38] Scheme 84's hygienic extend-syntax macros, or R5RS's syntax-rules. Indeed, it is fair to say that the macro system is a carefully tuned application programming interface (API) for compiler extensions. Using this compiler API, programmers can add features and entire domain-specific languages in a manner that makes them completely indistinguishable from built-in language constructs.
+The macro system in Racket has been used to construct entire language dialects. This includes Typed Racket—a statically typed dialect of Racket that eases the migration from untyped to typed code,[39] and Lazy Racket—a dialect with lazy evaluation.[40] Other dialects include FrTime (functional reactive programming), Scribble (documentation language),[41] Slideshow (presentation language),[42] and several languages for education.[43][44] Racket's core distribution provides libraries to aid the process of constructing new programming languages.[15]
+Such languages are not restricted to S-expression based syntax. In addition to conventional readtable-based syntax extensions, Racket's #lang makes it possible for a language programmer to define any arbitrary parser, for example, using the parser tools library.[45] See Racket logic programming for an example of such a language.
+Programming environment[edit]
+The language platform provides a self-hosted IDE[9] named DrRacket, a continuation-based web server,[46] a graphical user interface,[18] and other tools. Racket is also a viable scripting tool and can be used for scripting the Unix shell. It can parse command line arguments, execute external tools and includes libraries like all common scripting languages.
+DrRacket IDE[edit]
+DrRacket (formerly DrScheme) is widely used among introductory Computer Science courses that teach Scheme or Racket and is lauded for its simplicity and appeal to beginner programmers. The IDE was originally built for use with the TeachScheme! project (now ProgramByDesign), an outreach effort by Northeastern University and a number of affiliated universities for attracting high school students to computer science courses at the college level.
+The editor provides source highlighting for syntax and run-time errors, parenthesis matching, a debugger and an algebraic stepper. Its student-friendly features include support for multiple "language levels" (Beginning Student, Intermediate Student and so on). It also has integrated library support, and sophisticated analysis tools for advanced programmers. In addition, module-oriented programming is supported with the module browser, a contour view, integrated testing and coverage measurements, and refactoring support. It provides integrated, context-sensitive access to an extensive hyper-linked help system named "Help Desk".
+DrRacket is available for Windows (95 and up), Mac OS X, Unix, and Linux with the X Window System and programs behave similarly on all these platforms.
+Code examples[edit]
+See also: Racket examples
+Here's a trivial "hello world" program:
+
+
+#lang racket/base
+"Hello, World!"
+
+Running this program produces the output:
+
+"Hello, World!"
+
+Here's a slightly less trivial program:
+
+
+
+
+The result of this program, as shown in DrRacket
+
+
+
+
+#lang racket
+(require 2htdp/image)
+
+(let sierpinski ([n 8])
+  (if (zero? n)
+    (triangle 2 'solid 'red)
+    (let ([t (sierpinski (- n 1))])
+      (freeze (above t (beside t t))))))
+
+This program, taken from the Racket website, draws a Sierpinski triangle, nested to depth 8.
+Using the #lang directive, a source file can be written in different dialects of Racket. Here is an example of the factorial program in Typed Racket, a statically typed dialect of Racket:
+
+
+#lang typed/racket
+
+(: fact (Integer -&gt; Integer))
+(define (fact n)
+  (cond [(zero? n) 1]
+        [else (* n (fact (- n 1)))]))
+
+Applications and practical use[edit]
+Apart from having a basis in programming language theory, Racket was designed to be used as a general-purpose language in production systems. Thus, the Racket distribution features an extensive library that covers systems and network programming, web development,[46] a uniform interface to the underlying operating system, a dynamic foreign function interface,[47] several flavours of regular expressions, lexer/parser generators,[45] logic programming, and a complete GUI framework.
+Racket has several features useful for a commercial language, among them an ability to generate standalone executables under Windows, Mac OS X and Unix, a profiler and debugger included in the integrated development environment (IDE), and a unit testing framework.
+Racket has been used for commercial projects and web applications. A notable example is the Hacker News website, which runs on Arc, which is developed in Racket. Naughty Dog has used it as a scripting language in several of their video games.[48]
+Racket is used to teach students algebra through game design in the Bootstrap program.[49]
+References[edit]
+
+
+^ Racket blog
+^ Strickland, T.S.; Fellesisen, Matthias (2010). "DLS 2010: Contracts for First-Class Classes" (PDF).&#160;
+^ Sperber, Michael; Dybvig, R. Kent; Flatt, Matthew; Van Straaten, Anton; et al. (August 2007). "Revised6 Report on the Algorithmic Language Scheme (R6RS)". Scheme Steering Committee. Retrieved 2011-09-13.&#160;
+^ "Planet2 questions".&#160;
+^ Bonnaire-Sergeant, Ambrose (2012). A Practical Optional Type System for Clojure (Thesis). The University of Western Australia.&#160;
+^ "Welcome to Racket". Retrieved 2011-08-15.&#160;
+^ "Dialects of Racket and Scheme". Retrieved 2011-08-15.&#160;
+^ a b Flatt; Findler; Krishnamurthi; Felleisen (1999). Programming Languages as Operating Systems (or, Revenge of the Son of the Lisp Machine). International Conference on Functional Programming.&#160;
+^ a b c Findler; Clements; Flanagan; Flatt; Krishnamurthi; Steckler; Felleisen (2001). "DrScheme: A Programming Environment for Scheme" (PDF). Journal of Functional Programming.&#160;
+^ Felleisen; Findler; Flatt; Krishnamurthi (2004). "The TeachScheme! Project: Computing and Programming for Every Student". Journal of Computer Science Education.&#160;
+^ "Overview". Program by Design. Retrieved 2011-08-17.&#160;
+^ "Macros Matter". 2007-05-03. Retrieved 2011-08-08.&#160;
+^ a b c Flatt, M.; Findler, R. B.; Felleisen, M. (2006). "Scheme with Classes, Mixins, and Traits" (PDF). Asian Symposium on Programming Languages and Systems.&#160;
+^ a b Flatt, M.; Felleisen, M. (1998). "Units: Cool Modules for Hot Languages". Programming Language Design and Implementation.&#160;
+^ a b c d Tobin-Hochstadt, S.; St-Amour, V.; Culpepper, R.; Flatt, M.; Felleisen, M. (2011). "Languages as Libraries" (PDF). Programming Language Design and Implementation.&#160;
+^ "Racket: Software License". Retrieved 2015-10-20.&#160;
+^ Benson, Brent W. Jr. (October 26–28, 1994). "libscheme: Scheme as a C Library". Written at Santa Fe, NM. Proceedings of the USENIX Symposium on Very High Level Languages. Berkeley, CA: USENIX Association. pp.&#160;7–19. ISBN&#160;978-1880446652. Retrieved July 7, 2013.&#160;
+^ a b c "Rebuilding Racket's Graphics Layer". 2010-12-08. Retrieved 2011-08-23.&#160;
+^ Clements, J.; Flatt, M.; Felleisen, M. (2001). "Modeling an Algebraic Stepper" (PDF). European Symposium on Programming Languages.&#160;
+^ a b c "Racket Core Release Notes". Retrieved 2012-04-15.&#160;
+^ Flatt, M. (2002). "Composable and Compilable Macros". International Conference on Functional Programming.&#160;
+^ "PLT Scheme version 4.0". 2008-06-12. Retrieved 2012-08-07.&#160;
+^ "From PLT Scheme to Racket". Racket-lang.org. Retrieved 2011-08-17.&#160;
+^ "Racket 5.2". PLT, Inc. 2011-11-09. Retrieved 2012-06-16.&#160;
+^ "Submodules". 2012-06-03. Retrieved 2012-08-07.&#160;
+^ "Racket 5.3". PLT, Inc. 2012-08-07. Retrieved 2012-08-07.&#160;
+^ "Racket 5.3.1". PLT, Inc. 2012-11-07. Retrieved 2012-11-07.&#160;
+^ Flatt, M.; Yu, G.; Findler, R. B.; Felleisen, M. (2007). "Adding Delimited and Composable Control to a Production Programming Environment" (PDF). International Conference on Functional Programming.&#160;
+^ "Contracts".&#160;
+^ "Threads".&#160;
+^ "Futures".&#160;
+^ "Places".&#160;
+^ Flatt, Matthew (2012). "Creating Languages in Racket". Communications of the ACM. Retrieved 2012-04-08.&#160;
+^ Findler, R. B.; Felleisen, M. (2002). "Contracts for Higher-Order Functions" (PDF). International Conference on Functional Programming.&#160;
+^ Matthews, J. (2006). "Component Deployment with PLaneT: You Want it Where?". Scheme and Functional Programming Workshop.&#160;
+^ "The Racket package system and Planet".&#160;
+^ Flatt, Matthew (2002). "Composable and Compilable Macros, You Want it When?" (PDF). International Conference on Functional Programming.&#160;
+^ Flatt, Culpepper, Darais, Findler, Macros that Work Together; Compile-Time Bindings, Partial Expansion, and Deﬁnition Contexts
+^ Tobin-Hochstadt, S.; Felleisen, M. (2008). "The Design and Implementation of Typed Scheme". Principles of Programming Languages.&#160;
+^ Barzilay, E.; Clements, J. (2005). "Laziness Without All the Hard Work: Combining Lazy and Strict Languages for Teaching". Functional and Declarative Programming in Education.&#160;
+^ Flatt, M.; Barzilay, E.; Findler, R. B. (2009). "Scribble: Closing the Book on Ad Hoc Documentation Tools". International Conference on Functional Programming.&#160;
+^ Findler, R. B.; Flatt, M. (2004). "Slideshow: Functional Presentations". International Conference on Functional Programming.&#160;
+^ Felleisen, M.; Findler, R. B.; Flatt, M.; Krishnamurthi, S. (2009). "A Functional I/O System (or Fun for Freshman Kids)" (PDF). International Conference on Functional Programming.&#160;
+^ Felleisen, M.; Findler, R. B.; Flatt, M.; Krishnamurthi, S. (2004). "The Structure and Interpretation of the Computer Science Curriculum" (PDF). Journal of Functional Programming.&#160;
+^ a b "Parser Tools: lex and yacc-style Parsing". Retrieved 2011-08-16.&#160;
+^ a b Krishnamurthi, Hopkins; McCarthy; Graunke; Pettyjohn; Felleisen (2007). "Implementation and Use of the PLT Scheme Web Server" (PDF). Journal of Higher-Order and Symbolic Programming.&#160;
+^ Barzilay, E.; Orlovsky, D. (2004). "Foreign Interface for PLT Scheme" (PDF). Scheme and Functional Programming.&#160;
+^ "Functional mzScheme DSLs in Game Development". Retrieved 2012-05-08.&#160;
+^ "Bootstrap". bootstrapworld.org. Retrieved 2015-08-11.&#160;
+
+
+Further reading[edit]
+
+Felleisen et al., 2013. Realm of Racket. No Starch Press.
+Felleisen et al., 2003. How to Design Programs. MIT Press.
+
+External links[edit]
+Tutorials[edit]
+
+Quick: An Introduction to Racket with Pictures
+F*dging up a Racket—shows how to write a Brainfuck dialect for Racket
+Raw strings in Racket—a reader extension for raw strings
+
+Style guide[edit]
+
+How to Program Racket
+
+Website and documentation[edit]
+
+Official website
+Blog
+Code Repository
+PLaneT
+The Racket Guide
+The Racket Reference
+All Racket Documentation
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Racket_(programming_language)&amp;oldid=689243643"					
+				Categories: Functional languagesObject-oriented programming languagesExtensible syntax programming languagesLisp programming language familyScheme (programming language) implementationsScheme (programming language) compilersScheme (programming language) interpretersR6RS SchemeAcademic programming languagesEducational programming languagesPedagogic integrated development environmentsCross-platform free softwareFree compilers and interpretersProgramming languages created in 1994Articles with example Racket codeSoftware using the LGPL licenseHidden categories: Pages using infoboxes with thumbnail images				
+							
+		
+		
+			

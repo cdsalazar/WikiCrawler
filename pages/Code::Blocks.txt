@@ -1,0 +1,361 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Code::Blocks
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Not to be confused with the computer programming term Code block.
+
+Code::Blocks
+
+
+
+
+
+Code::Blocks 10.05
+
+
+
+Developer(s)
+The Code::Blocks team
+
+
+Stable release
+13.12 / December&#160;27, 2013; 22 months ago&#160;(2013-12-27)
+
+
+Development status
+Active
+
+
+Written in
+C++ (wxWidgets)
+
+
+Operating system
+Cross-platform
+
+
+Type
+IDE
+
+
+License
+GNU GPLv3[1]
+
+
+Website
+codeblocks.org
+
+
+Code::Blocks is a free, open source cross-platform IDE that supports multiple compilers including GCC, Clang and Visual C++. It is developed in C++ using wxWidgets as the GUI toolkit. Using a plugin architecture, its capabilities and features are defined by the provided plugins. Currently, Code::Blocks is oriented towards C, C++, and Fortran. It has a custom build system and optional Make support.
+Code::Blocks is being developed for Windows, Linux, and Mac OS X and has been ported to FreeBSD,[2] OpenBSD[3] and Solaris.[4]
+
+
+
+Contents
+
+
+1 History
+2 Features
+
+2.1 Compilers
+2.2 Code editor
+2.3 Debugger
+2.4 GUI designer
+2.5 User migration
+2.6 Project files and build system
+
+
+3 See also
+4 References
+5 External links
+
+
+
+History[edit]
+After releasing two release candidate versions, 1.0rc1 on July 25, 2005 and 1.0rc2 on October 25, 2005, instead of making a final release, the project developers started adding many new features, with the final release being repeatedly postponed. Instead, there were nightly builds of the latest SVN version made available on a daily basis.[citation needed]
+The first stable release was on February 28, 2008, with the version number changed to 8.02. The versioning scheme was changed to that of Ubuntu, with the major and minor number representing the year and month of the release. Version 13.12 is the latest stable release; however for the most up-to-date version the user can download the relatively stable nightly build or download the source code from SVN.
+Jennic Limited distributes a version of Code::Blocks customized to work with its microcontrollers.[5]
+Features[edit]
+Compilers[edit]
+Code::Blocks supports multiple compilers, including GCC, MinGW, Digital Mars, Microsoft Visual C++, Borland C++, LLVM Clang, Watcom, LCC and the Intel C++ compiler. Although the IDE was designed for the C++ language, there is some support for other languages, including Fortran and D. A plug-in system is included to support other programming languages.
+Code editor[edit]
+The IDE features syntax highlighting and code folding (through its Scintilla editor component), C++ code completion, class browser, a hex editor and many other utilities. Opened files are organized into tabs. The code editor supports font and font size selection and personalized syntax highlighting colours.
+Debugger[edit]
+The Code::Blocks debugger has full breakpoint support. It also allows the user to debug their program by having access to the local function symbol and argument display, user-defined watches, call stack, disassembly, custom memory dump, thread switching, CPU registers and GNU Debugger Interface.
+GUI designer[edit]
+As of version 13.12 Code::Blocks comes with a GUI designer called wxSmith. It is a derivative port of wxWidgets version 2.9.4.[6] To make a complete wxWidgets application, the appropriate wxWidgets SDK must be installed.
+User migration[edit]
+Some of Code::Blocks features are targeted at users migrating from other IDE's - these include Dev-C++, Microsoft Visual C++ project import (MSVC 7 &amp; 10), and Dev-C++ Devpak support.
+Project files and build system[edit]
+Code::Blocks uses a custom build system, which stores its information in XML-based project files. It can optionally use external makefiles, which simplifies interfacing with projects using the GNU or qmake build systems.
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+
+Comparison of integrated development environments
+Scintilla
+SciTE
+wxWidgets
+Codelite
+
+References[edit]
+
+
+^ "License". Retrieved 2014-07-21.&#160;
+^ Code::Blocks in FreeBSD's ports collection
+^ Code::Blocks in OpenBSD's ports collection
+^ Directions to install Code::Blocks from source on Solaris
+^ JN-UG-3028 Code::Blocks IDE User Guide
+^ CodeBlocks 13.12 Changelog
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Code::Blocks.
+
+
+
+Official website
+Sourceforge repository
+Comparison of RADs for WxWidgets
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for C and C++
+
+
+
+
+
+
+Open source
+
+
+
+Anjuta
+Code::Blocks
+CodeLite
+Dev-C++
+Eclipse
+Geany
+GNAT Programming Studio
+KDevelop
+Kuzya
+MonoDevelop
+NetBeans
+QDevelop
+Qt Creator
+Ultimate++
+wxDev-C++
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Pelles C
+Oracle Solaris Studio (previously called Sun Studio)
+Visual Studio Express
+Xcode
+
+
+
+
+
+
+
+
+Retail
+
+
+
+C++Builder
+CodeWarrior
+IBM VisualAge
+Visual Studio
+SlickEdit
+
+
+
+
+
+
+
+
+
+
+
+&#160;Category
+ Comparison
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+wxWidgets
+
+
+
+
+
+
+Technologies
+
+
+
+XML Resource
+
+
+
+
+
+
+
+
+RAD/GUI
+Builders
+
+
+
+
+
+free software
+
+
+
+
+wxFormBuilder
+wxDev-C++
+Code::Blocks
+wxGlade
+CodeDesigner RAD
+CodeLite
+Padre
+HiAsm
+
+
+
+
+
+
+
+
+
+proprietary software
+
+
+
+
+wxDesigner
+DialogBlocks
+
+
+
+
+
+
+
+
+
+
+
+Libraries
+
+
+
+wxSQLite3
+
+
+
+
+
+
+
+
+Bindings
+
+
+
+wxPython
+wxPerl
+wxPHP
+wxBasic
+wxHaskell
+GLUEscript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Code::Blocks&amp;oldid=686294864"					
+				Categories: Free integrated development environmentsLinux integrated development environmentsCross-platform free softwareFree software programmed in C++Software that uses wxWidgetsSoftware using the GPL licenseSoftware that uses ScintillaHidden categories: All articles with unsourced statementsArticles with unsourced statements from February 2011Commons category with page title same as on Wikidata				
+							
+		
+		
+			

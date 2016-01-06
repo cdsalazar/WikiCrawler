@@ -1,0 +1,1632 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			.NET Framework
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				".NET" redirects here.  For the top-level Internet domain, see .net. For other uses, see .NET (disambiguation).
+
+.NET Framework
+
+
+
+
+
+.NET Framework component stack
+
+
+
+Developer(s)
+Microsoft
+
+
+Initial release
+13&#160;February 2002; 13 years ago&#160;(2002-02-13)
+
+
+Stable release
+4.6 (4.6.00081.00) / 20&#160;July 2015; 4 months ago&#160;(2015-07-20)
+
+
+Operating system
+Windows 98 or later, Windows NT 4.0 or later
+
+
+Type
+Software framework
+
+
+License
+Mixed; see § Licensing
+
+
+Website
+microsoft.com/net
+
+
+.NET Framework (pronounced dot net) is a software framework developed by Microsoft that runs primarily on Microsoft Windows. It includes a large class library known as Framework Class Library (FCL) and provides language interoperability (each language can use code written in other languages) across several programming languages. Programs written for .NET Framework execute in a software environment (as contrasted to hardware environment), known as Common Language Runtime (CLR), an application virtual machine that provides services such as security, memory management, and exception handling. FCL and CLR together constitute .NET Framework.
+FCL provides user interface, data access, database connectivity, cryptography, web application development, numeric algorithms, and network communications. Programmers produce software by combining their own source code with .NET Framework and other libraries. .NET Framework is intended to be used by most new applications created for the Windows platform. Microsoft also produces an integrated development environment largely for .NET software called Visual Studio.
+.NET Framework started out as a proprietary framework, although the company worked to standardize the software stack almost immediately, even before its first release. Despite the standardization efforts, developers—particularly those in the free and open-source software communities—expressed their uneasiness with the selected terms and the prospects of any free and open-source implementation, especially with regard to software patents. Since then, Microsoft has changed .NET development to more closely follow a contemporary model of a community-developed software project, including issuing an update to its patent that promises to address the concerns.
+.NET Framework family also includes two versions for mobile or embedded device use. A reduced version of the framework, .NET Compact Framework, is available on Windows CE platforms, including Windows Mobile devices such as smartphones. Additionally, .NET Micro Framework is targeted at severely resource-constrained devices.
+
+
+
+Contents
+
+
+1 History
+2 Versions
+3 Architecture
+
+3.1 Common Language Infrastructure
+3.2 Class library
+3.3 Assemblies
+3.4 .NET Core
+3.5 C++/CLI
+
+
+4 Design principles
+
+4.1 Interoperability
+4.2 Language independence
+4.3 Portability
+4.4 Security
+4.5 Memory management
+4.6 Simplified deployment
+4.7 Performance
+
+
+5 Licensing
+6 Alternative implementations
+7 Notes
+8 References
+9 External links
+
+
+
+History[edit]
+Main article: .NET Framework version history
+Microsoft started development of .NET Framework in the late 1990s, originally under the name of Next Generation Windows Services (NGWS). By late 2000, the first beta versions of .NET 1.0 were released.
+In August 2000, Microsoft, Hewlett-Packard, and Intel worked to standardize Common Language Infrastructure (CLI) and C#. By December 2001, both were ratified ECMA standards.[1][2] ISO followed in April 2003. The current version of ISO standards are ISO/IEC 23271:2012 and ISO/IEC 23270:2006.[3][4]
+While Microsoft, and their partners hold patents for CLI and C#, ECMA and ISO require that all patents essential to implementation be made available under "reasonable and non-discriminatory terms". In addition to meeting these terms, the companies have agreed to make the patents available royalty-free. However, this did not apply for the part of .NET Framework not covered by ECMA/ISO standards, which included Windows Forms, ADO.NET, and ASP.NET. Patents that Microsoft holds in these areas may have deterred non-Microsoft implementations of the full framework.[5]
+On 3 October 2007, Microsoft announced that the source code for .NET Framework 3.5 libraries was to become available under the Microsoft Reference License (Ms-RSL[a]).[6] The source code repository became available online on 16 January 2008 and included BCL, ASP.NET, ADO.NET, Windows Forms, WPF and XML. Scott Guthrie of Microsoft promised LINQ, WCF and WF libraries were in process of being added.[7]
+On 12 November 2014, Microsoft announced .NET Core, in an effort to include cross-platform support for .NET, the source release of Microsoft's CoreCLR implementation, source for the "entire [...] library stack" for .NET Core, and the adoption of a conventional ("bazaar"-like) open source development model under the stewardship of the .NET Foundation. Miguel de Icaza describes .NET Core as a "redesigned version of .NET that is based on the simplified version of the class libraries",[8] and Microsoft's Immo Landwerth explained that .NET Core would be "the foundation of all future .NET platforms". At the time of the announcement, the initial release of the .NET Core project had been seeded with a subset of the libraries' source code and coincided with the relicensing of Microsoft's existing .NET reference source away from the restrictions of the Ms-RSL. Landwerth acknowledged the disadvantages of the previously selected shared source license, explaining that it made codename Rotor "a non-starter" as a community-developed open source project because it did not meet the criteria of an OSI-approved license.[9][10][11]
+Microsoft also produced an update to its patent grants, which further extends the scope beyond its previous pledges. Prior projects like Mono existed in a legal grey area because Microsoft's earlier grants applied only to the technology in "covered specifications", including strictly the 4th editions each of ECMA-334 and ECMA-335. The new patent promise, however, places no ceiling on the specification version and even extends to any .NET runtime technologies documented on MSDN that have not been formally specified by the ECMA group, if a project chooses to implement them. This permits Mono and other projects to maintain feature parity with modern .NET features that have been introduced since the 4th edition was published without being at risk of patent litigation over the implementation of those features. The new grant does maintain the restriction that any implementation must maintain minimum compliance with the mandatory parts of the CLI specification.[12]
+Microsoft's press release highlights that the cross-platform commitment now allows for a fully open source, modern server-side .NET stack. However, Microsoft does not plan to release the source for WPF or Windows Forms.[13][14]
+Versions[edit]
+
+Overview of .NET Framework release history[15][16]
+
+Version
+number
+CLR
+version
+Release
+date
+Development tool
+Included in
+Replaces
+
+
+Windows
+Windows Server
+
+
+1.0
+1.0
+2002-02-13
+Visual Studio .NET[17]
+XP[a]
+N/A
+N/A
+
+
+1.1
+1.1
+2003-04-24
+Visual Studio .NET 2003[17]
+N/A
+2003
+1.0[18]
+
+
+2.0
+2.0
+2005-11-07
+Visual Studio 2005[19]
+N/A
+2003, 2003 R2,[20] 2008 SP2, 2008 R2 SP1
+N/A
+
+
+3.0
+2.0
+2006-11-06
+Expression Blend[21][b]
+Vista
+2008 SP2, 2008 R2 SP1
+2.0[15]
+
+
+3.5
+2.0
+2007-11-19
+Visual Studio 2008[22]
+7, 8[c], 8.1[c], 10[c]
+2008 R2 SP1
+2.0, 3.0[15]
+
+
+4.0
+4
+2010-04-12
+Visual Studio 2010[23]
+N/A
+N/A
+N/A
+
+
+4.5
+4
+2012-08-15
+Visual Studio 2012[24]
+8
+2012
+4.0[15]
+
+
+4.5.1
+4
+2013-10-17
+Visual Studio 2013[25]
+8.1
+2012 R2
+4.0, 4.5[15]
+
+
+4.5.2
+4
+2014-05-05
+N/A
+N/A
+N/A
+4.0, 4.5, 4.5.1[15]
+
+
+4.6
+4
+2015-07-20
+Visual Studio 2015[26]
+10
+2016
+4.0, 4.5, 4.5.1, 4.5.2
+
+
+Notes:
+
+
+a.^ .NET Framework 1.0 is integral OS component of Windows XP Media Center edition or Tablet PC edition. Installation CDs for the Home editions and the Professional editions of Windows XP SP1, SP2 or SP3 comes with .NET Framework installation packages.[16]
+b.^ Expression Blend only covers the Windows Presentation Foundation part of .NET Framework 3.0.
+c.^ ^ ^ .NET Framework 3.5 is not automatically installed with Windows 8, 8.1 or 10. It must be installed either from a Windows installation media or from the Internet on demand. Control Panel always attempts the latter.[27]
+
+
+
+
+view
+talk
+edit
+
+
+Architecture[edit]
+
+
+
+
+Visual overview of the Common Language Infrastructure (CLI)
+
+
+Common Language Infrastructure[edit]
+Main article: Common Language Infrastructure
+Common Language Infrastructure (CLI) provides a language-neutral platform for application development and execution, including functions for exception handling, garbage collection, security, and interoperability. By implementing the core aspects of .NET Framework within the scope of CLI, this functionality will not be tied to a single language but will be available across the many languages supported by the framework. Microsoft's implementation of CLI is Common Language Runtime (CLR). It serves as the execution engine of .NET Framework. All .NET programs execute under the supervision of CLR, guaranteeing certain properties and behaviors in the areas of memory management, security, and exception handling.
+For computer programs to run on CLI, they need to be compiled into Common Intermediate Language (CIL) – as opposed to being compiled into machine code. Upon execution, an architecture-specific just-in-time compiler (JIT) turns the CIL code into machine code. To improve performance, however, .NET Framework comes with Native Image Generator (NGEN) that performs ahead-of-time compilation.
+Class library[edit]
+.NET Framework includes a set of standard class libraries. The class library is organized in a hierarchy of namespaces. Most of the built-in APIs are part of either System.* or Microsoft.* namespaces. These class libraries implement a large number of common functions, such as file reading and writing, graphic rendering, database interaction, and XML document manipulation, among others. .NET class libraries are available to all CLI compliant languages. .NET Framework class library is divided into two parts: Base Class Library (BCL) and Framework Class Library (FCL).
+BCL includes a small subset of the entire class library and is the core set of classes that serve as the basic API of CLR.[28] Classes in mscorlib.dll and some classes in System.dll and System.core.dll are part of BCL. BCL classes are available in .NET Framework as well as its alternative implementations including .NET Compact Framework, Microsoft Silverlight and Mono.
+FCL is a superset of BCL and refers to the entire class library that ships with .NET Framework. It includes an expanded set of libraries, including Windows Forms, ADO.NET, ASP.NET, Language Integrated Query (LINQ), Windows Presentation Foundation (WPF), Windows Communication Foundation (WCF) and Workflow Foundation (WF). BCL is much larger in scope than standard libraries for languages like C++, and comparable in scope to standard libraries of Java.
+Assemblies[edit]
+Compiled CIL code is stored in CLI assemblies. As mandated by the specification, assemblies are stored in Portable Executable (PE) file format, common on Windows platform for all DLL and EXE files. Each assembly consists of one or more files, one of which must contain a manifest bearing the metadata for the assembly. The complete name of an assembly (not to be confused with the file name on disk) contains its simple text name, version number, culture, and public key token. Assemblies are considered equivalent if they share the same complete name, excluding the revision of the version number.
+A private key can also be used by the creator of the assembly for strong naming. The public key token identifies which private key an assembly is signed with. Only the creator of the keypair (typically .NET developer signing the assembly) can sign assemblies that have the same strong name as a previous version assembly, since the creator is in possession of the private key. Strong naming is required to add assemblies to Global Assembly Cache.
+.NET Core[edit]
+.NET Core is a free and open-source cross platform implementation of the .NET Framework. It consists of CoreCLR a complete cross-platform runtime implementation of CLR, the virtual machine that manages the execution of .NET programs. .Net Core also includes CoreFX, which is a partial fork of BCL and will support ASP.NET.[29] CoreCLR comes with an improved just-in-time compiler, called RyuJIT.[30]
+.Net Core runs console and ASP.NET software in Windows, Linux and OS X. It does not implement Windows Forms or WPF which render standard GUI of desktop software on Windows, as it designed to work with Universal Windows Platform instead.[31].NET Core is also modular, meaning that instead of assemblies, developers deal with packages.[31]
+C++/CLI[edit]
+Main article: C++/CLI
+Microsoft introduced C++/CLI in Visual Studio 2005, which is a language and means of compiling Visual C++ programs to run within the .NET Framework. Certain portions of the C++ program still run within an unmanaged Visual C++ Runtime, while specially modified portions are translated into CIL code and run with the .NET Framework's CLR.
+Assemblies compiled using the C++/CLI compiler are known as mixed-mode assemblies, since they contain native and managed code within the same DLL.[32] Such assemblies are also difficult to reverse engineer, since .NET decompilers such as .NET Reflector only reveal the managed code.
+Design principles[edit]
+Interoperability[edit]
+Because computer systems commonly require interaction between newer and older applications, .NET Framework provides means to access functionality implemented in newer and older programs that execute outside .NET environment. Access to COM components is provided in System.Runtime.InteropServices and System.EnterpriseServices namespaces of the framework. Access to other functionality is achieved using the P/Invoke feature.
+Language independence[edit]
+.NET Framework introduces a Common Type System (CTS) that defines all possible datatypes and programming constructs supported by CLR and how they may or may not interact with each other conforming to CLI specification. Because of this feature, .NET Framework supports the exchange of types and object instances between libraries and applications written using any conforming .NET language.
+Portability[edit]
+While Microsoft has never implemented the full framework on any system except Microsoft Windows, it has engineered the framework to be platform-agnostic,[33] and cross-platform implementations are available for other operating systems (see Silverlight and § Alternative implementations). Microsoft submitted the specifications for CLI (which includes the core class libraries, CTS, and CIL),[34][35][36] C#,[37] and C++/CLI[38] to both ECMA and ISO, making them available as official standards. This makes it possible for third parties to create compatible implementations of the framework and its languages on other platforms.
+Security[edit]
+.NET Framework has its own security mechanism with two general features: Code Access Security (CAS), and validation and verification. CAS is based on evidence that is associated with a specific assembly. Typically the evidence is the source of the assembly (whether it is installed on the local machine or has been downloaded from the intranet or Internet). CAS uses evidence to determine the permissions granted to the code. Other code can demand that calling code be granted a specified permission. The demand causes CLR to perform a call stack walk: every assembly of each method in the call stack is checked for the required permission; if any assembly is not granted the permission a security exception is thrown.
+Managed CIL bytecode is easier to reverse-engineer than native code, unless obfuscated.[39][40] NET decompiler programs enable developers with no reverse-engineering skills to view the source code behind unobfuscated .NET assemblies. In contrast, apps compiled to native machine code are much harder to reverse-engineer and source code is almost never produced successfully, mainly because of compiler optimizations and lack of reflection.[citation needed] One concern is over possible loss of trade secrets and the bypassing of license control mechanisms. To mitigate this, Microsoft has included Dotfuscator Community Edition with Visual Studio .NET since 2002.[b] Third-party obfuscation tools are also available from vendors such as vmware, V.i. Labs, Xenocode, Red Gate Software. Method-level encryption tools for .NET code are available from vendors such as SafeNet.
+Memory management[edit]
+CLR frees the developer from the burden of managing memory (allocating and freeing up when done); it handles memory management itself by detecting when memory can be safely freed. Instantiations of .NET types (objects) are allocated from the managed heap; a pool of memory managed by CLR. As long as there exists a reference to an object, which might be either a direct reference to an object or via a graph of objects, the object is considered to be in use. When there is no reference to an object, and it cannot be reached or used, it becomes garbage, eligible for collection.
+.NET Framework includes a garbage collector (GC) which runs periodically, on a separate thread from the application's thread, that enumerates all the unusable objects and reclaims the memory allocated to them. It is a non-deterministic, compacting, mark-and-sweep garbage collector. GC runs only when a certain amount of memory has been used or there is enough pressure for memory on the system. Since it is not guaranteed when the conditions to reclaim memory are reached, GC runs are non-deterministic. Each .NET application has a set of roots, which are pointers to objects on the managed heap (managed objects). These include references to static objects and objects defined as local variables or method parameters currently in scope, as well as objects referred to by CPU registers.[41] When GC runs, it pauses the application, and for each object referred to in the root, it recursively enumerates all the objects reachable from the root objects and marks them as reachable. It uses CLI metadata and reflection to discover the objects encapsulated by an object, and then recursively walk them. It then enumerates all the objects on the heap (which were initially allocated contiguously) using reflection. All objects not marked as reachable are garbage.[41] This is the mark phase.[42] Since the memory held by garbage is not of any consequence, it is considered free space. However, this leaves chunks of free space between objects which were initially contiguous. The objects are then compacted together to make used memory contiguous again.[41][42] Any reference to an object invalidated by moving the object is updated by GC to reflect the new location.[42] The application is resumed after the garbage collection is over. Latest version of .NET framework uses concurrent garbage collection along with user code, making pauses unnoticeable since its done in background.[43]
+GC used by .NET Framework is also generational.[44] Objects are assigned a generation; newly created objects belong to Generation 0. The objects that survive a garbage collection are tagged as Generation 1, and the Generation 1 objects that survive another collection are Generation 2 objects. .NET Framework uses up to Generation 2 objects.[44] Higher generation objects are garbage collected less frequently than lower generation objects. This helps increase the efficiency of garbage collection, as older objects tend to have a longer lifetime than newer objects.[44] Thus, by eliminating older (and thus more likely to survive a collection) objects from the scope of a collection run, fewer objects need to be checked and compacted.[44]
+Simplified deployment[edit]
+.NET Framework includes design features and tools which help manage the installation of computer software to ensure that it does not interfere with previously installed software, and that it conforms to security requirements.[citation needed]
+Performance[edit]
+When an application is first launched, the .NET Framework compiles the CIL code into executable code using its just-in-time compiler, and caches the executable program into the .NET Native Image Cache.[45][46] Due to caching, the application launches faster for subsequent launches, although the first launch is usually slower. To increase speed of the first launch, developers may use the Native Image Generator utility to manually compile and cache any .NET application, ahead-of-time.[46]
+The garbage collector, which is integrated into the environment, can introduce unanticipated delays of execution over which the developer has little direct control. "In large applications, the number of objects that the garbage collector needs to deal with can become very large, which means it can take a very long time to visit and rearrange all of them."[47]
+.NET Framework provides support for calling Streaming SIMD Extensions (SSE) via managed code from April 2014 in Visual Studio 2013 Update 2. However, Mono has provided support for SIMD Extensions as of version 2.2 within the Mono.Simd namespace; before. Mono's lead developer Miguel de Icaza has expressed hope that this SIMD support will be adopted by CLR's ECMA standard.[48] Streaming SIMD Extensions have been available in x86 CPUs since the introduction of the Pentium III. Some other architectures such as ARM and MIPS also have SIMD extensions. In case the CPU lacks support for those extensions, the instructions are simulated in software.[citation needed]
+Licensing[edit]
+Components of .NET Framework are licensed as follows: 
+
+
+Component
+License
+
+
+.NET Core
+CoreFX and CoreCLR
+MIT License[49]
+
+
+.NET Micro Framework
+Apache License 2.0[50]
+
+
+.NET Compiler Platform (codename "Roslyn")
+Apache License 2.0[51]
+
+
+ASP.NET
+Apache License 2.0[52]
+
+
+ASP.NET Web Stack
+Apache License 2.0[53]
+
+
+ASP.NET Ajax Control Toolkit
+BSD License[54]
+
+
+ASP.NET SignalR
+Apache License 2.0[55]
+
+
+Entity Framework
+Apache License 2.0[56]
+
+
+NuGet
+Apache License 2.0[57]
+
+
+Reference source code of .NET Framework 4.5 and earlier
+Microsoft Reference License (Ms-RSL[a])[6][58]
+
+
+Reference source code of .NET Framework 4.6
+MIT License[59]
+
+
+.NET Framework redistributable package
+Proprietary software[60]
+
+
+Alternative implementations[edit]
+.NET Framework is the predominant implementation of .NET technologies. Other implementations for parts of the framework exist. Although the runtime engine is described by an ECMA/ISO specification, other implementations of it may be encumbered by patent issues; ISO standards may include the disclaimer, "Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights."[61] It is more difficult to develop alternatives to FCL, which is not described by an open standard and may be subject to copyright restrictions. Additionally, parts of FCL have Windows-specific functionality and behavior, so implementation on non-Windows platforms can be problematic.
+Some alternative implementations of parts of the framework are listed here.
+
+.NET Micro Framework is a .NET platform for extremely resource-constrained devices. It includes a small version of CLR and supports development in C# (though some developers were able to use VB.NET,[62] albeit with an amount of hacking, and with limited functionalities) and debugging (in an emulator or on hardware), both using Microsoft Visual Studio. It also features a subset of .NET Framework Class Library (about 70 classes with about 420 methods), a GUI framework loosely based on WPF, and additional libraries specific to embedded applications.
+Mono is an implementation of CLI and FCL, and provides additional functionality. It is dual-licensed under free software and proprietary software licenses. It includes support for ASP.NET, ADO.NET, and Windows Forms libraries for a wide range of architectures and operating systems. It also includes C# and VB.NET compilers.
+Portable.NET (part of DotGNU) provides an implementation of CLI, portions of FCL, and a C# compiler. It supports a variety of CPUs and operating systems.
+Microsoft Shared Source Common Language Infrastructure is a non-free implementation of CLR. However, the last version only runs on Microsoft Windows XP SP2, and has not been updated since 2006, therefore it does not contain all features of version 2.0 of .NET Framework.
+CrossNet[63] is an implementation of CLI and portions of FCL. It is free software using the open source MIT License.
+
+Notes[edit]
+
+
+^ a b The license has previously been abbreviated Ms-RL, but Ms-RL now refers to the Microsoft Reciprocal License.
+^ Dotfuscator Community Edition 4.0
+
+
+References[edit]
+
+
+^ "Standard ECMA-335: Common Language Infrastructure (CLI)". ecma-international.org (6 ed.). ECMA. June 2012.&#160;
+^ "Standard ECMA-334: C# Language Specification". ecma-international.org (4 ed.). ECMA. June 2006.&#160;
+^ "ISO/IEC 23271:2012 Information technology - Common Language Infrastructure". iso.org (3 ed.). International Organization for Standardization. 13 February 2012.&#160;
+^ "ISO/IEC 23270:2006 - Information technology - Programming languages - C#". iso.org (2 ed.). International Organization for Standardization. 26 January 2012.&#160;
+^ "Microsoft's Empty Promise". Free Software Foundation. 16 July 2009. Archived from the original on 5 August 2009. Retrieved 3 August 2009. However, there are several libraries that are included with Mono, and commonly used by applications like Tomboy, that are not required by the standard. And just to be clear, we're not talking about Windows-specific libraries like ASP.NET and Windows Forms. Instead, we're talking about libraries under the System namespace that provide common functionality programmers expect in modern programming languages&#160;
+^ a b Guthrie, Scott (3 October 2007). "Releasing the Source Code for the NET Framework". Scott Guthrie's Blog. Microsoft. Archived from the original on 7 September 2010. Retrieved 15 September 2010.&#160;
+^ Guthrie, Scott (16 January 2008). ".NET Framework Library Source Code now available". Scott Guthrie's Blog. Microsoft. Retrieved 28 February 2015.&#160;
+^ de Icaza, Miguel. "Microsoft Open Sources .NET and Mono". Personal blog of Miguel de Icaza. Retrieved 16 November 2014.&#160;
+^ Landwerth, Immo (12 November 2014). ".NET Core is Open Source". .NET Framework Blog. Microsoft. Retrieved 30 December 2014.&#160;
+^ "dotnet/corefx". GitHub. Retrieved 16 November 2014.&#160;
+^ "Microsoft/referencesource". GitHub. Retrieved 16 November 2014.&#160;
+^ "Microsoft Patent Promise for .NET Libraries and Runtime Components". Retrieved 16 November 2014.&#160;
+^ "Microsoft takes .NET open source and cross-platform, adds new development capabilities with Visual Studio 2015, .NET 2015 and Visual Studio Online". News Center. Microsoft. Retrieved 16 November 2014.&#160;
+^ Foley, Mary Jo. "Microsoft to open source more of .NET, and bring it to Linux, Mac OS X". ZDNet. Retrieved 16 November 2014.&#160;
+^ a b c d e f ".NET Framework Versions and Dependencies". MSDN. Microsoft. Retrieved 17 January 2014.&#160;
+^ a b Stebner, Aaron (14 March 2007). "Mailbag: What version of the .NET Framework is included in what version of the OS?". Aaron Stebner's WebLog. Microsoft.&#160;
+^ a b "What's New in Visual Studio .NET 2003". MSDN. Microsoft. Retrieved 1 September 2014. Visual Studio .NET 2002 shipped with the Microsoft .NET Framework SDK version 1.0. Visual Studio .NET 2003 ships with .NET Framework SDK version 1.1.&#160;
+^ ".NET Framework Developer Center – Frequently Asked Questions". Archived from the original on July 24, 2012.&#160;
+^ "What's New in Visual Studio 2005". MSDN. Microsoft. Retrieved 1 September 2014.&#160;
+^ "What's New in Windows Server 2003 R2". TechNet. Microsoft. 22 August 2005. Retrieved 5 January 2015.&#160;
+^ Chinnathambi, Kirupa (4 December 2006). "Expression Blend -- What Is That?". Expression Blend and Design. Microsoft. Retrieved 1 September 2014.&#160;
+^ Guthrie, Scott (19 November 2007). "Visual Studio 2008 and .NET 3.5 Released". Scott Gu's Blog. Microsoft. Retrieved 1 September 2014.&#160;
+^ "What's New in Visual Studio 2010". MSDN. Microsoft. Retrieved 1 September 2014.&#160;
+^ "What's New in Visual Studio 2012". MSDN. Microsoft. Retrieved 1 September 2014.&#160;
+^ "What's New in Visual Studio 2013". MSDN. Microsoft. Retrieved 1 September 2014.&#160;
+^ Somasegar, S (29 June 2015). "Save the Date: Visual Studio 2015 RTM on July 20th". Somasegar’s blog. Microsoft.&#160;
+^ "Installing the .NET Framework 3.5 on Windows 8, Windows 8.1 and Windows 10". MSDN. Microsoft. Archived from the original on 27 April 2015.&#160;
+^ "Base Class Library". Retrieved 1 June 2008.&#160;
+^ Landwerth, Immo (4 December 2014). "Introducing .NET Core". .NET Framework Blog. Microsoft. Retrieved 27 February 2015.&#160;
+^ Landwerth, Immo (3 February 2015). "CoreCLR is now Open Source". .NET Framework Blog. Microsoft. Retrieved 27 February 2015.&#160;
+^ a b Schmelzer, Jay (18 November 2015). ".NET 2015 Overview". Channel 9. Microsoft. 0:07:32.&#160;
+^ Mixed (Native and Managed) Assemblies, MSDN
+^ "Scott Guthrie: Silverlight and the Cross-Platform CLR". Channel 9. 30 April 2007. Archived from the original on 2015-03-25. Retrieved 2015-02-20.&#160;
+^ "ECMA 335 - Standard ECMA-335 Common Language Infrastructure (CLI)". ECMA. 1 June 2006. Archived from the original on 14 June 2008. Retrieved 1 June 2008.&#160;
+^ "ISO/IEC 23271:2006". Standards.iso.org. 29 September 2006. Retrieved 17 April 2012.&#160;
+^ "Technical Report TR/84 Common Language Infrastructure (CLI) - Information Derived from Partition IV XML File". ECMA. 1 June 2006. Archived from the original on 2015-03-25. Retrieved 2015-02-20.&#160;
+^ "ECMA-334 C# Language Specification". ECMA. 1 June 2006.&#160;
+^ "Standard ECMA-372 C++/CLI Language Specification". ECMA. 1 December 2005.&#160;
+^ "Reverse Engineering Risk Assessment" (PDF).&#160;
+^ Gartner, Inc. as reported in "Hype Cycle for Cyberthreats, 2006", September 2006, Neil MacDonald; Amrit Williams, et al.
+^ a b c "Garbage Collection: Automatic Memory Management in the Microsoft .NET Framework". Archived from the original on 3 July 2007. Retrieved 1 June 2008.&#160;
+^ a b c "Garbage collection in .NET". Archived from the original on 25 May 2008. Retrieved 1 June 2008.&#160;
+^ "The .NET Framework 4.5 includes new garbage collector enhancements for client and server apps". Retrieved 2 Oct 2015.&#160;
+^ a b c d "Garbage Collection—Part 2: Automatic Memory Management in the Microsoft .NET Framework". Archived from the original on 26 June 2007. Retrieved 1 June 2008.&#160;
+^ Understanding .NET Just-In-Time Compilation, Telerik
+^ a b Compiling MSIL to Native Code, MSDN, Microsoft
+^ "Understanding Garbage Collection in .NET".&#160;
+^ "Mono's SIMD Support: Making Mono safe for Gaming". Tirania.org. 3 November 2008. Retrieved 17 April 2012.&#160;
+^ ".NET Core 5". dotnetfoundation.org. .NET Foundation. Retrieved 17 February 2015.&#160;
+^ ".NET Micro Framework". dotnetfoundation.org. .NET Foundation. Retrieved 17 February 2015.&#160;
+^ ".NET Compiler Platform ("Roslyn")". dotnetfoundation.org. .NET Foundation. Retrieved 17 February 2015.&#160;
+^ "ASP.NET 5". dotnetfoundation.org. .NET Foundation. Retrieved 17 February 2015.&#160;
+^ "ASP.NET MVC, Web API and Web Pages (Razor)". dotnetfoundation.org. .NET Foundation. Retrieved 17 February 2015.&#160;
+^ "ASP.NET Ajax Control Toolkit". dotnetfoundation.org. .NET Foundation. Retrieved 17 February 2015.&#160;
+^ "ASP.NET SignalR". dotnetfoundation.org. .NET Foundation. Retrieved 17 February 2015.&#160;
+^ "Entity Framework 6". dotnetfoundation.org. .NET Foundation. Retrieved 17 February 2015.&#160;
+^ "NuGet". dotnetfoundation.org. .NET Foundation. Retrieved 17 February 2015.&#160;
+^ Bray, Brandon (15 August 2012). "Announcing the release of .NET Framework 4.5 RTM - Product and Source Code". .NET Framework Blog. Microsoft.&#160;
+^ "Announcing .NET 2015 Preview: A New Era for .NET". .NET Framework Blog. Microsoft. 12 November 2014.&#160;
+^ "Microsoft .NET Framework Redistributable EULA". MSDN. Microsoft. Retrieved 28 February 2015.&#160;
+^ ISO 9001:2008, Foreword
+^ "Using VB.NET with the .NET Micro Framework «&#160;/dev/mobile". Christec.co.nz. 1 April 2008. Retrieved 17 April 2012.&#160;
+^ "CrossNet". Codeplex.com. Retrieved 17 April 2012.&#160;
+
+
+External links[edit]
+
+
+
+Wikibooks has a book on the topic of: .NET Development Foundation
+
+
+
+
+
+Wikiversity has learning materials about Introduction to Microsoft.NET
+
+
+
+Official website
+
+.NET Framework Developer Center on MSDN Library
+
+
+.NET Framework Index
+Overview of .NET Framework (MSDN)
+.NET Framework FAQ
+.NET Github repository
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+.NET Framework
+
+
+
+
+
+
+Architecture
+
+
+
+Common Language Runtime (CLR)
+COM Interop
+Framework Class Library (FCL)
+Version history
+
+
+
+
+
+
+
+
+Components
+
+
+
+ADO.NET
+
+Entity Framework
+
+
+ASP.NET
+
+AJAX
+Dynamic Data
+MVC Framework
+Razor view engine
+
+
+ClickOnce
+Dynamic Language Runtime
+Extensible Application Markup Language (XAML)
+Language Integrated Query (LINQ)
+Managed Extensibility Framework
+Microsoft Silverlight
+Microsoft XNA
+Parallel Extensions
+Windows Communication Foundation (WCF)
+
+WCF Data Services
+
+
+Windows Forms (WinForms)
+Windows Identity Foundation (WIF)
+Windows Presentation Foundation (WPF)
+Windows Workflow Foundation (WF)
+.NET Remoting
+
+
+
+
+
+
+
+
+Tools
+
+
+
+CLR Profiler
+ILAsm
+.NET Compiler Platform
+Native Image Generator (NGen)
+XAMLPad
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Visual Studio
+
+Blend
+Express
+
+
+MonoDevelop
+SharpDevelop
+
+
+
+
+
+
+
+
+Organizations
+
+
+
+.NET Foundation
+Microsoft
+Xamarin
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ List
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Common Language Infrastructure
+
+
+
+
+
+
+Architecture
+
+
+
+Application domain
+Code Access Security
+Common Intermediate Language (CIL)
+
+CIL instructions
+
+
+Common Type System (CTS)
+Platform Invocation Services (P/Invoke)
+Virtual Execution System (VES)
+
+
+
+
+
+
+
+
+Components
+
+
+
+Assembly
+Delegate
+Manifest
+Metadata
+
+
+
+
+
+
+
+
+Standard Libraries
+
+
+
+
+Kernel Profile
+
+
+
+Base Class Library (BCL)
+Runtime Infrastructure Library
+
+
+
+
+
+
+
+
+Compact Profile
+
+
+
+Network Library
+Reflection Library
+XML Library
+
+
+
+
+
+
+
+
+
+
+
+Extended Array Library
+Extended Numerics Library
+Parallel Library
+Vararg Library
+
+
+
+
+
+
+
+
+
+
+
+Implementations
+
+
+
+
+Microsoft
+
+
+
+.NET Framework
+.NET Compact Framework
+.NET Micro Framework
+Shared Source Common Language Infrastructure
+
+
+
+
+
+
+
+
+Other
+
+
+
+Mono
+Portable.NET
+
+
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+Microsoft
+
+
+
+C#
+
+Visual C#
+
+
+Visual Basic .NET
+C++/CLI
+
+Managed
+
+
+F#
+J#
+JScript .NET
+Windows PowerShell
+
+
+
+
+
+
+
+
+Other
+
+
+
+Axum
+A#
+Boo
+Cobra
+IronScheme
+
+IronLisp
+
+
+IronPython
+IronRuby
+Nemerle
+Oxygene
+Phalanger
+P#
+Scala
+
+
+
+
+
+
+
+
+Comparison
+
+
+
+C# and Java
+C# and Visual Basic .NET
+Java and .NET platforms
+Visual Basic and Visual Basic .NET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Microsoft APIs and frameworks
+
+
+
+
+
+
+Graphics
+
+
+
+Desktop Window Manager
+Direct2D
+Direct3D
+D3D (extensions)
+GDI / GDI+
+WPF
+Silverlight
+WinRT XAML
+Windows Color System
+Windows Image Acquisition
+Windows Imaging Component
+DirectX Graphics Infrastructure (DXGI)
+Windows Advanced Rasterization Platform
+WinG
+
+
+
+
+
+
+
+
+Audio
+
+
+
+DirectMusic
+DirectSound
+DirectX plugin
+XACT
+Speech API
+XAudio2
+
+
+
+
+
+
+
+
+Multimedia
+
+
+
+DirectX
+
+Media Objects
+Video Acceleration
+
+
+Xinput
+DirectInput
+DirectShow
+Image Mastering API
+Managed DirectX
+Media Foundation
+XNA
+Windows Media
+Video for Windows
+
+
+
+
+
+
+
+
+Web
+
+
+
+MSHTML
+RSS Platform
+JScript
+VBScript
+BHO
+XDR
+SideBar Gadgets
+TypeScript
+
+
+
+
+
+
+
+
+Data access
+
+
+
+Data Access Components (MDAC)
+
+ADO
+ADO.NET
+ODBC
+OLE DB
+
+
+Extensible Storage Engine
+Entity Framework
+Sync Framework
+Jet Engine
+MSXML
+OPC
+
+
+
+
+
+
+
+
+Networking
+
+
+
+Winsock
+
+LSP
+
+
+Winsock Kernel
+Filtering Platform
+Network Driver Interface Specification
+Windows Rally
+BITS
+P2P API
+MSMQ
+MS MPI
+DirectPlay
+
+
+
+
+
+
+
+
+Communication
+
+
+
+Messaging API
+Telephony API
+WCF
+
+
+
+
+
+
+
+
+Administration and
+management
+
+
+
+Win32 console
+Windows Script Host
+WMI (extensions)
+PowerShell
+Task Scheduler
+Offline Files
+Shadow Copy
+Windows Installer
+Error Reporting
+Event Log
+Common Log File System
+
+
+
+
+
+
+
+
+Component model
+
+
+
+COM
+COM+
+ActiveX
+Distributed Component Object Model
+.NET Framework
+
+
+
+
+
+
+
+
+Libraries
+
+
+
+Framework Class Library
+Microsoft Foundation Classes (MFC)
+Active Template Library (ATL)
+Windows Template Library (WTL)
+
+
+
+
+
+
+
+
+Device drivers
+
+
+
+Windows Driver Model
+Windows Driver Foundation
+
+KMDF
+UMDF
+
+
+WDDM
+NDIS
+UAA
+Broadcast Driver Architecture
+VxD
+
+
+
+
+
+
+
+
+Security
+
+
+
+Crypto API
+
+CAPICOM
+
+
+Windows CardSpace
+Data Protection API
+Security Support Provider Interface (SSPI)
+
+
+
+
+
+
+
+
+.NET
+
+
+
+ASP.NET
+ADO.NET
+Remoting
+Silverlight
+TPL
+WCF
+WCS
+WPF
+WF
+
+
+
+
+
+
+
+
+Software factories
+
+
+
+EFx Factory
+Enterprise Library
+Composite UI
+CCF
+CSF
+
+
+
+
+
+
+
+
+IPC
+
+
+
+MSRPC
+Dynamic Data Exchange (DDE)
+Remoting
+WCF
+
+
+
+
+
+
+
+
+Accessibility
+
+
+
+Active Accessibility
+UI Automation
+
+
+
+
+
+
+
+
+Text and multilingual
+support
+
+
+
+DirectWrite
+Text Services Framework
+Text Object Model
+Input method editor
+Language Interface Pack
+Multilingual User Interface
+Uniscribe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Microsoft Windows components
+
+
+
+
+
+
+Management tools
+
+
+
+CMD.EXE
+Control Panel
+
+Applets
+
+
+Device Manager
+Disk Cleanup
+Disk Defragmenter
+Driver Verifier
+Event Viewer
+IExpress
+Management Console
+Netsh
+Recovery Console
+Resource Monitor
+ScanDisk
+Settings app
+Sysprep
+System Configuration
+System File Checker
+System Policy Editor
+System Restore
+Task Manager
+Windows Easy Transfer
+Windows Error Reporting
+Windows Installer
+Windows PowerShell
+Windows Update
+WinPE
+WinRE
+WMI
+
+
+
+
+
+
+
+
+Apps
+
+
+
+Calculator
+Calendar
+Character Map
+Cortana
+DVD Player
+Edge
+Fax and Scan
+Groove
+Internet Explorer
+Journal
+Magnifier
+Mail
+Maps
+Media Player
+MSN apps (News, Weather, Sports, Money)
+Movie Maker
+Movies &amp; TV
+Mobility Center
+Narrator
+Notepad
+OneDrive
+OneNote
+Paint
+People
+Remote Assistance
+Snipping Tool
+Sound Recorder
+Speech Recognition
+Skype
+Store
+Windows To Go
+WordPad
+Xbox
+
+
+
+
+
+
+
+
+Shell
+
+
+
+Action Center
+Aero
+AutoPlay
+AutoRun
+ClearType
+Explorer
+Search
+
+IFilter
+Saved search
+Namespace
+Special folder
+
+
+Start menu
+Taskbar
+Task View
+Windows XP visual styles
+
+
+
+
+
+
+
+
+Services
+
+
+
+Service Control Manager
+BITS
+CLFS
+Multimedia Class Scheduler
+Shadow Copy
+Task Scheduler
+Error Reporting
+Wireless Zero Configuration
+
+
+
+
+
+
+
+
+File systems
+
+
+
+CDFS
+DFS
+exFAT
+IFS
+FAT
+NTFS
+
+Hard link
+Junction point
+Mount Point
+Reparse point
+Symbolic link
+TxF
+EFS
+
+
+ReFS
+UDF
+WinFS
+
+
+
+
+
+
+
+
+Server
+
+
+
+Domains
+Active Directory
+DNS
+Group Policy
+Roaming user profiles
+Folder redirection
+Distributed Transaction Coordinator
+MSMQ
+Windows Media Services
+Rights Management Services
+IIS
+Remote Desktop Services
+WSUS
+SharePoint
+Network Access Protection
+PWS
+DFS Replication
+Remote Differential Compression
+Print Services for UNIX
+Remote Installation Services
+Windows Deployment Services
+System Resource Manager
+Hyper-V
+Server Core
+
+
+
+
+
+
+
+
+Architecture
+
+
+
+Architecture of Windows NT
+Startup process
+CSRSS
+Desktop Window Manager
+Portable Executable
+
+EXE
+DLL
+
+
+Enhanced Write Filter
+Graphics Device Interface
+hal.dll
+I/O request packet
+Imaging Format
+Kernel Transaction Manager
+Library files
+Logical Disk Manager
+LSASS
+MinWin
+NTLDR
+Ntoskrnl.exe
+Object Manager
+Open XML Paper Specification
+Registry
+Resource Protection
+Security Accounts Manager
+Server Message Block
+Shadow Copy
+SMSS
+System Idle Process
+USER
+WHEA
+Win32 console
+Winlogon
+
+
+
+
+
+
+
+
+Security
+
+
+
+Security and Maintenance
+BitLocker
+Data Execution Prevention
+Family Safety
+Kernel Patch Protection
+Mandatory Integrity Control
+Protected Media Path
+User Account Control
+User Interface Privilege Isolation
+Windows Defender
+Windows Firewall
+
+
+
+
+
+
+
+
+Compatibility
+
+
+
+COMMAND.COM
+Windows Services for UNIX
+
+POSIX subsystem
+Interix
+
+
+Virtual DOS machine
+Windows on Windows
+WoW64
+
+
+
+
+
+
+
+
+API
+
+
+
+Active Scripting
+
+WSH
+VBScript
+JScript
+
+
+COM
+
+ActiveX
+ActiveX Document
+COM Structured storage
+DCOM
+OLE
+OLE Automation
+Transaction Server
+
+
+DirectX
+.NET Framework
+Windows Holographic
+Windows Runtime
+Universal Windows Platform
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Games
+
+
+
+3D Pinball
+Chess Titans
+FreeCell
+Hearts
+Hover!
+InkBall
+Hold 'Em
+Mahjong Titans
+Minesweeper
+Purble Place
+Reversi
+Solitaire
+Spider Solitaire
+Tinker
+
+
+
+
+
+
+
+
+Others
+
+
+
+ActiveMovie
+Anytime Upgrade
+Address Book
+Backup and Restore
+Cardfile
+CardSpace
+Contacts
+Desktop Gadgets
+Diagnostics
+DriveSpace
+DVD Maker
+Fax
+File Manager
+File Protection
+Food &amp; Drink
+Health &amp; Fitness
+HyperTerminal
+Internet Mail and News
+Mail
+Media Center
+Media Control Interface
+Meeting Space
+Messaging
+Messenger
+Mobile Device Center
+NetMeeting
+Next-Generation Secure Computing Base
+NTBackup
+Outlook Express
+Travel
+Photo Gallery
+Program Manager
+Video for Windows
+Windows Photo Viewer
+Windows SideShow
+WinHelp
+WinSAT
+Write
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=.NET_Framework&amp;oldid=691919847"					
+				Categories: .NET Framework2002 softwareComputing platformsMicrosoft development toolsMicrosoft application programming interfacesCross-platform softwareHidden categories: All articles with unsourced statementsArticles with unsourced statements from June 2013Articles with unsourced statements from February 2015Use dmy dates from October 2014				
+							
+		
+		
+			

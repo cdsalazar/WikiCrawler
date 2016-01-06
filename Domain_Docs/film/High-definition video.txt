@@ -1,0 +1,878 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			High-definition video
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For high-definition video in broadcasting, see High-definition television.  For other uses, see High-definition.
+High-definition video is video of higher resolution and quality than standard-definition. While there is no standardized meaning for high-definition, generally any video image with considerably more than 480 horizontal lines (North America) or 576 horizontal lines (Europe) is considered high-definition. 480 scan lines is generally the minimum even though the majority of systems greatly exceed that. Images of standard resolution captured at rates faster than normal (60 frames/second North America, 50 fps Europe), by a high-speed camera may be considered high-definition in some contexts. Some television series shot on high-definition video are made to look as if they have been shot on film, a technique which is often known as filmizing.
+
+
+
+Contents
+
+
+1 History
+
+1.1 1980s
+1.2 1990s
+1.3 2000s
+
+
+2 Technical details
+
+2.1 Common high-definition video modes
+2.2 Ultra high-definition video modes
+
+
+3 HD content
+
+3.1 Types of recorded media
+3.2 HD in filmmaking
+3.3 HD on the World Wide Web/HD streaming
+
+3.3.1 World Wide Web HD resolutions
+
+
+3.4 HD in video surveillance
+3.5 HD in video gaming
+
+
+4 See also
+5 References
+6 Further reading
+7 External links
+
+
+
+History[edit]
+The first electronic scanning format, 405 lines, was the first "high definition" television system, since the mechanical systems it replaced had far fewer. From 1939, Europe and the US tried 605 and 441 lines until, in 1941, the FCC mandated 525 for the US. In wartime France, René Barthélemy tested higher resolutions, up to 1,042. In late 1949, official French transmissions finally began with 819. In 1984, however, this standard was abandoned for 625-line color on the TF1 network.
+1980s[edit]
+Modern HD specifications date to the early 1980s, when Japanese engineers developed the HighVision 1,125-line interlaced TV standard (also called MUSE) that ran at 60 frames per second. The Sony HDVS system was presented at an international meeting of television engineers in Algiers, April 1981 and Japan's NHK presented its analog HDTV system at a Swiss conference in 1983.
+The NHK system was standardized in the United States as Society of Motion Picture and Television Engineers (SMPTE) standard #240M in the early 1990s, but abandoned later on when it was replaced by a DVB analog standard. HighVision video is still usable for HDTV video interchange, but there is almost no modern equipment available to perform this function. Attempts at implementing HighVision as a 6&#160;MHz broadcast channel were mostly unsuccessful. All attempts at using this format for terrestrial TV transmission were abandoned by the mid-1990s.[citation needed]
+Europe developed HD-MAC (1,250 lines, 50&#160;Hz), a member of the MAC family of hybrid analogue/digital video standards; however, it never took off as a terrestrial video transmission format. HD-MAC was never designated for video interchange except by the European Broadcasting Union.
+The current high-definition video standards in North America were developed during the course of the advanced television process initiated by the Federal Communications Commission in 1987 at the request of American broadcasters. In essence, the end of the 1980s was a death knell for most analog high definition technologies that had developed up to that time.
+1990s[edit]
+The FCC process, led by the Advanced Television Systems Committee (ATSC) adopted a range of standards from interlaced 1,080-line video (a technical descendant of the original analog NHK 1125/30&#160;Hz system) with a maximum frame rate of 60&#160;Hz, and 720-line video, progressively scanned, with a maximum frame rate of 60&#160;Hz. In the end, however, the DVB standard of resolutions (1080, 720, 480) and respective frame rates (24, 25, 30) were adopted in conjunction with the Europeans that were also involved in the same standardization process. The FCC officially adopted the ATSC transmission standard (which included both HD and SD video standards) in 1996, with the first broadcasts on October 28, 1998.
+2000s[edit]
+In the early 2000s, it looked as if DVB would be the video standard far into the future. However, both Brazil and China have adopted alternative standards for high-definition video[citation needed] that preclude the interoperability that was hoped for after decades of largely non-interoperable analog TV broadcasting.
+Technical details[edit]
+
+
+
+
+This chart shows the most common display resolutions, with the color of each resolution type indicating the display ratio (e.g., red indicates a 4:3 ratio).
+
+
+High definition video (prerecorded and broadcast) is defined threefold, by:
+
+The number of lines in the vertical display resolution. High-definition television (HDTV) resolution is 1,080 or 720 lines. In contrast, regular digital television (DTV) is 480 lines (upon which NTSC is based, 480 visible scanlines out of 525) or 576 lines (upon which PAL/SECAM are based, 576 visible scanlines out of 625). However, since HD is broadcast digitally, its introduction sometimes coincides with the introduction of DTV. Additionally, current DVD quality is not high-definition, although the high-definition disc systems Blu-ray Disc and the HD DVD are.
+The scanning system: progressive scanning (p) or interlaced scanning (i). Progressive scanning (p) redraws an image frame (all of its lines) when refreshing each image, for example 720p/1080p. Interlaced scanning (i) draws the image field every other line or "odd numbered" lines during the first image refresh operation, and then draws the remaining "even numbered" lines during a second refreshing, for example 1080i. Interlaced scanning yields greater image resolution if subject is not moving, but loses up to half of the resolution and suffers "combing" artifacts when subject is moving.
+The number of frames or fields per second (Hz). In Europe more common (50 Hz) television broadcasting system and in USA (60 Hz). The 720p60 format is 1,280&#160;×&#160;720 pixels, progressive encoding with 60 frames per second (60&#160;Hz). The 1080i50/1080i60 format is 1920&#160;×&#160;1080 pixels, interlaced encoding with 50/60 fields, (50/60 Hz) per second. Two interlaced fields formulate a single frame, because the two fields of one frame are temporally shifted. Frame pulldown and segmented frames are special techniques that allow transmitting full frames by means of interlaced video stream.
+
+Often, the rate is inferred from the context, usually assumed to be either 50 Hz (Europe) or 60 Hz (USA), except for 1080p, which denotes 1080p24, 1080p25, and 1080p30, but also 1080p50 and 1080p60.
+A frame or field rate can also be specified without a resolution. For example, 24p means 24 progressive scan frames per second and 50i means 25 progressive frames per second, consisting of 50 interlaced fields per second. Most HDTV systems support some standard resolutions and frame or field rates. The most common are noted below. High-definition signals require a high-definition television or computer monitor in order to be viewed. High-definition video has an aspect ratio of 16:9 (1.78:1). The aspect ratio of regular widescreen film shot today is typically 1.85:1 or 2.39:1 (sometimes traditionally quoted at 2.35:1). Standard-definition television (SDTV) has a 4:3 (1.33:1) aspect ratio, although in recent years many broadcasters have transmitted programs "squeezed" horizontally in 16:9 anamorphic format, in hopes that the viewer has a 16:9 set which stretches the image out to normal-looking proportions, or a set which "squishes" the image vertically to present a "letterbox" view of the image, again with correct proportions.
+Common high-definition video modes[edit]
+
+
+Video mode
+Frame size in pixels (W×H)
+Pixels per image1
+Scanning type
+Frame rate (Hz)
+
+
+720p
+1,280×720
+921,600
+Progressive
+23.976, 24, 25, 29.97, 30, 50, 59.94, 60, 72
+
+
+1080i
+1,920×1,080
+2,073,600
+Interlaced
+25 (50 fields/s), 29.97 (59.94 fields/s), 30 (60 fields/s)
+
+
+1080p
+1,920×1,080
+2,073,600
+Progressive
+24 (23.976), 25, 30 (29.97), 50, 60 (59.94)
+
+
+1440p
+2,560×1,440
+3,686,400
+Progressive
+24 (23.976), 25, 30 (29.97), 50, 60 (59.94)
+
+
+Ultra high-definition video modes[edit]
+
+
+Video mode
+Frame size in pixels (W×H)
+Pixels per image1
+Scanning type
+Frame rate (Hz)
+
+
+2000
+2,048×1,536
+3,145,728
+Progressive
+24
+
+
+2160p (also known as 4k)
+3,840×2,160
+8,294,400
+Progressive
+60, 120
+
+
+2540p
+4,520×2,540
+11,480,800
+Progressive
+
+
+
+4000p
+4,096×3,072
+12,582,912
+Progressive
+
+
+
+4320p (also known as 8k)
+7,680×4,320
+33,177,600
+Progressive
+60, 120
+
+
+Note: 1 Image is either a frame or, in case of interlaced scanning, two fields. (EVEN and ODD)
+HD content[edit]
+High-definition image sources include terrestrial broadcast, direct broadcast satellite, digital cable, high definition disc (BD), digital cameras, Internet downloads, and video game consoles.
+
+Most computers are capable of HD or higher resolutions over VGA, DVI, and/or HDMI.
+The optical disc standard Blu-ray Disc can provide enough digital storage to store hours of HD video content. Digital Versatile Discs or DVDs (that hold 4.7 GB for a Single layer or 8.5 GB for a Double layer), look best on screens that are smaller than 36 inches (91&#160;cm),[citation needed] so they are not always up to the challenge of today's high-definition (HD) sets. Storing and playing HD movies requires a disc that holds more information, like a Blu-ray Disc (which hold 25 GB in single layer form and 50 GB for double layer) or High Definition Digital Versatile Discs (HD-DVDs) which hold 15 GB or 30 GB in, respectively, single and double layer variations.
+
+Blu-ray Discs were jointly developed by 9 initial partners including Sony, Phillips (which developed CDs),and Pioneer (which developed its own Laser-disc previously with some success) among others. HD-DVD discs were primarily developed by Toshiba and NEC with some backing from Microsoft, Warner Bros., Hewlett Packard, and others. On February 19, 2008 Toshiba announced it was abandoning the format and would discontinue development, marketing and manufacturing of HD-DVD players and drives.
+Types of recorded media[edit]
+The high resolution photographic film used for cinema projection is exposed at the rate of 24 frames per second but usually projected at 48, each frame getting projected twice helping to minimise flicker. One exception to this was the 1986 National Film Board of Canada short film Momentum, which briefly experimented with both filming and projecting at 48 frame/s, in a process known as IMAX HD.
+Depending upon available bandwidth and the amount of detail and movement in the image, the optimum format for video transfer is either 720p24 or 1080p24. When shown on television in PAL system countries, film must be projected at the rate of 25 frames per second by accelerating it by 4.1 percent. In NTSC standard countries, the projection rate is 30 frames per second, using a technique called 3:2 pull-down. One film frame is held for three video fields (1/20 of a second), and the next is held for two video fields (1/30 of a second) and then the process is repeated, thus achieving the correct film projection rate with two film frames shown in 1/12 of a second.
+See also: Telecine and Deinterlacing
+Older (pre-HDTV) recordings on video tape such as Betacam SP are often either in the form 480i60 or 576i50. These may be upconverted to a higher resolution format (720i), but removing the interlace to match the common 720p format may distort the picture or require filtering which actually reduces the resolution of the final output.
+Non-cinematic HDTV video recordings are recorded in either the 720p or the 1080i format. The format used is set by the broadcaster (if for television broadcast). In general, 720p is more accurate with fast action, because it progressively scans frames, instead of the 1080i, which uses interlaced fields and thus might degrade the resolution of fast images.
+720p is used more for Internet distribution of high-definition video, because computer monitors progressively scan; 720p video has lower storage-decoding requirements than either the 1080i or the 1080p. This is also the medium for high-definition broadcasts around the world and 1080p is used for Blu-ray movies.
+HD in filmmaking[edit]
+Film as a medium has inherent limitations, such as difficulty of viewing footage while recording, and suffers other problems, caused by poor film development/processing, or poor monitoring systems. Given that there is increasing use of computer-generated or computer-altered imagery in movies, and that editing picture sequences is often done digitally, some directors have shot their movies using the HD format via high-end digital video cameras. While the quality of HD video is very high compared to SD video, and offers improved signal/noise ratios against comparable sensitivity film, film remains able to resolve more image detail than current HD video formats. In addition some films have a wider dynamic range (ability to resolve extremes of dark and light areas in a scene) than even the best HD cameras. Thus the most persuasive arguments for the use of HD are currently cost savings on film stock and the ease of transfer to editing systems for special effects.
+Depending on the year and format in which a movie was filmed, the exposed image can vary greatly in size. Sizes range from as big as 24&#160;mm × 36&#160;mm for VistaVision/Technirama 8 perforation cameras (same as 35&#160;mm still photo film) going down through 18&#160;mm&#160;×&#160;24&#160;mm for Silent Films or Full Frame 4 perforations cameras to as small as 9&#160;mm&#160;×&#160;21&#160;mm in Academy Sound Aperture cameras modified for the Techniscope 2 perforation format. Movies are also produced using other film gauges, including 70 mm films (22&#160;mm&#160;×&#160;48&#160;mm) or the rarely used 55&#160;mm and CINERAMA.
+The four major film formats provide pixel resolutions (calculated from pixels per millimeter) roughly as follows:
+
+Academy Sound (Sound movies before 1955): 15&#160;mm × 21&#160;mm (1.375) = 2,160&#160;×&#160;2,970
+Academy camera US Widescreen: 11&#160;mm × 21&#160;mm (1.85) = 1,605 × 2,970
+Current Anamorphic Panavision ("Scope"): 17.5&#160;mm × 21&#160;mm (2.39) = 2,485&#160;×&#160;2,970
+Super-35 for Anamorphic prints: 10&#160;mm × 24&#160;mm (2.39) = 1,420&#160;×&#160;3,390
+
+In the process of making prints for exhibition, this negative is copied onto other film (negative → interpositive → internegative → print) causing the resolution to be reduced with each emulsion copying step and when the image passes through a lens (for example, on a projector). In many cases, the resolution can be reduced down to 1/6 of the original negative's resolution (or worse).[citation needed] Note that resolution values for 70&#160;mm film are higher than those listed above.
+HD on the World Wide Web/HD streaming[edit]
+A number of online video streaming/on demand and digital download services offer HD video, among them YouTube, Vimeo, Hulu, Amazon Video On Demand, Netflix Watch Instantly, and others. Due to heavy compression, the image detail produced by these formats are far below that of broadcast HD, and often even inferior to DVD-Video (3-9&#160;Mbit/s MP2) upscaled to the same image size.[1] The following is a chart of numerous online services and their HD offering:
+World Wide Web HD resolutions[edit]
+
+
+Source
+Codec
+Highest resolution (W×H)
+Total bit rate/bandwidth
+Video bit rate
+Audio bit rate
+
+
+Amazon Video[note 1]
+VC-1[2]
+1280×720[3]
+2.5-6 Mbit/s
+
+
+
+
+BBC iPlayer
+H.264[4]
+1280×720[5][note 2]
+3.2&#160;Mbit/s[4]
+3&#160;Mbit/s[4]
+192&#160;kbit/s[4]
+
+
+blinkbox
+
+1280×720
+2.25 Mbit/s (SD): 4.5 Mbit/s (HD)
+2.25 - 4.5 Mbit/s
+192 kbit/s
+
+
+Blockbuster Online
+
+1280×720
+
+
+
+
+
+CBS.com/TV.com
+
+1920×1080[6]
+3.5&#160;Mbit/s (2.5Mbits for 720p)[6]
+
+
+
+
+DaCast
+VP6, H.264[7]
+Unknown
+5&#160;Mbit/s[8]
+
+
+
+
+Hulu
+On2 Flash VP6[9]
+1280×720[10]
+2.5&#160;Mbit/s[11]
+
+
+
+
+iPlayerHD
+FLV, QuickTime H.264, MP4 H.264[12]
+1920×1080[13]
+
+2&#160;Mbit/s and 5&#160;Mbit/s[14]
+
+
+
+iTunes/Apple TV
+QuickTime H.264[15]
+1920x1080[15]
+
+
+
+
+
+MetaCDN
+MPEG-4, FLV, OGG, WebM, 3GP[16]
+No Limit[17]
+
+
+
+
+
+Netflix Watch Instantly
+VC-1[18]
+1920×1080[19]
+5&#160;Mbit/s[20]
+2.6&#160;Mbit/s and 3.8&#160;Mbit/s[21]
+
+
+
+PlayStationStore Movies &amp; TV Shows
+H.264/MPEG-4 AVC[22]
+1920×1080[22]
+
+8&#160;Mbit/s[22]
+256&#160;kbit/s[22]
+
+
+StreamShark
+H.264, FLV, OGV, WebM, VP8 ,VP9 [23]
+1920×1080[24]
+
+
+
+
+
+Vimeo
+H.264[25]
+1920×1080[26]
+
+4&#160;Mbit/s[27]
+320&#160;kbit/s[28]
+
+
+Vudu
+H.264[29]
+1920×1080[30]
+4.5&#160;Mbit/s[31]
+
+
+
+
+Xbox Video[note 3]
+
+1920x1080 [32]
+
+
+
+
+
+YouTube
+H.264/MPEG-4 AVC, VP9
+7680×4320
+
+
+
+
+
+
+^ Formerly "Amazon Unbox", which now refers to a video player software, and later "Amazon Video on Demand".
+^ During live events "BBC iPlayer" streams have a resolution of 1024x576.
+^ Formerly "Xbox Live Marketplace Video Store", but replaced by "Xbox Video" in 2012.
+
+HD in video surveillance[edit]
+An increasing number of manufacturers of security cameras now offer HD cameras. The need for high resolution, color fidelity, and frame rate is acute for surveillance purposes to ensure that the quality of the video output is of an acceptable standard that can be used both for preventative surveillance as well as for evidence purposes. These needs, however, must be balanced against the additional storage capacity required by HD video.
+HD in video gaming[edit]
+For the first time in consoles history both the PlayStation 3 game console and Xbox 360 can output native 1080p through HDMI or component cables. Both systems have few games which appear in 1080p. Most games only run natively at 720p or less, but can be upscaled to 1080p. The Wii can output up to 480p (enhanced-definition) over component, which while not HD, is very useful for HDTVs as it avoids de-interlacing artifacts. The Wii can also output 576i in PAL regions.
+Visually, native 1080p produces a sharper and clearer picture compared to upscaled 1080p. Though only a handful of games available have the native resolution of 1080p, all games on the Xbox 360 and PlayStation 3 can be upscaled up to this resolution. Xbox 360 and PlayStation 3 games are labeled with the output resolution on the back of their packaging, although on Xbox 360 this indicates the resolution it will upscale to, not the native resolution of the game.
+Generally, PC games are only limited by the display's resolution size. Drivers are capable of supporting very high resolutions, depending on the chipset of the video card. Many game engines support resolutions of 5760x1080p or 5760x1200p (three displays placed together) and nearly all will display 1080p at minimum. QHD/ 2K (2560x1440p) and UHD/ 4K (3840x2160p) are typically supported resolutions for PC gaming as well.
+Currenlty all consoles, Nintendo's Wii U, Microsoft's Xbox One, and PlayStation 4 display games 1080p natively. Playstation 4is able to display in 4K, though strictly only for displaying pictures.
+See also[edit]
+
+
+
+
+Blu-ray portal
+
+
+
+
+ATSC tuner
+Digital Video Broadcasting (DVB)
+DTV channel protection ratios
+HD ready
+HDTV input and colorspace (YPbPr / YCbCr)
+Integrated Services Digital Broadcasting
+United States Federal Standard 1037C
+Waveform monitor
+
+References[edit]
+
+
+^ "Why HD movie downloads are a big lie". Ziff-Davis. 2007-05-31. Retrieved 2010-06-28.&#160;
+^ "Amazon.com -- News Release". Amazon.com. 2006-09-07. Retrieved 2009-10-16. ...using the ultra-efficient VC-1 Advanced Profile codec.&#160;
+^ "Amazon.com: Help &gt; Digital Products &gt; Amazon Video On Demand". Amazon.com. Retrieved 2009-10-16. Our 2.5 Mbps HD files are streamed in high-quality 720p resolution.&#160;
+^ a b c d "What do I need to know about HD on BBC iPlayer?". BBC. We use h.264 with a bitrate of 3.2Mbps and 192kbps audio&#160;
+^ "What do I need to know about HD on BBC iPlayer?". BBC. In order to be classed as "true" high definition, we encode in at least 1280x720 resolution, or 720p.&#160;
+^ a b "CBS.com - HD Video - System Requirements". CBS.com. Retrieved 2009-10-16.&#160;
+^ "Streaming Service for Flash, RTMP, H.264 &amp; VP6". DaCast. Retrieved 2011-11-30.&#160;
+^ "Live Streaming Service". DaCast. Retrieved 2011-11-30.&#160;
+^ "Hulu - About". Hulu. Retrieved 2009-10-16. Hulu videos are streamed as Flash video files (FLV files). These files are encoded using the On2 Flash VP6 codec...&#160;
+^ "Hulu - About". Hulu. Retrieved 2009-10-16. HD videos on Hulu are streamed at 1280 x 720 resolution.&#160;
+^ "Hulu - About". Hulu. Retrieved 2009-10-16. Hulu currently supports four different streams including 480kbps, 700kbps, 1,000kbps (an H.264 encode that is not on On2 VP6) and 2.5Mbps.&#160;
+^ "Learn More About iPlayerHD". iPlayerHD.com. Retrieved 2009-12-16. We support FLV and H264 as MOV and MP4.&#160;
+^ "Learn More About iPlayerHD". iPlayerHD.com. Retrieved 2009-12-16. iPlayerHD will deliver video at any resolution including SD 720 x 480, and HD 480, 720 and 1080.&#160;
+^ "Learn More About iPlayerHD". iPlayerHD.com. Retrieved 2009-12-16. Your video will be delivered at bit-rates up to 5,000 kbps or 5 mbps.&#160;
+^ a b "Video quality reference table from best to worst".&#160;
+^ "MetaCDN Technical Specs". MetaCDN. Retrieved 2014-08-20.&#160;
+^ "Live Streaming Service". MetaCDN. Retrieved 2014-08-20.&#160;
+^ Hunt, Neil (2008-11-06). "The Official Netflix Blog: Encoding for streaming". Netflix. Retrieved 2009-10-16. ...but settled on second-generation HD encodes with VC1AP&#160;
+^ Hunt, Neil (2013-09-26). Netflix http://www.theverge.com/2013/9/26/4774732/netflix-super-hd-1080p-now-available-on-all-isp. Retrieved 2014-09-11. Based on the performance data we’ve seen, and in response to member requests, we are now expanding availability to give all our members the ability to enjoy Netflix in the best possible quality.&#160; Missing or empty |title= (help)
+^ "HD on your Netflix Ready Device". Netflix. Retrieved 2010-02-08. A high-speed internet connection at time of playback (typically 5 Mbps or higher)&#160;
+^ Hunt, Neil (2008-11-06). "The Official Netflix Blog: Encoding for streaming". Netflix. Retrieved 2009-10-16. second-generation HD encodes ... at 2600kbps and 3800kbps&#160;
+^ a b c d Dipert, Brian (2008-07-17). "Online Video Content Distribution: Sony's PlayStation 3 Enters The Ring (Albeit With A Sound-Hampered Hand Tied Behind Its Back)". EDN. Retrieved 2009-10-16.&#160;
+^ "StreamShark Technical Specifications". StreamShark. Retrieved 2015-10-08.&#160;
+^ "Live Streaming Service". StreamShark. Retrieved 2015-10-08.&#160;
+^ "Vimeo - Compression guidelines on Vimeo". Vimeo. Retrieved 2009-10-16. For best results, we recommend using H.264 (sometimes referred to as MP4) for the video codec and AAC (short for Advanced Audio Codec) for the audio codec.&#160;
+^ "Vimeo - Compression guidelines on Vimeo". Vimeo. Retrieved 2009-10-16. 640x480 for standard definition 4:3 video, 853x480 for widescreen DV, or 1920x1080 for high definition.&#160;
+^ "Vimeo - Compression guidelines on Vimeo". Vimeo. Retrieved 2009-10-16. Use 2000 kbits/sec for standard definition 4:3 video, 3000 kbits/sec for widescreen DV, or 5000 kbits/sec for high definition footage.&#160;
+^ "Vimeo - Compression guidelines on Vimeo". Vimeo. Retrieved 2009-10-16. You'll want to set the bit rate to 320 kbps and the sample rate to 44.100 kHz.&#160;
+^ Sturgeon, Shane (2008-02-21). "Showdown: Apple TV vs. VUDU". HDTV Magazine. Retrieved 2009-11-05. ...all HD content is ... encoded with H.264 High Profile&#160;
+^ "Streaming Requirements". Vudu. Retrieved 2010-02-09. HDX (1080p)&#160;
+^ "Streaming Requirements". Vudu. Retrieved 2010-02-09. HDX (1080p) requires 4500 kbps&#160;
+^ "XBox Video". Microsoft. Retrieved 8 November 2012.&#160;
+
+
+Further reading[edit]
+
+Images formats for HDTV&#160;PDF&#160;(549&#160;KiB), article from the EBU Technical Review .
+High Definition for Europe - a progressive approach&#160;PDF&#160;(207&#160;KiB), article from the EBU Technical Review .
+High Definition (HD) Image Formats for Television Production&#160;PDF&#160;(117&#160;KiB), technical report from the EBU
+Digital Terrestrial HDTV Broadcasting in Europe&#160;PDF, technical report from the EBU
+
+External links[edit]
+
+
+
+Look up HDTV in Wiktionary, the free dictionary.
+
+
+
+
+
+Wikiquote has quotations related to: High-definition video
+
+
+
+ATSC
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+High-definition (HD)
+
+
+
+
+
+
+Concepts
+
+
+
+High-definition television
+High-definition video
+Ultra-high-definition television
+
+
+
+
+
+
+
+
+Analog broadcast
+(All defunct)
+
+
+
+819 line system
+HD MAC
+MUSE (Hi-Vision)
+
+
+
+
+
+
+
+
+Digital broadcast
+
+
+
+ATSC
+DMB-T/H
+DVB
+ISDB
+SBTVD
+
+
+
+
+
+
+
+
+Audio
+
+
+
+Dolby Digital
+Surround sound
+DSD
+DXD
+DTS
+
+
+
+
+
+
+
+
+Filming and storage
+
+
+
+DCI
+HDV
+
+
+
+
+
+
+
+
+HD media and
+compression
+
+
+
+Blu-ray
+CBHD
+D-VHS
+DVD-Audio
+H.264
+HD DVD
+HD VMD
+MPEG-2
+MVC
+Super Audio CD
+Uncompressed
+VC-1
+
+
+
+
+
+
+
+
+Connectors
+
+
+
+Component
+DisplayPort
+DVI
+HDMI
+VGA
+
+
+
+
+
+
+
+
+Deployments
+
+
+
+List of digital television deployments by country
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Video storage formats
+
+
+
+
+
+
+Videotape
+
+
+
+
+
+Analog
+
+
+
+
+Quadruplex (1956)
+VERA (1958)
+Ampex 2 inch helical VTR (1961)
+Sony 2 inch helical VTR (1961)
+Type A (1965)
+CV-2000 (1965)
+Akai (1967)
+U-matic (1969)
+EIAJ-1 (1969)
+Cartrivision (1972)
+Philips VCR (1972)
+V-Cord (1974)
+VX (1974)
+Betamax (1975)
+IVC (1975)
+Type B (1976)
+Type C (1976)
+VHS (1976)
+VK (1977)
+SVR (1979)
+Video 2000 (1980)
+CVC (1980)
+VHS-C (1982)
+M (1982)
+Betacam (1982)
+Video8 (1985)
+MII (1986)
+S-VHS (1987)
+S-VHS-C (1987)
+Hi8 (1989)
+Ruvi (1998)
+
+
+
+
+
+
+
+
+
+Digital
+
+
+
+
+D1 (1986)
+D2 (1988)
+D3 (1991)
+DCT (1992)
+Digital Betacam (1993)
+D5 (1994)
+Digital-S (D9) (1995)
+Betacam SX (1996)
+Digital8 (1999)
+MicroMV (2001)
+
+
+
+
+
+
+
+
+
+High Definition
+
+
+
+
+Sony HDVS (1984)
+UniHi (1984)
+W-VHS (1994)
+HDCAM (1997)
+D-VHS (1998)
+D6 HDTV VTR (2000)
+HDV (2003)
+HDCAM SR (2003)
+
+
+
+
+
+
+
+
+
+
+
+Videodisc
+
+
+
+
+
+Analog
+
+
+
+
+Phonovision (1927)
+Ampex-HS (1967)
+TeD (1975)
+LaserDisc (1978)
+CED (1981)
+VHD (1983)
+Laserfilm (1984)
+CD Video (1987)
+
+
+
+
+
+
+
+
+
+Digital
+
+
+
+
+VCD (1993)
+MovieCD (c. 1995)
+DVD (1996)
+MiniDVD (c. 1996)
+DVD-Video (1997)
+CVD (1998)
+SVCD (1998)
+EVD (2003)
+HVD (High-Definition Versatile Disc) (2004)
+FVD (2005)
+UMD (2004)
+
+
+
+
+
+
+
+
+
+High Definition
+
+
+
+
+MUSE Hi-Vision LD (1994)
+VMD (2006)
+HD DVD (2006)
+Blu-ray (2006)
+HVD (Holographic Versatile Disc) (2007)
+CBHD (China Blue High-definition Disc) (2008)
+
+
+
+
+
+
+
+
+
+
+
+Virtual
+
+
+
+
+
+Media agnostic
+
+
+
+
+DV (1995)
+DVCPRO (1995)
+DVCAM (1996)
+DVCPRO50 (1997)
+DVCPRO HD (2000)
+
+
+
+
+
+
+
+
+
+Tapeless
+
+
+
+
+Editcam (1995)
+XDCAM (2003)
+MOD (2005)
+AVCHD (2006)
+AVC-Intra (2006)
+TOD (2007)
+iFrame (2009)
+XAVC (2012)
+
+
+
+
+
+
+
+
+
+Solid state
+
+
+
+
+P2 (2004)
+SxS (2007)
+MicroP2 (2012)
+
+
+
+
+
+
+
+
+
+
+
+Video recorded to film
+
+
+
+Kinescope (1947)
+Electronicam kinescope (1950s)
+Electronic Video Recording (1967)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=High-definition_video&amp;oldid=691406113"					
+				Categories: Blu-ray DiscConsumer electronicsDigital televisionFilm and video technologyHigh-definition televisionHidden categories: Pages with citations lacking titlesPages with citations having bare URLsAll articles with unsourced statementsArticles with unsourced statements from March 2015Articles with unsourced statements from May 2010Articles with unsourced statements from January 2013Articles with unsourced statements from November 2010				
+							
+		
+		
+			

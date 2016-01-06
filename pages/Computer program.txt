@@ -1,0 +1,282 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Computer program
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For the TV programme, see The Computer Programme.
+
+
+
+
+
+program hello;
+begin
+  writeln('Hello, World!');
+end.
+
+
+
+
+Source code of a "Hello, World!" program written in the Pascal programming language.
+
+
+A computer program is a collection of instructions[1] that performs a specific task when executed by a computer. A computer requires programs to function, and typically executes the program's instructions in a central processing unit.[2]
+A computer program is usually written by a computer programmer in a programming language. From the program in its human-readable form of source code, a compiler can derive machine code—a form consisting of instructions that the computer can directly execute. Alternatively, a computer program may be executed with the aid of an interpreter.
+A part of a computer program that performs a well-defined task is known as an algorithm. A collection of computer programs, libraries and related data are referred to as software. Computer programs may be categorized along functional lines, such as application software or system software.
+
+
+
+Contents
+
+
+1 History
+
+1.1 Early programmable machines
+1.2 Analytical Engine
+1.3 Universal Turing machine
+1.4 Early programmable computers
+1.5 Later computers
+
+
+2 Computer programming
+
+2.1 Programming languages
+
+2.1.1 Imperative languages
+2.1.2 Declarative languages
+
+
+2.2 Compilation and interpretation
+
+
+3 Storage and execution
+
+3.1 Simultaneous execution
+3.2 Self-modifying programs
+
+
+4 Functional categories
+
+4.1 Application software
+4.2 Utility programs
+4.3 Operating system
+4.4 Boot program
+4.5 Embedded programs
+4.6 Microcode programs
+
+
+5 See also
+6 References
+7 Further reading
+
+
+
+History[edit]
+See also: History of computing, History of programming languages and History of software
+Early programmable machines[edit]
+The earliest programmable machines preceded the invention of the digital computer. In 1801, Joseph-Marie Jacquard devised a loom that would weave a pattern by following a series of perforated cards. Patterns, including flowers and leaves, could be weaved and repeated by arranging the cards.[3]
+Analytical Engine[edit]
+
+
+
+
+Lovelace's diagram from Note G, the first published computer algorithm
+
+
+In 1837, Charles Babbage was inspired by Jacquard's loom to attempt to build the Analytical Engine.[3] The names of the components of the calculating device were borrowed from the textile industry. In the textile industry, yarn was brought from the store to be milled. The device would have had a "store"—memory to hold 1,000 numbers of 40 decimal digits each. Numbers from the "store" would then have then been transferred to the "mill" (analogous to the CPU of a modern machine), for processing. It was programmed using two sets of perforated cards—one to direct the operation and the other for the input variables.[3] [4] However, after more than 17,000 pounds of the British government's money, the thousands of cogged wheels and gears never fully worked together.[5]
+During a nine-month period in 1842–43, Ada Lovelace translated the memoir of Italian mathematician Luigi Menabrea. The memoir covered the Analytical Engine. The translation contained Note G which completely detailed a method for calculating Bernoulli numbers using the Analytical Engine. This note is recognized by some historians as the world's first written computer program.[6]
+Universal Turing machine[edit]
+In 1936, Alan Turing introduced the Universal Turing machine—a theoretical device that can model every computation that can be performed on a Turing complete computing machine.[7] It is a finite-state machine that has an infinitely long read/write tape. The machine can move the tape back and forth, changing its contents as it performs an algorithm. The machine starts in the initial state, goes through a sequence of steps, and halts when it encounters the halt state.[8] This machine is considered by some to be the origin of the stored-program computer—used by John von Neumann (1946) for the "Electronic Computing Instrument" that now bears the von Neumann architecture name.[9]
+Early programmable computers[edit]
+The Z3 computer, invented by Konrad Zuse (1941) in Germany, was a digital and programmable computer.[10] A digital computer uses electricity as the calculating component. The Z3 contained 2,400 relays to create the circuits. The circuits provided a binary, floating-point, nine-instruction computer. Programming the Z3 was through a specially designed keyboard and punched tape.
+The Electronic Numerical Integrator And Computer (Fall 1945) was a Turing complete, general-purpose computer that used 17,468 vacuum tubes to create the circuits. At its core, it was a series of Pascalines wired together.[11] Its 40 units weighed 30 tons, occupied 1,800 square feet, and consumed $650 per hour (in 1940s currency) in electricity when idle.[11] It had 20 base-10 accumulators. Programming the ENIAC took up to two months.[11] Three function tables were on wheels and needed to be rolled to fixed function panels. Function tables were connected to function panels using heavy black cables. Each function table had 728 rotating knobs. Programming the ENIAC also involved setting some of the 3,000 switches. Debugging a program took a week.[11] The ENIAC featured parallel operations. Different sets of accumulators could simultaneously work on different algorithms. It used punched card machines for input and output, and it was controlled with a clock signal. It ran for eight years, calculating hydrogen bomb parameters, predicting weather patterns, and producing firing tables to aim artillery guns.
+The Manchester Small-Scale Experimental Machine (June 1948) was a stored-program computer.[12] Programming transitioned away from moving cables and setting dials; instead, a computer program was stored in memory as numbers. Only three bits of memory were available to store each instruction, so it was limited to eight instructions. 32 switches were available for programming.
+Later computers[edit]
+
+
+
+
+Switches for manual input on a Data General Nova 3, manufactured in the mid 1970s
+
+
+Computers manufactured until the 1970s had front-panel switches for programming. The computer program was written on paper for reference. An instruction was represented by a configuration of on/off settings. After setting the configuration, an execute button was pressed. This process was then repeated. Computer programs also were manually input via paper tape or punched cards. After the medium was loaded, the starting address was set via switches and the execute button pressed.[13]
+In 1961, the Burroughs B5000 was built specifically to be programmed in the ALGOL 60 language. The hardware featured circuits to ease the compile phase.[14]
+In 1964, the IBM System/360 was a line of six computers each having the same instruction set architecture. The Model 30 was the smallest and least expensive. Customers could upgrade and retain the same application software.[15] Each System/360 model featured multiprogramming. With operating system support, multiple programs could be in memory at once. When one was waiting for input/output, another could compute. Each model also could emulate other computers. Customers could upgrade to the System/360 and retain their IBM 7094 or IBM 1401 application software.[15]
+Computer programming[edit]
+Main article: Computer programming
+Computer programming is the process of writing or editing source code. Editing source code involves testing, analyzing, refining, and sometimes coordinating with other programmers on a jointly developed program. A person who practices this skill is referred to as a computer programmer, software developer, and sometimes coder.
+The sometimes lengthy process of computer programming is usually referred to as software development. The term software engineering is becoming popular as the process is seen as an engineering discipline.
+Programming languages[edit]
+Main article: Programming language
+
+
+
+
+A computer program written in the imperative programming style
+
+
+Computer programs can be categorized by the programming language paradigm used to produce them. Two of the main paradigms are imperative and declarative.
+Imperative languages[edit]
+Imperative programming languages specify a sequential algorithm using declarations, expressions, and statements:[16]
+
+A declaration couples a variable name to a datatype – for example: var x: integer;
+An expression yields a value – for example: 2 + 2 yields 4
+A statement might assign an expression to a variable or use the value of a variable to alter the program's control flow – for example: x&#160;:= 2 + 2; if x = 4 then do_something();
+
+One criticism of imperative languages is the side effect of an assignment statement on a class of variables called non-local variables.[17]
+Declarative languages[edit]
+Declarative programming languages describe what computation should be performed and not how to compute it. Declarative programs omit the control flow and are considered sets of instructions. Two broad categories of declarative languages are functional languages and logical languages. The principle behind functional languages (like Haskell) is to not allow side effects, which makes it easier to reason about programs like mathematical functions.[17] The principle behind logical languages (like Prolog) is to define the problem to be solved&#160;– the goal&#160;– and leave the detailed solution to the Prolog system itself.[18] The goal is defined by providing a list of subgoals. Then each subgoal is defined by further providing a list of its subgoals, etc. If a path of subgoals fails to find a solution, then that subgoal is backtracked and another path is systematically attempted.
+Compilation and interpretation[edit]
+A computer program in the form of a human-readable, computer programming language is called source code. Source code may be converted into an executable image by a compiler or executed immediately with the aid of an interpreter.
+Compilers are used to translate source code from a programming language into either object code or machine code.[19] Object code needs further processing to become machine code, and machine code consists of the central processing unit's native instructions, ready for execution. Compiled computer programs are commonly referred to as executables, binary images, or simply as binaries&#160;– a reference to the binary file format used to store the executable code.
+Interpreters are used to execute source code from a programming language immediately, without an intermediate file. The interpreter decodes each statement and performs its behavior. One advantage of interpreters is the ability to generate an interactive session. The programmer is presented with a prompt, and individual lines of code are typed in and performed immediately.
+The main disadvantage of interpreters is computer programs run slower than when compiled. Interpreting code is slower because the interpreter must decode each statement and then perform it. However, software development may be faster using an interpreter because testing is immediate when the compiling step is omitted. Another disadvantage of interpreters is an interpreter must be present on the executing computer. By contrast, compiled computer programs need no compiler present during execution.
+Just in time compilers pre-compile computer programs ahead of time and interpret them later. For example, Java computer programs are pre-compiled into a file containing bytecode. Bytecode is then executed by an interpreter called a virtual machine.
+Either compiled or interpreted programs might be executed in a batch process without human interaction. Batch programming languages are called scripting languages. One common scripting language is Unix shell, and its executing environment is called the command-line interface.
+No properties of a programming language require it to be exclusively compiled or exclusively interpreted. The categorization usually reflects the most popular method of language execution. For example, BASIC is thought of as an interpreted language and C a compiled language, despite the existence of BASIC compilers and C interpreters.
+Storage and execution[edit]
+
+
+
+
+In the 1950s, computer programs were stored on perforated paper tape
+
+
+Typically, computer programs are stored in non-volatile memory until requested either directly or indirectly to be executed by the computer user. Upon such a request, the program is loaded into random-access memory, by a computer program called an operating system, where it can be accessed directly by the central processor. The central processor then executes ("runs") the program, instruction by instruction, until termination. A program in execution is called a process.[20] Termination is either by normal self-termination or by error&#160;– software or hardware error.
+Simultaneous execution[edit]
+See also: Process (computing) and Multiprocessing
+Many operating systems support multitasking which enables many computer programs to appear to run simultaneously on one computer. Operating systems may run multiple programs through process scheduling&#160;– a software mechanism to switch the CPU among processes often so users can interact with each program while it runs.[21] Within hardware, modern day multiprocessor computers or computers with multicore processors may run multiple programs.[22]
+Multiple lines of the same computer program may be simultaneously executed using threads. Multithreading processors are optimized to execute multiple threads efficiently.
+Self-modifying programs[edit]
+Main article: Self-modifying code
+A computer program in execution is normally treated as being different from the data the program operates on. However, in some cases, this distinction is blurred when a computer program modifies itself. The modified computer program is subsequently executed as part of the same program. Self-modifying code is possible for programs written in machine code, assembly language, Lisp, C, COBOL, PL/1, and Prolog.
+Functional categories[edit]
+Computer programs may be categorized along functional lines. The main functional categories are application software and system software. System software includes the operating system which couples computer hardware with application software.[23] The purpose of the operating system is to provide an environment in which application software executes in a convenient and efficient manner.[23] In addition to the operating system, system software includes embedded programs, boot programs, and micro programs. Application software designed for end users have a user interface. Application software not designed for the end user includes middleware, which couples one application with another. Application software also includes utility programs. The distinction between system software and application software is under debate.
+Application software[edit]
+Main article: Application software
+
+
+
+
+Example of an app: GCalctool, a software calculator
+
+
+There are many types of application software:
+
+The word app came to being in 21st century. It is a clipping of the word "application". They have been designed for many platforms, but the word was first used for smaller mobile apps. Desktop apps are traditional computer programs that run on desktop computers. Mobile apps run on mobile devices. Web apps run inside a web browser. Both mobile and desktop apps may be purchased from app stores such as Windows Store, Apple App Store, Mac App Store, Google Play or Intel AppUp.
+An application suite consists of multiple applications bundled together. Examples include Microsoft Office, LibreOffice and iWork. They bundle a word processor, spreadsheet, and other applications.
+Enterprise applications bundle accounting, personnel, customer, and vendor applications. Examples include enterprise resource planning, customer relationship management, and supply chain management software.
+Enterprise infrastructure software supports the enterprise's software systems. Examples include databases, email servers, and network servers.
+Information worker software are designed for workers at the departmental level. Examples include time management, resource management, analytical, collaborative and documentation tools. Word processors, spreadsheets, email and blog clients, personal information system, and individual media editors may aid in multiple information worker tasks.
+Media development software generates print and electronic media for others to consume, most often in a commercial or educational setting. These produce graphics, publications, animations, and videos.
+Product engineering software is used to help develop large machines and other application software. Examples includes computer-aided design (CAD), computer-aided engineering (CAE), and integrated development environments.
+Entertainment Software can refer to video games, movie recorders and players, and music recorders and players.
+
+Utility programs[edit]
+Utility programs are application programs designed to aid system administrators and computer programmers.
+Operating system[edit]
+See also: Operating system
+An operating system is a computer program that acts as an intermediary between a user of a computer and the computer hardware. [23]
+In the 1950s, the programmer, who was also the operator, would write a program and run it.[13] After the program finished executing, the output may have been printed, or it may have been punched onto paper tape or cards for later processing.[13] More often than not the program did not work. [24] The programmer then looked at the console lights and fiddled with the console switches. If less fortunate, a memory printout was made for further study.[24] In the 1960s, programmers reduced the amount of wasted time by automating the operator's job.[24] A program called an operating system was kept in the computer at all times.[24]
+Originally, operating systems were programmed in assembly; however, modern operating systems are typically written in C.
+Boot program[edit]
+A stored-program computer requires an initial computer program stored in its read-only memory to boot. The boot process is to identify and initialize all aspects of the system, from processor registers to device controllers to memory contents.[25] Following the initialization process, this initial computer program loads the operating system and sets the program counter to begin normal operations.
+Embedded programs[edit]
+
+
+
+
+The microcontroller on the right of this USB flash drive is controlled with embedded firmware.
+
+
+Independent of the host computer, a hardware device might have embedded firmware to control its operation. Firmware is used when the computer program is rarely or never expected to change, or when the program must not be lost when the power is off.[24]
+Microcode programs[edit]
+Main article: Microcode
+Microcode programs control some central processing units and some other hardware. This code moves data between the registers, buses, arithmetic logic units, and other functional units in the CPU. Unlike conventional programs, microcode is not usually written by, or even visible to, the end users of systems, and is usually provided by the manufacturer, and is considered internal to the device.
+See also[edit]
+
+Automatic programming
+Killer application
+Software bug
+
+References[edit]
+
+
+^ Rochkind, Marc J. (2004). Advanced Unix Programming, Second Edition. Addison-Wesley. p.&#160;1.1.2.&#160;
+^ Silberschatz, Abraham (1994). Operating System Concepts, Fourth Edition. Addison-Wesley. p.&#160;58. ISBN&#160;0-201-50480-4.&#160;
+^ a b c McCartney, Scott (1999). ENIAC – The Triumphs and Tragedies of the World's First Computer. Walker and Company. p.&#160;16. ISBN&#160;0-8027-1348-3.&#160;
+^ Bromley, Allan G. (1998). "Charles Babbage’s Analytical Engine, 1838" (PDF). IEEE Annals of the History of Computing 20 (4).&#160;
+^ Tanenbaum, Andrew S. (1990). Structured Computer Organization, Third Edition. Prentice Hall. p.&#160;15. ISBN&#160;0-13-854662-2.&#160;
+^ J. Fuegi and J. Francis (October–December 2003), "Lovelace &amp; Babbage and the creation of the 1843 'notes'", Annals of the History of Computing 25 (4): 16, 19, 25, doi:10.1109/MAHC.2003.1253887&#160;
+^ Rosen, Kenneth H. (1991). Discrete Mathematics and Its Applications. McGraw-Hill, Inc. p.&#160;654. ISBN&#160;0-07-053744-5.&#160;
+^ Linz, Peter (1990). An Introduction to Formal Languages and Automata. D. C. Heath and Company. p.&#160;234. ISBN&#160;0-669-17342-8.&#160;
+^ Davis, Martin (2000), Engines of Logic: Mathematicians and the origin of the Computer (1st ed.), New York NY: W. W. Norton &amp; Company, ISBN&#160;0-393-32229-7, (pb.)&#160;
+^ "History of Computing".&#160;
+^ a b c d McCartney, Scott (1999). ENIAC – The Triumphs and Tragedies of the World's First Computer. Walker and Company. p.&#160;102. ISBN&#160;0-8027-1348-3.&#160;
+^ Enticknap, Nicholas (Summer 1998), "Computing's Golden Jubilee", Resurrection (The Computer Conservation Society) (20), ISSN&#160;0958-7403, retrieved 19 April 2008&#160;
+^ a b c Silberschatz, Abraham (1994). Operating System Concepts, Fourth Edition. Addison-Wesley. p.&#160;6. ISBN&#160;0-201-50480-4.&#160;
+^ Tanenbaum, Andrew S. (1990). Structured Computer Organization, Third Edition. Prentice Hall. p.&#160;20. ISBN&#160;0-13-854662-2.&#160;
+^ a b Tanenbaum, Andrew S. (1990). Structured Computer Organization, Third Edition. Prentice Hall. p.&#160;21. ISBN&#160;0-13-854662-2.&#160;
+^ Wilson, Leslie B. (1993). Comparative Programming Languages, Second Edition. Addison-Wesley. p.&#160;75. ISBN&#160;0-201-56885-3.&#160;
+^ a b Wilson, Leslie B. (1993). Comparative Programming Languages, Second Edition. Addison-Wesley. p.&#160;213. ISBN&#160;0-201-56885-3.&#160;
+^ Wilson, Leslie B. (1993). Comparative Programming Languages, Second Edition. Addison-Wesley. p.&#160;244. ISBN&#160;0-201-56885-3.&#160;
+^ "What is a Compiler?". Retrieved 2012-01-10.&#160;
+^ Silberschatz, Abraham (1994). Operating System Concepts, Fourth Edition. Addison-Wesley. p.&#160;97. ISBN&#160;0-201-50480-4.&#160;
+^ Silberschatz, Abraham (1994). Operating System Concepts, Fourth Edition. Addison-Wesley. p.&#160;100. ISBN&#160;0-201-50480-4.&#160;
+^ Akhter, Shameem (2006). Multi-Core Programming. Richard Bowles (Intel Press). pp.&#160;11–13. ISBN&#160;0-9764832-4-6.&#160;
+^ a b c Silberschatz, Abraham (1994). Operating System Concepts, Fourth Edition. Addison-Wesley. p.&#160;1. ISBN&#160;0-201-50480-4.&#160;
+^ a b c d e Tanenbaum, Andrew S. (1990). Structured Computer Organization, Third Edition. Prentice Hall. p.&#160;11. ISBN&#160;0-13-854662-2.&#160;
+^ Silberschatz, Abraham (1994). Operating System Concepts, Fourth Edition. Addison-Wesley. p.&#160;30. ISBN&#160;0-201-50480-4.&#160;
+
+
+Further reading[edit]
+
+Knuth, Donald E. (1997). The Art of Computer Programming, Volume 1, 3rd Edition. Boston: Addison-Wesley. ISBN&#160;0-201-89683-4.&#160;
+Knuth, Donald E. (1997). The Art of Computer Programming, Volume 2, 3rd Edition. Boston: Addison-Wesley. ISBN&#160;0-201-89684-2.&#160;
+Knuth, Donald E. (1997). The Art of Computer Programming, Volume 3, 3rd Edition. Boston: Addison-Wesley. ISBN&#160;0-201-89685-0.&#160;
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4047394-6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Computer_program&amp;oldid=689858366"					
+				Categories: Computer programmingSoftwareHidden categories: Wikipedia articles with GND identifiersArticles with example Java codeArticles with example C codeArticles with example C Sharp code				
+							
+		
+		
+			

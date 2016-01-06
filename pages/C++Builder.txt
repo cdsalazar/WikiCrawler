@@ -1,0 +1,440 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			C++Builder
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2012)
+
+
+
+C++Builder
+
+
+Borland C++Builder 6
+
+
+
+Original author(s)
+Borland, CodeGear
+
+
+Developer(s)
+Embarcadero Technologies
+
+
+Stable release
+C++Builder 10 Seattle / August&#160;31,&#160;2015&#160;(2015-08-31)
+
+
+Operating system
+Windows 7, Windows 8, Windows 10[1]
+
+
+Type
+IDE
+
+
+License
+Trialware
+
+
+Website
+embarcadero.com/products/cbuilder/
+
+
+C++Builder is a rapid application development (RAD) environment, originally developed by Borland and as of 2009[update] owned by Embarcadero Technologies, for writing programs in the C++ programming language targeting Windows NT (IA-32 and x64), OS X, iOS and Android. C++Builder combines the Visual Component Library and IDE written in Delphi with a C++ compiler. Most components developed in Delphi can be used in C++Builder with no or little modification, although the reverse is not true.
+C++Builder includes tools that allow drag-and-drop visual development, making programming easier by incorporating a WYSIWYG graphical user interface builder.
+
+
+
+Contents
+
+
+1 Technology
+2 History
+
+2.1 Borland C++Builder
+
+2.1.1 1.0
+2.1.2 Borland C++Builder 4
+2.1.3 2006
+
+
+2.2 Borland C++BuilderX
+2.3 CodeGear Borland C++Builder
+2.4 Embarcadero C++Builder
+
+2.4.1 XE5 (19)
+2.4.2 XE6 to 8
+2.4.3 10 Seattle
+
+
+
+
+3 OS X support
+4 Version history
+5 See also
+6 References
+7 External links
+
+
+
+Technology[edit]
+C++Builder uses the same IDE as Delphi, and shares many core libraries. Notable shared Delphi (Object Pascal code) and C++ Builder routines include the FastMM4 memory manager, which was developed as a community effort within the FastCode project, the entire UI framework known as the VCL, which is written in Object Pascal, as well as base system routines, many of which have been optimised for both Delphi and C++Builder through the FastCode project.
+C++Builder projects can include Delphi code. The Delphi compiler emits C++ headers, allowing C++ code to link to Delphi classes and methods as though they were written in C++. The reverse (C++ code being used by Delphi) is not possible.
+History[edit]
+Borland C++Builder[edit]
+C++Builder originally targeted only the Microsoft Windows platform. Later versions incorporated Borland CLX, a cross-platform development visual component library based on Qt, that supports Windows and Linux, however CLX is now abandoned. A cross-platform version for Linux and OS&#160;X is reportedly planned.
+Traditionally, the release cycle was such that Delphi got major enhancements first, with C++Builder following,[2] though recent versions have been released at the same time as their Delphi equivalents.[3]
+1.0[edit]
+Original Borland C++Builder editions include Client/Server Suite, Professional, Standard.[4]
+Borland C++Builder 4[edit]
+New features include:[5]
+
+Integrated Inprise Corporation's VisiBroker 3.3 with event and naming services
+New multi-standard flexible C++ compiler
+Support for the latest ANSI/ISO C++ language specifications, including a host of compiler enhancements including Dynamic Compilation and Adaptive Compiler Technology (ACT), which radically speed compiler build processes; full ANSI/ISO template implementation; full ANSI/ISO STL (standard template library) support; and a high-performance 32-bit ANSI C++ native code compiler.
+Fully customizable AppBrowser IDE
+Latest support for Windows 98, 95, and NT including multiple monitors, common controls, docking forms and toolbars, and more.
+New Code and Parameter completion, and the new ClassExplorer live structured class view and member creation wizards.
+Exclusive C++ debugging tools, including remote debugging for distributed development (COM and CORBA); multi-process and cross-process debugging with debug inspectors, dynamic watch windows, and debug tooltips.
+Internet tools, including ActiveForms for building Web browser C++ applications and WebBroker for building CGI, WinCGI, ISAPI, and NSAPI C++ applications and over 25 Internet protocol components for instantly adding HTTP, FTP, SMTP, POP, NNTP, HTML, and TCP/IP support to any C++ application.
+Multi-Tier Database Development Services (MIDAS) Development Kit, including MIDAS 2.
+Support for industry standards, including Oracle Corporation's Oracle8i database server; Microsoft Corporation's Microsoft Foundation Classes (MFC), Microsoft Active Template Library (ATL), Microsoft SQL Server 7 and MTS (Microsoft Transaction Server); and Inprise Corporation's Object Windows Library (OWL) and Visual Component Library (VCL).
+EZ-COM, which simplifies C++ COM client development and One-Step ActiveX Control creation with new Data Binding support.
+
+2006[edit]
+In Oct 10, 2005, Borland Software Corporation announced the release of Borland C++Builder (previously codenamed "DeXter").[6]
+About a year after the announcement Borland released Borland Developer Studio 2006 which includes Borland C++Builder 2006 that provides improved configuration management and bug fixes. Borland Developer Studio 2006 is a single package containing Delphi, C++Builder, and C#Builder.
+In 2006 Borland's Developer Tools Group, developers of C++Builder, was transferred to a wholly owned subsidiary, CodeGear.
+Borland C++BuilderX[edit]
+In Sep 15, 2003, Borland Software Corporation announced the release of Borland C++BuilderX (CBX), which was also included as part of the latest Borland Enterprise Studio for Mobile.[7] CBX was written using the same framework as JBuilder and bore little resemblance to either C++Builder or Delphi. This product was aimed at developing large programs for enterprises, but did not sell well.
+In Sep 22, 2003, Borland Software Corporation and PalmSource, Inc. announced Borland has licensed the PalmSource software development kits (SDKs) and will support Palm OS development in the Borland C++BuilderX Integrated Development Environment (IDE) and latest Borland Application Lifecycle Management (ALM) solutions for C++.[8]
+At the end of 2004 Borland announced that it would continue to develop the earlier C++Builder and bundle it with the Delphi development suite, abandoning C++BuilderX.
+CodeGear Borland C++Builder[edit]
+In 2007 CodeGear released C++Builder 2007, providing full API support for Microsoft Vista, increased ANSI C++ conformance, up to 500% faster in-IDE build performance, support for MSBuild, DBX4 database architecture, and "VCL for the Web" which supports Ajax. The API support for Microsoft Vista includes themed applications and seamless VCL support for Aero and Vista Desktop. CodeGear RAD Studio 2007 incorporates C++Builder 2007 and Delphi. Also in 2007 Borland revived the "Turbo" brand and released two "Turbo" editions of C++Builder: Turbo C++ Professional, and Turbo C++ Explorer (no longer available from CodeGear), based on Borland C++Builder 2006.
+In 2008 CodeGear was purchased by Embarcadero Technologies, who continued development.
+Embarcadero C++Builder[edit]
+C++Builder 2009 was released in August 2008, with the most notable improvements being full Unicode support throughout VCL and RTL, early adoption of the C++0x standard, full ITE (Integrated Translation Environment) support, native Ribbon components and the inclusion of the Boost library. C++Builder 2010 then followed in August 2009, adding in particular the touch and gesture support newly introduced to the VCL and a C++ specific class explorer. C++Builder XE was released in August 2010.
+Embarcadero moved to a different versioning scheme in 2010. Rather than using numbers, they use XE. "C++ Builder XE" was released in August 2010, "C++Builder XE2" was released in August 2011, "C++ Builder XE3" was released in August 2012. No notable major changes were included in those three years except for bug fixes and the inclusion of 'FireMonkey' for creating cross-platform GUIs.
+In April 2013, "C++ Builder XE4" was released, which included a 64-bit Windows compiler based on Clang 3.1. The 32-bit compiler is still based on Embarcadero's older technology.
+XE5 (19)[edit]
+Changes to C++Builder XE5 include:
+
+Time Picker control for Windows and OS&#160;X
+Built-in search filtering for TListView on Windows and OS&#160;X
+FM Platform performance optimizations
+Professional edition includes expanded FireDAC support for local databases, including Microsoft Access database, SQLite database, InterBase ToGo / IBLite, InterBase on localhost, MySQL Embedded, MySQL Server on localhost, Advantage Database local engine, PostgreSQL on localhost, Firebird Embedded, and Firebird on localhost
+FireDAC integrated into the C++Builder install for Professional, Enterprise, Ultimate and Architect editions
+REST Client support for simplified invocation of REST services
+Authorization support including Basic Authentication, Plan Authentication, OAuth1, OAuth2
+TRestClient, TRestRequest, and TRestResponse components
+REST Debugger tool for testing REST calls and their parameters
+
+C++Builder XE5 Starter Edition includes:
+
+Develop 32-bit Windows application using the C++Builder VCL and FireMonkey application platform
+IDE and visual development environment
+Hundreds of included components
+License for use until user's individual revenue from C++Builder applications or company revenue reaches $1,000 US or development team expands to more than five developers
+
+Available editions include Architect, Ultimate, Enterprise, Professional, Starter.[9]
+RAD Studio XE5 also includes C++Builder XE5.[10]
+XE6 to 8[edit]
+
+Include changes for stability of the IDE, updated FMX and VCL libraries
+
+10 Seattle[edit]
+Released in late August 2015 Seattle updates the C++ compiler suite to CLANG 3.3 with the following exceptions:
+
+OS X compiler is still proprietary Borland
+iOS 64 bit compiler is Clang 3.5
+Changes to the IDE and compiler can be found here: www.embarcadero.com/products/cbuilder/whats-new
+
+OS X support[edit]
+C++Builder XE2 was released in August 2011, introducing OS&#160;X support to the compiler for the first time. This allows the creation of cross-platform executables from a single source using the included FireMonkey libraries, however the IDE is only compatible with Microsoft Windows.
+C++Builder XE3 was released in August 2012 containing further OS&#160;X support and an upgraded version of FireMonkey.
+C++Builder XE4 was released in April 2013 containing further OS&#160;X support and FireMonkey version 3.
+Version history[edit]
+The following is a rough outline of product release information.
+
+
+Year
+Version
+Released By
+Target Platforms
+
+
+4 Feb. 1997
+1
+Borland International, Inc.
+Windows
+
+
+8 Feb. 1998
+3
+Borland International, Inc.
+Windows
+
+
+26 Jan. 1999
+4
+Inprise Corporation
+Windows
+
+
+30 Jan. 2000
+5
+Inprise Corporation, Borland Software Corporation
+Windows
+
+
+1 Feb. 2002
+6
+Borland Software Corporation
+Windows
+
+
+28 Aug. 2003
+X
+Borland Software Corporation
+Windows, Linux, Solaris
+
+
+23 Nov. 2005
+2006 (10)
+Borland Software Corporation, CodeGear
+Windows
+
+
+5 June 2007
+2007 (11)
+CodeGear
+Windows
+
+
+25 Aug. 2008
+2009 (12)
+Embarcadero Technologies
+Windows
+
+
+24 Aug. 2009
+2010 (14)
+Embarcadero Technologies
+Windows
+
+
+30 Aug. 2010
+XE (15)
+Embarcadero Technologies
+Windows
+
+
+31 Aug. 2011
+XE2 (16)
+Embarcadero Technologies
+Windows, OS&#160;X
+
+
+4 Sept. 2012
+XE3 (17)
+Embarcadero Technologies
+Windows, OS&#160;X
+
+
+22 April 2013
+XE4 (18)
+Embarcadero Technologies
+Windows, OS&#160;X
+
+
+11 Sept. 2013
+XE5 (19)
+Embarcadero Technologies
+Windows, OS&#160;X, iOS
+
+
+15 April 2014
+XE6 (20)
+Embarcadero Technologies
+Windows, OS&#160;X, iOS, Android
+
+
+2 Sept. 2014
+XE7 (21)
+Embarcadero Technologies
+Windows, OS&#160;X, iOS, Android
+
+
+7 April 2015
+XE8 (22)
+Embarcadero Technologies
+Windows, OS&#160;X, iOS, Android
+
+
+31 Aug. 2015
+10 Seattle (23)
+Embarcadero Technologies
+Windows, OS&#160;X, iOS, Android
+
+
+See also[edit]
+
+Embarcadero Delphi
+Visual Component Library
+Comparison of integrated development environments
+
+References[edit]
+
+
+^ http://www.embarcadero.com/products/cbuilder/faq
+^ Borland C++Builder 5.0 - PC Magazine
+^ Borland Compiler Release Dates - Delphi Programming
+^ Borland® Delphi® 2006 and C++Builder® 2006 Deliver Key New Features to Speed Microsoft® Windows® and .NET Application Delivery - Enhanced development environments offered as part of Borland Developer Studio, Borland's multi-language developer environment for Microsoft Windows and .NET
+^ INPRISE CORPORATION LAUNCHES BORLAND.COM WITH ANNOUNCEMENT OF BORLAND C++BUILDER 4 - Developers Switch from Visual C++ to Gain Interoperability and Tenfold Productivity Boost
+^ Borland® Delphi® 2006 and C++Builder® 2006 Deliver Key New Features to Speed Microsoft® Windows® and .NET Application Delivery - Enhanced development environments offered as part of Borland Developer Studio, Borland's multi-language developer environment for Microsoft Windows and .NET
+^ Mobile Industry Welcomes the Launch of Borland® C++BuilderX™ - Borland Enhances Mobile Development Offerings. C++BuilderX to Address Increased Business Demand for Enterprise Mobile Applications.
+^ Borland and PalmSource Advance Enterprise C++ Development for Palm OS® Mobile Applications - Borland® C++BuilderX™ and Application Lifecycle Management Solutions for C++ to Assist End-to-End Development for Palm Powered™ Mobile Devices
+^ C++Builder XE5 Feature Matrix
+^ Embarcadero Launches RAD Studio XE5 with True Native Android and iOS Support, Allowing Developers to Reach the Largest Addressable Mobile Markets
+
+
+External links[edit]
+
+Embarcadero Technologies, Inc. C++Builder current version product pages: Full version, Starter edition
+C++Builder current version downloads
+Embarcadero Technologies, Inc. C++Builder archived pages for prior versions: 2009, 2010, XE, XE2, XE3, XE4
+CodeGear from Borland (Borland Software Corporation) C++Builder pages: 2006, 2007, 2007 R2
+Borland Software Corporation C++Builder pages: 5, 6, 6 Studio, 2006, C++BuilderX
+Inprise Corporation Borland C++Builder pages: 4, 5
+Borland International, Inc. C++Builder pages: 1, 3
+Download selection of 2010, v5.5, and other versions
+CodePedia C++ Builder page
+C++Builder Developer's Journal
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for C and C++
+
+
+
+
+
+
+Open source
+
+
+
+Anjuta
+Code::Blocks
+CodeLite
+Dev-C++
+Eclipse
+Geany
+GNAT Programming Studio
+KDevelop
+Kuzya
+MonoDevelop
+NetBeans
+QDevelop
+Qt Creator
+Ultimate++
+wxDev-C++
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Pelles C
+Oracle Solaris Studio (previously called Sun Studio)
+Visual Studio Express
+Xcode
+
+
+
+
+
+
+
+
+Retail
+
+
+
+C++Builder
+CodeWarrior
+IBM VisualAge
+Visual Studio
+SlickEdit
+
+
+
+
+
+
+
+
+
+
+
+&#160;Category
+ Comparison
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=C%2B%2BBuilder&amp;oldid=690520262"					
+				Categories: Integrated development environmentsCodeGear softwareC++ compilersHidden categories: Articles needing additional references from December 2012All articles needing additional referencesArticles containing potentially dated statements from 2009All articles containing potentially dated statements				
+							
+		
+		
+			

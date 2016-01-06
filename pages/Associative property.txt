@@ -1,0 +1,492 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Associative property
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Associativity)
+												
+					Jump to:					navigation, 					search
+				
+				This article is about associativity in mathematics.  For associativity in the central processing unit memory cache, see CPU cache.  For associativity in programming languages, see operator associativity.
+"Associative" and "non-associative" redirect here. For associative and non-associative learning, see Learning#Types.
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2009)
+
+
+
+
+Transformation rules
+
+
+Propositional calculus
+
+
+Rules of inference
+
+
+
+
+Modus ponens&#160;/ Modus tollens
+Biconditional introduction&#160;/ elimination
+Conjunction introduction&#160;/ elimination
+Disjunction introduction&#160;/ elimination
+Disjunctive&#160;/ Hypothetical syllogism
+Constructive&#160;/ Destructive dilemma
+Absorption
+Modus ponendo tollens
+
+
+
+
+Rules of replacement
+
+
+
+
+
+Associativity
+Commutativity
+Distributivity
+Double negation
+De Morgan's laws
+Transposition
+Material implication
+Exportation
+Tautology
+Negation introduction
+
+
+
+
+
+Predicate logic
+
+
+
+
+Universal generalization&#160;/ instantiation
+Existential generalization&#160;/ instantiation
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In mathematics, the associative property[1] is a property of some binary operations. In propositional logic, associativity is a valid rule of replacement for expressions in logical proofs.
+Within an expression containing two or more occurrences in a row of the same associative operator, the order in which the operations are performed does not matter as long as the sequence of the operands is not changed. That is, rearranging the parentheses in such an expression will not change its value. Consider the following equations:
+
+
+
+
+
+
+Even though the parentheses were rearranged, the values of the expressions were not altered. Since this holds true when performing addition and multiplication on any real numbers, it can be said that "addition and multiplication of real numbers are associative operations".
+Associativity is not to be confused with commutativity, which addresses whether a × b = b × a.
+Associative operations are abundant in mathematics; in fact, many algebraic structures (such as semigroups and categories) explicitly require their binary operations to be associative.
+However, many important and interesting operations are non-associative; some examples include subtraction, exponentiation and the vector cross product. In contrast to the theoretical counterpart, the addition of floating point numbers in computer science is not associative, and is an important source of rounding error.
+
+
+
+Contents
+
+
+1 Definition
+2 Generalized associative law
+3 Examples
+4 Propositional logic
+
+4.1 Rule of replacement
+4.2 Truth functional connectives
+
+
+5 Non-associativity
+
+5.1 Nonassociativity of floating point calculation
+5.2 Notation for non-associative operations
+
+
+6 See also
+7 References
+
+
+
+Definition[edit]
+
+
+
+
+A binary operation ∗ on the set S is associative when this diagram commutes. That is, when the two paths from S×S×S to S compose to the same function from S×S×S to S.
+
+
+Formally, a binary operation ∗ on a set S is called associative if it satisfies the associative law:
+
+(x ∗ y) ∗ z = x ∗ (y ∗ z) for all x, y, z in S.
+
+Here, ∗ is used to replace the symbol of the operation, which may be any symbol, and even the absence of symbol like for the multiplication.
+
+(xy)z = x(yz) = xyz for all x, y, z in S.
+
+The associative law can also be expressed in functional notation thus: f(f(x, y), z) = f(x, f(y, z)).
+Generalized associative law[edit]
+
+
+
+
+In the absence of the associative property, five factors a, b, c, d, e result in a Tamari lattice of order four, possibly different products.
+
+
+If a binary operation is associative, repeated application of the operation produces the same result regardless how valid pairs of parenthesis are inserted in the expression.[2] This is called the generalized associative law. For instance, a product of four elements may be written in five possible ways:
+
+((ab)c)d
+(ab)(cd)
+(a(bc))d
+a((bc)d)
+a(b(cd))
+
+If the product operation is associative, the generalized associative law says that all these formulas will yield the same result, making the parenthesis unnecessary. Thus "the" product can be written unambiguously as
+
+abcd.
+
+As the number of elements increases, the number of possible ways to insert parentheses grows quickly, but they remain unnecessary for disambiguation.
+Examples[edit]
+
+
+
+
+The addition of real numbers is associative.
+
+
+Some examples of associative operations include the following.
+
+The concatenation of the three strings "hello", " ", "world" can be computed by concatenating the first two strings (giving "hello ") and appending the third string ("world"), or by joining the second and third string (giving " world") and concatenating the first string ("hello") with the result. The two methods produce the same result; string concatenation is associative (but not commutative).
+
+
+In arithmetic, addition and multiplication of real numbers are associative; i.e.,
+
+
+
+
+
+
+
+Because of associativity, the grouping parentheses can be omitted without ambiguity.
+
+
+Addition and multiplication of complex numbers and quaternions are associative. Addition of octonions is also associative, but multiplication of octonions is non-associative.
+
+
+The greatest common divisor and least common multiple functions act associatively.
+
+
+
+
+
+
+
+
+
+Taking the intersection or the union of sets:
+
+
+
+
+
+
+
+
+
+If M is some set and S denotes the set of all functions from M to M, then the operation of functional composition on S is associative:
+
+
+
+
+
+
+
+
+
+Slightly more generally, given four sets M, N, P and Q, with h: M to N, g: N to P, and f: P to Q, then
+
+
+
+
+
+
+
+
+
+as before. In short, composition of maps is always associative.
+
+
+Consider a set with three elements, A, B, and C. The following operation:
+
+
+
+
+
+×
+A
+B
+C
+
+
+A
+A
+A
+A
+
+
+B
+A
+B
+C
+
+
+C
+A
+A
+A
+
+
+
+
+
+is associative. Thus, for example, A(BC)=(AB)C = A. This operation is not commutative.
+
+
+Because matrices represent linear transformation functions, with matrix multiplication representing functional composition, one can immediately conclude that matrix multiplication is associative.
+
+Propositional logic[edit]
+Rule of replacement[edit]
+In standard truth-functional propositional logic, association,[3][4] or associativity[5] are two valid rules of replacement. The rules allow one to move parentheses in logical expressions in logical proofs. The rules are:
+
+
+
+and
+
+
+
+where "" is a metalogical symbol representing "can be replaced in a proof with."
+Truth functional connectives[edit]
+Associativity is a property of some logical connectives of truth-functional propositional logic. The following logical equivalences demonstrate that associativity is a property of particular connectives. The following are truth-functional tautologies.
+Associativity of disjunction:
+
+
+
+
+Associativity of conjunction:
+
+
+
+
+Associativity of equivalence:
+
+
+
+
+Non-associativity[edit]
+A binary operation  on a set S that does not satisfy the associative law is called non-associative. Symbolically,
+
+
+
+For such an operation the order of evaluation does matter. For example:
+
+Subtraction
+
+
+
+
+
+Division
+
+
+
+
+
+Exponentiation
+
+
+
+
+Also note that infinite sums are not generally associative, for example:
+
+
+
+whereas
+
+
+
+The study of non-associative structures arises from reasons somewhat different from the mainstream of classical algebra. One area within non-associative algebra that has grown very large is that of Lie algebras. There the associative law is replaced by the Jacobi identity. Lie algebras abstract the essential nature of infinitesimal transformations, and have become ubiquitous in mathematics.
+There are other specific types of non-associative structures that have been studied in depth; these tend to come from some specific applications or areas such as combinatorial mathematics. Other examples are Quasigroup, Quasifield, Non-associative ring, Non-associative algebra and Commutative non-associative magmas.
+Nonassociativity of floating point calculation[edit]
+In mathematics, addition and multiplication of real numbers is associative. By contrast, in computer science, the addition and multiplication of floating point numbers is not associative, as rounding errors are introduced when dissimilar-sized values are joined together.[6]
+To illustrate this, consider a floating point representation with a 4-bit mantissa:
+(1.0002×20 + 1.0002×20) + 1.0002×24 = 1.0002×21 + 1.0002×24 = 1.0012×24
+1.0002×20 + (1.0002×20 + 1.0002×24) = 1.0002×20 + 1.0002×24 = 1.0002×24
+Even though most computers compute with a 24 or 53 bits of mantissa,[7] this is an important source of rounding error, and approaches such as the Kahan Summation Algorithm are ways to minimise the errors. It can be especially problematic in parallel computing.[8] [9]
+Notation for non-associative operations[edit]
+Main article: Operator associativity
+In general, parentheses must be used to indicate the order of evaluation if a non-associative operation appears more than once in an expression. However, mathematicians agree on a particular order of evaluation for several common non-associative operations. This is simply a notational convention to avoid parentheses.
+A left-associative operation is a non-associative operation that is conventionally evaluated from left to right, i.e.,
+
+
+
+while a right-associative operation is conventionally evaluated from right to left:
+
+
+
+Both left-associative and right-associative operations occur. Left-associative operations include the following:
+
+Subtraction and division of real numbers:
+
+
+
+
+
+
+
+
+
+
+Function application:
+
+
+
+
+
+
+
+This notation can be motivated by the currying isomorphism.
+
+Right-associative operations include the following:
+
+Exponentiation of real numbers:
+
+
+
+
+
+
+
+
+
+The reason exponentiation is right-associative is that a repeated left-associative exponentiation operation would be less useful. Multiple appearances could (and would) be rewritten with multiplication:
+
+
+
+
+
+
+
+
+
+Tetration via the up-arrow operator:
+
+
+
+
+
+
+
+
+
+Function definition
+
+
+
+
+
+
+
+
+
+
+Using right-associative notation for these operations can be motivated by the Curry-Howard correspondence and by the currying isomorphism.
+
+Non-associative operations for which no conventional evaluation order is defined include the following.
+
+Taking the Cross product of three vectors:
+
+
+
+
+
+
+
+
+
+Taking the pairwise average of real numbers:
+
+
+
+
+
+
+
+
+
+Taking the relative complement of sets  is not the same as . (Compare material nonimplication in logic.)
+
+See also[edit]
+
+
+
+Look up associative property in Wiktionary, the free dictionary.
+
+
+
+Light's associativity test
+A semigroup is a set with a closed associative binary operation.
+Commutativity and distributivity are two other frequently discussed properties of binary operations.
+Power associativity, alternativity and N-ary associativity are weak forms of associativity.
+
+References[edit]
+
+
+^ Thomas W. Hungerford (1974). Algebra (1st ed.). Springer. p.&#160;24. ISBN&#160;0387905189. Definition 1.1 (i) a(bc) = (ab)c for all a, b, c in G.&#160;
+^ Durbin, John R. (1992). Modern Algebra: an Introduction (3rd ed.). New York: Wiley. p.&#160;78. ISBN&#160;0-471-51001-7. If  are elements of a set with an associative operation, then the product  is unambiguous; this is, the same element will be obtained regardless of how parentheses are inserted in the product&#160;
+^ Moore and Parker
+^ Copi and Cohen
+^ Hurley
+^ Knuth, Donald, The Art of Computer Programming, Volume 3, section 4.2.2
+^ IEEE Computer Society (August 29, 2008). "IEEE Standard for Floating-Point Arithmetic". IEEE. doi:10.1109/IEEESTD.2008.4610935. ISBN&#160;978-0-7381-5753-5. IEEE Std 754-2008.&#160;
+^ Villa, Oreste; Chavarría-mir, Daniel; Gurumoorthi, Vidhya; Márquez, Andrés; Krishnamoorthy, Sriram, Effects of Floating-Point non-Associativity on Numerical Computations on Massively Multithreaded Systems (PDF), retrieved 2014-04-08&#160;
+^ Goldberg, David, "What Every Computer Scientist Should Know About Floating Point Arithmetic" (PDF), ACM Computing Surveys 23 (1): 5–48, doi:10.1145/103162.103163, retrieved 2014-04-08&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Associative_property&amp;oldid=690847316"					
+				Categories: Abstract algebraBinary operationsElementary algebraFunctional analysisRules of inferenceHidden categories: Articles needing additional references from June 2009All articles needing additional references				
+							
+		
+		
+			

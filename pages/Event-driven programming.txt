@@ -1,0 +1,421 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Event-driven programming
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Programming paradigms
+
+
+
+
+Action
+Agent-oriented
+Array-oriented
+Automata-based
+Concurrent computing
+
+Relativistic programming
+
+
+Data-driven
+Declarative (contrast: Imperative)
+
+Constraint
+
+Constraint logic
+
+Concurrent constraint logic
+
+
+
+
+Dataflow
+
+Flow-based
+Cell-oriented (spreadsheets)
+Reactive
+
+
+Functional
+
+Functional logic
+Purely functional
+
+
+Logic
+
+Abductive logic
+Answer set
+Concurrent logic
+Functional logic
+Inductive logic
+
+
+
+
+End-user programming
+Event-driven
+
+Service-oriented
+Time-driven
+
+
+Expression-oriented
+Feature-oriented
+Function-level (contrast: Value-level)
+Generic
+Imperative (contrast: Declarative)
+
+Literate
+Procedural
+
+
+Inductive programming
+Language-oriented
+
+Natural language programming
+Discipline-specific
+Domain-specific
+Grammar-oriented
+
+Dialecting
+
+
+Intentional
+
+
+Metaprogramming
+
+Automatic
+Reflective
+
+Attribute-oriented
+
+
+Homoiconic
+Template
+
+Policy-based
+
+
+
+
+Non-structured (contrast: Structured)
+
+Array
+
+
+Nondeterministic
+Parallel computing
+
+Process-oriented
+
+
+Point-free style
+
+Concatenative
+
+
+Semantic
+Structured (contrast: Non-structured)
+
+Block-structured
+Modular (contrast: Monolithic)
+Object-oriented (OOP)
+
+Class-based
+Concurrent
+Prototype-based
+By separation of concerns:
+
+Aspect-oriented
+Role-oriented
+Subject-oriented
+
+
+
+
+Recursive
+
+
+Value-level (contrast: Function-level)
+Probabilistic
+Concept
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In computer programming, event-driven programming is a programming paradigm in which the flow of the program is determined by events such as user actions (mouse clicks, key presses), sensor outputs, or messages from other programs/threads. Event-driven programming is the dominant paradigm used in graphical user interfaces and other applications (e.g. JavaScript web applications) that are centered on performing certain actions in response to user input.
+In an event-driven application, there is generally a main loop that listens for events, and then triggers a callback function when one of those events is detected. In embedded systems the same may be achieved using hardware interrupts instead of a constantly running main loop. Event-driven programs can be written in any programming language, although the task is easier in languages that provide high-level abstractions, such as closures.
+
+
+
+Contents
+
+
+1 Event handlers
+
+1.1 A trivial event handler
+1.2 Exception handlers
+1.3 Creating event handlers
+
+
+2 Criticism and best practice
+3 Stackless threading
+4 See also
+5 References
+6 External links
+
+
+
+Event handlers[edit]
+Main article: Event handler
+A trivial event handler[edit]
+Because the code for checking for events and the main loop do not depend on the application, many programming frameworks take care of their implementation and expect the user to provide only the code for the event handlers. In this simple example there may be a call to an event handler called OnKeyEnter() that includes an argument with a string of characters, corresponding to what the user typed before hitting the ENTER key. To add two numbers, storage outside the event handler must be used. The implementation might look like below.
+
+
+globally declare the counter K and the integer T.
+OnKeyEnter(character C)
+{
+   convert C to a number N
+   if K is zero store N in T and increment K
+   otherwise add N to T, print the result and reset K to zero
+}
+
+While keeping track of history is straightforward in a batch program, it requires special attention and planning in an event-driven program.
+Exception handlers[edit]
+In PL/1, even though a program itself may not be predominantly event driven, certain abnormal events such as a hardware error, overflow or "program checks" may occur that possibly prevent further processing. Exception handlers may be provided by "ON statements" in (unseen) callers to provide housekeeping routines to clean up afterwards before termination.
+Creating event handlers[edit]
+The first step in developing an event-driven program is to write a series of subroutines, or methods, called event-handler routines. These routines handle the events to which the main program will respond. For example, a single left-button mouse-click on a command button in a GUI program may trigger a routine that will open another window, save data to a database or exit the application. Many modern day programming environments provide the programmer with event templates, allowing the programmer to focus on writing the event code.
+The second step is to bind event handlers to events so that the correct function is called when the event takes place. Graphical editors combine the first two steps: double-click on a button, and the editor creates an (empty) event handler associated with the user clicking the button and opens a text window so you can edit the event handler.
+The third step in developing an event-driven program is to write the main loop. This is a function that checks for the occurrence of events, and then calls the matching event handler to process it. Most event-driven programming environments already provide this main loop, so it need not be specifically provided by the application programmer. RPG, an early programming language from IBM, whose 1960s design concept was similar to event driven programming discussed above, provided a built-in main I/O loop (known as the "program cycle") where the calculations responded in accordance to 'indicators' (flags) that were set earlier in the cycle.
+Criticism and best practice[edit]
+Event-driven programming is widely used in graphical user interfaces, for instance the Android concurrency frameworks are designed using the Half-Sync/Half-Async pattern,[1] where a combination of a single-threaded event loop processing (for the main UI thread) and synchronous threading (for background threads) is used. This is because the UI-widgets are not thread-safe, and while they are extensible, there is no way to guarantee that all the implementations are thread-safe, thus single-thread model alleviates this issue.
+The design of those toolkits has been criticized, e.g., by Miro Samek, for promoting an over-simplified model of event-action, leading programmers to create error prone, difficult to extend and excessively complex application code. He writes,
+
+Such an approach is fertile ground for bugs for at least three reasons:
+
+It always leads to convoluted conditional logic.
+Each branching point requires evaluation of a complex expression.
+Switching between different modes requires modifying many variables, which all can easily lead to inconsistencies.
+
+— Miro Samek, Who Moved My State?, C/C++ Users Journal, The Embedded Angle column (April 2003)
+
+
+and advocates the use of state machines as a viable alternative.[2][clarification needed]
+Stackless threading[edit]
+An event driven approach is used in hardware description languages. A thread context only needs a CPU stack while actively processing an event, once done the CPU can move on to process other event-driven threads, that allows an extremely large number of threads to be handled. This is essentially a Finite-state machine approach.
+See also[edit]
+
+Time-triggered system (an alternative architecture for computer systems)
+Interrupt
+Comparison of programming paradigms
+Dataflow programming (a similar concept)
+DOM events
+Event-driven architecture
+Event stream processing (a similar concept)
+Hardware description language
+Inversion of control
+Message-oriented middleware
+Programming paradigm
+Publish–subscribe pattern
+Signal programming (a similar concept)
+Staged event-driven architecture (SEDA)
+Virtual synchrony, a distributed execution model for event-driven programming
+
+References[edit]
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (May 2012)
+
+
+
+
+^ Schmidt, Douglas. "Half-Sync/Half-Async - An Architectural Pattern for Efficient and Well-structured Concurrent I/O".&#160;
+^ Samek, Miro (11 March 2009). "State Machines for Event-Driven Systems". Retrieved 19 March 2013.&#160;
+
+
+External links[edit]
+
+
+
+
+
+This section's use of external links may not follow Wikipedia's policies or guidelines. Please improve this article by removing excessive or inappropriate external links, and converting useful links where appropriate into footnote references. (March 2013)
+
+
+
+Concurrency patterns presentation given at scaleconf
+Event-Driven Programming: Introduction, Tutorial, History, tutorial by Stephen Ferg
+Event Driven Programming, tutorial by Alan Gauld
+Event Collaboration, article by Martin Fowler
+Rethinking Swing Threading, article by Jonathan Simon
+The event driven programming style, article by Chris McDonald
+Event Driven Programming using Template Specialization, article by Christopher Diggins
+Concepts and Architecture of Vista - a Multiparadigm Programming Environment, article by Stefan Schiffer and Joachim Hans Fröhlich
+Event-Driven Programming and Agents, chapter
+LabWindows/CVI Resources
+Distributed Publish/Subscribe Event System, an open source example which is in production on MSN.com and Microsoft.com
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Event-driven_programming&amp;oldid=684044926"					
+				Categories: Programming paradigmsEvents (computing)Hidden categories: Wikipedia articles needing clarification from January 2014Articles needing additional references from May 2012All articles needing additional referencesWikipedia external links cleanup from March 2013Wikipedia spam cleanup from March 2013Articles with example pseudocode				
+							
+		
+		
+			

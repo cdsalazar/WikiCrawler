@@ -1,0 +1,303 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Metaobject
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Meta-object protocol)
+												
+					Jump to:					navigation, 					search
+				
+				In computer science, a metaobject is an object that manipulates, creates, describes, or implements other objects (including itself). The object that the metaobject is about is called the base object. Some information that a metaobject might store is the base object's type, interface, class, methods, attributes, parse tree, etc. Metaobjects are examples of the computer science concept of reflection, where a system has access (usually at run time) to its internal structure. Reflection enables a system to essentially rewrite itself on the fly, to change the actual structure of the system as it executes.[1]
+
+
+
+Contents
+
+
+1 Metaobject protocol
+
+1.1 Runtime and compile time
+1.2 Usage
+
+
+2 See also
+3 References
+4 External links
+
+
+
+Metaobject protocol[edit]
+A metaobject protocol (MOP) provides the vocabulary to access and manipulate the structure and behavior of objects. Typical functions of a metaobject protocol include:[2]
+
+Creating and deleting new classes
+Creating new methods and properties
+Changing the class structure so that classes inherit from different classes
+Generating or modifying the code that defines the methods for the class
+
+The metaobject protocol is contrary to the "closed" aspect of Bertrand Meyer's open/closed principle. It reveals and allows a system to modify the internal structure of the objects. For this reason it is usually used sparingly and for special circumstances such as software that transforms other software, for example for reverse engineering.[3]
+Runtime and compile time[edit]
+The original object-oriented languages with metaobject capabilities (e.g., Smalltalk and CLOS) were in interpreted environments so compilation was not an issue. Compilation brings additional complications for a metaobject protocol. For example, it is possible to change the type hierarchy with such a protocol but doing so may cause problems for code compiled with an alternative class model definition. Some environments have found innovative solutions for this, e.g., by handling metaobject issues at compile time. A good example is the product OpenC++.[4]
+It is noteworthy that the Semantic web object-oriented model is more dynamic and consistent with run time metaobject protocols. For example, in the Semantic web model classes are expected to change their relations to each other and there is a special inference engine known as a classifier that can validate and analyze evolving class models.[5]
+Usage[edit]
+The first metaobject protocol was in the Smalltalk object-oriented programming language developed at Xerox PARC. The Common Lisp Object System (CLOS) came later and was influenced by the Smalltalk protocol. The CLOS model, unlike the Smalltalk model, allowed a class to have more than one superclass. This provides additional complexity in issues such as resolving which class has responsibility for handling messages defined on two different superclasses. One of the most influential books describing the metaobject protocol in CLOS was The Art of the Metaobject Protocol by Gregor Kiczales.[6]
+Metaobject protocols were also extensively used in software engineering applications. In virtually all commercial CASE, reengineering, and Integrated Development Environments there is some form of metaobject protocol to represent and manipulate the design artifacts.[7][8][9]
+A metaobject protocol is one way to implement aspect-oriented programming languages. Many of the early founders of MOPs, including Gregor Kiczales have since moved on to be the primary advocates for aspect-oriented programming.
+See also[edit]
+
+Kind (type theory)
+Metaclass
+Javassist
+Joose JavaScript meta object system
+Moose Perl meta object system
+OpenC++
+OpenJava
+Unified Modeling Language: UML
+Groovy
+
+References[edit]
+
+
+^ Smith, Brian C (1982-01-01). "PROCEDURAL REFLECTION IN PROGRAMMING LANGUAGES". MIT Technical Report (MIT-LCS-TR-272). Retrieved 16 December 2013.&#160;
+^ Foote, Brian; Ralph Johnson (1–6 October 1989). "Reflective Facilities in Smalltalk-80". OOPSLA '89. Retrieved 16 December 2013.&#160;
+^ Favre, Lilliana; Liliana Martinez; Claudia Pereira (2009). MDA-Based Reverse Engineering of Object Oriented Code. Springer. ISBN&#160;978-3-642-01861-9.&#160;
+^ Chiba, Shigeru (1995). "A Metaobject Protocol for C++". OOPSLA '95. Retrieved 27 December 2013.&#160;
+^ Knublauch, Holger; Oberle, Daniel; Tetlow, Phil; Wallace, Evan (2006-03-09). "A Semantic Web Primer for Object-Oriented Software Developers". W3C. Retrieved 2008-07-30.&#160;
+^ Kiczales, Gregor; Jim des Rivieres; Daniel G. Bobrow (July 30, 1991). The Art of the Metaobject Protocol. The MIT Press. ISBN&#160;978-0262610742.&#160;
+^ Johnson, Lewis; David R. Harris; Kevin M. Benner; Martin S. Feather (October 1992). "Aries: The Requirements/Specification Facet for KBSA". Rome Laboratory Final Technical Report. RL-TR-92-248.&#160;
+^ "The Origin of Refine" (PDF). www.metaware.fr. Metaware White Paper. Retrieved 6 January 2014.&#160;
+^ "OMG's MetaObject Facility". omg.org. Object Management Group. Retrieved 7 January 2014.&#160;
+
+
+External links[edit]
+
+The Guile MOP specification (GOOPS, based on Tiny CLOS)
+Metaobjects and the Metaobject Protocol
+The Common Lisp Object System MetaObject Protocol (contains two chapters from The Art of the Metaobject Protocol)
+Python 3 Metaprogramming
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Metaobject&amp;oldid=666762438"					
+				Categories: Object (computer science)				
+							
+		
+		
+			

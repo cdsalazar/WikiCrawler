@@ -1,0 +1,145 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Include directive
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Header file)
+												
+					Jump to:					navigation, 					search
+				
+				Many programming languages and other computer files have a directive, often called include (as well as copy and import), that causes the contents of a second file to be inserted into the original file. These included files are called copybooks or header files. They are often used to define the physical layout of program data, pieces of procedural code and/or forward declarations while promoting encapsulation and the reuse of code.
+
+
+
+Contents
+
+
+1 Purpose
+2 Language Support
+
+2.1 C/C++
+2.2 COBOL
+2.3 Fortran
+2.4 PHP
+2.5 Other languages
+
+
+3 See also
+4 References
+5 External links
+
+
+
+Purpose[edit]
+The include directive allows libraries of code to be developed which help to:
+
+ensure that everyone uses the same version of a data layout definition or procedural code throughout a program.
+easily cross-reference where components are used in a system.
+easily change programs when needed (only one master copy to change).
+save time by not needing to code extensive data layouts (minor, but useful).
+
+An example situation which benefits from the use of an include directive is when referring to functions in a different file. Suppose we have a function add in one file, which is then declared (with a function prototype) and then referred to in a second source file as follows:
+
+
+int add(int, int);
+
+int triple(int x)
+{
+    return add(x, add(x, x));
+}
+
+One drawback of this method is that the prototype must be present in all files that use the function. Another drawback is that if the return type or arguments of the function are changed, these prototypes will have to be updated. Putting the prototype in a single, separate file avoids these problems. Assuming the prototype is moved to the file add.h, the second source file can then become:
+
+
+#include "add.h"
+
+int triple(int x)
+{
+    return add(x, add(x,x));
+}
+
+Now, every time the code is compiled, the latest function prototypes in add.h will be included in the files using them, avoiding potentially disastrous errors.
+Language Support[edit]
+C/C++[edit]
+In C and C++, the #include preprocessor directive causes the compiler to replace that line with the entire text of the contents of the named source file (if included in quotes: "") or named header (if included in angle brackets: &lt;&gt;);[1] note that a header need not be a file.[2] Inclusion continues recursively on these included contents, up to an implementation-defined nesting limit. Headers need not have names corresponding to files: in C++ standard headers are typically identified with words, like "vector", hence #include &lt;vector&gt; while in C standard headers have identifiers in the form of filenames with a ".h" extension, as in #include &lt;stdio.h&gt;. A "source file" can be any file, with a name of any form, but is most commonly named with a ".h" extension and called a "header file" (sometimes ".hpp" to distinguish C++ headers), though files with .c, .cc, and .cpp extensions may also be included (particularly in the Single Compilation Unit technique), and sometimes other extensions are used.
+These two forms of #include directive can determine which header or source file to include in an implementation-defined way. In practice, what is usually done is that the angle-brackets form searches for source files in a standard system directory (or set of directories), and then searches for source files in local or project-specific paths (specified on the command line, in an environment variable, or in a Makefile or other build file), while the form with quotes does not search in a standard system directory, only searching in local or project-specific paths.[3] In case there is no clash, the angle-brackets form can also be used to specify project-specific includes, but this is considered poor form. The fact that headers need not correspond to files is primarily an implementation technicality, and used to omit the .h extension in including C++ standard headers; in common use "header" means "header file".
+For example:
+
+
+#include &lt;stdio.h&gt;  // Include the contents of the standard header 'stdio.h' (probably a file 'stdio.h').
+#include &lt;vector&gt;  // Include the contents of the standard header 'vector' (probably a file 'vector.h').
+#include "user_defined.h"  // Include the contents of the file 'user_defined.h'.
+
+In C and C++, problems may be faced if two (or more) include files both in turn include the same third file. One solution is to avoid include files from including any other files, possibly requiring the programmer to manually add extra include directives to the original file. Another solution is to use include guards.[4]
+COBOL[edit]
+COBOL (and also RPG IV) allows programmers to copy copybooks into the source of the program in a similar way to header files, but it also allows replacing certain text in them with other text. The COBOL keyword for inclusion is COPY, and replacement is done using the REPLACING ... BY ... clause. An include directive has been present in COBOL since COBOL 60, but changed from the original INCLUDE[5] to COPY by 1968.[6]
+Fortran[edit]
+Fortran does not require header files per se. However, Fortran 90 and later has two related features: include statements and modules. The former can be used to share a common file containing procedure interfaces, much like a C header, although the specification of an interface is not required for all varieties of Fortran procedures. This approach is not commonly used; instead procedures are generally grouped into modules that can then be referenced with a use statement within other regions of code. For modules, header-type interface information is automatically generated by the compiler, and typically put into separate module files, although some compilers have placed this information directly into object files. The language specification itself does not mandate the creation of any extra files, even though module procedure interfaces are almost universally propagated in this manner.
+PHP[edit]
+In PHP, the include directive causes another PHP file to be included and evaluated.[7] Similar commands are require, which upon failure to include will produce a fatal error and halt the script,[8] and include_once and require_once, which cause a file to not be included or required again if it has already been included or required, avoiding the C's double inclusion problem.
+Other languages[edit]
+There are many forms of the include directive, such as:
+
+/COPY QCPYLESRC,QBC (RPG IV – first argument is the filename, second argument is the copybook)
+include ... (Fortran, MASM)
+%include ... (PL/I)
+&lt;!--#include ... --&gt; (HTML SSI)
+&lt;%@ include ...&#160;%&gt; (JSP).
+
+Modern languages (e.g. Haskell and Java) tend to avoid copybooks or includes, preferring modules and import/export systems for namespace control. Some of these languages (such as Java and C#) do not use forward declarations and, instead, identifiers are recognized automatically from source files and read directly from dynamic library symbols, meaning header files are not needed.
+See also[edit]
+
+Subroutine
+source (command) and Dot (Unix)
+Transclusion
+Modular programming
+Include vulnerability
+Server Side Includes
+Remote file inclusion
+One Definition Rule
+Application Programming Interface
+Interface Definition Language
+#pragma once
+Class implementation file
+
+References[edit]
+
+
+^ C11 standard, 6.10.2 Source file inclusion, pp. 164–165
+^ C11 standard, 7.1.2 Standard headers, p. 181, footnote 182: "A header is not necessarily a source file, nor are the &lt; and &gt; delimited sequences in header names necessarily valid source file names.
+^ Stallman, Richard M. (July 1992). "The C Preprocessor" (PDF). Archived from the original (PDF) on 4 September 2012. Retrieved 19 February 2014.&#160;
+^ Pike, Rob (21 Feb 1989), Notes on programming in C, Cat-v document archive, retrieved 9 Dec 2011&#160;
+^ "COBOL Initial Specifications for a COmmon Business Oriented Language" (PDF). Department of Defense. April 1960. p.&#160;IX-9. Archived (PDF) from the original on 12 February 2014. Retrieved 11 February 2014.&#160;
+^ "The COPY Statement". CODASYL COBOL Journal of Development 1968. July 1969. LCCN&#160;73601243.&#160;
+^ "include". php.net. The PHP Group. Retrieved 20 February 2014.&#160;
+^ "require". php.net. The PHP Group. Retrieved 20 February 2014.&#160;
+
+
+External links[edit]
+
+Organizing Code Files (the potential pitfalls and guidelines for using header files in C++)
+C++ header file inclusion rules
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Include_directive&amp;oldid=690367974"					
+				Categories: Programming constructsSource codeC headersC (programming language)C++				
+							
+		
+		
+			

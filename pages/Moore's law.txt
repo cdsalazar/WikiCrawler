@@ -1,0 +1,1183 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Moore's law
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+A plot of CPU transistor counts against dates of introduction; note the logarithmic vertical scale; the line corresponds to exponential growth with transistor count doubling every two years.
+
+
+Moore's law (/mɔərz.ˈlɔː/) is the observation that the number of transistors in a dense integrated circuit doubles approximately every two years. The observation is named after Gordon E. Moore, the co-founder of Intel and Fairchild Semiconductor, whose 1965 paper described a doubling every year in the number of components per integrated circuit,[2] and projected this rate of growth would continue for at least another decade.[3] In 1975,[4] looking forward to the next decade,[5] he revised the forecast to doubling every two years.[6][7][8]
+His prediction proved accurate for several decades, and the law was used in the semiconductor industry to guide long-term planning and to set targets for research and development.[9] Advancements in digital electronics are strongly linked to Moore's law: quality-adjusted microprocessor prices,[10] memory capacity, sensors and even the number and size of pixels in digital cameras.[11]
+Digital electronics have contributed to world economic growth in the late twentieth and early twenty-first centuries.[12] Moore's law describes a driving force of technological and social change, productivity, and economic growth.[13][14][15][16]
+The period is often quoted as 18 months because of Intel executive David House, who predicted that chip performance would double every 18 months (being a combination of the effect of more transistors and the transistors being faster).[17]
+"Moore's law" should be considered an observation or projection and obviously not a physical or natural law. Although the rate held steady from 1975 until around 2012, the rate was faster during the first decade. In general, it is not logically sound to extrapolate from the historical growth rate into the indefinite future. For example, the 2010 update to the International Technology Roadmap for Semiconductors, predicted that growth would slow around 2013,[18] and Gordon Moore in 2015 foresaw that the rate of progress would reach saturation: "I see Moore’s law dying here in the next decade or so."[19]
+Intel confirmed in 2015 that the pace of advancement has slowed, starting at the 22 nm node around 2012, and continuing at 14 nm. Brian Krzanich, CEO of Intel, announced that "our cadence today is closer to two and a half years than two.” This is scheduled to hold through the 10 nm node in late 2017.[20] He cited Moore's 1975 revision as a precedent for the current deceleration, which results from technical challenges and is “a natural part of the history of Moore's law.”[21][22][23]
+
+
+
+Contents
+
+
+1 History
+2 As a target for industry and a self-fulfilling prophecy
+
+2.1 Moore's second law
+
+
+3 Enabling factors and future trends
+
+3.1 Speculation on limits
+
+
+4 Consequences and limitations
+5 Other formulations and similar observations
+6 See also
+7 Notes
+8 References
+9 Further reading
+10 External links
+
+
+
+History[edit]
+
+
+
+
+Gordon Moore in 2004.
+
+
+In 1959, Douglas Engelbart discussed the projected downscaling of integrated circuit size in the article "Microelectronics, and the Art of Similitude".[24][25] Engelbart presented his ideas at the 1960 International Solid-State Circuits Conference, where Moore was present in the audience.[26]
+For the thirty-fifth anniversary issue of Electronics magazine, which was published on April 19, 1965, Gordon E. Moore, who was working as the director of research and development at Fairchild Semiconductor at the time, was asked to predict what was going to happen in the semiconductor components industry over the next ten years. His response was a brief article entitled, "Cramming more components onto integrated circuits".[27] Within his editorial, he speculated that by 1975 it would be possible to contain as many as 65,000 components on a single quarter-inch semiconductor.
+
+The complexity for minimum component costs has increased at a rate of roughly a factor of two per year. Certainly over the short term this rate can be expected to continue, if not to increase. Over the longer term, the rate of increase is a bit more uncertain, although there is no reason to believe it will not remain nearly constant for at least 10 years.
+
+His reasoning was a log-linear relationship between device complexity (higher circuit density at reduced cost) and time.[28][29]
+At the 1975 IEEE International Electron Devices Meeting, Moore revised the forecast rate.[6][30] Semiconductor complexity would continue to double annually until about 1980 after which it would decrease to a rate of doubling approximately every two years.[30] He outlined several contributing factors for this exponential behavior:[28][29]
+
+die sizes were increasing at an exponential rate and as defective densities decreased, chip manufacturers could work with larger areas without losing reduction yields;
+simultaneous evolution to finer minimum dimensions;
+and what Moore called "circuit and device cleverness".
+
+Shortly after 1975, Caltech professor Carver Mead popularized the term "Moore's law".[31][32]
+Despite a popular misconception, Moore is adamant that he did not predict a doubling "every 18 months." Rather, David House, an Intel colleague, had factored in the increasing performance of transistors to conclude that integrated circuits would double in performance every 18&#160;months.
+In April 2005, Intel offered US$10,000 to purchase a copy of the original Electronics issue in which Moore's article appeared.[33] An engineer living in the United Kingdom was the first to find a copy and offer it to Intel.[34]
+As a target for industry and a self-fulfilling prophecy[edit]
+
+
+
+
+An Osborne Executive portable computer, from 1982, with a Zilog Z80 4&#160;MHz CPU, and a 2007 Apple iPhone with a 412&#160;MHz ARM11 CPU; the Executive weighs 100 times as much, has nearly 500 times the volume, costs approximately 10 times as much (adjusted for inflation), and has about 1/100th the clock frequency of the smartphone.
+
+
+Although Moore's law initially was made in the form of an observation and forecast, the more widely it became accepted, the more it served as a goal for an entire industry.
+This drove both marketing and engineering departments of semiconductor manufacturers to focus enormous energy aiming for the specified increase in processing power that it was presumed one or more of their competitors would soon attain. In this regard, it may be viewed as a self-fulfilling prophecy.[9][35]
+Moore's second law[edit]
+Further information: Rock's law
+As the cost of computer power to the consumer falls, the cost for producers to fulfill Moore's law follows an opposite trend: R&amp;D, manufacturing, and test costs have increased steadily with each new generation of chips. Rising manufacturing costs are an important consideration for the sustaining of Moore's law.[36] This had led to the formulation of Moore's second law, also called Rock's law, which is that the capital cost of a semiconductor fab also increases exponentially over time.[37][38]
+Enabling factors and future trends[edit]
+Numerous innovations by scientists and engineers have sustained Moore's law since the beginning of the integrated circuit (IC) era. A few innovations are listed below, as examples of breakthroughs that have advanced integrated circuit technology by more than seven orders of magnitude in less than five decades:
+
+The foremost contribution, which is the raison d’être for Moore's law, is the invention of the integrated circuit, credited contemporaneously to Jack Kilby at Texas Instruments[39] and Robert Noyce at Fairchild Semiconductor.[40]
+
+
+The invention of the complementary metal–oxide–semiconductor (CMOS) process by Frank Wanlass in 1963,[41] and a number of advances in CMOS technology by many workers in the semiconductor field since the work of Wanlass have enabled the extremely dense and high-performance ICs that the industry makes today.
+
+
+The invention of the dynamic random access memory (DRAM) technology by Robert Dennard at I.B.M. in 1967,[42] made it possible to fabricate single-transistor memory cells, and the invention of flash memory by Fujio Masuoka at Toshiba in the 1980s,[43][44][45] leading to low-cost, high-capacity memory in diverse electronic products.
+
+
+The invention of chemically-amplified photoresist by C. Grant Willson, Hiroshi Ito and J.M.J. Fréchet at IBM c.1980,[46][47][48] that was 10–100 times more sensitive to ultraviolet light.[49] IBM introduced chemically amplified photoresist for DRAM production in the mid-1980s.[50][51]
+
+
+The invention of deep UV excimer laser photolithography by Kanti Jain[52] at IBM c.1980,[53][54][55] has enabled the smallest features in ICs to shrink from 800 nanometers in 1990 to as low as 22 nanometers in 2012.[56] This built on the invention of the excimer laser in 1970,[57] by Nikolai Basov, V. A. Danilychev and Yu. M. Popov, at the Lebedev Physical Institute. From a broader scientific perspective, the invention of excimer laser lithography has been highlighted as one of the major milestones in the 50-year history of the laser.[58][59]
+
+
+The interconnect innovations of the late 1990s include that IBM developed CMP or chemical mechanical planarization c.1980, based on the centuries-old polishing process for making telescope lenses.[60] CMP smooths the chip surface. Intel used chemical-mechanical polishing to enable additional layers of metal wires in 1990; higher transistor density (tighter spacing) via trench isolation, local polysilicon (wires connecting nearby transistors), and improved wafer yield (all in 1995).[61][62] Higher yield, the fraction of working chips on a wafer, reduces manufacturing cost. IBM with assistance from Motorola used CMP for lower electrical resistance copper interconnect instead of aluminum in 1997.[63]
+
+Computer industry technology road maps predict (as of 2001[update]) that Moore's law will continue for several generations of semiconductor chips. Depending on the doubling time used in the calculations, this could mean up to a hundredfold increase in transistor count per chip within a decade. The semiconductor industry technology roadmap uses a three-year doubling time for microprocessors, leading to a tenfold increase in the next decade.[64] Intel was reported in 2005 as stating that the downsizing of silicon chips with good economics can continue during the next decade,[note 1] and in 2008 as predicting the trend through 2029.[65]
+Some of the new directions in research that may allow Moore's law to continue are:
+
+In 2008, researchers at HP Labs announced a working memristor, a fourth basic passive circuit element whose existence only had been theorized previously. The memristor's unique properties permit the creation of smaller and better-performing electronic devices.[66]
+
+
+In 2010, researchers at the Tyndall National Institute in Cork, Ireland announced a junctionless transistor. A control gate wrapped around a silicon nanowire can control the passage of electrons without the use of junctions or doping. They claim these may be produced at 10-nanometer scale using existing fabrication techniques.[67]
+
+
+In 2011, researchers at the University of Pittsburgh announced the development of a single-electron transistor, 1.5 nanometers in diameter, made out of oxide based materials. Three "wires" converge on a central "island" that can house one or two electrons. Electrons tunnel from one wire to another through the island. Conditions on the third wire result in distinct conductive properties including the ability of the transistor to act as a solid state memory.[68] Nanowire transistors could spur the creation of microscopic computers.[69][70][71]
+
+
+
+
+
+The trend of scaling for NAND flash memory allows doubling of components manufactured in the same wafer area in less than 18 months.
+
+
+
+In 2012, a research team at the University of New South Wales announced the development of the first working transistor consisting of a single atom placed precisely in a silicon crystal (not just picked from a large sample of random transistors).[72] Moore's law predicted this milestone to be reached for ICs in the lab by 2020.
+
+
+In 2014, bioengineers at Stanford University developed a circuit modeled on the human brain. Sixteen "Neurocore" chips simulate one million neurons and billions of synaptic connections, claimed to be 9,000 times faster as well as more energy efficient than a typical PC.[73]
+
+
+In 2015, IBM demonstrated 7 nm node chips with silicon-germanium transistors produced using EUVL. The company believes this transistor density would be four times that of current 14 nm chips.[74]
+
+
+In 2015, Intel and Micron announced 3D XPoint,[75] a non-volatile memory claimed to be up to 1,000 times faster, up to 1,000 times higher endurance and similar in density compared to NAND. Production is scheduled in 2016.[76][77][78]
+
+Speculation on limits[edit]
+
+
+
+
+An atomistic simulation result for formation of inversion channel (electron density) and attainment of threshold voltage (IV) in a nanowire MOSFET. Note that the threshold voltage for this device lies around 0.45 V. Nanowire MOSFETs lie toward the end of the ITRS road map for scaling devices below 10 nm gate lengths.[64]
+
+
+On April 13, 2005, Gordon Moore stated in an interview that the projection cannot be sustained indefinitely: "It can't continue forever. The nature of exponentials is that you push them out and eventually disaster happens". He also noted that transistors eventually would reach the limits of miniaturization at atomic levels:
+
+In terms of size [of transistors] you can see that we're approaching the size of atoms which is a fundamental barrier, but it'll be two or three generations before we get that far—but that's as far out as we've ever been able to see. We have another 10 to 20 years before we reach a fundamental limit. By then they'll be able to make bigger chips and have transistor budgets in the billions.[79]
+
+Some see the limits of the law as being in the distant future.[80]
+Lawrence Krauss and Glenn D. Starkman announced an ultimate limit of approximately 600 years in their paper,[81] based on rigorous estimation of total information-processing capacity of any system in the Universe, which is limited by the Bekenstein bound. On the other hand, based on quantum theory and the laws of thermodynamics, there are predictions that Moore's law will collapse in the next few decades [20–40 years]".[82][83]
+Then again, the law often has met obstacles that first appeared insurmountable, but were indeed surmounted before long. In that sense, Moore says he now sees his law as more beautiful than he had realized: "Moore's law is a violation of Murphy's law. Everything gets better and better."[84]
+Consequences and limitations[edit]
+Technological change is a combination of more and of better technology. A 2011 study in the journal Science, showed that the peak of the rate of change of the world's capacity to compute information was in the year 1998, when the world's technological capacity to compute information on general-purpose computers grew at 88% per year.[85] Since then, technological change clearly has slowed. In recent times, every new year allowed humans to carry out roughly 60% of the computations that possibly could have been executed by all existing general-purpose computers before that year.[85] This still is exponential, but shows the varying nature of technological change.[86]
+The primary driving force of economic growth is the growth of productivity,[15] and Moore's law factors into productivity. Moore (1995) expected that "the rate of technological progress is going to be controlled from financial realities."[87] The reverse could and did occur around the late-1990s, however, with economists reporting that "Productivity growth is the key economic indicator of innovation."[16]
+An acceleration in the rate of semiconductor progress contributed to a surge in U.S. productivity growth,[88][89][90] which reached 3.4% per year in 1997–2004, outpacing the 1.6% per year during both 1972–1996 and 2005–2013.[91] As economist Richard G. Anderson notes, “Numerous studies have traced the cause of the productivity acceleration to technological innovations in the production of semiconductors that sharply reduced the prices of such components and of the products that contain them (as well as expanding the capabilities of such products).”[92]
+
+
+
+
+Intel transistor gate length trend – transistor scaling has slowed down significantly at advanced (smaller) nodes
+
+
+While physical limits to transistor scaling such as source-to-drain leakage, limited gate metals, and limited options for channel material have been reached, new avenues for continued scaling are open. The most promising of these approaches rely on using the spin state of electron spintronics, tunnel junctions, and advanced confinement of channel materials via nano-wire geometry. A comprehensive list of available device choices shows that a wide range of device options is open for continuing Moore's law into the next few decades.[93] Spin-based logic and memory options are being developed actively in industrial labs,[94] as well as academic labs.[95]
+Another source of improved performance is in microarchitecture techniques exploiting the growth of available transistor count. Out-of-order execution and on-chip caching and prefetching reduce the memory latency bottleneck at the expense of using more transistors and increasing the processor complexity. These increases are described empirically by Pollack's Rule, which states that performance increases due to microarchitecture techniques are square root of the number of transistors or the area of a processor.
+For years, processor makers delivered increases in clock rates and instruction-level parallelism, so that single-threaded code executed faster on newer processors with no modification.[96] Now, to manage CPU power dissipation, processor makers favor multi-core chip designs, and software has to be written in a multi-threaded manner to take full advantage of the hardware. Many multi-threaded development paradigms introduce overhead, and will not see a linear increase in speed vs number of processors. This is particularly true while accessing shared or dependent resources, due to lock contention. This effect becomes more noticeable as the number of processors increases. There are cases where a roughly 45% increase in processor transistors has translated to roughly 10–20% increase in processing power.[97]
+On the other hand, processor manufacturers are taking advantage of the 'extra space' that the transistor shrinkage provides to add specialized processing units to deal with features such as graphics, video, and cryptography. For one example, Intel's Parallel JavaScript extension not only adds support for multiple cores, but also for the other non-general processing features of their chips, as part of the migration in client side scripting toward HTML5.[98]
+A negative implication of Moore's law is obsolescence, that is, as technologies continue to rapidly "improve", these improvements may be significant enough to render predecessor technologies obsolete rapidly. In situations in which security and survivability of hardware or data are paramount, or in which resources are limited, rapid obsolescence may pose obstacles to smooth or continued operations.[99]
+Because of the toxic materials used in the production of modern computers, obsolescence if not properly managed, may lead to harmful environmental impacts. On the other hand, obsolescence may sometimes be desirable to a company which can profit immensely from the regular purchase of what is often expensive new equipment instead of retaining one device for a longer period of time. Those in the industry are well aware of this, and may utilize planned obsolescence as a method of increasing profits.[100]
+Moore's law has affected the performance of other technologies significantly: Michael S. Malone wrote of a Moore's War following the apparent success of shock and awe in the early days of the Iraq War. Progress in the development of guided weapons depends on electronic technology.[101] Improvements in circuit density and low-power operation associated with Moore's law, also have contributed to the development of technologies including mobile telephones[102] and 3-D printing.[103]
+Other formulations and similar observations[edit]
+Several measures of digital technology are improving at exponential rates related to Moore's law, including the size, cost, density, and speed of components. Moore wrote only about the density of components, "a component being a transistor, resistor, diode or capacitor,"[87] at minimum cost.
+Transistors per integrated circuit – The most popular formulation is of the doubling of the number of transistors on integrated circuits every two years. At the end of the 1970s, Moore's law became known as the limit for the number of transistors on the most complex chips. The graph at the top shows this trend holds true today.
+Density at minimum cost per transistor – This is the formulation given in Moore's 1965 paper.[3] It is not just about the density of transistors that can be achieved, but about the density of transistors at which the cost per transistor is the lowest.[104] As more transistors are put on a chip, the cost to make each transistor decreases, but the chance that the chip will not work due to a defect increases. In 1965, Moore examined the density of transistors at which cost is minimized, and observed that, as transistors were made smaller through advances in photolithography, this number would increase at "a rate of roughly a factor of two per year".[3]
+Dennard scaling – This suggests that power requirements are proportional to area (both voltage and current being proportional to length) for transistors. Combined with Moore's law, performance per watt would grow at roughly the same rate as transistor density, doubling every 1–2 years. According to Dennard scaling transistor dimensions are scaled by 30% (0.7x) every technology generation, thus reducing their area by 50%. This reduces the delay by 30% (0.7x) and therefore increases operating frequency by about 40% (1.4x). Finally, to keep electric field constant, voltage is reduced by 30%, reducing energy by 65% and power (at 1.4x frequency) by 50%.[note 2] Therefore, in every technology generation transistor density doubles, circuit becomes 40% faster, while power consumption (with twice the number of transistors) stays the same.[105]
+The exponential processor transistor growth predicted by Moore does not always translate into exponentially greater practical CPU performance. Since around 2005–2007, Dennard scaling appears to have broken down, so even though Moore's law continued for several years after that, it has not yielded dividends in improved performance.[106][107] The primary reason cited for the breakdown is that at small sizes, current leakage poses greater challenges, and also causes the chip to heat up, which creates a threat of thermal runaway and therefore, further increases energy costs.[106][107]
+The breakdown of Dennard scaling prompted a switch among some chip manufacturers to a greater focus on multicore processors, but the gains offered by switching to more cores are lower than the gains that would be achieved had Dennard scaling continued.[108][109] In another departure from Dennard scaling, Intel microprocessors adopted a non-planar tri-gate FinFET at 22 nm in 2012 that is faster and consumes less power than a conventional planar transistor.[110]
+Quality adjusted price of IT equipment – The price of information technology (IT), computers and peripheral equipment, adjusted for quality and inflation, declined 16% per year on average over the five decades from 1959 to 2009. [111][112] The pace accelerated, however, to 23% per year in 1995–1999 triggered by faster IT innovation,[16] and later, slowed to 2% per year in 2010–2013.[111][113]
+The rate of quality-adjusted microprocessor price improvement likewise varies, and is not linear on a log scale. Microprocessor price improvement accelerated during the late 1990s, reaching 60% per year (halving every nine months) versus the typical 30% improvement rate (halving every two years) during the years earlier and later.[114][115] Laptop microprocessors in particular improved 25–35% per year in 2004–2010, and slowed to 15–25% per year in 2010–2013.[116]
+The number of transistors per chip cannot explain quality-adjusted microprocessor prices fully.[114][117][118] Moore's 1995 paper does not limit Moore's law to strict linearity or to transistor count, “The definition of 'Moore's Law' has come to refer to almost anything related to the semiconductor industry that when plotted on semi-log paper approximates a straight line. I hesitate to review its origins and by doing so restrict its definition.”[87]
+Moore (2003) credits chemical mechanical planarization (chip smoothing) with increasing the connectivity of microprocessors from two or three metal layers in the early 1990s to seven in 2003.[61] This progressed to nine metal layers in 2007 and thirteen in 2014.[119][120][121] Connectivity improves performance, and relieves network congestion. Just as additional floors may not enlarge a building's footprint, nor is connectivity tallied in transistor count. Microprocessors rely more on communications (interconnect) than do DRAM chips, which have three or four metal layers.[122][123][124] Microprocessor prices in the late 1990s improved faster than DRAM prices.[114]
+Hard disk drive areal density – A similar observation (sometimes called Kryder's law) was made in 2005 for hard disk drive areal density.[125] Several decades of rapid progress resulted from the use of error correcting codes, the magnetoresistive effect, and the giant magnetoresistive effect. The Kryder rate of areal density advancement slowed significantly around 2010, because of noise related to smaller grain size of the disk media, thermal stability, and writability using available magnetic fields.[126][127]
+Network capacity – According to Gerry/Gerald Butters,[128][129] the former head of Lucent's Optical Networking Group at Bell Labs, there is another version, called Butters' Law of Photonics,[130] a formulation that deliberately parallels Moore's law. Butter's law says that the amount of data coming out of an optical fiber is doubling every nine months.[131] Thus, the cost of transmitting a bit over an optical network decreases by half every nine months. The availability of wavelength-division multiplexing (sometimes called WDM) increased the capacity that could be placed on a single fiber by as much as a factor of 100. Optical networking and dense wavelength-division multiplexing (DWDM) is rapidly bringing down the cost of networking, and further progress seems assured. As a result, the wholesale price of data traffic collapsed in the dot-com bubble. Nielsen's Law says that the bandwidth available to users increases by 50% annually.[132]
+Pixels per dollar – Similarly, Barry Hendy of Kodak Australia has plotted pixels per dollar as a basic measure of value for a digital camera, demonstrating the historical linearity (on a log scale) of this market and the opportunity to predict the future trend of digital camera price, LCD and LED screens, and resolution.[133][134][135]
+The great Moore's law compensator (TGMLC), also known as Wirth's law – generally is referred to as bloat and is the principle that successive generations of computer software increase in size and complexity, thereby offsetting the performance gains predicted by Moore's law. In a 2008 article in InfoWorld, Randall C. Kennedy,[136] formerly of Intel, introduces this term using successive versions of Microsoft Office between the year 2000 and 2007 as his premise. Despite the gains in computational performance during this time period according to Moore's law, Office 2007 performed the same task at half the speed on a prototypical year 2007 computer as compared to Office 2000 on a year 2000 computer.
+Library expansion – was calculated in 1945 by Fremont Rider to double in capacity every 16 years, if sufficient space were made available.[137] He advocated replacing bulky, decaying printed works with miniaturized microform analog photographs, which could be duplicated on-demand for library patrons or other institutions. He did not foresee the digital technology that would follow decades later to replace analog microform with digital imaging, storage, and transmission media. Automated, potentially lossless digital technologies allowed vast increases in the rapidity of information growth in an era that now sometimes is called an Information Age.
+Carlson Curve – is a term coined by The Economist[138] to describe the biotechnological equivalent of Moore's law, and is named after author Rob Carlson.[139] Carlson accurately predicted that the doubling time of DNA sequencing technologies (measured by cost and performance) would be at least as fast as Moore's law.[140] Carlson Curves illustrate the rapid (in some cases hyperexponential) decreases in cost, and increases in performance, of a variety of technologies, including DNA sequencing, DNA synthesis, and a range of physical and computational tools used in protein expression and in determining protein structures.
+Eroom's Law – is a pharmaceutical drug development observation which was deliberately written as Moore's Law spelled backwards in order to contrast it with the exponential advancements of other forms of technology (such as transistors) over time. The law states that the cost of developing a new drug roughly doubles every nine years.
+See also[edit]
+
+
+Accelerating change
+Amdahl's law
+Bell's law
+Engelbart's Law
+Empirical relationship
+Ephemeralization
+Eroom's Law
+Grosch's law
+Haitz's law – analog to Moore's law for LEDs
+Intel Tick-Tock
+Koomey's law
+List of eponymous laws
+Metcalfe's law
+Microprocessor chronology
+Quantum computing
+Zimmerman's Law
+
+
+Notes[edit]
+
+
+^ The trend begins with the invention of the integrated circuit in 1958. See the graph on the bottom of page 3 of Moore's original presentation of the idea.[1]
+^ Active power = CV2f
+
+
+References[edit]
+
+
+^ a b Moore, Gordon E. (1965-04-19). "Cramming more components onto integrated circuits" (PDF). Electronics. Retrieved 2011-08-22.&#160;
+^ The trend begins with the invention of the integrated circuit in 1958. See the graph on the bottom of page 3 of Moore's original presentation of the idea.[1]
+^ a b c Moore, Gordon E. (1965). "Cramming more components onto integrated circuits" (PDF). Electronics Magazine. p.&#160;4. Retrieved 2006-11-11.&#160;
+^ Moore, Gordon. "Progress In Digital Integrated Electronics" (PDF). Retrieved July 15, 2015.&#160;
+^ Krzanich, Brian (July 15, 2015). "Edited Transcript of INTC earnings conference call". Retrieved July 16, 2015. Just last quarter, we celebrated the 50th anniversary of Moore's Law. In 1965 when Gordon's paper was first published, he predicted a doubling of transistor density every year for at least the next 10 years. His prediction proved to be right and in fact, in 1975, looking ahead to the next 10 years, he updated his estimate to a doubling every 24 months.&#160;
+^ a b Takahashi, Dean (April 18, 2005). "Forty years of Moore’s law". Seattle Times (San Jose, CA). Retrieved April 7, 2015. A decade later, he revised what had become known as Moore’s Law: The number of transistors on a chip would double every two years.&#160;
+^ Moore, Gordon (2006). "Chapter 7: Moore's law at 40". In Brock, David. Understanding Moore’s Law: Four Decades of Innovation (PDF). Chemical Heritage Foundation. pp.&#160;67–84. ISBN&#160;0-941901-41-6. Retrieved March 15, 2015.&#160;
+^ "Over 6 Decades of Continued Transistor Shrinkage, Innovation" (Press release). Santa Clara, California: Intel Corporation. Intel Corporation. 2011-05-01. Retrieved 2015-03-15. 1965: Moore’s Law is born when Gordon Moore predicts that the number of transistors on a chip will double roughly every year (a decade later, revised to every 2 years)&#160;
+^ a b Disco, Cornelius; van der Meulen, Barend (1998). Getting new technologies together. New York: Walter de Gruyter. pp.&#160;206–207. ISBN&#160;3-11-015630-X. OCLC&#160;39391108. Retrieved August 23, 2008.&#160;
+^ Byrne, David M.; Oliner, Stephen D.; Sichel, Daniel E. (March 2013). Is the Information Technology Revolution Over? (PDF). Finance and Economics Discussion Series Divisions of Research &amp; Statistics and Monetary Affairs Federal Reserve Board. Washington, D.C.: Federal Reserve Board Finance and Economics Discussion Series (FEDS). Archived (PDF) from the original on 2014-06-09. technical progress in the semiconductor industry has continued to proceed at a rapid pace ... Advances in semiconductor technology have driven down the constant-quality prices of MPUs and other chips at a rapid rate over the past several decades.&#160;
+^ Myhrvold, Nathan (June 7, 2006). "Moore's Law Corollary: Pixel Power". New York Times. Retrieved 2011-11-27.&#160;
+^ Rauch, Jonathan (January 2001). "The New Old Economy: Oil, Computers, and the Reinvention of the Earth". The Atlantic Monthly. Retrieved November 28, 2008.&#160;
+^ Keyes, Robert W. (September 2006). "The Impact of Moore's Law". Solid State Circuits Newsletter. Retrieved November 28, 2008.&#160;
+^ Liddle, David E. (September 2006). "The Wider Impact of Moore's Law". Solid State Circuits Newsletter. Retrieved November 28, 2008.&#160;
+^ a b Kendrick, John W. (1961). Productivity Trends in the United States. Princeton University Press for NBER. p.&#160;3.&#160;
+^ a b c Jorgenson, Dale W.; Ho, Mun S.; Samuels, Jon D. (2014). "Long-term Estimates of U.S. Productivity and Growth" (PDF). World KLEMS Conference. Retrieved 2014-05-27.&#160;
+^ "Moore's Law to roll on for another decade". Retrieved 2011-11-27. Moore also affirmed he never said transistor count would double every 18 months, as is commonly said. Initially, he said transistors on a chip would double every year. He then recalibrated it to every two years in 1975. David House, an Intel executive at the time, noted that the changes would cause computer performance to double every 18 months.&#160;
+^ "Overall Technology Roadmap Characteristics". International Technology Roadmap for Semiconductors. 2010. Retrieved 2013-08-08.&#160;
+^ Moore, Gordon (March 30, 2015). Gordon Moore: The Man Whose Name Means Progress, The visionary engineer reflects on 50 years of Moore’s Law. IEEE Spectrum. Interview with Rachel Courtland. Special Report: 50 Years of Moore's Law. We won’t have the rate of progress that we've had over the last few decades. I think that’s inevitable with any technology; it eventually saturates out. I guess I see Moore’s law dying here in the next decade or so, but that’s not surprising.&#160;
+^ Clark, Don (July 15, 2015). "Intel Rechisels the Tablet on Moore’s Law". Wall Street Journal Digits Tech News and Analysis. Retrieved 2015-07-16. The last two technology transitions have signaled that our cadence today is closer to two and a half years than two&#160;
+^ Bradshaw, Tim (July 16, 2015). "Intel chief raises doubts over Moore’s law". Financial Times. Retrieved 2015-07-16.&#160;
+^ Waters, Richard (July 16, 2015). "As Intel co-founder’s law slows, a rethinking of the chip is needed". Financial Times.&#160;
+^ Niccolai, James (July 15, 2015). "Intel pushes 10nm chip-making process to 2017, slowing Moore's Law". Infoworld. Retrieved 2015-07-16. It's official: Moore's Law is slowing down. ... "These transitions are a natural part of the history of Moore's Law and are a by-product of the technical challenges of shrinking transistors while ensuring they can be manufactured in high volume," Krzanich said.&#160;
+^ Markoff, John (April 18, 2005). "It's Moore's Law But Another Had The Idea First". The New York Times. Archived from the original on October 4, 2011. Retrieved October 4, 2011.&#160;
+^ Markoff, John (August 31, 2009). "After the Transistor, a Leap Into the Microcosm". The New York Times. Retrieved 2009-08-31.&#160;
+^ Markoff, John (September 27, 2015). "Smaller, Faster, Cheaper, Over: The Future of Computer Chips". The New York Times. Retrieved September 28, 2015.&#160;
+^ Evans, Dean. "Moore's Law: how long will it last?". http://www.techradar.com. Retrieved November 25, 2014.&#160;
+^ a b Schaller, Bob (September 26, 1996). "The Origin, Nature, and Implications of "MOORE'S LAW"". Microsoft. Retrieved September 10, 2014.&#160;
+^ a b Tuomi, I. (2002). "The Lives and Death of Moore's Law". First Monday 7 (11). doi:10.5210/fm.v7i11.1000.&#160;
+^ a b Moore, Gordon (1975). "IEEE Technical Digest 1975" (PDF). Intel Corp. Retrieved April 7, 2015. ... the rate of increase of complexity can be expected to change slope in the next few years as shown in Figure 5. The new slope might approximate a doubling every two years, rather than every year, by the end of the decade.&#160;
+^ Brock, David C., ed. (2006). Understanding Moore's law: four decades of innovation. Philadelphia, Pa: Chemical Heritage Press. ISBN&#160;0941901416.&#160;
+^ in reference to Gordon E. Moore's statements at the IEEE. "Moore's Law – The Genius Lives On". IEEE solid-state circuits society newsletter. September 2006. Archived from the original on 2007-07-13.&#160;
+^ Kanellos, Michael (2005-04-11). "Intel offers $10,000 for Moore's Law magazine". ZDNET News.com. Retrieved 2013-06-21.&#160;
+^ "Moore's Law original issue found". BBC News Online. 2005-04-22. Retrieved 2012-08-26.&#160;
+^ "Gordon Moore Says Aloha to Moore's Law". the Inquirer. April 13, 2005. Retrieved September 2, 2009.&#160;
+^ Lemon, Sumner; Krazit, Tom (2005-04-19). "With chips, Moore's Law is not the problem". Infoworld. Retrieved 2011-08-22.&#160;
+^ Dorsch, Jeff. "Does Moore's Law Still Hold Up?" (PDF). EDA Vision. Retrieved 2011-08-22.&#160;
+^ Schaller, Bob (1996-09-26). "The Origin, Nature, and Implications of "Moore's Law"". Research.microsoft.com. Retrieved 2011-08-22.&#160;
+^ Kilby, J., "Miniaturized electronic circuits", US 3138743&#160;, issued June 23, 1964 (filed February 6, 1959).
+^ Noyce, R., "Semiconductor device-and-lead structure", US 2981877&#160;, issued April 25, 1961 (filed July 30, 1959).
+^ Wanlass, F., "Low stand-by power complementary field effect circuitry", US 3356858&#160;, issued December 5, 1967 (filed June 18, 1963).
+^ Dennard, R., "Field-effect transistor memory", US 3387286&#160;, issued June 4, 1968 (filed July 14, 1967)
+^ Fulford, Benjamin (June 24, 2002). "Unsung hero". Forbes. Retrieved March 18, 2008.&#160;
+^ US 4531203&#160; Fujio Masuoka
+^ Masuoka, F.; Momodomi, M.; Iwata, Y.; Shirota, R. (1987). "New ultra high density EPROM and flash EEPROM with NAND structure cell". Electron Devices Meeting, 1987 International. IEEE. Retrieved January 4, 2013.&#160;
+^ U.S. Patent 4,491,628 "Positive and Negative Working Resist Compositions with Acid-Generating Photoinitiator and Polymer with Acid-Labile Groups Pendant From Polymer Backbone" J.M.J. Fréchet, H. Ito and C.G. Willson 1985.[1]
+^ Ito, H.; Willson, C. G. (1983). "Chemical amplification in the design of dry developing resist material". Polymer Engineering &amp; Science 23 (18): 204.&#160;
+^ Ito, Hiroshi; Willson, C. Grant; Frechet, Jean H. J. (1982). "New UV resists with negative or positive tone". VLSI Technology, 1982. Digest of Technical Papers. Symposium on.&#160;
+^ "Patterning the World: The Rise of Chemically Amplified Photoresists". Chemical Heritage Magazine. 2007-10-01. Retrieved 2014-05-29.&#160;
+^ The Japan Prize Foundation (2013). "Laureates of the Japan Prize". The Japan Prize Foundation. Retrieved 2014-05-20.&#160;
+^ Ito, Hiroshi (2000). "Chemical amplification resists: History and development within IBM" (PDF). IBM Journal of Research and Development. Retrieved 2014-05-20.&#160;
+^ 4458994 A US patent US 4458994 A, Kantilal Jain, Carlton G. Willson, "High resolution optical lithography method and apparatus having excimer laser light source and stimulated Raman shifting", issued 1984-07-10&#160;
+^ Jain, K. et al, "Ultrafast deep-UV lithography with excimer lasers", IEEE Electron Device Lett., Vol. EDL-3, 53 (1982); http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=1482581
+^ Jain, K. "Excimer Laser Lithography", SPIE Press, Bellingham, WA, 1990.
+^ La Fontaine, B., "Lasers and Moore's Law", SPIE Professional, Oct. 2010, p. 20; http://spie.org/x42152.xml
+^ Basting, Dirk; Marowsky, Gerd (December 5, 2005). Excimer Laser Technology. Springer. ISBN&#160;978-3-540-26667-9.&#160;
+^ Basov, N. G. et al., Zh. Eksp. Fiz. i Tekh. Pis’ma. Red. 12, 473(1970).
+^ Lasers in Our Lives / 50 Years of Impact (PDF), U.K. Engineering and Physical Sciences Research Council, retrieved 2011-08-22&#160;
+^ "50 Years Advancing the Laser" (PDF). SPIE. Retrieved 2011-08-22.&#160;
+^ Lai, Jiun-Yu (2000-09-30). "Mechanics, Mechanisms, and Modeling of the Chemical Mechanical Polishing Process" (PDF). Ph.D. Dissertation, Massachusetts Institute of Technology: 20–28. Retrieved 2014-06-03.&#160;
+^ a b Moore, Gordon E. (2003-02-10). "transcription of Gordon Moore's Plenary Address at ISSCC 50th Anniversary" (PDF). transcription "Moore on Moore: no Exponential is forever". 2003 IEEE International Solid-State Circuits Conference. San Francisco, California: ISSCC.&#160;
+^ Steigerwald, J. M. (2008). "Chemical mechanical polish: The enabling technology". 2008 IEEE International Electron Devices Meeting. p.&#160;1. doi:10.1109/IEDM.2008.4796607. ISBN&#160;978-1-4244-2377-4.&#160; "Table1: 1990 enabling multilevel metallization; 1995 enabling STI compact isolation, polysilicon patterning and yield / defect reduction"
+^ "IBM100 – Copper Interconnects: The Evolution of Microprocessors". Retrieved October 17, 2012.&#160;
+^ a b "International Technology Roadmap for Semiconductors". Retrieved 2011-08-22.&#160;
+^ "Moore's Law: "We See No End in Sight," Says Intel's Pat Gelsinger". SYS-CON. 2008-05-01. Retrieved 2008-05-01.&#160;
+^ Strukov, Dmitri B; Snider, Gregory S; Stewart, Duncan R; Williams, Stanley R (2008). "The missing memristor found". Nature 453 (7191): 80–83. Bibcode:2008Natur.453...80S. doi:10.1038/nature06932. PMID&#160;18451858.&#160;
+^ Johnson, Dexter (2010-02-22). "Junctionless Transistor Fabricated from Nanowires". IEEE Spectrum. Retrieved 2010-04-20.&#160;
+^ "Super-small transistor created: Artificial atom powered by single electron". Science Daily. 2011-04-19. Bibcode:2011NatNa...6..343C. doi:10.1038/nnano.2011.56. Retrieved 2011-08-22.&#160;
+^ Kaku, Michio (2010). Physics of the Future. Doubleday. p.&#160;173. ISBN&#160;978-0-385-53080-4.&#160;
+^ Yirka, Bob (2013-05-02). "New nanowire transistors may help keep Moore's Law alive". Phys.org. doi:10.1039/C3NR33738C. Retrieved 2013-08-08.&#160;
+^ "Rejuvenating Moore's Law With Nanotechnology". Forbes. 2007-06-05. Retrieved 2013-08-08.&#160;
+^ "A single-atom transistor". Nature. 2011-12-16. Bibcode:2012NatNa...7..242F. doi:10.1038/nnano.2012.21. Retrieved 2012-01-19.&#160;
+^ http://news.stanford.edu/pr/2014/pr-neurogrid-boahen-engineering-042814.html
+^ "IBM Reports Advance in Shrinking Chip Circuitry". The Wall Street Journal. July 9, 2015. Retrieved July 9, 2015.&#160;
+^ https://www.youtube.com/watch?v=Wgk4U4qVpNY
+^ "Intel, Micron debut 3D XPoint storage technology that's 1,000 times faster than current SSDs". CNET. CBS Interactive.&#160;
+^ "3D Xpoint memory: Faster-than-flash storage unveiled". BBC News.&#160;
+^ "Intel's New Memory Chips Are Faster, Store Way More Data". WIRED. July 28, 2015.&#160;
+^ Dubash, Manek (2005-04-13). "Moore's Law is dead, says Gordon Moore". Techworld. Retrieved 2006-06-24.&#160;
+^ Lloyd, Seth (2000). "Ultimate physical limits to computation". Nature. Retrieved 2011-11-27.&#160;
+^ Krauss, Lawrence M.; Starkman, Glenn D. (2004-05-10). "Universal Limits of Computation". arXiv:astro-ph/0404510.&#160;
+^ Kaku, Michio. "Parallel universes, the Matrix, and superintelligence". Kurzweil. Retrieved 2011-08-22.&#160;
+^ Kumar, Suhas (2012). "Fundamental Limits to Moore's Law". Stanford University.&#160;
+^ "Moore's Law at 40 – Happy birthday". The Economist. 2005-03-23. Retrieved 2006-06-24.&#160;
+^ a b Hilbert, Martin; López, Priscila (2011). "The World’s Technological Capacity to Store, Communicate, and Compute Information". Science 332 (6025): 60–65. Bibcode:2011Sci...332...60H. doi:10.1126/science.1200970. PMID&#160;21310967.&#160; Free access to the study through www.martinhilbert.net/WorldInfoCapacity.html and video animation ideas.economist.com/video/giant-sifting-sound-0
+^ "Technological guideposts and innovation avenuesn", Sahal, Devendra (1985), Research Policy, 14, 61.
+^ a b c Moore, Gordon E. (1995). "Lithography and the future of Moore's law" (PDF). SPIE. Retrieved 2014-05-27.&#160;
+^ Jorgenson, Dale W. (2000). "Information Technology and the U.S. Economy: Presidential Address to the American Economic Association". American Economic Association. CiteSeerX: 10.1.1.198.9555.&#160;
+^ Jorgenson, Dale W.; Ho, Mun S.; Stiroh, Kevin J. (2008). "A Retrospective Look at the U.S. Productivity Growth Resurgence". Journal of Economic Perspectives. Retrieved 2014-05-15.&#160;
+^ Grimm, Bruce T.; Moulton, Brent R.; Wasshausen, David B. (2002). "Information Processing Equipment and Software in the National Accounts" (PDF). U.S. Department of Commerce Bureau of Economic Analysis. Retrieved 2014-05-15.&#160;
+^ "Nonfarm Business Sector: Real Output Per Hour of All Persons". Federal Reserve Bank of St. Louis Economic Data. 2014. Retrieved 2014-05-27.&#160;
+^ Anderson, Richard G. (2007). "How Well Do Wages Follow Productivity Growth?" (PDF). Federal Reserve Bank of St. Louis Economic Synopses. Retrieved 2014-05-27.&#160;
+^ Nikonov, Dmitri E.; Young, Ian A. (2013-02-01). "Overview of Beyond-CMOS Devices and A Uniform Methodology for Their Benchmarking". Cornell University Library. arXiv:1302.0244.&#160;
+^ Manipatruni, Sasikanth; Nikonov, Dmitri E.; Young, Ian A. (2012-12-13). "Material Targets for Scaling All Spin Logic". Cornell University Library. arXiv:1212.3362.&#160;
+^ "Proposal for an all-spin logic device with built-in memory". Nature Nanotechnology. 2010-02-28. Retrieved 2013-08-08.&#160;
+^ See Herb Sutter,The Free Lunch Is Over: A Fundamental Turn Toward Concurrency in Software, Dr. Dobb's Journal, 30(3), March 2005. Retrieved November 21, 2011.
+^ Shimpi, Anand Lal (2004-07-21). "AnandTech: Intel's 90nm Pentium M 755: Dothan Investigated". Anadtech. Retrieved 2007-12-12.&#160;
+^ "Parallel JavaScript". Intel. 2011-09-15. Retrieved 2013-08-08.&#160;
+^ Standborn, Peter (April 2008). "Trapped on Technology's Trailing Edge". IEEE Spectrum. Retrieved 2011-11-27.&#160;
+^ "WEEE – Combating the obsolescence of computers and other devices". SAP Community Network. 2012-12-14. Retrieved 2013-08-08.&#160;
+^ Malone, Michael S. (March 27, 2003). "Silicon Insider: Welcome to Moore's War". ABC News. Retrieved 2011-08-22.&#160;
+^ Zygmont, Jeffrey (2003). Microchip. Cambridge, MA, USA: Perseus Publishing. pp.&#160;154–169. ISBN&#160;0-7382-0561-3.&#160;
+^ Lipson, Hod (2013). Fabricated: The New World of 3D Printing. Indianapolis, IN, USA: John Wiley &amp; Sons. ISBN&#160;978-1-118-35063-8.&#160;
+^ Stokes, Jon (2008-09-27). "Understanding Moore's Law". Ars Technica. Retrieved 2011-08-22.&#160;
+^ Borkar, Shekhar; Chien, Andrew A. (May 2011). "The Future of Microprocessors". Communications of ACM 54 (5). Retrieved 2011-11-27.&#160;
+^ a b McMenamin, Adrian (April 15, 2013). "The end of Dennard scaling". Retrieved January 23, 2014.&#160;
+^ a b Bohr, Mark (January 2007). "A 30 Year Retrospective on Dennard's MOSFET Scaling Paper" (PDF). Solid-State Circuits Society. Retrieved January 23, 2014.&#160;
+^ Esmaeilzedah, Hadi; Blem, Emily; St. Amant, Renee; Sankaralingam, Kartikeyan; Burger, Doug. "Dark Silicon and the end of multicore scaling" (PDF).&#160;
+^ Hruska, Joel (February 1, 2012). "The death of CPU scaling: From one core to many — and why we’re still stuck". ExtremeTech. Retrieved January 23, 2014.&#160;
+^ Mistry, Kaizad (2011). "Tri-Gate Transistors: Enabling Moore’s Law at 22nm and Beyond" (PDF). Intel Corporation at semiconwest.org. Retrieved 2014-05-27.&#160;
+^ a b "Private fixed investment, chained price index: Nonresidential: Equipment: Information processing equipment: Computers and peripheral equipment". Federal Reserve Bank of St. Louis. 2014. Retrieved 2014-05-12.&#160;
+^ Nambiar, Raghunath; Poess, Meikel (2011). "Transaction Performance vs. Moore's Law: A Trend Analysis". Springer.&#160;
+^ Feroli, Michael (2013). "US: is I.T. over?" (PDF). JPMorgan Chase Bank NA Economic Research. Retrieved 2014-05-15.&#160;
+^ a b c Aizcorbe, Ana; Oliner, Stephen D.; Sichel, Daniel E. (2006). "Shifting Trends in Semiconductor Prices and the Pace of Technological Progress". The Federal Reserve Board Finance and Economics Discussion Series. Retrieved 2014-05-15.&#160;
+^ Aizcorbe, Ana (2005). "Why Are Semiconductor Price Indexes Falling So Fast? Industry Estimates and Implications for Productivity Measurement" (PDF). U.S. Department of Commerce Bureau of Economic Analysis. Retrieved 2014-05-15.&#160;
+^ Sun, Liyang (2014-04-25). "What We Are Paying for: A Quality Adjusted Price Index for Laptop Microprocessors". Wellesley College. Retrieved 2014-11-07. ... compared with −25% to −35% per year over 2004–2010, the annual decline plateaus around −15% to −25% over 2010–2013.&#160;
+^ Aizcorbe, Ana; Kortum, Samuel (2004). "Moore’s Law and the Semiconductor Industry: A Vintage Model" (PDF). U.S. Department of Commerce Bureau of Economic Analysis. Retrieved 2014-05-27.&#160;
+^ Markoff, John (2004). "Intel's Big Shift After Hitting Technical Wall". New York Times. Retrieved 2014-05-27.&#160;
+^ James, Dick. "Intel’s 14-nm Parts are Finally Here!", chipworks.com, October 27, 2014. Retrieved on November 5, 2014.
+^ Bohr, Mark (2009). "The New Era of Scaling in an SoC World" (PDF). UCSD. Intel. Retrieved 2014-06-04.&#160;
+^ Bohr, Mark (2012). "Silicon Technology Leadership for the Mobility Era" (PDF). Intel Corporation. Retrieved 2014-06-04.&#160;
+^ Saraswat, Krishna (2002). "Scaling of Interconnections (course notes)" (PDF). Stanford University. Retrieved 2014-06-04. Memories ... don’t need too many interconnects. Logic chips are more irregular and are dominated by communication requirements...generally have larger number of interconnects and thus need more levels of them.&#160;
+^ Bruce Jacob, Spencer Ng, David Wang. "Memory systems: cache, DRAM, disk". 2007. Section 8.10.2. "Comparison of DRAM-optimized process versus a logic-optimized process". Page 376. [2]
+^ Young Choi. "Battle commences in 50nm DRAM arena". 2009. [3]
+^ Walter, Chip (2005-07-25). "Kryder's Law". Scientific American ((Verlagsgruppe Georg von Holtzbrinck GmbH)). Retrieved 2006-10-29.&#160;
+^ Plumer et. al, Martin L. (March 2011). "New Paradigms in Magnetic Recording" (PDF). Physics in Canada 67 (1): 25–29. Retrieved July 17, 2014.&#160;
+^ Mellor, Chris (2014-11-10). "Kryder's law craps out: Race to UBER-CHEAP STORAGE is OVER". theregister.co.uk (UK: The Register). Retrieved 2014-11-12. Currently 2.5-inch drives are at 500GB/platter with some at 600GB or even 667GB/platter – a long way from 20TB/platter. To reach 20TB by 2020, the 500GB/platter drives will have to increase areal density 44 times in six years. It isn't going to happen. ... Rosenthal writes: "The technical difficulties of migrating from PMR to HAMR, meant that already in 2010 the Kryder rate had slowed significantly and was not expected to return to its trend in the near future. The floods reinforced this."&#160;
+^ "Gerald Butters is a communications industry veteran". Forbes.com. Archived from the original on 2007-10-12.&#160;
+^ "Board of Directors". LAMBDA OpticalSystems. Retrieved 2011-08-22.&#160;
+^ Tehrani, Rich. "As We May Communicate". Tmcnet.com. Retrieved 2011-08-22.&#160;
+^ Robinson, Gail (2000-09-26). "Speeding net traffic with tiny mirrors". EE Times. Retrieved 2011-08-22.&#160;
+^ Nielsen, Jakob (1998-04-05). "Nielsen's Law of Internet Bandwidth". Alertbox. Retrieved 2011-08-22.&#160;
+^ Switkowski, Ziggy (2009-04-09). "Trust the power of technology". The Australian. Retrieved 2013-12-02.&#160;
+^ Günsirer, Emin; Farrow, Rik. "Some Lesser-Known Laws of Computer Science" (PDF). Retrieved 2013-12-02.&#160;
+^ "Using Moore’s Law to Predict Future Memory Trends". 2011-11-21. Retrieved 2013-12-02.&#160;
+^ Kennedy, Randall C. (2008-04-14). "Fat, fatter, fattest: Microsoft's kings of bloat". InfoWorld. Retrieved 2011-08-22.&#160;
+^ Rider (1944). The Scholar and the Future of the Research Library. New York City: Hadham Press.&#160;
+^ Life 2.0. (August 31, 2006). The Economist
+^ Carlson, Robert H. (2010). "Biology Is Technology: The Promise, Peril, and New Business of Engineering Life". Cambridge, MA: Harvard UP.&#160;
+^ Carlson, Robert (September 2003). "The Pace and Proliferation of Biological Technologies". Biosecurity and Bioterrorism: Biodefense Strategy, Practice, and Science 1 (3): 203–214. doi:10.1089/153871303769201851.&#160;
+
+
+Further reading[edit]
+
+Moore's Law: The Life of Gordon Moore, Silicon Valley's Quiet Revolutionary. Arnold Thackray, David C. Brock, and Rachel Jones. New York: Basic Books, (May) 2015.
+Understanding Moore's Law: Four Decades of Innovation. Edited by David C. Brock. Philadelphia: Chemical Heritage Press, 2006. ISBN 0-941901-41-6. OCLC&#160;66463488.
+
+External links[edit]
+
+
+
+Wikibooks has a book on the topic of: The Information Age
+
+
+
+Intel press kit – released for Moore's Law's 40th anniversary, with a 1965 sketch by Moore
+The Lives and Death of Moore's Law – by Ilkka Tuomi; a detailed study on Moore's Law and its historical evolution and its criticism by Kurzweil
+No Technology has been more disruptive... Slide show of microchip growth
+Intel (IA-32) CPU speeds 1994–2005 – speed increases in recent years have seemed to slow down with regard to percentage increase per year (available in PDF or PNG format)
+Current Processors Chart
+International Technology Roadmap for Semiconductors (ITRS)
+Gordon Moore His Law and Integrated Circuit, Dream 2047 October 2006
+A C|net FAQ about Moore's Law
+ASML's 'Our Stories', Gordon Moore about Moore's Law, ASML Holding
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Computer laws
+
+
+
+
+
+
+
+
+
+Amdahl's law
+Bell's law
+Grosch's law
+Gustafson's law
+Haitz's law
+Koomey's law
+Metcalfe's law
+Moore's law
+Pollack's Rule
+Rock's law
+Wirth's law
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Emerging technologies
+
+
+
+
+
+
+
+Technology
+
+
+
+
+
+
+Fields
+
+
+
+
+Agriculture
+
+
+
+Agricultural robot
+Closed ecological systems
+In vitro meat
+Genetically modified food
+Precision agriculture
+Vertical farming
+
+
+
+
+
+
+
+
+Architecture
+
+
+
+Arcology
+Building printing
+
+Contour crafting
+D-Shape
+
+
+Domed city
+
+
+
+
+
+
+
+
+Biomedical
+
+
+
+Artificial uterus
+Ampakine
+Brain transplant
+Cryonics
+Cryoprotectant
+
+Vitrification
+
+
+De-extinction
+
+Cryopreservation
+
+
+Genetic engineering
+
+Gene therapy
+
+
+Head transplant
+Isolated brain
+Life extension
+
+Strategies for Engineered Negligible Senescence
+
+
+Nanomedicine
+Nanosensors
+Personalized medicine
+Regenerative medicine
+
+Stem-cell therapy
+Tissue engineering
+
+
+Robot-assisted surgery
+Suspended animation
+Synthetic biology
+
+Synthetic genomics
+
+
+Virotherapy
+
+Oncolytic virus
+
+
+Tricorder
+Whole genome sequencing
+
+
+
+
+
+
+
+
+Displays
+
+
+
+
+Next generation
+
+
+
+FED
+FLD
+iMoD
+Laser
+LPD
+OLED
+OLET
+QD-LED
+SED
+TPD
+TDEL
+TMOS
+
+
+
+
+
+
+
+
+Screenless
+
+
+
+Bionic contact lens
+Head-mounted display
+Head-up display
+Optical head-mounted display
+Virtual retinal display
+
+
+
+
+
+
+
+
+Other
+
+
+
+Autostereoscopy
+Flexible display
+Holographic display
+
+Computer-generated holography
+
+
+Multi-primary color display
+Ultra HD
+Volumetric display
+
+
+
+
+
+
+
+
+
+
+
+Electronics
+
+
+
+Electronic nose
+E-textiles
+Flexible electronics
+Molecular electronics
+Nanoelectromechanical systems
+Memristor
+Spintronics
+Thermal copper pillar bump
+
+
+
+
+
+
+
+
+Energy
+
+
+
+
+Production
+
+
+
+Airborne wind turbine
+Artificial photosynthesis
+Biofuels
+Carbon-neutral fuel
+Concentrated solar power
+Fusion power
+Home fuel cell
+Hydrogen economy
+Methanol economy
+Molten salt reactor
+Nantenna
+Photovoltaic pavement
+Space-based solar power
+Vortex engine
+
+
+
+
+
+
+
+
+Storage
+
+
+
+Beltway battery
+Compressed air energy storage
+Flywheel energy storage
+Grid energy storage
+Lithium–air battery
+Molten salt battery
+Nanowire battery
+Research in lithium-ion batteries
+Silicon–air battery
+Thermal energy storage
+Ultracapacitor
+
+
+
+
+
+
+
+
+Other
+
+
+
+Smart grid
+Wireless power
+
+
+
+
+
+
+
+
+
+
+
+
+IT and
+communications
+
+
+
+
+Ambient intelligence
+
+Internet of Things
+
+
+Artificial intelligence
+
+Applications of artificial intelligence
+Progress in artificial intelligence
+Machine translation
+Machine vision
+Semantic Web
+Speech recognition
+
+
+Atomtronics
+Carbon nanotube field-effect transistor
+Cybermethodology
+Fourth-generation optical discs
+
+3D optical data storage
+Holographic data storage
+
+
+GPGPU
+Memory
+
+CBRAM
+FRAM
+Millipede
+MRAM
+NRAM
+PRAM
+Racetrack memory
+RRAM
+SONOS
+
+
+Optical computing
+Quantum computing
+Quantum cryptography
+RFID
+
+Chipless RFID
+
+
+Software-defined radio
+Three-dimensional integrated circuit
+
+
+
+
+
+
+
+
+Manufacturing
+
+
+
+3D printing
+Claytronics
+Molecular assembler
+Utility fog
+
+
+
+
+
+
+
+
+Materials science
+
+
+
+Aerogel
+Amorphous metal
+Artificial muscle
+Conductive polymer
+Femtotechnology
+Fullerene
+Graphene
+High-temperature superconductivity
+High-temperature superfluidity
+Linear acetylenic carbon
+Metamaterials
+
+Metamaterial cloaking
+
+
+Metal foam
+Multi-function structures
+Nanotechnology
+
+Carbon nanotubes
+Molecular nanotechnology
+Nanomaterials
+
+
+Picotechnology
+Programmable matter
+Quantum dots
+Silicene
+Superalloy
+Synthetic diamond
+
+
+
+
+
+
+
+
+Military
+
+
+
+Antimatter weapon
+Caseless ammunition
+Directed-energy weapon
+
+Laser
+Maser
+Particle-beam weapon
+Sonic weapon
+Coilgun
+Railgun
+
+
+Plasma weapon
+Pure fusion weapon
+Stealth technology
+Vortex ring gun
+
+
+
+
+
+
+
+
+Neuroscience
+
+
+
+Artificial brain
+
+Blue Brain Project
+
+
+Brain–computer interface
+Electroencephalography
+Mind uploading
+
+Brain-reading
+Neuroinformatics
+
+
+Neuroprosthetics
+
+Bionic eye
+Brain implant
+Exocortex
+Retinal implant
+
+
+
+
+
+
+
+
+
+
+Robotics
+
+
+
+Domotics
+Nanorobotics
+Powered exoskeleton
+Self-reconfiguring modular robot
+Swarm robotics
+Uncrewed vehicle
+
+
+
+
+
+
+
+
+Space science
+
+
+
+
+Launch
+
+
+
+Fusion rocket
+Non-rocket spacelaunch
+
+Mass driver
+Orbital ring
+Space elevator
+Space fountain
+Space tether
+
+
+Reusable launch system
+
+
+
+
+
+
+
+
+Propulsion
+
+
+
+Beam-powered propulsion
+Ion thruster
+Laser propulsion
+Plasma propulsion engine
+
+Helicon thruster
+VASIMR
+
+
+Project Orion
+Nuclear pulse propulsion
+RF resonant cavity thruster
+Solar sail
+Warp drive
+
+
+
+
+
+
+
+
+Other
+
+
+
+Interstellar travel
+Propellant depot
+
+
+
+
+
+
+
+
+
+
+
+Transport
+
+
+
+
+Aerial
+
+
+
+Adaptive compliant wing
+Aeroscraft
+Backpack helicopter
+Delivery drone
+Flying car
+High-altitude platform
+Jet pack
+Pulse detonation engine
+Scramjet
+Spaceplane
+
+Skylon
+
+
+Supersonic transport
+
+
+
+
+
+
+
+
+Land
+
+
+
+Airless tire
+
+Tweel
+
+
+Alternative fuel vehicle
+
+Hydrogen vehicle
+
+
+Driverless car
+Ground effect train
+Maglev train
+Personal rapid transit
+Vactrain
+
+ET3 Global Alliance
+Hyperloop
+
+
+Vehicular communication systems
+
+
+
+
+
+
+
+
+Pipeline
+
+
+
+Pneumatic transport
+
+Automated vacuum collection
+Foodtubes
+
+
+
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Anti-gravity
+Cloak of invisibility
+Digital scent technology
+Force field
+
+Plasma window
+
+
+Immersive virtual reality
+
+VirtuSphere
+
+
+Magnetic refrigeration
+Phased-array optics
+Quantum technology
+
+Quantum teleportation
+
+
+
+
+
+
+
+
+
+
+
+
+
+Topics
+
+
+
+Collingridge dilemma
+Differential technological development
+Ephemeralization
+Exploratory engineering
+Fictional technology
+Proactionary principle
+Technological change
+
+Technological unemployment
+
+
+Technological convergence
+Technological evolution
+Technological paradigm
+Technology forecasting
+
+Accelerating change
+Moore's law
+Technological singularity
+Technology scouting
+
+
+Technology readiness level
+Technology roadmap
+Transhumanism
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ List
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Moore%27s_law&amp;oldid=690299186"					
+				Categories: Electronic designFuturologyHistory of computing hardwareRules of thumb1965 introductionsHidden categories: Articles containing potentially dated statements from 2001All articles containing potentially dated statements				
+							
+		
+		
+			

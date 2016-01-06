@@ -1,0 +1,131 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Variable (computer science)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (November 2009)
+
+
+In computer programming, a variable or scalar is a storage location paired with an associated symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a value. The variable name is the usual way to reference the stored value; this separation of name and content allows the name to be used independently of the exact information it represents. The identifier in computer source code can be bound to a value during run time, and the value of the variable may thus change during the course of program execution.
+Variables in programming may not directly correspond to the concept of variables in mathematics. The value of a computing variable is not necessarily part of an equation or formula as in mathematics. In computing, a variable may be employed in a repetitive process — assigned a value in one place, then used elsewhere, then reassigned a new value and used again in the same way (see iteration). Variables in computer programming are frequently given long names to make them relatively descriptive of their use, whereas variables in mathematics often have terse, one- or two-character names for brevity in transcription and manipulation.
+A variable storage location may be referred by several different identifiers, a situation known as aliasing. Assigning a value to the variable using one of the identifiers will change the value that can be accessed through the other identifiers.
+Compilers have to replace variables' symbolic names with the actual locations of the data. While a variable's name, type, and location often remain fixed, the data stored in the location may be changed during program execution.
+
+
+
+Contents
+
+
+1 Actions on a variable
+2 Identifiers referencing a variable
+3 Scope and extent
+4 Typing
+5 Parameters
+6 Memory allocation
+7 Naming conventions
+8 In spreadsheets
+9 See also
+10 Notes
+11 References
+
+
+
+Actions on a variable[edit]
+In imperative programming languages, values can generally be accessed or changed at any time. However, in pure functional and logic languages, variables are bound to expressions and keep a single value during their entire lifetime due to the requirements of referential transparency. In imperative languages, the same behavior is exhibited by constants, which are typically contrasted with normal variables.
+Depending on the type system of a programming language, variables may only be able to store a specified datatype (e.g. integer or string). Alternatively, a datatype may be associated only with the current value, allowing a single variable to store anything supported by the programming language.
+Identifiers referencing a variable[edit]
+An identifier referencing a variable can be used to access the variable in order to read out the value, or alter the value, or edit the attributes of the variable, such as access permission, locks, semaphores, etc.
+For instance, a variable might be referenced by the identifier "total_count" and the variable can contain the number 1956. If the same variable is referenced by the identifier "x" as well, and if using this identifier "x", the value of the variable is altered to 2009, then reading the value using the identifier "total_count" will yield a result of 2009 and not 1956.
+If a variable is only referenced by a single identifier that can simply be called the name of the variable. Otherwise, we can speak of one of the names of the variable. For instance, in the previous example, the "total_count" is a name of the variable in question, and "x" is another name of the same variable.
+Scope and extent[edit]
+See also: Free variables and bound variables
+The scope of a variable describes where in a program's text the variable may be used, while the extent (or lifetime) describes when in a program's execution a variable has a (meaningful) value. The scope of a variable is actually a property of the name of the variable, and the extent is a property of the variable itself. These should not be confused with context (also called environment), which is a property of the program, and varies by point in the source code or execution – see scope: overview. Further, object lifetime may coincide with variable lifetime, but in many cases is not tied to variable lifetime.
+A variable name's scope affects its extent.
+Scope is an important part of the name resolution of a variable. Most languages define a specific scope for each variable (as well as any other named entity), which may differ within a given program. The scope of a variable is the portion of the program code for which the variable's name has meaning and for which the variable is said to be "visible". Entrance into that scope typically begins a variable's lifetime (as it comes into context) and exit from that scope typically ends its lifetime (as it goes out of context). For instance, a variable with "lexical scope" is meaningful only within a certain function/subroutine, or more finely within a block of expressions/statements (accordingly with function scope or block scope); this is static resolution, performable at parse-time or compile-time. Alternatively, a variable with dynamic scope is resolved at run-time, based on a global binding stack that depends on the specific control flow. Variables only accessible within a certain functions are termed "local variables". A "global variable", or one with indefinite scope, may be referred to anywhere in the program.
+Extent, on the other hand, is a runtime (dynamic) aspect of a variable. Each binding of a variable to a value can have its own extent at runtime. The extent of the binding is the portion of the program's execution time during which the variable continues to refer to the same value or memory location. A running program may enter and leave a given extent many times, as in the case of a closure.
+Unless the programming language features garbage collection, a variable whose extent permanently outlasts its scope can result in a memory leak, whereby the memory allocated for the variable can never be freed since the variable which would be used to reference it for deallocation purposes is no longer accessible. However, it can be permissible for a variable binding to extend beyond its scope, as occurs in Lisp closures and C static local variables; when execution passes back into the variable's scope, the variable may once again be used. A variable whose scope begins before its extent does is said to be uninitialized and often has an undefined, arbitrary value if accessed (see wild pointer), since it has yet to be explicitly given a particular value. A variable whose extent ends before its scope may become a dangling pointer and deemed uninitialized once more since its value has been destroyed. Variables described by the previous two cases may be said to be out of extent or unbound. In many languages, it is an error to try to use the value of a variable when it is out of extent. In other languages, doing so may yield unpredictable results. Such a variable may, however, be assigned a new value, which gives it a new extent.
+For space efficiency, a memory space needed for a variable may be allocated only when the variable is first used and freed when it is no longer needed. A variable is only needed when it is in scope, but beginning each variable's lifetime when it enters scope may give space to unused variables. To avoid wasting such space, compilers often warn programmers if a variable is declared but not used.
+It is considered good programming practice to make the scope of variables as narrow as feasible so that different parts of a program do not accidentally interact with each other by modifying each other's variables. Doing so also prevents action at a distance. Common techniques for doing so are to have different sections of a program use different name spaces, or to make individual variables "private" through either dynamic variable scoping or lexical variable scoping.
+Many programming languages employ a reserved value (often named null or nil) to indicate an invalid or uninitialized variable.
+Typing[edit]
+Main article: Type system
+See also: Datatype
+In statically typed languages such as Java or ML, a variable also has a type, meaning that only certain kinds of values can be stored in it. For example, a variable of type "integer" is prohibited from storing text values.
+In dynamically typed languages such as Python, it is values, not variables, which carry type. In Common Lisp, both situations exist simultaneously: A variable is given a type (if undeclared, it is assumed to be T, the universal supertype) which exists at compile time. Values also have types, which can be checked and queried at runtime.
+Typing of variables also allows polymorphisms to be resolved at compile time. However, this is different from the polymorphism used in object-oriented function calls (referred to as virtual functions in C++) which resolves the call based on the value type as opposed to the supertypes the variable is allowed to have.
+Variables often store simple data, like integers and literal strings, but some programming languages allow a variable to store values of other datatypes as well. Such languages may also enable functions to be parametric polymorphic. These functions operate like variables to represent data of multiple types. For example, a function named length may determine the length of a list. Such a length function may be parametric polymorphic by including a type variable in its type signature, since the amount of elements in the list is independent of the elements' types.
+Parameters[edit]
+The formal parameters of functions are also referred to as variables. For instance, in this Python code segment,
+
+
+def addtwo(x):
+    return x + 2
+
+addtwo(5)  # yields 7
+
+The variable named x is a parameter because it is given a value when the function is called. The integer 5 is the argument which gives x its value. In most languages, function parameters have local scope. This specific variable named x can only be referred to within the addtwo function (though of course other functions can also have variables called x).
+Memory allocation[edit]
+The specifics of variable allocation and the representation of their values vary widely, both among programming languages and among implementations of a given language. Many language implementations allocate space for local variables, whose extent lasts for a single function call on the call stack, and whose memory is automatically reclaimed when the function returns. More generally, in name binding, the name of a variable is bound to the address of some particular block (contiguous sequence) of bytes in memory, and operations on the variable manipulate that block. Referencing is more common for variables whose values have large or unknown sizes when the code is compiled. Such variables reference the location of the value instead of storing the value itself, which is allocated from a pool of memory called the heap.
+Bound variables have values. A value, however, is an abstraction, an idea; in implementation, a value is represented by some data object, which is stored somewhere in computer memory. The program, or the runtime environment, must set aside memory for each data object and, since memory is finite, ensure that this memory is yielded for reuse when the object is no longer needed to represent some variable's value.
+Objects allocated from the heap must be reclaimed—especially when the objects are no longer needed. In a garbage-collected language (such as C#, Java, and Lisp), the runtime environment automatically reclaims objects when extant variables can no longer refer to them. In non-garbage-collected languages, such as C, the program (and the programmer) must explicitly allocate memory, and then later free it, to reclaim its memory. Failure to do so leads to memory leaks, in which the heap is depleted as the program runs, risks eventual failure from exhausting available memory.
+When a variable refers to a data structure created dynamically, some of its components may be only indirectly accessed through the variable. In such circumstances, garbage collectors (or analogous program features in languages that lack garbage collectors) must deal with a case where only a portion of the memory reachable from the variable needs to be reclaimed.
+Naming conventions[edit]
+Main article: Naming conventions (programming)
+See also: Identifier and Namespace
+Unlike their mathematical counterparts, programming variables and constants commonly take multiple-character names, e.g. COST or total. Single-character names are most commonly used only for auxiliary variables; for instance, i, j, k for array index variables.
+Some naming conventions are enforced at the language level as part of the language syntax and involve the format of valid identifiers. In almost all languages, variable names cannot start with a digit (0–9) and cannot contain whitespace characters. Whether, which, and when punctuation marks are permitted in variable names varies from language to language; many languages only permit the underscore ("_") in variable names and forbid all other punctuation. In some programming languages, specific (often punctuation) characters (known as sigils) are prefixed or appended to variable identifiers to indicate the variable's type.
+Case-sensitivity of variable names also varies between languages and some languages require the use of a certain case in naming certain entities;[note 1] Most modern languages are case-sensitive; some older languages are not. Some languages reserve certain forms of variable names for their own internal use; in many languages, names beginning with two underscores ("__") often fall under this category.
+However, beyond the basic restrictions imposed by a language, the naming of variables is largely a matter of style. At the machine code level, variable names are not used, so the exact names chosen do not matter to the computer. Thus names of variables identify them, for the rest they are just a tool for programmers to make programs easier to write and understand. Using poorly chosen variable names can make code more difficult to review than non-descriptive names, so names which are clear are often encouraged.[1]
+Programmers often create and adhere to code style guidelines which offer guidance on naming variables or impose a precise naming scheme. Shorter names are faster to type but are less descriptive; longer names often make programs easier to read and the purpose of variables easier to understand. However, extreme verbosity in variable names can also lead to less comprehensible code.
+In spreadsheets[edit]
+In a spreadsheet, a cell may contain a formula with references to other cells. Such a cell reference is a kind of variable; its value is the value of the referenced cell (see also: reference (computer science)).
+See also[edit]
+
+Non-local variable
+Variable interpolation
+Control variable (programming)
+
+Notes[edit]
+
+
+^ For example, Haskell requires that names of types start with a capital letter.
+
+
+References[edit]
+
+
+^ How Not To Pick Variables, Retrieved July 11, 2012.
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Variable_(computer_science)&amp;oldid=688924157"					
+				Categories: Variable (computer science)Programming language conceptsData typesType theoryHidden categories: Articles needing additional references from November 2009All articles needing additional references				
+							
+		
+		
+			

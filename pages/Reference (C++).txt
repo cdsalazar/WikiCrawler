@@ -1,0 +1,251 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Reference (C++)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (November 2013)
+
+
+In the C++ programming language, a reference is a simple reference datatype that is less powerful but safer than the pointer type inherited from C. The name C++ reference may cause confusion, as in computer science a reference is a general concept datatype, with pointers and C++ references being specific reference datatype implementations. The definition of a reference in C++ is such that it does not need to exist. It can be implemented as a new name for an existing object (similar to rename keyword in Ada).
+
+
+
+Contents
+
+
+1 Syntax and terminology
+2 Relationship to pointers
+3 Analogies
+4 Uses of references
+5 Polymorphic behaviour
+6 ISO definition
+7 External links
+8 References
+
+
+
+Syntax and terminology[edit]
+The declaration of the form:
+
+&lt;Type&gt; &amp; &lt;Name&gt;
+
+where &lt;Type&gt; is a type and &lt;Name&gt; is an identifier whose type is reference to &lt;Type&gt;.
+Examples:
+
+int A = 5;
+int&amp; rA = A;
+
+
+extern int&amp; rB;
+
+Here, rA and rB are of type "reference to int"
+
+int&amp; foo ();
+
+foo() is a function that returns a "reference to int"
+
+void bar (int&amp; rP);
+
+bar() is a function with a reference parameter, which is a "reference to int"
+
+class MyClass { int&amp; m_b; /* ... */ };
+
+MyClass is a class with a member which is reference to int
+
+int funcX() { return 42 ; }; int (&amp;xFunc)() = funcX;
+
+funcX() is a function that returns a (non-reference type) int and xFunc() is an alias for funcX
+
+const int&amp; ref = 65;
+
+const int&amp; ref is a constant reference pointing to a piece of storage having value 65.
+Types which are of kind "reference to &lt;Type&gt;" are sometimes called reference types. Identifiers which are of reference type are called reference variables. To call them variable, however, is in fact a misnomer, as we will see.
+Relationship to pointers[edit]
+C++ references differ from pointers in several essential ways:
+
+It is not possible to refer directly to a reference object after it is defined; any occurrence of its name refers directly to the object it references.
+Once a reference is created, it cannot be later made to reference another object; it cannot be reseated. This is often done with pointers.
+References cannot be null, whereas pointers can; every reference refers to some object, although it may or may not be valid. Note that for this reason, containers of references are not allowed.
+References cannot be uninitialized. Because it is impossible to reinitialize a reference, they must be initialized as soon as they are created. In particular, local and global variables must be initialized where they are defined, and references which are data members of class instances must be initialized in the initializer list of the class's constructor. For example:
+
+
+
+
+int&amp; k; // compiler will complain: error: `k' declared as reference but not initialized
+
+
+
+
+
+There is a simple conversion between pointers and references: the address-of operator (&amp;) will yield a pointer referring to the same object when applied to a reference, and a reference which is initialized from the dereference (*) of a pointer value will refer to the same object as that pointer, where this is possible without invoking undefined behavior. This equivalence is a reflection of the typical implementation, which effectively compiles references into pointers which are implicitly dereferenced at each use. Though that is usually the case, the C++ Standard does not force compilers to implement references using pointers.
+A consequence of this is that in many implementations, operating on a variable with automatic or static lifetime through a reference, although syntactically similar to accessing it directly, can involve hidden dereference operations that are costly.
+Also, because the operations on references are so limited, they are much easier to understand than pointers and are more resistant to errors. While pointers can be made invalid through a variety of mechanisms, ranging from carrying a null value to out-of-bounds arithmetic to illegal casts to producing them from random integers, a previously-valid reference only becomes invalid in two cases:
+
+If it refers to an object with automatic allocation which goes out of scope,
+If it refers to an object inside a block of dynamic memory which has been freed.
+
+The first is easy to detect automatically if the reference has static scoping, but is still a problem if the reference is a member of a dynamically allocated object; the second is more difficult to assure. These are the only concern with references, and are suitably addressed by a reasonable allocation policy.
+Analogies[edit]
+
+References can be thought of as "Symbolic links" in file system terminology. Symbolic links can be modified as though they were the file they were linked to and when a symbolic link is deleted the original file remains. Similarly, references can be deleted (whether by going out of scope or explicitly being removed if they were allocated in heap) and the original object that was referenced remains. Similarly, once a symbolic link has been created it can never be changed.[1]
+
+Uses of references[edit]
+
+Other than just a helpful replacement for pointers, one convenient application of references is in function parameter lists, where they allow passing of parameters used for output with no explicit address-taking by the caller. For example:
+
+
+
+void square(int x, int&amp; result) 
+{
+
+    result = x * x;
+
+}
+
+Then, the following call would place 9 in y:
+
+
+square(3, y);
+
+However, the following call would give a compiler error, since reference parameters not qualified with const can only be bound to addressable values:
+
+
+square(3, 6);
+
+
+Returning a reference allows function calls to be assigned to:
+
+
+
+int&amp; preinc(int&amp; x) 
+{
+
+    return ++x;  // "return x++;" would have been wrong
+
+}
+
+preinc(y) = 5; // same as ++y, y = 5
+
+
+In many implementations, normal parameter-passing mechanisms often imply an expensive copy operation for large parameters. References qualified with const are a useful way of passing large objects between functions that avoids this overhead:
+
+
+
+void f_slow(BigObject x) { /* ... */ }  
+void f_fast(const BigObject&amp; x) { /* ... */ }
+
+BigObject y;
+
+f_slow(y); // slow, copies y to parameter x
+f_fast(y); // fast, gives direct read-only access to y
+
+If f_fast() actually requires its own copy of x that it can modify, it must create a copy explicitly. While the same technique could be applied using pointers, this would involve modifying every call site of the function to add cumbersome address-of (&amp;) operators to the argument, and would be equally difficult to undo, if the object became smaller later on.
+Polymorphic behaviour[edit]
+Continuing the relationship between references and pointers (in C++ context), the former exhibit polymorphic capabilities, as one might expect:
+
+
+#include &lt;iostream&gt;
+
+using namespace std;
+
+class A
+{
+
+    public:
+
+	A() {}
+	virtual void print() { cout &lt;&lt; "This is class A\n"; }
+
+};
+
+class B: public A
+{
+
+    public:
+
+	B() {}
+	virtual void print() { cout &lt;&lt; "This is class B\n"; }
+
+};
+
+int main()
+{
+
+	A a;
+	A&amp; refToa = a;
+
+	B b;
+	A&amp; refTob = b;
+
+	refToa.print();
+	refTob.print();
+
+	return 0;
+}
+
+The source above is valid C++ and generates the following output:
+This is class A
+This is class B
+ISO definition[edit]
+References are defined by the ISO C++ standard as follows (excluding the example section):
+
+In a declaration T D where D has the form
+
+
+&amp; D1
+
+and the type of the identifier in the declaration T D1 is “derived-declarator-type-list T,” then the type of the identifier of D is “derived-declarator-type-list reference to T.” Cv-qualified references are ill-formed except when the cv-qualifiers (const and volatile) are introduced through the use of a typedef (7.1.3) or of a template type argument (14.3), in which case the cv-qualifiers are ignored. [Example: in
+
+
+typedef int&amp; A;
+const A aref = 3; // ill-formed;
+// non-const reference initialized with rvalue
+
+the type of aref is “reference to int”, not “const reference to int”. ] [Note: a reference can be thought of as a name of an object. ] A declarator that specifies the type “reference to cv void” is ill-formed.
+It is unspecified whether or not a reference requires storage (3.7).
+There shall be no references to references, no arrays of references, and no pointers to references. The declaration of a reference shall contain an initializer (8.5.3) except when the declaration contains an explicit extern specifier (7.1.1), is a class member (9.2) declaration within a class declaration, or is the declaration of a parameter or a return type (8.3.5); see 3.1. A reference shall be initialized to refer to a valid object or function. [Note: in particular, a null reference cannot exist in a well-defined program, because the only way to create such a reference would be to bind it to the “object” obtained by dereferencing a null pointer, which causes undefined behavior. As described in 9.6, a reference cannot be bound directly to a bitfield. ]
+— ISO/IEC 14882:1998(E), the ISO C++ standard, in section 8.3.2 [dcl.ref]
+
+External links[edit]
+
+References in the C++ FAQ Lite
+Simple C++ Pointers and References
+
+References[edit]
+
+
+^ "The Open Group Base Specifications".&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Reference_(C%2B%2B)&amp;oldid=683701022"					
+				Categories: C++Hidden categories: Articles needing additional references from November 2013All articles needing additional references				
+							
+		
+		
+			

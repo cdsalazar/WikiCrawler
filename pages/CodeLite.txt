@@ -1,0 +1,334 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			CodeLite
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+CodeLite
+
+
+Screenshot of CodeLite under Linux
+
+
+
+Developer(s)
+Eran Ifrah
+
+
+Stable release
+9.0 / October&#160;12, 2015; 36 days ago&#160;(2015-10-12)
+
+
+Development status
+Active
+
+
+Written in
+C++ (wxWidgets)
+
+
+Operating system
+Cross-platform
+
+
+Type
+IDE
+
+
+License
+GNU GPL
+
+
+Website
+www.codelite.org
+
+
+CodeLite is a free, open-source, cross-platform IDE for the C, C++, PHP, and JavaScript (Node.js) programming languages.[1][2]
+
+
+
+Contents
+
+
+1 History
+2 General
+3 See also
+4 References
+5 External links
+
+
+
+History[edit]
+In August 2006 Eran Ifrah, CodeLite's author, started a project named CodeLite. The idea was to create a code completion library based on ctags, SQLite (hence, CodeLite) and a Yacc based parser that could be used by other IDEs. Later Clang became an optional parser for code completion, greatly improving its functionality.
+LiteEditor, a demo application, was developed for demonstrating CodeLite's functionalities. Eventually, LiteEditor evolved into CodeLite.
+General[edit]
+CodeLite is a free, open source, cross platform IDE for the C/C++ programming languages using the wxWidgets toolkit. To comply with CodeLite's open source spirit, the program itself is compiled and debugged using only free tools (MinGW and GDB) for Mac OS X, Windows, Linux and FreeBSD, though CodeLite can execute any third-party compiler or tool that has a command-line interface. CodeLite also supports PHP and JavaScript development (including Node.js support).
+CodeLite features project management (workspace / projects), code completion, code refactoring, source browsing, syntax highlight (see CodeLite Features page), Subversion integration, cscope integration, UnitTest++ integration, an interactive debugger built over gdb and a source code editor (based on Scintilla).
+CodeLite is distributed under the GNU General Public License v2 or Later. It is being developed and debugged using itself as the development platform with daily updates available through its Git repository. See CodeLite website and the how-to compile "CodeLite from Source" section on the CodeLite source code page.
+As of version 7.0 of CodeLite (Released on Feb, 2015) PHP support was added.
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+
+Comparison of integrated development environments
+Scintilla
+SciTE
+wxWidgets
+Code::Blocks
+wxCrafter
+
+References[edit]
+
+
+^ CodeLite Homepage
+^ CodeLite on SourceForge
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to CodeLite.
+
+
+
+Official website
+Web forum
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for C and C++
+
+
+
+
+
+
+Open source
+
+
+
+Anjuta
+Code::Blocks
+CodeLite
+Dev-C++
+Eclipse
+Geany
+GNAT Programming Studio
+KDevelop
+Kuzya
+MonoDevelop
+NetBeans
+QDevelop
+Qt Creator
+Ultimate++
+wxDev-C++
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Pelles C
+Oracle Solaris Studio (previously called Sun Studio)
+Visual Studio Express
+Xcode
+
+
+
+
+
+
+
+
+Retail
+
+
+
+C++Builder
+CodeWarrior
+IBM VisualAge
+Visual Studio
+SlickEdit
+
+
+
+
+
+
+
+
+
+
+
+&#160;Category
+ Comparison
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+wxWidgets
+
+
+
+
+
+
+Technologies
+
+
+
+XML Resource
+
+
+
+
+
+
+
+
+RAD/GUI
+Builders
+
+
+
+
+
+free software
+
+
+
+
+wxFormBuilder
+wxDev-C++
+Code::Blocks
+wxGlade
+CodeDesigner RAD
+CodeLite
+Padre
+HiAsm
+
+
+
+
+
+
+
+
+
+proprietary software
+
+
+
+
+wxDesigner
+DialogBlocks
+
+
+
+
+
+
+
+
+
+
+
+Libraries
+
+
+
+wxSQLite3
+
+
+
+
+
+
+
+
+Bindings
+
+
+
+wxPython
+wxPerl
+wxPHP
+wxBasic
+wxHaskell
+GLUEscript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=CodeLite&amp;oldid=690578024"					
+				Categories: Free software programmed in C++Free integrated development environmentsSoftware that uses wxWidgetsSoftware using the GPL licenseSoftware that uses ScintillaHidden categories: Commons category with page title same as on Wikidata				
+							
+		
+		
+			

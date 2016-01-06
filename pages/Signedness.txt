@@ -1,0 +1,277 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Signedness
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2009)
+
+
+In computing, signedness is a property of data types representing numbers in computer programs. A numeric variable is signed if it can represent both positive and negative numbers, and unsigned if it can only represent non-negative numbers (zero or positive numbers).
+As signed numbers can represent negative numbers, they lose a range of positive numbers that can only be represented with unsigned numbers of the same size (in bits) because half the possible values are non-positive values (so if an 8-bit is signed, positive unsigned values 128 to 255 are gone while -128 to 127 are present). Unsigned variables can dedicate all the possible values to the positive number range.
+For example, a two's complement signed 16-bit integer can hold the values −32768 to 32767 inclusively, while an unsigned 16 bit integer can hold the values 0 to 65535. For this sign representation method, the leftmost bit (most significant bit) denotes whether the value is positive or negative (0 for positive, 1 for negative).
+In programming languages[edit]
+For most architectures, there is no signed–unsigned type distinction in the machine language. Nevertheless, arithmetic instructions usually set different CPU flags such as the carry flag for unsigned arithmetic and the overflow flag signed. Those values can be taken into account by subsequent branch or arithmetic commands.
+The C programming language, with its derivatives, implements the signedness for all integer data types, as well as for "character". The unsigned modifier defines the type to be unsigned. The default integer signedness is signed, but can be set explicitly with signed modifier. Integer literals can be made unsigned with U suffix. For example, 0xFFFFFFFF gives −1, but 0xFFFFFFFFU gives 4,294,967,295 for 32-bit code.
+Compilers often issue a warning when comparisons are made between signed and unsigned numbers or when one is cast to the other. These are potentially dangerous operations as the ranges of the signed and unsigned types are different.
+See also[edit]
+
+Sign bit
+Signed number representations
+Sign (mathematics)
+Binary Angular Measurement System, an example of semantics where signedness does not matter
+
+External links[edit]
+
+"Numeric Type Overview". MySQL 5.0 Reference Manual. mysql.com. 2011. Retrieved 6 January 2012.&#160;
+Robert C. Seacord (broken link, please remove) (15 Jul 2011). "Understand integer conversion rules". Secure Coding. Software Engineering Institute. Retrieved 6 January 2012.&#160;
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+This computer-programming-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Signedness&amp;oldid=690625588"					
+				Categories: Computer arithmeticData typesComputer programming stubsHidden categories: Articles needing additional references from December 2009All articles needing additional referencesAll stub articles				
+							
+		
+		
+			

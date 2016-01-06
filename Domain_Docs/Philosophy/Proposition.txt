@@ -1,0 +1,550 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Proposition
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the term in logic and philosophy.  For other uses, see Proposition (disambiguation).
+Not to be confused with preposition.
+
+
+
+
+
+It has been suggested that Statement (logic) be merged into this article. (Discuss) Proposed since February 2013.
+
+
+The term proposition has a broad use in contemporary philosophy. It is used to refer to some or all of the following: the primary bearers of truth-value, the objects of belief and other "propositional attitudes" (i.e., what is believed, doubted, etc.), the referents of that-clauses and the meanings of declarative sentences. Propositions are the sharable objects of attitudes and the primary bearers of truth and falsity. This stipulation rules out certain candidates for propositions, including thought- and utterance-tokens which are not sharable, and concrete events or facts, which cannot be false.[1]
+
+
+
+Contents
+
+
+1 Historical usage
+
+1.1 By Aristotle
+1.2 By the logical positivists
+1.3 By Russell
+
+
+2 Relation to the mind
+3 Treatment in logic
+4 Objections to propositions
+5 See also
+6 References
+7 External links
+
+
+
+Historical usage[edit]
+By Aristotle[edit]
+Aristotelian logic identifies a proposition as a sentence which affirms or denies a predicate of a subject. An Aristotelian proposition may take the form "All men are mortal" or "Socrates is a man." In the first example the subject is "All men" and the predicate "are mortal." In the second example the subject is "Socrates" and the predicate is "is a man."[citation needed]
+By the logical positivists[edit]
+Often propositions are related to closed sentences to distinguish them from what is expressed by an open sentence. In this sense, propositions are "statements" that are truth-bearers. This conception of a proposition was supported by the philosophical school of logical positivism.
+Some philosophers argue that some (or all) kinds of speech or actions besides the declarative ones also have propositional content. For example, yes–no questions present propositions, being inquiries into the truth value of them. On the other hand, some signs can be declarative assertions of propositions without forming a sentence nor even being linguistic, e.g. traffic signs convey definite meaning which is either true or false.
+Propositions are also spoken of as the content of beliefs and similar intentional attitudes such as desires, preferences, and hopes. For example, "I desire that I have a new car," or "I wonder whether it will snow" (or, whether it is the case that "it will snow"). Desire, belief, and so on, are thus called propositional attitudes when they take this sort of content.[citation needed]
+By Russell[edit]
+Bertrand Russell held that propositions were structured entities with objects and properties as constituents. Wittgenstein held that a proposition is the set of possible worlds/states of affairs in which it is true. One important difference between these views is that on the Russellian account, two propositions that are true in all the same states of affairs can still be differentiated. For instance, the proposition that two plus two equals four is distinct on a Russellian account from three plus three equals six. If propositions are sets of possible worlds, however, then all mathematical truths (and all other necessary truths) are the same set (the set of all possible worlds).[citation needed]
+Relation to the mind[edit]
+In relation to the mind, propositions are discussed primarily as they fit into propositional attitudes. Propositional attitudes are simply attitudes characteristic of folk psychology (belief, desire, etc.) that one can take toward a proposition (e.g. 'it is raining,' 'snow is white,' etc.). In English, propositions usually follow folk psychological attitudes by a "that clause" (e.g. "Jane believes that it is raining"). In philosophy of mind and psychology, mental states are often taken to primarily consist in propositional attitudes. The propositions are usually said to be the "mental content" of the attitude. For example, if Jane has a mental state of believing that it is raining, her mental content is the proposition 'it is raining.' Furthermore, since such mental states are about something (namely propositions), they are said to be intentional mental states. Philosophical debates surrounding propositions as they relate to propositional attitudes have also recently centered on whether they are internal or external to the agent or whether they are mind-dependent or mind-independent entities (see the entry on internalism and externalism in philosophy of mind).
+Treatment in logic[edit]
+As noted above, in Aristotelian logic a proposition is a particular kind of sentence, one which affirms or denies a predicate of a subject. Aristotelian propositions take forms like "All men are mortal" and "Socrates is a man."
+Propositions show up in formal logic as objects of a formal language. A formal language begins with different types of symbols. These types can include variables, operators, function symbols, predicate (or relation) symbols, quantifiers, and propositional constants. (Grouping symbols are often added for convenience in using the language but do not play a logical role.) Symbols are concatenated together according to recursive rules in order to construct strings to which truth-values will be assigned. The rules specify how the operators, function and predicate symbols, and quantifiers are to be concatenated with other strings. A proposition is then a string with a specific form. The form that a proposition takes depends on the type of logic.
+The type of logic called propositional, sentential, or statement logic includes only operators and propositional constants as symbols in its language. The propositions in this language are propositional constants, which are considered atomic propositions, and composite propositions, which are composed by recursively applying operators to propositions. Application here is simply a short way of saying that the corresponding concatenation rule has been applied.
+The types of logics called predicate, quantificational, or n-order logic include variables, operators, predicate and function symbols, and quantifiers as symbols in their languages. The propositions in these logics are more complex. First, terms must be defined. A term is (i) a variable or (ii) a function symbol applied to the number of terms required by the function symbol's arity. For example, if + is a binary function symbol and x, y, and z are variables, then x+(y+z) is a term, which might be written with the symbols in various orders. A proposition is (i) a predicate symbol applied to the number of terms required by its arity, (ii) an operator applied to the number of propositions required by its arity, or (iii) a quantifier applied to a proposition. For example, if = is a binary predicate symbol and ∀ is a quantifier, then ∀x,y,z [(x = y) → (x+z = y+z)] is a proposition. This more complex structure of propositions allows these logics to make finer distinctions between inferences, i.e., to have greater expressive power.
+In this context, propositions are also called sentences, statements, statement forms, formulas, and well-formed formulas, though these terms are usually not synonymous within a single text. This definition treats propositions as syntactic objects, as opposed to semantic or mental objects. That is, propositions in this sense are meaningless, formal, abstract objects. They are assigned meaning and truth-values by mappings called interpretations and valuations, respectively.
+Objections to propositions[edit]
+Attempts to provide a workable definition of proposition include
+
+Two meaningful declarative sentences express the same proposition if and only if they mean the same thing.
+
+thus defining proposition in terms of synonymity. For example, "Snow is white" (in English) and "Schnee ist weiß" (in German) are different sentences, but they say the same thing, so they express the same proposition.
+
+Two meaningful declarative sentence-tokens express the same proposition if and only if they mean the same thing.
+
+Unfortunately, the above definition has the result that two sentences/sentence-tokens which have the same meaning and thus express the same proposition, could have different truth-values, e.g. "I am Spartacus" said by Spartacus and said by John Smith; and e.g. "It is Wednesday" said on a Wednesday and on a Thursday.
+A number of philosophers and linguists claim that all definitions of a proposition are too vague to be useful. For them, it is just a misleading concept that should be removed from philosophy and semantics. W.V. Quine maintained that the indeterminacy of translation prevented any meaningful discussion of propositions, and that they should be discarded in favor of sentences.[2] Strawson advocated the use of the term "statement".
+See also[edit]
+
+
+
+
+Philosophy portal
+
+
+
+Logic portal
+
+
+
+
+Main contention
+
+References[edit]
+
+
+^ "Propositions (Stanford Encyclopedia of Philosophy)". Plato.stanford.edu. Retrieved 2014-06-23.&#160;
+^ Quine W.V. Philosophy of Logic, Prentice-Hall NJ USA: 1970, pp 1-14
+
+
+External links[edit]
+
+Stanford Encyclopedia of Philosophy articles on:
+
+Propositions, by Matthew McGrath
+Singular Propositions, by Greg Fitch
+Structured Propositions, by Jeffrey C. King
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Mathematical logic
+
+
+
+
+
+
+General
+
+
+
+Formal language
+Formation rule
+Formal system
+Deductive system
+Formal proof
+Formal semantics
+Well-formed formula
+Set
+Element
+Class
+Classical logic
+Axiom
+Natural deduction
+Rule of inference
+Relation
+Theorem
+Logical consequence
+Axiomatic system
+Type theory
+Symbol
+Syntax
+Theory
+
+
+
+
+
+
+
+
+Traditional logic
+
+
+
+Proposition
+Inference
+Argument
+Validity
+Cogency
+Syllogism
+Square of opposition
+Venn diagram
+
+
+
+
+
+
+
+
+
+Propositional
+calculus
+Boolean logic
+
+
+
+
+Boolean functions
+Propositional calculus
+Propositional formula
+Logical connectives
+Truth tables
+
+
+
+
+
+
+
+
+Predicate logic
+
+
+
+First-order
+Quantifiers
+Predicate
+Second-order
+Monadic predicate calculus
+
+
+
+
+
+
+
+
+Naive set theory
+
+
+
+Set
+Empty set
+Enumeration
+Extensionality
+Finite set
+Infinite set
+Subset
+Power set
+Countable set
+Uncountable set
+Recursive set
+Domain
+Range
+Map
+Function
+Relation
+Ordered pair
+
+
+
+
+
+
+
+
+Set theory
+
+
+
+Foundations of mathematics
+Zermelo–Fraenkel set theory
+Axiom of choice
+General set theory
+Kripke–Platek set theory
+Von Neumann–Bernays–Gödel set theory
+Morse–Kelley set theory
+Tarski–Grothendieck set theory
+
+
+
+
+
+
+
+
+Model theory
+
+
+
+Model
+Interpretation
+Non-standard model
+Finite model theory
+Truth value
+Validity
+
+
+
+
+
+
+
+
+Proof theory
+
+
+
+Formal proof
+Deductive system
+Formal system
+Theorem
+Logical consequence
+Rule of inference
+Syntax
+
+
+
+
+
+
+
+
+Computability
+theory
+
+
+
+Recursion
+Recursive set
+Recursively enumerable set
+Decision problem
+Church–Turing thesis
+Computable function
+Primitive recursive function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Philosophy of language
+
+
+
+
+
+
+Philosophers
+
+
+
+Plato (Cratylus)
+Gorgias
+Confucius
+Xunzi
+Aristotle
+Stoics
+Pyrrhonists
+Scholasticism
+Ibn Rushd
+Ibn Khaldun
+Thomas Hobbes
+Gottfried Wilhelm Leibniz
+Johann Herder
+Ludwig Noire
+Wilhelm von Humboldt
+Fritz Mauthner
+Paul Ricœur
+Ferdinand de Saussure
+Gottlob Frege
+Franz Boas
+Paul Tillich
+Edward Sapir
+Leonard Bloomfield
+Zhuangzi
+Henri Bergson
+Lev Vygotsky
+Ludwig Wittgenstein
+
+Philosophical Investigations
+Tractatus Logico-Philosophicus
+
+
+Bertrand Russell
+Rudolf Carnap
+Jacques Derrida
+
+Of Grammatology
+Limited Inc
+
+
+Benjamin Lee Whorf
+Gustav Bergmann
+J. L. Austin
+Noam Chomsky
+Hans-Georg Gadamer
+Saul Kripke
+A. J. Ayer
+G. E. M. Anscombe
+Jaakko Hintikka
+Michael Dummett
+Donald Davidson
+Paul Grice
+Gilbert Ryle
+P. F. Strawson
+Willard Van Orman Quine
+Hilary Putnam
+David Lewis
+John Searle
+Joxe Azurmendi
+Scott Soames
+Stephen Yablo
+John Hawthorne
+Stephen Neale
+
+
+
+
+
+
+
+
+Theories
+
+
+
+Causal theory of reference
+Contrast theory of meaning
+Contrastivism
+Conventionalism
+Cratylism
+Deconstruction
+Descriptivist theory of names
+Direct reference theory
+Dramatism
+Expressivism
+Linguistic determinism
+Logical atomism
+Logical positivism
+Mediated reference theory
+Nominalism
+Non-cognitivism
+Phallogocentrism
+Quietism
+Relevance theory
+Semantic externalism
+Semantic holism
+Structuralism
+Supposition theory
+Symbiosism
+Theological noncognitivism
+Theory of descriptions
+Verification theory
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Ambiguity
+Linguistic relativity
+Meaning
+Language
+Truth-bearer
+Proposition
+Use–mention distinction
+Concept
+Categories
+Set
+Class
+Intension
+Logical form
+Metalanguage
+Mental representation
+Principle of compositionality
+Property
+Sign
+Sense and reference
+Speech act
+Symbol
+Entity
+Sentence
+Statement
+more...
+
+
+
+
+
+
+
+
+Related articles
+
+
+
+Analytic philosophy
+Philosophy of information
+Philosophical logic
+Linguistics
+Pragmatics
+Rhetoric
+Semantics
+Formal semantics
+Semiotics
+
+
+
+
+
+
+
+
+
+
+
+Category
+Task Force
+Discussion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Proposition&amp;oldid=689631127"					
+				Categories: PropositionsLogical expressionsPhilosophy of languageSemantic unitsStatementsSyntax (logic)Mental contentMathematical logicPropositional calculusOntologyHidden categories: Articles to be merged from February 2013All articles to be mergedAll articles with unsourced statementsArticles with unsourced statements from November 2014				
+							
+		
+		
+			

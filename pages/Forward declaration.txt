@@ -1,0 +1,126 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Forward declaration
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer programming, a forward declaration is a declaration of an identifier (denoting an entity such as a type, a variable, a constant, or a function) for which the programmer has not yet given a complete definition.
+It is required for a compiler to know certain properties of an identifier (size for memory allocation, data type for type checking, such as type signature of functions), but not other details, like the particular value it holds (in case of variables or constants) or definition (in the case of functions). This is particularly useful for one-pass compilers and separate compilation.
+Forward declaration is used in languages that require declaration before use; it is necessary for mutual recursion in such languages, as it is impossible to define such functions (or data structures) without a forward reference in one definition: one of the functions (respectively, data structures) must be defined first. It is also useful to allow flexible code organization, for example if one wishes to place the main body at the top, and called functions below it.
+In other languages forward declarations are not necessary, which generally requires instead a multi-pass compiler and for some compilation to be deferred to link time. In these cases identifiers must be defined (variables initialized, functions defined) before they are used in execution, but do not need to be defined before they are used in source code for compilation or interpretation: identifiers do not need to be immediately resolved to an existing entity.
+
+
+
+Contents
+
+
+1 Examples
+2 Classes
+3 Forward reference
+4 References
+
+
+
+Examples[edit]
+A basic example in C is:
+
+
+void printThisInteger(int);
+
+In C and C++, the line above represents a forward declaration of a function and is the function's prototype. After processing this declaration, the compiler would allow the program code to refer to the entity printThisInteger in the rest of the program. The definition for a function must be provided somewhere (same file or other, where it would be the responsibility of the linker to correctly match references to a particular function in one or several object files with the definition, which must be unique, in another):
+
+
+void printThisInteger(int x) {
+   printf("%d\n", x);
+}
+
+Variables may have only forward declaration and lack definition. During compilation time these are initialized by language specific rules (to undefined values, 0, NULL pointers, ...). Variables, which are defined in other source/object file, must have a forward declaration specified with a keyword extern:
+
+
+int foo; //foo might be defined somewhere in this file
+extern int bar; //bar must be defined in some other file
+
+In Pascal and other Wirth programming languages, it is a general rule that all entities must be declared before use, and thus forward declaration is necessary for mutual recursion, for instance. In C, the same general rule applies, but with an exception for undeclared functions and incomplete types. Thus, in C it is possible (although unwise) to implement a pair of mutually recursive functions thus:
+
+
+int first(int x) {
+    if (x == 0)
+        return 1;
+    else
+        return second(x-1); // forward reference to second
+}
+
+int second(int x) {
+    if (x == 0)
+        return 0;
+    else
+        return first(x-1); // backward reference to first
+}
+
+In Pascal, the same implementation requires a forward declaration of second to precede its use in first. Without the forward declaration, the compiler will produce an error message indicating that the identifier second has been used without being declared.
+Classes[edit]
+In some object-oriented languages like C++ and Objective-C, it is sometimes necessary to forward-declare classes. This is done in situations when it is necessary to know that the name of the class is a type, but where it is unnecessary to know the structure.
+In C++, classes and structs can be forward-declared like this:
+
+
+class MyClass;
+struct MyStruct;
+
+In C++, classes can be forward-declared if you only need to use the pointer-to-that-class type (since all object pointers are the same size, and this is what the compiler cares about). This is especially useful inside class definitions, e.g. if a class contains a member that is a pointer (or a reference) to another class.
+Forward-declaration is used to avoid unnecessary coupling which help reducing compilation time by reducing the number of header inclusion. This has a triple advantage&#160;: - reduce the number of files opened by #include (hence the number of operating system calls) - reducing the volume of the pre-processed filed (as the header is not included) - reducing recompilation impact when the forward declared class is modified. Using forward declaration to prevent circular references is a bad practice as it often hide an architectural problem that should be solved using interfaces.
+Forward declaration of a class is not sufficient if you need to use the actual class type, for example, if you have a member whose type is that class directly (not a pointer), or if you need to use it as a base class, or if you need to use the methods of the class in a method.
+In Objective-C, classes and protocols can be forward-declared like this:
+
+
+@class MyClass;
+@protocol MyProtocol;
+
+In Objective-C, classes and protocols can be forward-declared if you only need to use them as part of an object pointer type, e.g. MyClass * or id&lt;MyProtocol&gt;. This is especially useful inside class definitions, e.g. if a class contains a member that is a pointer to another class; to avoid circular references (i.e. that class might also contain a member that is a pointer to this class), we simply forward-declare the classes instead.
+Forward declaration of a class or protocol is not sufficient if you need to subclass that class or implement that protocol.
+Forward reference[edit]
+The term forward reference is sometimes used as a synonym of forward declaration.[1] However, more often it is taken to refer to the actual use of an entity before any declaration; that is, the first reference to second in the code above is a forward reference.[2][3] Thus, we may say that because forward declarations are mandatory in Pascal, forward references are prohibited.
+An example of (valid) forward reference in C++:
+
+
+class C {
+public:
+   void mutator(int x) { myValue = x; }
+   int accessor() const { return myValue; }
+private:
+   int myValue;
+};
+
+In this example, there are two references to myValue before it is declared. C++ generally prohibits forward references, but they are allowed in the special case of class members. Since the member function accessor cannot be compiled until the compiler knows the type of the member variable myValue, it is the compiler's responsibility to remember the definition of accessor until it sees myValue's declaration.
+Permitting forward references can greatly increase the complexity and memory requirements of a compiler, and generally prevents the compiler from being implemented in one pass.
+References[edit]
+
+^ MSDN: Converting to a Forward-Reference Class Type
+^ http://pages.cs.wisc.edu/~fischer/cs536.s07/lectures/Lecture25.4up.pdf
+^ Thinking in C++: Inlines &amp; the compiler
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Forward_declaration&amp;oldid=689063462"					
+				Categories: Programming constructsHidden categories: Articles with example C code				
+							
+		
+		
+			

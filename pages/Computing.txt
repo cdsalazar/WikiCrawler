@@ -1,0 +1,1461 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Computing
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For the formal concept of computation, see computation.
+Not to be confused with the magazine&#160;or the scientific journal.
+
+
+
+
+A difference engine: computing the solution to a polynomial function
+
+
+
+
+
+
+Computer laboratory, Moody Hall, James Madison University, 2003
+
+
+
+
+
+
+A rack of servers from 2006
+
+
+Computing is any goal-oriented activity requiring, benefiting from, or creating algorithmic processes—e.g. through computers. Computing includes designing, developing and building hardware and software systems; processing, structuring, and managing various kinds of information; doing scientific research on and with computers; making computer systems behave intelligently; and creating and using communications and entertainment media. The field of computing includes computer engineering, software engineering, computer science, information systems, and information technology.
+
+
+
+Contents
+
+
+1 Definitions
+2 History of computing
+3 Computer
+
+3.1 Computer software and hardware
+
+3.1.1 Application software
+3.1.2 System software
+
+
+3.2 Computer network
+
+3.2.1 Internet
+
+
+3.3 Computer user
+
+3.3.1 End-user
+
+
+3.4 Computer programming
+
+3.4.1 Computer programmer
+
+
+3.5 Computer industry
+
+3.5.1 Software industry
+
+
+
+
+4 Sub-disciplines of computing
+
+4.1 Computer engineering
+4.2 Software engineering
+4.3 Computer science
+4.4 Information systems
+4.5 Information technology
+
+4.5.1 Systems administration
+
+
+
+
+5 See also
+6 Notes
+7 References
+8 External links
+
+
+
+Definitions[edit]
+The ACM Computing Curricula 2005[1] defined "computing" as follows:
+
+"In a general way, we can define computing to mean any goal-oriented activity requiring, benefiting from, or creating computers. Thus, computing includes designing and building hardware and software systems for a wide range of purposes; processing, structuring, and managing various kinds of information; doing scientific studies using computers; making computer systems behave intelligently; creating and using communications and entertainment media; finding and gathering information relevant to any particular purpose, and so on. The list is virtually endless, and the possibilities are vast."
+
+and it defines five sub-disciplines of the computing field: Computer Science, Computer Engineering, Information Systems, Information Technology, and Software Engineering.[2]
+However, Computing Curricula 2005[1] also recognizes that the meaning of "computing" depends on the context:
+
+Computing also has other meanings that are more specific, based on the context in which the term is used. For example, an information systems specialist will view computing somewhat differently from a software engineer. Regardless of the context, doing computing well can be complicated and difficult. Because society needs people to do computing well, we must think of computing not only as a profession but also as a discipline.
+
+The term "computing" has sometimes been narrowly defined, as in a 1989 ACM report on Computing as a Discipline:[3]
+
+The discipline of computing is the systematic study of algorithmic processes that describe and transform information: their theory, analysis, design, efficiency, implementation, and application. The fundamental question underlying all computing is "What can be (efficiently) automated?"
+
+The term "computing" is also synonymous with counting and calculating. In earlier times, it was used in reference to the action performed by mechanical computing machines, and before that, to human computers.
+History of computing[edit]
+Main articles: History of computing and Timeline of computing
+The history of computing is longer than the history of computing hardware and modern computing technology and includes the history of methods intended for pen and paper or for chalk and slate, with or without the aid of tables.
+Computing is intimately tied to the representation of numbers. But long before abstractions like the number arose, there were mathematical concepts to serve the purposes of civilization. These concepts include one-to-one correspondence (the basis of counting), comparison to a standard (used for measurement), and the 3-4-5 right triangle (a device for assuring a right angle).
+The earliest known tool for use in computation was the abacus, and it was thought to have been invented in Babylon circa 2400 BC. Its original style of usage was by lines drawn in sand with pebbles. Abaci, of a more modern design, are still used as calculation tools today. This was the first known computer and most advanced system of calculation known to date - preceding Greek methods by 2,000 years.
+Computer[edit]
+Main articles: Computer, Outline of computers and Glossary of computer terms
+A computer is a machine that manipulates data according to a set of instructions called a computer program. The program has an executable form that the computer can use directly to execute the instructions. The same program in its human-readable source code form, enables a programmer to study and develop the algorithm. Because the instructions can be carried out in different types of computers, a single set of source instructions converts to machine instructions according to the central processing unit type.
+The execution process carries out the instructions in a computer program. Instructions express the computations performed by the computer. They trigger sequences of simple actions on the executing machine. Those actions produce effects according to the semantics of the instructions.
+Computer software and hardware[edit]
+Main articles: Software and Computer hardware
+Computer software or just "software", is a collection of computer programs and related data that provides the instructions for telling a computer what to do and how to do it. Software refers to one or more computer programs and data held in the storage of the computer for some purposes. In other words, software is a set of programs, procedures, algorithms and its documentation concerned with the operation of a data processing system. Program software performs the function of the program it implements, either by directly providing instructions to the computer hardware or by serving as input to another piece of software. The term was coined to contrast with the old term hardware (meaning physical devices). In contrast to hardware, software is intangible.[4] Software is also sometimes used in a more narrow sense, meaning application software only.
+Application software[edit]
+Main article: Application software
+Application software, also known as an "application" or an "app", is a computer software designed to help the user to perform specific tasks. Examples include enterprise software, accounting software, office suites, graphics software and media players. Many application programs deal principally with documents. Apps may be bundled with the computer and its system software, or may be published separately. Some users are satisfied with the bundled apps and need never install one.
+Application software is contrasted with system software and middleware, which manage and integrate a computer's capabilities, but typically do not directly apply them in the performance of tasks that benefit the user. The system software serves the application, which in turn serves the user.
+Application software applies the power of a particular computing platform or system software to a particular purpose. Some apps such as Microsoft Office are available in versions for several different platforms; others have narrower requirements and are thus called, for example, a Geography application for Windows or an Android application for education or Linux gaming. Sometimes a new and popular application arises that only runs on one platform, increasing the desirability of that platform. This is called a killer application.
+System software[edit]
+Main article: System software
+System software, or systems software, is computer software designed to operate and control the computer hardware and to provide a platform for running application software. System software includes operating systems, utility software, device drivers, window systems, and firmware. Frequently development tools such as compilers, linkers, and debuggers are classified as system software.
+Computer network[edit]
+Main article: Computer network
+A computer network, often simply referred to as a network, is a collection of hardware components and computers interconnected by communication channels that allow sharing of resources and information.[5] Where at least one process in one device is able to send/receive data to/from at least one process residing in a remote device, then the two devices are said to be in a network.
+Networks may be classified according to a wide variety of characteristics such as the medium used to transport the data, communications protocol used, scale, topology, and organizational scope.
+Communications protocols define the rules and data formats for exchanging information in a computer network, and provide the basis for network programming. Well-known communications protocols are Ethernet, a hardware and Link Layer standard that is ubiquitous in local area networks, and the Internet Protocol Suite, which defines a set of protocols for internetworking, i.e. for data communication between multiple networks, as well as host-to-host data transfer, and application-specific data transmission formats.
+Computer networking is sometimes considered a sub-discipline of electrical engineering, telecommunications, computer science, information technology or computer engineering, since it relies upon the theoretical and practical application of these disciplines.
+Internet[edit]
+The Internet is a global system of interconnected computer networks that use the standard Internet protocol suite (TCP/IP) to serve billions of users that consists of millions of private, public, academic, business, and government networks, of local to global scope, that are linked by a broad array of electronic, wireless and optical networking technologies. The Internet carries an extensive range of information resources and services, such as the inter-linked hypertext documents of the World Wide Web (WWW) and the infrastructure to support email.
+Computer user[edit]
+Main article: User (computing)
+A user is an agent, either a human agent (end-user) or software agent, who uses a computer or network service. A user often has a user account and is identified by a username (also user name), screen name (also screenname), nickname (also nick), or handle, which derives from the identical Citizen's Band radio term.
+In hacker-related terminology, users are divided into "lusers" and "power users".[citation needed]
+In projects where the system actor is another system or a software agent, there may be no end-user. In that case, the end-users for the system is indirect end-users.
+End-user[edit]
+Main article: End-user
+The term end-user refers to the ultimate operator of a piece of software, but it is also a concept in software engineering, referring to an abstraction of that group of end-users of computers (i.e. the expected user or target-user). The term is used to distinguish those who only operate the software from the developer of the system, who knows a programming language and uses it to create new functions for end-users.
+Computer programming[edit]
+Main articles: Computer programming and Software engineering
+Computer programming in general is the process of writing, testing, debugging, and maintaining the source code and documentation of computer programs. This source code is written in a programming language, which is an artificial language often more restrictive or demanding than natural languages, but easily translated by the computer. The purpose of programming is to invoke the desired behavior (customization) from the machine. The process of writing high quality source code requires knowledge of both the application's domain and the computer science domain. The highest-quality software is thus developed by a team of various domain experts, each person a specialist in some area of development. But the term programmer may apply to a range of program quality, from hacker to open source contributor to professional. And a single programmer could do most or all of the computer programming needed to generate the proof of concept to launch a new "killer" application.
+Computer programmer[edit]
+Main articles: Programmer, Software engineer and Software developer
+A programmer, computer programmer, or coder is a person who writes computer software. The term computer programmer can refer to a specialist in one area of computer programming or to a generalist who writes code for many kinds of software. One who practices or professes a formal approach to programming may also be known as a programmer analyst. A programmer's primary computer language (C, C++, Java, Lisp, Python, etc.) is often prefixed to the above titles, and those who work in a web environment often prefix their titles with web. The term programmer can be used to refer to a software developer, software engineer, computer scientist, or software analyst. However, members of these professions typically[citation needed] possess other software engineering skills, beyond programming.
+Computer industry[edit]
+Main article: Computer industry
+The computer industry is made up of all of the businesses involved in developing computer software, designing computer hardware and computer networking infrastructures, the manufacture of computer components and the provision of information technology services including system administration and maintenance.
+Software industry[edit]
+Main article: Software industry
+The software industry includes businesses engaged in development, maintenance and publication of software. The industry also includes software services, such as training, documentation, and consulting.
+Sub-disciplines of computing[edit]
+Computer engineering[edit]
+Main article: Computer engineering
+Computer engineering is a discipline that integrates several fields of electrical engineering and computer science required to develop computer hardware and software.[6] Computer engineers usually have training in electronic engineering (or electrical engineering), software design, and hardware-software integration instead of only software engineering or electronic engineering. Computer engineers are involved in many hardware and software aspects of computing, from the design of individual microprocessors, personal computers, and supercomputers, to circuit design. This field of engineering not only focuses on how computer systems themselves work, but also how they integrate into the larger picture.[7]
+Software engineering[edit]
+Main article: Software engineering
+Software engineering (SE) is the application of a systematic, disciplined, quantifiable approach to the design, development, operation, and maintenance of software, and the study of these approaches; that is, the application of engineering to software.[8][9][10] In layman's terms, it is the act of using insights to conceive, model and scale a solution to a problem. The first reference to the term is the 1968 NATO Software Engineering Conference and was meant to provoke thought regarding the perceived "software crisis" at the time.[11][12][13] Software development, a much used and more generic term, does not necessarily subsume the engineering paradigm. The generally accepted concepts of Software Engineering as an engineering discipline have been specified in the Guide to the Software Engineering Body of Knowledge (SWEBOK). The SWEBOK has become an internationally accepted standard ISO/IEC TR 19759:2005.[14]
+Computer science[edit]
+Main articles: Computer science and Computer scientist
+Computer science or computing science (abbreviated CS or Comp Sci) is the scientific and practical approach to computation and its applications. A computer scientist specializes in the theory of computation and the design of computational systems.[15]
+Its subfields can be divided into practical techniques for its implementation and application in computer systems and purely theoretical areas. Some, such as computational complexity theory, which studies fundamental properties of computational problems, are highly abstract, while others, such as computer graphics, emphasize real-world applications. Still others focus on the challenges in implementing computations. For example, programming language theory studies approaches to description of computations, while the study of computer programming itself investigates various aspects of the use of programming languages and complex systems, and human-computer interaction focuses on the challenges in making computers and computations useful, usable, and universally accessible to humans.
+Information systems[edit]
+Main article: Information systems
+"Information systems (IS)" is the study of complementary networks of hardware and software (see information technology) that people and organizations use to collect, filter, process, create, and distribute data.[16][17][18][19][20] Computing Careers says on their website that "A majority of IS programs are located in business schools; however, they may have different names such as management information systems, computer information systems, or business information systems. All IS degrees combine business and computing topics, but the emphasis between technical and organizational issues varies among programs. For example, programs differ substantially in the amount of programming required."[21] The study bridges business and computer science using the theoretical foundations of information and computation to study various business models and related algorithmic processes within a computer science discipline.[22][23][24][25][26][27][28][29][30][31] Computer Information System(s) (CIS) is a field studying computers and algorithmic processes, including their principles, their software and hardware designs, their applications, and their impact on society[32][33][34] while IS emphasizes functionality over design.[35]
+Information technology[edit]
+Main article: Information technology
+Information technology (IT) is the application of computers and telecommunications equipment to store, retrieve, transmit and manipulate data,[36] often in the context of a business or other enterprise.[37] The term is commonly used as a synonym for computers and computer networks, but it also encompasses other information distribution technologies such as television and telephones. Several industries are associated with information technology, such as computer hardware, software, electronics, semiconductors, internet, telecom equipment, e-commerce and computer services.[38][39]
+Systems administration[edit]
+Main article: System administrator
+A system administrator, IT systems administrator, systems administrator, or sysadmin is a person employed to maintain and operate a computer system and/or network. The duties of a system administrator are wide-ranging, and vary widely from one organization to another. Sysadmins are usually charged with installing, supporting and maintaining servers or other computer systems, and planning for and responding to service outages and other problems. Other duties may include scripting or light programming, project management for systems-related projects, supervising or training computer operators, and being the consultant for computer problems beyond the knowledge of technical support staff.
+See also[edit]
+
+
+
+
+Computing portal
+
+
+
+Computer Science portal
+
+
+
+
+Index of history of computing articles
+List of computer term etymologies
+Scientific computing
+Electronic data processing
+100 Computing Lessons relating to National Curriculum in England &amp; Wales - new curriculum for computing September 2014
+
+
+Notes[edit]
+
+References[edit]
+
+
+^ a b The Joint Task Force for Computing Curricula 2005. "Computing Curricula 2005: The Overview Report" (pdf).&#160;
+^ "Curricula Recommendations". Association for Computing Machinery. 2005. Retrieved 2012-11-30.&#160;
+^ Peter J. Denning; et al. (January 1989). "Computing as a Discipline" (PDF). Communications of the ACM (Association for Computing Machinery) 32: 9–23. doi:10.1145/63238.63239. Retrieved 2012-11-30.&#160;
+^ "Wordreference.com: WordNet 2.0". Princeton University, Princeton, NJ. Retrieved 2007-08-19.&#160;
+^ "Computer network definition". Retrieved 2011-11-12.&#160;
+^ IEEE Computer Society; ACM (12 December 2004). Computer Engineering 2004: Curriculum Guidelines for Undergraduate Degree Programs in Computer Engineering (pdf). p.&#160;iii. Retrieved 2012-12-17. Computer System engineering has traditionally been viewed as a combination ofboth electronic engineering (EE) and computer science (CS).&#160;
+^ Trinity College Dublin. "What is Computer System Engineering". Retrieved 2006-04-21.&#160;, "Computer engineers need not only to understand how computer systems themselves work, but also how they integrate into the larger picture. Consider the car. A modern car contains many separate computer systems for controlling such things as the engine timing, the brakes and the air bags. To be able to design and implement such a car, the computer engineer needs a broad theoretical understanding of all these various subsystems &amp; how they interact.
+^ Abran et al. 2004, pp.&#160;1–1
+^ ACM (2006). "Computing Degrees &amp; Careers". ACM. Retrieved 2010-11-23.&#160;
+^ Laplante, Phillip (2007). What Every Engineer Should Know about Software Engineering. Boca Raton: CRC. ISBN&#160;978-0-8493-7228-5. Retrieved 2011-01-21.&#160;
+^ Sommerville 2008, p.&#160;26
+^ Peter, Naur; Randell, Brian (7–11 October 1968). Software Engineering: Report of a conference sponsored by the NATO Science Committee (PDF). Garmisch, Germany: Scientific Affairs Division, NATO. Retrieved 2008-12-26.&#160;
+^ Randell, Brian (10 August 2001). "The 1968/69 NATO Software Engineering Reports". Brian Randell's University Homepage. The School of the Computer Sciences, Newcastle University. Retrieved 2008-10-11. The idea for the first NATO Software Engineering Conference, and in particular that of adopting the then practically unknown term "software engineering" as its (deliberately provocative) title, I believe came originally from Professor Fritz Bauer.&#160;
+^ "ISO/IEC TR 19759:2005". Retrieved 2012-04-01.&#160;
+^ "WordNet Search - 3.1". Wordnetweb.princeton.edu. Retrieved 2012-05-14.&#160;
+^ "Definition of Application Landscape". Software Engineering for Business Information Systems (sebis). Jan 21, 2009. Retrieved January 14, 2011.&#160;
+^ Archibald, J.A. (May 1975). "Computer Science education for majors of other disciplines". AFIPS Joint Computer Conferences: 903–906. Computer science spreads out over several related disciplines, and shares with these disciplines certain sub-disciplines that traditionally have been located exclusively in the more conventional disciplines&#160;
+^ Denning, Peter (July 1999). "COMPUTER SCIENCE: THE DISCIPLINE". Encyclopaedia of Computer Science (2000 Edition). The Domain of Computer Science: Even though computer science addresses both human-made and natural information processes, the main effort in the discipline has been directed toward human-made processes, especially information processing systems and machines&#160;
+^ Coy, Wolfgang (June 2004). "Between the disciplines". ACM SIGCSE Bulletin 36 (2): 7–10. doi:10.1145/1024338.1024340. ISSN&#160;0097-8418. Computer science may be in the core of these processes. The actual question is not to ignore disciplinary boundaries with its methodological differences but to open the disciplines for collaborative work. We must learn to build bridges, not to start in the gap between disciplines&#160;
+^ Jessup, Leonard M.; Valacich, Joseph S. (2008). Information Systems Today (3rd ed.). Pearson Publishing. pp.&#160;???, 416.&#160;
+^ "Computing Degrees and Careers, Association for Computing Machinery".&#160;
+^ Hoganson, Ken (December 2001). "Alternative curriculum models for integrating computer science and information systems analysis, recommendations, pitfalls, opportunities, accreditations, and trends". Journal of Computing Sciences in Colleges 17 (2): 313–325. ISSN&#160;1937-4771. ... Information Systems grew out of the need to bridge the gap between business management and computer science ...&#160;
+^ Davis, Timothy; Geist, Robert; Matzko, Sarah; Westall, James (March 2004). "τ´εχνη: A First Step". Technical Symposium on Computer Science Education: 125–129. ISBN&#160;1-58113-798-2. In 1999, Clemson University established a (graduate) degree program that bridges the arts and the sciences... All students in the program are required to complete graduate level work in both the arts and computer science&#160;
+^ Hoganson, Ken (December 2001). "Alternative curriculum models for integrating computer science and information systems analysis, recommendations, pitfalls, opportunities, accreditations, and trends". Journal of Computing Sciences in Colleges 17 (2): 313–325. ISSN&#160;1937-4771. The field of information systems as a separate discipline is relatively new and is undergoing continuous change as technology evolves and the field matures&#160;
+^ Khazanchi, Deepak; Bjorn Erik Munkvold (Summer 2000). "Is information system a science? an inquiry into the nature of the information systems discipline". ACM SIGMIS Database 31 (3): 24–42. doi:10.1145/381823.381834. ISSN&#160;0095-0033. From this we have concluded that IS is a science, i.e., a scientific discipline in contrast to purportedly non-scientific fields&#160;
+^ Denning, Peter (June 2007). "Ubiquity a new interview with Peter Denning on the great principles of computing" 2007 (June). pp.&#160;1–1. People from other fields are saying they have discovered information processes in their deepest structures and that collaboration with computing is essential to them.&#160;
+^ "Computer science is the study of information". New Jersey Institute of Technology: Gutenberg Information Technologies. Archived from the original on 4 November 2013.&#160;
+^ Computer Science Department, College of Saint Benedict. "Computer science is the study of computation". Saint John's University.&#160;
+^ "Computer Science is the study of all aspects of computer systems, from the theoretical foundations to the very practical aspects of managing large software projects". Massey University.&#160;
+^ Kelly, Sue; Gibson, Nicola; Holland, Christopher; Light, Ben (July 1999). "Focus Issue on Legacy Information Systems and Business Process Engineering: a Business Perspective of Legacy Information Systems". Communications of the AIS 2 (7): 1–27.&#160;
+^ Pearson Custom Publishing &amp; West Chester University (2009). Custom Program for Computer Information Systems (CSC 110). Pearson Custom Publishing. p.&#160;694.&#160;
+^ Polack, Jennifer (December 2009). "Planning a CIS Education Within a CS Framework". Journal of Computing Sciences in Colleges 25 (2): 100–106. ISSN&#160;1937-4771.&#160;
+^ Hayes, Helen; Onkar Sharma (February 2003). "A decade of experience with a common first year program for computer science, information systems and information technology majors". Journal of Computing Sciences in Colleges 18 (3): 217–227. ISSN&#160;1937-4771. In 1988, a degree program in Computer Information Systems (CIS) was launched with the objective of providing an option for students who were less inclined to become programmers and were more interested in learning to design, develop, and implement Information Systems, and solve business problems using the systems approach&#160;
+^ CSTA Committee, Allen Tucker, et alia (2006). A Model Curriculum for K-12 Computer Science (Final Report). Association for Computing Machinery, Inc. pp.&#160;0, 2.&#160;
+^ Freeman, Peter; Hart, David (August 2004). "A Science of Design for Software-Intensive Systems Computer science and engineering needs an intellectually rigorous, analytical, teachable design process to ensure development of systems we all can live with". Communications of the ACM 47 (8): 19–21. doi:10.1145/1012037.1012054. ISSN&#160;0001-0782. Though the other components' connections to the software and their role in the overall design of the system are critical, the core consideration for a software-intensive system is the software itself, and other approaches to systematizing design have yet to solve the "software problem"—which won't be solved until software design is understood scientifically&#160;
+^ Daintith, John, ed. (2009), "IT", A Dictionary of Physics, Oxford University Press, retrieved 1 August 2012&#160; (subscription required)
+^ "Free on-line dictionary of computing (FOLDOC)". Retrieved 9 Feb 2013.&#160;
+^ Chandler, Daniel; Munday, Rod, "Information technology", A Dictionary of Media and Communication (first ed.), Oxford University Press, retrieved 1 August 2012&#160; (subscription required)
+^ On the later more broad application of the term IT, Keary comments- "In its original application 'information technology' was appropriate to describe the convergence of technologies with application in the broad field of data storage, retrieval, processing, and dissemination. This useful conceptual term has since been converted to what purports to be concrete use, but without the reinforcement of definition...the term IT lacks substance when applied to the name of any function, discipline, or position." Anthony Ralston (2000). Encyclopedia of computer science. Nature Pub. Group. ISBN&#160;978-1-56159-248-7. Retrieved 12 May 2013.&#160;.
+
+
+External links[edit]
+
+
+
+Find more about
+Computing
+at Wikipedia's sister projects
+
+
+
+
+Definitions from Wiktionary
+
+
+
+Media from Commons
+
+
+
+Textbooks from Wikibooks
+
+
+
+Learning resources from Wikiversity
+
+
+
+Free on-line dictionary of computing
+open-access repository of publications - Department of Computing - Imperial College London
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sub-disciplines of computing
+
+
+
+
+
+
+
+
+
+Hardware
+Software
+Firmware
+
+
+
+
+
+
+
+
+Information system
+
+
+
+Information security
+Multimedia database
+Intelligent database
+Big data
+Knowledge-based systems
+Recommender System
+Geographic information systems
+Decision support system
+Data engineering
+Knowledge engineering
+Fuzzy logic
+Data analysis
+System analysis and design
+Project management
+Knowledge management
+Data integration
+High-performance computing
+Semantic web
+
+
+
+
+
+
+
+
+Computer science
+
+
+
+Database management system
+Communications system
+Computational geometry
+Machine learning
+Data mining
+Parallel programming
+Coding theory
+Theory of computation
+Constraint programming
+Computational biology (Bioinformatics)
+Design and analysis of algorithms
+Information retrieval
+Computational science
+Symbolic computation
+Distributed computing
+Evolutionary computation
+Natural computation
+Combinatorial optimization
+Parallel processing
+
+
+
+
+
+
+
+
+Computer engineering
+
+
+
+Multimedia
+Satellite navigation (GNSS)
+Embedded systems
+Real-time computing
+Computer architecture
+Pair programming
+System programming
+Neural networks
+Speech recognition
+Signal analysis
+Computer vision (Visual computing)
+IC Design
+Voice over IP
+Speech synthesis
+Human-Computer Interaction
+Microprocessor
+Image processing
+Natural language processing
+Speech processing
+Digital signal processing
+
+
+
+
+
+
+
+
+Software engineering
+
+
+
+Software maintenance
+Formal methods
+Software quality
+Software quality assurance
+Measurement Software
+Fault-tolerant software
+Software testing
+Enterprise architecture
+Software architecture
+Software engineering economics
+Agile software development
+Software design pattern
+Software modelling
+Systems analyst
+Object-oriented analysis and design (UML)
+Requirements analysis
+Software development
+Software configuration management
+Software project management
+Software engineering management
+Software development process (Software release life cycle)
+Software design
+Software deployment
+Software enhancement
+
+
+
+
+
+
+
+
+Computer network
+
+
+
+Network security
+Secure electronic transaction
+Network Performance Evaluation (QoS)
+Cloud computing
+Routing
+Distributed systems (Distributed database)
+Information theory
+Wireless network
+Next-generation network
+Cellular network
+Optical transport network (Optical networking)
+Cryptography
+Network simulation
+Pattern recognition
+Network administrators
+Network equipment
+Network design
+Ubiquitous and Mobile computing
+Data center
+Mobile communications
+Digital communication
+Communications satellite
+Telecommunication (Telecommunications network)
+
+
+
+
+
+
+
+
+Business informatics
+
+
+
+ITIL
+ITSM
+Enterprise resource planning
+Electronic business
+Business intelligence
+Human Resources Development
+Security management
+Configuration management
+Technology management
+Power management
+Service management
+Project management
+Systems management
+Network management
+Content management
+Customer relationship management
+Incident management
+Asset management
+Integrated management
+Communications management
+System administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Major fields of computer science
+
+
+
+
+
+
+
+Note: This template roughly follows the 2012 ACM Computing classification.
+
+
+
+
+
+
+Hardware
+
+
+
+Printed circuit board
+Peripheral
+Integrated circuit
+Very-large-scale integration
+Energy consumption
+Electronic design automation
+
+
+
+
+
+
+
+
+Computer systems
+organization
+
+
+
+Computer architecture
+Embedded system
+Real-time computing
+Dependability
+
+
+
+
+
+
+
+
+Networks
+
+
+
+Network architecture
+Network protocol
+Network components
+Network scheduler
+Network performance evaluation
+Network service
+
+
+
+
+
+
+
+
+Software organization
+
+
+
+Interpreter
+Middleware
+Virtual machine
+Operating system
+Software quality
+
+
+
+
+
+
+
+
+Software notations
+and tools
+
+
+
+Programming paradigm
+Programming language
+Compiler
+Domain-specific language
+Modeling language
+Software framework
+Integrated development environment
+Software configuration management
+Software library
+Software repository
+
+
+
+
+
+
+
+
+Software development
+
+
+
+Software development process
+Requirements analysis
+Software design
+Software construction
+Software deployment
+Software maintenance
+Programming team
+Open-source model
+
+
+
+
+
+
+
+
+Theory of computation
+
+
+
+Model of computation
+Formal language
+Automata theory
+Computational complexity theory
+Logic
+Semantics
+
+
+
+
+
+
+
+
+Algorithms
+
+
+
+Algorithm design
+Analysis of algorithms
+Randomized algorithm
+Computational geometry
+
+
+
+
+
+
+
+
+Mathematics
+of computing
+
+
+
+Discrete mathematics
+Probability
+Statistics
+Mathematical software
+Information theory
+Mathematical analysis
+Numerical analysis
+
+
+
+
+
+
+
+
+Information
+systems
+
+
+
+Database management system
+Information storage systems
+Enterprise information system
+Social information systems
+Geographic information system
+Decision support system
+Process control system
+Multimedia information system
+Data mining
+Digital library
+Computing platform
+Digital marketing
+World Wide Web
+Information retrieval
+
+
+
+
+
+
+
+
+Security
+
+
+
+Cryptography
+Formal methods
+Security services
+Intrusion detection system
+Hardware security
+Network security
+Information security
+Application security
+
+
+
+
+
+
+
+
+Human–computer
+interaction
+
+
+
+Interaction design
+Social computing
+Ubiquitous computing
+Visualization
+Accessibility
+
+
+
+
+
+
+
+
+Concurrency
+
+
+
+Concurrent computing
+Parallel computing
+Distributed computing
+Multithreading
+Multiprocessing
+
+
+
+
+
+
+
+
+Artificial
+intelligence
+
+
+
+Natural language processing
+Knowledge representation and reasoning
+Computer vision
+Automated planning and scheduling
+Search methodology
+Control method
+Philosophy of artificial intelligence
+Distributed artificial intelligence
+
+
+
+
+
+
+
+
+Machine learning
+
+
+
+Supervised learning
+Unsupervised learning
+Reinforcement learning
+Multi-task learning
+Machine learning algorithms
+Cross-validation
+
+
+
+
+
+
+
+
+Graphics
+
+
+
+Animation
+Rendering
+Image manipulation
+Graphics processing unit
+Mixed reality
+Virtual reality
+Image compression
+Solid modeling
+
+
+
+
+
+
+
+
+Applied
+computing
+
+
+
+E-commerce
+Enterprise software
+Computational mathematics
+Computational physics
+Computational chemistry
+Computational biology
+Computational social science
+Computational engineering
+Computational healthcare
+Digital art
+Electronic publishing
+Cyberwarfare
+Electronic voting
+Video game
+Word processing
+Operations research
+Educational technology
+Document management
+
+
+
+
+
+
+
+
+
+
+
+ Computer science portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Technology
+
+
+
+
+
+
+
+
+
+Outline of technology
+Outline of applied science
+
+
+
+
+
+
+
+
+Fields
+
+
+
+
+Agriculture
+
+
+
+Agricultural engineering
+Aquaculture
+Fisheries science
+Food chemistry
+Food engineering
+Food microbiology
+Food technology
+GURT
+ICT
+Nutrition
+
+
+
+
+
+
+
+
+Biomedical
+
+
+
+Bioinformatics
+Biological engineering
+Biomechatronics
+Biomedical engineering
+Biotechnology
+Cheminformatics
+Genetic engineering
+Healthcare science
+Medical research
+Medical technology
+Nanomedicine
+Neuroscience
+Neurotechnology
+Pharmacology
+Reproductive technology
+Tissue engineering
+
+
+
+
+
+
+
+
+Buildings and
+Construction
+
+
+
+Acoustical engineering
+Architectural engineering
+Building services engineering
+Civil engineering
+Construction engineering
+Domestic technology
+Facade engineering
+Fire protection engineering
+Safety engineering
+Sanitary engineering
+Structural engineering
+
+
+
+
+
+
+
+
+Educational
+
+
+
+Educational software
+Digital technologies in education
+ICT in education
+Impact
+Multimedia learning
+Virtual campus
+Virtual education
+
+
+
+
+
+
+
+
+Energy
+
+
+
+Nuclear engineering
+Nuclear technology
+Petroleum engineering
+Soft energy technology
+
+
+
+
+
+
+
+
+Environmental
+
+
+
+Clean technology
+Clean coal technology
+Ecological design
+Ecological engineering
+Ecotechnology
+Environmental engineering
+Environmental engineering science
+Green building
+Green nanotechnology
+Landscape engineering
+Renewable energy
+Sustainable design
+Sustainable engineering
+
+
+
+
+
+
+
+
+Industrial
+
+
+
+Automation
+Business informatics
+Engineering management
+Enterprise engineering
+Financial engineering
+Industrial biotechnology
+Industrial engineering
+Metallurgy
+Mining engineering
+Productivity improving technologies
+Research and development
+Tribology
+
+
+
+
+
+
+
+
+IT and
+communications
+
+
+
+Artificial intelligence
+Broadcast engineering
+Computer engineering
+Computer science
+Financial technology
+Information technology
+Music technology
+Ontology engineering
+RF engineering
+Software engineering
+Telecommunications engineering
+Visual technology
+Web engineering
+
+
+
+
+
+
+
+
+Military
+
+
+
+Army engineering maintenance
+Electronic warfare
+Military communications
+Military engineering
+Stealth technology
+
+
+
+
+
+
+
+
+Transport
+
+
+
+Aerospace engineering
+Automotive engineering
+Naval architecture
+Space technology
+Traffic engineering
+Transport engineering
+
+
+
+
+
+
+
+
+
+
+
+
+Others
+
+
+
+
+applied science
+
+
+
+Cryogenics
+Electro-optics
+Electronics
+Engineering geology
+Engineering physics
+Hydraulics
+Materials science
+Microfabrication
+Nanoengineering
+
+
+
+
+
+
+
+
+engineering (list)
+
+
+
+Audio
+Biochemical
+Ceramic
+Chemical
+Polymer
+Control
+Electrical
+Electronic
+Entertainment
+Geotechnical
+Hydraulic
+Mechanical
+Mechatronics
+Optical
+Protein
+Quantum
+Robotics
+
+Animatronics
+
+
+Systems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Components
+
+
+
+Infrastructure
+Invention
+
+Timeline
+
+
+Knowledge
+Machine
+Skill
+
+Craft
+
+
+Tool
+
+Gadget
+
+
+
+
+
+
+
+
+
+
+Scales
+
+
+
+Femtotechnology
+Picotechnology
+Nanotechnology
+Microtechnology
+Macro-engineering
+Megascale engineering
+
+
+
+
+
+
+
+
+History
+
+
+
+Prehistoric technology
+Neolithic Revolution
+Ancient technology
+Medieval technology
+Renaissance technology
+Industrial Revolution
+
+Second
+
+
+Jet Age
+Digital Revolution
+Information Age
+
+
+
+
+
+
+
+
+Theories and
+concepts
+
+
+
+Appropriate technology
+Collingridge dilemma
+Critique of technology
+Diffusion of innovations
+Disruptive innovation
+Dual-use technology
+Ephemeralization
+High tech
+Hype cycle
+Low-technology
+Mature technology
+Strategy of Technology
+Technicism
+Techno-progressivism
+Technocapitalism
+Technocentrism
+Technocracy
+Technocriticism
+Technoetic
+Technogaianism
+Technological alliance
+Technological apartheid
+Technological change
+Technological convergence
+Technological determinism
+Technological escalation
+Technological evolution
+Technological fix
+Technological innovation system
+Technological momentum
+Technological nationalism
+Technological paradigm
+Technological rationality
+Technological revival
+Technological revolution
+Technological self-efficacy
+Technological singularity
+
+Singularitarianism
+
+
+Technological somnambulism
+Technological transitions
+Technological unemployment
+Technological utopianism
+Technology lifecycle
+
+Technology acceptance model
+Technology adoption lifecycle
+
+
+Technomancy
+Technorealism
+Technoromanticism
+Technoscience
+Transhumanism
+
+
+
+
+
+
+
+
+Other
+
+
+
+Emerging technologies
+
+List
+
+
+Fictional technology
+Technopaganism
+High-technology business districts
+Kardashev scale
+List of technologies
+Philosophy of technology
+
+Ethics of technology / Technoethics
+
+
+Science, technology and society
+
+Technology dynamics
+Science and technology by country
+
+
+STEM fields
+
+Pre-STEM
+women
+
+
+STEAM fields
+Technology alignment
+Technology assessment
+Technology brokering
+Technology companies
+Technology demonstration
+Technology education
+
+Technical universities and colleges
+
+
+Technology evangelist
+Technology fusion
+Technology governance
+Technology integration
+Technology journalism
+Technology management
+Technology museum
+Technology policy
+Technology shock
+Technology strategy
+Technology and society
+Technology transfer
+Technophilia
+Technophobia
+Technoself
+Technosexual
+Technosignature
+Technostress
+Terotechnology
+
+
+
+
+
+
+
+
+
+
+
+ Book
+ Category
+ Commons
+ Portal
+ Wikiquotes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Computing&amp;oldid=692080575"					
+				Categories: ComputingHidden categories: Pages containing links to subscription-only contentAll articles with unsourced statementsArticles with unsourced statements from May 2013Articles with unsourced statements from March 2011				
+							
+		
+		
+			

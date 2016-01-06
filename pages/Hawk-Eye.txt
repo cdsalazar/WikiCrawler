@@ -1,0 +1,544 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Hawk-Eye
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For other uses, see Hawkeye (disambiguation).
+
+
+
+
+Camera system Hawk-Eye at the Kremlin Cup tennis tournament on 20 October 2012, Moscow
+
+
+Hawk-Eye is a complex computer system used officially in numerous sports such as cricket, tennis, Gaelic football, badminton, hurling, and association football, to visually track the trajectory of the ball and display a record of its statistically most likely path as a moving image.[1]
+Hawk-Eye was developed in the United Kingdom by Dr. Paul Hawkins. The system was originally implemented in 2001 for television purposes in cricket. The system works via six (sometimes seven) high-performance cameras, normally positioned on the underside of the stadium roof, which track the ball from different angles. The video from the six cameras is then triangulated and combined to create a three-dimensional representation of the trajectory of the ball. Hawk-Eye is not infallible and is accurate to within 5 millimetres (0.19 inch) but is generally trusted as an impartial second opinion in sports.[2]
+It has been accepted by governing bodies in tennis, cricket and association football as a technological means of adjudication. Hawk-Eye is used for the Challenge System since 2006 in tennis and Umpire Decision Review System in cricket since 2009. The system was rolled out for the 2013-14 Premier League season as a means of goal-line technology.[3] In December 2014 the clubs of the first division of Bundesliga decided to adopt this system for the 2015-16 season.[4]
+
+
+
+Contents
+
+
+1 Method of operation
+2 Hawk-Eye Innovations Ltd
+
+2.1 Cricket
+2.2 Tennis
+
+2.2.1 Unification of rules
+
+
+2.3 Association football
+2.4 Snooker
+2.5 Gaelic games
+2.6 Australian football
+
+
+3 Doubts
+4 Use in computer games
+5 See also
+6 References
+7 External links
+
+
+
+Method of operation[edit]
+All Hawk-Eye systems are based on the principles of triangulation using the visual images and timing data provided by a number of high-speed video cameras located at different locations and angles around the area of play.[5] For tennis there are ten cameras. The system rapidly processes the video feeds by a high-speed camera and ball tracker. A data store contains a predefined model of the playing area and includes data on the rules of the game.
+In each frame sent from each camera, the system identifies the group of pixels which corresponds to the image of the ball. It then calculates for each frame the 3D position of the ball by comparing its position on at least two of the physically separate cameras at the same instant in time. A succession of frames builds up a record of the path along which the ball has travelled. It also "predicts" the future flight path of the ball and where it will interact with any of the playing area features already programmed into the database. The system can also interpret these interactions to decide infringements of the rules of the game.[5]
+The system generates a graphic image of the ball path and playing area, which means that information can be provided to judges, television viewers or coaching staff in near real-time.
+The pure tracking system is combined with a backend database and archiving capabilities so that it is possible to extract and analyse trends and statistics about individual players, games, ball-to-ball comparisons, etc.
+Hawk-Eye Innovations Ltd[edit]
+Engineers at Roke Manor Research Limited, a Siemens subsidiary in Romsey, England, developed the system in 2001. Dr Paul Hawkins and David Sherry submitted a patent for the United Kingdom but withdrew their request.[5] All of the technology and intellectual property was spun off into a separated company, Hawk-Eye Innovations Ltd, based in Winchester, Hampshire.
+On 14 June 2006, a group of investors led by the Wisden Group bought the company,[6] who included Mark Getty, a member of the wealthy USA family and business dynasty. The acquisition was intended to strengthen Wisden's presence in cricket, and allow it to enter tennis and other international sports, with Hawk-Eye working on implementing a system for basketball. According to Hawk-Eye's website, the system produces much more data than that shown on television, which could be easily shown on the internet.
+Put up for sale in September 2010, it was sold as a complete entity to Japanese electronic giant Sony in March 2011.[7][7][8]
+Cricket[edit]
+The technology was first used by Channel 4 during a Test match between England and Pakistan on Lord's Cricket Ground, on 21 May 2001. It is used primarily by the majority of television networks to track the trajectory of balls in flight. In the winter season of 2008/2009 the ICC trialled a referral system where Hawk-Eye was used for referring decisions to the third umpire if a team disagreed with an LBW decision. The third umpire was able to look at what the ball actually did up to the point when it hit the batsman, but could not look at the predicted flight of the ball after it hit the batsman.[9]
+Its major use in cricket broadcasting is in analysing leg before wicket decisions, where the likely path of the ball can be projected forward, through the batsman's legs, to see if it would have hit the stumps. Consultation of the third umpire, for conventional slow motion or Hawk-Eye, on leg before wicket decisions, is currently sanctioned in international cricket even though doubts remain about its accuracy in cricket.[10]
+The Hawk-eye referral for LBW decision is based on three criteria:
+
+Where the ball pitched
+The location of impact with the leg of the batsman
+The projected path of the ball past the batsman
+
+In all three cases, marginal calls result in the on-field call being maintained.
+Due to its realtime coverage of bowling speed, the systems are also used to show delivery patterns of bowler's behaviour such as line and length, or swing/turn information. At the end of an over, all six deliveries are often shown simultaneously to show a bowler's variations, such as slower deliveries, bouncers and leg-cutters. A complete record of a bowler can also be shown over the course of a match.
+Batsmen also benefit from the analysis of Hawk-Eye, as a record can be brought up of the deliveries batsmen scored from. These are often shown as a 2-D silhouetted figure of a batsmen and colour-coded dots of the balls faced by the batsman. Information such as the exact spot where the ball pitches or speed of the ball from the bowler's hand (to gauge batsman reaction time) can also help in post-match analysis.
+Tennis[edit]
+In Serena Williams's quarterfinal loss to Jennifer Capriati at the 2004 US Open, many crucial calls were contested by Williams, and TV replays confirmed that the calls were indeed erroneous. Though most of the calls themselves were not reversed, there was one crucial overrule of a clearly incorrect call and the chair umpire Mariana Alves was removed from consideration for further matches at that year's U.S. Open. These errors prompted talks about line calling assistance especially as the Auto-Ref system was being tested by the U.S. Open at that time and was shown to be very accurate.[11]
+In late 2005 Hawk-Eye was tested by the International Tennis Federation (ITF) in New York City and was passed for professional use. Hawk-Eye reported that the New York tests involved 80 shots being measured by the ITF's high speed camera, a device similar to MacCAM. During an early test of the system at an exhibition tennis tournament in Australia (seen on local TV), there was an instance when the tennis ball was shown as "Out", but the accompanying word was "In".[citation needed] This was explained to be an error in the way the tennis ball was shown on the graphical display as a circle, rather than as an ellipse.[citation needed] This was immediately corrected.
+Hawk-Eye has been used in television coverage of several major tennis tournaments, including Wimbledon, the Queen's Club Championships, the Australian Open, the Davis Cup and the Tennis Masters Cup. The US Open Tennis Championship announced they would make official use of the technology for the 2006 US Open where each player receives two challenges per set.[12] It is also used as part of a larger tennis simulation implemented by IBM called PointTracker.
+The 2006 Hopman Cup in Perth, Western Australia, was the first elite-level tennis tournament where players were allowed to challenge point-ending line calls, which were then reviewed by the referees using Hawk-Eye technology. It used 10 cameras feeding information about ball position to the computers. Michaëlla Krajicek was the first player to challenge a call using the system.
+In March 2006, at the Nasdaq-100 Open in Miami, Hawk-Eye was used officially for the first time at a tennis tour event. Later that year, the US Open became the first grand-slam event to use the system during play, allowing players to challenge line calls.
+The 2007 Australian Open was the first grand-slam tournament of 2007 to implement Hawk-Eye in challenges to line calls, where each tennis player on Rod Laver Arena was allowed 2 incorrect challenges per set and one additional challenge should a tiebreaker be played. In the event of an advantage final set, challenges were reset to 2 for each player every 12 games, i.e. 6 all, 12 all. Controversies followed the event as at times Hawk-Eye produced erroneous output. In 2008, tennis players were allowed 3 incorrect challenges per set instead. Any leftover challenges didn't carry over to the next set. Once, in one of Amélie Mauresmo's matches, she challenged a ball that was called in, Hawk-Eye showed the ball was out by less than a millimetre but the call was allowed to stand. As a result, the point was replayed and Mauresmo didn't lose an incorrect challenge.
+
+
+
+
+Ball compared with impact.
+
+
+The Hawk-Eye technology was used in the 2007 Dubai Tennis Championships with some minor controversies. Defending champion Rafael Nadal accused the system of incorrectly declaring an out ball to be in following his exit. The umpire had called a ball out; when Mikhail Youzhny challenged the decision, Hawk-Eye said it was in by 3 mm.[13] Youzhny said afterwards that he himself thought the mark may have been wide but then offered that this kind of technology error could easily have been made by linesmen and umpires. Nadal could only shrug, saying that had this system been on clay, the mark would have clearly shown Hawk-Eye to be wrong.[14] The area of the mark left by the ball on a hard court is a portion of the total area that the ball was in contact with the court (a certain amount of pressure is required to create the mark)[citation needed].
+The 2007 Wimbledon Championships also implemented the Hawk-Eye system as an officiating aid on Centre Court and Court 1, and each tennis player was allowed 3 incorrect challenges per set. If the set produced a tiebreaker, each player was given an additional challenge. Additionally, in the event of a final set (third set in women's or mixed matches, fifth set in men's matches), where there is no tiebreak, each player's number of challenges was reset to three if the game score reached 6–6, and again at 12–12. Teymuraz Gabashvili, in his 1st round match against Roger Federer, made the first ever Hawk-Eye challenge on Centre Court. Additionally, during the finals of Federer against Rafael Nadal, Nadal challenged a shot which was called out. Hawk-Eye showed the ball as in, just clipping the line. The reversal agitated Federer enough for him to request (unsuccessfully) that the umpire turn off the Hawk-Eye technology for the remainder of the match.[15]
+In the 2009 Australian Open fourth round match between Roger Federer and Tomáš Berdych, Berdych challenged an out call. The Hawk-Eye system wasn't available when he challenged, likely due to a particularly pronounced shadow on the court. As a result, the original call stood.[16]
+In the 2009 Indian Wells Masters quarterfinals match between Ivan Ljubičić and Andy Murray, Murray challenged an out call. The Hawk-Eye system indicated that the ball landed on the center of the line despite instant replay images showing that the ball was clearly out. It was later revealed that the Hawk-Eye system had mistakenly picked up the second bounce, which was on the line, instead of the first bounce of the ball.[17] Immediately after the match, Murray apologised to Ljubicic for the call, and acknowledged that the point was out.
+The Hawk-Eye system was developed as a replay system, originally for TV broadcast coverage. As such, it initially couldn't call ins and outs live, only the Auto-Ref system could produce live in/out calls as it was developed for instant line calling. Both systems can produce replays.
+The Hawk-Eye Innovations website[18] states that the system performs with an average error of 3.6 mm. The standard diameter of a tennis ball is 67 mm, equating to a 5% error relative to ball diameter. This is roughly equivalent to the fluff on the ball.
+Unification of rules[edit]
+Until March 2008, the International Tennis Federation (ITF), Association of Tennis Professionals (ATP), Women's Tennis Association (WTA), Grand Slam Committee, and several individual tournaments had conflicting rules on how Hawk-Eye was to be utilised. A key example of this was the number of challenges a player was permitted per set, which varied among events.[19] Some tournaments allowed players a greater margin for error, with players allowed an unlimited numbers of challenges over the course of a match.[19] In other tournaments players received two or three per set.[19] On 19 March 2008, the aforementioned organizing bodies announced a uniform system of rules: three unsuccessful challenges per set, with an additional challenge if the set reaches a tiebreak. The next scheduled event on the men and women's tour, the 2008 Sony Ericsson Open, was the first event to implement these new, standardized rules.[20]
+Association football[edit]
+
+
+
+
+
+Parts of this article (those related to Association football) are outdated. Please update this article to reflect recent events or newly available information. (June 2013)
+
+
+2011 Hawk-Eye has been proposed for use in Association football but has yet to win general approval from the major governing bodies of the sport. The Football Association, English football's governing body, has declared the system as "ready for inspection by FIFA", after tests suggested that the results of a goal-line incident could be relayed to the match referee within half a second (IFAB, the governing body for the Laws of the game, insists on goals being signalled immediately i.e. within five seconds).[21]
+FIFA secretary general Jérôme Valcke admits Hawk-Eye goal-line technology will be considered if the system's developers guarantee a 100% success rate. Football's governing body have previously been reluctant to use video technology to settle on-pitch disputes. Testing of the Hawk-Eye's suitability in football is expected to continue and there could be a trial run in the Premier League, according to Paul Hawkins. "We will speak to FIFA over the next week or so to get the detail, but it looks positive I think," Hawkins said.[22]
+On 3 March 2012, Hawk-Eye and another system, GoalRef were approved by the IFAB and advanced to a second phase of testing. If either of the two systems meet FIFA's requirements, they may be approved in time for use in the 2014 FIFA World Cup.[23] Hawk-Eye was tested in the Hampshire Senior Cup final between Eastleigh and Totton on 16 May 2012 at Southampton Football Club's St Mary's Stadium, although only FIFA staff had access to the system readings and Hawk-Eye was not available to the match officials to assist with refereeing decisions.[24][25]
+On 2 June 2012, the system was tested during a friendly between Belgium and host England in Wembley. During these tests the results of the systems won't be used for the game; the referee won't be informed about the calls from Hawk-Eye.[26] On 5 July 2012 FIFA approved of this technology along with GoalRef to be part of the new goal line technology system.
+On 11 April 2013, Hawk-Eye was approved for use in the Premier League from the start of the 2013-14 football season is officially called the “Goal Decision System,” and it was used for the first time in a game between Liverpool and Stoke City at Anfield on 17 August 2013.[27][28][29] The system uses seven cameras per goal to analyse whether or not the ball has crossed the line.[30] The first goal to be verified by Hawk-eye in the Premier League was scored by Edin Dzeko on 18 January 2014 between Manchester City and Cardiff City at the Etihad Stadium.[31][32]
+On 16 December 2013, it was announced that Hawk-Eye will be used in three of the four quarter-finals and any subsequent matches in the Football League Cup.[33] The system was used when on the very next day, when on the Sunderland – Chelsea quarter-final own-goal from Lee Cattermole was allowed.[34]
+Snooker[edit]
+
+
+
+
+
+Parts of this article (those related to snooker) are outdated. Please update this article to reflect recent events or newly available information. (December 2014)
+
+
+At the World Snooker Championship 2007, the BBC used Hawk-Eye for the first time in its television coverage to show player views, particularly in the incidents of potential snookers.[35] It has also been used to demonstrate intended shots by players when the actual shot has gone awry. It is now used by the BBC at every World Championship, as well as some other major tournaments. The BBC used to use the system sporadically, for instance in the 2009 Masters at Wembley the Hawk-Eye was at most used once or twice per frame.[citation needed] It's usage has decreased significantly and is now only used within the World Championships and very rarely in any other tournament on the snooker tour. In contrast to tennis, the Hawk-Eye is never used in snooker to assist referees' decisions and is primarily used to assist viewers in showing what the player is facing.
+Gaelic games[edit]
+In Ireland, Hawk-Eye was introduced for all Championship matches at Croke Park in Dublin in 2013. This followed consideration by the Gaelic Athletic Association (GAA) for its use in Gaelic football and hurling. A trial took place in Croke Park on 2 April 2011. The double-header featured football between Dublin and Down and hurling between Dublin and Kilkenny. Over the previous two seasons there had been many calls for the technology to be adopted, especially from Kildare fans, who saw two high profile decisions go against their team in important games. The GAA said it would review the issue after the 2013 Sam Maguire Cup was presented.[36]
+Hawk-Eye's use was intended to eliminate contentious scores.[37] It was first used in the Championship on Saturday 1 June 2013 for the Kildare versus Offaly game, part of a double header with a second game of Dublin versus Westmeath.[38] It was used to confirm that Offaly substitute Peter Cunningham's attempted point had gone wide 10 minutes into the second half.[39]
+Use of Hawk-Eye was suspended during the 2013 All-Ireland hurling semi-finals on 18 August due to a human error during an Under-18 hurling game between Limerick and Galway.[40] During the minor game, Hawk-Eye ruled a point for Limerick as a miss although the graphic showed the ball passing inside the posts, causing confusion around the stadium - the referee ultimately waved the valid point wide provoking anger from fans, viewers and TV analysts covering the game live.[41] The system was subsequently stood down for the senior game which followed, owing to "an inconsistency in the generation of a graphic".[42] Limerick, who were narrowly defeated after extra-time, announced they would be appealing over Hawk-Eye's costly failure.[40] Hawk-Eye apologised for this incident and admitted that it was a result of human error. There have been no further incidents during the GAA. The incident drew attention from the UK, where Hawk-Eye had made its debut in English soccer's Premier League the day before.[43]
+Australian football[edit]
+On July 4, 2013, the Australian Football League announced that they would be testing Hawk Eye technology to be used in the Score Review process. Hawk Eye was used for all matches played at the MCG during Round 15 of the 2013 AFL Season. The AFL also announced that Hawk Eye was only being tested, and would not be used in any Score Reviews during the round.
+Doubts[edit]
+Hawk-Eye is now familiar to sport fans around the world for the views it brings into sports like cricket and tennis. Although this new technology has for the most part been embraced, it has been recently criticised by some, particularly some specific, high profile calls[citation needed]. The Australian media in cricket were critical of a specific LBW appeal made by Anil Kumble when Andrew Symonds was batting. The ball, as suggested by Hawk-Eye, would have bounced over the stumps, but to the naked eye looked absolutely out.[44] In the Nadal-Federer final at Wimbledon in 2008, a ball that appeared out was called in by 1 mm, a distance smaller than the advertised margin of error (3.6 mm).[45] Some commentators have criticised the system's 3.6 mm statistical margin of error as too large.[46] Others have noted that while 3.6 mm is extraordinarily accurate, this margin of error is only for the witnessed trajectory of the ball. Its use in broadcasts to predict the trajectory of a ball had it not hit a batsman is less certain, especially in situations where the conditions of the turf would affect its future trajectory, i.e. where the ball is headed to the ground or has only a short hop before hitting the batsman.[47] Currently, the system is not used officially in such circumstances, though it is used in television broadcasts and analysis.
+In 2008, an article in a peer-reviewed journal[48] consolidated many of these doubts. The authors acknowledged the value of the system, but noted that it was probably fallible to some extent, and that its failure to depict a margin of error gave a spurious depiction of events. The authors also argued that the probable limits to its accuracy were not acknowledged by players, officials, commentators or spectators. They hypothesised that Hawk-Eye may struggle with predicting the trajectory of a cricket ball after bouncing: the time between a ball bouncing and striking the batsman may be too short to generate the three frames (at least) needed to plot a curve accurately. However, the paper did not attempt to establish the accuracy of the system, and the only technical information presented was taken from an article on the Cricinfo website.
+The article also argued that Hawk-Eye's depiction of line decisions in tennis ignored such factors as the distortion of the ball on bouncing and the less-than-complete precision with which the lines on the court are drawn. The makers of Hawk-Eye strongly attacked many of these claims, but the authors have not withdrawn them.[citation needed]
+Use in computer games[edit]
+The use of the Hawk-Eye brand and simulation has been licensed to Codemasters for use in the video game Brian Lara International Cricket 2005 to make the game appear more like television coverage, and subsequently in Brian Lara International Cricket 2007, Ashes Cricket 2009 and International Cricket 2010. A similar version of the system has since been incorporated into the Xbox 360 version of Smash Court Tennis 3, but it is not present in the PSP version of the game, although it does feature a normal challenge of the ball which does not use the Hawk-Eye feature.
+See also[edit]
+
+Electronic line judge
+Cyclops
+Hot Spot (cricket)
+Umpire Decision Review System
+
+References[edit]
+
+
+^ Two British scientists call into question Hawk-Eye's accuracy – Tennis – ESPN. Sports.espn.go.com (2008-06-19). Retrieved on 2010-08-15.
+^ "Hawk-Eye at Wimbledon: it's not as infallible as you think". The Guardian. 8 July 2013. Retrieved 2013-08-16.&#160;
+^ Gibson, Owen (11 April 2013). "Premier League clubs choose Hawk-Eye to provide new goalline technology". The Guardian (London). Retrieved 2013-07-04.&#160;
+^ "Bundesliga approves Hawk-Eye goal-line technology for new season". The Observer. 4 Dec 2014. Retrieved 2014-12-04.&#160;
+^ a b c VIDEO PROCESSOR SYSTEMS FOR BALL TRACKING IN BALL GAMES esp@cenet Patent document, 2001-06-14
+^ "Cricinfo – Hawk-Eye bought by Wisden Group". Content-usa.cricinfo.com. Retrieved 2009-06-01.&#160;
+^ a b "Hawk-Eye ball-tracking firm bought by Sony". BBC News. 7 March 2011. Retrieved 2011-03-07.&#160;
+^ Website company: About Hawk Eye, visited May 25, 2012
+^ "About ICC – Rules and Regulations". Icc-cricket.yahoo.com. 1 January 2009. Retrieved 2009-06-01.&#160;
+^ "Nine admits Hawk-Eye not foolproof&#160;» The Roar – Your Sports Opinion". The Roar. 24 January 2008. Retrieved 2009-06-01.&#160;
+^ Can Cameras and Software Replace Referees?" Popular Mechanics. (12 May 2010). Retrieved on 2010-09-03.
+^ [1][dead link]
+^ Friday 2 March 2007 By Barry Wood (2 March 2007). "Tennis: Nadal blames line calling system for losing – 02 Mar 2007 – nzherald: Sports news – New Zealand and International Sport news and results". nzherald. Retrieved 2009-06-01.&#160;
+^ "Gulfnews: Hawk-Eye leaves Nadal and Federer at wits' end". Archive.gulfnews.com. 3 March 2007. Retrieved 2009-06-01.&#160;
+^ Pavia, Will (10 July 2007). "Hawk-Eye creator defends his system after Federers volley". The Times (London). Retrieved 2010-05-04.&#160;
+^ "Berdych joins Federer in anti-Hawk-Eye club". 27 January 2009. Retrieved 2009-06-29.&#160;
+^ "When computers get it wrong". Toronto: The Globe and Mail. 24 March 2009. Retrieved 2012-07-08.&#160;
+^ "Home&#160;:: Hawk-Eye". Hawkeyeinnovations.co.uk. Retrieved 2012-06-02.&#160;
+^ a b c Newman, Paul (23 June 2007). "Hawk-Eye makes history thanks to rare British success story at Wimbledon". London: The Independent. Retrieved 2010-12-03.&#160;
+^ "Hawk-Eye challenge rules unified". BBC News. 19 March 2008. Retrieved 2008-08-22.&#160;
+^ Uses in association football: TimesOnline website.
+^ GOAL.com, fifa-open-to-hawk-eye-goal-line-technology 14 March 2011.
+^ Conway, Richard (3 March 2012). "Goal-line technology edges closer". BBC Sport. Retrieved 18 May 2012.&#160;
+^ Conway, Richard (27 April 2012). "Non-league final to be used for goal-line technology experiment". BBC Sport. Retrieved 18 May 2012.&#160;
+^ "Technology World-First at St. Mary's". Southampton FC. 16 May 2012. Retrieved 18 May 2012.&#160;[dead link]
+^ Irishtimes: Wembley test for Hawkeye when England host Belgium, 25 June 2012
+^ "HawkEye used for the first time in the Premier League". The Score. 17 August 2013. Retrieved 20 August 2013.&#160;
+^ "How Hawk-Eye's goal-line technology will work". Premier League Official Site. 11 April 2013. Retrieved 20 August 2013.&#160;
+^ BBC: Goal-line technology: Premier League votes in favour for 2013-14, 11 April 2013
+^ "Hawk-Eye chosen for Premier League". 3 News NZ. April 12, 2013.&#160;
+^ "Premier League review: Man City landmark and did Suarez dive?". BBC Sport. 19 January 2014. Retrieved 2015-07-12.&#160;
+^ "Man City 4 Cardiff City 2". BBC Sport. 18 January 2014. Retrieved 20 January 2014.&#160;
+^ BBC: Football League to use goal-line technology in Capital One Cup
+^ BBC: Sunderland 2-1 Chelsea
+^ "Press Office – BBC Sport to feature Hawk-eye in World Snooker Championship coverage". BBC. Retrieved 2009-06-01.&#160;
+^ "GAA to trial Hawk-Eye at Croke Park". The Irish Times. 24 March 2011. Archived from the original on 2012-09-03.&#160; Uses in Gaelic football and hurling.
+^ "GAA hopes Hawk-Eye will eliminate contentious points". RTÉ Sport. 15 May 2013. Retrieved 15 May 2013.&#160;
+^ "Live: Saturday's GAA Championship action". RTÉ Sport. 1 June 2013. Retrieved 1 June 2013. 18:41 - A quick observation on Hawkeye which was used for the first time in the Kildare v Offaly game. It did not delay the game at all and the result came through on our screens within 15 seconds of the referee calling for Hawkeye. The composite picture on television showed clearly that the ball had gone wide. Good start for the new technology.&#160;
+^ "Hawkeye makes successful debut". Hogan Stand. 2 June 2013. Retrieved 2 June 2013.&#160;
+^ a b "Hawk-Eye admits to human error at Croke Park as Limerick confirm appeal". RTÉ Sport. 19 August 2013. Retrieved 19 August 2013.&#160;
+^ "GAA’s ‘Hawkeye’ stood down following error during All-Ireland minor semi-final". Irish Independent. 18 August 2013. Retrieved 18 August 2013.&#160;
+^ "Limerick to appeal after Hawk-Eye blunder in minor hurling game". BBC Sport. 20 August 2013. Retrieved 20 August 2013.&#160;
+^ "Irish officials suspend Hawk-Eye system after glitch". Reuters. 19 August 2013. Retrieved 19 August 2013.&#160;
+^ Some sections of the Australian media have questioned the Hawk-eye analysis of the LBW appeal by Anil Kumble against Andrew Symonds that was rejected by umpire Steve Bucknor. (PDF) . Retrieved on 2010-08-15.
+^ IEEE Spectrum: Hawk-Eye in the Crosshairs at Wimbledon Again. Spectrum.ieee.org. Retrieved on 2010-08-15.
+^ Big debate: Was Roger Federer right to criticise Hawk-Eye? | Sport. The Guardian. Retrieved on 2010-08-15.
+^ Hawk-Eye Cricket System. Topendsports.com (2001-04-21). Retrieved on 2010-08-15.
+^ Collins, H. and Evans, R. 2008. "You Cannot Be Serious! Public understanding of technology with special reference to 'Hawk-Eye'". Public Understanding of Science 17:3,, http://www2.geog.ucl.ac.uk/~mdisney/teaching/1006/papers/collins_hawkeye.pdf
+
+
+External links[edit]
+
+Hawk-Eye Innovations
+A video demonstration of Hawk-eye at a cricket match[dead link]
+How It Works magazine – Controversial Hawk-Eye moments
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Cricket clothing and equipment
+
+
+
+
+
+
+Equipment
+
+
+
+Bat
+Ball
+Stump
+Bails
+
+
+
+
+
+
+
+
+Clothing
+
+
+
+Pads
+Helmet
+Cap
+Whites
+
+
+
+
+
+
+
+
+Others
+
+
+
+Bowling machine
+Cricket nets
+Snickometer
+Hawk-Eye
+Hot Spot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Tennis
+
+
+
+
+
+
+
+
+
+International Tennis Federation
+History
+Glossary
+Types of tennis match
+Lists of statistics
+
+
+
+
+
+
+
+
+Basics
+
+
+
+
+
+
+
+Scoring system
+
+point
+
+
+Strategy
+
+grips
+serve and volley
+
+
+Equipment
+
+ball
+racket
+strings
+
+
+Official
+Technology
+
+electronic line judge
+hawk-eye
+cyclops
+
+
+
+
+
+
+
+
+
+
+
+Courts
+
+
+
+
+Carpet
+Clay
+Grass
+Hard
+
+
+
+
+
+
+
+
+
+Shots
+
+
+
+
+Backhand
+Backspin
+Drop shot
+Flat
+Forehand
+Groundstroke
+Half volley
+Lob
+Passing shot
+Serve
+
+ace
+
+
+Smash
+Topspin
+Volley
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Grand Slams
+
+
+
+Australian Open
+French Open
+Wimbledon
+US Open
+Records
+
+
+
+
+
+
+
+
+Professional tours
+
+
+
+
+
+Men
+
+
+
+
+ATP World Tour
+ATP Challenger Tour
+ITF Men's Circuit
+
+
+
+
+
+
+
+
+
+Women
+
+
+
+
+WTA Tour
+WTA 125K series
+ITF Women's Circuit
+
+
+
+
+
+
+
+
+
+
+
+Team events
+
+
+
+Davis Cup
+Fed Cup
+Hopman Cup
+Wightman Cup
+World Team Cup
+World TeamTennis
+International Premier Tennis League
+
+
+
+
+
+
+
+
+Multi-sport events
+
+
+
+
+
+Intercontinental
+
+
+
+
+Olympics
+Youth Olympics
+Universiade
+Commonwealth
+Island
+Mediterranean
+
+
+
+
+
+
+
+
+
+Continental
+
+
+
+
+All-Africa
+Asian
+Pacific
+Pan American
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Hawk-Eye&amp;oldid=684888370"					
+				Categories: British inventionsCompanies based in HampshireCricket equipmentCricket terminologyGaelic games terminologySony subsidiariesSports technologyTennis equipmentHidden categories: All articles with dead external linksArticles with dead external links from June 2009Articles with dead external links from February 2014Use British English from February 2013Use dmy dates from February 2013All articles with unsourced statementsArticles with unsourced statements from June 2009Articles with unsourced statements from July 2010Wikipedia articles in need of updating from June 2013All Wikipedia articles in need of updatingWikipedia articles in need of updating from December 2014Articles with unsourced statements from April 2012Articles with unsourced statements from July 2015				
+							
+		
+		
+			

@@ -1,0 +1,143 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Software framework
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Framework (computer science)" redirects here. For other uses, see Framework (disambiguation).
+In computer programming, a software framework is an abstraction in which software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software. A software framework is a universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications, products and solutions. Software frameworks may include support programs, compilers, code libraries, tool sets, and application programming interfaces (APIs) that bring together all the different components to enable development of a project or solution.
+Frameworks contain key distinguishing features that separate them from normal libraries:
+
+inversion of control: In a framework, unlike in libraries or normal user applications, the overall program's flow of control is not dictated by the caller, but by the framework.[1]
+default behavior: A framework has a default behavior. This default behavior must be some useful behavior and not a series of no-ops.[citation needed]
+extensibility: A framework can be extended by the user usually by selective overriding or specialized by user code to provide specific functionality.
+non-modifiable framework code: The framework code, in general, is not supposed to be modified, while accepting user-implemented extensions. In other words, users can extend the framework, but should not modify its code.
+
+
+
+
+Contents
+
+
+1 Rationale
+2 Examples
+3 Architecture
+4 See also
+5 References
+6 External links
+
+
+
+Rationale[edit]
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (April 2011)
+
+
+The designers of software frameworks aim to facilitate software development by allowing designers and programmers to devote their time to meeting software requirements rather than dealing with the more standard low-level details of providing a working system, thereby reducing overall development time.[2] For example, a team using a web application framework to develop a banking web-site can focus on writing code particular to banking rather than the mechanics of request handling and state management.
+Frameworks often add to the size of programs, a phenomenon termed "code bloat". Due to customer-demand driven applications needs, both competing and complementary frameworks sometimes end up in a product. Further, due to the complexity of their APIs, the intended reduction in overall development time may not be achieved due to the need to spend additional time learning to use the framework; this criticism is clearly valid when a special or new framework is first encountered by development staff.[citation needed] If such a framework is not used in subsequent job taskings, the time invested in learning the framework can cost more than purpose-written code familiar to the project's staff; many programmers keep copies of useful boilerplate for common needs.
+However, once a framework is learned, future projects can be faster and easier to complete; the concept of a framework is to make a one-size-fits-all solution set, and with familiarity, code production should logically rise. There are no such claims made about the size of the code eventually bundled with the output product, nor its relative efficiency and conciseness. Using any library solution necessarily pulls in extras and unused extraneous assets unless the software is a compiler-object linker making a tight (small, wholly controlled, and specified) executable module.
+The issue continues, but a decade-plus of industry experience[citation needed] has shown that the most effective frameworks turn out to be those that evolve from re-factoring the common code of the enterprise, instead of using a generic "one-size-fits-all" framework developed by third parties for general purposes. An example of that would be how the user interface in such an application package as an office suite grows to have common look, feel, and data-sharing attributes and methods, as the once disparate bundled applications grow unified into a suite which is tighter and smaller; the newer/evolved suite can be a product that shares integral utility libraries and user interfaces.
+This trend in the controversy brings up an important issue about frameworks. Creating a framework that is elegant, versus one that merely solves a problem, is still an art rather than a science. "Software elegance" implies clarity, conciseness, and little waste (extra or extraneous functionality, much of which is user defined). For those frameworks that generate code, for example, "elegance" would imply the creation of code that is clean and comprehensible to a reasonably knowledgeable programmer (and which is therefore readily modifiable), versus one that merely generates correct code. The elegance issue is why relatively few software frameworks have stood the test of time: the best frameworks have been able to evolve gracefully as the underlying technology on which they were built advanced. Even there, having evolved, many such packages will retain legacy capabilities bloating the final software as otherwise replaced methods have been retained in parallel with the newer methods.
+Examples[edit]
+Software frameworks typically contain considerable housekeeping and utility code in order to help bootstrap user applications, but generally focus on specific problem domains, such as:
+
+Artistic drawing, music composition, and mechanical CAD[3][4]
+Financial modeling applications[5]
+Earth system modeling applications[6]
+Decision support systems[7]
+Multimedia framework - Media playback and authoring
+Ajax framework / JavaScript framework
+Web application framework
+Middleware
+Cactus Framework - High performance scientific computing
+Application framework - General GUI applications
+Enterprise Architecture framework
+Oracle Application Development Framework
+
+Architecture[edit]
+According to Pree,[8] software frameworks consist of frozen spots and hot spots. Frozen spots define the overall architecture of a software system, that is to say its basic components and the relationships between them. These remain unchanged (frozen) in any instantiation of the application framework. Hot spots represent those parts where the programmers using the framework add their own code to add the functionality specific to their own project.
+In an object-oriented environment, a framework consists of abstract and concrete classes. Instantiation of such a framework consists of composing and subclassing the existing classes.[9]
+When developing a concrete software system with a software framework, developers utilize the hot spots according to the specific needs and requirements of the system. Software frameworks rely on the Hollywood Principle: "Don't call us, we'll call you."[10] This means that the user-defined classes (for example, new subclasses), receive messages from the predefined framework classes. Developers usually handle this by implementing superclass abstract methods.
+See also[edit]
+
+Class (computer science)
+Design pattern (computer science)
+Don't repeat yourself
+Implicit invocation
+Programming paradigm
+
+References[edit]
+
+
+^ Riehle, Dirk (2000), Framework Design: A Role Modeling Approach (PDF), Swiss Federal Institute of Technology&#160;
+^ "Framework". DocForge. Retrieved 15 December 2008.&#160;
+^ Vlissides, J M; Linton, M A (1990), "Unidraw: a framework for building domain-specific graphical editors", ACM Transactions of Information Systems 8 (3): 237–268, doi:10.1145/98188.98197&#160;
+^ Johnson, R E (1992), "Documenting frameworks using patterns", Proceedings of the Conference on Object Oriented Programming Systems Languages and Applications (ACM Press): 63–76&#160;
+^ Birrer, A; Eggenschwiler, T (1993), "Proceedings of the European conference on object-oriented programming", Frameworks in the financial engineering domain: an experience report (Springer-Verlag): 21–35&#160;
+^ Hill, C; DeLuca, C; Balaji, V; Suarez, M; da Silva, A (2004), "Architecture of the Earth System Modeling Framework (ESMF)", Computing in Science and Engineering: 18–28&#160;
+^ Gachet, A (2003), "Software Frameworks for Developing Decision Support Systems – A New Component in the Classification of DSS Development Tools", Journal of Decision Systems 12 (3): 271–281&#160;
+^ Pree, W (1994), "Meta Patterns: A Means for Capturing the Essentials of Reusable Object-Oriented Design", Proceedings of the 8th European Conference on Object-Oriented Programming (Springer-Verlag): 150–162&#160;
+^ Buschmann, F (1996), Pattern-Oriented Software Architecture Volume 1: A System of Patterns. Chichester, Wiley, ISBN&#160;0-471-95869-7&#160;
+^ Larman, C (2001), Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design and the Unified Process (2nd ed.), Prentice Hall, ISBN&#160;0-13-092569-1&#160;
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Software frameworks.
+
+
+
+Software Frameworks: Resistance isn’t Futile
+Approach to Software Framework Design
+Applying Patterns and Frameworks to Develop Object-Oriented Communication Software
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4464685-9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Software_framework&amp;oldid=679093054"					
+				Categories: Object-oriented programmingSoftware architectureSoftware design patternsSoftware frameworksHidden categories: All articles with unsourced statementsArticles with unsourced statements from January 2015Articles needing additional references from April 2011All articles needing additional referencesArticles with unsourced statements from April 2011Commons category with local link same as on WikidataUse dmy dates from April 2011Wikipedia articles with GND identifiers				
+							
+		
+		
+			

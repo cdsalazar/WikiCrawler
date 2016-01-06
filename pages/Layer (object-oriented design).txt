@@ -1,0 +1,64 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Layer (object-oriented design)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Not to be confused with abstraction layer.
+In object-oriented design, a layer is a group of classes that have the same set of link-time module dependencies to other modules. In other words, a layer is a group of reusable components that are reusable in similar circumstances. In programming languages, the layer distinction is often expressed as "import" dependencies between software modules.
+Layers are often arranged in a tree-form hierarchy, with dependency relationships as links between the layers. Dependency relationships between layers are often either inheritance, composition or aggregation relationships, but other kinds of dependencies can also be used.
+Layers is an architectural pattern described in many books, for example Pattern-Oriented Software Architecture[1]
+Notes[edit]
+
+^ Pattern-Oriented Software Architecture - A System of Patterns
+
+References[edit]
+
+John Lakos, Large-scale C++ software design. Addison-Wesley, 1997.
+
+See also[edit]
+
+Abstraction layer
+Common layers in an information system logical architecture
+Shearing layers
+
+
+
+
+This computer science article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Layer_(object-oriented_design)&amp;oldid=574301553"					
+				Categories: Object-oriented programmingSoftware designComputer science stubsHidden categories: All stub articles				
+							
+		
+		
+			

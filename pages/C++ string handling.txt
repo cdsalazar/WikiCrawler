@@ -1,0 +1,472 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			C++ string handling
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from String (C++))
+												
+					Jump to:					navigation, 					search
+				
+				
+
+C++ Standard Library
+
+
+
+
+Input/output
+Strings
+
+
+
+
+Standard Template Library
+
+
+
+
+algorithm
+functional
+Sequence containers
+Associative containers
+Unordered associative containers
+
+
+
+
+C standard library
+
+
+
+
+Data types
+Character classification
+Strings
+Mathematics
+File input/output
+Date/time
+Localization
+Memory allocation
+Process control
+Signals
+Alternative tokens
+
+
+Miscellaneous headers:
+
+
+&lt;assert.h&gt;
+&lt;errno.h&gt;
+&lt;setjmp.h&gt;
+&lt;stdarg.h&gt;
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+The C++ programming language has support for string handling, mostly implemented in its standard library. The language standard specifies several string types, some inherited from C, some newly designed to make use of the language's features, such as templates and the RAII resource management idiom.
+Since the initial versions of C++ had only the "low-level" C string handling functionality and conventions, multiple incompatible designs for string handling classes have been designed over the years, and C++ programmers may need to handle multiple conventions in a single application.
+
+
+
+Contents
+
+
+1 History
+2 Standard string types
+
+2.1 Example usage
+2.2 Related classes
+
+
+3 References
+
+
+
+History[edit]
+The std::string type is the main string datatype in standard C++ since 1998, but it was not always part of C++, and still is not the only standard string type: from C, C++ inherited the convention of using null-terminated strings that are handled by a pointer to their first element, and a library of functions that handle such strings. In modern standard C++, a string literal such as "hello" still denotes a NUL-terminated array of characters[1] and std::string has support for converting itself to such an array.[2]
+In a 1991 retrospective on the history of C++, its inventor Bjarne Stroustrup called the lack of a standard string type (and some other standard types) in C++ 1.0 the worst mistake he made in its development; "the absence of those led to everybody re-inventing the wheel and to an unnecessary diversity in the most fundamental classes".[3] Over the years, C++ application, library and framework developers produced their own, incompatible string representations, such as the one in AT&amp;T's Standard Components library (the first such implementation, 1983)[3] or the CString type in Microsoft's MFC.[4] While std::string standardized strings, legacy applications still commonly contain such custom string types and libraries may expect C-style strings, making it "virtually impossible" to avoid using multiple string types in C++ programs[1] and requiring programmers to decide on the desired string representation ahead of starting a project.[4]
+The various vendors' string types have different implementation strategies and performance characteristics. In particular, some string types use a copy-on-write strategy, where copying one string to another avoids copying the byte arrays, instead, both strings share their contents and a reference count on a is incremented. The actual copying is postponed until a mutating operation, such as appending a character to either string, makes the strings' contents differ. This implementation strategy was very popular and deliberately allowed by the initial C++ Standard for std::string because it was deemed a useful optimization.
+Several vendors implemented strings using 16- or 32-bit code units, instead of bytes. This was intended to simplify processing of Unicode by making Unicode code points into single code units. However it means that conversion to these types from std::string or from arrays of bytes is a slow and often a lossy operation, dependent on the "locale", and can throw exceptions.
+Standard string types[edit]
+The std::string class is the standard representation for a text string since C++98. This class alleviates many of the problems introduced by C-style strings by putting the onus of memory ownership on the string class rather than on the programmer, and allowing the NUL byte to be in the string. The class provides some typical string operations like comparison, concatenation, find and replace, and a function for obtaining substrings. It can be constructed from a C-style string, and a C-style string can also be obtained from it.
+The individual units making up the string are of type char, at least (and almost always) 8 bits each. In modern usage these are often not "characters", but parts of a multibyte character encoding such as UTF-8.
+As operator[] returns a non-const reference to one of the bytes, which can be used to modify the string at any later time, it is almost impossible to correctly implement std::string with copy on write on popular computer architectures. Solving this correctly required storing state on the string indicating whether operator[] was done, or making operator[] return a complex object that broke software that assumed it could convert it to a char* by using &amp;, or just letting string[x]=y modify all copies. This caused glib to drop copy-on-write support[citation needed] which did cause substantial argument[citation needed]. Soon after performance problems in multi-threaded applications were pointed out.[2][5] The optimization was finally disallowed in C++11.[6][better&#160;source&#160;needed]
+Due to this, copying a string may take as long as O(n) (i.e., copying takes time proportional to the length of the string). It will also cause heap memory to be allocated, which is usually far more expensive than the copy. For that reason, std::string is generally passed by reference-to-const to avoid the majority of copying produced by C++:
+
+
+void print_the_string(const std::string&amp; str)
+{
+  cout &lt;&lt; str;
+}
+
+Some modern compilers[citation needed] will optimize out the copy in some cases even if references are not used.
+Example usage[edit]
+
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main()
+{
+    // Literals (double-quoted text) denote C strings, but std::string
+    // instances can be initialized from such literals.
+    std::string foo = "fighters";
+    std::string bar = "stool";
+
+    // The operator != compares string contents for inequality. This is different
+    // from != on char pointers to C strings, where != would compare the memory
+    // addresses of the strings rather than their contents.
+    if (foo != bar) {
+        std::cout &lt;&lt; "The strings are different." &lt;&lt; std::endl;
+    }
+
+    // Prints "stool fighters". The + operator denotes string concatenation.
+    std::cout &lt;&lt; (bar + " " + foo) &lt;&lt; std::endl;
+
+    return 0;
+}
+
+Related classes[edit]
+std::string is a typedef for a particular instantiation of the std::basic_string template class.[7] Its definition is found in the &lt;string&gt; header:
+
+
+typedef basic_string&lt;char&gt; string;
+
+Thus string provides basic_string functionality for strings having elements of type char. There is a similar class std::wstring, which consists of wchar_t, and is most often used to store UTF-16 text on Windows and UTF-32 on most Unix-like platforms. As the difference between these made writing portable code that shared data structures impossible, C++11 added two new classes: std::u16string and std::u32string (made up of the new types char16_t and char32_t), which are the given number of bits per code unit on all platforms.[8]
+A basic_string is guaranteed to be specializable for any type with a char_traits struct to accompany it. As of C++11, only char, wchar_t, char16_t and char32_t specializations are required to be implemented in the standard library; any other types are implementation-defined.[9] Each specialization is also a Standard Library container, and thus the Standard Library algorithms can be applied to the code units in strings.
+References[edit]
+
+
+^ a b Seacord, Robert C. (2013). Secure Coding in C and C++. Addison-Wesley.&#160;
+^ a b Meyers, Scott (2012), Effective STL, Addison-Wesley, pp.&#160;64–65&#160;
+^ a b Stroustrup, Bjarne (1993). A History of C++: 1979–1991 (PDF). Proc. ACM History of Programming Languages Conf.&#160;
+^ a b Solter, Nicholas A.; Kleper, Scott J. (2005). Professional C++. John Wiley &amp; Sons. p.&#160;23.&#160;
+^ Sutter, Herb (1999). "Optimizations That Aren't (In a Multithreaded World)". C/C++ Users Journal 17 (6).&#160;
+^ Meredith, Alisdair; Boehm, Hans; Crowl, Lawrence; Dimov, Peter (2008). "Concurrency Modifications to Basic String". ISO/IEC JTC 1/SC 22/WG 21. Retrieved 19 November 2015.&#160;
+^ "C++ reference for basic_string". Cppreference.com. Retrieved 11 January 2011.&#160;
+^ "C++11 Paper N3336". Open Standards. Programming Language C++, Library Working Group. 13 Jan 2012. Retrieved 2 Nov 2013.&#160;
+^ "char_traits - C++ Reference". Retrieved 2015-08-01.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+C++
+
+
+
+
+
+
+
+
+
+C++
+C++98
+C++03
+C++11
+C++14
+C++17
+
+
+
+
+
+
+
+
+C++ features
+
+
+
+Classes
+Exception handling
+Function overloading
+new and delete
+Operator overloading
+Operators
+Templates
+
+
+
+
+
+
+
+
+C++ Standard Library
+
+
+
+I/O Streams
+Smart pointers
+STL
+Strings
+
+
+
+
+
+
+
+
+Compilers
+
+
+
+Comparison of C++ compilers
+Borland C++
+Borland Turbo C++
+C++Builder
+Clang
+GCC
+Intel C++ Compiler
+Visual C++
+Watcom C/C++
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Comparison of C IDEs
+Anjuta
+CLion
+Code::Blocks
+CodeLite
+Eclipse
+Geany
+Microsoft Visual Studio
+NetBeans
+
+
+
+
+
+
+
+
+C++ and other languages
+
+
+
+Compatibility of C and C++
+Comparison of C++ and Java
+Comparison of C++ and ALGOL 68
+Comparison of programming languages
+
+
+
+
+
+
+
+
+
+
+
+ Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Strings
+
+
+
+
+
+
+String metric
+
+
+
+Approximate string matching
+Bitap algorithm
+Damerau–Levenshtein distance
+Edit distance
+Hamming distance
+Jaro–Winkler distance
+Lee distance
+Levenshtein automaton
+Levenshtein distance
+Wagner–Fischer algorithm
+
+
+
+
+
+
+
+
+String searching algorithm
+
+
+
+Apostolico–Giancarlo algorithm
+Boyer–Moore string search algorithm
+Boyer–Moore–Horspool algorithm
+Knuth–Morris–Pratt algorithm
+Rabin–Karp string search algorithm
+
+
+
+
+
+
+
+
+Multiple string searching
+
+
+
+Aho–Corasick
+Commentz-Walter algorithm
+Rabin–Karp
+
+
+
+
+
+
+
+
+Regular expression
+
+
+
+Comparison of regular expression engines
+List of regular expression software
+Regular tree grammar
+Thompson's construction
+Nondeterministic finite automaton
+
+
+
+
+
+
+
+
+Sequence alignment
+
+
+
+Hirschberg's algorithm
+Needleman–Wunsch algorithm
+Smith–Waterman algorithm
+
+
+
+
+
+
+
+
+Data structures
+
+
+
+DAFSA
+DAWG
+Suffix array
+Suffix automaton
+Suffix tree
+Generalized suffix tree
+Rope
+Ternary search tree
+Trie
+
+
+
+
+
+
+
+
+Other
+
+
+
+Parsing
+Pattern matching
+Compressed pattern matching
+Longest common subsequence
+Longest common substring
+Sequential pattern mining
+Sorting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=C%2B%2B_string_handling&amp;oldid=692079214"					
+				Categories: C++C++ Standard LibraryString (computer science)Hidden categories: All articles with unsourced statementsArticles with unsourced statements from November 2015All articles lacking reliable referencesArticles lacking reliable references from November 2015Use dmy dates from January 2012Articles with example C++ code				
+							
+		
+		
+			

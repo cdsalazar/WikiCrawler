@@ -1,0 +1,93 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			First-generation programming language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (September 2013)
+
+
+A first-generation programming language (1GL) is a machine-level programming language.[1]
+Originally, no translator was used to compile or assemble the first-generation language. The first-generation programming instructions were entered through the front panel switches of the computer system.
+A first generation (programming) language (1GL) is a grouping of programming languages that are machine level languages used to program first-generation computers. The instructions were given through the front panel switches of these computers, directly to the CPU. There was originally no compiler or assembler to process the instructions in 1GL.
+The instructions in 1GL are made of binary numbers, represented by 1s and 0s. This makes the language suitable for the understanding of the machine but far more difficult to interpret and learn by the human programmer.
+The main advantage of programming in 1GL is that the code can run very fast and very efficiently, precisely because the instructions are executed directly by the CPU. One of the main disadvantages of programming in a low level language is that when an error occurs, the code is not as easy to fix.
+First generation languages are very much adapted to a specific computer and CPU, and code portability is therefore significantly reduced in comparison to higher level languages.
+Modern day programmers still occasionally use machine level code, especially when programming lower level functions of the system, such as drivers, interfaces with firmware and hardware devices. Modern tools, such as native-code compilers are used to produce machine level from a higher-level language.
+References[edit]
+
+
+^ "Computer Hope, Generation languages"
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Programming language generations
+
+
+
+
+
+
+
+
+
+Generations Overview
+
+1GL
+2GL
+3GL
+4GL
+5GL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=First-generation_programming_language&amp;oldid=666255399"					
+				Categories: Programming language classificationHidden categories: Articles needing additional references from September 2013All articles needing additional references				
+							
+		
+		
+			

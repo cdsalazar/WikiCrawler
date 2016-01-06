@@ -1,0 +1,1504 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Propositional calculus
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Propositional logic)
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Transformation rules
+
+
+Propositional calculus
+
+
+Rules of inference
+
+
+
+
+Modus ponens&#160;/ Modus tollens
+Biconditional introduction&#160;/ elimination
+Conjunction introduction&#160;/ elimination
+Disjunction introduction&#160;/ elimination
+Disjunctive&#160;/ Hypothetical syllogism
+Constructive&#160;/ Destructive dilemma
+Absorption
+Modus ponendo tollens
+
+
+
+
+Rules of replacement
+
+
+
+
+
+Associativity
+Commutativity
+Distributivity
+Double negation
+De Morgan's laws
+Transposition
+Material implication
+Exportation
+Tautology
+Negation introduction
+
+
+
+
+
+Predicate logic
+
+
+
+
+Universal generalization&#160;/ instantiation
+Existential generalization&#160;/ instantiation
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+Propositional calculus (also called propositional logic, sentential calculus, or sentential logic) is the branch of mathematical logic concerned with the study of propositions (whether they are true or false) that are formed by other propositions with the use of logical connectives, and how their value depends on the truth value of their components. Logical connectives are found in natural languages. In English for example, some examples are "and" (conjunction), "or" (disjunction), "not” (negation) and "if" (but only when used to denote material conditional).
+The following is an example of a very simple inference within the scope of propositional logic:
+
+Premise 1: If it's raining then it's cloudy.
+Premise 2: It's raining.
+Conclusion: It's cloudy.
+
+Both premises and the conclusions are propositions. The premises are taken for granted and then with the application of modus ponens (an inference rule) the conclusion follows.
+As propositional logic is not concerned with the structure of propositions beyond the point where they can't be decomposed anymore by logical connectives, this inference can be restated replacing those atomic statements with statement letters, which are interpreted as variables representing statements:
+
+Premise 1: 
+Premise 2: 
+Conclusion: 
+
+The same can be stated succinctly in the following way:
+
+
+
+When P is interpreted as “It's raining” and Q as “it's cloudy” the above symbolic expressions can be seen to exactly correspond with the original expression in natural language. Not only that, but they will also correspond with any other inference of this form, which will be valid on the same basis that this inference is.
+Propositional logic may be studied through a formal system in which formulas of a formal language may be interpreted to represent propositions. A system of inference rules and axioms allows certain formulas to be derived. These derived formulas are called theorems and may be interpreted to be true propositions. A constructed sequence of such formulas is known as a derivation or proof and the last formula of the sequence is the theorem. The derivation may be interpreted as proof of the proposition represented by the theorem.
+When a formal system is used to represent formal logic, only statement letters are represented directly. The natural language propositions that arise when they're interpreted are outside the scope of the system, and the relation between the formal system and its interpretation is likewise outside the formal system itself.
+Usually in truth-functional propositional logic, formulas are interpreted as having either a truth value of true or a truth value of false.[clarification needed] Truth-functional propositional logic and systems isomorphic to it, are considered to be zeroth-order logic.
+
+
+
+Contents
+
+
+1 History
+2 Terminology
+3 Basic concepts
+
+3.1 Closure under operations
+3.2 Argument
+
+
+4 Generic description of a propositional calculus
+5 Example 1. Simple axiom system
+6 Example 2. Natural deduction system
+7 Basic and derived argument forms
+8 Proofs in propositional calculus
+
+8.1 Example of a proof
+
+
+9 Soundness and completeness of the rules
+
+9.1 Sketch of a soundness proof
+9.2 Sketch of completeness proof
+9.3 Another outline for a completeness proof
+
+
+10 Interpretation of a truth-functional propositional calculus
+
+10.1 Interpretation of a sentence of truth-functional propositional logic
+
+
+11 Alternative calculus
+
+11.1 Axioms
+11.2 Inference rule
+11.3 Meta-inference rule
+11.4 Example of a proof
+
+
+12 Equivalence to equational logics
+13 Graphical calculi
+14 Other logical calculi
+15 Solvers
+16 See also
+
+16.1 Higher logical levels
+16.2 Related topics
+
+
+17 References
+18 Further reading
+
+18.1 Related works
+
+
+19 External links
+
+
+
+History[edit]
+Main article: History of logic
+Although propositional logic (which is interchangeable with propositional calculus) had been hinted by earlier philosophers, it was developed into a formal logic by Chrysippus in the 3rd century BC[1] and expanded by the Stoics. The logic was focused on propositions. This advancement was different from the traditional syllogistic logic which was focused on terms. However, later in antiquity, the propositional logic developed by the Stoics was no longer understood[who?]. Consequently, the system was essentially reinvented by Peter Abelard in the 12th century.[2]
+Propositional logic was eventually refined using symbolic logic. The 17th/18th-century mathematician Gottfried Leibniz has been credited with being the founder of symbolic logic for his work with the calculus ratiocinator. Although his work was the first of its kind, it was unknown to the larger logical community. Consequently, many of the advances achieved by Leibniz were reachieved by logicians like George Boole and Augustus De Morgan completely independent of Leibniz.[3]
+Just as propositional logic can be considered an advancement from the earlier syllogistic logic, Gottlob Frege's predicate logic was an advancement from the earlier propositional logic. One author describes predicate logic as combining "the distinctive features of syllogistic logic and propositional logic."[4] Consequently, predicate logic ushered in a new era in logic's history; however, advances in propositional logic were still made after Frege, including Natural Deduction, Truth-Trees and Truth-Tables. Natural deduction was invented by Gerhard Gentzen and Jan Łukasiewicz. Truth-Trees were invented by Evert Willem Beth.[5] The invention of truth-tables, however, is of controversial attribution.
+Within works by Frege[6] and Bertrand Russell,[7] one finds ideas influential in bringing about the notion of truth tables. The actual 'tabular structure' (being formatted as a table), itself, is generally credited to either Ludwig Wittgenstein or Emil Post (or both, independently).[6] Besides Frege and Russell, others credited with having ideas preceding truth-tables include Philo, Boole, Charles Sanders Peirce, and Ernst Schröder. Others credited with the tabular structure include Łukasiewicz, Schröder, Alfred North Whitehead, William Stanley Jevons, John Venn, and Clarence Irving Lewis.[7] Ultimately, some have concluded, like John Shosky, that "It is far from clear that any one person should be given the title of 'inventor' of truth-tables.".[7]
+Terminology[edit]
+In general terms, a calculus is a formal system that consists of a set of syntactic expressions (well-formed formulas), a distinguished subset of these expressions (axioms), plus a set of formal rules that define a specific binary relation, intended to be interpreted to be logical equivalence, on the space of expressions.
+When the formal system is intended to be a logical system, the expressions are meant to be interpreted to be statements, and the rules, known to be inference rules, are typically intended to be truth-preserving. In this setting, the rules (which may include axioms) can then be used to derive ("infer") formulas representing true statements from given formulas representing true statements.
+The set of axioms may be empty, a nonempty finite set, a countably infinite set, or be given by axiom schemata. A formal grammar recursively defines the expressions and well-formed formulas of the language. In addition a semantics may be given which defines truth and valuations (or interpretations).
+The language of a propositional calculus consists of
+
+a set of primitive symbols, variously referred to be atomic formulas, placeholders, proposition letters, or variables, and
+a set of operator symbols, variously interpreted to be logical operators or logical connectives.
+
+A well-formed formula is any atomic formula, or any formula that can be built up from atomic formulas by means of operator symbols according to the rules of the grammar.
+Mathematicians sometimes distinguish between propositional constants, propositional variables, and schemata. Propositional constants represent some particular proposition, while propositional variables range over the set of all atomic propositions. Schemata, however, range over all propositions. It is common to represent propositional constants by A, B, and C, propositional variables by P, Q, and R, and schematic letters are often Greek letters, most often φ, ψ, and χ.
+Basic concepts[edit]
+The following outlines a standard propositional calculus. Many different formulations exist which are all more or less equivalent but differ in the details of:
+
+their language, that is, the particular collection of primitive symbols and operator symbols,
+the set of axioms, or distinguished formulas, and
+the set of inference rules.
+
+Any given proposition may be represented with a letter called a 'propositional constant', analogous to representing a number by a letter in mathematics, for instance, a = 5. All propositions require exactly one of two truth-values: true or false. For example, let P be the proposition that it is raining outside. This will be true (P) if it is raining outside and false otherwise (¬P).
+
+We then define truth-functional operators, beginning with negation. ¬P represents the negation of P, which can be thought of as the denial of P. In the example above, ¬P expresses that it is not raining outside, or by a more standard reading: "It is not the case that it is raining outside." When P is true, ¬P is false; and when P is false, ¬P is true. ¬¬P always has the same truth-value as P.
+Conjunction is a truth-functional connective which forms a proposition out of two simpler propositions, for example, P and Q. The conjunction of P and Q is written P ∧ Q, and expresses that each are true. We read P ∧ Q for "P and Q". For any two propositions, there are four possible assignments of truth values:
+
+P is true and Q is true
+P is true and Q is false
+P is false and Q is true
+P is false and Q is false
+
+
+
+
+The conjunction of P and Q is true in case 1 and is false otherwise. Where P is the proposition that it is raining outside and Q is the proposition that a cold-front is over Kansas, P ∧ Q is true when it is raining outside and there is a cold-front over Kansas. If it is not raining outside, then P ∧ Q is false; and if there is no cold-front over Kansas, then P ∧ Q is false.
+
+
+Disjunction resembles conjunction in that it forms a proposition out of two simpler propositions. We write it P ∨ Q, and it is read "P or Q". It expresses that either P or Q is true. Thus, in the cases listed above, the disjunction of P and Q is true in all cases except 4. Using the example above, the disjunction expresses that it is either raining outside or there is a cold front over Kansas. (Note, this use of disjunction is supposed to resemble the use of the English word "or". However, it is most like the English inclusive "or", which can be used to express the truth of at least one of two propositions. It is not like the English exclusive "or", which expresses the truth of exactly one of two propositions. That is to say, the exclusive "or" is false when both P and Q are true (case 1). An example of the exclusive or is: You may have a bagel or a pastry, but not both. Often in natural language, given the appropriate context, the addendum "but not both" is omitted but implied. In mathematics, however, "or" is always inclusive or; if exclusive or is meant it will be specified, possibly by "xor".)
+Material conditional also joins two simpler propositions, and we write P → Q, which is read "if P then Q". The proposition to the left of the arrow is called the antecedent and the proposition to the right is called the consequent. (There is no such designation for conjunction or disjunction, since they are commutative operations.) It expresses that Q is true whenever P is true. Thus it is true in every case above except case 2, because this is the only case when P is true but Q is not. Using the example, if P then Q expresses that if it is raining outside then there is a cold-front over Kansas. The material conditional is often confused with physical causation. The material conditional, however, only relates two propositions by their truth-values—which is not the relation of cause and effect. It is contentious in the literature whether the material implication represents logical causation.
+Biconditional joins two simpler propositions, and we write P ↔ Q, which is read "P if and only if Q". It expresses that P and Q have the same truth-value, thus P if and only if Q is true in cases 1 and 4, and false otherwise.
+
+It is extremely helpful to look at the truth tables for these different operators, as well as the method of analytic tableaux.
+Closure under operations[edit]
+Propositional logic is closed under truth-functional connectives. That is to say, for any proposition φ, ¬φ is also a proposition. Likewise, for any propositions φ and ψ, φ ∧ ψ is a proposition, and similarly for disjunction, conditional, and biconditional. This implies that, for instance, φ ∧ ψ is a proposition, and so it can be conjoined with another proposition. In order to represent this, we need to use parentheses to indicate which proposition is conjoined with which. For instance, P ∧ Q ∧ R is not a well-formed formula, because we do not know if we are conjoining P ∧ Q with R or if we are conjoining P with Q ∧ R. Thus we must write either (P ∧ Q) ∧ R to represent the former, or P ∧ (Q ∧ R) to represent the latter. By evaluating the truth conditions, we see that both expressions have the same truth conditions (will be true in the same cases), and moreover that any proposition formed by arbitrary conjunctions will have the same truth conditions, regardless of the location of the parentheses. This means that conjunction is associative, however, one should not assume that parentheses never serve a purpose. For instance, the sentence P ∧ (Q ∨ R) does not have the same truth conditions of (P ∧ Q) ∨ R, so they are different sentences distinguished only by the parentheses. One can verify this by the truth-table method referenced above.
+Note: For any arbitrary number of propositional constants, we can form a finite number of cases which list their possible truth-values. A simple way to generate this is by truth-tables, in which one writes P, Q, ..., Z, for any list of k propositional constants—that is to say, any list of propositional constants with k entries. Below this list, one writes 2k rows, and below P one fills in the first half of the rows with true (or T) and the second half with false (or F). Below Q one fills in one-quarter of the rows with T, then one-quarter with F, then one-quarter with T and the last quarter with F. The next column alternates between true and false for each eighth of the rows, then sixteenths, and so on, until the last propositional constant varies between T and F for each row. This will give a complete listing of cases or truth-value assignments possible for those propositional constants.
+Argument[edit]
+The propositional calculus then defines an argument to be a set of propositions. A valid argument is a set of propositions, the last of which follows from—or is implied by—the rest. All other arguments are invalid. The simplest valid argument is modus ponens, one instance of which is the following set of propositions:
+
+
+
+This is a set of three propositions, each line is a proposition, and the last follows from the rest. The first two lines are called premises, and the last line the conclusion. We say that any proposition C follows from any set of propositions , if C must be true whenever every member of the set  is true. In the argument above, for any P and Q, whenever P → Q and P are true, necessarily Q is true. Notice that, when P is true, we cannot consider cases 3 and 4 (from the truth table). When P → Q is true, we cannot consider case 2. This leaves only case 1, in which Q is also true. Thus Q is implied by the premises.
+This generalizes schematically. Thus, where φ and ψ may be any propositions at all,
+
+
+
+Other argument forms are convenient, but not necessary. Given a complete set of axioms (see below for one such set), modus ponens is sufficient to prove all other argument forms in propositional logic, thus they may be considered to be a derivative. Note, this is not true of the extension of propositional logic to other logics like first-order logic. First-order logic requires at least one additional rule of inference in order to obtain completeness.
+The significance of argument in formal logic is that one may obtain new truths from established truths. In the first example above, given the two premises, the truth of Q is not yet known or stated. After the argument is made, Q is deduced. In this way, we define a deduction system to be a set of all propositions that may be deduced from another set of propositions. For instance, given the set of propositions , we can define a deduction system, Γ, which is the set of all propositions which follow from A. Reiteration is always assumed, so . Also, from the first element of A, last element, as well as modus ponens, R is a consequence, and so . Because we have not included sufficiently complete axioms, though, nothing else may be deduced. Thus, even though most deduction systems studied in propositional logic are able to deduce , this one is too weak to prove such a proposition.
+Generic description of a propositional calculus[edit]
+A propositional calculus is a formal system , where:
+
+The alpha set  is a finite set of elements called proposition symbols or propositional variables. Syntactically speaking, these are the most basic elements of the formal language , otherwise referred to as atomic formulas or terminal elements. In the examples to follow, the elements of  are typically the letters p, q, r, and so on.
+
+
+The omega set Ω is a finite set of elements called operator symbols or logical connectives. The set Ω is partitioned into disjoint subsets as follows:
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this partition,  is the set of operator symbols of arity j.
+
+
+In the more familiar propositional calculi, Ω is typically partitioned as follows:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A frequently adopted convention treats the constant logical values as operators of arity zero, thus:
+
+
+
+
+
+
+
+
+
+
+
+
+
+Some writers use the tilde (~), or N, instead of ¬; and some use the ampersand (&amp;), the prefixed K, or  instead of . Notation varies even more for the set of logical values, with symbols like {false, true}, {F, T}, or  all being seen in various contexts instead of {0, 1}.
+
+
+The zeta set  is a finite set of transformation rules that are called inference rules when they acquire logical applications.
+
+
+The iota set  is a finite set of initial points that are called axioms when they receive logical interpretations.
+
+The language of , also known as its set of formulas, well-formed formulas, is inductively defined by the following rules:
+
+Base: Any element of the alpha set  is a formula of .
+If  are formulas and  is in , then  is a formula.
+Closed: Nothing else is a formula of .
+
+Repeated applications of these rules permits the construction of complex formulas. For example:
+
+By rule 1, p is a formula.
+By rule 2,  is a formula.
+By rule 1, q is a formula.
+By rule 2,  is a formula.
+
+Example 1. Simple axiom system[edit]
+Let , where , , ,  are defined as follows:
+
+The alpha set , is a finite set of symbols that is large enough to supply the needs of a given discussion, for example:
+
+
+
+
+
+
+
+
+
+
+
+
+
+Of the three connectives for conjunction, disjunction, and implication (, and →), one can be taken as primitive and the other two can be defined in terms of it and negation (¬).[8] Indeed, all of the logical connectives can be defined in terms of a sole sufficient operator. The biconditional (↔) can of course be defined in terms of conjunction and implication, with  defined as .
+
+
+Adopting negation and implication as the two primitive operations of a propositional calculus is tantamount to having the omega set  partition as follows:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+An axiom system discovered by Jan Łukasiewicz formulates a propositional calculus in this language as follows. The axioms are all substitution instances of:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The rule of inference is modus ponens (i.e., from p and , infer q). Then  is defined as , and  is defined as . This system is used in Metamath set.mm formal proof database.
+
+Example 2. Natural deduction system[edit]
+Let , where , , ,  are defined as follows:
+
+The alpha set , is a finite set of symbols that is large enough to supply the needs of a given discussion, for example:
+
+
+
+
+The omega set  partitions as follows:
+
+
+
+
+
+
+In the following example of a propositional calculus, the transformation rules are intended to be interpreted as the inference rules of a so-called natural deduction system. The particular system presented here has no initial points, which means that its interpretation for logical applications derives its theorems from an empty axiom set.
+
+The set of initial points is empty, that is, .
+The set of transformation rules, , is described as follows:
+
+Our propositional calculus has ten inference rules. These rules allow us to derive other true formulas given a set of formulas that are assumed to be true. The first nine simply state that we can infer certain well-formed formulas from other well-formed formulas. The last rule however uses hypothetical reasoning in the sense that in the premise of the rule we temporarily assume an (unproven) hypothesis to be part of the set of inferred formulas to see if we can infer a certain other formula. Since the first nine rules don't do this they are usually described as non-hypothetical rules, and the last one as a hypothetical rule.
+In describing the transformation rules, we may introduce a metalanguage symbol . It is basically a convenient shorthand for saying "infer that". The format is , in which Γ is a (possibly empty) set of formulas called premises, and ψ is a formula called conclusion. The transformation rule  means that if every proposition in Γ is a theorem (or has the same truth value as the axioms), then ψ is also a theorem. Note that considering the following rule Conjunction introduction, we will know whenever Γ has more than one formula, we can always safely reduce it into one formula using conjunction. So for short, from that time on we may represent Γ as one formula instead of a set. Another omission for convenience is when Γ is an empty set, in which case Γ may not appear.
+
+Negation introduction
+From  and , infer .
+That is, .
+Negation elimination
+From , infer .
+That is, .
+Double negative elimination
+From , infer p.
+That is, .
+Conjunction introduction
+From p and q, infer .
+That is, .
+Conjunction elimination
+From , infer p.
+From , infer q.
+That is,  and .
+Disjunction introduction
+From p, infer .
+From q, infer .
+That is,  and .
+Disjunction elimination
+From  and  and , infer r.
+That is, .
+Biconditional introduction
+From  and , infer .
+That is, .
+Biconditional elimination
+From , infer .
+From , infer .
+That is,  and .
+Modus ponens (conditional elimination)&#160;
+From p and , infer q.
+That is, .
+Conditional proof (conditional introduction)&#160;
+From [accepting p allows a proof of q], infer .
+That is, .
+
+Basic and derived argument forms[edit]
+
+
+
+Basic and Derived Argument Forms
+
+
+Name
+Sequent
+Description
+
+
+Modus Ponens
+
+If p then q; p; therefore q
+
+
+Modus Tollens
+
+If p then q; not q; therefore not p
+
+
+Hypothetical Syllogism
+
+If p then q; if q then r; therefore, if p then r
+
+
+Disjunctive Syllogism
+
+Either p or q, or both; not p; therefore, q
+
+
+Constructive Dilemma
+
+If p then q; and if r then s; but p or r; therefore q or s
+
+
+Destructive Dilemma
+
+If p then q; and if r then s; but not q or not s; therefore not p or not r
+
+
+Bidirectional Dilemma
+
+If p then q; and if r then s; but p or not s; therefore q or not r
+
+
+Simplification
+
+p and q are true; therefore p is true
+
+
+Conjunction
+
+p and q are true separately; therefore they are true conjointly
+
+
+Addition
+
+p is true; therefore the disjunction (p or q) is true
+
+
+Composition
+
+If p then q; and if p then r; therefore if p is true then q and r are true
+
+
+De Morgan's Theorem (1)
+
+The negation of (p and q) is equiv. to (not p or not q)
+
+
+De Morgan's Theorem (2)
+
+The negation of (p or q) is equiv. to (not p and not q)
+
+
+Commutation (1)
+
+(p or q) is equiv. to (q or p)
+
+
+Commutation (2)
+
+(p and q) is equiv. to (q and p)
+
+
+Commutation (3)
+
+(p is equiv. to q) is equiv. to (q is equiv. to p)
+
+
+Association (1)
+
+p or (q or r) is equiv. to (p or q) or r
+
+
+Association (2)
+
+p and (q and r) is equiv. to (p and q) and r
+
+
+Distribution (1)
+
+p and (q or r) is equiv. to (p and q) or (p and r)
+
+
+Distribution (2)
+
+p or (q and r) is equiv. to (p or q) and (p or r)
+
+
+Double Negation
+
+p is equivalent to the negation of not p
+
+
+Transposition
+
+If p then q is equiv. to if not q then not p
+
+
+Material Implication
+
+If p then q is equiv. to not p or q
+
+
+Material Equivalence (1)
+
+(p iff q) is equiv. to (if p is true then q is true) and (if q is true then p is true)
+
+
+Material Equivalence (2)
+
+(p iff q) is equiv. to either (p and q are true) or (both p and q are false)
+
+
+Material Equivalence (3)
+
+(p iff q) is equiv to., both (p or not q is true) and (not p or q is true)
+
+
+Exportation[9]
+
+from (if p and q are true then r is true) we can prove (if q is true then r is true, if p is true)
+
+
+Importation
+
+If p then (if q then r) is equivalent to if p and q then r
+
+
+Tautology (1)
+
+p is true is equiv. to p is true or p is true
+
+
+Tautology (2)
+
+p is true is equiv. to p is true and p is true
+
+
+Tertium non datur (Law of Excluded Middle)
+
+p or not p is true
+
+
+Law of Non-Contradiction
+
+p and not p is false, is a true statement
+
+
+Proofs in propositional calculus[edit]
+One of the main uses of a propositional calculus, when interpreted for logical applications, is to determine relations of logical equivalence between propositional formulas. These relationships are determined by means of the available transformation rules, sequences of which are called derivations or proofs.
+In the discussion to follow, a proof is presented as a sequence of numbered lines, with each line consisting of a single formula followed by a reason or justification for introducing that formula. Each premise of the argument, that is, an assumption introduced as an hypothesis of the argument, is listed at the beginning of the sequence and is marked as a "premise" in lieu of other justification. The conclusion is listed on the last line. A proof is complete if every line follows from the previous ones by the correct application of a transformation rule. (For a contrasting approach, see proof-trees).
+Example of a proof[edit]
+
+To be shown that A → A.
+
+
+One possible proof of this (which, though valid, happens to contain more steps than are necessary) may be arranged as follows:
+
+
+
+Example of a Proof
+
+
+Number
+Formula
+Reason
+
+
+1
+
+premise
+
+
+2
+
+From (1) by disjunction introduction
+
+
+3
+
+From (1) and (2) by conjunction introduction
+
+
+4
+
+From (3) by conjunction elimination
+
+
+5
+
+Summary of (1) through (4)
+
+
+6
+
+From (5) by conditional proof
+
+
+Interpret  as "Assuming A, infer A". Read  as "Assuming nothing, infer that A implies A", or "It is a tautology that A implies A", or "It is always true that A implies A".
+Soundness and completeness of the rules[edit]
+The crucial properties of this set of rules are that they are sound and complete. Informally this means that the rules are correct and that no other rules are required. These claims can be made more formal as follows.
+We define a truth assignment as a function that maps propositional variables to true or false. Informally such a truth assignment can be understood as the description of a possible state of affairs (or possible world) where certain statements are true and others are not. The semantics of formulas can then be formalized by defining for which "state of affairs" they are considered to be true, which is what is done by the following definition.
+We define when such a truth assignment A satisfies a certain well-formed formula with the following rules:
+
+A satisfies the propositional variable P if and only if A(P) = true
+A satisfies ¬φ if and only if A does not satisfy φ
+A satisfies (φ ∧ ψ) if and only if A satisfies both φ and ψ
+A satisfies (φ ∨ ψ) if and only if A satisfies at least one of either φ or ψ
+A satisfies (φ → ψ) if and only if it is not the case that A satisfies φ but not ψ
+A satisfies (φ ↔ ψ) if and only if A satisfies both φ and ψ or satisfies neither one of them
+
+With this definition we can now formalize what it means for a formula φ to be implied by a certain set S of formulas. Informally this is true if in all worlds that are possible given the set of formulas S the formula φ also holds. This leads to the following formal definition: We say that a set S of well-formed formulas semantically entails (or implies) a certain well-formed formula φ if all truth assignments that satisfy all the formulas in S also satisfy φ.
+Finally we define syntactical entailment such that φ is syntactically entailed by S if and only if we can derive it with the inference rules that were presented above in a finite number of steps. This allows us to formulate exactly what it means for the set of inference rules to be sound and complete:
+Soundness: If the set of well-formed formulas S syntactically entails the well-formed formula φ then S semantically entails φ.
+Completeness: If the set of well-formed formulas S semantically entails the well-formed formula φ then S syntactically entails φ.
+For the above set of rules this is indeed the case.
+Sketch of a soundness proof[edit]
+(For most logical systems, this is the comparatively "simple" direction of proof)
+Notational conventions: Let G be a variable ranging over sets of sentences. Let A, B and C range over sentences. For "G syntactically entails A" we write "G proves A". For "G semantically entails A" we write "G implies A".
+We want to show: (A)(G) (if G proves A, then G implies A).
+We note that "G proves A" has an inductive definition, and that gives us the immediate resources for demonstrating claims of the form "If G proves A, then ...". So our proof proceeds by induction.
+
+
+Basis. Show: If A is a member of G, then G implies A.
+Basis. Show: If A is an axiom, then G implies A.
+Inductive step (induction on n, the length of the proof):
+
+
+Assume for arbitrary G and A that if G proves A in n or fewer steps, then G implies A.
+For each possible application of a rule of inference at step n + 1, leading to a new theorem B, show that G implies B.
+
+
+
+
+
+Notice that Basis Step II can be omitted for natural deduction systems because they have no axioms. When used, Step II involves showing that each of the axioms is a (semantic) logical truth.
+The Basis steps demonstrate that the simplest provable sentences from G are also implied by G, for any G. (The proof is simple, since the semantic fact that a set implies any of its members, is also trivial.) The Inductive step will systematically cover all the further sentences that might be provable—by considering each case where we might reach a logical conclusion using an inference rule—and shows that if a new sentence is provable, it is also logically implied. (For example, we might have a rule telling us that from "A" we can derive "A or B". In III.a We assume that if A is provable it is implied. We also know that if A is provable then "A or B" is provable. We have to show that then "A or B" too is implied. We do so by appeal to the semantic definition and the assumption we just made. A is provable from G, we assume. So it is also implied by G. So any semantic valuation making all of G true makes A true. But any valuation making A true makes "A or B" true, by the defined semantics for "or". So any valuation which makes all of G true makes "A or B" true. So "A or B" is implied.) Generally, the Inductive step will consist of a lengthy but simple case-by-case analysis of all the rules of inference, showing that each "preserves" semantic implication.
+By the definition of provability, there are no sentences provable other than by being a member of G, an axiom, or following by a rule; so if all of those are semantically implied, the deduction calculus is sound.
+Sketch of completeness proof[edit]
+(This is usually the much harder direction of proof.)
+We adopt the same notational conventions as above.
+We want to show: If G implies A, then G proves A. We proceed by contraposition: We show instead that if G does not prove A then G does not imply A.
+
+
+G does not prove A. (Assumption)
+If G does not prove A, then we can construct an (infinite) Maximal Set, G∗, which is a superset of G and which also does not prove A.
+
+
+Place an ordering on all the sentences in the language (e.g., shortest first, and equally long ones in extended alphabetical ordering), and number them (E1, E2, ...)
+Define a series Gn of sets (G0, G1, ...) inductively:
+
+
+
+If  proves A, then 
+If  does not prove A, then 
+
+
+
+Define G∗ as the union of all the Gn. (That is, G∗ is the set of all the sentences that are in any Gn.)
+It can be easily shown that
+
+
+G∗ contains (is a superset of) G (by (b.i));
+G∗ does not prove A (because if it proves A then some sentence was added to some Gn which caused it to prove A; but this was ruled out by definition); and
+G∗ is a Maximal Set with respect to A: If any more sentences whatever were added to G∗, it would prove A. (Because if it were possible to add any more sentences, they should have been added when they were encountered during the construction of the Gn, again by definition)
+
+
+
+
+
+
+If G∗ is a Maximal Set with respect to A, then it is truth-like. This means that it contains C only if it does not contain ¬C; If it contains C and contains "If C then B" then it also contains B; and so forth.
+If G∗ is truth-like there is a G∗-Canonical valuation of the language: one that makes every sentence in G∗ true and everything outside G∗ false while still obeying the laws of semantic composition in the language.
+A G∗-canonical valuation will make our original set G all true, and make A false.
+If there is a valuation on which G are true and A is false, then G does not (semantically) imply A.
+
+
+QED
+Another outline for a completeness proof[edit]
+If a formula is a tautology, then there is a truth table for it which shows that each valuation yields the value true for the formula. Consider such a valuation. By mathematical induction on the length of the subformulas, show that the truth or falsity of the subformula follows from the truth or falsity (as appropriate for the valuation) of each propositional variable in the subformula. Then combine the lines of the truth table together two at a time by using "(P is true implies S) implies ((P is false implies S) implies S)". Keep repeating this until all dependencies on propositional variables have been eliminated. The result is that we have proved the given tautology. Since every tautology is provable, the logic is complete.
+Interpretation of a truth-functional propositional calculus[edit]
+An interpretation of a truth-functional propositional calculus  is an assignment to each propositional symbol of  of one or the other (but not both) of the truth values truth (T) and falsity (F), and an assignment to the connective symbols of  of their usual truth-functional meanings. An interpretation of a truth-functional propositional calculus may also be expressed in terms of truth tables.[10]
+For  distinct propositional symbols there are  distinct possible interpretations. For any particular symbol , for example, there are  possible interpretations:
+
+ is assigned T, or
+ is assigned F.
+
+For the pair ,  there are  possible interpretations:
+
+both are assigned T,
+both are assigned F,
+ is assigned T and  is assigned F, or
+ is assigned F and  is assigned T.[10]
+
+Since  has , that is, denumerably many propositional symbols, there are , and therefore uncountably many distinct possible interpretations of .[10]
+Interpretation of a sentence of truth-functional propositional logic[edit]
+Main article: Interpretation (logic)
+If φ and ψ are formulas of  and  is an interpretation of  then:
+
+A sentence of propositional logic is true under an interpretation  iff  assigns the truth value T to that sentence. If a sentence is true under an interpretation, then that interpretation is called a model of that sentence.
+φ is false under an interpretation  iff φ is not true under .[10]
+A sentence of propositional logic is logically valid if it is true under every interpretation
+
+
+ means that φ is logically valid
+
+
+A sentence ψ of propositional logic is a semantic consequence of a sentence φ iff there is no interpretation under which φ is true and ψ is false.
+A sentence of propositional logic is consistent iff it is true under at least one interpretation. It is inconsistent if it is not consistent.
+
+Some consequences of these definitions:
+
+For any given interpretation a given formula is either true or false.[10]
+No formula is both true and false under the same interpretation.[10]
+φ is false for a given interpretation iff  is true for that interpretation; and φ is true under an interpretation iff  is false under that interpretation.[10]
+If φ and  are both true under a given interpretation, then ψ is true under that interpretation.[10]
+If  and , then .[10]
+ is true under  iff φ is not true under .
+ is true under  iff either φ is not true under  or ψ is true under .[10]
+A sentence ψ of propositional logic is a semantic consequence of a sentence φ iff  is logically valid, that is,  iff .[10]
+
+Alternative calculus[edit]
+It is possible to define another version of propositional calculus, which defines most of the syntax of the logical operators by means of axioms, and which uses only one inference rule.
+Axioms[edit]
+Let φ, χ, and ψ stand for well-formed formulas. (The well-formed formulas themselves would not contain any Greek letters, but only capital Roman letters, connective operators, and parentheses.) Then the axioms are as follows:
+
+
+Axioms
+
+
+Name
+Axiom Schema
+Description
+
+
+THEN-1
+
+Add hypothesis χ, implication introduction
+
+
+THEN-2
+
+Distribute hypothesis φ over implication
+
+
+AND-1
+
+Eliminate conjunction
+
+
+AND-2
+
+&#160;
+
+
+AND-3
+
+Introduce conjunction
+
+
+OR-1
+
+Introduce disjunction
+
+
+OR-2
+
+&#160;
+
+
+OR-3
+
+Eliminate disjunction
+
+
+NOT-1
+
+Introduce negation
+
+
+NOT-2
+
+Eliminate negation
+
+
+NOT-3
+
+Excluded middle, classical logic
+
+
+IFF-1
+
+Eliminate equivalence
+
+
+IFF-2
+
+&#160;
+
+
+IFF-3
+
+Introduce equivalence
+
+
+
+Axiom THEN-2 may be considered to be a "distributive property of implication with respect to implication."
+Axioms AND-1 and AND-2 correspond to "conjunction elimination". The relation between AND-1 and AND-2 reflects the commutativity of the conjunction operator.
+Axiom AND-3 corresponds to "conjunction introduction."
+Axioms OR-1 and OR-2 correspond to "disjunction introduction." The relation between OR-1 and OR-2 reflects the commutativity of the disjunction operator.
+Axiom NOT-1 corresponds to "reductio ad absurdum."
+Axiom NOT-2 says that "anything can be deduced from a contradiction."
+Axiom NOT-3 is called "tertium non datur" (Latin: "a third is not given") and reflects the semantic valuation of propositional formulas: a formula can have a truth-value of either true or false. There is no third truth-value, at least not in classical logic. Intuitionistic logicians do not accept the axiom NOT-3.
+
+Inference rule[edit]
+The inference rule is modus ponens:
+
+.
+
+Meta-inference rule[edit]
+Let a demonstration be represented by a sequence, with hypotheses to the left of the turnstile and the conclusion to the right of the turnstile. Then the deduction theorem can be stated as follows:
+
+If the sequence
+
+
+
+
+has been demonstrated, then it is also possible to demonstrate the sequence
+
+.
+
+
+
+This deduction theorem (DT) is not itself formulated with propositional calculus: it is not a theorem of propositional calculus, but a theorem about propositional calculus. In this sense, it is a meta-theorem, comparable to theorems about the soundness or completeness of propositional calculus.
+On the other hand, DT is so useful for simplifying the syntactical proof process that it can be considered and used as another inference rule, accompanying modus ponens. In this sense, DT corresponds to the natural conditional proof inference rule which is part of the first version of propositional calculus introduced in this article.
+The converse of DT is also valid:
+
+If the sequence
+
+
+
+
+has been demonstrated, then it is also possible to demonstrate the sequence
+
+
+
+
+
+in fact, the validity of the converse of DT is almost trivial compared to that of DT:
+
+If
+
+
+
+
+then
+
+1: 
+2: 
+
+
+and from (1) and (2) can be deduced
+
+3: 
+
+
+by means of modus ponens, Q.E.D.
+
+The converse of DT has powerful implications: it can be used to convert an axiom into an inference rule. For example, the axiom AND-1,
+
+
+
+can be transformed by means of the converse of the deduction theorem into the inference rule
+
+
+
+which is conjunction elimination, one of the ten inference rules used in the first version (in this article) of the propositional calculus.
+Example of a proof[edit]
+The following is an example of a (syntactical) demonstration, involving only axioms THEN-1 and THEN-2:
+Prove:  (Reflexivity of implication).
+Proof:
+
+
+
+Axiom THEN-2 with 
+
+
+
+
+Axiom THEN-1 with 
+
+
+
+
+From (1) and (2) by modus ponens.
+
+
+
+
+Axiom THEN-1 with 
+
+
+
+
+From (3) and (4) by modus ponens.
+
+
+
+Equivalence to equational logics[edit]
+The preceding alternative calculus is an example of a Hilbert-style deduction system. In the case of propositional systems the axioms are terms built with logical connectives and the only inference rule is modus ponens. Equational logic as standardly used informally in high school algebra is a different kind of calculus from Hilbert systems. Its theorems are equations and its inference rules express the properties of equality, namely that it is a congruence on terms that admits substitution.
+Classical propositional calculus as described above is equivalent to Boolean algebra, while intuitionistic propositional calculus is equivalent to Heyting algebra. The equivalence is shown by translation in each direction of the theorems of the respective systems. Theorems  of classical or intuitionistic propositional calculus are translated as equations  of Boolean or Heyting algebra respectively. Conversely theorems  of Boolean or Heyting algebra are translated as theorems  of classical or intuitionistic calculus respectively, for which  is a standard abbreviation. In the case of Boolean algebra  can also be translated as , but this translation is incorrect intuitionistically.
+In both Boolean and Heyting algebra, inequality  can be used in place of equality. The equality  is expressible as a pair of inequalities  and . Conversely the inequality  is expressible as the equality , or as . The significance of inequality for Hilbert-style systems is that it corresponds to the latter's deduction or entailment symbol . An entailment
+
+
+
+
+
+
+
+is translated in the inequality version of the algebraic framework as
+
+
+
+
+
+
+
+Conversely the algebraic inequality  is translated as the entailment
+
+
+
+.
+
+
+
+The difference between implication  and inequality or entailment  or  is that the former is internal to the logic while the latter is external. Internal implication between two terms is another term of the same kind. Entailment as external implication between two terms expresses a metatruth outside the language of the logic, and is considered part of the metalanguage. Even when the logic under study is intuitionistic, entailment is ordinarily understood classically as two-valued: either the left side entails, or is less-or-equal to, the right side, or it is not.
+Similar but more complex translations to and from algebraic logics are possible for natural deduction systems as described above and for the sequent calculus. The entailments of the latter can be interpreted as two-valued, but a more insightful interpretation is as a set, the elements of which can be understood as abstract proofs organized as the morphisms of a category. In this interpretation the cut rule of the sequent calculus corresponds to composition in the category. Boolean and Heyting algebras enter this picture as special categories having at most one morphism per homset, i.e., one proof per entailment, corresponding to the idea that existence of proofs is all that matters: any proof will do and there is no point in distinguishing them.
+Graphical calculi[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (March 2011)
+
+
+It is possible to generalize the definition of a formal language from a set of finite sequences over a finite basis to include many other sets of mathematical structures, so long as they are built up by finitary means from finite materials. What's more, many of these families of formal structures are especially well-suited for use in logic.
+For example, there are many families of graphs that are close enough analogues of formal languages that the concept of a calculus is quite easily and naturally extended to them. Indeed, many species of graphs arise as parse graphs in the syntactic analysis of the corresponding families of text structures. The exigencies of practical computation on formal languages frequently demand that text strings be converted into pointer structure renditions of parse graphs, simply as a matter of checking whether strings are well-formed formulas or not. Once this is done, there are many advantages to be gained from developing the graphical analogue of the calculus on strings. The mapping from strings to parse graphs is called parsing and the inverse mapping from parse graphs to strings is achieved by an operation that is called traversing the graph.
+Other logical calculi[edit]
+Propositional calculus is about the simplest kind of logical calculus in current use. It can be extended in several ways. (Aristotelian "syllogistic" calculus, which is largely supplanted in modern logic, is in some ways simpler – but in other ways more complex – than propositional calculus.) The most immediate way to develop a more complex logical calculus is to introduce rules that are sensitive to more fine-grained details of the sentences being used.
+First-order logic (a.k.a. first-order predicate logic) results when the "atomic sentences" of propositional logic are broken up into terms, variables, predicates, and quantifiers, all keeping the rules of propositional logic with some new ones introduced. (For example, from "All dogs are mammals" we may infer "If Rover is a dog then Rover is a mammal".) With the tools of first-order logic it is possible to formulate a number of theories, either with explicit axioms or by rules of inference, that can themselves be treated as logical calculi. Arithmetic is the best known of these; others include set theory and mereology. Second-order logic and other higher-order logics are formal extensions of first-order logic. Thus, it makes sense to refer to propositional logic as "zeroth-order logic", when comparing it with these logics.
+Modal logic also offers a variety of inferences that cannot be captured in propositional calculus. For example, from "Necessarily p" we may infer that p. From p we may infer "It is possible that p". The translation between modal logics and algebraic logics concerns classical and intuitionistic logics but with the introduction of a unary operator on Boolean or Heyting algebras, different from the Boolean operations, interpreting the possibility modality, and in the case of Heyting algebra a second operator interpreting necessity (for Boolean algebra this is redundant since necessity is the De Morgan dual of possibility). The first operator preserves 0 and disjunction while the second preserves 1 and conjunction.
+Many-valued logics are those allowing sentences to have values other than true and false. (For example, neither and both are standard "extra values"; "continuum logic" allows each sentence to have any of an infinite number of "degrees of truth" between true and false.) These logics often require calculational devices quite distinct from propositional calculus. When the values form a Boolean algebra (which may have more than two or even infinitely many values), many-valued logic reduces to classical logic; many-valued logics are therefore only of independent interest when the values form an algebra that is not Boolean.
+Solvers[edit]
+Finding solutions to propositional logic formulas is an NP-complete problem. However, practical methods exist (e.g., DPLL algorithm, 1962; Chaff algorithm, 2001) that are very fast for many useful cases. Recent work has extended the SAT solver algorithms to work with propositions containing arithmetic expressions; these are the SMT solvers.
+See also[edit]
+
+
+
+
+Logic portal
+
+
+
+Higher logical levels[edit]
+
+First-order logic
+Second-order propositional logic
+Second-order logic
+Higher-order logic
+
+Related topics[edit]
+
+
+
+
+Boolean algebra (logic)
+Boolean algebra (structure)
+Boolean algebra topics
+Boolean domain
+Boolean function
+Boolean-valued function
+Categorical logic
+Combinational logic
+Combinatory logic
+Conceptual graph
+Disjunctive syllogism
+Entitative graph
+
+
+
+
+Existential graph
+Frege's propositional calculus
+Implicational propositional calculus
+Intuitionistic propositional calculus
+Jean Buridan
+Laws of Form
+Logical graph
+Logical NOR
+Logical value
+
+
+
+
+Operation
+Paul of Venice
+Peirce's law
+Peter of Spain
+Propositional formula
+Symmetric difference
+Truth function
+Truth table
+Walter Burley
+William of Sherwood
+
+
+
+
+References[edit]
+
+
+^ Ancient Logic (Stanford Encyclopedia of Philosophy)
+^ Marenbon, John (2007). Medieval philosophy: an historical and philosophical introduction. Routledge. p.&#160;137.&#160;
+^ Leibniz's Influence on 19th Century Logic
+^ Hurley, Patrick (2007). A Concise Introduction to Logic 10th edition. Wadsworth Publishing. p.&#160;392.&#160;
+^ Beth, Evert W.; "Semantic entailment and formal derivability", series: Mededlingen van de Koninklijke Nederlandse Akademie van Wetenschappen, Afdeling Letterkunde, Nieuwe Reeks, vol. 18, no. 13, Noord-Hollandsche Uitg. Mij., Amsterdam, 1955, pp. 309–42. Reprinted in Jaakko Intikka (ed.) The Philosophy of Mathematics, Oxford University Press, 1969
+^ a b Truth in Frege
+^ a b c Russell's Use of Truth-Tables
+^ Wernick, William (1942) "Complete Sets of Logical Functions," Transactions of the American Mathematical Society 51, pp. 117–132.
+^ Toida, Shunichi (2 August 2009). "Proof of Implications". CS381 Discrete Structures/Discrete Mathematics Web Course Material. Department Of Computer Science, Old Dominion University. Retrieved 10 March 2010.&#160;
+^ a b c d e f g h i j k Hunter, Geoffrey (1971). Metalogic: An Introduction to the Metatheory of Standard First-Order Logic. University of California Pres. ISBN&#160;0-520-02356-0.&#160;
+
+
+Further reading[edit]
+
+Brown, Frank Markham (2003), Boolean Reasoning: The Logic of Boolean Equations, 1st edition, Kluwer Academic Publishers, Norwell, MA. 2nd edition, Dover Publications, Mineola, NY.
+Chang, C.C. and Keisler, H.J. (1973), Model Theory, North-Holland, Amsterdam, Netherlands.
+Kohavi, Zvi (1978), Switching and Finite Automata Theory, 1st edition, McGraw–Hill, 1970. 2nd edition, McGraw–Hill, 1978.
+Korfhage, Robert R. (1974), Discrete Computational Structures, Academic Press, New York, NY.
+Lambek, J. and Scott, P.J. (1986), Introduction to Higher Order Categorical Logic, Cambridge University Press, Cambridge, UK.
+Mendelson, Elliot (1964), Introduction to Mathematical Logic, D. Van Nostrand Company.
+
+Related works[edit]
+
+Hofstadter, Douglas (1979). Gödel, Escher, Bach: An Eternal Golden Braid. Basic Books. ISBN&#160;978-0-465-02656-2.&#160;
+
+External links[edit]
+
+Klement, Kevin C. (2006), "Propositional Logic", in James Fieser and Bradley Dowden (eds.), Internet Encyclopedia of Philosophy, Eprint.
+Formal Predicate Calculus, contains a systematic formal development along the lines of Alternative calculus
+forall x: an introduction to formal logic, by P.D. Magnus, covers formal semantics and proof theory for sentential logic.
+Category:Propositional Calculus on ProofWiki (GFDLed)
+An Outline of Propositional Logic
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Classical logic
+
+
+
+
+
+
+
+
+
+Law of excluded middle
+Double negative elimination
+Law of noncontradiction
+Principle of explosion
+Monotonicity of entailment
+Idempotency of entailment
+Commutativity of conjunction
+De Morgan's laws
+Principle of bivalence
+
+
+Propositional logic
+Predicate logic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Formal fallacies
+
+
+
+
+
+
+
+
+
+Masked man fallacy
+
+
+
+
+
+
+
+
+In propositional logic
+
+
+
+Affirming a disjunct
+Affirming the consequent
+Denying the antecedent
+Argument from fallacy
+False dilemma
+
+
+
+
+
+
+
+
+In quantificational logic
+
+
+
+Existential fallacy
+Illicit conversion
+Proof by example
+Quantifier shift
+
+
+
+
+
+
+
+
+Syllogistic fallacy
+
+
+
+Affirmative conclusion from a negative premise
+Exclusive premises
+Existential
+Necessity
+Four-term fallacy
+Illicit major
+Illicit minor
+Negative conclusion from affirmative premises
+Undistributed middle
+
+
+
+
+
+
+
+
+
+
+
+Other types of formal fallacy
+List of fallacies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Mathematical logic
+
+
+
+
+
+
+General
+
+
+
+Formal language
+Formation rule
+Formal system
+Deductive system
+Formal proof
+Formal semantics
+Well-formed formula
+Set
+Element
+Class
+Classical logic
+Axiom
+Natural deduction
+Rule of inference
+Relation
+Theorem
+Logical consequence
+Axiomatic system
+Type theory
+Symbol
+Syntax
+Theory
+
+
+
+
+
+
+
+
+Traditional logic
+
+
+
+Proposition
+Inference
+Argument
+Validity
+Cogency
+Syllogism
+Square of opposition
+Venn diagram
+
+
+
+
+
+
+
+
+
+Propositional
+calculus
+Boolean logic
+
+
+
+
+Boolean functions
+Propositional calculus
+Propositional formula
+Logical connectives
+Truth tables
+
+
+
+
+
+
+
+
+Predicate logic
+
+
+
+First-order
+Quantifiers
+Predicate
+Second-order
+Monadic predicate calculus
+
+
+
+
+
+
+
+
+Naive set theory
+
+
+
+Set
+Empty set
+Enumeration
+Extensionality
+Finite set
+Infinite set
+Subset
+Power set
+Countable set
+Uncountable set
+Recursive set
+Domain
+Range
+Map
+Function
+Relation
+Ordered pair
+
+
+
+
+
+
+
+
+Set theory
+
+
+
+Foundations of mathematics
+Zermelo–Fraenkel set theory
+Axiom of choice
+General set theory
+Kripke–Platek set theory
+Von Neumann–Bernays–Gödel set theory
+Morse–Kelley set theory
+Tarski–Grothendieck set theory
+
+
+
+
+
+
+
+
+Model theory
+
+
+
+Model
+Interpretation
+Non-standard model
+Finite model theory
+Truth value
+Validity
+
+
+
+
+
+
+
+
+Proof theory
+
+
+
+Formal proof
+Deductive system
+Formal system
+Theorem
+Logical consequence
+Rule of inference
+Syntax
+
+
+
+
+
+
+
+
+Computability
+theory
+
+
+
+Recursion
+Recursive set
+Recursively enumerable set
+Decision problem
+Church–Turing thesis
+Computable function
+Primitive recursive function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Propositional_calculus&amp;oldid=691203978"					
+				Categories: Propositional calculusSystems of formal logicLogical calculiBoolean algebraClassical logicHidden categories: Wikipedia articles needing clarification from October 2013All articles with specifically marked weasel-worded phrasesArticles with specifically marked weasel-worded phrases from October 2014Articles needing additional references from March 2011All articles needing additional referencesUse dmy dates from May 2012				
+							
+		
+		
+			

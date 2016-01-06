@@ -1,0 +1,409 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			C++14
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				C++14 is the informal name for the most recent revision of the C++ ISO/IEC standard, formally "International Standard ISO/IEC 14882:2014(E) Programming Language C++".[1] C++14 is intended to be a small extension over C++11, featuring mainly bug fixes and small improvements. The committee draft of the C++14 standard, N3690, was published May 15, 2013,[2] the working draft, N3936, was published March 2, 2014, the final ballot period closed on August 15, 2014, and the results (unanimous approval) were announced on August 18.[3] C++14 was released on December 15, 2014.[4]
+Because earlier C++ standard revisions were noticeably late, the name "C++1y" was sometimes used instead, similarly to how the C++11 standard used to be termed "C++0x" with the expectation of its release before 2010 (although in fact it slipped into 2010 and finally 2011).
+The features described below are those described in the Working Draft N3797. They have not yet been updated for the (relatively minor) final changes in the standard.
+
+
+
+Contents
+
+
+1 New language features
+
+1.1 Function return type deduction
+1.2 Alternate type deduction on declaration
+1.3 Relaxed constexpr restrictions
+1.4 Variable templates
+1.5 Aggregate member initialization
+1.6 Binary literals
+1.7 Digit separators
+1.8 Generic lambdas
+1.9 Lambda capture expressions
+1.10 The attribute [[deprecated]]
+
+
+2 New standard library features
+
+2.1 Shared mutexes and locking
+2.2 Heterogeneous lookup in associative containers
+2.3 Standard user-defined literals
+2.4 Tuple addressing via type
+2.5 Smaller library features
+
+
+3 See also
+4 References
+5 External links
+
+
+
+New language features[edit]
+These are the features added to the core language of C++14.
+Function return type deduction[edit]
+C++11 allowed lambda functions to deduce the return type based on the type of the expression given to the return statement. C++14 provides this ability to all functions. It also extends these facilities to lambda functions, allowing return type deduction for functions that are not of the form return expression;.[5]
+In order to induce return type deduction, the function must be declared with auto as the return type, but without the trailing return type specifier in C++11:
+
+
+auto DeduceReturnType();   // Return type to be determined.
+
+If multiple return expressions are used in the function's implementation, then they must all deduce the same type.[6]
+Functions that deduce their return types can be forward declared, but they cannot be used until they have been defined. Their definitions must be available to the translation unit that uses them.
+Recursion can be used with a function of this type, but the recursive call must happen after at least one return statement in the definition of the function:[6]
+
+
+auto Correct(int i) {
+  if (i == 1)
+    return i;               // return type deduced as int
+  else
+    return Correct(i-1)+i;  // ok to call it now
+}
+
+auto Wrong(int i) {
+  if (i != 1)
+    return Wrong(i-1)+i;  // Too soon to call this. No prior return statement.
+  else
+    return i;             // return type deduced as int
+}
+
+Alternate type deduction on declaration[edit]
+In C++11, two methods of type deduction were added. auto was a way to create a variable of the appropriate type, based on a given expression. decltype was a way to compute the type of a given expression. However, the way decltype and auto deduce types are different. In particular, auto will always deduce a non-reference type, as though by using std::remove_reference, while auto&amp;&amp; will always deduce a reference type. However, decltype can be prodded into deducing a reference or non-reference type, based on the value category of the expression and the nature of the expression it is deducing:[5]
+
+
+int i;
+int&amp;&amp; f();
+auto x3a = i;              // decltype(x3a) is int
+decltype(i) x3d = i;       // decltype(x3d) is int
+auto x4a = (i);            // decltype(x4a) is int
+decltype((i)) x4d = (i);   // decltype(x4d) is int&amp;
+auto x5a = f();            // decltype(x5a) is int
+decltype(f()) x5d = f();   // decltype(x5d) is int&amp;&amp;
+
+C++14 will add the decltype(auto) syntax. This allows auto declarations to use the decltype rules on the given expression.
+The decltype(auto) syntax can also be used with return type deduction, by using decltype(auto) syntax instead of auto for the function's return type deduction.[6]
+Relaxed constexpr restrictions[edit]
+C++11 introduced the concept of a constexpr-declared function; a function which could be executed at compile time. Their return values could be consumed by operations that require constant expressions, such as an integer template argument. However, C++11 constexpr functions could only contain a single expression that is returned (as well as static_asserts and a small number of other declarations).
+C++14 relaxes these restrictions. Constexpr-declared functions may now contain the following:[5]
+
+Any declarations except:
+
+static or thread_local variables.
+Variable declarations without initializers.
+
+
+The conditional branching statements if and switch.
+Any looping statement, including range-based for.
+Expressions which change the value of an object if the lifetime of that object began within the constant expression function. This includes calls to any non-const constexpr-declared non-static member functions.
+
+goto statements are forbidden in C++14 relaxed constexpr-declared functions.
+Also, C++11 stated that all non-static member functions that were declared constexpr were also implicitly declared const, with respect to this. That has since been removed; non-static member functions may be non-const.[7] However, per the above restrictions, a non-const constexpr member function can only modify a class member if that object's lifetime began within the constant expression evaluation.
+Variable templates[edit]
+In prior versions of C++, only functions, classes or type aliases could be templated. C++14 now allows the creation of variables that are templated. An example given in the proposal is a variable pi that can be read to get the value of pi for various types (e.g., 3 when read as an integral type; the closest value possible with float, double or long double precision when read as float, double or long double, respectively; etc.).
+The usual rules of templates apply to such declarations and definitions, including specialization.[8][9]
+
+
+template&lt;typename T&gt;
+constexpr T pi = T(3.1415926535897932385);
+
+// Usual specialization rules apply:
+template&lt;&gt;
+constexpr const char* pi&lt;const char*&gt; = "pi";
+
+Aggregate member initialization[edit]
+C++11 added member initializers, expressions to be applied to members at class scope if a constructor did not initialize the member itself. The definition of aggregates was changed to explicitly exclude any class with member initializers; therefore, they are not allowed to use aggregate initialization.
+C++14 will relax this restriction,[5] allowing aggregate initialization on such types. If the braced init list does not provide a value for that argument, the member initializer will take care of it.[10]
+Binary literals[edit]
+Numeric literals in C++14 can be specified in binary form.[5] The syntax uses the prefixes 0b or 0B. The syntax is also used in other languages e.g. Java, Ruby, Python, OCaml, and as an unofficial extension in some C compilers since at least 2007.[11]
+Digit separators[edit]
+In C++14, the single-quote character may be used arbitrarily as a digit separator in numeric literals, both integer literals and floating point literals.[12] This can make it easier for human readers to parse large numbers through subitizing.
+
+auto integer_literal = 1'000'000;
+auto floating_point_literal = 0.000'015'3;
+auto binary_literal = 0b0100'1100'0110;
+auto silly_example = 1'0'0'000'00;
+
+Generic lambdas[edit]
+In C++11, lambda function parameters need to be declared with concrete types. C++14 relaxes this requirement, allowing lambda function parameters to be declared with the auto type specifier.[8]
+
+
+auto lambda = [](auto x, auto y) {return x + y;};
+
+As for auto type deduction, generic lambdas follow the rules of template argument deduction (which are similar, but not identical in all respects). The above code is equivalent to this:[13]
+
+
+struct unnamed_lambda
+{
+  template&lt;typename T, typename U&gt;
+    auto operator()(T x, U y) const {return x + y;}
+};
+auto lambda = unnamed_lambda{};
+
+Lambda capture expressions[edit]
+C++11 lambda functions capture variables declared in their outer scope by value-copy or by reference. This means that value members of a lambda cannot be move-only types.[14] C++14 allows captured members to be initialized with arbitrary expressions. This allows both capture by value-move and declaring arbitrary members of the lambda, without having a correspondingly named variable in an outer scope.[8]
+This is done via the use of an initializer expression:
+
+
+auto lambda = [value = 1] {return value;};
+
+The lambda function lambda will return 1, which is what value was initialized with. The declared capture deduces the type from the initializer expression as if by auto.
+This can be used to capture by move, via the use of the standard std::move function:
+
+
+std::unique_ptr&lt;int&gt; ptr(new int(10));
+auto lambda = [value = std::move(ptr)] {return *value;};
+
+The attribute [[deprecated]][edit]
+The deprecated attribute allows marking an entity deprecated, which makes it still legal to use but puts users on notice that use is discouraged and may cause a warning message to be printed during compilation. An optional string literal can appear as the argument of deprecated, to explain the rationale for deprecation and/or to suggest a replacement.
+
+
+[[deprecated]] int f();
+
+[[deprecated("g() is thread-unsafe. Use h() instead")]]
+void g( int&amp; x );
+
+void h( int&amp; x );
+
+void test() {
+  int a = f(); // warning: 'f' is deprecated
+  g(a); // warning: 'g' is deprecated: g() is thread-unsafe. Use h() instead
+}
+
+New standard library features[edit]
+Shared mutexes and locking[edit]
+C++14 adds a shared timed mutex and a companion shared lock type.[15][16]
+Heterogeneous lookup in associative containers[edit]
+The C++ Standard Library defines four associative container classes. These classes allow the user to look up a value based on a value of that type. The map containers allow the user to specify a key and a value, where lookup is done by key and returns a value. However, the lookup is always done by the specific key type, whether it is the key as in maps or the value itself as in sets.
+C++14 allows the lookup to be done via an arbitrary type, so long as the comparison operator can compare that type with the actual key type.[17] This would allow a map from std::string to some value to compare against a const char* or any other type for which an operator&lt; overload is available.
+To preserve backwards compatibility, heterogeneous lookup is only allowed when the comparator given to the associative container allows it. The standard library classes std::less&lt;&gt; and std::greater&lt;&gt; are augmented to allow heterogeneous lookup.[18]
+Standard user-defined literals[edit]
+C++11 defined the syntax for user-defined literal suffixes, but the standard library did not use any of them. C++14 adds the following standard literals:[17]
+
+"s", for creating the various std::basic_string types.
+"h", "min", "s", "ms", "us", "ns", for creating the corresponding std::chrono::duration time intervals.
+
+
+
+auto str = "hello world"s; // auto deduces string
+auto dur = 60s;            // auto deduces chrono::seconds
+
+The two "s" literals do not interact, as the string one only operates on string literals, and the one for seconds operates only on numbers.[19]
+Tuple addressing via type[edit]
+The std::tuple type introduced in C++11 allows an aggregate of typed values to be indexed by a compile-time constant integer. C++14 will extend this to allow fetching from a tuple by type instead of by index.[17] If the tuple has more than one element of the type, a compile-time error will result:[20]
+
+
+tuple&lt;string, string, int&gt; t("foo", "bar", 7);
+int i = get&lt;int&gt;(t);        // i == 7
+int j = get&lt;2&gt;(t);          // Same as before: j == 7
+string s = get&lt;string&gt;(t);  // Compile-time error due to ambiguity
+
+Smaller library features[edit]
+std::make_unique can be used like std::make_shared for std::unique_ptr objects.[8]
+std::integral_constant will gain an operator() overload to return the constant value.[17]
+The global std::begin/std::end functions will be augmented with std::cbegin/std::cend functions, which return constant beginning/ending iterators of the range.
+See also[edit]
+
+C++11
+C++17
+C++
+
+References[edit]
+
+
+^ "ISO/IEC 14882:2014 -- Information technology -- Programming languages -- C++". ISO. 14 January 2014.&#160;
+^ "Committee Draft, Standard for Programming Language C++" (PDF). ISO. 15 May 2013.&#160;
+^ Sutter, Herb (August 18, 2014), We have C++14!, retrieved 2014-08-18&#160;
+^ "ISO/IEC search". ISO.&#160;
+^ a b c d e Wong, Michael (30 April 2013). "The View from the C++ Standard meeting April 2013 Part 3". C/C++ Cafe. Retrieved 14 June 2013.&#160;
+^ a b c Merrill, Jason (17 April 2013). "N3638 Return type deduction for normal functions (Revision 5)". Retrieved 14 June 2013.&#160;
+^ Smith, Richard (18 April 2013). "N3652 Relaxing constraints on constexpr functions".&#160;
+^ a b c d Sutter, Herb (20 April 2013). "Trip Report: ISO C++ Spring 2013 Meeting". isocpp.org. Retrieved 14 June 2013.&#160;
+^ Dos Reis, Gabriel (19 April 2013). "N3651 Variable Templates (Revision 1)" (PDF).&#160;
+^ Vandevoorde, Daveed; Voutilainen, Ville (17 April 2013). "N3653 Member initializers and aggregates".&#160;
+^ https://gcc.gnu.org/bugzilla/show_bug.cgi?id=23479#c29
+^ Crowl, Lawrence; Smith, Richard; Snyder, Jeff; Vandevoorde, Daveed (25 September 2013). "N3781 Single-Quotation-Mark as a Digit Separator" (PDF).&#160;
+^ Faisal, Vali; Sutter, Herb; Abrahams, Dave (19 April 2013). "N3649 Generic (Polymorphic) Lambda Expressions (Revision 3)".&#160;
+^ "Move capture in Lambda". Stack Overflow.&#160;
+^ Wong, Michael (30 April 2013). "The View from the C++ Standard meeting April 2013 Part 3". C/C++ Cafe. Retrieved 14 June 2013.&#160;
+^ Howard, Hinnant; Vollmann, Detlef; Boehm, Hans (19 April 2013). "N3659 Shared locking in C++ (Revision 2)".&#160;
+^ a b c d Wong, Michael (26 April 2013). "The View from the C++ Standard meeting April 2013 Part 2". C/C++ Cafe. Retrieved 14 June 2013.&#160;
+^ "N3657 Adding heterogeneous comparison lookup to associative containers (rev 4)". 19 March 2013.&#160;
+^ Peter, Sommerlad (18 April 2013). "N3642 User-defined Literals for Standard Library Types (part 1 - version 4)" (PDF).&#160;
+^ Spertus, Mike (19 April 2013). "N3670 Wording for Addressing Tuples by Type: Revision 2".&#160;
+
+
+External links[edit]
+
+C++14: What you need to know Overview of features in Dr. Dobb's, 16 Sept. 2014
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+C++
+
+
+
+
+
+
+
+
+
+C++
+C++98
+C++03
+C++11
+C++14
+C++17
+
+
+
+
+
+
+
+
+C++ features
+
+
+
+Classes
+Exception handling
+Function overloading
+new and delete
+Operator overloading
+Operators
+Templates
+
+
+
+
+
+
+
+
+C++ Standard Library
+
+
+
+I/O Streams
+Smart pointers
+STL
+Strings
+
+
+
+
+
+
+
+
+Compilers
+
+
+
+Comparison of C++ compilers
+Borland C++
+Borland Turbo C++
+C++Builder
+Clang
+GCC
+Intel C++ Compiler
+Visual C++
+Watcom C/C++
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Comparison of C IDEs
+Anjuta
+CLion
+Code::Blocks
+CodeLite
+Eclipse
+Geany
+Microsoft Visual Studio
+NetBeans
+
+
+
+
+
+
+
+
+C++ and other languages
+
+
+
+Compatibility of C and C++
+Comparison of C++ and Java
+Comparison of C++ and ALGOL 68
+Comparison of programming languages
+
+
+
+
+
+
+
+
+
+
+
+ Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=C%2B%2B14&amp;oldid=687916835"					
+				Categories: C++Programming language standardsHidden categories: Articles with example C++ code				
+							
+		
+		
+			

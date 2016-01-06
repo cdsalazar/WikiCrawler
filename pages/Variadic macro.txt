@@ -1,0 +1,165 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Variadic macro
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				A variadic macro is a feature of some computer programming languages, especially the C preprocessor, whereby a macro may be declared to accept a varying number of arguments.
+Variable-argument macros were introduced in 1999 in the ISO/IEC 9899:1999 (C99) revision of the C language standard, and in 2011 in ISO/IEC 14882:2011 (C++11) revision of the C++ language standard.[1]
+
+
+
+Contents
+
+
+1 Declaration syntax
+2 Support
+3 Example
+4 Trailing comma
+5 Alternatives
+6 References
+7 See also
+
+
+
+Declaration syntax[edit]
+The declaration syntax is similar to that of variadic functions: an ellipsis "..." is used to indicate that one or more arguments must be passed. Common compilers also permit passing zero arguments to such a macro, however.[2][3] During macro expansion each occurrence of the special identifier __VA_ARGS__ in the macro replacement list is replaced by the passed arguments.
+No means is provided to access individual arguments in the variable argument list, nor to find out how many were passed. However, macros can be written to count the number of arguments that have been passed.[4]
+Support[edit]
+Several compilers support variable-argument macros when compiling C and C++ code: the GNU Compiler Collection 3.0,[2] Clang (all versions),[5] Visual Studio 2005,[3] C++Builder 2006, and Oracle Solaris Studio (formerly Sun Studio) Forte Developer 6 update 2 (C++ version 5.3).[6] GCC also supports such macros when compiling Objective-C.
+Example[edit]
+If a printf-like function dbgprintf() were desired, which would take the file and line number from which it was called as arguments, the following macro might be used:
+
+
+// Our implemented function
+void realdbgprintf (const char *SourceFilename, int SourceLineno, const char *CFormatString, ...);
+
+// Due to a design bug of the variadic macro in C++, the following is more readable, but should be avoided.
+// Reason is, that dbgprintf("Hallo") will be expanded to realdbgprintf (__FILE__, __LINE__, "Hallo", )
+// The comma before the closing brace will result in a syntax error ...
+//#define dbgprintf(cformat, ...) realdbgprintf (__FILE__, __LINE__, cformat, __VA_ARGS__)
+
+// GNU C++ supports the non portable extension:
+//#define dbgprintf(cformat, ...) realdbgprintf (__FILE__, __LINE__, cformat, ##__VA_ARGS__)
+
+// By using the cformat string as part of the variadic arguments we can avoid this.
+// This is a tricky, but portable solution.
+#define dbgprintf(...) realdbgprintf (__FILE__, __LINE__, __VA_ARGS__)
+
+dbgprintf() could then be called as:
+
+
+dbgprintf ("Hello, world");
+
+which expands to:
+
+
+realdbgprintf (__FILE__, __LINE__, "Hello, world");
+
+or:
+
+
+dbgprintf("%d + %d = %d", 2, 2, 5);
+
+which expands to:
+
+
+realdbgprintf(__FILE__, __LINE__, "%d + %d = %d", 2, 2, 5);
+
+Without variadic macros, writing wrappers to printf is not directly possible. The standard workaround is to use the stdargs functionality of C/C++, and have the function call vprintf instead.
+Trailing comma[edit]
+There is portability issue with generating a trailing comma with empty args for variadic macros in C99. Some compilers (e.g.: Visual Studio[3]) will quietly get rid of that trailing comma for you. Other compilers (e.g.: GCC[2]) support putting ## in front of __VA_ARGS__
+
+
+#define MYLOG(FormatLiteral, ...)  fprintf (stderr, "%s(%d): " FormatLiteral "\n", __FILE__, __LINE__, __VA_ARGS__)
+
+The following application works
+
+
+MYLOG("Too many balloons %u", 42);
+
+which expands to
+
+
+fprintf (stderr, "%s(%u): " "Too many balloons %u" "\n", __FILE__, __LINE__, 42);
+
+which is equivalent to
+
+
+fprintf (stderr, "%s(%u): Too many balloons %u\n", __FILE__, __LINE__, 42);
+
+But look at this application:
+
+
+MYLOG("Attention!");
+
+which expands to
+
+
+fprintf (stderr, "%s(%u): " "Attention!" "\n", __FILE__, __LINE__, );
+
+which generates a syntax error with GCC.
+GCC supports the following (non-portable) extension:
+
+
+#define MYLOG(FormatLiteral, ...)  fprintf (stderr, "%s(%u): " FormatLiteral "\n", __FILE__, __LINE__, ##__VA_ARGS__)
+
+which removes the trailing comma when __VA_ARGS__ is empty.
+Alternatives[edit]
+Before the existence of variable-arguments in C99, it was quite common to use doubly nested parenthesis to exploit the variable number of arguments that could be supplied to the printf() function&#160;:
+
+
+#define dbgprintf(x) realdbgprintf x
+
+dbgprintf() could then be called as:
+
+
+dbgprintf (("Hello, world %d", 27));
+
+which expands to:
+
+
+realdbgprintf ("Hello, world %d", 27);
+
+References[edit]
+
+
+^ Working draft changes for C99 preprocessor synchronization - http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm
+^ a b c Variadic Macros - Using the GNU Compiler Collection (GCC)
+^ a b c Variadic Macros (C++)
+^ Laurent Deniau (2006-01-16). "__VA_NARG__". Newsgroup:&#160;comp.std.c. Usenet:&#160;dqgm2f$ije$1@sunnews.cern.ch.&#160;
+^ Clang source code change that mentions __VA_ARGS__ support (2006-07-29), note that Clang was open-sourced in 2007. http://llvm.org/viewvc/llvm-project?view=revision&amp;revision=38770
+^ Sun Studio feature comparison - http://developers.sun.com/sunstudio/support/CCcompare.html
+
+
+See also[edit]
+
+Computing
+Variadic function
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Variadic_macro&amp;oldid=685781749"					
+				Categories: C (programming language)C++				
+							
+		
+		
+			

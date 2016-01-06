@@ -1,0 +1,985 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			IEEE 1394
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from FireWire)
+												
+					Jump to:					navigation, 					search
+				
+				"Firewire" redirects here. For other uses, see Firewire (disambiguation).
+
+IEEE 1394 Interface
+
+
+
+
+Type
+Serial
+
+
+Production history
+
+
+Designer
+Apple Inc. (1394a/b), IEEE P1394 Working Group
+
+
+Designed
+1994; 21&#160;years ago&#160;(1994)[citation needed]
+
+
+Manufacturer
+Various
+
+
+Produced
+1994–present
+
+
+General specifications
+
+
+Length
+4.5 meters maximum
+
+
+Width
+1
+
+
+Hot pluggable
+Yes
+
+
+Daisy chain
+Yes, up to 63 devices
+
+
+External
+Yes
+
+
+Pins
+4, 6, 9
+
+
+Electrical
+
+
+Max. voltage
+30&#160;V
+
+
+Max. current
+1.5&#160;A
+
+
+Data
+
+
+Data signal
+Yes
+
+
+Bitrate
+400–3200 Mbit/s (50–400&#160;MB/s)
+
+
+IEEE 1394 is an interface standard for a serial bus for high-speed communications and isochronous real-time data transfer. It was developed in the late 1980s and early 1990s by Apple, who called it FireWire. The 1394 interface is comparable to USB though USB has more market share.[1] Apple first included FireWire in some of its 1999 Macintosh models, and most Apple Macintosh computers manufactured in the years 2000 - 2011 included FireWire ports. However, in 2011 Apple began replacing FireWire with the Thunderbolt interface and, as of 2014[update], FireWire has been replaced by Thunderbolt on new Macs.[2] The 1394 interface is also known by the brand i.LINK (Sony), and Lynx (Texas Instruments). IEEE 1394 replaced parallel SCSI in many applications, because of lower implementation costs and a simplified, more adaptable cabling system. The 1394 standard also defines a backplane interface, though this is not as widely used.
+IEEE 1394 was the High-Definition Audio-Video Network Alliance (HANA) standard connection interface for A/V (audio/visual) component communication and control.[3] (HANA was dissolved in September 2009 and the 1394 Trade Association assumed control of all HANA-generated intellectual property.) FireWire is also available in wireless, fiber optic, and coaxial versions using the isochronous protocols.
+
+
+
+Contents
+
+
+1 History and development
+2 Intellectual property considerations
+3 Technical specifications
+
+3.1 Encoding scheme
+3.2 Arbitration
+
+
+4 Standards and versions
+
+4.1 FireWire 400 (IEEE 1394-1995)
+
+4.1.1 Improvements (IEEE 1394a-2000)
+
+
+4.2 FireWire 800 (IEEE 1394b-2002)
+4.3 FireWire S800T (IEEE 1394c-2006)
+4.4 FireWire S1600 and S3200
+4.5 Future enhancements (including P1394d)
+
+
+5 Operating system support
+6 Cable TV system support
+7 Comparison with USB
+8 Common applications
+
+8.1 Consumer Automobiles
+8.2 Military and Aerospace Vehicles
+8.3 Networking over FireWire
+8.4 IIDC
+8.5 DV
+8.6 Frame grabbers
+8.7 iPod and iPhone synchronization and charging
+
+
+9 Security issues
+10 See also
+11 Notes
+12 References
+13 External links
+
+
+
+History and development[edit]
+
+
+
+
+The 6-conductor and 4-conductor alpha FireWire 400 connectors
+
+
+
+
+
+
+A 9-pin FireWire 800 connector
+
+
+
+
+
+
+The alternative Ethernet-style cabling used by 1394c
+
+
+
+
+
+
+4-conductor (left) and 6-conductor (right) FireWire 400 alpha connectors
+
+
+
+
+
+
+A pair of 6-conductor alpha connectors on the edge of an expansion card
+
+
+FireWire is Apple's name for the IEEE 1394 High Speed Serial Bus. It was initiated by Apple (in 1986[4]) and developed by the IEEE P1394 Working Group, largely driven by contributions from Apple, although major contributions were also made by engineers from Texas Instruments, Sony, Digital Equipment Corporation, IBM, and INMOS/SGS Thomson (now STMicroelectronics).
+IEEE 1394 is a serial bus architecture for high-speed data transfer. FireWire is a serial bus, meaning that information is transferred one bit at a time. Parallel buses utilize a number of different physical connections, and as such are usually more costly and typically heavier.[5] IEEE 1394 fully supports both isochronous and asynchronous applications.
+Apple intended FireWire to be a serial replacement for the parallel SCSI bus while providing connectivity for digital audio and video equipment. Apple's development began in the late 1980s, later presented to the IEEE,[6] and was completed in January 1995. In 2007, IEEE 1394 was a composite of four documents: the original IEEE Std. 1394-1995, the IEEE Std. 1394a-2000 amendment, the IEEE Std. 1394b-2002 amendment, and the IEEE Std. 1394c-2006 amendment. On June 12, 2008, all these amendments as well as errata and some technical updates were incorporated into a superseding standard, IEEE Std. 1394-2008.[7]
+Sony's implementation of the system, i.LINK, used a smaller connector with only four signal conductors, omitting the two conductors that provide power for devices in favor of a separate power connector. This style was later added into the 1394a amendment.[6] This port is sometimes labeled S100 or S400 to indicate speed in Mbit/s.
+The system was commonly used to connect data storage devices and DV (digital video) cameras, but was also popular in industrial systems for machine vision and professional audio systems. Many users preferred it over the more common USB 2.0 for its then greater effective speed and power distribution capabilities. Perhaps more important, FireWire uses all SCSI capabilities and has high sustained data transfer rates, important for audio and video editors. Benchmarks show that the sustained data transfer rates are higher for FireWire than for USB 2.0, but lower than USB 3.0. Results are marked on Apple Mac OS X but more varied on Microsoft Windows.[8][9]
+Intellectual property considerations[edit]
+Implementation of IEEE 1394 [10] is said to require use of 261 issued international patents[11] held by 10[12] corporations. Use of these patents requires licensing; use without license generally constitutes patent infringement.[13] Companies holding IEEE 1394 IP formed a license administrator (“patent pool“) MPEG LA, LLC, to whom they licensed patents. MPEG LA sublicenses these patents to providers of equipment implementing IEEE 1394. Under the typical patent pool license, a royalty of US$0.25 per unit is payable by the manufacturer upon the manufacture of each 1394 finished product;[13] no royalties are payable by users.
+A person or company may review the actual 1394 Patent Portfolio License upon request to MPEG LA.[14] Implementors would thereby ordinarily reveal some interest to MPEG LA early in the design process. MPEG LA does not provide assurance of protection to licensees beyond its own minority subset of patents[clarify]. At least one formerly licensed patent is known to be removed from the pool,[11] and other extra-pooled hardware patents exist that reference 1394-related hardware[15][16][17] and software functions related to use in IEEE 1394.[18] In total, over 1770 patents issued in the 20 years (the WIPO minimum) preceding 2011[19] contain "IEEE 1394" in their titles alone, placing 1500 unavailable from MPEG LA.
+The 1394 High Performance Serial Bus Trade Association (the "1394 TA") was formed to aid marketing of IEEE 1394. Its bylaws prohibit dealing with intellectual property issues.[20] The 1394 Trade Association operates on an individual no cost membership basis to further enhancements to 1394 standards. The Trade Association also is the library source for all 1394 documentation and standards available.
+Technical specifications[edit]
+FireWire can connect up to 63 peripherals in a tree or daisy-chain topology[21] (as opposed to Parallel SCSI's electrical bus topology). It allows peer-to-peer device communication&#160;— such as communication between a scanner and a printer&#160;— to take place without using system memory or the CPU. FireWire also supports multiple hosts per bus. It is designed to support plug and play and hot swapping. The copper cable it uses in its most common implementation can be up to 4.5 metres (15&#160;ft) long and is more flexible than most parallel SCSI cables. In its six-conductor or nine-conductor variations, it can supply up to 45 watts of power per port at up to 30 volts,[citation needed] allowing moderate-consumption devices to operate without a separate power supply.
+FireWire devices implement the ISO/IEC 13213 "configuration ROM" model for device configuration and identification, to provide plug-and-play capability. All FireWire devices are identified by an IEEE EUI-64 unique identifier in addition to well-known codes indicating the type of device and the protocols it supports.
+FireWire devices are organized at the bus in a tree topology. Each device has a unique self-ID. One of the nodes is elected root node and always has the highest ID. The self-IDs are assigned during the self-ID process, which happens after each bus resets. The order in which the self-IDs are assigned is equivalent to traversing the tree depth-first, post-order.
+FireWire is capable of safely operating critical systems due to the way multiple devices interact with the bus and how the bus allocates bandwidth to the devices. FireWire is capable of both asynchronous and isochronous transfer methods at once. Isochronous data transfers are transfers for devices that require continuous, guaranteed bandwidth.[5] In an aircraft, for instance, Isochronous devices include control of the rudder, mouse operations and data from pressure sensors outside the aircraft. All these elements require constant, uninterrupted bandwidth. To support both elements, FireWire dedicates a certain percentage to isochronous data and the rest to asynchronous data. In IEEE 1394 80% of the bus is reserved for isochronous cycles, leaving asynchronous data with a minimum of 20% of the bus.[22]
+Encoding scheme[edit]
+FireWire uses Data strobe encoding (D/S encoding).[23] In D/S encoding, two non-return-to-zero (NRZ) signals are used to transmit the data with high reliability. The NRZ signal sent is fed with the clock signal through an XOR gate, creating a strobe signal.[23] This strobe is then put through another XOR gate along with the data signal to reconstruct the clock.[23] This in turn acts as the bus's Phase-locked loop for synchronization purposes.[23]
+Arbitration[edit]
+The process of the bus deciding which node gets to transmit data at what time is known as arbitration.[24] Each arbitration round lasts about 125 microseconds.[24] During the round, the root node (device nearest the processor) sends a cycle start packet.[24] All nodes requiring data transfer respond, with the closest node winning.[24] After the node is finished, the remaining nodes take turns in order. This repeats until all the devices have used their portion of the 125 microseconds, with isochronous transfers having priority.[24]
+Standards and versions[edit]
+The previous standards and its three published amendments are now incorporated into a superseding standard, IEEE 1394-2008.[7] The features individually added give a good history on the development path.
+FireWire 400 (IEEE 1394-1995)[edit]
+The original release of IEEE 1394-1995[25] specified what is now known as FireWire 400. It can transfer data between devices at 100, 200, or 400 Mbit/s full-duplex data rates (the actual transfer rates are 98.304, 196.608, and 393.216&#160;Mbit/s, i.e., 12.288, 24.576 and 49.152 megabytes per second respectively).[6] These different transfer modes are commonly referred to as S100, S200, and S400.
+Cable length is limited to 4.5 metres (14.8&#160;ft), although up to 16 cables can be daisy chained using active repeaters; external hubs, or internal hubs are often present in FireWire equipment. The S400 standard limits any configuration's maximum cable length to 72 metres (236&#160;ft). The 6-conductor connector is commonly found on desktop computers, and can supply the connected device with power.
+The 6-conductor powered connector, now referred to as an alpha connector, adds power output to support external devices. Typically a device can pull about 7 to 8 watts from the port; however, the voltage varies significantly from different devices.[26] Voltage is specified as unregulated and should nominally be about 25 volts (range 24 to 30). Apple's implementation on laptops is typically related to battery power and can be as low as 9 V.[26]
+Improvements (IEEE 1394a-2000)[edit]
+An amendment, IEEE 1394a, was released in 2000,[27] which clarified and improved the original specification. It added support for asynchronous streaming, quicker bus reconfiguration, packet concatenation, and a power-saving suspend mode.
+IEEE 1394a offers a couple of advantages over IEEE 1394. 1394a is capable of arbitration accelerations, allowing the bus to accelerate arbitration cycles to improve efficiency. It also allows for arbitrated short bus reset, in which a node can be added or dropped without causing a big drop in isochronous transmission.[22]
+1394a also standardized the 4-conductor alpha connector developed by Sony and trademarked as "i.LINK", already widely in use on consumer devices such as camcorders, most PC laptops, a number of PC desktops, and other small FireWire devices. The 4-conductor connector is fully data-compatible with 6-conductor alpha interfaces but lacks power connectors.
+FireWire 800 (IEEE 1394b-2002)[edit]
+
+
+
+
+A 9-conductor bilingual connector
+
+
+IEEE 1394b-2002[28] introduced FireWire 800 (Apple's name for the 9-conductor "S800 bilingual" version of the IEEE 1394b standard). This specification and corresponding products allow a transfer rate of 786.432&#160;Mbit/s full-duplex via a new encoding scheme termed beta mode. It is backwards compatible with the slower rates and 6-conductor alpha connectors of FireWire 400. However, while the IEEE 1394a and IEEE 1394b standards are compatible, FireWire 800's connector, referred to as a beta connector, is different from FireWire 400's alpha connectors, making legacy cables incompatible. A bilingual cable allows the connection of older devices to the newer port. In 2003, Apple was the first to introduce commercial products with the new connector.
+The full IEEE 1394b specification supports data rates up to 3200&#160;Mbit/s (i.e., 400 megabytes/s) over beta-mode or optical connections up to 100 metres (330&#160;ft) in length. Standard Category 5e unshielded twisted pair supports 100 metres (330&#160;ft) at S100. The original 1394 and 1394a standards used data/strobe (D/S) encoding (renamed to alpha mode) with the cables, while 1394b added a data encoding scheme called 8B10B referred to as beta mode.
+Beta mode is based on 8B/10B (from Gigabit Ethernet, also used for many other protocols). 8B/10B encoding involves expanding an 8 bit data word into 10 bits, with the extra bits after the 5th and 8th data bits.[29] The partitioned data is sent through a Running Disparity calculator function.[29] The Running Disparity calculator attempts to keep the number of 1s transmitted equal to 0s,[30] thereby assuring a DC-balanced signal. Then, the different partitions are sent through a 5B/6B encoder for the 5 bit partition and a 3B/4B encoder for the 3 bit partition. This gives the packet the ability to have at least two 1s, ensuring synchronization of the PLL at the receiving end to the correct bit boundaries for reliable transfer.[30] An additional function of the coding scheme is to support the arbitration for bus access and general bus control. This is possible due to the "surplus" symbols afforded by the 8B/10B expansion. (While 8-bit symbols can encode a maximum of 256 values, 10-bit symbols permit the encoding of up to 1024.) Symbols invalid for the current state of the receiving PHY indicate data errors.
+FireWire S800T (IEEE 1394c-2006)[edit]
+IEEE 1394c-2006 was published on June 8, 2007.[31] It provided a major technical improvement, namely new port specification that provides 800 Mbit/s over the same 8P8C (Ethernet) connectors with Category 5e cable, which is specified in IEEE 802.3 clause 40 (gigabit Ethernet over copper twisted pair) along with a corresponding automatic negotiation that allows the same port to connect to either IEEE Std 1394 or IEEE 802.3 (Ethernet) devices.
+Though the potential for a combined Ethernet and FireWire 8P8C port is intriguing, as of November 2008[update], no products or chipsets include this capability.
+FireWire S1600 and S3200[edit]
+In December 2007, the 1394 Trade Association announced that products would be available before the end of 2008 using the S1600 and S3200 modes that, for the most part, had already been defined in 1394b and were further clarified in IEEE Std. 1394-2008.[7] The 1.572864&#160;Gbit/s and 3.145728&#160;Gbit/s devices use the same 9-conductor beta connectors as the existing FireWire 800 and are fully compatible with existing S400 and S800 devices. It competes with USB 3.0.[32]
+S1600 (Symwave[33]) and S3200 (Dap Technology[34]) development units have been made, however because of FPGA technology DapTechnology targeted S1600 implementations first with S3200 not becoming commercially available until 2012.
+Steve Jobs declared FireWire dead in 2008.[35] As of 2012[update], there were few S1600 devices released, with a Sony camera being the only notable user.[36]
+Future enhancements (including P1394d)[edit]
+A project named IEEE P1394d was formed by the IEEE on March 9, 2009 to add single mode fiber as an additional transport medium to FireWire.[37] The project was withdrawn in 2013.[38]
+Other future iterations of FireWire were expected to increase speed to 6.4 Gbit/s and additional connectors such as the small multimedia interface.[39][citation needed]
+Operating system support[edit]
+Full support for IEEE 1394a and 1394b is available for Microsoft Windows, FreeBSD,[40] Linux,[41][42] Apple Mac OS 8.6 through Mac OS 9,[43] Mac OS X, NetBSD, and Haiku.
+In Windows XP, a degradation in performance of 1394 devices may have occurred with installation of Service Pack 2. This was resolved in Hotfix 885222[44] and in SP3. Some FireWire hardware manufacturers also provide custom device drivers that replace the Microsoft OHCI host adapter driver stack, enabling S800-capable devices to run at full 800 Mbit/s transfer rates on older versions of Windows (XP SP2 w/o Hotfix 885222) and Windows Vista. At the time of its release, Microsoft Windows Vista supported only 1394a, with assurances that 1394b support would come in the next service pack.[45] Service Pack 1 for Microsoft Windows Vista has since been released, however the addition of 1394b support is not mentioned anywhere in the release documentation.[46][47][48] The 1394 bus driver was rewritten for Windows 7 to provide support for higher speeds and alternative media.[49] No driver is supplied with Windows 8, 8.1 or 10 but can be downloaded and installed.
+In Linux, support was originally provided by libraw1394 making direct communication between user space and IEEE 1394 buses.[50] Subsequently a new kernel driver stack, nicknamed JuJu, has been implemented.[51]
+Cable TV system support[edit]
+Cable TV providers (in the US, with digital systems) must, upon request of a customer, provide a high-definition capable cable box with a functional FireWire interface. This applies only to customers leasing high-definition capable cable boxes from their cable provider after April 1, 2004. The relevant regulation is 47 CFR 76.640 Section 4 Subsections i and ii.[52] The interface can be used to display or record Cable TV, including HDTV programming.[53]
+Comparison with USB[edit]
+While both technologies provide similar end results, there are fundamental differences between USB and FireWire. USB requires the presence of a bus master, typically a PC, which connects point to point with the USB slave. This allows for simpler (and lower-cost) peripherals, at the cost of lowered functionality of the bus. Intelligent hubs are required to connect multiple USB devices to a single USB bus master. By contrast, FireWire is essentially a peer-to-peer network (where any device may serve as the host or client), allowing multiple devices to be connected on one bus.[54]
+The FireWire host interface supports DMA and memory-mapped devices, allowing data transfers to happen without loading the host CPU with interrupts and buffer-copy operations.[8][55] Additionally, FireWire features two data buses for each segment of the bus network whereas, until USB 3.0, USB featured only one. This means that FireWire can have communication in both directions at the same time (full-duplex), whereas USB communication prior to 3.0 can only occur in one direction at any one time (half-duplex).[citation needed]
+While USB 2.0 expanded into the fully backwards-compatible USB 3.0 and 3.1 (using the same main connector type), FireWire used a different connector between 400 and 800 implementations.
+Common applications[edit]
+
+Consumer Automobiles[edit]
+IDB-1394 Customer Convenience Port (CCP) is the automotive version of the 1394 standard.[56]
+Military and Aerospace Vehicles[edit]
+SAE Aerospace standard AS5643 originally released in 2004 and reaffirmed in 2013 establishes IEEE-1394 standards as a military and aerospace databus network in those vehicles. AS5643 is utilized by several large programs, including the F-35 Lightning II, the X-47B UCAV aircraft, SJ 2000 tilting train, AGM-154 weapon and JPSS-1 polar satellite for NOAA. AS5643 combines existing 1394-2008 features like looped topology with additional features like transformer isolation and time synchronization, to create deterministic double and triple fault-tolerant data bus networks.[57][58][59]
+Networking over FireWire[edit]
+FireWire can be used for ad-hoc (terminals only, no routers except where a FireWire hub is used) computer networks. Specifically, RFC 2734 specifies how to run IPv4 over the FireWire interface, and RFC 3146 specifies how to run IPv6.
+Mac OS X, Linux, and FreeBSD include support for networking over FireWire.[60] Windows 95, Windows 98, Windows Me,[61] Windows XP and Windows Server 2003 include native support for IEEE 1394 networking.[62] Windows 2000 does not have native support but may work with third party drivers. A network can be set up between two computers using a single standard FireWire cable, or by multiple computers through use of a hub. This is similar to Ethernet networks with the major differences being transfer speed, conductor length, and the fact that standard FireWire cables can be used for point-to-point communication.
+On December 4, 2004, Microsoft announced that it would discontinue support for IP networking over the FireWire interface in all future versions of Microsoft Windows.[63] Consequently, support for this feature is absent from Windows Vista and later Windows releases.[64][65] Microsoft rewrote their 1394 driver in Windows 7[66] but networking support for FireWire is not present. Unibrain offers free FireWire networking drivers for Windows called ubCore,[67] which support Windows Vista and later versions.
+Some models of the PlayStation 2 console had an i.LINK-branded 1394 connector. This was used for networking until the release of an Ethernet adapter late in the console's lifespan, but very few software titles supported the feature.
+IIDC[edit]
+IIDC (Instrumentation &amp; Industrial Digital Camera) is the FireWire data format standard for live video, and is used by Apple's iSight A/V camera. The system was designed for machine vision systems[68] but is also used for other computer vision applications and for some webcams. Although they are easily confused since they both run over FireWire, IIDC is different from, and incompatible with, the ubiquitous AV/C (Audio Video Control) used to control camcorders and other consumer video devices.[69]
+DV[edit]
+Digital Video (DV) is a standard protocol used by some digital camcorders. All DV cameras that recorded to tape media had a FireWire interface (usually a 4-conductor). All DV ports on camcorders only operate at the slower 100 Mbit/s speed of FireWire. This presents operational issues if the camcorder is daisy chained from a faster S400 device or via a common hub because any segment of a FireWire network cannot support multiple speed communication.[70]
+Labelling of the port varies by manufacturer, with Sony using either its i.LINK trademark or the letters 'DV'. Many digital video recorders have a "DV-input" FireWire connector (usually an alpha connector) that can be used to record video directly from a DV camcorder ("computer-free"). The protocol also accommodates remote control (play, rewind, etc.) of connected devices, and can stream time code from a camera.
+USB is unsuitable for transfer of the video data from tape because tape by its very nature does not support variable data rates. USB relies heavily on processor support and this was not guaranteed to service the USB port in time. The recent move away from tape towards solid state memory or disc media (e.g. SD Cards, optical disks or hard drives) has facilitated moving to USB transfer because file based data can be moved in segments as required.
+Frame grabbers[edit]
+IEEE 1394 interface is commonly found in frame grabbers, devices that capture and digitize an analog video signal; however, IEEE 1394 is facing competition from the Gigabit Ethernet interface (citing speed and availability issues).[71]
+iPod and iPhone synchronization and charging[edit]
+iPods released prior to the iPod with Dock Connector used IEEE 1394a ports for syncing music and charging, but in 2003, the FireWire port in iPods was succeeded by Apple's dock connector and IEEE 1394 to 30-pin connector cables were made. Apple Inc. dropped support for FireWire cables starting with iPod nano (4th Generation),[72] iPod touch (2nd Generation), and iPhone 3G in favor of USB cables.
+Security issues[edit]
+Devices on a FireWire bus can communicate by direct memory access (DMA), where a device can use hardware to map internal memory to FireWire's "Physical Memory Space". The SBP-2 (Serial Bus Protocol 2) used by FireWire disk drives uses this capability to minimize interrupts and buffer copies. In SBP-2, the initiator (controlling device) sends a request by remotely writing a command into a specified area of the target's FireWire address space. This command usually includes buffer addresses in the initiator's FireWire Physical Address Space, which the target is supposed to use for moving I/O data to and from the initiator.[73]
+On many implementations, particularly those like PCs and Macs using the popular OHCI, the mapping between the FireWire "Physical Memory Space" and device physical memory is done in hardware, without operating system intervention. While this enables high-speed and low-latency communication between data sources and sinks without unnecessary copying (such as between a video camera and a software video recording application, or between a disk drive and the application buffers), this can also be a security or media rights-restriction risk if untrustworthy devices are attached to the bus and initiate a DMA attack. One of the applications known to exploit this to gain unauthorized access to running Windows, Mac OS and Linux computers is the spyware FinFireWire.[74] For this reason, high-security installations typically either use newer machines that map a virtual memory space to the FireWire "Physical Memory Space" (such as a Power Mac G5, or any Sun workstation), disable relevant drivers at operating system level,[75] disable the OHCI hardware mapping between FireWire and device memory, physically disable the entire FireWire interface, or opt to not use FireWire or other hardware like PCMCIA, PC Card, ExpressCard or Thunderbolt, which expose DMA to external components.
+An unsecured FireWire interface can be used to debug a machine whose operating system has crashed, and in some systems for remote-console operations. Windows natively supports this scenario of kernel debugging. On FreeBSD, the dcons driver provides both, using gdb as debugger. Under Linux, firescope[76] and fireproxy[77] exist.
+See also[edit]
+
+HAVi
+Linux IEEE 1394 target
+Thunderbolt
+List of device bit rates
+
+Notes[edit]
+
+
+^ Yaghmour, Karim; Masters, Jon; Ben-Yossef, Gilad; Gerum, Philippe (15 August 2008). Building embedded Linux systems. O'Reilly Media, Inc. p.&#160;70. ISBN&#160;978-0-596-52968-0. Retrieved 8 January 2012.&#160;
+^ Apple.com Apple - Mac - Compare
+^ "About HANA". Hanaalliance.org. Retrieved 2010-01-25.&#160;
+^ "What Is FireWire?". 1394 Trade Association.&#160;
+^ a b IEEE Standard 1394a "A Standard for a High-Performance Serial Bus". Dunn, Son.
+^ a b c Teener, Michael J. "What is Firewire?". Retrieved 2008-07-14.&#160;
+^ a b c "IEEE Standard for a High-Performance Serial Bus". IEEE Std. 1394-2008. 2008-10-21. doi:10.1109/IEEESTD.2008.4659233. ISBN&#160;978-0-7381-5771-9.&#160;
+^ a b "FireWire — USB Comparison". Usb-ware.com. Retrieved 2010-01-25.&#160;
+^ "Go External: FireWire 800". Tomshardware.com. Retrieved 2010-01-25.&#160;
+^ "MPEG LA - 1394 License Agreement".&#160;
+^ a b "Attachment 1 List of Patents in the 1394 Patent Portfolio" (PDF).&#160;
+^ "MPEG LA - 1394 Licensors".&#160;
+^ a b "MPEG LA - 1394 FAQ".&#160;
+^ "MPEG LA - 1394 License Agreement Express (hardcopy)".&#160;
+^ "Patent number: US5875313 - PCI bus to IEEE 1394 bus translator employing write pipe-lining and ...".&#160;
+^ "Patent number: US5937175 - PCI bus to IEEE 1394 bus translator employing pipe-lined read prefetching".&#160;
+^ "Patent number: 5953511 - PCI bus to IEEE 1394 bus translator".&#160;
+^ "PATENT NOTICE - National Instruments Software Related Patents".&#160;
+^ "intitle: "IEEE 1394" - Google Search".&#160;
+^ "BYLAWS OF THE 1394 TRADE ASSOCIATION".&#160;
+^ "IEEE 1394 - The Multimedia Bus of The Future". cablelabs.com. Archived from the original on 2011-09-27.&#160;
+^ a b IEEE 1394 Architecture[dead link]
+^ a b c d "IEEE 1394 (AKA 'FireWire' &amp; 'iLink')" (PDF). Retrieved 2012-09-01.&#160;
+^ a b c d e "IEEE 1394 and Linux". Tindel.net. Retrieved 2012-09-01.&#160;
+^ IEEE p1394 Working Group (1996-08-30). IEEE Std 1394-1995 High Performance Serial Bus (PDF). IEEE. doi:10.1109/IEEESTD.1996.81049. ISBN&#160;1-55937-583-3.&#160;
+^ a b "FireWire Developer Note". Developer.apple.com. 2008-04-28. Retrieved 2010-01-25.&#160;
+^ IEEE p1394a Working Group (2000-06-30). IEEE Std 1394a-2000 High Performance Serial Bus&#160;— Amendment 1. IEEE. doi:10.1109/IEEESTD.2000.91614. ISBN&#160;0-7381-1958-X.&#160; P1394a Draft 5.0 available.
+^ IEEE p1394b Working Group (2002-12-14). IEEE Std 1394b-2002 High Performance Serial Bus&#160;— Amendment 2. IEEE. ISBN&#160;0-7381-3253-5.&#160;
+^ a b "Encoder/Decoder". Iram.cs.berkeley.edu. 1997-12-17. Retrieved 2012-09-01.&#160;
+^ a b Haden, Rhys (2007-06-30). "CP3070 Principles of Data Communications". Rhyshaden.com. Retrieved 2012-09-01.&#160;
+^ "High Performance Serial Bus&#160;— Amendment 3". IEEE Std 1394c-2006. 2007-06-08. doi:10.1109/IEEESTD.2006.371044. ISBN&#160;0-7381-5237-4.&#160;
+^ "1394 Trade Association Announces 3.2 Gigabit per Second Speed for FireWire". 1394 Trade Association. 2007-12-12. Retrieved 2008-08-03.&#160;
+^ [1][dead link]
+^ "Fires Up World’s First 3.2 Gigabit IEEE 1394b FireWire SOC Solution". DapTechnology. 2009-11-23. Retrieved 2012-09-01.&#160;
+^ Farewell, my lovely FireWire
+^ http://www.eetimes.com/document.asp?doc_id=1279328
+^ "P1394d - IEEE Standard for a High-Performance Serial Bus - Amendment: IEEE 1394 Single-mode Fiber Fiber Physical Medium (PMD) Specification". IEEE Standards. IEEE. Retrieved 8 October 2012.&#160;
+^ http://standards.ieee.org/about/sba/mar2013.html
+^ Baxter, Les (2007-11-01). "New developments in IEEE 1394 (a.k.a. FireWire)". Lightwave. Retrieved 2007-12-19.&#160;
+^ "FreeBSD firewire(4) man page". Freebsd.org. 2006-04-01. Retrieved 2010-01-25.&#160;
+^ "Linux FireWire wiki". Ieee1394.wiki.kernel.org. 2009-08-22. Retrieved 2010-01-25.&#160;
+^ "Linux Unified Target wiki". linux-iscsi.org. 2012-07-21. Retrieved 2012-08-12.&#160;
+^ "FireWire 2.2.2 and 2.3.3: Information and Download". Docs.info.apple.com. Retrieved 2010-01-25.&#160;
+^ "Performance of 1394 devices may decrease after you install Windows XP Service Pack 2". Support.microsoft.com. 2006-06-01. Retrieved 2010-01-25.&#160;
+^ "Microsoft to support 1394b standard". EETimes.com. Retrieved 2010-01-25.&#160;
+^ "Notable Changes in Windows Vista Service Pack 1". Technet2.microsoft.com. Retrieved 2010-01-25.&#160;
+^ "Release Notes for Windows Vista Service Pack 1". Technet2.microsoft.com. Retrieved 2010-01-25.&#160;
+^ "Hotfixes and Security Updates included in Windows Vista Service Pack 1". Technet2.microsoft.com. Retrieved 2010-01-25.&#160;
+^ "1394 Bus Driver in Windows 7". Microsoft.com. 2009-06-24. Retrieved 2010-01-25.&#160;
+^ "Package: libraw1394-8 (1.3.0-4)". Retrieved 2010-09-12.&#160;
+^ "Juju Migration". Retrieved 2012-10-10.&#160;
+^ "page 145" (PDF). Retrieved 2010-01-25.&#160;
+^ rcliff. "How-To: Mac OS X Firewire HDTV recording". AVS Forum. Retrieved 2010-01-25.&#160;
+^ http://www.qimaging.com/support/pdfs/firewire_usb_technote.pdf
+^ "firewirevsusb". Directron.com. Retrieved 2012-09-01.&#160;
+^ IDB Forum
+^ http://www.embedded.com/design/connectivity/4406396/2/IEEE-1394-and-AS5643-brings-deterministic-networking-to-high-reliability-Mil-Aero-designs-
+^ http://standards.sae.org/as5643/
+^ http://www.eetimes.com/document.asp?doc_id=1279059
+^ "FreeBSD 7.1 fwip(4) man page". Freebsd.org. 2005-07-16. Retrieved 2010-01-25.&#160;
+^ "Windows Millennium Edition (Me) Support for IP over IEEE 1394 Bus". Support.microsoft.com. 2007-01-27. Retrieved 2012-09-01.&#160;
+^ "Using IEEE 1394 (FireWire) Devices with Windows XP". Support.microsoft.com. 2007-12-01. Retrieved 2010-01-25.&#160;
+^ "Discontinued Support for IP over 1394". Microsoft.com. 2004-12-08. Retrieved 2010-01-25.&#160;
+^ "IP networking over the IEEE 1394 bus is not supported in Windows Vista and in all later versions of Windows". Support.microsoft.com. 2007-11-28. Retrieved 2010-01-25.&#160;
+^ "New Networking Features in Windows Server 2008, Windows Vista, and Windows 7". Technet.microsoft.com. Retrieved 2010-01-25.&#160;
+^ "1394 Bus Driver in Windows 7". Microsoft.com. 2009-06-18. Retrieved 2012-09-01.&#160;
+^ "ubCore 1394 Firewire drivers". Unibrain.com. Retrieved 2012-09-01.&#160;
+^ "libdc1394: IIDC/DCAM specifications". Damien.douxchamps.net. Retrieved 2010-01-25.&#160;
+^ "AV/C Overview". Microsoft Developer Network.&#160;
+^ IEEE 1394a specification.
+^ "How to Establish VGA to Firewire Connection". Epiphan.com. Retrieved 2012-09-01.&#160;
+^ "iPod nano: Charging the battery". Retrieved 2013-09-14.&#160;
+^ "Tool Physically Hacks Windows&#160;— Security/Vulnerabilities&#160;— DarkReading". DarkReading. Retrieved 2010-01-25.&#160;
+^ "Tactical IT Intrusion Portfolio: FINFIREWIRE" (PDF) (PDF). Gamma International. 2011-10. Retrieved 2014-04-28.&#160; Check date values in: |date= (help)
+^ "Blocking the SBP-2 Driver to Reduce 1394 DMA Threats to BitLocker". Microsoft. 2011-03-04. Retrieved 2011-03-15.&#160;
+^ "Andi Kleen: [ANNOUNCE] firescope for i386/x86-64 released". LKML. 2006-04-04. Retrieved 2010-01-25.&#160;
+^ "Bernhard Kaindl's fireproxy forwards the gdb remote protocol to FireWire. It allows reading and writing remote memory by gdb". Ieee1394.wiki.kernel.org. 2009-11-07. Retrieved 2010-01-25.&#160;
+
+
+References[edit]
+This article is based on material taken from the Free On-line Dictionary of Computing prior to 1 November 2008 and incorporated under the "relicensing" terms of the GFDL, version 1.3 or later.
+
+INCITS T10 Project 1467D (2004). Information technology—Serial Bus Protocol 3 (SBP-3). ANSI INCITS. ANSI INCITS 375-2004.&#160;
+Anderson, Don (1999). FireWire System Architecture. MindShare, Inc. ISBN&#160;0-201-48535-4.&#160;
+"IEEE Standard for a High-Performance Serial Bus". IEEE Std. 1394-2008. 2008-10-21. doi:10.1109/IEEESTD.2008.4659233. ISBN&#160;978-0-7381-5771-9.&#160;
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to FireWire.
+
+
+
+1394 Trade Association
+1394 Standards Orientation, Introduction.
+IEEE 1394 connectors pinout
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Technical and de facto standards for wired computer buses
+
+
+
+
+
+
+General
+
+
+
+System bus
+Front-side bus
+Back-side bus
+Daisy chain
+Control bus
+Address bus
+Bus contention
+Network on a chip
+Plug and play
+List of bus bandwidths
+
+
+
+
+
+
+
+
+Standards
+
+
+
+S-100 bus
+Unibus
+VAXBI
+MBus
+STD Bus
+SMBus
+Q-Bus
+Europe Card Bus
+ISA
+STEbus
+Zorro II
+Zorro III
+CAMAC
+FASTBUS
+LPC
+HP Precision Bus
+EISA
+VME
+VXI
+VXS
+NuBus
+TURBOchannel
+MCA
+SBus
+VLB
+PCI
+PXI
+HP GSC bus
+CoreConnect
+InfiniBand
+UPA
+PCI Extended (PCI-X)
+AGP
+PCI Express (PCIe)
+Direct Media Interface (DMI)
+RapidIO
+Intel QuickPath Interconnect
+HyperTransport
+
+
+
+
+
+
+
+
+Storage
+
+
+
+ST-506
+ESDI
+SMD
+Parallel ATA (PATA)
+SSA
+DSSI
+HIPPI
+Serial ATA (SATA)
+eSATA
+eSATAp
+mSATA
+SCSI
+Parallel SCSI
+SAS
+Fibre Channel
+SATA Express
+M.2
+
+
+
+
+
+
+
+
+Peripheral
+
+
+
+Apple Desktop Bus
+HIL
+MIDI
+Multibus
+RS-232
+RS-422
+RS-423
+RS-485
+DMX512-A
+IEEE-488 (GPIB)
+IEEE-1284 (parallel port)
+UNI/O
+ACCESS.bus
+1-Wire
+D²B
+I²C
+SPI
+Parallel SCSI
+Profibus
+USB
+IEEE 1394 (FireWire)
+Camera Link
+External PCIe
+Thunderbolt
+
+
+
+
+
+
+
+
+Audio
+
+
+
+ADAT Lightpipe
+AES3
+Intel HD Audio
+I²S
+MADI
+McASP
+S/PDIF
+TOSLINK
+
+
+
+
+
+
+
+
+Portable
+
+
+
+PC Card
+ExpressCard
+
+
+
+
+
+
+
+
+Embedded
+
+
+
+Multidrop bus
+AMBA
+Wishbone
+
+
+
+
+
+
+
+
+
+Interfaces are listed by their speed in the (roughly) ascending order, so the interface at the end of each section should be the fastest.
+ Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+IEEE standards
+
+
+
+
+
+
+Current
+
+
+
+488
+730
+754
+
+Revision
+
+
+854
+828
+829
+896
+1003
+1014
+1016
+1076
+1149.1
+1154
+1164
+1275
+1278
+1284
+1355
+1394
+1451
+1497
+1516
+1541
+1547
+1584
+1588
+1596
+1603
+1613
+1666
+1667
+1675
+1685
+1800
+1801
+1815
+1850
+1900
+1901
+1902
+1904
+1905
+2030
+11073
+12207
+14764
+16085
+16326
+29148
+42010
+
+
+
+
+
+
+
+
+802 series
+
+
+
+
+
+802.1
+
+
+
+
+D
+p
+Q
+Qat
+Qay
+w
+X
+ab
+ad
+AE
+ag
+ah
+ak
+aq
+ax
+az
+
+
+
+
+
+
+
+
+
+802.11
+
+
+
+
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+n
+p
+r
+s
+u
+v
+w
+y
+ac
+ad
+af
+ah
+ai
+
+
+
+
+
+
+
+.2
+.3
+.4
+.5
+.6
+.7
+.8
+.9
+.10
+.12
+.14
+.15
+
+.1
+.4
+.4a
+
+
+.16
+
+d · e
+
+
+.17
+.18
+.20
+.21
+.22
+
+
+
+
+
+
+
+
+Proposed
+
+
+
+P1363
+P1619
+P1699
+P1823
+P1906.1
+
+
+
+
+
+
+
+
+Superseded
+
+
+
+754-1985
+830
+1219
+1233
+1362
+1364
+1471
+
+
+
+
+
+
+
+
+
+
+
+See also
+IEEE Standards Association
+Category:IEEE standards
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Basic computer components
+
+
+
+
+
+
+Input devices
+
+
+
+Keyboard
+Image scanner
+Microphone
+Pointing device
+
+Graphics tablet
+Joystick
+Light pen
+Mouse
+
+Optical
+
+
+Pointing stick
+Touchpad
+Touchscreen
+Trackball
+
+
+Webcam
+
+Softcam
+
+
+Refreshable braille display
+
+
+
+
+
+
+
+
+Output devices
+
+
+
+Monitor
+Refreshable braille display
+Printer
+Speakers
+Plotter
+
+
+
+
+
+
+
+
+Removable
+data storage
+
+
+
+Optical disc drive
+
+CD-RW
+DVD+RW
+BD-R
+
+
+Disk pack
+Floppy disk
+Memory card
+USB flash drive
+
+
+
+
+
+
+
+
+Computer case
+
+
+
+Central processing unit (CPU)
+HDD / SSD / SSHD
+Motherboard
+Network interface controller
+Power supply
+Random-access memory (RAM)
+Sound card
+Video card
+
+
+
+
+
+
+
+
+Data ports
+
+
+
+Ethernet
+FireWire (IEEE 1394)
+Parallel port
+Serial port
+USB
+Audio jack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=IEEE_1394&amp;oldid=690505620"					
+				Categories: Computer busesComputer connectorsComputer storage busesIEEE standardsMacintosh internalsPersonal area networksSerial busesTelevision terminologyVideo signalHidden categories: All articles with dead external linksArticles with dead external links from June 2011Articles with dead external links from March 2011CS1 errors: datesAll articles with unsourced statementsArticles with unsourced statements from November 2013Articles containing potentially dated statements from 2014All articles containing potentially dated statementsAll Wikipedia articles needing clarificationWikipedia articles needing clarification from October 2012Articles with unsourced statements from December 2012Articles containing potentially dated statements from November 2008Articles containing potentially dated statements from 2012Articles with unsourced statements from October 2012Articles with unsourced statements from May 2013Commons category with local link same as on Wikidata				
+							
+		
+		
+			

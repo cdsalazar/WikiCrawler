@@ -1,0 +1,258 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			High-level programming language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer science, a high-level programming language is a programming language with strong abstraction from the details of the computer. In comparison to low-level programming languages, it may use natural language elements, be easier to use, or may automate (or even hide entirely) significant areas of computing systems (e.g. memory management), making the process of developing a program simpler and more understandable relative to a lower-level language. The amount of abstraction provided defines how "high-level" a programming language is.[1]
+In the 1960s, high-level programming languages using a compiler were commonly called autocodes.[2] Examples of autocodes are COBOL and Fortran.[3]
+The first high-level programming language designed for computers was Plankalkül, created by Konrad Zuse.[4] However, it was not implemented in his time, and his original contributions were (due to World War II) largely isolated from other developments, although it influenced Heinz Rutishauser's language "Superplan" (and to some degree also Algol). The first really widespread high-level language was Fortran, a machine independent development of IBM's earlier Autocode systems. Algol, defined in 1958 and 1960, by committees of European and American computer scientists, introduced recursion as well as nested functions under lexical scope. It was also the first language with a clear distinction between value and name-parameters and their corresponding semantics.[5] Algol also introduced several structured programming concepts, such as the while-do and if-then-else constructs and its syntax was the first to be described by a formal method, Backus–Naur Form (BNF). During roughly the same period Cobol introduced records (also called structs) and Lisp introduced a fully general lambda abstraction in a programming language for the first time.
+
+
+
+Contents
+
+
+1 Features
+2 Abstraction penalty
+3 Relative meaning
+4 Execution modes
+
+4.1 High-level language computer architecture
+
+
+5 See also
+6 References
+7 External links
+
+
+
+Features[edit]
+"High-level language" refers to the higher level of abstraction from machine language. Rather than dealing with registers, memory addresses and call stacks, high-level languages deal with variables, arrays, objects, complex arithmetic or boolean expressions, subroutines and functions, loops, threads, locks, and other abstract computer science concepts, with a focus on usability over optimal program efficiency. Unlike low-level assembly languages, high-level languages have few, if any, language elements that translate directly into a machine's native opcodes. Other features, such as string handling routines, object-oriented language features, and file input/output, may also be present.
+Abstraction penalty[edit]
+While high-level languages are intended to make complex programming simpler, low-level languages often produce more efficient code. Abstraction penalty is the border that prevents high-level programming techniques from being applied in situations where computational resources are limited. High-level programming exhibits features like more generic data structures, run-time interpretation, and intermediate code files; which often result in slower execution speed, higher memory consumption, and larger binary program size.[6][7][8] For this reason, code which needs to run particularly quickly and efficiently may require the use of a lower-level language, even if a higher-level language would make the coding easier. In many cases, critical portions of a program mostly in a high-level language can be hand-coded in assembly language, leading to a much faster or more efficient optimised program.
+However, with the growing complexity of modern microprocessor architectures, well-designed compilers for high-level languages frequently produce code comparable in efficiency to what most low-level programmers can produce by hand,[citation needed] and the higher abstraction may allow for more powerful techniques providing better overall results than their low-level counterparts in particular settings.[9] High-level languages are designed independent of structure of a specific computer. This facilitates executing a program written in such a language on different computers.
+Relative meaning[edit]
+Examples of high-level programming languages in active use today may include[by whom?] Python, Visual Basic, Delphi, Perl, PHP, ECMAScript, Ruby and many others.
+The terms high-level and low-level are inherently relative. Some decades ago, the C language, and similar languages, were most often considered "high-level", as it supported concepts such as expression evaluation, parameterised recursive functions, and data types and structures, while assembly language was considered "low-level". Today, many programmers might refer to C as low-level, as it lacks a large runtime-system (no garbage collection, etc.), basically supports only scalar operations, and provides direct memory addressing. It, therefore, readily blends with assembly language and the machine level of CPUs and microcontrollers.
+Assembly language may itself be regarded as a higher level (but often still one-to-one if used without macros) representation of machine code, as it supports concepts such as constants and (limited) expressions, sometimes even variables, procedures, and data structures. Machine code, in its turn, is inherently at a slightly higher level than the microcode or micro-operations used internally in many processors.
+Execution modes[edit]
+There are three general modes of execution for modern high-level languages:
+
+Interpreted&#160;
+When code written in a language is interpreted, its syntax is read and then executed directly, with no compilation stage. A program called an interpreter reads each program statement, following the program flow, then decides what to do, and does it. A hybrid of an interpreter and a compiler will compile the statement into machine code and execute that; the machine code is then discarded, to be interpreted anew if the line is executed again. Interpreters are commonly the simplest implementations of the behavior of a language, compared to the other two variants listed here.
+Compiled&#160;
+When code written in a language is compiled, its syntax is transformed into an executable form before running. There are two types of compilation:
+
+Machine code generation&#160;
+Some compilers compile source code directly into machine code. This is the original mode of compilation, and languages that are directly and completely transformed to machine-native code in this way may be called "truly compiled" languages. See assembly language.
+Intermediate representations&#160;
+When code written in a language is compiled to an intermediate representation, that representation can be optimized or saved for later execution without the need to re-read the source file. When the intermediate representation is saved, it may be in a form such as byte code. The intermediate representation must then be interpreted or further compiled to execute it. Virtual machines that execute byte code directly or transform it further into machine code have blurred the once clear distinction between intermediate representations and truly compiled languages.
+
+
+
+
+Source-to-Source Translated or Trans-compiled
+Code written in a language may be translated into terms of a lower-level programming language for which native code compilers are already widely available. The C programming language is a common target for such translators. See Chicken Scheme and the Eiffel as examples. Specifically, the generated C and C++ code can be seen (as generated from the Eiffel programming language when using the EiffelStudio IDE) in the EIFGENs directory of any compiled Eiffel project. In Eiffel, the "Translated" process is referred to as Trans-compiling or Trans-compiled, and the Eiffel compiler as a Transcompiler.
+
+Note that languages are not strictly "interpreted" languages or "compiled" languages. Rather, implementations of language behavior use interpretation or compilation. For example, Algol 60 and Fortran have both been interpreted (even though they were more typically compiled). Similarly, Java shows the difficulty of trying to apply these labels to languages, rather than to implementations; Java is compiled to bytecode and the bytecode is subsequently executed by either interpretation (in a JVM) or compilation (typically with a just-in-time compiler such as HotSpot, again in a JVM). Moreover, compilation, trans-compiling, and interpretation are not strictly limited just a description of the compiler artifact (binary executable or IL assembly).
+High-level language computer architecture[edit]
+Alternatively, it is possible for a high-level language to be directly implemented by a computer – the computer directly executes the HLL code. This is known as a high-level language computer architecture – the computer architecture itself is designed to be targeted by a specific high-level language.
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+
+Abstraction (computer science)
+Generational list of programming languages
+Low-level programming languages
+Very high-level programming languages
+Categorical list of programming languages
+
+
+References[edit]
+
+
+^ HThreads - RD Glossary
+^ London, Keith (1968). "4, Programming". Introduction to Computers. 24 Russell Square London WC1: Faber and Faber Limited. p.&#160;184. ISBN&#160;0571085938. The 'high' level programming languages are often called autocodes and the processor program, a compiler.&#160;
+^ London, Keith (1968). "4, Programming". Introduction to Computers. 24 Russell Square London WC1: Faber and Faber Limited. p.&#160;186. ISBN&#160;0571085938. Two high level programming languages which can be used here as examples to illustrate the structure and purpose of autocodes are COBOL (Common Business Oriented Language) and FORTRAN (Formular Translation).&#160;
+^ Giloi, Wolfgang, K. (1997). "Konrad Zuse's Plankalkül: The First High-Level "non von Neumann" Programming Language". IEEE Annals of the History of Computing, vol. 19, no. 2, pp.&#160;17–24, April–June, 1997. (abstract)
+^ Although it lacked a notion of reference-parameters, which could be a problem in some situations. Several successors, including AlgolW, Algol68, Simula, Pascal, Modula and Ada therefore included reference-parameters (The related C-language family instead allowed addresses as value-parameters).
+^ Surana P (2006). "Meta-Compilation of Language Abstractions." (PDF). Retrieved 2008-03-17.&#160;
+^ Kuketayev. "The Data Abstraction Penalty (DAP) Benchmark for Small Objects in Java.". Retrieved 2008-03-17.&#160;
+^ Chatzigeorgiou; Stephanides (2002). "Evaluating Performance and Power Of Object-Oriented Vs. Procedural Programming Languages". In Blieberger; Strohmeier. Proceedings - 7th International Conference on Reliable Software Technologies - Ada-Europe'2002. Springer. p.&#160;367.&#160;
+^ Manuel Carro, José F. Morales, Henk L. Muller, G. Puebla, M. Hermenegildo (2006). "Proceedings of the 2006 international conference on Compilers, architecture and synthesis for embedded systems" (PDF). ACM.&#160; |contribution= ignored (help)
+
+
+External links[edit]
+
+http://c2.com/cgi/wiki?HighLevelLanguage - The WikiWikiWeb's article on high-level programming languages
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4160367-9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=High-level_programming_language&amp;oldid=690979558"					
+				Categories: Programming language classificationHidden categories: CS1 errors: chapter ignoredAll articles with unsourced statementsArticles with unsourced statements from March 2008Articles with specifically marked weasel-worded phrases from September 2014Wikipedia articles with GND identifiers				
+							
+		
+		
+			

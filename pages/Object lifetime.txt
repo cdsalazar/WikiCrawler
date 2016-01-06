@@ -1,0 +1,488 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Object lifetime
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2013)
+
+
+In object-oriented programming (OOP), the object lifetime (or life cycle) of an object is the time between an object's creation and its destruction. Rules for object lifetime vary significantly between languages, in some cases between implementations of a given language, and lifetime of a particular object may vary from one run of the program to another.
+In some cases object lifetime coincides with variable lifetime of a variable with that object as value (both for static variables and automatic variables), but in general object lifetime is not tied to the lifetime of any one variable. In many cases – and by default in many object-oriented languages (OOLs), particularly those that use garbage collection (GC) – objects are allocated on the heap, and object lifetime is not determined by the lifetime of a given variable: the value of a variable holding an object actually corresponds to a reference to the object, not the object itself, and destruction of the variable just destroys the reference, not the underlying object.
+
+
+
+Contents
+
+
+1 Overview
+
+1.1 Determinism
+1.2 Steps
+1.3 Status during creation and destruction
+1.4 Class-based programming
+1.5 Resource management
+
+
+2 Object creation
+
+2.1 Creation methods
+
+
+3 Object destruction
+4 Examples
+
+4.1 C++
+4.2 Java
+4.3 C#
+4.4 Objective-C
+4.5 Object Pascal
+4.6 Python
+
+
+5 See also
+6 Notes
+7 References
+
+
+
+Overview[edit]
+While the basic idea of object lifetime is simple – an object is created, used, then destroyed – details vary substantially between languages, and within implementations of a given language, and is intimately tied to how memory management is implemented. Further, many fine distinctions are drawn between the steps, and between language-level concepts and implementation-level concepts. Terminology is relatively standard, but which steps correspond to a given term varies significantly between languages.
+Terms generally come in antonym pairs, one for a creation concept, one for the corresponding destruction concept, like initialize/finalize or constructor/destructor. The creation/destruction pair is also known as initiation/termination, among other terms. The terms allocation and deallocation or freeing are also used, by analogy with memory management, though object creation and destruction can involve significantly more than simply memory allocation and deallocation, and allocation/deallocation are more properly considered steps in creation and destruction, respectively.
+Determinism[edit]
+A major distinction is whether an object's lifetime is deterministic or non-deterministic. This varies by language, and within language varies with the memory allocation of an object; recall that object lifetime is distinct from variable lifetime.
+Objects with static memory allocation, notably objects stored in static variables, and modules (if modules are objects), have a subtle non-determinism in many languages: while their lifetime appears to coincide with the run time of the program, the order of creation and destruction - which static object is created first, which second, etc. - is generally nondeterministic.[a]
+For objects with automatic memory allocation or dynamic memory allocation, object creation generally happens deterministically, either explicitly when an object is explicitly created (such as via new in C++ or Java), or implicitly at the start of variable lifetime, particularly when the scope of an automatic variable is entered, such as at declaration.[b] Object destruction varies, however – in some languages, notably C++, automatic and dynamic objects are destroyed at deterministic times, such as scope exit, explicit destruction (via manual memory management), or reference count reaching zero; while in other languages, such as C#, Java, and Python, these objects are destroyed at non-deterministic times, depending on the garbage collector, and object resurrection may occur during destruction, extending the lifetime.
+Note also that in garbage-collected languages, objects are generally dynamically allocated (on the heap) even if they are initially bound to an automatic variable, unlike automatic variables with primitive values, which are typically automatically allocated (on the stack or in a register). This allows the object to be returned from a function ("escape") without being destroyed. However, in some cases a compiler optimization is possible, namely performing escape analysis and proving that escape is not possible, and thus the object can be allocated on the stack; this is significant in Java. In this case object destruction will occur promptly - possibly even during the variable's lifetime (before the end of its scope), if it is unreachable.
+A complex case is the use of an object pool, where objects may be created ahead of time or reused, and thus apparent creation and destruction may not correspond to actual creation and destruction of an object, only (re)initialization for creation and finalization for destruction. In this case both creation and destruction may be nondeterministic.
+Steps[edit]
+Object creation can be broken down into two operations: memory allocation and initialization, where initialization both includes assigning values to object fields and possibly running arbitrary other code. These are implementation-level concepts, roughly analogous to the distinction between declaration and initialization (or definition) of a variable, though these later are language-level distinctions. For an object that is tied to a variable, declaration may be compiled to memory allocation (reserving space for the object), and definition to initialization (assigning values), but declarations may also be for compiler use only (such as name resolution), not directly corresponding to compiled code.
+Analogously, object destruction can be broken down into two operations, in the opposite order: finalization and memory deallocation. These do not have analogous language-level concepts for variables: variable lifetime ends implicitly (for automatic variables, on stack unwind; for static variables, on program termination), and at this time (or later, depending on implementation) memory is deallocated, but no finalization is done in general. However, when an object's lifetime is tied to a variable's lifetime, the end of the variable's lifetime causes finalization of the object; this is a standard paradigm in C++.
+Together these yield four implementation-level steps:
+
+allocation, initialization, finalization, deallocation
+
+These steps may be done automatically by the language runtime, interpreter, or virtual machine, or may be manually specified by the programmer in a subroutine, concretely via methods – the frequency of this varies significantly between steps and languages. Initialization is very commonly programmer-specified in class-based languages, while in strict prototype-based languages initialization is automatically done by copying. Finalization is also very common in languages with deterministic destruction, notably C++, but much less common in garbage-collected languages. Allocation is more rarely specified, and deallocation generally cannot be specified.
+Status during creation and destruction[edit]
+An important subtlety is the status of an object during creation or destruction, and handling cases where errors occur or exceptions are raised, such as if creation or destruction fail. Strictly speaking, an object's lifetime begins when allocation completes and ends when deallocation starts. Thus during initialization and finalization an object is alive, but may not be in a consistent state – ensuring class invariants is a key part of initialization – and the period from when initialization completes to when finalization starts is when the object is both alive and expected to be in a consistent state.
+If creation or destruction fail, error reporting (often by raising an exception) can be complicated: the object or related objects may be in an inconsistent state, and in the case of destruction – which generally happens implicitly, and thus in an unspecified environment – it may be difficult to handle errors. The opposite issue – incoming exceptions, not outgoing exceptions – is whether creation or destruction should behave differently if they occur during exception handling, when different behavior may be desired.
+Another subtlety is when creation and destruction happen for static variables, whose lifespan coincides with the run time of the program – do creation and destruction happen during regular program execution, or in special phases before and after regular execution – and how objects are destroyed at program termination, when the program may not be in a usual or consistent state. This is particularly an issue for garbage-collected languages, as they may have a lot of garbage at program termination.
+Class-based programming[edit]
+In class-based programming, object creation is also known as instantiation (creating an instance of a class), and creation and destruction can be controlled via methods known as a constructor and destructor, or an initializer and finalizer. Creation and destruction are thus also known as construction and destruction, and when these methods are called an object is said to be constructed or destructed (not "destroyed") – respectively, initialized or finalized when those methods are called.
+The relationship between these methods can be complicated, and a language may have both constructors and initializers (like Python), or both destructors and finalizers (like C++/CLI), or the terms "destructor" and "finalizer" may refer to language-level construct versus implementation (as in C# versus CLI).
+A key distinction is that constructors are class methods, as there is no object (class instance) available until the object is created, but the other methods (destructors, initializers, and finalizers) are instance methods, as an object has been created. Further, constructors and initializers may take arguments, while destructors and finalizers generally do not, as they are usually called implicitly.
+In common usage, a constructor is a method directly called explicitly by user code to create an object, while "destructor" is the subroutine called (usually implicitly, but sometimes explicitly) on object destruction in languages with deterministic object lifetimes – the archetype is C++ – and "finalizer" is the subroutine called implicitly by the garbage collector on object destruction in languages with non-deterministic object lifetime – the archetype is Java.
+The steps during finalization vary significantly depending on memory management: in manual memory management (as in C++, or manual reference counting), references need to be explicitly destroyed by the programmer (references cleared, reference counts decremented); in automatic reference counting, this also happens during finalization, but is automated (as in Python, when it occurs after programmer-specified finalizers have been called); and in tracing garbage collection this is not necessary. Thus in automatic reference counting, programmer-specified finalizers are often short or absent, but significant work may still be done, while in tracing garbage collectors finalization is often unnecessary.
+Resource management[edit]
+In languages where objects have deterministic lifetimes, object lifetime can also be used for resource management, notably via the Resource Acquisition Is Initialization (RAII) idiom: resources are acquisition during initialization, and released during finalization. In languages where objects have non-deterministic lifetimes, notably due to garbage collection, resources are managed in other ways, notably the dispose pattern: they still may be acquired during initialization, but are released prior to finalization, via an explicit method call – this is needed because finalization may not occur in a timely manner (or even at all), but the resource should be released promptly.
+Using object lifetime for resource management ties memory management to resource management, and thus is not generally used in garbage-collected languages, as it would either constrain the garbage collector (requiring immediate finalization) or result in possibly long-lasting resource leaks, due to finalization being deferred.
+Object creation[edit]
+In typical case, the process is as follows:
+
+calculate the size of an object - the size is mostly the same as that of the class but can vary. When the object in question is not derived from a class, but from a prototype instead, the size of an object is usually that of the internal data structure (a hash for instance) that holds its slots.
+allocation - allocating memory space with the size of an object plus the growth later, if possible to know in advance
+binding methods - this is usually either left to the class of the object, or is resolved at dispatch time, but nevertheless it is possible that some object models bind methods at creation time.
+calling an initializing code (namely, constructor) of superclass
+calling an initializing code of class being created
+
+Those tasks can be completed at once but are sometimes left unfinished and the order of the tasks can vary and can cause several strange behaviors. For example, in multi-inheritance, which initializing code should be called first is a difficult question to answer. However, superclass constructors should be called before subclass constructors.
+It is a complex problem to create each object as an element of an array.[further explanation needed] Some languages (e.g. C++) leave this to programmers.
+Handling exceptions in the midst of creation of an object is particularly problematic because usually the implementation of throwing exceptions relies on valid object states. For instance, there is no way to allocate a new space for an exception object when the allocation of an object failed before that due to a lack of free space on the memory. Due to this, implementations of OO languages should provide mechanisms to allow raising exceptions even when there is short supply of resources, and programmers or the type system should ensure that their code is exception-safe. Note that propagating an exception is likely to free resources (rather than allocate them). However, in object oriented programming, object construction may always fail, because constructing an object should establish the class invariants, which are often not valid for every combination of constructor arguments. Thus, constructors can always raise exceptions.
+The abstract factory pattern is a way to decouple a particular implementation of an object from code for the creation of such an object.
+Creation methods[edit]
+The way to create objects varies across languages. In some class-based languages, a special method known as a constructor, is responsible for validating the state of an object. Just like ordinary methods, constructors can be overloaded in order to make it so that an object can be created with different attributes specified. Also, the constructor is the only place to set the state of immutable objects[Wrong clarification needed]. A copy constructor is a constructor which takes a (single) parameter of an existing object of the same type as the constructor's class, and returns a copy of the object sent as a parameter.
+Other programming languages, such as Objective-C, have class methods, which can include constructor-type methods, but are not restricted to merely instantiating objects.
+C++ and Java have been criticized[by whom?] for not providing named constructors—a constructor must always have the same name as the class. This can be problematic if the programmer wants to provide two constructors with the same argument types, e.g., to create a point object either from the cartesian coordinates or from the polar coordinates, both of which would be represented by two floating point numbers. Objective-C can circumvent this problem, in that the programmer can create a Point class, with initialization methods, for example, +newPointWithX:andY:, and +newPointWithR:andTheta:. In C++, something similar can be done using static member functions.[1]
+A constructor can also refer to a function which is used to create a value of a tagged union, particularly in functional languages.
+Object destruction[edit]
+It is generally the case that after an object is used, it is removed from memory to make room for other programs or objects to take that object's place. However, if there is sufficient memory or a program has a short run time, object destruction may not occur, memory simply being deallocated at process termination. In some cases object destruction simply consists of deallocating the memory, particularly in garbage-collected languages, or if the "object" is actually a plain old data structure. In other cases some work is performed prior to deallocation, particularly destroying member objects (in manual memory management), or deleting references from the object to other objects to decrement reference counts (in reference counting). This may be automatic, or a special destruction method may be called on the object.
+In class-based OOLs with deterministic object lifetime, notably C++, a destructor is a method called when an instance of a class is deleted, before the memory is deallocated. Note that in C++, destructors differs from constructors in various ways: it cannot be overloaded, it has to have no arguments, it does not need to maintain class invariants, and exceptions that escape a destructor cause program termination.
+In garbage collecting languages, objects may be destroyed when they can no longer be reached by the running code. In class-based GCed languages, the analog of destructors are finalizers, which are called before an object is garbage-collected. These differ in running at an unpredictable time and in an unpredictable order, since garbage collection is unpredictable, and are significantly less-used and less complex than C++ destructors. Example of such languages include Java, Python, and Ruby.
+Destroying an object will cause any references to the object to become invalid, and in manual memory management any existing references become dangling references. In garbage collection (both tracing garbage collection and reference counting), objects are only destroyed when there are no references to them, but finalization may create new references to the object, and to prevent dangling references, object resurrection occurs so the references remain valid.
+Examples[edit]
+C++[edit]
+
+
+class Foo
+{
+    // This is the prototype of the constructors
+public:
+    Foo(int x);
+    Foo(int x, int y); // Overloaded Constructor
+    Foo(const Foo &amp;old); // Copy Constructor
+    ~Foo(); // Destructor
+};
+
+Foo::Foo(int x)
+{
+    // This is the implementation of
+    // the one-argument constructor
+}
+
+Foo::Foo(int x, int y)
+{
+    // This is the implementation of
+    // the two-argument constructor
+}
+
+Foo::Foo(const Foo &amp;old)
+{
+    // This is the implementation of
+    // the copy constructor
+}
+
+Foo::~Foo()
+{
+    // This is the implementation of the destructor
+}
+
+int main()
+{
+    Foo foo(14); // call first constructor
+    Foo foo2(12, 16); // call overloaded constructor
+    Foo foo3(foo); // call the copy constructor
+ 
+    return 0;
+    // destructors called in backwards-order
+    // here, automatically
+}
+
+Java[edit]
+
+
+class Foo
+{
+    public Foo(int x)
+    {
+        // This is the implementation of
+        // the one-argument constructor
+    }
+
+    public Foo(int x, int y)
+    {
+        // This is the implementation of
+        // the two-argument constructor
+    }
+
+    public Foo(Foo old)
+    {
+        // This is the implementation of
+        // the copy constructor
+    }
+
+    public static void main(String[] args)
+    {
+        Foo foo = new Foo(14); // call first constructor
+        Foo foo2 = new Foo(12, 16); // call overloaded constructor
+        Foo foo3 = new Foo(foo); // call the copy constructor
+        // garbage collection happens under the covers, and classes are destroyed
+    }
+}
+
+C#[edit]
+
+
+namespace ObjectLifeTime 
+{
+class Foo
+{
+    public Foo()
+    {
+        // This is the implementation of
+        // default constructor
+    }
+
+    public Foo(int x)
+    {
+        // This is the implementation of
+        // the one-argument constructor
+    }
+     ~Foo()
+    {
+        // This is the implementation of
+        // the destructor
+    }
+ 
+
+    public Foo(int x, int y)
+    {
+        // This is the implementation of
+        // the two-argument constructor
+    }
+ 
+    public Foo(Foo old)
+    {
+        // This is the implementation of
+        // the copy constructor
+    }
+ 
+    public static void Main(string[] args)
+    {
+        Foo defaultfoo = new Foo(); // call default constructor
+        Foo foo = new Foo(14); // call first constructor
+        Foo foo2 = new Foo(12, 16); // call overloaded constructor
+        Foo foo3 = new Foo(foo); // call the copy constructor
+       
+    }
+ }
+}
+
+Objective-C[edit]
+
+
+#import &lt;objc/Object.h&gt;
+
+@interface Point : Object
+{
+   double x;
+   double y;
+}
+
+//These are the class methods; we have declared two constructors
++ (Point *) newWithX: (double) andY: (double);
++ (Point *) newWithR: (double) andTheta: (double);
+
+//Instance methods
+- (Point *) setFirstCoord: (double);
+- (Point *) setSecondCoord: (double);
+
+/* Since Point is a subclass of the generic Object 
+ * class, we already gain generic allocation and initialization
+ * methods, +alloc and -init. For our specific constructors
+ * we can make these from these methods we have
+ * inherited.
+ */
+@end
+ 
+@implementation Point
+
+- (Point *) setFirstCoord: (double) new_val
+{
+   x = new_val;
+}
+
+- (Point *) setSecondCoord: (double) new_val
+{
+   y = new_val;
+}
+
++ (Point *) newWithX: (double) x_val andY: (double) y_val
+{
+   //Concisely written class method to automatically allocate and 
+   //perform specific initialization.
+   return [[[Point alloc] setFirstCoord:x_val] setSecondCoord:y_val]; 
+}
+
++ (Point *) newWithR: (double) r_val andTheta: (double) theta_val
+{
+   //Instead of performing the same as the above, we can underhandedly
+   //use the same result of the previous method
+   return [Point newWithX:r_val andY:theta_val];
+}
+
+@end
+
+int
+main(void)
+{
+   //Constructs two points, p and q.
+   Point *p = [Point newWithX:4.0 andY:5.0];
+   Point *q = [Point newWithR:1.0 andTheta:2.28];
+
+   //...program text....
+   
+   //We're finished with p, say, so, free it.
+   //If p allocates more memory for itself, may need to
+   //override Object's free method in order to recursively
+   //free p's memory. But this is not the case, so we can just
+   [p free];
+
+   //...more text...
+
+   [q free];
+
+   return 0;
+}
+
+Object Pascal[edit]
+Related Languages: "Delphi", "Free Pascal", "Mac Pascal".
+
+
+program Example;
+
+type
+
+  DimensionEnum =
+    (
+      deUnassigned,
+      de2D,
+      de3D,
+      de4D
+    );
+
+  PointClass = class
+  private
+    Dimension: DimensionEnum;
+
+  public
+    X: Integer;
+    Y: Integer;
+    Z: Integer;
+    T: Integer;
+
+  public
+    (* prototype of constructors *)
+
+    constructor Create();
+    constructor Create(AX, AY: Integer);
+    constructor Create(AX, AY, AZ: Integer);
+    constructor Create(AX, AY, AZ, ATime: Integer);
+    constructor CreateCopy(APoint: PointClass);
+
+    (* prototype of destructors *)
+
+    destructor Destroy;
+  end;
+
+constructor PointClass.Create();
+begin
+  // implementation of a generic, non argument constructor
+  Self.Dimension := deUnassigned;
+end;
+
+constructor PointClass.Create(AX, AY: Integer);
+begin
+  // implementation of a, 2 argument constructor
+  Self.X := AX;
+  Y := AY;
+
+  Self.Dimension := de2D;
+end;
+
+constructor PointClass.Create(AX, AY, AZ: Integer);
+begin
+  // implementation of a, 3 argument constructor
+  Self.X := AX;
+  Y := AY;
+  Self.X := AZ;
+
+  Self.Dimension := de3D;
+end;
+
+constructor PointClass.Create(AX, AY, AZ, ATime: Integer);
+begin
+  // implementation of a, 4 argument constructor
+  Self.X := AX;
+  Y := AY;
+  Self.X := AZ;
+  T := ATime;
+
+  Self.Dimension := de4D;
+end;
+
+constructor PointClass.CreateCopy(APoint: PointClass);
+begin
+  // implementation of a, "copy" constructor
+  APoint.X := AX;
+  APoint.Y := AY;
+  APoint.X := AZ;
+  APoint.T := ATime;
+
+  Self.Dimension := de4D;
+end;
+
+destructor PointClass.PointClass.Destroy;
+begin
+  // implementation of a generic, non argument destructor
+  Self.Dimension := deUnAssigned;
+end;
+
+var
+  (* variable for static allocation *)
+  S:  PointClass;
+  (* variable for dynamic allocation *)
+  D: ^PointClass;
+
+begin (* of program *)
+  (* object lifeline with static allocation *)
+  S.Create(5, 7);
+
+  (* do something with "S" *)
+
+  S.Destroy; 
+
+  (* object lifeline with dynamic allocation *)
+  D = new PointClass, Create(5, 7);
+
+  (* do something with "D" *)
+
+  dispose D, Destroy;
+end.  (* of program *)
+
+Python[edit]
+
+
+class Socket:
+    def __init__(self, remote_host):
+        self.connection = connectTo(remote_host)
+
+    def send(self):
+        # send data
+
+    def recv(self):
+        # receive data;
+
+def f():
+    s = Socket('example.com')
+    s.send('test')
+    return s.recv()
+
+Socket will be closed at the next garbage collection round, as all references to it have been lost.
+See also[edit]
+
+Resource Acquisition Is Initialization (RAII), an approach to managing resources by tying them to object lifetime
+
+Notes[edit]
+
+
+^ There are various subtleties; for example in C++, static local variables are deterministically created when their function is first called, but destruction is non-deterministic.
+^ In C++, creation of static local variables happens deterministically in a similar way: when execution reaches a declaration for the first time.
+
+
+References[edit]
+
+
+^ C++ FAQ: What is the "Named Constructor Idiom"?
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Object_lifetime&amp;oldid=646361569"					
+				Categories: Object (computer science)Hidden categories: Articles needing additional references from January 2013All articles needing additional referencesWikipedia articles needing clarification from August 2010Wikipedia articles needing clarification from April 2011Articles with specifically marked weasel-worded phrases from July 2010				
+							
+		
+		
+			

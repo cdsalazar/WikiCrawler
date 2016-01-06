@@ -1,0 +1,705 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			1080p
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+TV standards through 1080p
+
+
+1080p (also known as Full HD or FHD and BT.709) is a set of HDTV high-definition video modes characterized by 1080 horizontal lines of vertical resolution[1] and progressive scan, as opposed to interlaced, as is the case with the 1080i display standard. The term usually assumes a widescreen aspect ratio of 16:9, implying a resolution of 1920x1080 (2.1 megapixel) often marketed as Full HD.
+
+
+
+Contents
+
+
+1 Broadcasting standards
+
+1.1 ATSC
+1.2 DVB
+
+
+2 Availability
+
+2.1 Broadcasts
+2.2 Blu-ray Disc
+2.3 Smartphones
+2.4 Internet content
+2.5 Consumer televisions and projectors
+2.6 Computer monitors
+2.7 Video game consoles
+2.8 Camcorders and cameras
+
+
+3 See also
+4 References
+5 External links
+
+
+
+Broadcasting standards[edit]
+
+
+
+
+1080p HDTV
+
+
+Any display device that advertises 1080p typically refers to the ability to accept 1080p signals in native resolution format, which means there are a true 1920 pixels in width and 1080 pixels in height, and the display is not over-scanning, under-scanning, or reinterpreting the signal to a lower resolution. The HD ready 1080p logo program, by DIGITALEUROPE, requires that certified TV sets support 1080p 24 fps, 1080p 50 fps, and 1080p 60 fps formats, among other requirements, with fps meaning frames per second.
+For live broadcast applications, a high-definition progressive scan format operating at 1080p at 50 or 60 frames per second is currently being evaluated as a future standard for moving picture acquisition.[2][3] EBU has been endorsing 1080p50 as a future-proof production format because it improves resolution and requires no deinterlacing, allows broadcasting of standard 1080i25 and 720p50 signal alongside 1080p50 even in the current infrastructure and is compatible with DCI distribution formats.[4][5]
+1080p50/p60 production format will require a whole new range of studio equipment including cameras, storage and editing systems,[6] and contribution links (such as Dual-link HD-SDI and 3G-SDI) as it has doubled the data rate of current 50 or 60 fields interlaced 1920x1080 from 1.485&#160;Gbit/s to nominally 3&#160;Gbit/s using uncompressed RGB encoding. Most current revisions of SMPTE 372M, SMPTE 424M and EBU Tech 3299 require YCbCr color space and 4:2:2 chroma subsampling for transmitting 1080p50 (nominally 2.08&#160;Gbit/s) and 1080p60 signal.
+Recent studies show that for digital broadcasts compressed with H.264/AVC, transmission bandwidth savings of interlaced video over fully progressive video are minimal even when using twice the frame rate; i.e., 1080p50 signal (50 progressive frames per second) actually produces the same bit rate as 1080i50 signal (25 interlaced frames or 50 sub-fields per second).[4][5][7]
+ATSC[edit]
+In the United States, the original ATSC standards for HDTV supported 1080p video, but only at the frame rates of 23.976, 24, 25, 29.97 and 30 frames per second (colloquially known as 1080p24, 1080p25 and 1080p30).
+In July 2008, the ATSC standards were amended to include H.264/MPEG-4 AVC compression and 1080p at 50, 59.94 and 60 frames per second (1080p50 and 1080p60). Such frame rates require H.264/AVC High Profile Level 4.2, while standard HDTV frame rates only require Level 4.0.
+This update is not expected to result in widespread availability of 1080p60 programming, since most of the existing digital receivers in use would only be able to decode the older, less-efficient MPEG-2 codec, and because there is a limited amount of bandwidth for subchannels.
+DVB[edit]
+In Europe, 1080p25 signals have been supported by the DVB suite of broadcasting standards. The 1080p50 is considered to be a future-proof production format and, eventually, a future broadcasting format.[2] 1080p50 broadcasting should require the same bandwidth as 1080i50 signal and only 15–20% more than that of 720p50 signal due to increased compression efficiency,[4] though 1080p50 production requires more bandwidth and/or more efficient codecs such as JPEG 2000, high-bitrate MPEG-2, or H.264/AVC and HEVC.[5][8]
+From September 2009, ETSI and EBU, the maintainers of the DVB suite, added support for 1080p50 signal coded with MPEG-4 AVC High Profile Level 4.2 with Scalable Video Coding extensions or VC-1 Advanced Profile compression; DVB also supports 1080p encoded at ATSC frame rates of 23.976, 24, 29.97, 30, 59.94 and 60.[9][10]
+EBU requires that legacy MPEG-4 AVC decoders should avoid crashing in the presence of SVC and/or 1080p50 (and higher resolution) packets.[9] SVC enables forward compatibility with 1080p50 and 1080p60 broadcasting for older MPEG-4 AVC receivers, so they will only recognize baseline SVC stream coded at a lower resolution or frame rate (such as 720p60 or 1080i60) and will gracefully ignore additional packets, while newer hardware will be able to decode full-resolution signal (such as 1080p60).
+Availability[edit]
+
+
+
+
+This chart shows the most common display resolutions, 16:9 formats shown in blue.
+
+
+Broadcasts[edit]
+
+
+
+
+
+The examples and perspective in this article deal primarily with the United States and do not represent a worldwide view of the subject. Please improve this article and discuss the issue on the talk page. (August 2011)
+
+
+In the United States, 1080p over-the-air broadcasts still do not exist as of November 2015; all major networks use either 720p60 or 1080i60 encoded with MPEG-2. However, satellite services (e.g., DirecTV, XstreamHD and Dish Network) utilize the 1080p/24-30 format with MPEG-4 AVC/H.264 encoding for pay-per-view movies that are downloaded in advance via satellite or on-demand via broadband. At this time, no pay service channel such as USA, HDNET, etc. nor premium movie channel such as HBO, etc., stream their services live to their distributors (MVPD) in this format because many MVPDs, especially DBS and cable, do not have sufficient bandwidth to provide the format streaming live to their subscribers without negatively impacting their current services. In addition is the high "cost" of using more bandwidth for one 1080p/24 channel than that necessary for a 1080i or even a 720p channel and for only those relatively few subscribers who have HDTV devices that can display 1080p/24 being an efficient use of their limited bandwidth.
+For material that originates from a progressive scanned 24 frame/s source (such as film), MPEG-2 lets the video be coded as 1080p24, irrespective of the final output format. These progressively-coded frames are tagged with metadata (literally, fields of the PICTURE header) instructing a decoder how to perform a 3:2 pulldown to interlace them. While the formal output of the MPEG-2 decoding process from such stations is 1080i60, the actual content is coded as 1080p24 and can be viewed as such (using a process known as inverse telecine) since no information is lost even when the broadcaster performs the 3:2 pulldown.[11]
+Blu-ray Disc[edit]
+Blu-ray Discs are able to hold 1080p HD content, and most movies released on Blu-ray Disc produce a full 1080p HD picture when the player is connected to a 1080p HDTV via an HDMI cable. The Blu-ray Disc video specification allows encoding of 1080p23.976, 1080p24, 1080i50, and 1080i59.94. Generally this type of video runs at 30 to 40 megabits per second, compared to the 3.5 megabits per second for conventional standard definition broadcasts.[12]
+Smartphones[edit]
+Smartphones with 1080p FullHD display have been available on the market since 2012. As of the end of 2014, it is the standard for mid to high end smartphones and many of the flagship devices of 2014 used even higher resolutions.
+Internet content[edit]
+Several websites, including YouTube, allow videos to be uploaded in the 1080p format. YouTube streams 1080p content at approximately 4 megabits per second[13] compared to Blu-ray's 30 to 40 megabits per second. Digital distribution services also deliver 1080p content, such as movies available on Blu-ray Disc and/or from broadcast sources. This can include distribution services like peer-to-peer websites and public or private tracking networks.
+Netflix has been offering SuperHD content in the US and other countries through select internet providers since 2013.[14]
+Consumer televisions and projectors[edit]
+As of 2012, most consumer televisions being sold provide 1080p inputs, mainly via HDMI, and support full high-definition resolutions. 1080p resolution is available in all types of television, including plasma, LCD, DLP front and rear projection and LCD projection.
+For displaying film-based 1080i60 signals, a scheme called 3:2 pulldown reversal (reverse telecine) is beginning to appear in some newer 1080p displays, which can produce a true 1080p quality image from film-based 1080i60 programs. Similarly, 25fps content broadcast at 1080i50 may be deinterlaced to 1080p content with no loss of quality or resolution.
+AV equipment manufacturers have adopted the term Full HD to mean a set can display all available HD resolutions up to 1080p. The term is misleading, however, because it does not guarantee the set is capable of rendering digital video at all frame rates encoded in source files with 1080 pixel vertical resolution. Most notably, a "Full HD" set is not guaranteed to support the 1080p24 format, leading to consumer confusion.[15][16][17]
+DigitalEurope (formerly EICTA) maintains the HD ready 1080p logo program that requires the certified TV sets to support 1080p24, 1080p50, and 1080p60, without overscan/underscan and picture distortion.
+Computer monitors[edit]
+Most widescreen cathode ray tube (CRT) and liquid crystal display (LCD) monitors can natively display 1080p content. For example, widescreen WUXGA monitors support 1920x1200 resolution, which can display a pixel for pixel reproduction of the 1080p (1920x1080) format. Additionally, many 23, 24, and 27-inch (690&#160;mm) widescreen LCD monitors use 1920x1200 as their native resolution; 30&#160;inch displays can display beyond 1080p at up to 2560x1600 (1600p). Many 27" monitors have native resolutions of 2560x1440 and hence operate at 1440p.
+Video game consoles[edit]
+Video game consoles such as Sony's PlayStation 3, Microsoft's Xbox 360 and Nintendo's Wii U, as well as microconsoles like OUYA, GameStick and Nvidia Shield can display upscaled games and video content in 1080p, although the vast majority of games are rendered at lower resolutions.[18] For all of the consoles, this is done through HDMI connections (in the case of the Xbox 360, HDMI is only available on consoles manufactured after June 2007). Additionally, the upscaled 1080p video is available on the PlayStation 3 and Xbox 360 via an analog component/D-Terminal (YPBPR) connection,†‡ as well as the VGA connection on the Xbox 360. On the PlayStation 3, developers must provide specific resolution support at the software level as there is no hardware upscaling support, whereas on the Xbox 360 games can be upscaled using a built in hardware scaler chip. However, most games on both consoles do not run at a native 1080p resolution.
+The Wii U, PlayStation 3, and Xbox 360 provide 1080p video services. Sony provides both the PlayStation Store VOD service and Blu-ray Disc playback.[19][20] Microsoft provides the Zune Video Marketplace for "instant on" 1080p† video content but does not have Blu-ray disc playback capability. It does however support the now-defunct HD DVD disc standard via the Xbox 360 HD DVD Player add-on. Both consoles also offer support for streaming 1080p† content in various formats over home network from other computers, and also via USB connection to external storage devices.
+^† Due to potential copyright issues, when an analog component connection is used, only system menus and gameplay are available in 1080p; video content is displayed at a lower resolution or in 1080i.
+^‡ While 1080p analog component output is supported by the consoles, some display hardware will only accept component connections up to 1080i.
+Camcorders and cameras[edit]
+Many consumer camcorders, professional video and DSLR cameras, and smartphones can capture 1080p24, 1080p25, or 1080p30 video, often encoding it in progressive segmented frame format.
+See also[edit]
+
+
+
+
+Television portal
+
+
+
+
+List of common resolutions
+4320p, 2160p, 1440p, 1080i, 720p, 576p, 576i, 480p, 480i, 360p, 240p
+Progressive segmented frame
+High-definition television
+HD Ready 1080p
+Display resolution
+
+References[edit]
+
+
+^ Brian L. Clark (13 March 2006). "What's this 1080p stuff?". Gizmodo.com. Retrieved 16 July 2007.&#160;
+^ a b "EBU R115-2005: Future high definition television systems" (PDF). EBU. May 2005. Archived from the original on 27 May 2009. Retrieved 24 May 2009.&#160;
+^ "Tech 3299: High Definition (HD) Image Formats for Television Production" (PDF). EBU. December 2004. Archived from the original (PDF) on 29 December 2009. Retrieved 20 November 2009.&#160;
+^ a b c "IBC 2011: 10 things you need to know about... 1080p/50" (PDF). EBU. September 2011. Retrieved 5 January 2012.&#160;
+^ a b c "Technical Report 14: What follows HDTV? A status report on 1080p/50 and '4k'" (PDF). EBU. June 2012. Retrieved 2012-11-13.&#160;
+^ "Interoperability and File-based production for HDTV: How far away is 1080p/50,60 from mainstream production?" (PDF). EBU. Retrieved 31 October 2010.&#160;
+^ HDTV (FAQ), ATD&#160;[dead link]
+^ "Technical Report 008: HDTV Contribution Codecs" (PDF). EBU. March 2010. Retrieved 26 June 2010.&#160;
+^ a b EBU (March 2009). "EBU&#160;– TECH 3333: HDTV Receiver Requirements" (PDF). EBU. Archived from the original on 29 April 2009. Retrieved 12 April 2009.&#160;
+^ "ETSI TS 101 154 V1.9.1". Archived from the original on 20 May 2009. Retrieved 18 May 2009.&#160;
+^ "Force Film, IVTC, and Deinterlacing – what is DVD2AVI trying to tell you and what can you do about it". Doom9.org. 18 April 2003. Archived from the original on 18 July 2011. Retrieved 24 August 2011.&#160;
+^ Blu-ray Disc Association (May 2005). "White paper, Blu-ray Disc Format, 2.B Audio Visual Application Format Specifications for BD-ROM" (PDF). Archived from the original on 1 October 2009. Retrieved 28 September 2009.&#160;
+^ Ou, George (2009-11-13). "YouTube Will Support 1080p 3.7 Mbps Next Week". digital society.org. Retrieved 2014-08-28.&#160;
+^ Lawler, Richard (2013-01-08). "Netflix launches 'Super HD' and 3D streaming - but only through certain ISPs". Engadget.com. Retrieved 2014-02-10.&#160;
+^ White, Charlie (Jan 8, 2007). "Full HD and HD1080: What's the Diff?". Gizmodo. Retrieved 9 June 2014.&#160;
+^ Twist, Jo (March 21, 2005). "Confusion over high-definition TV". BBC News. Retrieved 9 June 2014.&#160;
+^ "HDTV Formats" (Information Paper). Technical Report (Geneva: EBU TECHNICAL) 005: 13. February 2010.&#160;
+^ Gilbert, Ben. "Wii U is 1080p; has HDMI out, internal flash memory, SD and USB storage support". WiiUDaily. WiiUDaily. Retrieved 28 November 2012.&#160;
+^ Movies &amp; TV, PlayStation&#160;[dead link]
+^ Blu-ray Disc Movies, PlayStation&#160;[dead link]
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to HD 1080.
+
+
+
+1080p and the Acuity of Human Vision Audioholics Home Theater Magazine. 2 April 2007.
+
+
+High Definition 1080p TV: Why You Should Be Concerned. Secrets of Home Theater and High Fidelity. 28 February 2007.
+The Facts and Fiction of 1080p[dead link]. 17 April 2006.
+High Definition (HD) Image Formats for Television Production (EBU technical publication). December 2004.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Digital video resolutions
+
+
+
+
+
+
+Designation
+
+
+
+
+Usage examples
+Definition (lines)
+Rate (Hz)
+
+
+Interlaced (fields)
+Progressive (frames)
+
+
+
+
+
+
+
+
+
+Low,
+MP@LL
+
+
+
+
+LDTV, VCD, HTV
+240, 288 (SIF)
+&#160;
+24, 30; 25
+
+
+
+
+
+
+
+
+
+Standard,
+MP@ML
+
+
+
+
+SDTV, SVCD, DVD, DV
+480 (NTSC), 576 (PAL)
+60, 50
+24, 30; 25
+
+
+
+
+
+
+
+
+
+Enhanced,
+HMP@HML
+
+
+
+
+EDTV
+480 (NTSC-HQ), 576
+&#160;
+60, 50
+
+
+
+
+
+
+
+
+
+High,
+MP@HL
+
+
+
+
+HDTV, BD, HD DVD, HDV
+720
+&#160;
+24, 30, 60; 25, 50
+
+
+1080
+25, 30
+24, 50, 60
+
+
+
+
+
+
+
+
+
+Ultra-high
+
+
+
+
+UHDTV
+2160, 4320
+&#160;
+60, 120,180
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Broadcast video formats
+
+
+
+
+
+
+
+
+
+
+&#160;
+Television
+
+
+
+
+
+
+
+
+
+
+
+Analog
+
+
+
+
+
+
+525 lines
+
+
+
+
+NTSC
+
+System M
+
+
+NTSC-J
+PAL-M
+
+System M
+
+
+
+
+
+
+
+
+
+
+
+625 lines
+
+
+
+
+PAL
+
+System B
+System D
+System G
+System H
+System I
+System K
+
+
+PAL-N
+PALplus
+SECAM
+
+System B
+System D
+System G
+System K
+System L
+
+
+
+
+
+
+
+
+
+
+
+Audio
+
+
+
+
+BTSC (MTS)
+EIAJ
+NICAM
+SAP
+Sound-in-Syncs
+Zweiton (A2/IGR)
+
+
+
+
+
+
+
+
+
+Hidden signals
+
+
+
+
+Captioning
+CGMS-A
+EPG
+GCR
+PDC
+Teletext
+VBI
+VEIL
+VIT
+VITC
+WSS
+XDS
+
+
+
+
+
+
+
+
+
+Historical
+
+
+
+
+Pre-1940
+Mechanical television
+180-line
+405-line
+
+System A
+
+
+441-line
+819-line
+MAC
+MUSE
+
+
+
+
+
+
+
+
+
+
+
+
+Digital
+
+
+
+
+
+
+Interlaced
+
+
+
+
+SDTV
+
+480i
+576i
+
+
+HDTV
+
+1080i
+
+
+
+
+
+
+
+
+
+
+
+Progressive
+
+
+
+
+LDTV
+
+1seg
+240p
+288p
+
+
+EDTV
+
+480p
+576p
+
+
+HDTV
+
+720p
+1080p
+
+
+UHDTV
+
+2160p
+4320p
+
+
+
+
+
+
+
+
+
+
+
+MPEG-2 standards
+
+
+
+
+ATSC
+DVB
+ISDB
+DTMB
+DVB 3D-TV
+
+
+
+
+
+
+
+
+
+MPEG-4 AVC standards
+
+
+
+
+ATSC A/72
+DMB
+DTMB
+DVB
+SBTVD
+1seg
+
+
+
+
+
+
+
+
+
+Audio
+
+
+
+
+AC-3 (5.1)
+DTS
+MPEG-1 Audio Layer II
+MPEG Multichannel
+PCM
+LPCM
+AAC
+HE-AAC
+
+
+
+
+
+
+
+
+
+Hidden signals
+
+
+
+
+AFD
+Broadcast flag
+Captioning
+CPCM
+EPG
+Teletext
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Technical issues
+
+
+
+
+
+
+
+
+
+14:9 compromise
+Broadcast-safe
+Digital cinema (DCI)
+Display motion blur
+Moving image formats
+MPEG transport stream
+Reverse Standards Conversion
+Standards conversion
+Television transmitter
+Video on demand
+Video processing
+Widescreen signaling
+Templates (Analogue TV Topics)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=1080p&amp;oldid=691940823"					
+				Categories: Video formatsTelevision terminologyHidden categories: All articles with dead external linksArticles with dead external links from August 2015Articles with limited geographic scope from August 2011USA-centricCommons category with local link same as on WikidataArticles with dead external links from June 2015				
+							
+		
+		
+			

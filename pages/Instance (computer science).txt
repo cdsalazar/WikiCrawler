@@ -1,0 +1,52 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Instance (computer science)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For other uses, see Instance (disambiguation).
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2013)
+
+
+In object-oriented programming (OOP), an instance is a specific realization of any object. Formally, "instance" is synonymous with "object" as they are each a particular value (realization), and these may be called an instance object; "instance" emphasizes the distinct identity of the object. The creation of an instance is called instantiation.
+In class-based programming, objects are created from classes by subroutines called constructors, and destroyed by destructors. An object is an instance of a class, and may be called a class instance or class object; instantiation is then also known as construction. Not all classes can be instantiated&#160;–  abstract classes cannot be instantiated, while classes that can be instantiated are called concrete classes. In prototype-based programming, instantiation is instead done by copying a prototype.
+An object may be varied in a number of ways. Each realized variation of that object is an instance. Each time a program runs, it is an instance of that program. That is, it is a member of a given class that has specified values rather than variables. In a non-programming context, you could think of "dog" as a type and your particular dog as an instance of that class.[1]
+An important distinction is between the data type, which is interface, and the class, which is implementation.
+The meaning of the term "type" in computer science is rather similar to the meaning of the word "type" in everyday language. For example, a barman can ask a client what type of beverage does he or she want&#160;–  coffee, tea or beer? A particular cup of coffee that the client receives is in the role of an instance, while two cups of coffee would form a set of two instances of coffee, determining its type at the same time.
+References[edit]
+
+
+^ "What is instance?&#160;– Definition from WhatIs.com". Whatis.techtarget.com. Retrieved February 9, 2014.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Instance_(computer_science)&amp;oldid=668567432"					
+				Categories: Object (computer science)Hidden categories: Articles needing additional references from June 2013All articles needing additional references				
+							
+		
+		
+			

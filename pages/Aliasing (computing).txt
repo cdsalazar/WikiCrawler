@@ -1,0 +1,246 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Aliasing (computing)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For the method to replace command names in a computer shell, see Alias (command).
+In computing, aliasing describes a situation in which a data location in memory can be accessed through different symbolic names in the program. Thus, modifying the data through one name implicitly modifies the values associated with all aliased names, which may not be expected by the programmer. As a result, aliasing makes it particularly difficult to understand, analyze and optimize programs. Aliasing analysers intend to make and compute useful information for understanding aliasing in programs.
+
+
+
+Contents
+
+
+1 Examples
+
+1.1 Array bounds checking
+1.2 Aliased pointers
+
+
+2 Specified aliasing
+3 Conflicts with optimization
+4 Hardware aliasing
+5 See also
+6 References
+7 External links
+
+
+
+Examples[edit]
+Array bounds checking[edit]
+For example, the C programming language does not perform array bounds checking. One can then exploit the implementation of the programming language by the compiler and the computer architecture's assembly language conventions, to achieve aliasing effects.
+If an array is created on the stack, with a variable laid out in memory directly beside that array, one could index outside the array and directly change the variable by changing the relevant array element. For example, if we have an int array of size 2 (for this example's sake, calling it arr), next to another int variable (call it i), arr[2] (i.e. the 3rd element) would be aliased to i if they are adjacent in memory.
+
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+	int arr[2] = { 1, 2 };
+	int i=10;
+ 
+	/* alias i to arr[2]. */
+	arr[2] = 20;
+ 
+	printf("element 0: %d \t", arr[0]); // outputs 1
+	printf("element 1: %d \t", arr[1]); // outputs 2
+	printf("element 2: %d \t", arr[2]); // outputs 20
+	printf("i: %d \t\t", i); // will also output 20, not 10, because of aliasing
+	/* arr size is still 2. */
+	printf("arr size: %d \n", (sizeof(arr) / sizeof(int)));
+}
+
+This is possible in some implementations of C because an array is a block of contiguous memory, and array elements are merely referenced by offsets off the address of the beginning of that block multiplied by the size of a single element. Since C has no bounds checking, indexing and addressing outside of the array is possible. Note that the aforementioned aliasing behaviour is undefined behaviour. Some implementations may leave space between arrays and variables on the stack, for instance, to align variables to memory locations that are a multiple of the architecture's native word size. The C standard does not generally specify how data is to be laid out in memory. (ISO/IEC 9899:1999, section 6.2.6.1).
+It is not erroneous for a compiler to omit aliasing effects for accesses that fall outside the bounds of an array.
+Aliased pointers[edit]
+See also: Pointer aliasing
+Another variety of aliasing can occur in any language that can refer to one location in memory with more than one name (for example, with pointers). See the C example of the xor swap algorithm that is a function; it assumes the two pointers passed to it are distinct, but if they are in fact equal (or aliases of each other), the function fails. This is a common problem with functions that accept pointer arguments, and their tolerance (or the lack thereof) for aliasing must be carefully documented, particularly for functions that perform complex manipulations on memory areas passed to them.
+Specified aliasing[edit]
+Controlled aliasing behaviour may be desirable in some cases (that is, aliasing behaviour that is specified, unlike that enabled by memory layout in C). It is common practice in Fortran. The Perl programming language specifies, in some constructs, aliasing behaviour, such as in foreach loops. This allows certain data structures to be modified directly with less code. For example,
+
+
+my @array = (1, 2, 3);
+
+foreach my $element (@array) {
+   # Increment $element, thus automatically
+   # modifying @array, since $element is ''aliased''
+   # to each of @array's elements in turn.
+   $element++;
+}
+ 
+ print "@array \n";
+
+will print out "2 3 4" as a result. If one wanted to bypass aliasing effects, one could copy the contents of the index variable into another and change the copy.
+Conflicts with optimization[edit]
+Optimizers often have to make conservative assumptions about variables in the presence of pointers. For example, knowing the value of a variable (such as x is 5) normally allows certain optimizations (such as constant propagation). However, the compiler cannot use this information after an assignment to another variable (for example, in C, *y = 10) because it could be that *y is an alias of x. This could be the case after an assignment like y = &amp;x. As an effect of this assignment to *y, the value of x would be changed as well, so propagating the information that x is 5 to the statements following *y = 10 would be potentially wrong (if *y is indeed an alias of x). However, if we have information about pointers, the constant propagation process could make a query like: can x be an alias of *y? Then, if the answer is no, x = 5 can be propagated safely.
+Another optimization impacted by aliasing is code reordering. If the compiler decides that x is not aliased by *y, then code that uses or changes the value of x can be moved before the assignment *y = 10, if this would improve scheduling or enable more loop optimizations to be carried out.
+To enable such optimizations in a predictable manner, the ISO standard for the C programming language (including its newer C99 edition, see section 6.5, paragraph 7) specifies that it is illegal (with some exceptions) for pointers of different types to reference the same memory location. This rule, known as the strict aliasing rule, sometime allows for impressive increases in performance,[1] but has been known to break some otherwise valid code. Several software projects intentionally violate this portion of the C99 standard. For example, Python 2.x did so to implement reference counting,[2] and required changes to the basic object structs in Python 3 to enable this optimization. The Linux kernel does this because strict aliasing causes problems with optimization of inlined code.[3] In such cases, when compiled with gcc, the option -fno-strict-aliasing is invoked to prevent unwanted optimizations that could yield unexpected code.
+Hardware aliasing[edit]
+The term aliasing is also used to describe the situation where, due to either a hardware design choice or a hardware failure, one or more of the available address bits is not used in the memory selection process.[4] This may be a design decision if there are more address bits available than are necessary to support the installed memory device(s). In a failure, one or more address bits may be shorted together, or may be forced to ground (logic 0) or the supply voltage (logic 1).
+
+Example
+
+For this example, we assume a memory design with 8 locations, requiring only 3 address lines (or bits) since 23 = 8). Address bits (named A2 through A0) are decoded to select unique memory locations as follows, in standard binary counter fashion:
+
+
+A2
+A1
+A0
+Memory location
+
+
+0
+0
+0
+0
+
+
+0
+0
+1
+1
+
+
+0
+1
+0
+2
+
+
+0
+1
+1
+3
+
+
+1
+0
+0
+4
+
+
+1
+0
+1
+5
+
+
+1
+1
+0
+6
+
+
+1
+1
+1
+7
+
+
+In the table above, each of the 8 unique combinations of address bits selects a different memory location. However, if one address bit (say A2) were to be shorted to ground, the table would be modified as follows:
+
+
+A2
+A1
+A0
+Memory location
+
+
+0
+0
+0
+0
+
+
+0
+0
+1
+1
+
+
+0
+1
+0
+2
+
+
+0
+1
+1
+3
+
+
+0
+0
+0
+0
+
+
+0
+0
+1
+1
+
+
+0
+1
+0
+2
+
+
+0
+1
+1
+3
+
+
+In this case, with A2 always being zero, the first four memory locations are duplicated and appear again as the second four. Memory locations 4 through 7 have become inaccessible.
+If this change occurred to a different address bit, the decoding results would be different, but in general the effect would be the same: the loss of a single address bit cuts the available memory space in half, with resulting duplication (aliasing) of the remaining space.
+See also[edit]
+
+Aliasing for uses of the word when applied to signal processing, including computer graphics
+Pointer alias
+
+References[edit]
+
+
+^ Mike Acton (2006-06-01). "Understanding Strict Aliasing".&#160;
+^ Neil Schemenauer (2003-07-17). "ANSI strict aliasing and Python".&#160;
+^ Linus Torvalds (2003-02-26). "Re: Invalid compilation without -fno-strict-aliasing".&#160;
+^ Michael Barr (2012-07-27). "Software Based Memory Testing".&#160;
+
+
+External links[edit]
+
+Understanding Strict Aliasing – article by Mike Acton
+Aliasing, pointer casts and gcc 3.3 – informational article on NetBSD mailing list
+Type-based alias analysis in C++ - Informational article on type-based alias analysis in C++
+Understand C/C++ Strict Aliasing – article on strict aliasing originally from the boost developer's wiki
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Aliasing_(computing)&amp;oldid=665167407"					
+				Categories: Compiler constructionProgram analysisHidden categories: Articles with example Perl code				
+							
+		
+		
+			

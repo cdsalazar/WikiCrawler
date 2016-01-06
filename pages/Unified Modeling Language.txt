@@ -1,0 +1,1370 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Unified Modeling Language
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Unified Modelling Language)
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+UML logo
+
+
+The Unified Modeling Language (UML) is a general-purpose, developmental, modeling language in the field of software engineering, that is intended to provide a standard way to visualize the design of a system.[1]
+UML was originally motivated by the desire to standardize the disparate notational systems and approaches to software design developed by Grady Booch, Ivar Jacobson and James Rumbaugh at Rational Software in 1994–95, with further development led by them through 1996.[1]
+In 1997 UML was adopted as a standard by the Object Management Group (OMG), and has been managed by this organization ever since. In 2005 the Unified Modeling Language was also published by the International Organization for Standardization (ISO) as an approved ISO standard.[2] Since then it has been periodically revised to cover the latest revision of UML.[3]
+Though well-known and widely used in education and academic papers, as of 2013[update] UML is little-used in industry, and most such use is informal and ad hoc.[4]
+
+
+
+Contents
+
+
+1 History
+
+1.1 Before UML 1.x
+1.2 UML 1.x
+1.3 UML 2.x
+
+
+2 Design
+
+2.1 Software development methods
+2.2 Modeling
+
+
+3 Diagrams
+
+3.1 Structure diagrams
+3.2 Behavior diagrams
+
+3.2.1 Interaction diagrams
+
+
+
+
+4 Meta modeling
+5 Adoption
+6 Criticisms
+
+6.1 Critique of UML 1.x
+
+
+7 See also
+8 References
+9 Further reading
+10 External links
+
+
+
+History[edit]
+
+
+
+
+History of object-oriented methods and notation
+
+
+UML has been evolving since the second half of the 1990s and has its roots in the object-oriented methods developed in the late 1980s and early 1990s. The timeline (see image) shows the highlights of the history of object-oriented modeling methods and notation.
+It is originally based on the notations of the Booch method, the Object-modeling technique (OMT) and Object-oriented software engineering (OOSE), which it has integrated into a single language.[5]
+Before UML 1.x[edit]
+Rational Software Corporation hired James Rumbaugh from General Electric in 1994 and after that the company became the source for two of the most popular object-oriented modeling approaches of the day:[6] Rumbaugh's Object-modeling technique (OMT) and Grady Booch's method. They were soon assisted in their efforts by Ivar Jacobson, the creator of the object-oriented software engineering (OOSE) method, who joined them at Rational in 1995.[1]
+Under the technical leadership of those three (Rumbaugh, Jacobson and Booch), a consortium called the UML Partners was organized in 1996 to complete the Unified Modeling Language (UML) specification, and propose it to the Object Management Group (OMG) for standardisation. The partnership also contained additional interested parties (for example HP, DEC, IBM and Microsoft). The UML Partners' UML 1.0 draft was proposed to the OMG in January 1997 by the consortium. During the same month the UML Partners formed a group, designed to define the exact meaning of language constructs, chaired by Cris Kobryn and administered by Ed Eykholt, to finalize the specification and integrate it with other standardization efforts. The result of this work, UML 1.1, was submitted to the OMG in August 1997 and adopted by the OMG in November 1997.[1][7]
+UML 1.x[edit]
+After the first release a task force was formed[1] to improve the language, which released several minor revisions, 1.3, 1.4, and 1.5.[8]
+The standards it produced (as well as the original standard) have been noted as being ambiguous and inconsistent.[9][10]
+UML 2.x[edit]
+The UML 2.0 major revision replaced version 1.5 in 2005, which was developed with an enlarged consortium to improve the language further to reflect new experience on usage of its features.[11]
+Although UML 2.1 was never released as a formal specification, versions 2.1.1 and 2.1.2 appeared in 2007, followed by UML 2.2 in February 2009. UML 2.3 was formally released in May 2010.[12] UML 2.4.1 was formally released in August 2011.[12] UML 2.5 was released in October 2012 as an "In process" version and was officially released in June 2015.[12]
+There are four parts to the UML 2.x specification:
+
+The Superstructure that defines the notation and semantics for diagrams and their model elements
+The Infrastructure that defines the core metamodel on which the Superstructure is based
+The Object Constraint Language (OCL) for defining rules for model elements
+The UML Diagram Interchange that defines how UML 2 diagram layouts are exchanged
+
+The current versions of these standards follow: UML Superstructure version 2.4.1, UML Infrastructure version 2.4.1, OCL version 2.3.1, and UML Diagram Interchange version 1.0.[13] It continues to be updated and improved by the revision task force, who resolve any issues with the language.[14]
+Design[edit]
+The Unified Modeling Language (UML) offers a way to visualize a system's architectural blueprints in a diagram (see image), including elements such as:[5]
+
+Any activities (jobs)
+Individual components of the system
+
+And how they can interact with other software components.
+
+
+How the system will run
+How entities interact with others (components and interfaces)
+External user interface
+
+Although originally intended solely for object-oriented design documentation, the Unified Modeling Language (UML) has been extended to cover a larger set of design documentation (as listed above),[15] and been found useful in many contexts.[16]
+Software development methods[edit]
+UML is not a development method by itself;[17] however, it was designed to be compatible with the leading object-oriented software development methods of its time (for example OMT, Booch method, Objectory) and especially with RUP that it was originally intended to be used when work began at Rational Software Inc.
+Modeling[edit]
+It is important to distinguish between the UML model and the set of diagrams of a system. A diagram is a partial graphic representation of a system's model. The set of diagrams need not completely cover the model and deleting a diagram does not change the model. The model may also contain documentation that drives the model elements and diagrams (such as written use cases).
+UML diagrams represent two different views of a system model:[18]
+
+Static (or structural) view: emphasizes the static structure of the system using objects, attributes, operations and relationships. The structural view includes class diagrams and composite structure diagrams.
+Dynamic (or behavioral) view: emphasizes the dynamic behavior of the system by showing collaborations among objects and changes to the internal states of objects. This view includes sequence diagrams, activity diagrams and state machine diagrams.
+
+UML models can be exchanged among UML tools by using the XML Metadata Interchange (XMI) interchange format.
+Diagrams[edit]
+
+
+UML diagrams
+
+
+Structural UML diagrams
+
+
+
+
+Class diagram
+Component diagram
+Composite structure diagram
+Deployment diagram
+Object diagram
+Package diagram
+Profile diagram
+
+
+
+
+Behavioral UML diagrams
+
+
+
+
+Activity diagram
+Communication diagram
+Interaction overview diagram
+Sequence diagram
+State diagram
+Timing diagram
+Use case diagram
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+UML 2 has many types of diagrams which are divided into two categories.[5] Some types represent structural information, and the rest represent general types of behavior, including a few that represent different aspects of interactions. These diagrams can be categorized hierarchically as shown in the following class diagram:[5]
+
+
+
+These diagrams may all contain comments or notes explaining usage, constraint, or intent.
+Structure diagrams[edit]
+Structure diagrams emphasize the things that must be present in the system being modeled. Since structure diagrams represent the structure, they are used extensively in documenting the software architecture of software systems. For example, the component diagram which describes how a software system is split up into components and shows the dependencies among these components.
+
+
+
+
+
+
+
+Component diagram
+
+
+
+
+
+
+
+
+
+Class diagram
+
+
+
+
+Behavior diagrams[edit]
+Behavior diagrams emphasize what must happen in the system being modeled. Since behavior diagrams illustrate the behavior of a system, they are used extensively to describe the functionality of software systems. As an example, the activity diagram describes the business and operational step-by-step activities of the components in a system.
+
+
+
+
+
+
+
+Activity diagram
+
+
+
+
+
+
+
+
+
+Use Case Diagram
+
+
+
+
+Interaction diagrams[edit]
+Interaction diagrams, a subset of behavior diagrams, emphasize the flow of control and data among the things in the system being modeled. For example, the sequence diagram which shows how objects communicate with each other in terms of a sequence of messages.
+
+
+
+
+
+
+
+Sequence diagram
+
+
+
+
+
+
+
+
+
+Communication diagram
+
+
+
+
+Meta modeling[edit]
+Main article: Meta-Object Facility
+
+
+
+
+Illustration of the Meta-Object Facility
+
+
+The Object Management Group (OMG) has developed a metamodeling architecture to define the Unified Modeling Language (UML), called the Meta-Object Facility (MOF).[19] The Meta-Object Facility is designed as a four-layered architecture, as shown in the image at right. It provides a meta-meta model at the top layer, called the M3 layer. This M3-model is the language used by Meta-Object Facility to build metamodels, called M2-models.
+The most prominent example of a Layer 2 Meta-Object Facility model is the UML metamodel, the model that describes the UML itself. These M2-models describe elements of the M1-layer, and thus M1-models. These would be, for example, models written in UML. The last layer is the M0-layer or data layer. It is used to describe runtime instances of the system.[20]
+The meta-model can be extended using a mechanism which is called stereotyping. This has been criticised as being insufficient/untenable by Brian Henderson-Sellers and Cesar Gonzalez-Perez in "Uses and Abuses of the Stereotype Mechanism in UML 1.x and 2.0".[21]
+Adoption[edit]
+UML has been found useful in many design contexts,[16] so much so that is has become all but ubiquitous within the IT community.[22]
+It has been treated, at times, as a design silver bullet, which has led to problems in its usage. Misuse of it includes excessive usage of it (design every little part of the system's code with it, which is unnecessary) and assuming that anyone can design anything with it (even those who haven't programmed).[23]
+It is seen to be a large language, with many constructs in it. Some (including Jacobson) feel that there are too many and that this hinders the learning (and therefore usage) of it.[24]
+Criticisms[edit]
+
+
+
+
+
+This article's Criticism or Controversy section may compromise the article's neutral point of view of the subject. Please integrate the section's contents into the article as a whole, or rewrite the material. (December 2010)
+
+
+Common criticisms of UML from industry include:[4]
+
+not useful: "[does] not offer them advantages over their current, evolved practices and representations"
+too complex, particularly for communication with clients: "unnecessarily complex" and "The best reason not to use UML is that it is not ‘readable’ for all stakeholders. How much is UML worth if a business user (the customer) can not understand the result of your modelling effort?"
+need to keep UML and code in sync, as with documentation generally
+
+Critique of UML 1.x[edit]
+
+Cardinality notation
+As with database Chen, Bachman, and ISO ER diagrams, class models are specified to use "look-across" cardinalities, even though several authors (Merise,[25] Elmasri &amp; Navathe[26] amongst others[27]) prefer same-side or "look-here" for roles and both minimum and maximum cardinalities. Recent researchers (Feinerer,[28] Dullea et. alia[29]) have shown that the "look-across" technique used by UML and ER diagrams is less effective and less coherent when applied to n-ary relationships of order &gt;2.
+
+
+Feinerer says "Problems arise if we operate under the look-across semantics as used for UML associations. Hartmann[30] investigates this situation and shows how and why different transformations fail." (Although the "reduction" mentioned is spurious as the two diagrams 3.4 and 3.5 are in fact the same) and also "As we will see on the next few pages, the look-across interpretation introduces several difficulties which prevent the extension of simple mechanisms from binary to n-ary associations."
+
+See also[edit]
+
+
+
+
+Software portal
+
+
+
+
+Model-based testing
+Model-driven engineering
+Applications of UML
+List of Unified Modeling Language tools
+
+
+References[edit]
+This article is based on material taken from the Free On-line Dictionary of Computing prior to 1 November 2008 and incorporated under the "relicensing" terms of the GFDL, version 1.3 or later.
+
+
+^ a b c d e Unified Modeling Language User Guide, The (2 ed.). Addison-Wesley. 2005. p.&#160;496. ISBN&#160;0321267974.&#160; , See the sample content, look for history
+^ "ISO/IEC 19501:2005 - Information technology - Open Distributed Processing - Unified Modeling Language (UML) Version 1.4.2". Iso.org. 2005-04-01. Retrieved 2015-05-07.&#160;
+^ "ISO/IEC 19505-1:2012 - Information technology - Object Management Group Unified Modeling Language (OMG UML) - Part 1: Infrastructure". Iso.org. 2012-04-20. Retrieved 2014-04-10.&#160;
+^ a b Petre, Marian (2013). UML in practice (PDF). 35th International Conference on Software Engineering 18–26 May 2013. pp.&#160;722–731. The majority of those interviewed simply do not use UML, and those who do use it tend to do so selectively and often informally&#160;
+^ a b c d "OMG Unified Modeling Language (OMG UML), Superstructure. Version 2.4.1". Object Management Group. Retrieved 9 April 2014.&#160;
+^ Andreas Zendler (1997) Advanced Concepts, Life Cycle Models and Tools for Objeckt-Oriented Software Development. p.122
+^ "UML Specification version 1.1 (OMG document ad/97-08-11)". Omg.org. Retrieved 2011-09-22.&#160;
+^ "UML". Omg.org. Retrieved 2014-04-10.&#160;
+^ Génova et alia 2004 "Open Issues in Industrial Use Case Modeling"
+^ "Will UML 2.0 Be Agile or Awkward?" (PDF). Retrieved 2011-09-22.&#160;
+^ "UML 2.0". Omg.org. Retrieved 2011-09-22.&#160;
+^ a b c "UML". Omg.org. Retrieved 2011-09-22.&#160;
+^ OMG. "Catalog of OMG Modeling and Metadata Specifications". Retrieved 2012-02-21.&#160;
+^ "Issues for UML 2.6 Revision task Force mailing list". Omg.org. Retrieved 2014-04-10.&#160;
+^ Satish Mishra (1997). "Visual Modeling &amp; Unified Modeling Language (UML)&#160;: Introduction to UML". Rational Software Corporation. Accessed 9 November 2008.
+^ a b "UML, Success Stories". Retrieved 9 April 2014.&#160;
+^ John Hunt (2000). The Unified Process for Practitioners: Object-oriented Design, UML and Java. Springer, 2000. ISBN 1-85233-275-1. p.5.door
+^ Jon Holt Institution of Electrical Engineers (2004). UML for Systems Engineering: Watching the Wheels IET, 2004, ISBN 0-86341-354-4. p.58
+^ Iman Poernomo (2006) "The Meta-Object Facility Typed" in: Proceeding SAC '06 Proceedings of the 2006 ACM symposium on Applied computing. pp. 1845-1849
+^ "UML 2.4.1 Infrastructure". Omg.org. 2011-08-05. Retrieved 2014-04-10.&#160;
+^ B. Henderson-Sellers; C. Gonzalez-Perez (2006). "Uses and Abuses of the Stereotype Mechanism in UML 1.x and 2.0". in: Model Driven Engineering Languages and Systems. Springer Berlin / Heidelberg.
+^ "UML 2.5: Do you even care?".&#160; "UML truly is ubiquitous"
+^ "Death by UML Fever".&#160;
+^ "Ivar Jacobson on UML, MDA, and the future of methodologies".&#160;
+^ Hubert Tardieu, Arnold Rochfeld and René Colletti La methode MERISE: Principes et outils (Paperback - 1983)
+^ Elmasri, Ramez, B. Shamkant, Navathe, Fundamentals of Database Systems, third ed., Addison-Wesley, Menlo Park, CA, USA, 2000.
+^ ER 2004&#160;: 23rd International Conference on Conceptual Modeling, Shanghai, China, 8-12 November 2004 Archived 14 May 2015 at the Wayback Machine
+^ "A Formal Treatment of UML Class Diagrams as an Efficient Method for Configuration Management 2007" (PDF). Retrieved 2011-09-22.&#160;
+^ "James Dullea, Il-Yeol Song, Ioanna Lamprou - An analysis of structural validity in entity-relationship modeling 2002" (PDF). Retrieved 2011-09-22.&#160;
+^ ""Reasoning about participation constraints and Chen's constraints" S Hartmann - 2003" (PDF). Retrieved 2013-08-17.&#160;
+
+
+Further reading[edit]
+
+Ambler, Scott William (2004). The Object Primer: Agile Model Driven Development with UML 2. Cambridge University Press. ISBN&#160;0-521-54018-6.&#160;
+Chonoles, Michael Jesse; James A. Schardt (2003). UML 2 for Dummies. Wiley Publishing. ISBN&#160;0-7645-2614-6.&#160;
+Fowler, Martin. UML Distilled: A Brief Guide to the Standard Object Modeling Language (3rd ed.). Addison-Wesley. ISBN&#160;0-321-19368-7.&#160;
+Jacobson, Ivar; Grady Booch; James Rumbaugh (1998). The Unified Software Development Process. Addison Wesley Longman. ISBN&#160;0-201-57169-2.&#160;
+Martin, Robert Cecil (2003). UML for Java Programmers. Prentice Hall. ISBN&#160;0-13-142848-9.&#160;
+Noran, Ovidiu S. "Business Modelling: UML vs. IDEF" (PDF). Retrieved 2005-12-28.&#160;
+Horst Kargl. "Interactive UML Metamodel with additional Examples" (HTML).&#160;
+Penker, Magnus; Hans-Erik Eriksson (2000). Business Modeling with UML. John Wiley &amp; Sons. ISBN&#160;0-471-29551-5.&#160;
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Unified Modeling Language.
+
+
+
+
+
+Wikiversity has learning materials about UML
+
+
+
+Official website
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Unified Modeling Language
+
+
+
+
+
+
+Actors
+
+
+
+Organizations
+
+Object Management Group
+UML Partners
+
+
+Persons
+
+Grady Booch
+Ivar Jacobson
+James Rumbaugh
+
+
+
+
+
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+
+Object oriented
+
+
+
+Object-oriented programming
+Object-oriented analysis and design
+Object-oriented modeling
+
+
+
+
+
+
+
+
+Structure
+
+
+
+Actor
+Attribute
+Artifact
+Class
+Component
+Interface
+Object
+Package
+Profile diagram
+
+
+
+
+
+
+
+
+Behavior
+
+
+
+Activity
+Event
+Message
+Method
+State
+Use case
+
+
+
+
+
+
+
+
+Relationships
+
+
+
+Aggregation
+Association
+Composition
+Dependency
+Generalization (or Inheritance)
+
+
+
+
+
+
+
+
+Extensibility
+
+
+
+Profile
+Stereotype
+
+
+
+
+
+
+
+
+Other
+
+
+
+Multiplicity
+
+
+
+
+
+
+
+
+
+
+
+Diagrams
+
+
+
+
+Structure
+
+
+
+Class
+Component
+Composite structure
+Deployment
+Object
+Package
+
+
+
+
+
+
+
+
+Behaviour
+
+
+
+Activity
+State Machine
+Use case
+
+
+
+
+
+
+
+
+Interaction
+
+
+
+Communications
+Sequence
+Interaction overview
+Timing
+
+
+
+
+
+
+
+
+
+
+
+Derived languages
+
+
+
+Systems Modeling Language (SysML)
+UML eXchange Format (UXF)
+XML Metadata Interchange (XMI)
+Executable UML (xUML)
+
+
+
+
+
+
+
+
+Other topics
+
+
+
+Glossary of UML terms
+Rational Unified Process
+Comparison of UML tools
+UML colors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software engineering
+
+
+
+
+
+
+Fields
+
+
+
+Computer programming
+Requirements engineering
+Software deployment
+Software design
+Software maintenance
+Software testing
+Systems analysis
+Formal methods
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Data modeling
+Enterprise architecture
+Functional specification
+Modeling language
+Orthogonality
+Programming paradigm
+Software
+Software archaeology
+Software architecture
+Software configuration management
+Software development methodology
+Software development process
+Software quality
+Software quality assurance
+Software verification and validation
+Structured analysis
+
+
+
+
+
+
+
+
+Orientations
+
+
+
+Agile
+Aspect-oriented
+Object orientation
+Ontology
+Service orientation
+SDLC
+
+
+
+
+
+
+
+
+Models
+
+
+
+
+
+Developmental
+
+
+
+
+Agile
+EUP
+Executable UML
+Incremental model
+Iterative model
+Prototype model
+RAD
+UP
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+SPICE
+CMMI
+Data model
+ER model
+Function model
+Information model
+Metamodeling
+Object model
+Systems model
+View model
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+IDEF
+UML
+SysML
+
+
+
+
+
+
+
+
+
+
+
+
+Software
+engineers
+
+
+
+
+Kent Beck
+Grady Booch
+Fred Brooks
+Barry Boehm
+Ward Cunningham
+Tom DeMarco
+Edsger W. Dijkstra
+Martin Fowler
+C. A. R. Hoare
+Watts Humphrey
+Michael A. Jackson
+Ivar Jacobson
+Stephen J. Mellor
+Bertrand Meyer
+David Parnas
+Winston W. Royce
+James Rumbaugh
+Niklaus Wirth
+Edward Yourdon
+Victor Basili
+
+
+
+
+
+
+
+
+Related fields
+
+
+
+Computer science
+Computer engineering
+Project management
+Risk management
+Systems engineering
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+ISO standards by standard number
+
+
+
+
+
+
+
+List of ISO standards&#160;/ ISO romanizations&#160;/ IEC standards
+
+
+
+
+
+
+1–9999
+
+
+
+1
+2
+3
+4
+5
+6
+7
+9
+16
+31
+
+-0
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+-8
+-9
+-10
+-11
+-12
+-13
+
+
+128
+216
+217
+226
+228
+233
+259
+269
+302
+306
+428
+518
+519
+639
+
+-1
+-2
+-3
+-5
+-6
+
+
+646
+690
+732
+764
+843
+898
+965
+1000
+1004
+1007
+1073-1
+1413
+1538
+1745
+1989
+2014
+2015
+2022
+2047
+2108
+2145
+2146
+2240
+2281
+2709
+2711
+2788
+2852
+3029
+3103
+3166
+
+-1
+-2
+-3
+
+
+3297
+3307
+3602
+3864
+3901
+3977
+4031
+4157
+4217
+4909
+5218
+5428
+5775
+5776
+5800
+5964
+6166
+6344
+6346
+6385
+6425
+6429
+6438
+6523
+6709
+7001
+7002
+7098
+7185
+7200
+7498
+7736
+7810
+7811
+7812
+7813
+7816
+8000
+8178
+8217
+8571
+8583
+8601
+8632
+8652
+8691
+8807
+8820-5
+8859
+
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+-8
+-8-I
+-9
+-10
+-11
+-12
+-13
+-14
+-15
+-16
+
+
+8879
+9000/9001
+9075
+9126
+9293
+9241
+9362
+9407
+9506
+9529
+9564
+9594
+9660
+9897
+9945
+9984
+9985
+9995
+
+
+
+
+
+
+
+
+10000–19999
+
+
+
+10006
+10116
+10118-3
+10160
+10161
+10165
+10179
+10206
+10218
+10303
+
+-11
+-21
+-22
+-28
+-238
+
+
+10383
+10487
+10585
+10589
+10646
+10664
+10746
+10861
+10957
+10962
+10967
+11073
+11170
+11179
+11404
+11544
+11783
+11784
+11785
+11801
+11898
+11940 (-2)
+11941
+11941 (TR)
+11992
+12006
+12182
+12207
+12234-2
+13211
+
+-1
+-2
+
+
+13216
+13250
+13399
+13406-2
+13407
+13450
+13485
+13490
+13567
+13568
+13584
+13616
+14000
+14031
+14224
+14289
+14396
+14443
+14496
+
+-2
+-3
+-6
+-10
+-11
+-12
+-14
+-17
+-20
+
+
+14644
+
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+-8
+-9
+
+
+14649
+14651
+14698
+
+-2
+
+
+14750
+14764
+14882
+14971
+15022
+15189
+15288
+15291
+15292
+15398
+15408
+15444
+
+-3
+
+
+15445
+15438
+15504
+15511
+15686
+15693
+15706
+
+-2
+
+
+15707
+15897
+15919
+15924
+15926
+15926 WIP
+15930
+16023
+16262
+16612-2
+16750
+16949 (TS)
+17024
+17025
+17203
+17369
+17799
+18000
+18004
+18014
+18245
+18629
+18916
+19005
+19011
+19092 (-1
+-2)
+19114
+19115
+19125
+19136
+19439
+19500
+19501
+19502
+19503
+19505
+19506
+19507
+19508
+19509
+19510
+19600
+19752
+19757
+19770
+19775-1
+19794-5
+19831
+
+
+
+
+
+
+
+
+20000+
+
+
+
+20000
+20022
+20121
+21000
+21047
+21500
+21827:2002
+22000
+23270
+23271
+23360
+24517
+24613
+24617
+24707
+25178
+25964
+26000
+26300
+26324
+27000 series
+27000
+27001:2005
+27001:2013
+27002
+27003
+27004
+27005
+27006
+27007
+27729
+27799
+28000
+29110
+29148
+29199-2
+29500
+30170
+31000
+32000
+38500
+40500
+42010
+80000
+
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+-8
+-9
+-10
+-11
+-12
+-13
+-14
+
+
+
+
+
+
+
+
+
+
+ Categories
+
+
+
+ISO standards
+
+ISO 639
+ISO 3166
+
+
+ISO&#160;/ IEC standards
+OSI protocols
+
+
+
+
+
+
+
+
+
+All articles with prefix "ISO"
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4469781-8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Unified_Modeling_Language&amp;oldid=691219281"					
+				Categories: Architecture description languageData modeling languagesData modeling diagramsDiagramsKnowledge representationISO standardsSpecification languagesUnified Modeling LanguageSoftware modeling languageHidden categories: Use American English from January 2012All Wikipedia articles written in American EnglishArticles containing potentially dated statements from 2013All articles containing potentially dated statementsNPOV disputes from December 2010All NPOV disputesUse dmy dates from July 2011Wikipedia articles with GND identifiers				
+							
+		
+		
+			

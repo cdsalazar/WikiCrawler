@@ -1,0 +1,198 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			One-pass compiler
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer programming, a one-pass compiler is a compiler that passes through the parts of each compilation unit only once, immediately translating each part into its final machine code. This is in contrast to a multi-pass compiler which converts the program into one or more intermediate representations in steps between source code and machine code, and which reprocesses the entire compilation unit in each sequential pass.
+This refers to the logical functioning of the compiler, not to the actual reading of the source file once only. For instance, the source file could be read once into temporary storage but that copy could then be scanned many times. The IBM 1130 Fortran compiler stored the source in memory and used many passes; by contrast the assembler, on systems lacking a disc storage unit, required that the source deck of cards be presented twice to the card reader/punch.
+
+
+
+Contents
+
+
+1 Advantages
+2 Disadvantages
+3 Difficulties
+
+3.1 Local Context
+3.2 Context within expressions
+3.3 Middle range context
+3.4 Pre-processor expansions
+3.5 Long range context
+3.6 Unfortunate decisions
+3.7 One-pass sequential input, irregular sequence output
+
+
+4 Declaration before usage
+
+4.1 Procedures and Functions
+4.2 Pascal Example
+4.3 Pre-processor recursion
+4.4 Forward declarations considered harmful
+
+
+5 See also
+
+
+
+Advantages[edit]
+One-pass compilers are smaller and faster than multi-pass compilers.
+Disadvantages[edit]
+One-pass compilers are unable to generate as efficient programs as multi-pass compilers due to the limited scope of available information. Many effective compiler optimizations require multiple passes over a basic block, loop (especially nested loops), subroutine, or entire module. Some require passes over an entire program. Some programming languages simply cannot be compiled in a single pass, as a result of their design. For example PL/I allows data declarations to be placed anywhere within a program, specifically, after some references to the not-yet-declared items, so no code can be generated until the entire program has been scanned. The language definition also includes pre-processor statements that generate source code to be compiled: multiple passes are certain. In contrast, many programming languages have been designed specifically to be compiled with one-pass compilers, and include special constructs to allow one-pass compilation.
+Difficulties[edit]
+The basic problem is of forward references. The correct interpretation of a symbol at some point in the source file may be dependent on the presence or not of other symbols further on in the source file and until they are encountered, correct code for the current symbol cannot be produced. This is the problem of context dependence, and the span can be anywhere from adjacent symbols to arbitrarily large amounts of source text.
+Local Context[edit]
+Suppose that the symbol &lt; is recognized as being for a "less than" comparison, as opposed to "greater than" for example. Because of character coding limitations, the glyph ≤ may not be available in a standard encoding, so a compound representation is to be allowed, "&lt;=". Even though this context is determined by the very next symbol, it is unknown when "&lt;" is encountered. Similarly, the symbol "=" does not always mean "=", as when it is a part of a compound symbol. Other compound symbols might include ".lt." for the case when the special character "&lt;" is unavailable. Yet another possibility where a character code for the glyph ¬ ("not") is unavailable is "&lt;&gt;" for "¬=" or "not equal" - some systems employ ~ or&#160;! for ¬ as still further variation. One approach is to advance the scan after "&lt;" and on encountering the "=", backtrack. This of course means that there will be two passes over that portion of text, which is to be avoided. For that matter, the source file may come from a device not supporting a go-back-and-reread operation, such as a card reader. Instead of making an early decision that may later have to be undone, the lexical analyser can maintain multiple interpretations rather like the notion of Quantum Superposition, collapsing to a specific choice only on later observing the determining symbol. Notably, COBOL compilers devote a pass to distinguishing between full stops appearing in decimal constants and the full stops that appear at the end of statements. Such a scheme is unavailable to a single-pass compiler.
+Similarly with the names of items. Few languages restrict themselves to single-character names, so the character "x" as a single-character name is quite different from the character "x" within a name such as "text" - now the context extends beyond the immediately adjacent characters. It is the task of the lexical analyser to separate the items of the sequential source stream into the tokens of the language. Not just words, because "&lt;" and "&lt;=" are tokens also. Names typically start with a letter and continue with letters and digits, and perhaps a few additional symbols such as "_". The syntax allowed for specifying numbers is surprisingly complex, for example +3.14159E+0 can be valid. It is usual to allow an arbitrary number of space characters between tokens, and fortran is unusual in allowing (and ignoring) spaces within apparent tokens also so that "GO TO" and "GOTO" are equivalent as are "&lt;=" and "&lt; =". However, some systems may require spaces to delimit certain tokens, and others, such as Python, use leading spaces to indicate the scope of program blocks that otherwise might be indicated by Begin ... End or similar markers.
+Context within expressions[edit]
+Languages that allow arithmetic expressions typically follow the syntax of infix notation with precedence rules. This means than the generation of code for an expression's evaluation does not proceed smoothly as the expression's tokens are elicited from the source text. For example, the expression x + y*(u - v) does not lead to the equivalent of load x, add y, because x is not added to y. If a stack scheme is used for arithmetic, the code may start with a Load x, but the code that corresponds to the following + token does not then follow. Instead, code for (u - v) is generated, followed by multiplication by y, and only then is x added. The parser of arithmetic expressions does not move back and forth along the source during its analysis, it employs a local stack of deferred operations driven by the precedence rules. This dance can be avoided by requiring that arithmetic expressions be presented in Reverse Polish notation or similar; for the above example something like u v - y * x + and which would be scanned strictly left-to-right.
+An optimising compiler may analyse the form of an arithmetic expression, to identify and remove repetition or make other potential improvements. Consider
+
+a*sin(x) + b*sin(x)
+
+Some languages, such as Algol, allow assignments within an arithmetic expression, so the programmer could have written something like
+
+a*(t:=sin(x)) + b*t
+
+but aside from the exertion required to do so, the resulting statement's form is messy and will no longer be easily compared to the mathematical expression being coded for. Mistakes would be easily made. Instead, the compiler could represent the entire expression's form (typically using a tree structure), analyse and modify that structure, and then emit the code for the improved form. There would be an obvious extension to blocks of successive assignment statements. This does not involve a second pass through the source text, as such.
+Middle range context[edit]
+Although the lexical analyser has split the input stream into a stream of tokens (and discarded any commentary), the interpretation of these tokens according to the language's syntax may yet depend on the context. Consider the following statements in fortran pseudo code:
+
+if (expression) = etc.
+if (expression) label1,label2,label3
+if (expression) then
+
+The first is the assignment of the value of some arithmetic expression (the etc) to an element of a one-dimensional array called "if". Fortran is unusual in that it contains no reserved words, so a token "write" does not necessarily mean that there is a write-statement in progress. The other statements are indeed if-statements - the second is an arithmetic-if that examines the sign of the result of the expression and based on it being negative, zero, or positive jumps to label 1, 2, or 3; the third is a logical-if, and requires that the result of its expression be boolean - thus, the correct interpretation of the token "if" emerging from the lexical analyser cannot be made until after the expression has been scanned and following the closing bracket there appears either an equals sign, a digit (being the text of label1: fortran uses only integers as labels though if letters were allowed the scan would have to rely on finding the commas) or something starting with a letter (that must be "then"), and so now, the context spans an arbitrary amount of source text because the expression is arbitrary. However, in all three cases the compiler can generate the code for evaluating the expression as its scan advances. Thus, the lexical analysis cannot always determine the meaning of the tokens it has just identified because of the vagaries of the allowable syntax, and so the syntax analysis must maintain a superposition of possible states if backtracking is to be avoided.
+With the syntax analysis adrift in a fog of superposed states, should an error be encountered (that is, a token is found that cannot be fitted into any valid syntactic frame) the production of a helpful message can be difficult. The B6700 Algol compiler for example was notorious for error messages such as "semicolon expected" along with a listing of the source line plus a marker showing the location of trouble - often marking a semicolon. In the absence of a semicolon, if one were indeed placed as indicated, on recompilation there could well arise a message "unexpected semicolon" for it. Often, only the first error message from a compiler will be worth attending to, because subsequent messages went awry. Cancelling the current interpretation then resuming the scan at the start of the next statement is difficult when the source file is in error, and so subsequent messages are unhelpful. Further code production is of course abandoned.
+This problem can be reduced through the employment of reserved words, so that for example "if", "then", and "else" always are parts of an if-statement and cannot be names of variables, but a surprisingly large number of useful words may thereby become unavailable. Another approach is "stropping", whereby reserved words are marked off, say by placing them between special characters such as full stops, or apostrophes as in some versions of Algol. This means that 'if' and if are different tokens, the latter being an ordinary name, but supplying all those apostrophes soon becomes irksome. For many languages, spacing supplies sufficient information though this may be complex. Often it is not just a space (or tab, etc.) but a character other than a letter or digit that terminates a possible token's text. In the above example, the expression of the if-statement must be within brackets so that the "(" definitely ends the identification of "if" and similarly, ")" enables the identification of "then"; further, other parts of a compound if-statement must appear on new lines: "else" and "end if" (or "endif") and "else if". By contrast, with Algol and others the brackets are not needed and all the parts of an if-statement can be on one line. With Pascal, if a or b then etc. is valid, but if a and b are expressions, then they must be enclosed in brackets.
+Source file listings produced by the compiler can be made easier to read by having the reserved words it identifies presented underlined or in bold or italic, but there has been criticism: "Algol is the only language that distinguishes between an italic and normal full stop". Actually this is no joking matter. In fortran, a do-statement's start such as DO 12 I = 1,15 is distinguished from DO 12 I = 1.15 (an assignment of the value 1.15 to a variable called DO12I; recall that spaces are irrelevant) only by the difference between a comma and a full stop, and a printed listing's glyphs may not be well-formed. Just such an error is thought responsible for the loss of a Mariner space mission satellite to Venus.
+Careful attention to the design of a language can promote clarity and simplicity of expression with a view to creating a reliable compiler whose behaviour is easily understandable. Yet poor choices are common. For example, Matlab denotes matrix transposition by using an apostrophe as in A' which is unexceptionable and closely follows mathematical usage. Well and good, but for the delimiters of a text string Matlab ignores the opportunity presented by the double quote symbol for any purpose and uses apostrophes for this as well. Though Octave uses double quotes for text strings, it strives to accept Matlab statements as well and so the problem extends to another system.
+Pre-processor expansions[edit]
+It is at this stage that pre-processor options are exercised, so called because they are exercised previous to the compiler proper processing the incoming source. They echo the "macro expansion" options of assembler systems, hopefully with a more gracious syntax. The most common arrangement is a variation on
+
+if condition then this source else other source fi
+
+often with some arrangement to distinguish pre-processor source statements from "ordinary" source statements, such as the statement starting with a&#160;% symbol in pl/i, or a #, etc. Another simple option is a variation of
+
+define this = that
+
+But caution is needed, as in
+
+define SumXY = (x + y)
+sum:=3*SumXY;
+
+Since without the brackets, the result would be sum:=3*x + y; Similarly, caution is needed in determining the bounds of the replacement text and how the resulting text will be scanned. Consider
+
+#define three = 3;
+#define point = .;
+#define one = 1;
+x:=three point one;
+
+Here the define statement is terminated by a semicolon, and the semicolon is not itself a part of the replacement. The invocation can't be x:=threepointone; because that is a different name, but three point one would be 3 . 1 and the subsequent scan may or may not be able to regard that as a single token.
+Some systems allow the definition of pre-processor procedures whose output is source text to be compiled, and may even allow such source to define still further pre-processor items. Adroit usage of such options allows for constants to be given explanatory names, recondite details to be replaced by easy mnemonics, the appearance of new statement forms, and the generation of in-line code for specific usages of a general procedure (such as sorting), rather than devise actual procedures. With a proliferation of parameters and parameter types, the number of combinations required grows exponentially.
+Further, the same pre-processor syntax could be used for multiple different languages, even natural languages as in the generation of a story from a story template using a person's name, nickname, name of pet dog, etc. and the temptation would be to devise a pre-processor programme which would accept the source file, perform the pre-processor actions and output the result ready for the next stage, the compilation. But this clearly constitutes at least one extra pass through the source and so such a solution would be unavailable to a single-pass compiler. Thus, progress through the actual input source file may well advance in fits and starts, but it is still unidirectional.
+Long range context[edit]
+Code generation by the compiler also faces the problem of forwards reference, most directly in the likes of Go to label where the destination label is an unknown distance further ahead in the source file, and thus the jump instruction to reach that label's location involves an unknown distance across yet-to-be-generated code. Some language designs, influenced perhaps by "GOTOs considered harmful", do not have a GOTO statement, but this does not evade the problem as there are many implicit GOTO equivalents in a program. Consider
+
+if condition then code true else code false fi
+
+As mentioned before, code to evaluate the condition can be generated straight away. But when the then token is encountered, a JumpFalse operation code must be placed whose destination address is the start of the code for the code false statements, and similarly, when the else token is encountered, the just-completed code for the code true statements must be followed by a GOTO-style jump operation whose destination is the code that follows the end of the if-statement, here marked by the fi token. These destinations are knowable only after an arbitrary amount of code is generated for the as-yet unscanned source. Similar problems arise for any statement whose parts span arbitrary amounts of source, such as the case statement.
+A recursive-descent compiler would activate a procedure for each type of statement, such as an if-statement, in turn invoking the appropriate procedures to generate the code for the statements of the code true and code false parts of its statement and similarly for the other statements according to their syntax. In its local storage it would keep track of the location of the address field of its incomplete JumpFalse operation, and on encountering its then token, would place the now-known address, and similarly on encountering the fi token for the jump needed after the code true code. The GoTo statement differs in that the code to be jumped over is not inside its statement form, so an entry in an auxiliary table of "fixups" is needed that would be used when finally its label is encountered. This notion could be extended. All unknown-destination jumps could be made via an entry in a jump table (whose addresses are later filled in as the destinations are encountered), however the necessary size of this table is unknown until the end of the compilation.
+One solution to this is for the compiler to emit assembler source (with compiler-generated labels as the destinations for jumps, etc.), and the assembler would determine the actual addresses. But this clearly requires an additional pass through (a version of) the source file and so is disallowed for single-pass compilers.
+Unfortunate decisions[edit]
+Although the description above has employed the notion that code may be generated with certain fields left to be fixed up later, there was an implicit assumption that the size of such code sequences was stable. This may not be the case. Many computers have provision for operations occupying different amounts of storage, notably relative addressing whereby if the destination is within say -128 or +127 addressing steps then an eight-bit address field can be used, otherwise a much larger address field is required to reach. Thus if the code were generated with a hopeful short address field, later it may become necessary to go back and adjust the code to use a longer field, with the consequence that earlier code referencing locations after the change will have to be adjusted as well. Likewise, later references going backwards across the change will have to be fixed, even those that had been to known addresses. And as well, the fixup information will itself have to be fixed, correctly. On the other hand, long addresses could be used for all cases when nearness is not certain, but the resulting code will no longer be the best possible...
+One-pass sequential input, irregular sequence output[edit]
+Already mentioned are some possibilities for optimisation within a single statement. Optimisations across multiple statements would require that the content of such statements be held in some sort of data structure that could be analysed and manipulated before code is emitted. In such a case, producing provisional code, even with fixups allowed for, would be a hindrance. In the limit this means the compiler would generate a data structure representing the entire program in an internal form, but a straw could be clutched and the claim made that there is no actual second pass of the source file from start to end. Possibly in the PR document advertising the compiler.
+Notably therefore, a compiler cannot generate its code in a single relentlessly-forwards sequence, still less immediately as each part of the source is read. The output could still be written sequentially, but only if output of a section is deferred until all pending fixups for that section have been made.
+Declaration before usage[edit]
+When generating code for the various expressions, the compiler needs to know the nature of the operands. For example, a statement such as A:=B; could produce rather different code depending on whether A and B are integers or floating-point variables (and what size: single, double or quadruple precision) or complex numbers, arrays, strings, programmer-defined types, etc. In this case, a simple approach would be to transfer a suitable number of words of storage, but, for strings this could be unsuitable as the recipient may be smaller than the supplier and in any case, only a part of the string may be used - perhaps it has space for a thousand characters, but currently contains ten. Then there are more complex constructions, as offered by COBOL and pl/i, such as A:=B by name; In this case, A and B are aggregates (or structures) with A having for example parts A.x, A.y and A.other while B has parts B.y, B.c and B.x, and in that order. The "by name" feature means the equivalent of A.y:=B.y; A.x:=B.x; But because B.c has no counterpart in A, and A.other has no counterpart in B, they are not involved.
+All of this can be handled by the requirement that items are declared before they are used. Some languages do not require explicit declarations, generating an implicit declaration on first encountering a new name. Should a fortran compiler encounter a previously-unknown name whose first letter is one of I,J,...,N, then the variable will be an integer, otherwise a floating-point variable. Thus a name DO12I would be a floating-point variable. This is a convenience, but after a few experiences with mistyped names, most programmers agree that the compiler option "implicit none" should be used.
+Other systems use the nature of the first encounter to decide the type, such as a string, or an array, and so forth. Interpreted languages can be particularly flexible, with the decision being made at run time, somewhat as follows
+
+if condition then pi:="3.14" else pi:=3.14 fi;
+print pi;
+
+Should there be a compiler for such a language, it would have to create a complex entity to represent the variable pi, containing an indication as to just what its current type is and associated storage to represent such a type. This is certainly flexible, but may not be helpful for intensive computation as in solving A.x = b where A is a matrix of order a hundred, and suddenly, any one of its elements may be of a different type.
+Procedures and Functions[edit]
+Declaration before use is likewise an easy requirement to meet for procedures and functions, and this applies also to the nesting of procedures within procedures. As with Algol, Pascal, pl/i and many others, Matlab and (since 1995) fortran allow a function (or procedure) to contain the definition of another function (or procedure), visible only within the containing function, but, these systems require that they be defined after the end of the containing procedure!
+But when recursion is allowed, a problem arises. Two procedures, each invoking the other, cannot both be declared before usage. One must be first in the source file. This need not matter if, as on the encounter with an unknown variable, sufficient can be deduced from the encounter that the compiler could generate suitable code for the invocation of the unknown procedure, with of course the "fixup" apparatus in place to come back and fill in the correct address for the destination when the procedure's definition is encountered. This would be the case for a procedure with no parameters, for example. The returned result from a function invocation may be of a type discernable from the invocation, but this may not always be correct: a function could return a floating-point result but have its value assigned to an integer.
+For the invocation of a procedure (or function) with parameters, their type will be known (they being declared before use) but their usage in the procedure invocation may not be. Fortran for example passes all parameters by reference (i.e. by address) so there is no immediate difficulty with generating the code (as always, with actual addresses to be fixed up later), but Pascal and other languages allow parameters to be passed by different methods at the programmer's choice (by reference, or by value, or even perhaps by "name") and this is signified only in the definition of the procedure, which is unknown before the definition has been encountered. Specifically for Pascal, in the specification of parameters a prefix "Var" signifies that it must be received by reference, its absence signifies by value - though arrays are always passed by reference anyway. In the first case the compiler must generate code that passes the address of the parameter, while in the second it must generate different code that passes a copy of the value, usually via a stack. As always, a "fixup" mechanism could be invoked to deal with this, but it would be very messy. Multi-pass compilers can of course collate all the required information as they shuttle back and forth, but single-pass compilers cannot. Code generation could be paused while the scan advances (and its results be held in internal storage) until such time as the needed entity is encountered, and this might not be regarded as resulting in a second pass through the source because the code generation stage will soon catch up, it was merely halting for a while. But this would be complex. Instead a special construction is introduced, whereby the procedure's definition of parameter usage is declared "forward" of its later full definition so that the compiler may know it before use, as it requires.
+From First Fortran (1957) onwards, separate compilation of portions of a program has been possible, supporting the creation of libraries of procedures and functions. A procedure in the source file being compiled that invokes a function from such an outside collection must know the type of result returned by the unknown function, if only to generate code that looks in the right place to find the result. Originally, when there were only integers and floating-point variables, the choice could be left to the rules for implicit declaration, but with the proliferation of sizes and also types the invoking procedure will need a type declaration for the function. This is not special, having the same form as for a variable declared inside the procedure.
+The requirement to be met is that at the current point in a single-pass compilation, information on an entity is needed so that the correct code for it can be produced now, if with address fixups later. Whether the required information will be encountered later on in the source file or is to be found in some separately-compiled code file, the information is provided by some protocol here.
+Whether or not all invocations of a procedure (or function) are checked for compatibility with each other and their definitions is a separate matter. In languages descended from Algol-like inspiration, this checking is usually rigorous, but other systems can be indifferent. Leaving aside systems that allow a procedure to have optional parameters, mistakes in the number and type of parameters will normally cause a program to crash. Systems that allow separate compilation of parts of a complete programme that later are "linked" together should also check for the correct type and number of parameters and results as mistakes are even easier to make, but often do not. Some languages (such as Algol) have a formal notion of "upgrading" or "widening" or "promotion", whereby a procedure that expects say a double-precision parameter may be invoked with it as a single precision variable, and in this case the compiler generates code that stores the single precision variable into a temporary double-precision variable which becomes the actual parameter. This however changes the parameter passing mechanism to copy-in, copy-out which may lead to subtle differences in behaviour. Far less subtle are the consequences when a procedure receives the address of a single precision variable when it expects a double precision parameter, or other size variations. When within the procedure the parameter's value is read, more storage will be read than that of its given parameter and the resulting value is unlikely to be an improvement. Far worse is when the procedure changes the value of its parameter: something is sure to be damaged. Much patience can be expended in finding and correcting these oversights.
+Pascal Example[edit]
+An example of such a construct is the forward declaration in Pascal. Pascal requires that procedures be declared or fully defined before use. This helps a one-pass compiler with its type checking: calling a procedure that hasn't been declared anywhere is a clear error. Forward declarations help mutually recursive procedures call each other directly, despite the declare-before-use rule:
+
+function odd(n : integer) : boolean;
+ begin
+    if n = 0 then
+        odd := false
+    else if n &lt; 0 then
+        odd := even(n + 1) { Compiler error: 'even' is not defined }
+    else
+        odd := even(n - 1)
+ end;
+
+
+
+ function even(n : integer) : boolean;
+ begin
+    if n = 0 then
+        even := true
+    else if n &lt; 0 then
+        even := odd(n + 1)
+    else
+        even := odd(n - 1)
+ end;
+
+
+By adding a forward declaration for the function even before the function odd, the one-pass compiler is told that there will be a definition of even later on in the program.
+
+function even(n : integer) : boolean; forward;
+
+
+
+ function odd(n : integer) : boolean;
+ { Et cetera }
+
+
+When the actual declaration of the body of the function is made, either the parameters are omitted or must be absolutely identical to the original forward declaration, or an error will be flagged.
+Pre-processor recursion[edit]
+When declaring complex data aggregates, a possible usage of functions Odd and Even could arise. Perhaps if a data aggregate X has a storage size that is an odd number of bytes, a single byte item might be added to it under the control of a test upon Odd(ByteSize(X)) so as to make an even number. Given the equivalent declarations of Odd and Even as above, a "forward" declaration probably wouldn't be needed because the usage of the parameters is known to the pre-processor which is unlikely to present opportunities to choose between by reference and by value. However, there could be no invocations of these functions in the source code (outside their definitions) until after their actual definition, because the result of the invocation is required to be known. Unless of course the pre-processor engaged in multiple passes of its source file.
+Forward declarations considered harmful[edit]
+Anyone who has attempted to maintain coherence amongst the declarations and usages of procedures in a large program and its usage of libraries of routines, especially one undergoing changes, will have struggled over the usage of forward or similar added declarations for procedures invoked but not defined in the current compilation. Maintaining synchrony between widely-separated locations especially across different source files requires diligence. Those declarations using the reserved word are easy to find, but if the helpful declarations are not distinguished from ordinary declarations, the task becomes troublesome. The gain of supposedly swifter compilation may seem insufficient when simply abandoning the goal of one-pass compilation would remove this imposition.
+See also[edit]
+
+ALGOL 68R
+Burroughs Algol
+NELIAC
+XPL
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=One-pass_compiler&amp;oldid=681891727"					
+				Categories: CompilersHidden categories: Articles with example Pascal code				
+							
+		
+		
+			

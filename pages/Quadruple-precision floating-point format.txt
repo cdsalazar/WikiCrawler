@@ -1,0 +1,452 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Quadruple-precision floating-point format
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computing, quadruple precision (also commonly shortened to quad precision) is a binary floating-point-based computer number format that occupies 16 bytes (128 bits) in computer memory and whose precision is about twice the 53-bit double precision.
+This 128 bit quadruple precision is designed not only for applications requiring results in higher than double precision,[1] but also, as a primary function, to allow the computation of double precision results more reliably and accurately by minimising overflow and round-off errors in intermediate calculations and scratch variables: as William Kahan, primary architect of the original IEEE-754 floating point standard noted, "For now the 10-byte Extended format is a tolerable compromise between the value of extra-precise arithmetic and the price of implementing it to run fast; very soon two more bytes of precision will become tolerable, and ultimately a 16-byte format... That kind of gradual evolution towards wider precision was already in view when IEEE Standard 754 for Floating-Point Arithmetic was framed." [2]
+In IEEE 754-2008 the 128-bit base-2 format is officially referred to as binary128.
+
+
+Floating-point precisions
+
+
+
+
+
+IEEE 754
+
+
+
+
+16-bit: Half (binary16)
+32-bit: Single (binary32), decimal32
+64-bit: Double (binary64), decimal64
+128-bit: Quadruple (binary128), decimal128
+Extended precision formats
+
+
+
+
+Other
+
+
+
+
+Minifloat
+Arbitrary precision
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+Contents
+
+
+1 IEEE 754 quadruple-precision binary floating-point format: binary128
+
+1.1 Exponent encoding
+1.2 Quadruple precision examples
+
+
+2 Double-double arithmetic
+3 Implementations
+
+3.1 Computer-language support
+3.2 Libraries and toolboxes
+3.3 Hardware support
+
+
+4 See also
+5 References
+6 External links
+
+
+
+IEEE 754 quadruple-precision binary floating-point format: binary128[edit]
+The IEEE 754 standard specifies a binary128 as having:
+
+Sign bit: 1 bit
+Exponent width: 15 bits
+Significand precision: 113 bits (112 explicitly stored)
+
+This gives from 33 to 36 significant decimal digits precision (if a decimal string with at most 33 significant decimal is converted to IEEE 754 quadruple precision and then converted back to the same number of significant decimal, then the final string should match the original; and if an IEEE 754 quadruple precision is converted to a decimal string with at least 36 significant decimal and then converted back to quadruple, then the final number must match the original [3]).
+The format is written with an implicit lead bit with value 1 unless the exponent is stored with all zeros. Thus only 112 bits of the significand appear in the memory format, but the total precision is 113 bits (approximately 34 decimal digits: log10(2113) ≈ 34.016). The bits are laid out as:
+
+A binary256 would have a significand precision of 237 bits (approximately 71 decimal digits) and exponent bias 262143.
+Exponent encoding[edit]
+The quadruple-precision binary floating-point exponent is encoded using an offset binary representation, with the zero offset being 16383; this is also known as exponent bias in the IEEE 754 standard.
+
+Emin = 000116 − 3FFF16 = −16382
+Emax = 7FFE16 − 3FFF16 = 16383
+Exponent bias = 3FFF16 = 16383
+
+Thus, as defined by the offset binary representation, in order to get the true exponent, the offset of 16383 has to be subtracted from the stored exponent.
+The stored exponents 000016 and 7FFF16 are interpreted specially.
+
+
+Exponent
+Significand zero
+Significand non-zero
+Equation
+
+
+000016
+0, −0
+subnormal numbers
+(−1)signbit × 2−16382 × 0.significandbits2
+
+
+000116, ..., 7FFE16
+normalized value
+(−1)signbit × 2exponentbits2 − 16383 × 1.significandbits2
+
+
+7FFF16
+±∞
+NaN (quiet, signalling)
+
+
+The minimum strictly positive (subnormal) value is 2−16494 ≈ 10−4965 and has a precision of only one bit. The minimum positive normal value is 2−16382 ≈ 3.3621 × 10−4932 and has a precision of 112&#160;bits, i.e. ±2−16494 as well. The maximum representable value is 216384 − 216272 ≈ 1.1897 × 104932.
+Quadruple precision examples[edit]
+These examples are given in bit representation, in hexadecimal, of the floating-point value. This includes the sign, (biased) exponent, and significand.
+
+3fff 0000 0000 0000 0000 0000 0000 0000   = 1
+c000 0000 0000 0000 0000 0000 0000 0000   = −2
+
+
+7ffe ffff ffff ffff ffff ffff ffff ffff   ≈  1.189731495357231765085759326628007 × 104932 
+                                             (max quadruple precision)
+
+
+0000 0000 0000 0000 0000 0000 0000 0000   = 0
+8000 0000 0000 0000 0000 0000 0000 0000   = −0
+
+
+7fff 0000 0000 0000 0000 0000 0000 0000   = infinity
+ffff 0000 0000 0000 0000 0000 0000 0000   = −infinity
+
+
+3ffd 5555 5555 5555 5555 5555 5555 5555   ≈  1/3
+
+By default, 1/3 rounds down like double precision, because of the odd number of bits in the significand. So the bits beyond the rounding point are 0101... which is less than 1/2 of a unit in the last place.
+Double-double arithmetic[edit]
+A common software technique to implement nearly quadruple precision using pairs of double-precision values is sometimes called double-double arithmetic.[4][5][6] Using pairs of IEEE double-precision values with 53-bit significands, double-double arithmetic can represent operations with at least[4] a 2×53=106-bit significand (actually 107 bits[7] except for some of the largest values, due to the limited exponent range), only slightly less precise than the 113-bit significand of IEEE binary128 quadruple precision. The range of a double-double remains essentially the same as the double-precision format because the exponent has still 11 bits,[4] significantly lower than the 15-bit exponent of IEEE quadruple precision (a range of 1.8 × 10308 for double-double versus 1.2 × 104932 for binary128).
+In particular, a double-double/quadruple-precision value q in the double-double technique is represented implicitly as a sum q = x + y of two double-precision values x and y, each of which supplies half of q's significand.[5] That is, the pair (x, y) is stored in place of q, and operations on q values (+, −, ×, ...) are transformed into equivalent (but more complicated) operations on the x and y values. Thus, arithmetic in this technique reduces to a sequence of double-precision operations; since double-precision arithmetic is commonly implemented in hardware, double-double arithmetic is typically substantially faster than more general arbitrary-precision arithmetic techniques.[4][5]
+Note that double-double arithmetic has the following special characteristics:[8]
+
+As the magnitude of the value decreases, the amount of extra precision also decreases. Therefore, the smallest number in the normalized range is narrower than double precision. The smallest number with full precision is 1000...02 (106 zeros) × 2−1074, or 1.000...02 (106 zeros) × 2−968. Numbers whose magnitude is smaller than 2−1021 will not have additional precision compared with double precision.
+The actual number of bits of precision can vary. In general, the magnitude of low-order part of the number is no greater than half ULP of the high-order part. If the low-order part is less than half ULP of the high-order part, significant bits (either all 0's or all 1's) are implied between the significant of the high-order and low-order numbers. Certain algorithms that rely on having a fixed number of bits in the significand can fail when using 128-bit long double numbers.
+Because of the reason above, it is possible to represent values like 1 + 2−1074, which is the smallest representable number greater than 1.
+
+In addition to the double-double arithmetic, it is also possible to generate triple-double or quad-double arithmetic if higher precision is required without any higher precision floating-point library. They are represented as a sum of three (or four) double-precision values respectively. They can represent operations with at least 159/161 and 212/215 bits respectively.
+Similar technique can be used to produce a double-quad arithmetic, which is represented as a sum of two quadruple-precision values. They can represent operations with at least 226 (or 227) bits.[9]
+Implementations[edit]
+Quadruple precision is almost always implemented in software by a variety of techniques (such as the double-double technique above, although that technique does not implement IEEE quadruple precision), since direct hardware support for quadruple precision is extremely rare. One can use general arbitrary-precision arithmetic libraries to obtain quadruple (or higher) precision, but specialized quadruple-precision implementations may achieve higher performance.
+Computer-language support[edit]
+A separate question is the extent to which quadruple-precision types are directly incorporated into computer programming languages.
+Quadruple precision is specified in Fortran by the real(real128) (module iso_fortran_env from Fortran 2008 must be used, the constant real128 is equal to 16 on most processors), or as real(selected_real_kind(33, 4931)), or in a non-standard way as REAL*16. (Quadruple-precision REAL*16 is supported by the Intel Fortran Compiler[10] and by the GNU Fortran compiler[11] on x86, x86-64, and Itanium architectures, for example.)
+In the C/C++ with a few systems and compilers, quadruple precision may be specified by the long double type, but this is not required by the language (which only requires long double to be at least as precise as double), nor is it common. On x86 and x86-64, the most common C/C++ compilers implement long double as either 80-bit extended precision (e.g. the GNU C Compiler gcc[12] and the Intel C++ compiler with a /Qlong‑double switch[13]) or simply as being synonymous with double precision (e.g. Microsoft Visual C++[14]), rather than as quadruple precision. On a few other architectures, some C/C++ compilers implement long double as quadruple precision, e.g. gcc on PowerPC (as double-double[15][16][17]) and SPARC,[18] or the Sun Studio compilers on SPARC.[19] Even if long double is not quadruple precision, however, some C/C++ compilers provide a nonstandard quadruple-precision type as an extension. For example, gcc provides a quadruple-precision type called __float128 for x86, x86-64 and Itanium CPUs,[20] and some versions of Intel's C/C++ compiler for x86 and x86-64 supply a nonstandard quadruple-precision type called _Quad.[21]
+Libraries and toolboxes[edit]
+
+The Boost multiprecision library Boost.Multiprecision provides unified cross-platform C++ interface for __float128 and _Quad types, and includes a custom implementation of the standard math library.[22]
+
+
+The Multiprecision Computing Toolbox for MATLAB allows quadruple-precision computations in MATLAB. It includes basic arithmetic functionality as well as numerical methods, dense and sparse linear algebra.[23]
+
+Hardware support[edit]
+Native support of 128-bit floats is defined in SPARC V8[24] and V9[25] architectures (e.g. there are 16 quad-precision registers&#160;%q0,&#160;%q4, ...), but no SPARC CPU implements quad-precision operations in hardware as of 2004[update].[26]
+Non-IEEE extended-precision (128 bit of storage, 1 sign bit, 7 exponent bit, 112 fraction bit, 8 bits unused) was added to the IBM System/370 series (1970s–1980s) and was available on some S/360 models in the 1960s (S/360-85,[27] -195, and others by special request or simulated by OS software). IEEE quadruple precision was added to the S/390 G5 in 1998,[28] and is supported in hardware in subsequent z/Architecture processors.[29][30]
+Quadruple-precision (128-bit) hardware implementation should not be confused with "128-bit FPUs" that implement SIMD instructions, such as Streaming SIMD Extensions or AltiVec, which refers to 128-bit vectors of four 32-bit single-precision or two 64-bit double-precision values that are operated on simultaneously.
+See also[edit]
+
+IEEE 754: IEEE standard for floating-point arithmetic (IEEE 754)
+ISO/IEC 10967, Language Independent Arithmetic
+Primitive data type
+
+References[edit]
+
+
+^ David H. Bailey and Jonathan M. Borwein (July 6, 2009). "High-Precision Computation and Mathematical Physics" (PDF).&#160;
+^ Higham, Nicholas (2002). "Designing stable algorithms" in Accuracy and Stability of Numerical Algorithms (2 ed). SIAM. p.&#160;43.&#160;
+^ William Kahan (1 October 1987). "Lecture Notes on the Status of IEEE Standard 754 for Binary Floating-Point Arithmetic" (PDF).&#160;
+^ a b c d Yozo Hida, X. Li, and D. H. Bailey, Quad-Double Arithmetic: Algorithms, Implementation, and Application, Lawrence Berkeley National Laboratory Technical Report LBNL-46996 (2000). Also Y. Hida et al., Library for double-double and quad-double arithmetic (2007).
+^ a b c J. R. Shewchuk, Adaptive Precision Floating-Point Arithmetic and Fast Robust Geometric Predicates, Discrete &amp; Computational Geometry 18:305-363, 1997.
+^ Knuth, D. E. The Art of Computer Programming (2nd ed.). chapter 4.2.3. problem 9.&#160;
+^ Robert Munafo F107 and F161 High-Precision Floating-Point Data Types (2011).
+^ 128-Bit Long Double Floating-Point Data Type
+^ sourceware.org Re: The state of glibc libm
+^ "Intel Fortran Compiler Product Brief" (PDF). Su. Retrieved 2010-01-23.&#160;
+^ "GCC 4.6 Release Series - Changes, New Features, and Fixes". Retrieved 2010-02-06.&#160;
+^ i386 and x86-64 Options, Using the GNU Compiler Collection.
+^ Intel Developer Site
+^ MSDN homepage, about Visual C++ compiler
+^ RS/6000 and PowerPC Options, Using the GNU Compiler Collection.
+^ Inside Macintosh - PowerPC Numerics
+^ 128-bit long double support routines for Darwin
+^ SPARC Options, Using the GNU Compiler Collection.
+^ The Math Libraries, Sun Studio 11 Numerical Computation Guide (2005).
+^ Additional Floating Types, Using the GNU Compiler Collection
+^ Intel C++ Forums (2007).
+^ "Boost.Multiprecision - float128". Retrieved 2015-06-22.&#160;
+^ Pavel Holoborodko (2013-01-20). "Fast Quadruple Precision Computations in MATLAB". Retrieved 2015-06-22.&#160;
+^ The SPARC Architecture Manual: Version 8 (PDF). SPARC International, Inc. 1992. Retrieved 2011-09-24. SPARC is an instruction set architecture (ISA) with 32-bit integer and 32-, 64-, and 128-bit IEEE Standard 754 floating-point as its principal data types.&#160;
+^ David L. Weaver, Tom Germond, ed. (1994). The SPARC Architecture Manual: Version 9 (PDF). SPARC International, Inc. Retrieved 2011-09-24. Floating-point: The architecture provides an IEEE 754-compatible floating-point instruction set, operating on a separate register file that provides 32 single-precision (32-bit), 32 double-precision (64-bit), 16 quad-precision (128-bit) registers, or a mixture thereof.&#160;
+^ "SPARC Behavior and Implementation". Numerical Computation Guide — Sun Studio 10. Sun Microsystems, Inc. 2004. Retrieved 2011-09-24. There are four situations, however, when the hardware will not successfully complete a floating-point instruction: ... The instruction is not implemented by the hardware (such as ... quad-precision instructions on any SPARC FPU).&#160;
+^ "Structural aspects of the system/360 model 85: III extensions to floating-point architecture", Padegs, A., IBM Systems Journal, Vol:7 No:1 (March 1968), pp.&#160;22–29
+^ "The S/390 G5 floating-point unit", Schwarz, E. M. and Krygowsk, C. A., IBM Journal of Research and Development, Vol:43 No: 5/6 (1999), p.707
+^ Gerwig, G. and Wetter, H. and Schwarz, E. M. and Haess, J. and Krygowski, C. A. and Fleischer, B. M. and Kroener, M. (May 2004). "The IBM eServer z990 floating-point unit. IBM J. Res. Dev. 48; pp. 311-322".&#160;
+^ Eric Schwarz (June 22, 2015). ""The IBM z13 SIMD Accelerators for Integer, String, and Floating-Point"" (PDF). Retrieved July 13, 2015.&#160;
+
+
+External links[edit]
+
+High-Precision Software Directory
+QPFloat, a free software (GPL) software library for quadruple-precision arithmetic
+HPAlib, a free software (LGPL) software library for quad-precision arithmetic
+libquadmath, the GCC quad-precision math library
+IEEE-754 Analysis, Interactive web page for examining Binary32, Binary64, and Binary128 floating-point values
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Quadruple-precision_floating-point_format&amp;oldid=688044532"					
+				Categories: Binary arithmeticFloating point typesHidden categories: Articles containing potentially dated statements from 2004All articles containing potentially dated statements				
+							
+		
+		
+			

@@ -1,0 +1,173 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Smart pointer
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2015)
+
+
+A smart pointer is an abstract data type that simulates a pointer while providing additional features, such as automatic memory management or bounds checking. These additional features are intended to reduce bugs caused by the misuse of pointers while retaining efficiency. Smart pointers typically keep track of the memory they point to. They may also be used to manage other resources, such as network connections and file handles. Smart pointers originated in the C++ programming language.
+Misuse of pointers can be major source of bugs. Smart pointers prevent most situations of memory leaks by making the memory deallocation automatic. More generally, they make object destruction automatic: the object controlled by a smart pointer is automatically destroyed (finalized and then deallocated) when the last (or only) owner of the object is destroyed, for example because the owner is a local variable, and execution leaves the variable's scope. Smart pointers also eliminate dangling pointers by postponing destruction until the object is no longer in use.
+Several types of smart pointers exist. Some work with reference counting, others by assigning ownership of the object to a single pointer. If a language supports automatic garbage collection (for instance, Java or C#), then smart pointers are not needed for the reclamation and safety aspects of memory management, but are nevertheless useful for other purposes, such as cache data structure residence management and resource management of objects such as file handles or network sockets.[citation needed]
+
+
+
+Contents
+
+
+1 Features
+2 Creating new objects
+3 unique_ptr
+4 shared_ptr and weak_ptr
+5 See also
+6 References
+7 External links
+
+
+
+Features[edit]
+In C++, a smart pointer is implemented as a template class that mimics, by means of operator overloading, the behaviors of a traditional (raw) pointer, (e.g. dereferencing, assignment) while providing additional memory management features.
+Smart pointers can facilitate intentional programming by expressing in the type itself how the memory of the referent of the pointer will be managed. For example, if a C++ function returns a pointer, there is no way to know whether the caller should delete the memory of the referent when the caller is finished with the information.
+
+
+some_type* ambiguous_function(); // What should be done with the result?
+
+Traditionally, naming conventions have been used to resolve the ambiguity,[1] which is an error-prone, labor-intensive approach. C++11 introduced a way to ensure correct memory management in this case by declaring the function to return a unique_ptr,
+
+
+unique_ptr&lt;some_type&gt; obvious_function1();
+
+The declaration of the function return type as a unique_ptr makes explicit the fact that the caller takes ownership of the result, and the C++ runtime ensures that the memory for *some_type will be reclaimed automatically. Prior to C++11, unique_ptr can be replaced with auto_ptr.
+Creating new objects[edit]
+To ease the allocation of a
+
+
+std::shared_ptr&lt;some_type&gt;
+
+C++11 introduced:
+
+
+ auto s = std::make_shared&lt;some_type&gt;(constructor, parameters, here);
+
+and similarly
+
+
+std::unique_ptr&lt;some_type&gt;
+
+Since C++14 one can use:
+
+
+ auto u = std::make_unique&lt;some_type&gt;(constructor, parameters, here);
+
+It is preferred, in almost all circumstances, to use these facilities over the new keyword:[2]
+unique_ptr[edit]
+C++11 introduces std::unique_ptr, defined in the header &lt;memory&gt;.[3]
+A unique_ptr is a container for a raw pointer, which the unique_ptr is said to own. A unique_ptr explicitly prevents copying of its contained pointer (as would happen with normal assignment), but the std::move function can be used to transfer ownership of the contained pointer to another unique_ptr. A unique_ptr cannot be copied because its copy constructor and assignment operators are explicitly deleted.
+
+
+std::unique_ptr&lt;int&gt; p1(new int(5));
+std::unique_ptr&lt;int&gt; p2 = p1; //Compile error.
+std::unique_ptr&lt;int&gt; p3 = std::move(p1); //Transfers ownership. p3 now owns the memory and p1 is rendered invalid.
+
+p3.reset(); //Deletes the memory.
+p1.reset(); //Does nothing.
+
+std::auto_ptr is still available, but it is deprecated under C++11. The copy constructor and assignment operators of auto_ptr do not actually copy the stored pointer. Instead, they transfer it, leaving the previous auto_ptr object empty. This was one way to implement strict ownership, so that only one auto_ptr object could own the pointer at any given time. This means that auto_ptr should not be used where copy semantics are needed.[4] Since auto_ptr already existed with its copy semantics, it could not be upgraded to be a move-only pointer without breaking backwards compatibility with existing code
+shared_ptr and weak_ptr[edit]
+C++11 introduces std::shared_ptr and std::weak_ptr, defined in the header &lt;memory&gt;.[3]
+A shared_ptr is a container for a raw pointer. It maintains reference-counted ownership of its contained pointer in cooperation with all copies of the shared_ptr. The object referenced by the contained raw pointer will be destroyed when and only when all copies of the shared_ptr have been destroyed.
+
+
+std::shared_ptr&lt;int&gt; p1(new int(5));
+std::shared_ptr&lt;int&gt; p2 = p1; //Both now own the memory.
+
+p1.reset(); //Memory still exists, due to p2.
+p2.reset(); //Deletes the memory, since no one else owns the memory.
+
+A weak_ptr is a container for a raw pointer. It is created as a copy of a shared_ptr. The existence or destruction of weak_ptr copies of a shared_ptr have no effect on the shared_ptr or its other copies. After all copies of a shared_ptr have been destroyed, all weak_ptr copies become empty.
+
+
+std::shared_ptr&lt;int&gt; p1(new int(5));
+std::weak_ptr&lt;int&gt; wp1 = p1; //p1 owns the memory.
+
+{
+  std::shared_ptr&lt;int&gt; p2 = wp1.lock(); //Now p1 and p2 own the memory.
+  if(p2) // As p2 is initialized from a weak pointer, you have to check if the memory still exists!
+  {
+    //Do something with p2
+  }
+} //p2 is destroyed. Memory is owned by p1.
+
+p1.reset(); //Memory is deleted.
+
+std::shared_ptr&lt;int&gt; p3 = wp1.lock(); //Memory is gone, so we get an empty shared_ptr.
+if(p3)
+{
+  //Will not execute this.
+}
+
+Because the implementation of shared_ptr uses reference counting, circular references are potentially a problem. A circular shared_ptr chain can be broken by changing the code so that one of the references is a weak_ptr.
+Multiple threads can safely simultaneously access different shared_ptr and weak_ptr objects that point to the same object.[5]
+The referenced object itself needs to be protected separately to ensure thread safety.
+shared_ptr and weak_ptr are based on versions used by the Boost libraries.[citation needed] TR1 first introduced them to the standard, but C++11 gives them additional functionality in line with the Boost version.
+See also[edit]
+
+Resource Acquisition Is Initialization
+auto_ptr
+Opaque pointer
+Reference (computer science)
+Boost library
+
+References[edit]
+
+
+^ "Taligent's Guide to Designing Programs, section Use special names for copy, create, and adopt routines".&#160;
+^ Sutter, Herb (20 April 2013). "Trip Report: ISO C++ Spring 2013 Meeting". isocpp.org. Retrieved 14 June 2013.&#160;
+^ a b ISO&#160;14882:2011 20.7.1
+^ CERT C++ Secure Coding Standard
+^ boost::shared_ptr thread safety (does not formally cover std::shared_ptr, but is believed to have the same threading limitations)
+
+
+External links[edit]
+
+Smart Pointers. Modern C++ Design: Generic Programming and Design Patterns Applied by Andrei Alexandrescu, Addison-Wesley, 2001.
+countptr.hpp. The C++ Standard Library - A Tutorial and Reference by Nicolai M. Josuttis
+Boost Smart Pointers
+The New C++: Smart(er) Pointers. Herb Sutter August 1, 2002
+Smart Pointers - What, Why, Which?. Yonat Sharon
+Smart Pointers Overview. John M. Dlugosz
+Smart Pointers in Delphi
+Smart Pointers in Rust
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Smart_pointer&amp;oldid=690750494"					
+				Categories: Data typesHidden categories: Articles needing additional references from June 2015All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from November 2015Articles with unsourced statements from January 2014Articles with example C++ code				
+							
+		
+		
+			

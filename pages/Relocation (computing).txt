@@ -1,0 +1,242 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Relocation (computing)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (March 2011)
+
+
+Relocation is the process of assigning load addresses to various parts of a program and adjusting the code and data in the program to reflect the assigned addresses.[1] A linker usually performs relocation in conjunction with symbol resolution, the process of searching files and libraries to replace symbolic references or names of libraries with actual usable addresses in memory before running a program.
+Relocation is typically done by the linker at link time, but it can also be done at run time by a relocating loader, or by the running program itself. Some architectures avoid relocation entirely by deferring address assignment to run time; this is known as zero address arithmetic.
+
+
+
+Contents
+
+
+1 Relocation procedure
+2 Relocation table
+
+2.1 16-bit Windows
+2.2 32-bit Windows
+2.3 64-bit Windows
+2.4 Unix-like systems
+
+
+3 Example
+4 See also
+5 References
+
+
+
+Relocation procedure[edit]
+Relocation is typically done in two steps:
+
+Each object file has various sections like code, data, .bss etc. To combine all the objects to a single executable, the linker merges all sections of similar type into a single section of that type. The linker then assigns run time addresses to each section and each symbol. At this point, the code (functions) and data (global variables) will have unique run time addresses.
+Each section refers to one or more symbols which should be modified so that they point to the correct run time addresses based on information stored in a relocation table in the object file.
+
+Relocation table[edit]
+The relocation table is a list of pointers created by the compiler or assembler and stored in the object or executable file. Each entry in the table, or "fixup", is a pointer to an address in the object code that must be changed when the loader relocates the program. Fixups are designed to support relocation of the program as a complete unit. In some cases, each fixup in the table is itself relative to a base address of zero, so the fixups themselves must be changed as the loader moves through the table.[2]
+In some architectures a fixup that crosses certain boundaries (such as a segment boundary) or that is not aligned on a word boundary is illegal and flagged as an error by the linker.[3]
+16-bit Windows[edit]
+Far pointers (32-bit pointers with segment:offset, used to address 20-bit 640 KB memory space available to DOS programs), which point to code or data within an DOS executable (EXE) do not have absolute segments, because the actual address of code/data depends on where the program is loaded in memory and this is not known until the program is loaded.
+Instead, segments are relative values in the DOS EXE file. These segments need to be corrected, when the executable has been loaded into memory. The EXE loader uses a relocation table to find the segments which need to be adjusted.
+32-bit Windows[edit]
+With 32-bit Windows operating systems it is not mandatory to provide relocation tables for EXE files, since they are the first image loaded into the virtual address space and thus will be loaded at their preferred base address.
+For both DLLs and for EXEs which opt into Address Space Layout Randomisation - an exploit mitigation technique introduced with Windows Vista, relocation tables once again become mandatory because of the possibility that the binary may be dynamically moved before being executed, even though they are still the first thing loaded in the virtual address space.
+64-bit Windows[edit]
+When running native 64-bit binaries on Windows Vista and above, ASLR (Address Space Layout Randomization) is mandatory[citation needed], and thus relocation sections cannot be omitted by the compiler.
+Unix-like systems[edit]
+The ELF executable format and SO shared library format used by most Unix-like systems allows several types of relocation to be defined.
+Example[edit]
+The following example uses Donald Knuth's MIX architecture and MIXAL assembly language. The principles are the same for any architecture, though the details will change.
+
+(A) Program SUBR is compiled to produce object file(B), shown as both machine code and assembler. The compiler may start the compiled code at an arbitrary location, often location zero as shown. Location 13 contains the machine code for the jump instruction to statement ST in location 5.
+(C) If SUBR is later linked with other code it may be stored at a location other than zero. In this example the linker places it at location 120. The address in the jump instruction, which is now at location 133, must be relocated to point to the new location of the code for statement ST, now 125. [1 61 shown in the instruction is the MIX machine code representation of 125].
+(D) When the program is loaded into memory to run it may be loaded at some location other than the one assigned by the linker. This example shows SUBR now at location 300. The address in the jump instruction, now at 313, needs to be relocated again so that it points to the updated location of ST, 305. [4 49 is the MIX machine representation of 305].
+
+
+See also[edit]
+
+Linker (computing)
+Library (computing)
+Object file
+Prebinding
+Static library
+Self-relocation
+Position-independent code
+Rebasing
+
+References[edit]
+
+
+^ John R. Levine (October 1999). "Chapter 1: Linking and Loading". Linkers and Loaders. Morgan-Kauffman. p.&#160;5. ISBN&#160;1-55860-496-0.&#160;
+^ John R. Levine (October 1999). "Chapter 3: Object Files". Linkers and Loaders. Morgan-Kauffman. ISBN&#160;1-55860-496-0.&#160;
+^ "Borland article #15961: Coping with 'Fixup Overflow' messages". Archived from the original on 2007-03-24. Retrieved 2007-01-15.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Executable and object file formats
+
+
+
+
+
+
+
+
+
+a.out
+AIF
+COFF
+CMD
+COM
+ECOFF
+ELF
+GOFF
+Hunk
+Mach-O
+MZ
+NE
+OMF
+OS/360
+PE
+PEF
+XCOFF
+
+
+
+
+
+
+
+
+
+
+
+Comparison of formats
+.exe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Relocation_(computing)&amp;oldid=634019135"					
+				Categories: Computer librariesHidden categories: Articles needing additional references from March 2011All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from January 2014				
+							
+		
+		
+			

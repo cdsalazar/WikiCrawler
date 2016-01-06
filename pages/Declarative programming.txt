@@ -1,0 +1,446 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Declarative programming
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (April 2010)
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (February 2015)
+
+
+
+
+
+
+
+
+
+
+Programming paradigms
+
+
+
+
+Action
+Agent-oriented
+Array-oriented
+Automata-based
+Concurrent computing
+
+Relativistic programming
+
+
+Data-driven
+Declarative (contrast: Imperative)
+
+Constraint
+
+Constraint logic
+
+Concurrent constraint logic
+
+
+
+
+Dataflow
+
+Flow-based
+Cell-oriented (spreadsheets)
+Reactive
+
+
+Functional
+
+Functional logic
+Purely functional
+
+
+Logic
+
+Abductive logic
+Answer set
+Concurrent logic
+Functional logic
+Inductive logic
+
+
+
+
+End-user programming
+Event-driven
+
+Service-oriented
+Time-driven
+
+
+Expression-oriented
+Feature-oriented
+Function-level (contrast: Value-level)
+Generic
+Imperative (contrast: Declarative)
+
+Literate
+Procedural
+
+
+Inductive programming
+Language-oriented
+
+Natural language programming
+Discipline-specific
+Domain-specific
+Grammar-oriented
+
+Dialecting
+
+
+Intentional
+
+
+Metaprogramming
+
+Automatic
+Reflective
+
+Attribute-oriented
+
+
+Homoiconic
+Template
+
+Policy-based
+
+
+
+
+Non-structured (contrast: Structured)
+
+Array
+
+
+Nondeterministic
+Parallel computing
+
+Process-oriented
+
+
+Point-free style
+
+Concatenative
+
+
+Semantic
+Structured (contrast: Non-structured)
+
+Block-structured
+Modular (contrast: Monolithic)
+Object-oriented (OOP)
+
+Class-based
+Concurrent
+Prototype-based
+By separation of concerns:
+
+Aspect-oriented
+Role-oriented
+Subject-oriented
+
+
+
+
+Recursive
+
+
+Value-level (contrast: Function-level)
+Probabilistic
+Concept
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In computer science, declarative programming is a programming paradigm, a style of building the structure and elements of computer programs, that expresses the logic of a computation without describing its control flow.[1] Many languages applying this style attempt to minimize or eliminate side effects by describing what the program should accomplish in terms of the problem domain, rather than describing how to go about accomplishing it as a sequence of the programming language primitives[2] (the how being left up to the language's implementation). This is in contrast with imperative programming, in which algorithms are implemented in terms of explicit steps.
+Declarative programming often considers programs as theories of a formal logic, and computations as deductions in that logic space. Declarative programming may greatly simplify writing parallel programs.[3]
+Common declarative languages include those of database query languages (e.g., SQL, XQuery), regular expressions, logic programming, functional programming, and configuration management systems.
+
+
+
+Contents
+
+
+1 Definition
+2 Subparadigms
+
+2.1 Constraint programming
+2.2 Domain-specific languages
+2.3 Functional programming
+2.4 Hybrid languages
+2.5 Logic programming
+2.6 Modeling
+
+
+3 See also
+4 References
+5 External links
+
+
+
+Definition[edit]
+Declarative programming is often defined as any style of programming that is not imperative. A number of other common definitions exist that attempt to give the term a definition other than simply contrasting it with imperative programming. For example:
+
+A program that describes what computation should be performed and not how to compute it
+Any programming language that lacks side effects (or more specifically, is referentially transparent)
+A language with a clear correspondence to mathematical logic.[4]
+
+These definitions overlap substantially.
+Declarative programming contrasts with imperative and procedural programming. Declarative programming is a non-imperative style of programming in which programs describe their desired results without explicitly listing commands or steps that must be performed. Functional and logical programming languages are characterized by a declarative programming style. In logical programming languages, programs consist of logical statements, and the program executes by searching for proofs of the statements.
+In a pure functional language, such as Haskell, all functions are without side effects, and state changes are only represented as functions that transform the state, which is explicitly represented as a first class object in the program. Although pure functional languages are non-imperative, they often provide a facility for describing the effect of a function as a series of steps. Other functional languages, such as Lisp, OCaml and Erlang, support a mixture of procedural and functional programming.
+Some logical programming languages, such as Prolog, and database query languages, such as SQL, while declarative in principle, also support a procedural style of programming.
+Subparadigms[edit]
+Declarative programming is an umbrella term that includes a number of better-known programming paradigms.
+Constraint programming[edit]
+In constraint programming, relations between variables are stated in the form of constraints, specifying the properties of a solution to be found. The set of constraints is then solved by giving a value to each variable so that the solution is consistent with the maximum number of constraints.
+Constraint programming is often used as a complement to other paradigms: functional, logical or even imperative programming.
+Domain-specific languages[edit]
+Some well-known examples of declarative domain-specific languages (DSLs) include the yacc parser generator input language, the Make build specification language, Puppet's configuration management language, regular expressions, and a subset of SQL (SELECT queries, for example). DSLs have the advantage of being useful while not necessarily needing to be Turing-complete, which makes it easier for a language to be purely declarative.
+Many markup languages such as HTML, MXML, XAML, XSLT or other user-interface markup languages are often declarative. HTML, for example, only describes what should appear on a webpage - it specifies control flow neither rendering a page nor its possible interactions with a user.
+As of 2013[update] some software systems combine traditional user-interface markup languages (such as HTML) with declarative markup that defines what (but not how) the back-end server systems should do to support the declared interface. Such systems, typically using a domain-specific XML namespace, may include abstractions of SQL database syntax or parameterised calls to web services using representational state transfer (REST) and SOAP.
+Functional programming[edit]
+Functional programming, and in particular purely functional programming, attempts to minimize or eliminate side effects, and is therefore considered declarative. Most[citation needed] functional languages, such as Scheme, Clojure, Erlang, Haskell, OCaml, Standard ML and Unlambda, however, do permit side effects in practice.
+While functional languages typically do appear to specify "how", a compiler for a purely functional programming language is free to extensively rewrite the operational behavior of a function, so long as the same result is returned for the same inputs. This can be used to, for example, make a function compute its result in parallel, or to perform substantial optimizations (such as deforestation) that a compiler may not be able to safely apply to a language with side effects.
+Hybrid languages[edit]
+See also: Multi-paradigm programming language
+Makefiles, for example, specify dependencies in a declarative fashion,[5] but include an imperative list of actions to take as well. Similarly, yacc specifies a context free grammar declaratively, but includes code snippets from a host language, which is usually imperative (such as C).
+Logic programming[edit]
+Logic programming languages such as Prolog state and query relations. The specifics of how these queries are answered is up to the implementation and its theorem prover, but typically take the form of some sort of unification. Like functional programming, many logic programming languages permit side effects, and as a result are not strictly declarative.
+Modeling[edit]
+Main article: Mathematical model
+Models, or mathematical representations, of physical systems may be implemented in computer code that is declarative. The code contains a number of equations, not imperative assignments, that describe ("declare") the behavioral relationships. When a model is expressed in this formalism, a computer is able to perform algebraic manipulations to best formulate the solution algorithm. The mathematical causality is typically imposed at the boundaries of the physical system, while the behavioral description of the system itself is declarative or acausal. Declarative modeling languages and environments include Analytica, Modelica and Simile.[6]
+See also[edit]
+
+List of declarative programming languages
+Comparison of programming paradigms
+Inductive programming
+
+References[edit]
+
+
+^ Lloyd, J.W., Practical Advantages of Declarative Programming&#160;
+^ Declarative language in The Free On-line Dictionary of Computing, Editor Denis Howe.
+^ "DAMP 2009: Workshop on Declarative Aspects of Multicore Programming". Cse.unsw.edu.au. 2009-01-20. Retrieved 2013-08-15.&#160;
+^ Chakravarty, Manuel M. T. (14 February 1997). On the Massively Parallel Execution of Declarative Programs (Doctoral dissertation). Technische Universität Berlin. Retrieved 26 February 2015. In this context, the criterion for calling a programming language declarative is the existence of a clear, mathematically established correspondence between the language and mathematical logic such that a declarative semantics for the language can be based on the model or the proof theory (or both) of the logic.&#160;
+^ [1] Archived October 23, 2007 at the Wayback Machine
+^ "Declarative modelling". Simulistics. Retrieved 2013-08-15.&#160;
+
+
+External links[edit]
+
+Frans Coenen. Characteristics of declarative programming languages. 1999.
+Robert Harper.
+
+What, If Anything, Is A Declarative Language?. 2013.
+There Is Such A Thing As A Declarative Language, and It’s The World’s Best DSL. 2013.
+
+
+Olof Torgersson. A Note on Declarative Programming Paradigms and the Future of Definitional Programming. 1996.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+LCCN: sh93000071
+GND: 4293503-9
+BNF: cb123495726 (data)
+BNE: XX538968
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Declarative_programming&amp;oldid=691137031"					
+				Categories: Declarative programmingProgramming paradigmsHidden categories: Articles lacking in-text citations from April 2010All articles lacking in-text citationsArticles needing additional references from February 2015All articles needing additional referencesArticles containing potentially dated statements from 2013All articles containing potentially dated statementsAll articles with unsourced statementsArticles with unsourced statements from August 2015Wikipedia articles with LCCN identifiersWikipedia articles with GND identifiersWikipedia articles with BNF identifiers				
+							
+		
+		
+			

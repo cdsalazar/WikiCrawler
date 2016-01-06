@@ -1,0 +1,56 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Magic cookie
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				A magic cookie, or just cookie for short, is a token or short packet of data passed between communicating programs, where the data is typically not meaningful to the recipient program. The contents are opaque and not usually interpreted until the recipient passes the cookie data back to the sender or perhaps another program at a later time. The cookie is often used like a ticket&#160;–  to identify a particular event or transaction.[1]
+In some cases, recipient programs are able to meaningfully compare two cookies for equality.
+Cookie as token[edit]
+An analogy is the token supplied at a coat check (cloakroom) counter in real life. The token has no intrinsic meaning, but its uniqueness allows it to be exchanged for the correct coat when returned to the coat check counter. The coat check token is opaque because the way in which the counter staff are able to find the correct coat when the token is presented is immaterial to the person who wishes their coat returned. In other cases (as is possible with HTTP cookies), the actual data of interest can be stored as name–value pairs directly on the cookie.
+Cookies are used as identifying tokens in many computer applications.[2] When one visits a website, the remote server may leave an HTTP cookie on one's computer, where they are often used to authenticate identity upon returning to the website.[3]
+Cookies are a component of the most common authentication method used by the X Window System.[4]
+See also[edit]
+
+Magic number (programming)
+
+
+Ticket (IT security)
+HTTP cookie
+
+References[edit]
+
+
+^ Raymond, Eric. "Cookie". The Jargon File. Retrieved 2014-02-03.&#160;
+^ "Distributed Erlang". erlang.org. Retrieved 2014-02-03.&#160;
+^ "RFC 6265 - HTTP State Management Mechanism". Tools.ietf.org. Retrieved 2014-02-03.&#160;
+^ "Xsecurity". X.org. Retrieved 2014-02-03.&#160;
+
+
+This article is based on material taken from the Free On-line Dictionary of Computing prior to 1 November 2008 and incorporated under the "relicensing" terms of the GFDL, version 1.3 or later.
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Magic_cookie&amp;oldid=683739953"					
+				Categories: Data transmission				
+							
+		
+		
+			

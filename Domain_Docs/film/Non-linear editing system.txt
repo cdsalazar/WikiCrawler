@@ -1,0 +1,341 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Non-linear editing system
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For non-linear or non-destructive editing of 2D images, see NLE (disambiguation).
+
+
+
+
+
+It has been suggested that Non-destructive editing be merged into this article. (Discuss) Proposed since June 2015.
+
+
+A non-linear editing system (NLE) is a video (NLVE) or audio editing (NLAE) digital audio workstation (DAW) system that performs non-destructive editing on source material. The name is in contrast to 20th century methods of linear video editing and film editing.
+
+
+
+
+Example of a non-linear video editing studio
+
+
+
+
+
+Contents
+
+
+1 Linear and non-linear editing
+
+1.1 Metadata
+1.2 Direct access
+1.3 Basic techniques
+
+
+2 Broadcast workflows and advantages
+3 Accessing the material
+4 Repartition of editors brands in broadcast industry
+5 Domestic usage
+6 History
+
+6.1 First non-linear editor
+6.2 The 1980s
+6.3 The 1990s
+6.4 DV
+6.5 HD
+6.6 4K
+
+
+7 Quality
+8 See also
+9 References
+10 External links
+
+
+
+Linear and non-linear editing[edit]
+Non-linear editing is the most natural approach when all assets are available as files on video servers or hard disks, rather than recordings on reels or tapes—while linear editing is tied to the need to sequentially view film or hear tape.
+Metadata[edit]
+When ingesting audio or video feeds, metadata are attached to the clip. Those metadata can be attached automatically (timecode, localization, take number, name of the clip) or manually (players names, characters, in sports: red card, goal...).
+Direct access[edit]
+Non-linear editing enables direct access to any video frame in a digital video clip, without needing to play or scrub/shuttle through adjacent footage to reach it, as was necessary with historical video tape linear editing systems. It is now possible to access any frame by entering directly the timecode or the descriptive metadata. An editor can, for example at the end of the day in the Olympic Games, ask to retrieve all the clips related to the players who received a gold medal.
+Basic techniques[edit]
+The NLE method is similar in concept to the "cut and paste" techniques used in film editing or in IT. However, with the use of non-linear editing systems, the destructive act of cutting of film negatives is eliminated. It can also be viewed as the audio/video equivalent of word processing, which is why it is called desktop video editing in the consumer space.[1]
+Broadcast workflows and advantages[edit]
+Video and audio data are first captured to video servers, other hard disk-based systems, or other digital storage devices. The data are either direct to disk recording or are imported from another source (transcoding, digitizing, transfer). Once imported, the source material can be edited on a computer using application software, any of a wide range of video editing software. For a comprehensive list of available software, see List of video editing software, whereas Comparison of video editing software gives more detail of features and functionality.
+In non-linear editing, the original source files are not lost or modified during editing. This is one of the biggest advantages of non-linear editing compared to linear editing.
+Professional editing software records the editor's decisions in an edit decision list (EDL) that is exportable to other editing tools. Many generations and variations of the original source files can exist without storing many different copies, allowing for very flexible editing. It also makes it easy to change cuts and undo previous decisions simply by editing the edit decision list (without having to have the actual film data duplicated). Generation loss is also controlled, due to not having to repeatedly re-encode the data when different effects are applied.
+Compared to the linear method of tape-to-tape editing, non-linear editing offers the flexibility of film editing, with random access and easy project organization. With the edit decision lists, the editor can work on low-resolution copies of the video. This makes it possible to edit both standard-definition broadcast quality and high definition broadcast quality very quickly on desktop computers that may not have the power to process huge full-quality high-resolution data in real-time.
+The costs of editing systems have dropped such that non-linear editing tools are now within the reach of home users. Some editing software can now be accessed free as web applications; some, like Cinelerra (focused on the professional market) and Blender3D, can be downloaded as free software; and some, like Microsoft's Windows Movie Maker or Apple Inc.'s iMovie, come included with the appropriate operating system.
+Accessing the material[edit]
+The non-linear editing retrieves video media for editing. Because these media exist on the video server or other mass storage that stores the video feeds in a given codec, the editing system can use several methods to access the material:
+
+Direct access: the video server records feeds with a codec readable by the editing system, has an Ethernet connection and allows direct editing. The editor previews material directly on the server (which it sees as remote storage) and edits directly on the server without transcoding or transfer. This method is new.
+Shared storage: the video server transfers feeds to and from shared storage that is accessible by all editors. Media in the appropriate codec on the server need only transferred. If recorded with a different codec, media must be transcoded during transfer. In some cases (depending on material), files on shared storage can be edited even before the transfer is finished.
+Importing: the editor downloads the material and edits it locally. This method can be used with the previous methods.
+
+Repartition of editors brands in broadcast industry[edit]
+According to reports, Avid's Media Composer is still the most-used NLE on prime-time TV productions, being employed on up to 90 percent of evening broadcast shows.[2] Apple's Final Cut Pro 7 software is being used by 54.6 percent of the professional editing community.[3] Globally, Avid Media Composer was once more used by broadcasters, and Final Cut Pro more by domestic users. This positioning has changed, and many more editing platforms now exist; like the Edius Pro - manufactured by Grass Valley - which has a reasonable share, due its capability to do what both Avid and Final Cut combined.
+Domestic usage[edit]
+A multimedia computer for non-linear editing of video may have a video capture card to capture analog video and/or a FireWire connection to capture digital video from a DV camera, with its video editing software. Modern web-based editing systems can take video directly from a camera phone over a GPRS or 3G mobile connection, and editing can take place through a web browser interface, so, strictly speaking, a computer for video editing does not require any installed hardware or software beyond a web browser and an internet connection.
+Various editing tasks can then be performed on the imported video before it is exported to another medium, or MPEG encoded for transfer to a DVD.
+History[edit]
+
+
+
+
+
+This article may need to be rewritten entirely to comply with Wikipedia's quality standards, as section. You can help. The discussion page may contain suggestions. (May 2012)
+
+
+First non-linear editor[edit]
+The first truly non-linear editor, the CMX 600, was introduced in 1971 by CMX Systems, a joint venture between CBS and Memorex.[4][5] It recorded &amp; played back black-and-white analog video recorded in "skip-field" mode on modified disk pack drives the size of washing machines. These were commonly used to store about half an hour of data digitally on mainframe computers of the time. The 600 had a console with 2 monitors built in. The right monitor, which played the preview video, was used by the editor to make cuts and edit decisions using a light pen. The editor selected from options superimposed as text over the preview video. The left monitor was used to display the edited video. A Digital PDP-11 computer served as a controller for the whole system. Because the video edited on the 600 was in black and white and in low-resolution "skip-field" mode, the 600 was suitable only for offline editing.
+The 1980s[edit]
+Various approximations of non-linear editing systems were built in the '80s using computers coordinating multiple laser discs, or banks of VCRs. One example of these tape &amp; disc-based systems was Lucasfilm's EditDroid, which used several laserdiscs of the same raw footage to simulate random-access editing (a compatible system was developed for sound post-production by Lucasfilm called SoundDroid—one of the earliest digital audio workstations). The LA-based post house Laser Edit (which later merged with Pacific Video as Laser-Pacific) also had an in-house system using recordable random-access laserdiscs. The most popular non-linear system was Ediflex, which used a bank of multiple Sony JVC VCRs for offline editing. Ediflex was introduced in 1983 on the Universal series "Still the Beaver," edited by Herb Dow, A.C.E. By 1985 it was used on over 80% of filmed network programs. In 1985 Cinedco was awarded the Technical Emmy for "Design and Implementation of Non-Linear Editing for Filmed Programs. Adrian Ettlinger, Herb Dow A.C.E., Milt Forman and Andy Maltz shared the award, All were slow, cumbersome, and had problems with the limited computer horsepower of the time, but the mid-to-late-1980s saw a trend towards non-linear editing, moving away from film editing on Movieolas and the linear videotape method (usually employing 3/4" VCRs).[citation needed]
+"In 1984 Montage and Editdroid were demonstrated at NAB. Montage used 17 identical copies of a set of film rushes on domestic Betamax cassettes running under time code and computer control to provide a simulation of random access editing. Editdroid used analogue videodisks. Like all nonlinear editing systems, all that was edited was the ‘play list’—the set of instructions telling the equipment how to replay the picture and sound.
+The theory was that with so many copies of the rushes, there could always be one machine cued up to replay the next shot in real time. Changing the play list could be done easily, and the results seen immediately. The practice wasn’t quite so simple and the first Montage was not a great success, although Stanley Kubrick used it for “Full Metal Jacket”
+Montage was reincarnated as Montage II in 1987, and Montage III appeared at NAB in 1991, using digital disk technology, which should prove to be considerably less cumbersome than the Betamax system.
+Although Montage has some success with feature films, it was “Ediflex”, using a similar principle but with multiple VHS machines, which captured most of the television market in the US (Dallas, Dynasty, Falcon Crest etc.). In 1989 they introduced a PAL version and Yorkshire TV became the first British television company to use nonlinear methods in a routine way." Richard Seel. http://www.articles.adsoft.org/
+The 1990s[edit]
+The term "nonlinear editing" or "non-linear editing" was formalized in 1991 with the publication of Michael Rubin's Nonlinear: A Guide to Digital Film and Video Editing (Triad, 1991)—which popularized this terminology over other language common at the time, including "real time" editing, "random-access" or "RA" editing, "virtual" editing, "electronic film" editing, and so on. The handbook has remained in print since 1991, currently in its 4th edition (Triad, 2000)[6]
+Computer processing advanced sufficiently by the end of the '80s to enable true digital imagery, and has progressed today to provide this capability in personal desktop computers.
+An example of computing power progressing to make non-linear editing possible was demonstrated in the first all-digital non-linear editing system, the "Harry" effects compositing system manufactured by Quantel in 1985. Although it was more of a video effects system, it had some non-linear editing capabilities. Most importantly, it could record (and apply effects to) 80 seconds (due to hard disk space limitations) of broadcast-quality uncompressed digital video encoded in 8-bit CCIR 601 format on its built-in hard disk array.
+Non-linear editing with computers as it is known today was first introduced by Editing Machines Corp. in 1989 with the EMC2 editor, a PC-based non-linear off-line editing system that utilized magneto-optical disks for storage and playback of video, using half-screen-resolution video at 15 frames per second. A couple of weeks later that same year, Avid introduced the Avid/1, the first in the line of their Media Composer systems. It was based on the Apple Macintosh computer platform (Macintosh II systems were used) with special hardware and software developed and installed by Avid. The Avid/1 was not the first system to introduce modern concepts in non-linear editing such as timeline editing and clip bins—both of those were pioneered in Lucasfilm's EditDroid in the early 1980s.
+The video quality of the Avid/1 (and later Media Composer systems from the late 1980s) was somewhat low (about VHS quality), due to the use of a very early version of a Motion JPEG (M-JPEG) codec. it was sufficient, however, to provide a versatile system for offline editing, to revolutionize video and film editing. The first long-form documentary so edited was the HBO program Earth and the American Dream, which won a National Primetime Emmy Award for Editing in 1993. Avid quickly became the dominant NLE platform.
+The NewTek Video Toaster Flyer for the Amiga included non-linear editing capabilities in addition to processing live video signals. The Flyer used hard drives to store video clips and audio, and supported complex scripted playback. The Flyer provided simultaneous dual-channel playback, which let the Toaster's Video switcher perform transitions and other effects on Video clips without additional rendering. The Flyer portion of the Video Toaster/Flyer combination was a complete computer of its own, having its own microprocessor and embedded software. Its hardware included three embedded SCSI controllers. Two of these SCSI buses were used to store video data, and the third to store audio. The Flyer used a proprietary Wavelet compression algorithm known as VTASC, which was well regarded at the time for offering better visual quality than comparable Motion JPEG based non-linear editing systems.
+Until 1993, the Avid Media Composer was most often used for editing commercials or other small content/high value projects. This was primarily because the purchase cost of the system was very high, especially in comparison to the offline tape-based systems that were then in general use. Hard disk storage was also expensive enough to be a limiting factor on the quality of footage that most editors could work with and/or the amount of material that could be held digitised at any one time. In editing facilities rented by the hour or the day, a production's digitised rushes would usually be deleted at the end of the hire, so that the full amount of hard disk storage was available to the next client. Nonetheless, as all editing was being done at an offline video quality, it was possible to edit broadcast documentaries on as little as 3 gigabytes of hard drive storage. The end product of the offline non-linear editing process was a frame-accurate Edit Decision List ('EDL') that was output to a floppy disk and taken, together with the source tapes (aka 'the rushes'), to an online quality tape editing suite. The EDL was then read into an edit controller and used to 'auto-conform' a replica of the offline edit, playing portions of the source tapes back at full video quality and recording them to a master tape as per the exact edit points of the EDL.
+Up until 1992, the Apple Macintosh computers could access only 50 gigabytes of storage at once. In 1992, this limitation was overcome by a group of industry experts led by Rick Eye a Digital Video R&amp;D team at the Disney Channel. By February 1993, this team had integrated a long-form system that let the Avid Media Composer Apple Macintosh access over seven terabytes of digital video data. With instant access to the shot footage of an entire movie, long form non-linear editing (Motion Picture Editing) was now possible. The system made its debut at the NAB conference in 1993, in the booths of the three primary sub-system manufacturers, Avid, Silicon Graphics and Sony. Within a year, thousands of these systems, using Avid's Film Composer software (which handled the complex conversions between the offline video frame rates and the 24 fps of film), or the ever more sophisticated Media Composer, had replaced a century of 35 mm film editing equipment in major motion picture studios and TV stations worldwide, making Avid the undisputed leader in "off-line" non-linear editing systems for over a decade.[7]
+Although M-JPEG became the standard codec for NLE during the early 1990s, it had drawbacks. Its high computational requirements ruled out software implementations, leading to the extra cost and complexity of hardware compression/playback cards. More importantly, the traditional tape workflow had involved editing from tape, often in a rented facility. When the editor left the edit suite, they could take their confidential video tapes with them. But the M-JPEG data rate was too high for systems like Avid on the Mac and Lightworks on PC to store the video on removable storage, so these used fixed hard disks instead. The tape paradigm of keeping your (confidential) content with you was not possible with these fixed disks. Editing machines were often rented from facilities houses on a per-hour basis, and some productions chose to delete their material after each edit session, and then recapture it the next day to guarantee security of their content.[citation needed] In addition, each NLE system had storage limited by its hard disk capacity.
+These issues were addressed by a small UK company, Eidos plc. Eidos chose the new ARM-based computers from the UK and implemented an editing system, launched in Europe in 1990 at the International Broadcasting Convention. Because it implemented its own compression software designed specifically for non-linear editing, the Eidos system had no requirement for JPEG hardware and was cheap to produce. The software could decode multiple video and audio streams at once for real-time effects at no extra cost. But most significantly, for the first time, it supported unlimited cheap removable storage. The Eidos Edit 1, Edit 2, and later Optima systems let the editor use any Eidos system, rather than being tied down to a particular one, and still keep his data secure. The Optima software editing system was closely tied to Acorn hardware, so when Acorn stopped manufacturing the Risc PC in the late 1990s, Eidos discontinued the Optima system.
+In the early 1990s, a small American company called Data Translation took what it knew about coding and decoding pictures for the US military and large corporate clients and spent $12 million developing a desktop editor based on its proprietary compression algorithms and off-the-shelf parts. Their aim was to 'democratize' the desktop and take some of Avid's market. In August 1993, Media 100 entered the market, providing would-be editors with a low-cost, high-quality platform.
+Around the same period, two other competitors provided non-linear systems that required special hardware—typically cards added to the computer system. Fast Video Machine was a PC-based system that first came out as an offline system, and later became more online editing capable. Immix Video Cube was also a contender for media production companies. The Immix Video Cube had a control surface with faders to allow mixing and shuttle controls without the purchase of third-party controllers. Data Translation's Media 100 came with three different JPEG codecs for different types of graphics of video and many resolutions. The Media 100 system kept increasing its maximum video resolution via software upgrades rather than hardware. This was because the Media 100 cards had enough processing power support resolutions as high as Avid systems at the upper end of the Avid product line. Cards at the time had embedded dedicated CPUs (for example a Motorola 68000 processor), which were as powerful as the processors inside the Macintosh systems that hosted the application. These other companies caused tremendous downward market pressure on Avid. Avid was forced to continually offer lower-priced systems to compete with the Media 100 and other systems.
+Inspired by the success of Media 100, members of the Premiere development team left Adobe to start a project called "Keygrip" for Macromedia. Difficulty raising support and money for development led the team to take their non-linear editor to the NAB conference. After various companies made offers, Keygrip was purchased by Apple as Steve Jobs wanted a product to compete with Adobe Premiere in the desktop video market. At around the same time, Avid—now with Windows versions of its editing software—was considering abandoning the Macintosh platform. Apple released Final Cut Pro in 1999, and despite not being taken seriously at first by professionals, it has evolved into a serious competitor to entry level's Avid's systems.
+DV[edit]
+Another leap came in the late 1990s with the launch of DV-based video formats for consumer and professional use. With DV came IEEE 1394 (FireWire/iLink), a simple and inexpensive way of getting video into and out of computers. Users no longer had to convert video from analog to digital—it was recorded as digital to start with—and FireWire offered a straightforward way to transfer video data without additional hardware or compression. With this innovation, editing became a more realistic proposition for standard computers with software-only packages. It enabled real desktop editing producing high-quality results at a fraction of the cost of other systems.
+HD[edit]
+In early 2000, the introduction of highly compressed HD formats such as HDV has continued this trend, making it possible to edit HD material on a standard computer running a software-only editing application.
+Avid is still considered the industry standard, with the majority of major feature films, television programs, and commercials created with its NLE systems.[8] Final Cut Pro received a Technology &amp; Engineering Emmy Award in 2002 and continues to develop a following.
+Avid has held on to its market-leading position in the advent of cheaper software packages, notably Adobe Premiere in 1992 and Final Cut Pro in 1999. These three competing products by Avid, Adobe, and Apple are the foremost NLEs, often referred to as the A-Team.[9] With advances in raw computer processing power, new products have appeared including NewTek's software application SpeedEdit.
+Since 2000, many personal computers include basic non-linear video editing software free of charge. This is the case of Apple iMovie for the Macintosh platform, various open source programs like Kdenlive and PiTiVi for the Linux platform, and Windows Movie Maker for the Windows platform. This phenomenon has brought low-cost non-linear editing to consumers.
+4K[edit]
+As of 2014, 4K Video in NLE is fairly new, but it is being used in the creation of many movies throughout the world, due to the increased use of advanced 4K cameras such as the Red Camera. Avid Media Composer, Apple's Final Cut Pro X, Sony Vegas, Adobe Premiere, and Edius support 4K video editing.
+Quality[edit]
+At one time, a primary concern with non-linear editing had been picture and sound quality. Storage limitations at the time required that all material undergo lossy compression techniques to reduce the amount of memory occupied.
+Improvements in compression techniques and disk storage capacity have mitigated these concerns, and the migration to High Definition video and audio has virtually removed this concern completely. Most professional NLEs are also able to edit uncompressed video with the appropriate hardware.
+See also[edit]
+
+Video server
+Hard disk recorder
+Linear video editing
+List of video topics
+Film editing
+List of video editing software
+Comparison of video editing software
+Video editing software
+HDV
+EditDroid
+Edit Decision List
+Adrian Ettlinger
+
+References[edit]
+
+
+^ Russell Evans, Practical DV Filmmaking, Focal Press, 2005 ISBN 0-240-80738-3, ISBN 978-0-240-80738-6 page 14
+^ Nonlinear editors "Broadcast engineering", Sep 1, 2011
+^ Nonlinear editors "Broadcast engineering", Sep 1, 2011
+^ The History of Digital Nonlinear Editing "Facer Ezine"
+^ A Brief History Of Electronic Editing "Non Linear"
+^ About Michael Rubin "Non Linear"
+^ http://books.google.co.uk/books?id=k9KkIsSb5x0C&amp;pg=PA137&amp;dq=media+100+editing+suite+history&amp;cd=7#v=onepage&amp;q=media%20100%20editing%20suite%20history&amp;f=false
+^ Nonlinear editors "Broadcast engineering", Sep 1, 2011
+^ http://www.sonybiz.net/b2b/sony-business-fr/32735-sony-biz-france-sony-works-with-a-team-adobe-apple-avid-medical-actualites.html
+
+
+External links[edit]
+
+Linear vs. Non-linear editing
+A link to a downloadable episode of the TV show "The Computer Chronicles" from 1990, which includes a feature on the first Avid Media Composer
+Article that shows some recent NLE software and a dedicated NLE system
+An article on the history of video editing, with mentions of the first NLE systems
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Film editing
+
+
+
+
+
+
+Concept
+
+choreography, synchronization, interaction, attentional control, master shot, parallel cut
+
+
+
+
+
+
+Technique
+
+blindfolding, clues, cutaway, eyeline match, points of view, multiple exposure, optical illusion, shuffling, split screen, transition
+
+
+
+Insertion
+
+
+dialogue, match cut, Long shot, Insert
+
+
+
+
+
+
+
+Timelapsing
+
+
+
+
+jump cut (axial cut), slow motion
+
+
+
+
+
+
+
+
+
+Other
+
+
+fast cutting, montage
+
+
+
+
+
+
+
+
+
+Storytelling
+
+cut on action, contrast cut, shot reverse shot, flashback / flashforward
+
+
+
+
+
+
+Action
+
+smash cut, cross cut, slow cutting, montage, walk and talk
+
+
+
+
+
+
+Rule
+
+
+
+180-degree rule
+30-degree rule
+
+
+
+
+
+
+
+
+Term
+
+
+
+Reaction shot
+
+Kuleshov Effect
+
+
+Establishing shot
+Long take
+B-roll
+Internal rhythm
+External rhythm
+
+
+
+
+
+
+
+
+Editing
+
+
+
+Film editing
+Continuity editing
+Post-classical editing
+Video editing
+
+Linear video editing
+Non-linear editing system (NLE)
+Video editing software
+Offline editing
+Online editing
+Vision mixing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Non-linear_editing_system&amp;oldid=690333340"					
+				Categories: Film and video technologyFilm editingDigital audioHidden categories: Articles to be merged from June 2015All articles to be mergedWikipedia articles needing rewrite from May 2012All articles with unsourced statementsArticles with unsourced statements from May 2012Articles with unsourced statements from November 2009				
+							
+		
+		
+			

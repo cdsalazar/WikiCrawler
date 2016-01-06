@@ -1,0 +1,363 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Generalized algebraic data type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In functional programming, a generalized algebraic data type (GADT, also first-class phantom type,[1] guarded recursive datatype,[2] or equality-qualified type[3]) is a generalization of the algebraic data types of Haskell and ML, applying to parametric types.
+With this extension, the parameters of the return type of a data constructor can be freely chosen when declaring the constructor, while for algebraic data types in Haskell 98, the type parameter of the return value is inferred from data types of parameters; they are currently implemented in the GHC compiler as a non-standard extension, used by, among others, Pugs and Darcs. OCaml supports GADT natively since version 4.00.[4]
+
+
+
+Contents
+
+
+1 History
+2 Features
+3 Applications
+
+3.1 Higher-order abstract syntax
+
+
+4 Notes
+5 Further reading
+6 External links
+
+
+
+History[edit]
+An early version of generalized algebraic data types were given in (Augustsson &amp; Petersson 1994) and based on pattern matching in ALF.
+Generalized algebraic data types were introduced independently by (Cheney &amp; Hinze 2003) and prior by (Xi, Chen &amp; Chen 2003) as extensions to ML's and Haskell's algebraic data types.[5] Both are essentially equivalent to each other. They are similar to the inductive families of data types (or inductive datatypes) found in Coq's Calculus of Inductive Constructions and other dependently typed languages, modulo the dependent types[clarification needed] and except that the latter have an additional positivity restriction which is not enforced in GADTs.[6]
+(Sulzmann, Wazny &amp; Stuckey 2006) introduced extended algebraic data types which combine GADTs together with the existential data types and type class constraints introduced by (Perry 1991), (Läufer &amp; Odersky 1994) and (Läufer 1996).
+Type inference in the absence of any programmer supplied type annotations is undecidable[7] and functions defined over GADTs do not admit principal types in general.[8] Type reconstruction requires several design trade-offs and is on-going research (Peyton Jones, Washburn &amp; Weirich 2004; Peyton Jones et al. 2006; Pottier &amp; Régis-Gianas 2006; Sulzmann, Schrijvers &amp; Stuckey 2006; Simonet &amp; Pottier 2007; Schrijvers et al. 2009; Lin &amp; Sheard 2010a; Lin &amp; Sheard 2010b; Vytiniotis, Peyton Jones &amp; Schrijvers 2010; Vytiniotis et al. 2011).
+Features[edit]
+
+Non-uniform return parameter type
+Existentially quantified type parameters
+Local constraints
+
+Applications[edit]
+Applications of GADTs include generic programming, modelling programming languages (higher-order abstract syntax), maintaining invariants in data structures, expressing constraints in embedded domain-specific languages, and modelling objects.[9]
+Higher-order abstract syntax[edit]
+Further information: Higher-order abstract syntax
+An important application of GADTs is to embed higher-order abstract syntax in a type safe fashion. Here is an embedding of the simply typed lambda calculus with an arbitrary collection of base types, tuples and a fixed point combinator:
+
+
+data Lam :: * -&gt; * where
+  Lift :: a                     -&gt; Lam a
+  Tup  :: Lam a -&gt; Lam b        -&gt; Lam (a, b)
+  Lam  :: (Lam a -&gt; Lam b)      -&gt; Lam (a -&gt; b)
+  App  :: Lam (a -&gt; b) -&gt; Lam a -&gt; Lam b
+  Fix  :: Lam (a -&gt; a)          -&gt; Lam a
+
+And a type safe evaluation function:
+
+
+eval :: Lam t -&gt; t
+eval (Lift v)    = v
+eval (Tup e1 e2) = (eval e1, eval e2)
+eval (Lam f)     = \x -&gt; eval (f (Lift x))
+eval (App e1 e2) = (eval e1) (eval e2)
+eval (Fix f)     = (eval f) (eval (Fix f))
+
+The factorial function can now be written as:
+
+
+fact = Fix (Lam (\f -&gt; Lam (\y -&gt; Lift (if eval y == 0 then 1 else eval y * (eval f) (eval y - 1)))))
+
+We would have run into problems using regular algebraic data types. Dropping the type parameter would have made the lifted base types existentially quantified, making it impossible to write the evaluator. With a type parameter we would still be restricted to a single base type. Furthermore, ill-formed expressions such as App (Lam (\x -&gt; Lam (\y -&gt; App x y))) (Lift True) would have been possible to construct, while they are type incorrect using the GADT.
+Notes[edit]
+
+
+^ Cheney &amp; Hinze 2003.
+^ Xi, Chen &amp; Chen 2003.
+^ Sheard &amp; Pasalic 2004.
+^ http://caml.inria.fr/pub/distrib/ocaml-4.00/notes/Changes
+^ Cheney &amp; Hinze 2003, p.&#160;25.
+^ Cheney &amp; Hinze 2003, pp.&#160;25–26.
+^ Peyton Jones, Washburn &amp; Weirich 2004, p.&#160;7.
+^ Schrijvers et al. 2009, p.&#160;1.
+^ Peyton Jones, Washburn &amp; Weirich 2004, p.&#160;3.
+
+
+Further reading[edit]
+
+
+Applications
+
+
+Augustsson, Lennart; Petersson, Kent (September 1994). "Silly type families" (PDF).&#160;
+Cheney, James; Hinze, Ralf (2003). "First-Class Phantom Types". Technical Report CUCIS TR2003-1901 (Cornell University). hdl:1813/5614.&#160;
+Xi, Hongwei; Chen, Chiyan; Chen, Gang (2003). "Guarded Recursive Datatype Constructors". Proceedings of the 30th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL'03) (ACM Press): 224–235. doi:10.1145/604131.604150.&#160;
+Sheard, Tim; Pasalic, Emir (2004). "Meta-programming with built-in type equality". Proceedings of the Fourth International Workshop on Logical Frameworks and Meta-languages (LFM'04), Cork. doi:10.1016/j.entcs.2007.11.012.&#160;
+
+
+Semantics
+
+
+Patricia Johann and Neil Ghani (2008). "Foundations for Structured Programming with GADTs".
+Arie Middelkoop, Atze Dijkstra and S. Doaitse Swierstra (2011). "A lean specification for GADTs: system F with first-class equality proofs". Higher-Order and Symbolic Computation.
+
+
+Type reconstruction
+
+
+Peyton Jones, Simon; Washburn, Geoffrey; Weirich, Stephanie (2004). "Wobbly types: type inference for generalised algebraic data types" (PDF). Technical Report MS-CIS-05-25 (University of Pennsylvania).&#160;
+Peyton Jones, Simon; Vytiniotis, Dimitrios; Weirich, Stephanie; Washburn, Geoffrey (2006). "Simple Unification-based Type Inference for GADTs" (PDF). Proceedings of the ACM International Conference on Functional Programming (ICFP'06), Portland.&#160;
+Sulzmann, Martin; Wazny, Jeremy; Stuckey, Peter J. (2006). "A Framework for Extended Algebraic Data Types". In Hagiya, M.; Wadler, P. 8th International Symposium on Functional and Logic Programming (FLOPS 2006). Lecture Notes in Computer Science 3945. pp.&#160;46–64.&#160;
+Sulzmann, Martin; Schrijvers, Tom; Stuckey, Peter J. (2006). "Principal Type Inference for GHC-Style Multi-Parameter Type Classes". In Kobayashi, Naoki. Programming Languages and Systems: 4th Asian Symposium (APLAS 2006). Lecture Notes in Computer Science 4279. pp.&#160;26–43.&#160;
+Schrijvers, Tom; Peyton Jones, Simon; Sulzmann, Martin; Vytiniotis, Dimitrios (2009). "Complete and Decidable Type Inference for GADTs" (PDF). Proceedings of the ACM International Conference on Functional Programming (ICFP'09), Edinburgh.&#160;
+Lin, Chuan-kai (2010). Practical Type Inference for the GADT Type System (PDF) (Doctoral Dissertation thesis). Portland State University.&#160;
+
+
+Other
+
+
+Andrew Kennedy and Claudio V. Russo. "Generalized algebraic data types and object-oriented programming". In Proceedings of the 20th annual ACM SIGPLAN conference on Object oriented programming, systems, languages, and applications. ACM Press, 2005.
+
+
+External links[edit]
+
+
+
+Wikibooks has a book on the topic of: Haskell/GADT
+
+
+
+Generalised Algebraic Datatype Page on the Haskell wiki
+Generalised Algebraic Data Types in the GHC Users' Guide
+Generalized Algebraic Data Types and Object-Oriented Programming
+GADTs&#160;– Haskell Prime&#160;– Trac
+Papers about type inference for GADTs, bibliography by Simon Peyton Jones
+Type inference with constraints, bibliography by Simon Peyton Jones
+Emulating GADTs in Java via the Yoneda lemma
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Generalized_algebraic_data_type&amp;oldid=686376957"					
+				Categories: Functional programmingDependently typed programmingType theoryComposite data typesData typesHidden categories: Wikipedia articles needing clarification from October 2014				
+							
+		
+		
+			

@@ -1,0 +1,218 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Inverter (logic gate)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from NOT gate)
+												
+					Jump to:					navigation, 					search
+				
+				
+
+INPUT
+OUTPUT
+
+
+A
+NOT A
+
+
+0
+1
+
+
+1
+0
+
+
+
+
+
+
+Traditional NOT Gate (Inverter) symbol
+
+
+
+
+International Electrotechnical Commission NOT Gate (Inverter) symbol
+
+
+In digital logic, an inverter or NOT gate is a logic gate which implements logical negation. The truth table is shown on the right.
+
+
+
+Contents
+
+
+1 Electronic implementation
+
+1.1 Digital building block
+1.2 Alternatives
+1.3 Performance measurement
+
+
+2 See also
+3 External links
+4 References
+
+
+
+Electronic implementation[edit]
+
+
+
+
+
+
+
+NMOS inverter
+
+
+
+
+
+
+
+
+
+PMOS inverter
+
+
+
+
+
+
+
+
+
+Static CMOS inverter
+
+
+
+
+
+
+
+
+
+NPN transistor–transistor logic inverter
+
+
+
+
+
+
+
+
+
+Depletion-load NMOS logic NAND
+
+
+
+
+
+
+
+
+
+Saturated-load NMOS inverter
+
+
+
+
+
+
+
+
+
+NPN resistor–transistor logic inverter
+
+
+
+
+An inverter circuit outputs a voltage representing the opposite logic-level to its input. Its main function is to invert the input signal applied. If the applied input is low then the output becomes high and vice versa. Inverters can be constructed using a single NMOS transistor or a single PMOS transistor coupled with a resistor. Since this 'resistive-drain' approach uses only a single type of transistor, it can be fabricated at low cost. However, because current flows through the resistor in one of the two states, the resistive-drain configuration is disadvantaged for power consumption and processing speed. Alternatively, inverters can be constructed using two complementary transistors in a CMOS configuration. This configuration greatly reduces power consumption since one of the transistors is always off in both logic states. Processing speed can also be improved due to the relatively low resistance compared to the NMOS-only or PMOS-only type devices. Inverters can also be constructed with bipolar junction transistors (BJT) in either a resistor–transistor logic (RTL) or a transistor–transistor logic (TTL) configuration.
+Digital electronics circuits operate at fixed voltage levels corresponding to a logical 0 or 1 (see binary). An inverter circuit serves as the basic logic gate to swap between those two voltage levels. Implementation determines the actual voltage, but common levels include (0, +5V) for TTL circuits.
+Digital building block[edit]
+
+
+
+
+This schematic diagram shows the arrangement of NOT gates within a standard 4049 CMOS hex inverting buffer.
+
+
+The inverter is a basic building block in digital electronics. Multiplexers, decoders, state machines, and other sophisticated digital devices may use inverters.
+The hex inverter is an integrated circuit that contains six (hexa-) inverters. For example, the 7404 TTL chip which has 14 pins and the 4049 CMOS chip which has 16 pins, 2 of which are used for power/referencing, and 12 of which are used by the inputs and outputs of the six inverters (the 4049 has 2 pins with no connection).
+Alternatives[edit]
+If no specific NOT gates are available, one can be made from NAND or NOR gates, because NAND and NOR gates are considered the "universal gates",[1] meaning that they can be used to make all the others.
+
+
+NAND construction
+NOR construction
+
+
+
+
+
+
+Performance measurement[edit]
+
+
+
+
+Voltage transfer curve for a 20 μm inverter constructed at North Carolina State University
+
+
+Digital inverter quality is often measured using the voltage transfer curve (VTC), which is a plot of output vs. input voltage. From such a graph, device parameters including noise tolerance, gain, and operating logic levels can be obtained.
+Ideally, the VTC appears as an inverted step function – this would indicate precise switching between on and off – but in real devices, a gradual transition region exists. The VTC indicates that for low input voltage, the circuit outputs high voltage; for high input, the output tapers off towards the low level. The slope of this transition region is a measure of quality – steep (close to infinity) slopes yield precise switching.
+The tolerance to noise can be measured by comparing the minimum input to the maximum output for each region of operation (on / off).
+See also[edit]
+
+Controlled NOT gate
+AND gate
+OR gate
+NAND gate
+NOR gate
+XOR gate
+XNOR gate
+IMPLY gate
+Boolean algebra
+Logic gate
+
+External links[edit]
+
+The Not Gate on All About Circuits
+CMOS Hex Inverting Buffer/Converter from Texas Instruments
+
+Datasheet: CMOS Hex Buffer/Converter
+
+
+
+References[edit]
+
+
+^ Mano, M. Morris and Charles R. Kime. Logic and Computer Design Fundamentals, Third Edition. Prentice Hall, 2004. p. 73.
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Inverter_(logic_gate)&amp;oldid=691959866"					
+				Categories: Logic gatesIntegrated circuits				
+							
+		
+		
+			

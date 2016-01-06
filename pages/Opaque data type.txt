@@ -1,0 +1,316 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Opaque data type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2011)
+
+
+
+
+
+
+
+This article needs attention from an expert on the subject. Please add a reason or a talk parameter to this template to explain the issue with the article. Consider associating this request with a WikiProject. (November 2011)
+
+
+
+
+
+
+
+This article may require cleanup to meet Wikipedia's quality standards. No cleanup reason has been specified. Please help improve this article if you can. (November 2011)
+
+
+
+
+
+
+
+
+In computer science, an opaque data type is a data type whose concrete data structure is not defined in an interface. This enforces information hiding, since its values can only be manipulated by calling subroutines that have access to the missing information. The concrete representation of the type is hidden from its users, and the visible implementation is incomplete. A data type whose representation is visible is called transparent.[1] Opaque data types are frequently used to implement abstract data types.
+Typical examples of opaque data types include handles for resources provided by an operating system to application software. For example, the POSIX standard for threads defines an application programming interface based on a number of opaque types that represent threads or synchronization primitives like mutexes or condition variables.[2]
+An opaque pointer is a special case of an opaque data type, a datatype that is declared to be a pointer to a record or data structure of some unspecified data type. For example, the standard library that forms part of the specification of the C programming language provides functions for file input and output that return or take values of type "pointer to FILE" that represent file streams (see C file input/output), but the concrete implementation of the type FILE is not specified.[3]
+Uses in various languages[edit]
+Some languages, such as C, allow the declaration of opaque records (structs), whose size and fields are hidden from the client. The only thing that the client can do with an object of such a type is to take its memory address, to produce an opaque pointer.
+If the information provided by the interface is sufficient to determine the type's size, then clients can declare variables, fields, and arrays of that type, assign their values, and possibly compare them for equality. This is usually the case for opaque pointers.
+In some languages, such as Java, the only kind of opaque type provided is the opaque pointer. Indeed, in Java (and several other languages) records are always handled through pointers.
+Some languages allow partially opaque types, e.g. a record which has some public fields, known and accessible to all clients, and some hidden fields which are not revealed in the interface. Such types play a fundamental role in object-oriented programming.
+The information which is missing in the interface may be declared in its implementation, or in another "friends-only" interface. This second option allows the hidden information to be shared by two or more modules.
+See also[edit]
+
+Abstract data type
+Black box
+Forward declaration
+Information hiding
+
+References[edit]
+
+
+^ Friedman, Daniel P.; Wand, Mitchell; Haynes, Christopher T. (2001). Essentials of Programming Languages (2nd ed.). MIT Press. p.&#160;42. ISBN&#160;978-0-262-06217-6.&#160;
+^ Butenhof, David R. (1997). Programming with POSIX Threads. Addison-Wesley. p.&#160;31. ISBN&#160;978-0-201-63392-4.&#160;
+^ Kernighan, Brian W.; Ritchie, Dennis M. (1988). The C Programming Language (2nd ed.). Prentice Hall. ISBN&#160;0-13-110362-8.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+This computer science article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Opaque_data_type&amp;oldid=650099740"					
+				Categories: Data typesObject-oriented programmingComputer science stubsHidden categories: Articles needing additional references from December 2011All articles needing additional referencesArticles needing expert attention with no reason or talk parameterArticles needing unspecified expert attentionArticles needing expert attention from November 2011All articles needing expert attentionArticles needing cleanup from November 2011All articles needing cleanupCleanup tagged articles without a reason field from November 2011Wikipedia pages needing cleanup from November 2011All stub articles				
+							
+		
+		
+			

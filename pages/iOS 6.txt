@@ -1,0 +1,1199 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			iOS 6
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+iOS 6
+
+A version of the iOS operating system
+
+
+
+
+
+
+iOS 6 running on an iPhone 5.
+
+
+
+Developer
+Apple Inc.
+
+
+Source model
+Closed, with open source components
+
+
+Released to
+manufacturing
+September&#160;19, 2012; 3 years ago&#160;(2012-09-19)
+
+
+Latest release
+6.1.6 (10B500) / February&#160;21, 2014; 20 months ago&#160;(2014-02-21)[1]
+
+
+Platforms
+iPhone 3GS
+iPhone 4
+iPhone 4S
+iPhone 5
+iPod Touch (4th generation)
+iPod Touch (5th generation)
+iPad 2
+iPad (3rd generation)
+iPad (4th generation)
+iPad Mini (1st generation)
+
+
+Kernel type
+Hybrid (XNU) (mostly monolithic)
+
+
+License
+Proprietary EULA except for open-source components
+
+
+Preceded by
+iOS 5
+
+
+Succeeded by
+iOS 7
+
+
+Official website
+www.apple.com/ios/
+
+
+Support status
+
+
+Limited third-party application support
+
+
+iOS 6 is the sixth major release of the iOS mobile operating system designed by Apple Inc., initially released on September 19, 2012. The final version of iOS 6 is 6.1.6. It was preceded by iOS 5 (final version was 5.1.1) and was succeeded by iOS 7 on September 18, 2013. New features included a new Maps application with data developed by Apple, the Passbook application for storing tickets and loyalty cards, enhancements to Siri and user-definable 'VIP' inboxes for mail from known recipients.
+iOS 6 is the last release of iOS supervised by Scott Forstall, who led the creation of the operating system from its early development in 2005.
+
+
+
+Contents
+
+
+1 History
+2 Features
+3 Problems
+4 Version history: portable iOS devices
+5 Version history: Apple TV (2nd generation) onwards
+6 Supported devices
+7 References
+
+
+
+History[edit]
+iOS 6 was previewed on June 11, 2012 during Apple Worldwide Developers Conference (WWDC) 2012, with release announced for Fall 2012. Following the pattern of previous iOS releases, older devices are no longer supported, specifically the third-generation iPod Touch and the first-generation iPad. Supported devices on this release include the iPhone 3GS or later, the fourth-generation iPod Touch and later, the iPad 2 or later, and iPad Mini.
+On September 12, 2012 at San Francisco's Yerba Buena Center for the Arts, among other items unveiled, Apple announced three iOS-related items; the release of the next generation of iPhone, called iPhone 5, the fifth-generation iPod Touch, and the expected final release of iOS 6.0.[2] The September 19 release date of iOS 6 was announced at this event.[3]
+While the iPhone 5 came installed with iOS 6 starting September 21, other units will require an over-the-air update or an install through iTunes.[3] An update to iTunes version 10.7, which was released on September 12, 2012 is necessary to install the iOS 6 update on a device.[4]
+The release of iOS 6 is Apple’s fastest beta-to-product development for its mobile OS.[3]
+Features[edit]
+Unlike previous iOS versions, two notable apps that iOS 6 removed by default are Google Maps and YouTube. However, they can be downloaded for free in the iTunes App Store.
+The built-in Maps app uses Apple's new vector-based engine that eliminates the lag present while downloading bitmaps from Google's servers, making for smoother zooming. New to Maps is turn-by-turn navigation spoken directions in certain countries, 3D views in some major cities and real-time traffic.[4] Turn-by-turn navigation is only available for iPhone 4S or later and iPad 2 or later with cellular capability, while 3D views are only available for iPhone 4S or later, fifth-generation iPod Touch, and iPad 2 and later.[5]
+Another change includes the inability to download Podcasts through the regular iTunes application. Instead, users are prompted to download the official Podcasts App in order to continue.
+iOS 6 brings the retrieval of documents such as boarding passes, admission tickets, coupons and loyalty cards through its new Passbook app. An iOS device with Passbook can be scanned under a reader to process a mobile payment at participating locations. The app has context-aware features such as notifications for relevant coupons when in the immediate vicinity of a given store.[4][6]
+Apple’s Siri intelligent personal assistant was improved to include the ability to make restaurant reservations, launch apps, dictate Facebook or Twitter updates, retrieve movie reviews and detailed sports statistics.[4] Siri, which previously was only supported on iPhone 4S, is also now supported on iPhone 5, fifth-generation iPod Touch, third- through fourth-generation iPad and iPad Mini.[5]
+Facebook comes integrated through Apple’s native apps with iOS 6. Facebook features can be directly accessed from within native apps such as Calendar which can sync Facebook events, or use Facebook’s like button from within the Apple App Store and Game Center.[4]
+New privacy settings are available to the user. In addition to location services, the following have been added in iOS 6: photos (already partially restricted in iOS 5), contacts (address book), calendars, reminders, Bluetooth sharing, Twitter, Facebook, and Sina Weibo. iOS 6 also comes with a "Limit ad tracking" user control in the general settings menu to allow users the option to prevent targeted advertising. Apple's Advertising Identifier replaces the company’s existing UDID standard. Advertising networks not yet using Apple's Advertising Identifier device identifier standard would not be affected although Apple will require the standard in the future.[7]
+Problems[edit]
+In iOS 6, Apple replaced the previous Google Maps-based application with its own Maps, and was faced with poor reception from critics and users, with inaccurate or incomplete data, no support for transit maps, and low-quality satellite imagery.[8][9] Apple was also faced with criticism from Ireland's Minister for Justice and Equality Alan Shatter when a map incorrectly marked Airfield, a farming area in Dundrum, Dublin, with an icon indicating that it was an airport.[10] Apple CEO Tim Cook later issued a letter on Apple's website apologizing for the "frustration caused by the Maps application".[11] The clock app announced with iOS 6 also attracted attention for its similarity to the design of the Swiss railway clock, which remains a trademark of SBB, the Swiss national railway system. Within two months of iOS 6's release, Apple agreed to acknowledge the design influence and pay a licensing fee.[12] The troubled launch of iOS 6, together with discomfort at the design direction of iOS within and outside Apple, appear to have led to the removal of Scott Forstall, Apple's senior vice president of software, from the company in October 2012, less than two months after the release of iOS 6.[13]
+In September 2012, a privacy expert with the software company Abine expressed her concern that in spite of new targeted ad opt-outs, advertisers could still identify users based on other data and Apple could curate user databases for marketing or to sell to others.[7] Also that month, several users have reported a higher-than-normal data usage after iOS 6 upgrade, causing some to be heavily billed for data largely exceeding their data plan.[14][15][16]
+The iOS 6.1 update released on January 28, 2013 has generated reports of decreased battery life and issues with signal strength.[17]
+On April 16, 2014, iOS users who were still running iOS 6 could not connect to FaceTime as a certificate had expired. On April 24, Apple released a support document explaining the problem, which indicated that the only solution given was to have a majority of its users update their iOS to iOS 7 in order to repair the certificate.[18] iOS 6.1.6 was released for the 4th generation iPod touch instead to renew its FaceTime certificate and to patch up some dangerous security patches as it is not compatible with iOS 7.[19] The 4th generation iPod touch currently is the only device running iOS 6.1.6 which is still able to use FaceTime with its successors running both iOS 7 and iOS 8.
+Version history: portable iOS devices[edit]
+Main article: iOS version history § iOS 6
+iOS 6 was previewed on June 11, 2012 during Apple Worldwide Developers Conference (WWDC) 2012, with release announced for Fall 2012. Following the pattern of previous iOS releases, older devices are no longer supported, specifically the third-generation iPod Touch and the first-generation iPad. Supported devices on this release include the iPhone 3GS onwards, the fourth-generation iPod Touch onwards, and the iPad 2 onwards.[20]
+On September 12, 2012 at San Francisco's Yerba Buena Center for the Arts, amongst other items unveiled, Apple announced three iOS related items; the release of the next generation of iPhone, called iPhone 5, the fifth-generation iPod Touch, along with the final release of iOS 6.0.[2]
+iOS 6 was released to the public through iTunes and over-the-air updates on September 19, 2012.
+Version history: Apple TV (2nd generation) onwards[edit]
+Main article: iOS version history § Version history: Apple TV (2nd generation) onwards
+Supported devices[edit]
+
+
+
+
+iPhone
+
+
+iPhone 3GS
+iPhone 4
+iPhone 4S
+iPhone 5
+
+
+
+
+iPod Touch
+
+
+iPod Touch (4th generation)
+iPod Touch (5th generation)
+
+
+
+
+iPad
+
+
+iPad 2
+iPad (3rd generation)
+iPad (4th generation)
+
+
+
+
+iPad Mini
+
+
+iPad Mini
+
+
+
+
+Apple TV
+
+
+Apple TV (2nd generation)
+Apple TV (3rd generation)
+Apple TV (3rd generation Revision A)
+
+
+
+
+References[edit]
+
+
+^ http://support.apple.com/kb/DL1722
+^ a b Pollicino, Joe (September 12, 2012). "Apple's September 12th event roundup: iPhone 5, new iPods, iOS 6, Lightning and everything else". Engadget. Retrieved September 13, 2012.&#160;
+^ a b c Donna Tam (September 12, 2012). "Apple's iOS 6 release date: Start your downloads on Sept. 19". CNET. Retrieved September 19, 2012.&#160;
+^ a b c d e Matt Peckham (September 12, 2012). "Apple iOS 6 Here Next Week, iTunes Update Today, New iTunes in October". Time. Retrieved September 19, 2012.&#160;
+^ a b "What's New in iOS 6". Retrieved September 21, 2012.&#160;
+^ Christopher Versace (September 11, 2012). "Apple, iOS 6 &amp; Mobile Payments - One More Thing for the iPhone 5?". Forbes. Retrieved September 19, 2012.&#160;
+^ a b Seth Rosenblatt (September 14, 2012). "Ad tracking 'blocker' comes to iOS 6". CNET. Retrieved September 19, 2012.&#160;
+^ "New Apple maps app under fire from users". BBC News. Retrieved September 20, 2012.&#160;
+^ Claburn, Thomas. "Apple iOS 6 Maps App Flops". InformationWeek. Retrieved September 20, 2012.&#160;
+^ "Apple gives Dublin a new 'airfield'". Irish Times. Retrieved September 20, 2012.&#160;
+^ "A letter from Tim Cook on Maps". Apple. Retrieved October 2, 2012.&#160;
+^ Fingas, Jon. "Apple agrees to license for Swiss railway clock in iOS 6, knows what time it is". Engadget. AOL. Retrieved 4 September 2014.&#160;
+^ Lessin, Jessica. "An Apple Exit Over Maps". Wall Street Journal. Retrieved 4 September 2014.&#160;
+^ "iPhone 5 and iOS 6 users claim 'data use and bills rocket'". London: The Guardian UK. Retrieved October 18, 2012.&#160;
+^ Rosenbaum, Steve (October 13, 2012). "ATT iPhone Customers Hit With Massive Data 'Sipping' Bug". The Huffington Post. Retrieved October 22, 2012.&#160;
+^ "Mysterious iOS 6 Cellular Data Usage: A Deeper Look". TidBITS. Retrieved October 24, 2012.&#160;
+^ Smith, Josh. "Bad iOS 6.1 Battery Life, Other Bugs Plague iOS 6.1 Users". Gotta Be Mobile.com. Retrieved February 10, 2013.&#160;
+^ Clover, Juli (April 24, 2014). "iOS 6 Users on Devices Able to Run iOS 7 Must Upgrade to Fix FaceTime". Macrumors. Retrieved February 23, 2015.&#160; See also Apple troubleshooting steps.
+^ "iOS 7 vs. iOS 6 Icon Design Infographics". Talent Leopard. Retrieved November 14, 2014.&#160;
+^ "iOS 6 Software Update". Apple Inc. Retrieved September 29, 2012.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+iOS and iOS-based products
+
+
+
+
+
+
+
+
+
+History
+Outline
+
+
+
+
+
+
+
+
+Hardware
+
+
+
+Apple TV
+Apple Watch
+iPad
+
+1st
+2
+3rd
+4th
+Air
+Air 2
+
+
+iPad Mini
+
+1st
+2
+3
+4
+
+
+iPad Pro
+iPhone
+
+1st
+3G
+3GS
+4
+4S
+5
+5C
+5S
+6 / 6 Plus
+6S / 6S Plus
+
+
+iPod Touch
+
+1st
+2nd
+3rd
+4th
+5th
+6th
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Software
+
+
+
+AirDrop
+CarPlay
+Cocoa Touch
+Control Center
+Core Animation
+iTunes
+iOS
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+All
+
+
+Notification Center
+SDK
+Siri
+Spotlight
+SpringBoard
+VoiceOver
+WebKit
+
+
+
+
+
+
+
+
+Bundled apps
+
+
+
+
+
+
+
+Calendar
+Contacts
+FaceTime
+Find My Friends
+Find My iPhone
+Health
+iBooks
+Mail
+Maps
+Messages
+Music
+News
+Notes
+Photo Booth
+Photos
+Reminders
+Safari
+Videos
+Wallet
+Watch
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Newsstand
+
+
+
+
+
+
+
+
+
+
+
+Apple apps
+
+
+
+
+
+
+
+AirPort Utility
+iLife
+
+GarageBand
+iMovie
+
+
+iWork
+
+Keynote
+Numbers
+Pages
+
+
+Logic Remote
+Remote
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Beats Music
+Cards
+iPhoto
+Nike + iPod
+
+
+
+
+
+
+
+
+
+
+
+Services
+
+
+
+
+
+
+
+Apple Pay
+App Store
+Game Center
+iAd
+iBookstore
+iCloud
+iMessage
+iTunes Connect
+iTunes Store
+Multitasking
+Push Notifications
+TestFlight
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+MobileMe
+
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+300-page bill
+Ax / Sx mobile processors
+FairPlay
+Free and open-source iOS applications
+History of the iPhone
+iFund
+Jailbreaking
+Metal
+Swift
+WWDC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Apple Inc. software
+
+
+
+
+
+
+OS
+
+
+
+Darwin
+iOS
+
+version history
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+OS X
+
+Public Beta
+"Cheetah"
+"Puma"
+"Jaguar"
+"Panther"
+"Tiger"
+"Leopard"
+"Snow Leopard"
+"Lion"
+"Mountain Lion"
+"Mavericks"
+"Yosemite"
+"El Capitan"
+
+
+
+
+
+
+
+
+
+
+Consumer
+
+
+
+iBooks Author
+iCloud
+iLife
+
+iMovie
+GarageBand
+
+
+iWork
+
+Keynote
+Pages
+Numbers
+
+
+
+
+
+
+
+
+
+
+Professional
+
+
+
+FileMaker
+Final Cut Studio
+
+Final Cut Pro X
+Motion
+Compressor
+
+
+Logic Studio
+
+Logic Pro
+Mainstage
+
+
+
+
+
+
+
+
+
+
+Bundled
+
+
+
+iTunes
+
+history
+
+
+Mail
+Messages
+Photo Booth
+Photos
+QuickTime
+Safari
+
+version history
+
+
+TextEdit
+
+
+
+
+
+
+
+
+Server
+
+
+
+Apple Remote Desktop
+OS X Server
+WebObjects
+Xsan
+
+
+
+
+
+
+
+
+Developer
+
+
+
+Dashcode
+Instruments
+Interface Builder
+Quartz Composer
+Xcode
+iAd Producer
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+.Mac
+Aperture
+AppleWorks
+Bento
+Color
+DVD Studio Pro
+Final Cut Express
+Front Row
+HyperCard
+iChat
+iDVD
+iPhoto
+iWeb
+Logic Express
+Mac OS
+
+System 6
+System 7
+8
+9
+
+
+MacDraw
+MacPaint
+MacProject
+MacTerminal
+MacWrite
+MobileMe
+ResEdit
+Shake
+Soundtrack Pro
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Apple Inc.
+
+
+
+
+
+
+
+
+
+History
+Outline
+
+
+
+
+
+
+
+
+Founders
+
+
+
+Steve Jobs
+Steve Wozniak
+Ronald Wayne
+
+
+
+
+
+
+
+
+
+
+
+Board of directors
+
+
+
+
+Current
+
+
+
+Tim Cook (CEO)
+Al Gore
+Bob Iger
+Andrea Jung
+Arthur D. Levinson (Chairman)
+Ronald Sugar
+Susan Wagner
+
+
+
+
+
+
+
+
+Former
+
+
+
+Steve Jobs
+Fred D. Anderson
+Gil Amelio
+Bill Campbell
+Larry Ellison
+Delano Lewis
+Mike Markkula
+Arthur Rock
+Eric Schmidt
+John Sculley
+Edgar S. Woolard, Jr.
+Jerry York
+Mickey Drexler
+
+
+
+
+
+
+
+
+
+
+
+Executives
+
+
+
+
+Current
+
+
+
+Tim Cook
+Angela Ahrendts
+Eddy Cue
+Craig Federighi
+Jonathan Ive
+Luca Maestri
+Dan Riccio
+Phil Schiller
+Bruce Sewell
+Jeff Williams
+
+
+
+
+
+
+
+
+Former
+
+
+
+Steve Jobs
+Fred D. Anderson
+John Browett
+Tony Fadell
+Scott Forstall
+Nancy R. Heinen
+Ron Johnson
+Peter Oppenheimer
+Mark Papermaster
+Jon Rubinstein
+Bertrand Serlet
+Sina Tamaddon
+Avie Tevanian
+
+
+
+
+
+
+
+
+
+
+
+Services
+
+
+
+Apple ID
+Apple Maps
+Apple Music
+Apple News
+Apple Pay
+Cloud
+
+iCloud
+iWork.com
+
+
+Developer
+
+iAd
+TestFlight
+
+
+Game Center
+Discontinued services
+
+
+
+
+
+Stores
+
+
+
+
+Apple Store
+
+online
+
+
+App Store
+iBookstore
+iTunes Store
+Mac App Store
+
+
+
+
+
+
+
+
+
+Support
+
+
+
+
+AppleCare
+Apple Specialist
+Certifications
+Genius Bar
+JointVenture
+One to One
+
+
+
+
+
+
+
+
+
+
+
+Products
+
+
+
+
+
+Hardware
+
+
+
+
+Macintosh
+
+Intel transition
+
+
+iPod
+
+Nano
+Shuffle
+Touch
+
+
+iPhone
+iPad
+
+Mini
+Air
+
+
+Apple Watch
+Apple SIM
+Peripherals
+Discontinued hardware
+
+
+
+
+
+
+
+
+
+Software
+
+
+
+
+Mac OS
+
+History
+OS X
+
+History
+
+
+OS X Server
+General
+
+
+iOS
+
+Version history
+
+
+watchOS
+Core Foundation
+Developer Tools
+Final Cut Studio
+Logic Studio
+QuickTime
+CarPlay
+Discontinued software
+
+
+
+
+
+
+
+
+
+
+
+Companies
+
+
+
+
+
+Subsidiaries
+
+
+
+
+Beats Electronics
+
+Beats Music
+
+
+Braeburn Capital
+FileMaker Inc.
+
+
+
+
+
+
+
+
+
+Acquisitions
+
+
+
+
+Anobit
+AuthenTec
+Beats Electronics
+
+Beats Music
+
+
+Cue
+Emagic
+FingerWorks
+Intrinsity
+Lala
+NeXT
+Nothing Real
+P.A. Semi
+PrimeSense
+Siri
+Spotsetter
+Topsy
+
+
+
+
+
+
+
+
+
+
+
+Related
+
+
+
+Advertising
+
+1984
+Think different
+Get a Mac
+iPods
+
+
+Campus
+Design
+
+IDg
+Typography
+
+
+History
+
+Codenames
+Community
+Criticism
+Litigation
+iOS app approvals
+
+
+People
+
+Key Staff
+Mac Design Team
+
+
+Apple Music Festival
+
+
+
+
+
+
+
+
+
+
+
+ Book
+&#160;Category
+ Portal
+ WikiProject
+
+
+
+
+
+
+
+
+
+
+Preceded&#160;by
+iOS 5
+iOS 6
+September 2012
+Succeeded&#160;by
+iOS 7
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=IOS_6&amp;oldid=690408619"					
+				Categories: IOS (Apple)Hidden categories: Pages using duplicate arguments in template callsUse mdy dates from November 2013				
+							
+		
+		
+			

@@ -1,0 +1,215 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Delegation (programming)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For the authorization-related term, see delegation in IT.
+In object-oriented programming, there are three related notions of delegation.
+
+In its original usage, delegation refers to one object relying upon another to provide a specified set of functionalities. In research, this is often[citation needed] referred to as consultation or as aggregation in modeling.
+In Common Language Infrastructure (CLI), a delegate is a form of type-safe function pointer usually used in an observer pattern as a means of telling which method to call when an event is triggered, keeping the method type.[1]
+Rarely, it refers to a programming language feature making use of the method lookup rules for dispatching so-called self-calls as defined by Lieberman in his 1986 paper "Using Prototypical Objects to Implement Shared Behavior in Object-Oriented Systems". Delegation as a language feature supports the prototype-based programming model.
+
+Despite delegation being fairly widespread, relatively few major programming languages implement delegation as an alternative model to static inheritance. The Self programming language incorporates the notion of delegation through its notion of mutable parent slots that are used upon method lookup on self calls.
+In object-oriented programming, a multicast delegate is a delegate that points to several methods.[2][3] Multicast delegation is a mechanism that provides functionality to execute more than one method. There is a list of delegates maintained internally, and when the multicast delegate is invoked, the list of delegates is executed.
+
+
+
+Contents
+
+
+1 Design pattern
+2 Language feature
+
+2.1 Dual inheritance
+2.2 Related areas
+
+
+3 Method type delegation
+
+3.1 "Singlecast" delegates (C#)
+3.2 Multicast delegates (C#)
+
+
+4 See also
+5 References
+6 External links
+
+
+
+Design pattern[edit]
+Main article: Delegation pattern
+Delegation hands a task over to another part of the program. In object-oriented programming, one object assigns a task to another object, known as the delegate. This mechanism is sometimes referred to as aggregation, consultation, or forwarding (when a wrapper object doesn't pass itself to the wrapped object[4]).
+Delegation is dependent upon dynamic binding, as it requires that a given method call can invoke different segments of code at runtime[citation needed]. It is used throughout Mac OS X (and its predecessor NeXTStep) as a means of customizing the behavior of program components.[5] It enables implementations such as making use of a single OS-provided class to manage windows, because the class takes a delegate that is program-specific and can override default behavior as needed. For instance, when the user clicks the close box, the window manager sends the delegate a windowShouldClose: call, and the delegate can delay the closing of the window, if there is unsaved data represented by the window's contents.
+It has been argued that delegation may in some cases be preferred to inheritance to make program code more readable and understandable.[6]
+Language feature[edit]
+The short definition is that delegation defines method dispatching the way it is defined for virtual methods in inheritance: It is always the most specific method that is chosen during method-lookup. Hence it is the original receiver entity that is the start of method lookup even though it has passed on control to some other object (through a delegation link, not an object reference). Delegation has the advantage that it can take place at run-time and affect only a subset of entities of some type and can even be removed at run-time. Inheritance on the other hand typically targets the type rather than the instances and is restricted to compile time. On the other hand, inheritance can be statically type-checked while delegation generally cannot without generics (although a restricted version of delegation can be statically typesafe[7]). Delegation can be termed "run-time inheritance for specific objects".
+Here is a pseudocode example in a C#/Java like language:
+
+
+class A {
+  void foo() {
+    // "this" also known under the names "current", "me" and "self" in other languages
+    this.bar();
+  }
+
+  void bar() {
+    print("a.bar");
+  }
+};
+
+class B {
+  private delegate A a; // delegation link
+
+  public B(A a) {
+    this.a = a;
+  }
+
+  void foo() {
+    a.foo(); // call foo() on the a-instance
+  }
+
+  void bar() {
+    print("b.bar");
+  }
+};
+
+a = new A();
+b = new B(a); // establish delegation between two objects
+
+Calling b.foo() will result in b.bar being printed, since this refers to the original receiver object, b, within the context of a.
+Programming languages in general do not support this unusual form of delegation as a language concept, but there are a few exceptions[citation needed].
+Dual inheritance[edit]
+If the language supports both delegation and inheritance one can do dual inheritance by utilizing both mechanisms at the same time as in
+
+
+class C extends A {
+  delegationlink D d;
+}
+
+This calls for additional rules for method lookup, as there are now potentially two methods that can be denoted as the most specific (due to the two lookup paths).
+Related areas[edit]
+Delegation can be described as a low level mechanism for sharing code and data between entities. Thus it builds the foundation for other language constructs. Notably role-oriented programming languages have been utilizing delegation, but especially the older ones factually used aggregation while claiming to use delegation. This should not be considered cheating, merely the plural definitions of what delegation means (as described above).
+More recently work has also been done on distributing delegation, so e.g. clients of a search engine (finding cheap hotel rooms) can use a shared entity using delegation to share best hits and general re-usable functionality.
+Delegation has also been suggested for advice resolution in aspect-oriented programming by Ernst and Lorenz in 2003.
+Delegation is a fundamental technique used in languages of prototype-based programming (such as JavaScript).
+Method type delegation[edit]
+In C#, a delegate is a way of telling which method to call when an event is triggered. For example, if you click a Button on a form, the program would call a specific method. It is this pointer that is a delegate. Delegates are good, because you can notify several methods that an event has occurred, if you so wish.[1]
+Examples for delegates in C# follows:
+"Singlecast" delegates (C#)[edit]
+
+
+delegate void Notifier(string sender);  // Normal method signature with the keyword delegate
+
+Notifier greetMe;                       // Delegate variable
+
+void HowAreYou(string sender) {
+  Console.WriteLine("How are you, " + sender + '?');
+}
+
+greetMe = new Notifier(HowAreYou);
+
+A delegate variable calls the associated method and is called as follows:
+
+
+greetMe("Anton");                       // calls HowAreYou("Anton") and prints "How are you, Anton?"
+
+Delegate variables are first-class objects of the form new DelegateType(obj.Method) and can be assigned to any matching method, or to the value null. They store a method and its receiver without any parameters:[8]
+
+
+new DelegateType(funnyObj.HowAreYou);
+
+The object funnyObj can be this and omitted. If the method is static, it should not be the object (also called an instance in other languages), but the class itself. It should not be abstract, but could be new, override or virtual.
+To call a method with a delegate successfully, the method signature has to match the DelegateType with the same number of parameters of the same kind (ref, out, value) with the same type (including return type).
+Multicast delegates (C#)[edit]
+A delegate variable can hold multiple values at the same time:
+
+
+void HowAreYou(string sender) {
+  Console.WriteLine("How are you, " + sender + '?');
+}
+
+void HowAreYouToday(string sender) {
+  Console.WriteLine("How are you today, " + sender + '?');
+}
+
+Notifier greetMe;
+
+greetMe = HowAreYou;
+greetMe += HowAreYouToday;
+
+greetMe("Leonardo");                      // "How are you, Leonardo?"
+                                        // "How are you today, Leonardo?"
+
+greetMe -= HowAreYou;
+
+greetMe("Pereira");                   // "How are you today, Pereira?"
+
+If the multicast delegate is a function or has no out parameter, the parameter of the last call is returned.[9]
+See also[edit]
+
+Delegation pattern
+Adapter pattern
+Delegate (CLI) – CLI languages can offer a facility that allows an object to be used to call a method as a form of type-safe function pointer. Such objects are termed delegates, but are not delegates in the sense presented by this article.
+Hooking
+Continuation
+Implementation inheritance
+Inheritance semantics
+Virtual inheritance
+Wrapper function
+
+References[edit]
+
+
+^ a b Wikibooks:C Sharp Programming/Delegates and Events
+^ Microsoft Developer Network (MSDN) Article, How to: Combine Delegates (Multicast Delegates)(C# Programming Guide), Accessed 5/20/2008
+^ "About Microsoft's "Delegates"". Sun Developer Network. Sun Microsystems. Archived from the original on 10 February 1999.&#160;
+^ [Gamma98, p.20]
+^ Apple (2009-08-20). "Cocoa Fundamentals Guide: Delegates and Data Sources". Apple Developer Connection. Retrieved 2009-09-11.&#160;
+^ [1]Trygve Reenskaug, Dept. of Informatics, University of Oslo, "The Case for Readable Code" (2007)
+^ Günter Kniesel (1999-11-19). "Type-Safe Delegation for Run-Time Component Adaptation". Springer. Archived from the original (HTML) on 1999-11-19. Retrieved 2015-03-04. This paper proposes object-based inheritance (also known as delegation) as a complement to purely forwarding-based object composition. It presents a typesafe integration of delegation into a class-based object model and shows how it overcomes the problems faced by forwarding-based component interaction, how it supports independent extensibility of components and unanticipated, dynamic component adaptation.&#160;
+^ Mössenböck, Hanspeter (2002-03-25). "Advanced C#: Variable Number of Parameters" (PDF). http://ssw.jku.at/Teaching/Lectures/CSharp/Tutorial/: Institut für Systemsoftware, Johannes Kepler Universität Linz, Fachbereich Informatik. pp.&#160;23–24. Retrieved 2011-08-04.&#160;
+^ Mössenböck, Hanspeter (2002-03-25). "Advanced C#: Variable Number of Parameters". Institut für Systemsoftware, Johannes Kepler Universität Linz, Fachbereich Informatik. p.&#160;25. Retrieved 2011-08-04.&#160;
+
+
+
+
+Henry Lieberman: Using prototypical objects to implement shared behavior in object-oriented systems. In: Conference proceedings on Object-oriented programming systems, languages and applications. Portland 1986, p.&#160;214-223 ISSN 0362-1340 (Online at MIT Labs)
+Lynn Andrea Stein, Henry Liberman, David Ungar: A shared view of sharing: The Treaty of Orlando. In: Won Kim, Frederick H. Lochovsky (Eds.): Object-Oriented Concepts, Databases, and Applications ACM Press, New York 1989, ch. 3, pp.&#160;31–48 ISBN 0-201-14410-7 (online at Citeseer)
+Kasper Bilsted Graversen: The nature of roles---A taxonomic analysis of roles as a language construct. Ph.D. Thesis 2006, (Online at IT University of Copenhagen)
+
+
+External links[edit]
+
+A new way to implement Delegate in C++
+Fast delegates in C++
+PerfectJPattern Open Source Project, Provides a reusable implementation of Delegates in Java
+The Darwin Project - The Lava programming language and general articles on delegation
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Delegation_(programming)&amp;oldid=678341286"					
+				Categories: Object-oriented programmingPrototype-based programmingHidden categories: All articles with unsourced statementsArticles with unsourced statements from June 2015Articles with unsourced statements from January 2015				
+							
+		
+		
+			

@@ -1,0 +1,106 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Function prototype
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about function declarations.  For the prototype property of JavaScript functions and objects, see JavaScript#Prototype-based_object-oriented_programming.  For other uses, see Prototype (computer science).
+In computer programming, a function prototype or function interface is a declaration of a function that specifies the function's name and type signature (arity, parameter types, and return type), but omits the function body. The term is particularly used in C and C++. While a function definition specifies how the function does what it does (the "implementation"), a function prototype merely specifies its interface, i.e. what data types go in and come out of it.
+In a prototype, parameter names are optional (and in C/C++ have function prototype scope, meaning their scope ends at the end of the prototype), however, the type is necessary along with all modifiers (e.g. if it is a pointer or a const parameter).
+In object-oriented programming, interfaces and abstract methods serve much the same purpose.
+
+
+
+Contents
+
+
+1 Example
+2 Uses
+
+2.1 Creating library interfaces
+2.2 Class declaration
+
+
+3 See also
+4 References
+
+
+
+Example[edit]
+Consider the following function prototype:
+
+
+int myfunction(int n);
+
+This prototype specifies that in this program, there is a function named "myfunction" which takes a single integer argument "n" and returns an integer. Elsewhere in the program a function definition must be provided if one wishes to use this function. It's important to be aware that a declaration of a function does not need to include any arguments. The following is an argument-less function declaration, which just declares the function name and its return type, but doesn't tell what parameter types the definition expects.
+
+
+double myfunction();
+
+Uses[edit]
+In earlier versions of C, if a function is not previously declared and its name occurred in an expression followed by a left parenthesis, it is implicitly declared as a function that returns an int and nothing was assumed about its arguments. In this case the compiler will not be able to perform compile-time checking of argument types and Syntax arity when the function is applied to some arguments. This can cause problems. The following code illustrates a situation in which the behavior of an implicitly declared function is undefined.
+
+
+ #include &lt;stdio.h&gt;
+ 
+ /* If this prototype is provided, the compiler will catch the error in
+  * int main(). If it is omitted, then the error may go unnoticed.
+  */
+ int myfunction(int n);              /* Prototype */
+ 
+ int main(void) {             /* Calling function */
+     printf("%d\n", myfunction());   /* Error: forgot argument to myfunction */
+     return 0;
+ }
+ 
+ int myfunction(int n) {             /* Called function definition */
+     if (n == 0) 
+         return 1;
+     else 
+         return n * myfunction(n - 1);
+ }
+
+The function myfunction expects an integer argument to be on the stack or in a register when it is called. If the prototype is omitted, the compiler will have no way of enforcing this and myfunction will end up operating on some other datum on the stack (possibly a return address or the value of a variable that is currently not in scope). By including the function prototype, you inform the compiler that the function myfunction takes one integer argument and you enable the compiler to catch these kinds of errors and make the compilation process run smoothly. This feature was removed from the C99 standard, thus omission of a function prototype will result in a compile error.
+Creating library interfaces[edit]
+By placing function prototypes in a header file, one can specify an interface for a library.
+Class declaration[edit]
+In C++, function prototypes are also used in class definitions.
+See also[edit]
+
+Type signature
+Forward declaration
+Protocol (object-oriented programming)
+Abstract method
+
+References[edit]
+
+
+Kernighan, Brian W.; Ritchie, Dennis M. (1988). The C Programming Language (2nd ed.). Upper Saddle River, NJ: Prentice Hall PTR. ISBN&#160;0-13-110362-8.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Function_prototype&amp;oldid=690948910"					
+				Categories: SubroutinesC++ articlesC programming language familyComputer programming				
+							
+		
+		
+			

@@ -1,0 +1,86 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			User:Innovativeindia2020
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				'Introduction: In c a pointer is a variable that points to or references a memory location in which data is stored. Each memory cell in the computer has an address that can be used to access that location so a pointer variable points to a memory location we can access and change the contents of this memory location via the pointer.
+Pointer declaration: == pointer==link title
+A pointer is a variable that contains the memory location of another variable. The syntax is as shown below. You start by specifying the type of data stored in the location identified by the pointer. The asterisk tells the compiler that you are creating a pointer variable. Finally you give the name of the variable.
+type * variable name
+Example:
+int *ptr; float *string;
+Address operator: Once we declare a pointer variable we must point it to something we can do this by assigning to the pointer the address of the variable you want to point as in the following example:
+ptr=&amp;num;
+This places the address where num is stores into the variable ptr. If num is stored in memory 21260 address then the variable ptr has the value 21260.
+/* A program to illustrate pointer declaration*/
+main() { int *ptr; int sum; sum=45; ptr=∑ printf (“\n Sum is&#160;%d\n”, sum); printf (“\n The sum pointer is&#160;%d”, ptr); }
+we will get the same result by assigning the address of num to a regular(non pointer) variable. The benefit is that we can also refer to the pointer variable as *ptr the asterisk tells to the computer that we are not interested in the value 21260 but in the value stored in that memory location. While the value of pointer is 21260 the value of sum is 45 however we can assign a value to the pointer * ptr as in *ptr=45.
+This means place the value 45 in the memory address pointer by the variable ptr. Since the pointer contains the address 21260 the value 45 is placed in that memory location. And since this is the location of the variable num the value also becomes 45. this shows how we can change the value of pointer directly using a pointer and the indirection pointer.
+/* Program to display the contents of the variable their address using pointer variable*/
+include&lt; stdio.h &gt; { int num, *intptr; float x, *floptr; char ch, *cptr; num=123; x=12.34; ch=’a’; intptr=&amp;x; cptr=&amp;ch; floptr=&amp;x; printf(“Num&#160;%d stored at address&#160;%u\n”,*intptr,intptr); printf(“Value&#160;%f stored at address&#160;%u\n”,*floptr,floptr); printf(“Character&#160;%c stored at address&#160;%u\n”,*cptr,cptr); }
+Pointer expressions &amp; pointer arithmetic: Like other variables pointer variables can be used in expressions. For example if p1 and p2 are properly declared and initialized pointers, then the following statements are valid.
+y=*p1**p2; sum=sum+*p1; z= 5* - *p2/p1;
+
+p2= *p2 + 10;
+
+C allows us to add integers to or subtract integers from pointers as well as to subtract one pointer from the other. We can also use short hand operators with the pointers p1+=; sum+=*p2; etc., we can also compare pointers by using relational operators the expressions such as p1 &gt;p2 , p1==p2 and p1!=p2 are allowed.
+/*Program to illustrate the pointer expression and pointer arithmetic*/
+
+include&lt; stdio.h &gt;
+
+main() { int ptr1,ptr2; int a,b,x,y,z; a=30;b=6; ptr1=&amp;a; ptr2=&amp;b; x=*ptr1+ *ptr2 –6; y=6*- *ptr1/ *ptr2 +30; printf(“\nAddress of a +%u”,ptr1); printf(“\nAddress of b&#160;%u”,ptr2); printf(“\na=%d, b=%d”,a,b); printf(“\nx=%d,y=%d”,x,y); ptr1=ptr1 + 70; ptr2= ptr2; printf(“\na=%d, b=%d”,a,b); }
+Pointers and function: The pointer are very much used in a function declaration. Sometimes only with a pointer a complex function can be easily represented and success. The usage of the pointers in a function definition may be classified into two groups. 1. Call by reference 2. Call by value.
+Call by value: We have seen that a function is invoked there will be a link established between the formal and actual parameters. A temporary storage is created where the value of actual parameters is stored. The formal parameters picks up its value from storage area the mechanism of data transfer between actual and formal parameters allows the actual parameters mechanism of data transfer is referred as call by value. The corresponding formal parameter represents a local variable in the called function. The current value of corresponding actual parameter becomes the initial value of formal parameter. The value of formal parameter may be changed in the body of the actual parameter. The value of formal parameter may be changed in the body of the subprogram by assignment or input statements. This will not change the value of actual parameters.
+/* Include&lt; stdio.h &gt; void main() { int x,y; x=20; y=30; printf(“\n Value of a and b before function call =%d&#160;%d”,a,b); fncn(x,y); printf(“\n Value of a and b after function call =%d&#160;%d”,a,b); }
+fncn(p,q) int p,q; { p=p+p; q=q+q; }
+Call by Reference: When we pass address to a function the parameters receiving the address should be pointers. The process of calling a function by using pointers to pass the address of the variable is known as call by reference. The function which is called by reference can change the values of the variable used in the call.
+/* example of call by reference*?
+/* Include&lt; stdio.h &gt; void main() { int x,y; x=20; y=30; printf(“\n Value of a and b before function call =%d&#160;%d”,a,b); fncn(&amp;x,&amp;y); printf(“\n Value of a and b after function call =%d&#160;%d”,a,b); }
+fncn(p,q) int p,q; {
+
+p=*p+*p;
+q=*q+*q;
+
+}
+Pointer to arrays: an array is actually very much like pointer. We can declare the arrays first element as a[0] or as int *a because a[0] is an address and *a is also an address the form of declaration is equivalent. The difference is pointer is a variable and can appear on the left of the assignment operator that is lvalue. The array name is constant and cannot appear as the left side of assignment operator.
+/* A program to display the contents of array using pointer*/ main() { int a[100]; int i,j,n; printf(“\nEnter the elements of the array\n”); scanf(“%d”,&amp;n); printf(“Enter the array elements”); for(I=0;I&lt; n;I++) scanf(“%d”,&amp;a[I]); printf(“Array element are”); for(ptr=a,ptr&lt; (a+n);ptr++) printf(“Value of a[%d]=%d stored at address&#160;%u”,j+=,*ptr,ptr); }
+Strings are characters arrays and here last element is \0 arrays and pointers to char arrays can be used to perform a number of string functions.
+Pointers and structures: We know the name of an array stands for the address of its zeroth element the same concept applies for names of arrays of structures. Suppose item is an array variable of struct type. Consider the following declaration:
+struct products { char name[30]; int manufac; float net; item[2],*ptr;
+this statement declares item as array of two elements, each type struct products and ptr as a pointer data objects of type struct products, the
+assignment ptr=item;
+would assign the address of zeroth element to product[0]. Its members can be accessed by using the following notation.
+ptr- &gt;name; ptr- &gt;manufac; ptr- &gt;net;
+The symbol - &gt; is called arrow pointer and is made up of minus sign and greater than sign. Note that ptr- &gt; is simple another way of writing product[0].
+When the pointer is incremented by one it is made to pint to next record ie item[1]. The following statement will print the values of members of all the elements of the product array.
+for(ptr=item; ptr&lt; item+2;ptr++) printf(“%s%d%f\n”,ptr- &gt;name,ptr- &gt;manufac,ptr- &gt;net); We could also use the notation (*ptr).number
+to access the member number. The parenthesis around ptr are necessary because the member operator ‘.’ Has a higher precedence than the operator *.
+Pointers on pointer: While pointers provide enormous power and flexibility to the programmers, they may use cause manufactures if it not properly handled. Consider the following precaustions using pointers to prevent errors. We should make sure that we know where each pointer is pointing in a program. Here are some general observations and common errors that might be useful to remember.
+A pointer contains garbage until it is initialized. Since compilers cannot detect uninitialized or wrongly initialized pointers, the errors may not be known until we execute the program remember that even if we are able to locate a wrong result, it may not provide any evidence for us to suspect problems in the pointers.'
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=User:Innovativeindia2020&amp;oldid=326186363"					
+								
+							
+		
+		
+			

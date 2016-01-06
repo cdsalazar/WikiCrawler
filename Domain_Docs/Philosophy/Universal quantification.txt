@@ -1,0 +1,239 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Universal quantification
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Universal quantifier)
+												
+					Jump to:					navigation, 					search
+				
+				"∀" redirects here. For similar symbols, see Turned A.
+In predicate logic, a universal quantification is a type of quantifier, a logical constant which is interpreted as "given any" or "for all". It expresses that a propositional function can be satisfied by every member of a domain of discourse. In other words, it is the predication of a property or relation to every member of the domain. It asserts that a predicate within the scope of a universal quantifier is true of every value of a predicate variable.
+It is usually denoted by the turned A (∀) logical operator symbol, which, when used together with a predicate variable, is called a universal quantifier ("∀x", "∀(x)", or sometimes by "(x)" alone). Universal quantification is distinct from existential quantification ("there exists"), which asserts that the property or relation holds only for at least one member of the domain.
+Quantification in general is covered in the article on quantification (logic). Symbols are encoded U+2200 ∀ for all (HTML&#160;&amp;#8704;&#160;·  &amp;forall;&#160;·  as a mathematical symbol).
+
+
+
+Contents
+
+
+1 Basics
+
+1.1 Notation
+
+
+2 Properties
+
+2.1 Negation
+2.2 Other connectives
+2.3 Rules of inference
+2.4 The empty set
+
+
+3 Universal closure
+4 As adjoint
+5 See also
+6 Notes
+7 References
+8 External links
+
+
+
+Basics[edit]
+Suppose it is given that
+
+2·0 = 0 + 0, and 2·1 = 1 + 1, and 2·2 = 2 + 2, etc.
+
+This would seem to be a logical conjunction because of the repeated use of "and". However, the "etc." cannot be interpreted as a conjunction in formal logic. Instead, the statement must be rephrased:
+
+For all natural numbers n, 2·n = n + n.
+
+This is a single statement using universal quantification.
+This statement can be said to be more precise than the original one. While the "etc." informally includes natural numbers, and nothing more, this was not rigorously given. In the universal quantification, on the other hand, the natural numbers are mentioned explicitly.
+This particular example is true, because any natural number could be substituted for n and the statement "2·n = n + n" would be true. In contrast,
+
+For all natural numbers n, 2·n &gt; 2 + n
+
+is false, because if n is substituted with, for instance, 1, the statement "2·1 &gt; 2 + 1" is false. It is immaterial that "2·n &gt; 2 + n" is true for most natural numbers n: even the existence of a single counterexample is enough to prove the universal quantification false.
+On the other hand, for all composite numbers n, 2·n &gt; 2 + n is true, because none of the counterexamples are composite numbers. This indicates the importance of the domain of discourse, which specifies which values n can take.[note 1] In particular, note that if the domain of discourse is restricted to consist only of those objects that satisfy a certain predicate, then for universal quantification this requires a logical conditional. For example,
+
+For all composite numbers n, 2·n &gt; 2 + n
+
+is logically equivalent to
+
+For all natural numbers n, if n is composite, then 2·n &gt; 2 + n.
+
+Here the "if ... then" construction indicates the logical conditional.
+Notation[edit]
+In symbolic logic, the universal quantifier symbol  (an inverted&#160;"A" in a sans-serif font, Unicode&#160;0x2200) is used to indicate universal quantification.[1]
+For example, if P(n) is the predicate "2·n &gt; 2 + n" and N is the set of natural numbers, then:
+
+
+
+is the (false) statement:
+
+For all natural numbers n, 2·n &gt; 2 + n.
+
+Similarly, if Q(n) is the predicate "n is composite", then
+
+
+
+is the (true) statement:
+
+For all natural numbers n, if n is composite, then 2·n &gt; 2 + n
+
+and since "n is composite" implies that n must already be a natural number, we can shorten this statement to the equivalent:
+
+
+
+
+For all composite numbers n, 2·n &gt; 2 + n.
+
+Several variations in the notation for quantification (which apply to all forms) can be found in the Quantification (logic) article. There is a special notation used only for universal quantification, which is given:
+
+
+
+The parentheses indicate universal quantification by default.
+Properties[edit]
+Negation[edit]
+Note that a quantified propositional function is a statement; thus, like statements, quantified functions can be negated. The notation most mathematicians and logicians utilize to denote negation is: . However, some use the tilde (~).
+For example, if P(x) is the propositional function "x is married", then, for a Universe of Discourse X of all living human beings, the universal quantification
+
+Given any living person x, that person is married
+
+is given:
+
+
+
+It can be seen that this is irrevocably false. Truthfully, it is stated that
+
+It is not the case that, given any living person x, that person is married
+
+or, symbolically:
+
+.
+
+If the statement is not true for every element of the Universe of Discourse, then, presuming the universe of discourse is non-empty, there must be at least one element for which the statement is false. That is, the negation of  is logically equivalent to "There exists a living person x who is not married", or:
+
+
+
+Generally, then, the negation of a propositional function's universal quantification is an existential quantification of that propositional function's negation; symbolically,
+
+
+
+It is erroneous to state "all persons are not married" (i.e. "there exists no person who is married") when it is meant that "not all persons are married" (i.e. "there exists a person who is not married"):
+
+
+
+Other connectives[edit]
+The universal (and existential) quantifier moves unchanged across the logical connectives ∧, ∨, →, and ↚, as long as the other operand is not affected; that is:
+
+
+
+
+
+
+
+
+
+
+Conversely, for the logical connectives ↑, ↓, ↛, and ←, the quantifiers flip:
+
+
+
+
+
+
+
+
+
+
+
+Rules of inference[edit]
+A rule of inference is a rule justifying a logical step from hypothesis to conclusion. There are several rules of inference which utilize the universal quantifier.
+Universal instantiation concludes that, if the propositional function is known to be universally true, then it must be true for any arbitrary element of the Universe of Discourse. Symbolically, this is represented as
+
+
+
+where c is a completely arbitrary element of the Universe of Discourse.
+Universal generalization concludes the propositional function must be universally true if it is true for any arbitrary element of the Universe of Discourse. Symbolically, for an arbitrary c,
+
+
+
+The element&#160;c must be completely arbitrary; else, the logic does not follow: if c is not arbitrary, and is instead a specific element of the Universe of Discourse, then P(c) only implies an existential quantification of the propositional function.
+The empty set[edit]
+By convention, the formula  is always true, regardless of the formula P(x); see vacuous truth.
+Universal closure[edit]
+The universal closure of a formula φ is the formula with no free variables obtained by adding a universal quantifier for every free variable in φ. For example, the universal closure of
+
+
+
+is
+
+.
+
+As adjoint[edit]
+In category theory and the theory of elementary topoi, the universal quantifier can be understood as the right adjoint of a functor between power sets, the inverse image functor of a function between sets; likewise, the existential quantifier is the left adjoint.[2]
+For a set , let  denote its powerset. For any function  between sets  and , there is an inverse image functor  between powersets, that takes subsets of the codomain of f back to subsets of its domain. The left adjoint of this functor is the existential quantifier  and the right adjoint is the universal quantifier .
+That is,  is a functor that, for each subset , gives the subset  given by
+
+.
+
+Likewise, the universal quantifier  is given by
+
+.
+
+The more familiar form of the quantifiers as used in first-order logic is obtained by taking the function f to be the projection operator  where  is the two-element set holding the values true, false, and subsets S to be predicates , so that
+
+
+
+which is either a one-element set (false) or a two-element set (true).
+The universal and existential quantifiers given above generalize to the presheaf category.
+See also[edit]
+
+Existential quantification
+First-order logic
+List of logic symbols—for the Unicode symbol ∀
+
+Notes[edit]
+
+^ Further information on using domains of discourse with quantified statements can be found in the Quantification (logic) article.
+
+References[edit]
+
+
+^ The inverted&#160;"A" was used in the 19th century by Charles Sanders Peirce as a logical symbol for 'un-American' ("unamerican"). Page 320 in Randall Dipert, "Peirce's deductive logic". In Cheryl Misak, ed. The Cambridge Companion to Peirce. 2004
+^ Saunders Mac Lane, Ieke Moerdijk, (1992) Sheaves in Geometry and Logic Springer-Verlag. ISBN 0-387-97710-4 See page 58
+
+
+
+Hinman, P. (2005). Fundamentals of Mathematical Logic. A K Peters. ISBN&#160;1-56881-262-0.&#160;
+Franklin, J. and Daoud, A. (2011). Proof in Mathematics: An Introduction. Kew Books. ISBN&#160;978-0-646-54509-7.&#160; (ch. 2)
+
+External links[edit]
+
+ The dictionary definition of every at Wiktionary
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Universal_quantification&amp;oldid=674999005"					
+				Categories: Logic symbolsLogical expressionsQuantification				
+							
+		
+		
+			

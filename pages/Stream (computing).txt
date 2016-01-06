@@ -1,0 +1,344 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Stream (computing)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article relies largely or entirely upon a single source. Relevant discussion may be found on the talk page. Please help improve this article by introducing citations to additional sources. (April 2015)
+
+
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (April 2015)
+
+
+
+
+
+
+
+The lead section of this article may need to be rewritten. Please discuss this issue on the article's talk page. Use the lead layout guide to ensure the section will be inclusive of all essential details. (April 2015)
+
+
+
+
+
+
+
+
+For the more theoretical concept in computer science, see Stream (computer science).
+
+
+
+
+The standard streams for input, output, and error
+
+
+In computer science, a stream is a sequence of data elements made available over time. A stream can be thought of as items on a conveyor belt being processed one at a time rather than in large batches
+Streams are processed differently from batch data – normal functions cannot operate on streams as a whole, as they have potentially unlimited data, and formally, streams are codata (potentially unlimited), not data (which is finite). Functions that operate on a stream, producing another stream, are known as filters, and can be connected in pipelines, analogously to function composition. Filters may operate on one item of a stream at a time, or may base an item of output on multiple items of input, such as a moving average.
+
+
+
+Contents
+
+
+1 Examples
+2 Applications
+3 Other uses
+4 See also
+5 References
+6 External links
+
+
+
+Examples[edit]
+The term "stream" is used in a number of similar ways:
+
+"Stream editing", as with sed, awk, and perl. Stream editing processes a file or files, in-place, without having to load the file(s) into a user interface. One example of such use is to do a search and replace on all the files in a directory, from the command line.
+On Unix and related systems based on the C language, a stream is a source or sink of data, usually individual bytes or characters. Streams are an abstraction used when reading or writing files, or communicating over network sockets. The standard streams are three streams made available to all programs.
+I/O devices can be interpreted as streams, as they produce or consume potentially unlimited data over time.
+In object-oriented programming, input streams are generally implemented as iterators.
+In the Scheme language and some others, a stream is a lazily evaluated or delayed sequence of data elements. A stream can be used similarly to a list, but later elements are only calculated when needed. Streams can therefore represent infinite sequences and series.[1]
+In the Smalltalk standard library and in other programming languages as well, a stream is an external iterator. As in Scheme, streams can represent finite or infinite sequences.
+Stream processing — in parallel processing, especially in graphic processing, the term stream is applied to hardware as well as software. There it defines the quasi-continuous flow of data that is processed in a dataflow programming language as soon as the program state meets the starting condition of the stream.
+
+Applications[edit]
+
+
+
+This section requires expansion. (February 2014)
+
+
+Streams can be used as the underlying data type for channels in interprocess communication.
+Other uses[edit]
+The term "stream" is also applied to file system forks, where multiple sets of data are associated with a single filename. Most often, there is one main stream that makes up the normal file data, while additional streams contain metadata. Here "stream" is used to indicate "variable size data", as opposed to fixed size metadata such as extended attributes, but differs from "stream" as used otherwise, meaning "data available over time, potentially infinite".
+See also[edit]
+
+Bitstream
+Codata
+Data stream
+Data stream mining
+Flow (computer networking)
+Streaming algorithm
+Streaming media
+Stream processing
+
+References[edit]
+
+
+^ SRFI 41: Streams
+
+
+External links[edit]
+
+An Approximate L1-Difference Algorithm for Massive Data Streams, 1995 Feigenbaum et al.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Stream_(computing)&amp;oldid=687435506"					
+				Categories: Computer dataInter-process communicationHidden categories: Articles needing additional references from April 2015All articles needing additional referencesArticles lacking in-text citations from April 2015All articles lacking in-text citationsWikipedia introduction cleanup from April 2015All pages needing cleanupArticles covered by WikiProject Wikify from April 2015All articles covered by WikiProject WikifyArticles to be expanded from February 2014All articles to be expanded				
+							
+		
+		
+			

@@ -1,0 +1,381 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Concatenative programming language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Programming paradigms
+
+
+
+
+Action
+Agent-oriented
+Array-oriented
+Automata-based
+Concurrent computing
+
+Relativistic programming
+
+
+Data-driven
+Declarative (contrast: Imperative)
+
+Constraint
+
+Constraint logic
+
+Concurrent constraint logic
+
+
+
+
+Dataflow
+
+Flow-based
+Cell-oriented (spreadsheets)
+Reactive
+
+
+Functional
+
+Functional logic
+Purely functional
+
+
+Logic
+
+Abductive logic
+Answer set
+Concurrent logic
+Functional logic
+Inductive logic
+
+
+
+
+End-user programming
+Event-driven
+
+Service-oriented
+Time-driven
+
+
+Expression-oriented
+Feature-oriented
+Function-level (contrast: Value-level)
+Generic
+Imperative (contrast: Declarative)
+
+Literate
+Procedural
+
+
+Inductive programming
+Language-oriented
+
+Natural language programming
+Discipline-specific
+Domain-specific
+Grammar-oriented
+
+Dialecting
+
+
+Intentional
+
+
+Metaprogramming
+
+Automatic
+Reflective
+
+Attribute-oriented
+
+
+Homoiconic
+Template
+
+Policy-based
+
+
+
+
+Non-structured (contrast: Structured)
+
+Array
+
+
+Nondeterministic
+Parallel computing
+
+Process-oriented
+
+
+Point-free style
+
+Concatenative
+
+
+Semantic
+Structured (contrast: Non-structured)
+
+Block-structured
+Modular (contrast: Monolithic)
+Object-oriented (OOP)
+
+Class-based
+Concurrent
+Prototype-based
+By separation of concerns:
+
+Aspect-oriented
+Role-oriented
+Subject-oriented
+
+
+
+
+Recursive
+
+
+Value-level (contrast: Function-level)
+Probabilistic
+Concept
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+A concatenative programming language is a point-free computer programming language in which all expressions denote functions, and the juxtaposition of expressions denotes function composition.[1] Concatenative programming replaces function application, which is common in other programming styles, with function composition as the default way to build subroutines.
+
+
+
+Contents
+
+
+1 Example
+2 Properties
+3 Implementations
+4 See also
+5 References
+6 External links
+
+
+
+Example[edit]
+For example, a sequence of operations in an applicative language like the following:
+
+
+y = foo(x)
+z = bar(y)
+w = baz(z)
+
+...is written in a concatenative language as a sequence of functions, without parameters:[2]
+
+foo bar baz
+
+Functions and procedures written in concatenative style are not value level, i.e. they typically don't represent the data structures they operate on with explicit names or identifiers; instead they are function level - a function is defined as a pipeline, a sequence of operations that take parameters from an implicit data structure on which all functions operate, and return the function results to that shared structure so that it will be used by the next operator.[3]
+The combination of a compositional semantics with a syntax that mirrors such a semantics makes concatenative languages highly amenable to algebraic manipulation of programs;[4] although it may be difficult to write mathematical expressions directly in them.[5] Concatenative languages can be implemented in an efficient way with a stack machine, and are a common strategy to program virtual machines. [5]
+Much of the original work on concatenative language theory was carried out by Manfred von Thun.[citation needed]
+Properties[edit]
+The properties of concatenative languages are the result of their compositional syntax and semantics:
+
+The reduction of any expression is the simplification of one function to another function; it is never necessary to deal with the application of functions to objects.[6]
+Any subexpression can be replaced with a name that represents the same subexpression. This is referred to in the concatenative community as factoring and is used extensively to simplify programs into smaller parts.
+The syntax and semantics of concatenative languages form the algebraic structure of a monoid.[7]
+Concatenative languages can be made well-suited to an implementation inspired by linear logic where no garbage is ever generated.[8]
+
+Implementations[edit]
+The first concatenative programming language was Forth, although Joy was the first language to call itself concatenative. Other concatenative languages are Cat, Enchilada, Factor, Onyx, PostScript, RPL, Staapl, Trith, XY, Kitten, and Om.
+Most existing concatenative languages are stack-based; this is not a requirement and other models have been proposed.[9][10][11] Concatenative languages are currently used for embedded, desktop, and web programming, as target languages, and for research purposes.
+Most concatenative languages are dynamically typed. One exception is the statically typed Cat language.[12]
+See also[edit]
+
+Function-level programming
+Stack-oriented programming language
+Tacit programming
+Homoiconicity
+
+References[edit]
+
+
+^ "Christopher Diggins: What is a concatenative language". Drdobbs.com. 2008-12-31. Retrieved 2013-07-01.&#160;
+^ "Name code not values". Concatenative.org. Retrieved 13 September 2013.&#160;
+^ "Concatenative language". Concatenative.org. Retrieved 13 September 2013.&#160;
+^ "Rationale for Joy, a functional language". Archived from the original on 2011-01-15.&#160;
+^ a b "Why Concatenative Programming Matters". Retrieved 13 September 2013.&#160;
+^ "von Thun, Manfred: Joy compared with other functional languages". Archived from the original on 2011-10-06.&#160;
+^ "von Thun, Manfred: Mathematical foundations of Joy". Archived from the original on 2010-07-31.&#160;
+^ "Henry Baker: Linear Logic and Permutation Stacks — The Forth Shall Be First". Home.pipeline.com. Retrieved 2013-07-01.&#160;
+^ "The Concatenative Language XY". Nsl.com. Retrieved 2013-07-01.&#160;
+^ "The Enchilada Programming Language". Enchiladacode.nl. Retrieved 2013-07-01.&#160;
+^ "The Om Programming Language". Om-language.org. Retrieved 2013-07-01.&#160;
+^ "Cat Specification". Cat-language.com. Retrieved 2013-07-01.&#160;
+
+
+External links[edit]
+
+concatenative.org: A wiki about concatenative languages
+Staapl: Forth on Scheme for Embedded Controllers
+The Enchilada Programming Language
+The Concatenative Language XY
+The Om Programming Language
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Concatenative_programming_language&amp;oldid=669890730"					
+				Categories: Concatenative programming languagesHidden categories: All articles with unsourced statementsArticles with unsourced statements from August 2014				
+							
+		
+		
+			

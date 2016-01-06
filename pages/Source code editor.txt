@@ -1,0 +1,116 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Source code editor
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article does not cite any references (sources). Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (February 2014)
+
+
+
+
+
+
+Notepad++ 5.9.2, displaying MediaWiki source code
+
+
+A source code editor is a text editor program designed specifically for editing source code of computer programs by programmers. It may be a standalone application or it may be built into an integrated development environment (IDE) or web browser. Source code editors are the most fundamental programming tool, as the fundamental job of programmers is to write and edit source code.
+
+
+
+Contents
+
+
+1 Features
+2 Some well-known source code editors
+3 Controversy
+4 See also
+
+
+
+Features[edit]
+Source code editors have features specifically designed to simplify and speed up input of source code, such as syntax highlighting, indentation, autocomplete and bracket matching functionality. These editors also provide a convenient way to run a compiler, interpreter, debugger, or other program relevant for software development process. So, while many text editors can be used to edit source code, if they don't enhance, automate or ease the editing of code, they are not source code editors, but simply text editors that can also be used to edit source code.
+Structure editors are a different form of source code editor, where instead of editing raw text, one manipulates the code's structure, generally the abstract syntax tree. In this case features such as syntax highlighting, validation, and code formatting are easily and efficiently implemented from the concrete syntax tree or abstract syntax tree, but editing is often more rigid than free-form text. Structure editors also require extensive support for each language, and thus are harder to extend to new languages than text editors, where basic support only requires supporting syntax highlighting or indentation. For this reason, strict structure editors are not popular for source code editing, though some IDEs provide similar functionality.
+A source code editor can check syntax while code is being entered and immediately warn of syntax problems. A few source code editors compress source code, typically converting common keywords into single-byte tokens, removing unnecessary whitespace, and converting numbers to a binary form. Such tokenizing editors later uncompress the source code when viewing it, possibly prettyprinting it with consistent capitalizing and spacing. A few source code editors do both.
+Some well-known source code editors[edit]
+
+
+
+
+
+This section may contain excessive, poor, or irrelevant examples. Please improve the article by adding more descriptive text and removing less pertinent examples. See Wikipedia's guide to writing better articles for further suggestions. (February 2014)
+
+
+
+Atom (text editor)[dubious – discuss]
+Eclipse
+Emacs (cross-platform, including Unix, Linux, Mac OS X, Windows)
+Geany (cross-platform, including Unix, Linux, Mac OS X, Windows)
+Gedit (cross-platform, including Linux, Mac OS X, Windows)
+IntelliJ IDEA built-in editor (Windows, Linux, Mac OS X)
+Microsoft Visual Studio Code (cross-platform, including Linux, Mac OS X, Windows)
+Microsoft Visual Studio built-in editor (Windows)
+NetBeans
+Notepad++ (Windows)
+SlickEdit (cross-platform, including Linux, Mac OS X, Windows, Solaris, HP-UX, AIX)
+Sublime Text (cross-platform, including Linux, Mac OS X, Windows)
+TextMate (Mac OS X)
+UltraEdit (cross-platform, including Linux, Mac OS X, Windows)
+vi/Vim (cross-platform, including Unix, Linux, Mac OS X, Windows)
+
+Controversy[edit]
+Many source code editors and IDEs have been involved in ongoing arguments, sometimes referred to jovially as "holy wars" by the programming community. Notable examples include vi vs. Emacs and Eclipse vs. NetBeans. These arguments have formed a significant part of internet culture and they often start whenever either editor is mentioned anywhere.
+See also[edit]
+
+Integrated development environment
+Comparison of integrated development environments
+Comparison of text editors#Programming features
+Comparison of JavaScript-based source code editors
+Comparison of hex editors
+Comparison of HTML editors
+List of text editors
+
+
+
+This text editor article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Source_code_editor&amp;oldid=684666440"					
+				Categories: Text editorsComputer programming toolsText editor stubsHidden categories: Articles lacking sources from February 2014All articles lacking sourcesArticles with too many examplesAll accuracy disputesArticles with disputed statements from June 2015All stub articles				
+							
+		
+		
+			

@@ -1,0 +1,159 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Inline function
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about inline functions in C and C++.  For inline expansion more generally, see Inline expansion.
+In the C and C++ programming languages, an inline function is one qualified with the keyword inline; this serves two purposes. Firstly, it serves as a compiler directive that suggests (but does not require) that the compiler substitute the body of the function inline by performing inline expansion, i.e.: by inserting the function code at the address of each function call, thereby saving the overhead of a function call. In this respect it is analogous to the register storage class specifier, which similarly provides an optimization hint.[1] The second purpose of inline is to change linkage behavior; the details of this are complicated. This is necessary due to the C/C++ separate compilation + linkage model, specifically because the definition (body) of the function must be duplicated in all translation units where it is used, to allow inlining during compiling, which, if the function has external linkage, causes a collision during linking (it violates uniqueness of external symbols; in C++, the One Definition Rule). C and C++ (and dialects such as GNU C and Visual C++) resolve this in different ways.[1]
+
+
+
+Contents
+
+
+1 Problems
+2 Language support
+3 Microsoft Visual C++ specific
+4 Quotes
+5 See also
+6 References
+7 External links
+
+
+
+Problems[edit]
+See also: Inline expansion § Problems
+Besides the problems with inline expansion in general, inline functions as a language feature may not be as valuable as they appear, for a number of reasons:
+
+Often, a compiler is in a better position than a human to decide whether a particular function should be inlined. Sometimes the compiler may not be able to inline as many functions as the programmer indicates.
+An important point to note is that the code (of the inline function) gets exposed to its client (the calling function).
+As functions evolve, they may become suitable for inlining where they were not before, or no longer suitable for inlining where they were before. While inlining or un-inlining a function is easier than converting to and from macros, it still requires extra maintenance which typically yields relatively little benefit.
+Inline functions used in proliferation in native C-based compilation systems can increase compilation time, since the intermediate representation of their bodies is copied into each call site where they are
+The specification of inline in C99 requires exactly one additional external definition of a function in another compilation unit, when the corresponding inline definition, that can occur multiple times in different compilation units, if that function is used somewhere. That can easily lead to linker errors because such a definition wasn't provided by the programmer. For this reason, inline in C99 often is used together with static, which gives the function internal linkage.
+In C++, it is necessary to define an inline function in every module (compilation unit) that uses it, whereas an ordinary function must be defined in only a single module. Otherwise it would not be possible to compile a single module independently of all other modules.
+
+Language support[edit]
+C++, C99, and GNU C each have support for inline functions. Different compilers vary in how complex a function they can manage to inline. Mainstream C++ compilers like Microsoft Visual C++ and GCC support an option that lets the compilers automatically inline any suitable function, even those not marked as inline functions.
+An inline function can be written in C++ or C++11 like this:
+
+
+inline void swap(int &amp; m, int &amp; n)
+{
+  int temp = m;
+  m = n;
+  n = temp;
+}
+
+Then, a statement such as the following:
+
+
+swap(x, y);
+
+will be translated into:
+
+
+int temp = x;
+x = y;
+y = temp;
+
+When implementing a sorting algorithm doing lots of swaps, this speeds things up a lot.
+Microsoft Visual C++ specific[edit]
+Microsoft Visual C++ and few other compilers support non-standard constructs for defining inline functions, such as __inline and __forceinline specifiers.
+
+The __inline keyword is equivalent to inline.
+The __forceinline keyword allows the programmer to force the compiler to inline the function, but indiscriminate use of __forceinline can result in larger code (bloated executable file), minimal or no performance gain, and in some cases even a loss in performance. The compiler cannot inline the function in all circumstances, even with the __forceinline keyword applied. If the compiler cannot inline a function declared with __forceinline, a warning of level 1 is generated. A list of cases when __forceinline will not take effect is listed below (based on Microsoft Specifications at MSDN):
+
+
+The function or its caller is compiled with /Ob0 (the default option for debug builds).
+The function and the caller use different types of exception handling (C++ exception handling in one, structured exception handling in the other).
+The function has a variable argument list.
+The function uses inline assembly, unless compiled with /Og, /Ox, /O1, or /O2.
+The function is recursive and not accompanied by #pragma inline_recursion(on). With the pragma, recursive functions are inlined to a default depth of 16 calls. To reduce the inlining depth, use inline_depth pragma.
+The function is virtual and is called virtually. Direct calls to virtual functions can be inlined.
+The program takes the address of the function and the call is made via the pointer to the function. Direct calls to functions that have had their address taken can be inlined.
+The function is also marked with the naked __declspec modifier.
+
+__forceinline is useful if:
+
+inline or __inline is not respected by the compiler (ignored by compiler cost/benefit analyzer)
+code portability is not required
+inlining results in a necessary performance boost
+
+Example of portable code:
+
+
+#ifdef _MSC_VER
+  #define INLINE __forceinline /* use __forceinline (VC++ specific) */
+#else
+  #define INLINE inline        /* use standard inline */
+#endif
+
+INLINE void foo() { /* inline function body */ }
+
+Quotes[edit]
+
+"A function declaration [ . . . ] with an inline specifier declares an inline function. The inline specifier indicates to the implementation that inline substitution of the function body at the point of call is to be preferred to the usual function call mechanism. An implementation is not required to perform this inline substitution at the point of call; however, even if this inline substitution is omitted, the other rules for inline functions defined by 7.1.2 shall still be respected."
+— ISO/IEC 14882:2011, the current C++ standard, section 7.1.2
+
+
+"A function declared with an inline function specifier is an inline function. [ . . . ] Making a function an inline function suggests that calls to the function be as fast as possible. The extent to which such suggestions are effective is implementation-defined (footnote: For example, an implementation might never perform inline substitution, or might only perform inline substitutions to calls in the scope of an inline declaration.)
+
+
+"[ . . . ] An inline definition does not provide an external definition for the function, and does not forbid an external definition in another translation unit. An inline definition provides an alternative to an external definition, which a translator may use to implement any call to the function in the same translation unit. It is unspecified whether a call to the function uses the inline definition or the external definition."
+— ISO 9899:1999(E), the C99 standard, section 6.7.4
+
+See also[edit]
+
+Macro (computer science)
+
+References[edit]
+
+
+^ a b Meyers, Randy (July 1, 2002). "The New C: Inline Functions".&#160;
+
+
+
+
+JANA, DEBASISH (1 January 2005). C++ AND OBJECT-ORIENTED PROGRAMMING PARADIGM. PHI Learning Pvt. Ltd. ISBN&#160;978-81-203-2871-6.&#160;
+Sengupta, Probal (1 August 2004). Object-Oriented Programming: Fundamentals And Applications. PHI Learning Pvt. Ltd. ISBN&#160;978-81-203-1258-6.&#160;
+Svenk, Goran (2003). Object-oriented Programming: Using C++ for Engineering and Technology. Cengage Learning. ISBN&#160;0-7668-3894-3.&#160;
+Balagurusamy (2013). Object Oriented Programming with C++. Tata McGraw-Hill Education. ISBN&#160;978-1-259-02993-6.&#160;
+Kirch-Prinz, Ulla; Prinz, Peter (2002). A Complete Guide to Programming in C++. Jones &amp; Bartlett Learning. ISBN&#160;978-0-7637-1817-6.&#160;
+Conger, David (2006). Creating Games in C++: A Step-by-step Guide. New Riders. ISBN&#160;978-0-7357-1434-2.&#160;
+Skinner, M. T. (1992). The Advanced C++ Book. Silicon Press. ISBN&#160;978-0-929306-10-0.&#160;
+Love (1 September 2005). Linux Kernel Development. Pearson Education. ISBN&#160;978-81-7758-910-8.&#160;
+DEHURI, SATCHIDANANDA; JAGADEV, ALOK KUMAR; RATH, AMIYA KUMAR (8 May 2007). OBJECT-ORIENTED PROGRAMMING USING C++. PHI Learning Pvt. Ltd. ISBN&#160;978-81-203-3085-6.&#160;
+Nayak, Prashant (12 Oct 2013). Learn C++ Online. LearnCppOnline.com.&#160;
+
+
+External links[edit]
+
+Inline functions with the GNU Compiler Collection (GCC)
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Inline_function&amp;oldid=689347582"					
+				Categories: Software optimization				
+							
+		
+		
+			

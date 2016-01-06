@@ -1,0 +1,426 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Reflection (computer programming)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Reflection (computer science))
+												
+					Jump to:					navigation, 					search
+				
+				In computer science, reflection is the ability of a computer program to examine (see type introspection) and modify its own structure and behavior (specifically the values, meta-data, properties and functions) at runtime.[1]
+
+
+
+Contents
+
+
+1 Historical background
+2 Uses
+3 Implementation
+4 Examples
+
+4.1 ECMAScript
+4.2 Java
+4.3 Objective-C
+4.4 Delphi
+4.5 Perl
+4.6 PHP
+4.7 Python
+4.8 R
+4.9 Ruby
+
+
+5 See also
+6 References
+7 Further reading
+8 External links
+
+
+
+Historical background[edit]
+The earliest computers were programmed in their native assembly language, which were inherently reflective as these original architectures could be programmed by defining instructions as data and using self-modifying code. As programming moved to higher-level languages such as C, this reflective ability disappeared (outside of malware) until programming languages with reflection built into their type systems appeared.[citation needed]
+Brian Cantwell Smith's 1982 doctoral dissertation[2][3] introduced the notion of computational reflection in programming languages, and the notion of the meta-circular interpreter as a component of 3-Lisp.
+Uses[edit]
+Reflection can be used for observing and modifying program execution at runtime. A reflection-oriented program component can monitor the execution of an enclosure of code and can modify itself according to a desired goal related to that enclosure. This is typically accomplished by dynamically assigning program code at runtime.
+In object oriented programming languages such as Java, reflection allows inspection of classes, interfaces, fields and methods at runtime without knowing the names of the interfaces, fields, methods at compile time. It also allows instantiation of new objects and invocation of methods.
+Reflection can also be used to adapt a given program to different situations dynamically. For example, consider an application that uses two different classes X and Y interchangeably to perform similar operations. Without reflection-oriented programming, the application might be hard-coded to call method names of class X and class Y. However, using the reflection-oriented programming paradigm, the application could be designed and written to utilize reflection in order to invoke methods in classes X and Y without hard-coding method names. Reflection-oriented programming almost always requires additional knowledge, framework, relational mapping, and object relevance in order to take advantage of more generic code execution.
+Reflection is often used as part of software testing, such as for the runtime creation/instantiation of mock objects.
+Reflection is also a key strategy for metaprogramming.
+In some object-oriented programming languages, such as C# and Java, reflection can be used to override member accessibility rules. For example, reflection makes it possible to change the value of a field marked "private" in a third-party library's class.
+Implementation[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2008)
+
+
+A language supporting reflection provides a number of features available at runtime that would otherwise be difficult to accomplish in a lower-level language. Some of these features are the abilities to:
+
+Discover and modify source code constructions (such as code blocks, classes, methods, protocols, etc.) as a first-class object at runtime.
+Convert a string matching the symbolic name of a class or function into a reference to or invocation of that class or function.
+Evaluate a string as if it were a source code statement at runtime.
+Create a new interpreter for the language's bytecode to give a new meaning or purpose for a programming construct.
+
+These features can be implemented in different ways. In MOO, reflection forms a natural part of everyday programming idiom. When verbs (methods) are called, various variables such as verb (the name of the verb being called) and this (the object on which the verb is called) are populated to give the context of the call. Security is typically managed by accessing the caller stack programmatically: Since callers() is a list of the methods by which the current verb was eventually called, performing tests on callers()[1] (the command invoked by the original user) allows the verb to protect itself against unauthorised use.
+Compiled languages rely on their runtime system to provide information about the source code. A compiled Objective-C executable, for example, records the names of all methods in a block of the executable, providing a table to correspond these with the underlying methods (or selectors for these methods) compiled into the program. In a compiled language that supports runtime creation of functions, such as Common Lisp, the runtime environment must include a compiler or an interpreter.
+Reflection can be implemented for languages not having built-in reflection facilities by using a program transformation system to define automated source code changes.
+Examples[edit]
+The following code snippets create an instance foo of class Foo, and invoke its method hello. For each programming language, normal and reflection-based call sequences are shown.
+ECMAScript[edit]
+The following is an example in ECMAScript, and therefore also applies to JavaScript and ActionScript:
+
+
+// Without reflection
+new Foo.hello()
+
+// With reflection
+
+// assuming that Foo resides in this
+new this['Foo']['hello']()
+
+// or without assumption
+new (eval('Foo'))['hello']()
+
+// or simply
+eval('new Foo.hello()')
+
+Java[edit]
+The following is an example in Java:
+
+
+// without reflection
+Foo foo = new Foo();
+foo.hello();
+
+// with reflection
+Object foo = Class.forName("complete.classpath.and.Foo").newInstance();
+// Alternatively: Object foo = Foo.class.newInstance();
+Method m = foo.getClass().getDeclaredMethod("hello", new Class&lt;?&gt;[0]);
+m.invoke(foo);
+
+Objective-C[edit]
+The following is an example in Objective-C—implying either the OpenStep or Foundation Kit framework is used:
+
+
+// Foo class.
+@interface Foo : NSObject
+- (void)hello;
+@end
+
+// Sending "hello" to a Foo instance without reflection.
+Foo *obj = [[Foo alloc] init];
+[obj hello];
+
+// Sending "hello" to a Foo instance with reflection.
+id obj = [[NSClassFromString(@"Foo") alloc] init];
+[obj performSelector: @selector(hello)];
+
+Delphi[edit]
+This Delphi example assumes a TFoo class has been declared in a unit called Unit1:
+
+
+uses RTTI, Unit1;
+
+procedure WithoutReflection;
+var
+  Foo: TFoo;
+begin
+  Foo := TFoo.Create;
+  try
+    Foo.Hello;
+  finally
+    Foo.Free;
+  end;
+end;
+
+procedure WithReflection;
+var
+  RttiContext: TRttiContext;
+  RttiType: TRttiInstanceType;
+  Foo: TObject;
+begin
+  RttiType := RttiContext.FindType('Unit1.TFoo') as TRttiInstanceType;
+  Foo := RttiType.GetMethod('Create').Invoke(RttiType.MetaclassType, []).AsObject;
+  try
+    RttiType.GetMethod('Hello').Invoke(Foo, []);
+  finally
+    Foo.Free;
+  end;
+end;
+
+This is a notable example since Delphi is an unmanaged, fully natively compiled language, unlike most other languages that support reflection. Its language architecture inherits from strongly-typed Pascal, but with significant influence from SmallTalk. Compare with the other examples here, many of which are dynamic or script languages like Perl, Python or PHP, or languages with a runtime like Java or C#.
+Perl[edit]
+The following is an example in Perl:
+
+
+# without reflection
+my $foo = Foo-&gt;new;
+$foo-&gt;hello;
+
+# or
+Foo-&gt;new-&gt;hello;
+
+# with reflection
+my $class = "Foo"
+my $constructor = "new";
+my $method = "hello";
+
+my $f = $class-&gt;$constructor;
+$f-&gt;$method;
+
+# or
+$class-&gt;$constructor-&gt;$method;
+
+# with eval
+eval "new Foo-&gt;hello;";
+
+PHP[edit]
+The following is an example in PHP:
+
+
+// without reflection
+$foo = new Foo();
+$foo-&gt;hello();
+
+// with reflection
+$reflector = new ReflectionClass('Foo');
+$foo = $reflector-&gt;newInstance();
+$hello = $reflector-&gt;getMethod('hello');
+$hello-&gt;invoke($foo);
+
+// using callback
+$foo = new Foo();
+call_user_func(array($foo, 'hello'));
+
+// using variable variables syntax
+$className = 'Foo';
+$foo = new $className();
+$method = 'hello';
+$foo-&gt;$method();
+
+Python[edit]
+The following is an example in Python:
+
+
+# without reflection
+obj = Foo()
+obj.hello()
+
+# with reflection
+class_name = "Foo"
+method = "hello"
+obj = globals()[class_name]()
+getattr(obj, method)()
+
+# with eval
+eval("Foo().hello()")
+
+R[edit]
+The following is an example in R:
+
+
+# Without reflection, assuming foo() returns an S3-type object that has method "hello"
+obj &lt;- foo()
+hello(obj)
+
+# With reflection
+the.class &lt;- "foo"
+the.method &lt;- "hello"
+obj &lt;- do.call(the.class, list())
+do.call(the.method, alist(obj))
+
+Ruby[edit]
+The following is an example in Ruby:
+
+
+# without reflection
+obj = Foo.new
+obj.hello
+
+# with reflection
+class_name = "Foo"
+method = :hello
+obj = Kernel.const_get(class_name).new
+obj.send method
+
+# with eval
+eval "Foo.new.hello"
+
+See also[edit]
+
+Type introspection
+Self-modifying code
+Self-hosting
+Programming paradigms
+List of reflective programming languages and platforms
+Mirror (programming)
+
+References[edit]
+Notes
+
+
+^ A Tutorial on Behavioral Reflection and its Implementation by Jacques Malenfant et al.
+^ Brian Cantwell Smith, Procedural Reflection in Programming Languages, Department of Electrical Engineering and Computer Science, Massachusetts Institute of Technology, PhD Thesis, 1982.
+^ Brian C. Smith. Reflection and semantics in a procedural language. Technical Report MIT-LCS-TR-272, Massachusetts Institute of Technology, Cambridge, Mass., January 1982.
+
+
+Documents
+
+Jonathan M. Sobel and Daniel P. Friedman. An Introduction to Reflection-Oriented Programming (1996), Indiana University.
+
+Further reading[edit]
+
+Ira R. Forman and Nate Forman, Java Reflection in Action (2005), ISBN 1-932394-18-4
+Ira R. Forman and Scott Danforth, Putting Metaclasses to Work (1999), ISBN 0-201-43305-2
+
+External links[edit]
+
+Reflection in logic, functional and object-oriented programming: a short comparative study
+An Introduction to Reflection-Oriented Programming
+Brian Foote's pages on Reflection in Smalltalk
+Java Reflection API Tutorial from Oracle
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Reflection_(computer_programming)&amp;oldid=684591090"					
+				Categories: Programming constructsHidden categories: All articles with unsourced statementsArticles with unsourced statements from July 2015Articles needing additional references from January 2008All articles needing additional references				
+							
+		
+		
+			

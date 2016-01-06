@@ -1,0 +1,237 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			JetBrains
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+JetBrains
+
+
+
+
+
+Type
+
+Private
+
+
+Industry
+Software
+
+
+Founded
+2000
+
+
+Headquarters
+Czech Republic
+
+
+
+Key people
+
+
+
+
+Sergey Dmitriev
+Max Shafirov
+Oleg Stepanov
+
+
+
+
+
+Products
+
+
+
+IntelliJ IDEA
+ReSharper
+dotTrace
+dotMemory
+dotCover
+CLion
+dotPeek
+TeamCity
+YouTrack
+RubyMine
+PyCharm
+PhpStorm
+WebStorm
+AppCode
+MPS
+Kotlin
+UpSource
+
+
+
+
+
+
+Number of employees
+
+500+
+
+
+Website
+jetbrains.com
+
+
+JetBrains (formerly IntelliJ) is a software development company whose tools are targeted towards software developers and project managers.[1][2]
+As of 2015[update], the company has over 500[3] employees in its five offices:[4] in Prague, Saint Petersburg,[5] Moscow, Munich, and Boston.[6]
+
+
+
+Contents
+
+
+1 History
+2 Products
+
+2.1 CLion
+
+
+3 Revenue model
+4 Open source projects
+5 Past projects
+6 Awards and recognition
+7 References
+8 External links
+
+
+
+History[edit]
+JetBrains, initially called IntelliJ,[7] was founded in 2000 in Prague by three software developers:[8] Sergey Dmitriev, Valentin Kipiatkov and Eugene Belyaev.[9]
+The company's first product was IntelliJ Renamer, a tool for refactoring Java code.[2]
+In 2012, after having been the company's CEO for 12 years, Sergey Dmitriev entrusted the company to two newly appointed CEOs, Oleg Stepanov and Maxim Shafirov, and devoted himself to his scientific endeavors in the field of bioinformatics.[10][11]
+Products[edit]
+The company offers an extended family of IDEs for Java, Ruby, Python, PHP, Objective-C, C++, and other programming languages.[12]
+JetBrains are also the makers of tools for .NET developers, including ReSharper, dotTrace, dotMemory, dotCover and dotPeek, plus team development tools: TeamCity for continuous integration and build management, YouTrack for issue tracking and UpSource for code review.[13][14]
+In 2011 the company entered a new area by introducing Kotlin, a new JVM programming language.[12]
+
+CLion
+
+Developer(s)
+JetBrains
+
+
+Stable release
+1.2 / 30&#160;October 2015; 22 days ago&#160;(2015-10-30)
+
+
+Written in
+Java
+
+
+Operating system
+Windows, OS X, Linux
+
+
+Website
+www.jetbrains.com/clion/
+
+
+CLion[edit]
+CLion (pronounced "sea lion") is a cross-platform C/C++ IDE for Linux, OS X, and Windows integrated with the CMake build system.[15][16] The initial version will support the GCC and Clang compilers and GDB debugger, with JetBrains hoping to support LLDB and Google Test in the future.[17] The Forrester analyst Michael Facemire expressed doubts about the product's potential.[17]
+Revenue model[edit]
+JetBrains IDEs have several license options, which feature same software functionality and differ in their price and terms of use. The team products are available as hosted and installed versions and have free versions for small teams.[18][19] All products are free for open source projects and educational institutions.[20]
+IntelliJ IDEA Ultimate is one of the only paid products in a field of free or open source options.[21][22][23]
+Open source projects[edit]
+In 2009, JetBrains open-sourced the core functionality of IntelliJ IDEA by offering the free Community Edition.[20][24] It is built on the IntelliJ Platform and includes its sources. JetBrains has applied the Apache 2.0 license to both of them.[25] In 2010, Android support became a part of the Community Edition,[26] and two years later Google announced[27] its Android Studio, the IDE for mobile development on Android platform built on the Community Edition of IntelliJ IDEA and an official alternative to Eclipse Android Developer Tool.[28] In June 2015, it was announced that the support of Eclipse ADT will be discontinued making the Android Studio the official tool for Android App development.[29]
+MPS, short for Meta Programming System, and Project Kotlin, a statically typed programming language for JVM, are both open source and non-commercial.[30][31]
+Past projects[edit]
+Fabrique, a RAD framework for building custom Web and enterprise applications.[32] Introduced in 2004,[32] apparently dead since 2008.
+Omea, a desktop-based reader and organizer for RSS (and later of every bit of information that comes across one’s desktop),[33] the first[34] and so far the only consumer-oriented product from JetBrains. Introduced in 2004, it failed to gain expected popularity.[33] In 2008, having reached v 2.2, Omea was open-sourced under the GPL v2 license.[35] The product is still available for download, and after the "retirement"[36] of Google Reader, has gained some attention again.[33][37]
+Astella, an IDE for Flash and Flex. This most short-lived JetBrains product was announced in October 2011,[38] just a month before Adobe killed Mobile Flash.[39]
+Awards and recognition[edit]
+
+InfoWorld's 2015 Technology of the Year Award[40]
+Jolt 2014[41] and 2013[42] Awards: Coding Tools
+Visual Studio Magazine 2012 Readers Choice[43]
+JAX Innovation Awards[44]
+InfoWorld's 2011 Technology of the Year[21]
+Visual Studio Magazine 2010 Editors Choice[45]
+Jolt 2010 Productivity Awards: Development Environments[46]
+
+References[edit]
+
+
+^ Taft, Darryl K. (29 June 2012). "JetBrains Ships YouTrack 4.0 Agile Dev Tool". eWeek.&#160;
+^ a b Hunger, Michael (26 November 2010). "JetBrains Developer Tools". infoQ.&#160;
+^ "JetBrains Website/Meet Our Team".&#160;
+^ "JetBrains Website/Company".&#160;
+^ Waters, John K. (27 July 2011). "Java IDE Maker JetBrains Creates New JVM Language". ADT Magazine.&#160;
+^ "Crunchbase".&#160;
+^ "12th Annual Jolt and Productivity Awards".&#160;
+^ Heiss, Janice J. (November 2012). "JAX Innovation Awards winners reflect the vibrancy of the Java community". Oracle Technology Network.&#160;
+^ "Java Posse #001 - Interview with Rob Harwood of Jetbrains about IntelliJ IDEA". 22 September 2005.&#160;
+^ Осипов, Антон (26 October 2012). "JetBrains назначила генеральных директоров в Санкт-Петербурге и Мюнхене". Vedomosti.&#160;
+^ Лаврентьева, Наталья (24 October 2012). "Российский поставщик средств разработки для Oracle и HP назначил гендиректорами двух программистов". Cnews.ru.&#160;
+^ a b Stal, Michael (23 July 2011). "JetBrains introduces the new JVM language Kotlin". InfoQ.&#160;
+^ Taft, Darryl (11 May 2012). "JetBrains Ships Free .NET Decompiler". eweek.&#160;
+^ Hunger, Michael (13 January 2012). "IDE's and Developer tools, current state and future". InfoQ.&#160;
+^ Bridgwater, Adrian (13 September 2014). "JetBrains CLion: A New Cross Platform C/C++ IDE". Dr. Dobb's.&#160;
+^ Avram, Abel (9 September 2014). "JetBrains CLion, a C/C++ IDE, and ReSharper for C++". InfoQ.&#160;
+^ a b Krill, Paul (14 September 2014). "Version 1.0 of JetBrains' CLion IDE will include C/C++ support". InfoWorld.&#160;
+^ Walker-Morgan, Dj (21 June 2013). "TeamCity 8 brings better organisation to continuous integration". The Heise.&#160;
+^ Vogel, Peter (6 September 2011). "Free Tool: JetBrains YouTrack". Visual Studio Magazine.&#160;
+^ a b Handy, Alex (15 October 2009). "JetBrains creates open-source IntelliJ IDEA". SD Times. Archived from the original on 18 October 2009.&#160;
+^ a b "InfoWorld's 2011 Technology of the Year Award winners". InfoWorld. 12 January 2011.&#160;
+^ "Die besten Java-IDEs". Computerwoche. 28 July 2011.&#160;
+^ Waters, John K. (28 February 2011). "Scrappy JetBrains Releases PhpStorm 2". ADT Magazine.&#160;
+^ "IntelliJ IDEA open sourced". 15 October 2009.&#160;
+^ Krill, Paul (12 October 2009). "JetBrains readies open source version of its Java IDE". InfoQ.&#160;
+^ Russakovskii, Artem (9 December 2010). "JetBrains Releases IntelliJ IDEA 10 With Full Android Gingerbread Support In The Free Community Edition". Android Police.&#160;
+^ Thomson, Iain (15 May 2013). "Live Blog: Google I/O keynote". The Register.&#160;
+^ Wayner, Peter (22 May 2013). "First look: Android Studio eclipses Eclipse". InfoQ.&#160;
+^ Eason, Jamal (26 June 2015). "An update on Eclipse Android Developer Tools".&#160;
+^ Blewitt, Alex (14 February 2012). "Kotlin Open Sourced". InfoQ.&#160;
+^ Schmidt, Julia (11 September 2013). "JetBrains MPS 3.0 mit mehr Struktur". Heise Developer.&#160;
+^ a b Krill, Paul (23 April 2004). "JetBrains storms into easy-to-use Java tools fray". Infoworld.&#160;
+^ a b c Kurdi, Samer (18 March 2013). "Omea Reader: may be the only RSS aggregator which lets you attach tags and notes to RSS posts". Freewaregenious.&#160;
+^ "JetBrains Releases Omea Reader". InformationWeek. 6 October 2004.&#160;
+^ "Tim Anderson's IT Writing".&#160;
+^ "Google Reader: what are the alternatives?". The Guardian. 7 June 2013.&#160;
+^ "8 Awesome Alternatives to Google Reader". Technolect. 25 April 2013.&#160;
+^ Neumann, Alexander (4 October 2011). "Astella: neue IDE für Flash, Flex, AIR und HTML5 von JetBrains". Heise.&#160;
+^ Arthur, Charles (9 November 2011). "Adobe kills mobile Flash, giving Steve Jobs the last laugh". The Guardian.&#160;
+^ "InfoWorld's 2015 Technology of the Year Award winners".&#160;
+^ "Jolt Awards: Coding Tools". Dr. Dobb's.&#160;
+^ "Jolt Awards: Coding Tools". Dr. Dobb's.&#160;
+^ Richards, Kathleen (6 November 2012). "Visual Studio Magazine 2012 Readers Choice Winners". Visual Studio Magazine.&#160;
+^ Kent, Anna (11 July 2012). "JAX Innovation Awards - Winners Revealed!!". jaxenter.&#160;
+^ Desmond, Michael (1 November 2010). "2010 Readers Choice Awards". Visual Studio Magazine.&#160;
+^ "Jolt Productivity Awards: Development Environments #1". Dr. Dobb's.&#160;
+
+
+External links[edit]
+
+Official website
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=JetBrains&amp;oldid=691692401"					
+				Categories: 2010 establishments in the Czech RepublicSoftware companies of the Czech RepublicHidden categories: Use dmy dates from September 2015Articles containing potentially dated statements from 2015All articles containing potentially dated statements				
+							
+		
+		
+			

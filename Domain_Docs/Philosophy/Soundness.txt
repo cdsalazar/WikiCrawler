@@ -1,0 +1,186 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Soundness
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article includes a list of references, related reading or external links, but its sources remain unclear because it lacks inline citations. Please improve this article by introducing more precise citations. (September 2015)
+
+
+In mathematical logic, a logical system has the soundness property if and only if its inference rules prove only formulas that are valid with respect to its semantics. In most cases, this comes down to its rules having the property of preserving truth, but this is not the case in general.
+
+
+
+Contents
+
+
+1 Of arguments
+2 Logical systems
+
+2.1 Soundness
+2.2 Strong soundness
+2.3 Arithmetic soundness
+
+
+3 Relation to completeness
+4 See also
+5 References
+6 External links
+
+
+
+Of arguments[edit]
+An argument is sound if and only if
+1. The argument is valid, and 2. All of its premises are true.
+For instance,
+
+All men are mortal.
+Socrates is a man.
+Therefore, Socrates is mortal.
+
+The argument is valid (because the conclusion is true based on the premises, that is, that the conclusion follows the premises) and since the premises are in fact true, the argument is sound.
+The following argument is valid but not sound:
+
+All organisms with wings can fly.
+Penguins have wings.
+Therefore, penguins can fly.
+
+Since the first premise is actually false, the argument, though valid, is not sound.
+Logical systems[edit]
+Soundness is among the most fundamental properties of mathematical logic. The soundness property provides the initial reason for counting a logical system as desirable. The completeness property means that every validity (truth) is provable. Together they imply that all and only validities are provable.
+Most proofs of soundness are trivial.[citation needed] For example, in an axiomatic system, proof of soundness amounts to verifying the validity of the axioms and that the rules of inference preserve validity (or the weaker property, truth). Most axiomatic systems have only the rule of modus ponens (and sometimes substitution),[citation needed] so it requires only verifying the validity of the axioms and one rule of inference.
+Soundness properties come in two main varieties: weak and strong soundness, of which the former is a restricted form of the latter.
+Soundness[edit]
+Soundness of a deductive system is the property that any sentence that is provable in that deductive system is also true on all interpretations or structures of the semantic theory for the language upon which that theory is based. In symbols, where S is the deductive system, L the language together with its semantic theory, and P a sentence of L: if ⊢S&#160;P, then also ⊨L&#160;P.
+Strong soundness[edit]
+Strong soundness of a deductive system is the property that any sentence P of the language upon which the deductive system is based that is derivable from a set Γ of sentences of that language is also a logical consequence of that set, in the sense that any model that makes all members of Γ true will also make P true. In symbols where Γ is a set of sentences of L: if Γ&#160;⊢S&#160;P, then also Γ&#160;⊨L&#160;P. Notice that in the statement of strong soundness, when Γ is empty, we have the statement of weak soundness.
+Arithmetic soundness[edit]
+If T is a theory whose objects of discourse can be interpreted as natural numbers, we say T is arithmetically sound if all theorems of T are actually true about the standard mathematical integers. For further information, see ω-consistent theory.
+Relation to completeness[edit]
+The converse of the soundness property is the semantic completeness property. A deductive system with a semantic theory is strongly complete if every sentence P that is a semantic consequence of a set of sentences Γ can be derived in the deduction system from that set. In symbols: whenever Γ ⊨ P, then also Γ ⊢ P. Completeness of first-order logic was first explicitly established by Gödel, though some of the main results were contained in earlier work of Skolem.
+Informally, a soundness theorem for a deductive system expresses that all provable sentences are true. Completeness states that all true sentences are provable.
+Gödel's first incompleteness theorem shows that for languages sufficient for doing a certain amount of arithmetic, there can be no effective deductive system that is complete with respect to the intended interpretation of the symbolism of that language. Thus, not all sound deductive systems are complete in this special sense of completeness, in which the class of models (up to isomorphism) is restricted to the intended one. The original completeness proof applies to all classical models, not some special proper subclass of intended ones.
+See also[edit]
+
+
+
+
+Logic portal
+
+
+
+
+Validity
+Completeness (logic)
+
+References[edit]
+
+
+Hinman, P. (2005). Fundamentals of Mathematical Logic. A K Peters. ISBN&#160;1-56881-262-0.&#160;
+Copi, Irving (1979), Symbolic Logic (5th ed.), Macmillan Publishing Co., ISBN&#160;0-02-324880-7&#160;
+Boolos, Burgess, Jeffrey. Computability and Logic, 4th Ed, Cambridge, 2002.
+
+External links[edit]
+
+
+
+Find more about
+Soundness
+at Wikipedia's sister projects
+
+
+
+
+Definitions from Wiktionary
+
+
+
+Validity and Soundness in the Internet Encyclopedia of Philosophy.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+Metalogic
+Metamathematics
+
+
+
+
+
+
+
+
+
+
+
+
+Cantor's theorem
+Entscheidungsproblem
+Church–Turing thesis
+Consistency
+Effective method
+Foundations of mathematics
+Gödel's completeness theorem
+Gödel's incompleteness theorems
+Soundness
+Completeness
+Decidability
+Interpretation
+Löwenheim–Skolem theorem
+Metatheorem
+Satisfiability
+Independence
+Type–token distinction
+Use–mention distinction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Soundness&amp;oldid=683108003"					
+				Categories: Accuracy and precisionModel theoryProof theoryConcepts in logicDeductive reasoningArgumentsHidden categories: Articles lacking in-text citations from September 2015All articles lacking in-text citationsAll articles with unsourced statementsArticles with unsourced statements from June 2008				
+							
+		
+		
+			

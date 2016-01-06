@@ -1,0 +1,313 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Comparison of ALGOL 68 and C++
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article includes a list of references, related reading or external links, but its sources remain unclear because it lacks inline citations. Please improve this article by introducing more precise citations. (June 2013)
+
+
+
+
+Programming language comparisons
+
+
+
+
+General comparison
+Basic syntax
+Basic instructions
+Exception handling
+Anonymous functions
+Conditional expressions
+Functional instructions
+Arrays
+Associative arrays
+String operations
+String functions
+List comprehension
+Object-oriented programming
+Object-oriented constructors
+Database access
+
+
+
+
+
+
+Evaluation strategy
+List of "Hello World" programs
+
+
+
+
+
+
+Web application frameworks
+Comparison of the Java and .NET platforms
+
+
+
+
+
+
+Languages with dependent types
+
+
+
+
+
+
+Comparison of individual programming languages
+
+ALGOL 58's influence on ALGOL 60
+ALGOL 60: Comparisons with other languages
+Comparison of ALGOL 68 and C++
+ALGOL 68: Comparisons with other languages
+Compatibility of C and C++
+Comparison of Pascal and Borland Delphi
+Comparison of Object Pascal and C
+Comparison of Pascal and C
+Comparison of Java and C++
+Comparison of C# and Java
+Comparison of C# and Visual Basic .NET
+Comparison of Visual Basic and Visual Basic .NET
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+C++ doesn't have:
+
+PROC - first class nested functions (emulation due to local definitions of class-types, which then could be functors, also new C++11 has lambda functions),
+OP and PRIO - definable operator symbols and priorities,
+garbage collection (could be emulated with help of smart pointers),
+use before define,
+formatted transput using complex formatting declarations,
+:= - assignment operation symbol (to avoid confusion with equal sign),
+array (and slice operations on them, but in layered libraries),
+automatic UNIONs,
+CASE expressions,
+nonlocal GOTO
+intuitive declaration syntax due to its origin from C.
+
+ALGOL 68 doesn't have:
+
+public/private struct member access protection,
+overloaded procedures (in contrast to operators),
+explicit memory deallocation,
+forward declarations (use before definition is allowed)
+textual preprocessing (e.g. macros),
+distinct reference and pointer types,
+comment lines (only bracketed comments),
+struct inheritance, struct member functions, virtual functions.
+destructors, exceptions, templates, namespaces, structured loop exits
+
+
+
+
+Contents
+
+
+1 Comparison of the assignment and equality operators
+2 Code Examples
+
+2.1 Union declaration and use
+2.2 Mode declaration
+
+
+3 External links
+
+
+
+Comparison of the assignment and equality operators[edit]
+
+
+Intent
+ALGOL 68
+C++
+
+
+Define a constant
+int x=888;
+const int x = 888;
+
+
+Initialise a variable
+int x:=888;
+int x = 888;
+
+
+Assign a value 888 to a variable x
+x:=888;
+x = 888;
+
+
+Compare two values
+if x = 888 then ... fi
+if (x == 888) { ... }
+
+
+Allocate a variable from the heap
+ref int x = heap int;
+or simply:
+heap int x;
+int* x = new int;
+
+
+Compare address of two pointers
+ref int x, y;
+if x&#160;:=: y then ... fi
+int* x; int* y;
+if (x == y) { ... }
+
+
+
+Compare value referenced by two pointers
+ref int x, y;
+if x = y then ... fi
+int* x; int* y;
+if (*x == *y) { ... }
+
+
+
+Name a new type
+mode longreal = long real;
+typedef double longreal;
+
+
+Name a new record type
+mode cust = struct(string name, address);
+struct cust { std::string name, address; };
+
+
+Name a new union type
+mode taggedu = union(string s, real r);
+union u { std::string s; float f; };
+
+
+Name a procedure or function
+proc f = (real x) real: ( code; result );
+float f(float x) { code; return result; }
+
+
+Procedure default parameters
+proc p = (union (real, void) in x)void:
+&#160;&#160;&#160;&#160;( real x = (in x|(real x):x|888); code );
+
+void p(float x=888) { code; }
+
+
+Name a new operator
+op ↑ = (real x,y) real: x**y;
+N/A
+
+
+Set priority on a new operator
+prio ↑ = 9;
+N/A
+
+
+Chain variables assignment
+a:=b:=c:=d;
+a = b = c = d;
+
+
+Displacement operator - ALGOL 68C only
+a:=:=b:=:=c:=:=d;
+a = b; b = c; c = d;
+
+
+Append "substr" to a variable str
+str +:= "substr";
+str += "substr";
+
+
+Prefix "substr" to a variable str
+"substr" +=: str;
+str = "substr" + str;
+
+
+Code Examples[edit]
+Union declaration and use[edit]
+Assigning values into an A68 union variable is automatic, the type is "tagged" to the variable, but pulling the value back out is syntactically awkward as a conformity-clause is required.
+ALGOL 68 example:
+
+ union(int, char) x:=666;
+ printf(($3d l$, (x|(int i):i) ))
+
+C/C++ example:
+
+
+  union { int i; char c; } x = { 666 };
+  std::cout &lt;&lt; x.i &lt;&lt; std::endl;
+
+The net effect of "type-tagging" is that Algol68's strong typing "half" encroaches into the union.
+Mode declaration[edit]
+A new mode (type) may be declared using a mode declaration:
+
+int max=99;
+mode newtype = [0:9][0:max]struct (
+   long real a, b, c, short int i, j, k, ref real r
+);
+
+This has the similar effect as the following C++ code:
+
+
+const int max=99;
+typedef struct { 
+    double a, b, c; short i, j, k; float&amp; r;
+} newtype[9+1][max+1];
+
+Note that for ALGOL 68 only the newtype name appears to the left of the equality, and most notably the construction is made - and can be read - from left to right without regard to priorities.
+External links[edit]
+
+A comparison of PASCAL and ALGOL 68 - Andrew S. Tanenbaum - June 1977.
+Orthogonal language design - Apr 2004 - retrieved May 10, 2007
+How Solve the Dangling Else? - Apr 2004 - retrieved May 10, 2007
+A comparison of Pascal, C, C++ and Algol68: Types, cont Type system, Type checking, Type safety, Type conversion, Primitive types, Aggregate types: arrays - Apr 2004 - retrieved May 10, 2007
+Arrays in Algol68 - Apr 2004 - retrieved May 10, 2007
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Comparison_of_ALGOL_68_and_C%2B%2B&amp;oldid=677030674"					
+				Categories: Programming language comparisonsALGOL 68C++Hidden categories: Pages with syntax highlighting errorsArticles lacking in-text citations from June 2013All articles lacking in-text citationsArticles with example ALGOL 68 codeArticles with example C++ code				
+							
+		
+		
+			

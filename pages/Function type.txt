@@ -1,0 +1,338 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Function type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer science, a function type (also arrow type or exponential) is the type of a variable or parameter to which a function has or can be assigned, or an argument or result type of a higher-order function taking or returning a function.
+A function type depends on the type of the parameters and the result type of the function (it, or more accurately the unapplied type constructor ·&#160;→&#160;·, is a higher-kinded type). In theoretical settings and languages where functions are defined in curried form, such as the simply typed lambda calculus, a function type depends on exactly two types, the domain A and the range B. Here a function type is often denoted A → B, following mathematical convention, or BA, based on the fact that there exist exactly BA (exponentially many) set-theoretic functions mapping A to B.
+The function type can be considered to be a special case of the dependent product type. Among other properties, the dependent product type encompasses the idea of a polymorphic function.
+
+
+
+Contents
+
+
+1 Programming languages
+2 Denotational semantics
+3 See also
+4 References
+
+
+
+Programming languages[edit]
+The following table summarized the syntax used for function types in several programming languages, including an example type signature for the higher-order function composition function:
+
+
+Language
+Notation
+Example type signature
+
+
+With first-class functions,
+parametric polymorphism
+C#
+Func&lt;α1,α2,...,αn,ρ&gt;
+Func&lt;A,C&gt; compose(Func&lt;B,C&gt; f, Func&lt;A,B&gt; g);
+
+
+Haskell
+α -&gt; ρ
+compose&#160;:: (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+
+
+OCaml
+α -&gt; ρ
+compose&#160;: ('b -&gt; 'c) -&gt; ('a -&gt; 'b) -&gt; 'a -&gt; 'c
+
+
+Scala
+(α1,α2,...,αn) =&gt; ρ
+def compose[A, B, C](f: B =&gt; C, g: A =&gt; B): A =&gt; C
+
+
+Standard ML
+α -&gt; ρ
+compose&#160;: ('b -&gt; 'c) -&gt; ('a -&gt; 'b) -&gt; 'a -&gt; 'c
+
+
+Swift
+α -&gt; ρ
+func compose&lt;A,B,C&gt;(f: B -&gt; C, g: A -&gt; B) -&gt; A -&gt; C
+
+
+With first-class functions,
+without parametric polymorphism
+Go
+func(α1,α2,...,αn) ρ
+var compose func(func(int)int, func(int)int) func(int)int
+
+
+Objective-C/C/C++ with Blocks
+ρ (^)(α1,α2,...,αn)
+int (^compose(int (^f)(int), int (^g)(int)))(int);
+
+
+Without first-class functions,
+parametric polymorphism
+C
+ρ (*)(α1,α2,...,αn)
+int (*compose(int (*f)(int), int (*g)(int)))(int);
+
+
+C++11
+Not unique.
+std::function&lt;ρ (α1,α2,...,αn)&gt; is the more general type (see below).
+
+function&lt;function&lt;int(int)&gt;(function&lt;int(int)&gt;, function&lt;int(int)&gt;)&gt; compose;
+
+
+When looking at the example type signature of for example C#, one should note that the type of the function compose is actually Func&lt;Func&lt;A,B&gt;,Func&lt;B,C&gt;,Func&lt;A,C&gt;&gt;.
+Note that because of type erased nature of C++11's std::function, it is more common to use templates for higher order function parameters and type inference (auto) for closures.
+Denotational semantics[edit]
+The function type in programming languages does not correspond to the space of all set-theoretic functions. If we take the countably infinite type of natural numbers as the domain and the booleans as range, then there are an uncountably infinite number (2ℵ0 = c) of set-theoretic functions between them. Clearly this space of functions is larger than the number of functions we can define in any programming language as there exist only countably many programs (a program being a finite sequence of a finite number of symbols) and one of the set-theoretic functions effectively solves the halting problem.
+Denotational semantics concerns itself with finding more appropriate models (called domains) to model programming language concepts such as function types. It turns out that restricting ourselves to the set of computable functions is not sufficient either if the programming language allows us to write non-terminating computations (which is the case if the programming language is Turing complete). We need to restrict ourselves to the so-called continuous functions (corresponding to continuity in the Scott topology, not continuity in the real analytical sense). Even then, the set of continuous function contains the parallel-or function, which cannot be correctly defined in all programming languages.
+See also[edit]
+
+Cartesian closed category
+Currying
+Exponential object, category-theoretic equivalent
+First-class function
+Function space, set-theoretic equivalent
+
+References[edit]
+
+Pierce, Benjamin C.. Types and Programming Languages. The MIT Press. pp.&#160;99–100.&#160;
+Mitchell, John C.. Foundations for Programming Languages. The MIT Press.&#160;
+function type in nLab
+Homotopy Type Theory: Univalent Foundations of Mathematics, The Univalent Foundations Program, Institute for Advanced Study. See section 1.2.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Function_type&amp;oldid=646848771"					
+				Categories: Data typesSubroutinesType theory				
+							
+		
+		
+			

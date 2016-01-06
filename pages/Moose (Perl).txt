@@ -1,0 +1,320 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Moose (Perl)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (May 2010)
+
+
+Moose is an extension of the object system of the Perl programming language. It brings modern object-oriented language features to Perl 5, making object-oriented Perl programming more consistent and less tedious.
+
+
+
+Contents
+
+
+1 Features
+
+1.1 Classes
+1.2 Attributes
+1.3 Roles
+
+
+2 Extensions
+3 Examples
+4 See also
+5 References
+6 External links
+
+
+
+Features[edit]
+Moose is built on top of Class::MOP, a metaobject protocol (aka MOP). Using the MOP, Moose provides complete introspection for all Moose-using classes.
+Classes[edit]
+Moose allows a programmer to create classes:
+
+A class has zero or more attributes.
+A class has zero or more methods.
+A class has zero or more superclasses (aka parent classes). A class inherits from its superclass(es). Moose supports multiple inheritance.
+A class has zero or more method modifiers. These modifiers can apply to its own methods, methods that are inherited from its ancestors or methods that are provided by roles.
+A class does zero or more roles (also known as traits in other programming languages).
+A class has a constructor and a destructor.
+A class has a metaclass.
+
+Attributes[edit]
+An attribute is a property of the class that defines it.
+
+An attribute always has a name, and it may have a number of other defining characteristics.
+An attribute's characteristics may include a read/write flag, a type, accessor method names, delegations, a default value and lazy initialization.
+
+Roles[edit]
+Roles in Moose are based on traits. They perform a similar task as mixins, but are composed horizontally rather than inherited. They are also somewhat like interfaces, but unlike interfaces they can provide a default implementation. Roles can be applied to individual instances as well as Classes.
+
+A role has zero or more attributes.
+A role has zero or more methods.
+A role has zero or more method modifiers.
+A role has zero or more required methods.
+
+Extensions[edit]
+There are a number of Moose extension modules on CPAN. As of September 2012[update] there are 855 modules in 266 distributions in the MooseX namespace.[1] Most of them can be optionally installed with the Task::Moose module.[2]
+Examples[edit]
+This is an example of a class Point and its subclass Point3D:
+
+
+package Point;
+use Moose;
+use Carp;
+
+has 'x' =&gt; (isa =&gt; 'Num', is =&gt; 'rw');
+has 'y' =&gt; (isa =&gt; 'Num', is =&gt; 'rw');
+
+sub clear {
+    my $self = shift;
+    $self-&gt;x(0);
+    $self-&gt;y(0);
+}
+
+sub set_to {
+    @_ == 3 or croak "Bad number of arguments";
+    my $self = shift;
+    my ($x, $y) = @_;
+    $self-&gt;x($x);
+    $self-&gt;y($y);
+}
+
+package Point3D;
+use Moose;
+use Carp;
+
+extends 'Point';
+
+has 'z' =&gt; (isa =&gt; 'Num', is =&gt; 'rw');
+
+after 'clear' =&gt; sub {
+    my $self = shift;
+    $self-&gt;z(0);
+};
+
+sub set_to {
+    @_ == 4 or croak "Bad number of arguments";
+    my $self = shift;
+    my ($x, $y, $z) = @_;
+    $self-&gt;x($x);
+    $self-&gt;y($y);
+    $self-&gt;z($z);
+}
+
+There is a new set_to() method in the Point3D class so the method of the same name defined in the Point class is not invoked in the case of Point3D instances. The clear() method on the other hand is not replaced but extended in the subclass, so both methods are run in the correct order.
+This is the same using the MooseX::Declare extension:
+
+
+use MooseX::Declare;
+
+class Point {
+    has 'x' =&gt; (isa =&gt; 'Num', is =&gt; 'rw');
+    has 'y' =&gt; (isa =&gt; 'Num', is =&gt; 'rw');
+    
+    method clear {
+        $self-&gt;x(0);
+        $self-&gt;y(0);
+    }
+    method set_to (Num $x, Num $y) {
+        $self-&gt;x($x);
+        $self-&gt;y($y);
+    }
+}
+
+class Point3D extends Point {
+    has 'z' =&gt; (isa =&gt; 'Num', is =&gt; 'rw');
+
+    after clear {
+        $self-&gt;z(0);
+    }
+    method set_to (Num $x, Num $y, Num $z) {
+        $self-&gt;x($x);
+        $self-&gt;y($y);
+        $self-&gt;z($z);
+    }
+}
+
+See also[edit]
+
+Perl 6 object system which is the inspiration for Moose
+Joose, a JavaScript framework inspired by Moose
+Catalyst, a web application framework using Moose
+
+References[edit]
+
+
+^ Moose extensions on CPAN
+^ Task::Moose
+
+
+External links[edit]
+
+Moose Homepage
+Moose Documentation
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Perl
+
+
+
+
+
+
+People
+
+
+
+Larry Wall
+Randal L. Schwartz
+Damian Conway
+Allison Randal
+Audrey Tang
+Sean M. Burke
+chromatic
+Adam Kennedy
+brian d foy
+Mark Jason Dominus
+Jesse Vincent
+
+
+
+
+
+
+
+
+Things
+
+
+
+CPAN
+Perl Foundation
+
+Perl Mongers
+PerlMonks
+archives
+
+
+module
+Perl VM
+Parrot
+YAPC
+
+
+
+
+
+
+
+
+Frameworks
+
+
+
+Bioperl
+Catalyst
+Dancer
+DBI
+DBIx::Class
+LWP
+Mason
+Maypole
+Mojolicious
+Moose
+Plack
+PSGI
+Template Toolkit
+
+
+
+
+
+
+
+
+Software
+
+
+
+Amavis
+Argus
+@SSP
+AWStats
+BackupPC
+Bricolage
+Bugzilla
+Makepp
+Movable Type
+Munin
+OTRS
+SpamAssassin
+TWiki/Foswiki
+W3Perl
+
+
+
+
+
+
+
+
+
+
+
+Outline
+Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Moose_(Perl)&amp;oldid=677554673"					
+				Categories: Perl modulesHidden categories: Articles lacking in-text citations from May 2010All articles lacking in-text citationsArticles containing potentially dated statements from September 2012All articles containing potentially dated statementsArticles with example Perl code				
+							
+		
+		
+			

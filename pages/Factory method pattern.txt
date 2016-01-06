@@ -1,0 +1,535 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Factory method pattern
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In class-based programming, the factory method pattern is a creational pattern that uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created. This is done by creating objects by calling a factory method—either specified in an interface and implemented by child classes, or implemented in a base class and optionally overridden by derived classes—rather than by calling a constructor.
+
+
+
+Contents
+
+
+1 Definition
+2 Example implementations
+
+2.1 Java
+2.2 PHP
+2.3 C#
+
+
+3 Limitations
+4 Uses
+5 See also
+6 References
+7 External links
+
+
+
+Definition[edit]
+The factory method pattern should not be confused with the more general notion of factories and factory methods. The factory method pattern is the best-known use of factories and factory methods, but not all uses of factory methods are examples of the factory method pattern – only when inheritance is involved (a class implementing an interface, or derived class, implements a factory method) is it an example of the factory method pattern[dubious – discuss]. More basic uses of factories are not examples of the factory method pattern, and may instead be referred to as the factory pattern[1] or a simple factory;[2] these are discussed at factory.
+Factory Method define an interface for creating an object, but let subclasses decide which class to instantiate. The Factory method lets a class defer instantiation to subclasses.[3]
+Creating an object often requires complex processes not appropriate to include within a composing object. The object's creation may lead to a significant duplication of code, may require information not accessible to the composing object, may not provide a sufficient level of abstraction, or may otherwise not be part of the composing object's concerns. The factory method design pattern handles these problems by defining a separate method for creating the objects, which subclasses can then override to specify the derived type of product that will be created.
+The factory method pattern relies on inheritance, as object creation is delegated to subclasses that implement the factory method to create objects.[4]
+Example implementations[edit]
+Java[edit]
+A maze game may be played in two modes, one with regular rooms that are only connected with adjacent rooms, and one with magic rooms that allow players to be transported at random (this Java example is similar to one in the book Design Patterns). The regular game mode could use this template method:
+
+
+public abstract class MazeGame {
+    public MazeGame() {
+        Room room1 = makeRoom();
+        Room room2 = makeRoom();
+        room1.connect(room2);
+        this.addRoom(room1);
+        this.addRoom(room2);
+    }
+
+    abstract protected Room makeRoom();
+}
+
+In the above snippet, the MazeGame constructor is a template method that makes some common logic. It refers to the makeRoom factory method that encapsulates the creation of rooms such that other rooms can be used in a subclass. To implement the other game mode that has magic rooms, it suffices to override the makeRoom method:
+
+
+public class MagicMazeGame extends MazeGame {
+    @Override
+    protected Room makeRoom() {
+        return new MagicRoom(); 
+    }
+}
+
+public class OrdinaryMazeGame extends MazeGame {
+    @Override
+    protected Room makeRoom() {
+        return new OrdinaryRoom(); 
+    }
+}
+
+MazeGame ordinaryGame = new OrdinaryMazeGame();
+MazeGame magicGame = new MagicMazeGame();
+
+PHP[edit]
+Another example in PHP follows, this time using interface implementations as opposed to subclassing (however the same can be achieved through subclassing). It is important to note that the factory method can also be defined as public and called directly by the client code (in contrast the Java example above).
+
+
+/* Factory and car interfaces */
+
+interface CarFactory {
+    public function makeCar();
+}
+
+
+interface Car {
+    public function getType();
+}
+
+/* Concrete implementations of the factory and car */
+
+class SedanFactory implements CarFactory {
+    public function makeCar() {
+        return new Sedan();
+    }
+}
+
+class Sedan implements Car {
+    public function getType() {
+        return 'Sedan';
+    }
+}
+
+/* Client */
+
+$factory = new SedanFactory();
+$car = $factory-&gt;makeCar();
+print $car-&gt;getType();
+
+C#[edit]
+Factory pattern deals with the instantiation of object without exposing the instantiation logic. In other words, a Factory is actually a creator of objects which have common interface.
+
+
+//IVSR:Factory Pattern
+//Empty vocabulary of Actual object
+public interface IPeople
+{
+    string GetName();
+}
+
+public class Villagers : IPeople
+{
+    #region IPeople Members
+
+    public string GetName()
+    {
+        return "Village Person";
+    }
+
+    #endregion
+}
+
+public class CityPeople : IPeople
+{
+    #region IPeople Members
+
+    public string GetName()
+    {
+        return "City Person";
+    }
+
+    #endregion
+}
+
+public enum PeopleType
+{
+    RURAL,
+    URBAN
+}
+
+/// &lt;summary&gt;
+/// Implementation of Factory - Used to create objects
+/// &lt;/summary&gt;
+public class Factory
+{
+    public IPeople GetPeople(PeopleType type)
+    {
+        IPeople people = null;
+        switch (type)
+        {
+            case PeopleType.RURAL :
+                people = new Villagers();
+                break;
+            case PeopleType.URBAN:
+                people = new CityPeople();
+                break;
+            default:
+                break;
+        }
+        return people;
+    }
+}
+
+In the above code you can see the creation of one interface called IPeople and implemented two classes from it as Villagers and CityPeople. Based on the type passed into the factory object, we are sending back the original concrete object as the Interface IPeople.
+A Factory method is just an addition to Factory class. It creates the object of the class through interfaces but on the other hand, it also lets the subclass decide which class is instantiated.
+
+
+//IVSR:Factory Pattern
+
+public interface IProduct
+{
+    string GetName();
+    string SetPrice(double price);
+}
+
+public class Phone : IProduct 
+{
+    private double _price;
+    #region Product Members
+
+    public string GetName()
+    {
+        return "Apple TouchPad";
+    }
+
+    public string SetPrice(double price)
+    {
+        this._price = price;
+        return "success";
+    }
+
+    #endregion
+}
+
+/* Almost same as Factory, just an additional exposure to do something with the created method */
+public abstract class ProductAbstractFactory
+{
+       
+    protected abstract IProduct DoSomething();
+
+    public IProduct GetObject() // Implementation of Factory Method.
+    {
+        return this.DoSomething();
+    }
+}
+
+public class PhoneConcreteFactory : ProductAbstractFactory
+{
+
+    protected override IProduct DoSomething()
+    {
+        IProduct product = new Phone();
+        //Do something with the object after you get the object. 
+        product.SetPrice(20.30);
+        return product;
+    }
+}
+
+You can see we have used GetObject in concreteFactory. As a result, you can easily call DoSomething() from it to get the IProduct. You might also write your custom logic after getting the object in the concrete Factory Method. The GetObject is made abstract in the Factory interface.
+Limitations[edit]
+There are three limitations associated with the use of the factory method. The first relates to refactoring existing code; the other two relate to extending a class.
+
+The first limitation is that refactoring an existing class to use factories breaks existing clients. For example, if class Complex were a standard class, it might have numerous clients with code like:
+
+
+Complex c = new Complex(-1, 0);
+
+
+
+
+Once we realize that two different factories are needed, we change the class (to the code shown earlier). But since the constructor is now private, the existing client code no longer compiles.
+
+
+The second limitation is that, since the pattern relies on using a private constructor, the class cannot be extended. Any subclass must invoke the inherited constructor, but this cannot be done if that constructor is private.
+
+
+The third limitation is that, if the class were to be extended (e.g., by making the constructor protected—this is risky but feasible), the subclass must provide its own re-implementation of all factory methods with exactly the same signatures. For example, if class StrangeComplex extends Complex, then unless StrangeComplex provides its own version of all factory methods, the call
+
+
+StrangeComplex.fromPolar(1, pi);
+
+will yield an instance of Complex (the superclass) rather than the expected instance of the subclass. The reflection features of some languages can avoid this issue.
+
+All three problems could be alleviated by altering the underlying programming language to make factories first-class class members (see also Virtual class).[5]
+Uses[edit]
+
+In ADO.NET, IDbCommand.CreateParameter is an example of the use of factory method to connect parallel class hierarchies.
+In Qt, QMainWindow::createPopupMenu is a factory method declared in a framework that can be overridden in application code.
+In Java, several factories are used in the javax.xml.parsers package. e.g. javax.xml.parsers.DocumentBuilderFactory or javax.xml.parsers.SAXParserFactory.
+
+See also[edit]
+
+Design Patterns, the highly influential book
+Design pattern, overview of design patterns in general
+Abstract factory pattern, a pattern often implemented using factory methods
+Builder pattern, another creational pattern
+Template method pattern, which may call factory methods
+Joshua Bloch's idea of a static factory method, which he says has no direct equivalent in Design Patterns.
+
+References[edit]
+
+
+^ "Factory Pattern", OODesign.com
+^ Chapter 4. The Factory Pattern: Baking with OO Goodness: The Simple Factory defined
+^ Design Patterns: Elements of Reusable Object-Oriented Software from the Gang Of Four
+^ Freeman, Eric; Freeman, Elisabeth; Kathy, Sierra; Bert, Bates (2004). Hendrickson, Mike; Loukides, Mike, eds. "Head First Design Patterns" (paperback) 1. O'REILLY. p.&#160;162. ISBN&#160;978-0-596-00712-6. Retrieved 2012-09-12.&#160;
+^ Agerbo, Ellen; Cornils, Aino (1998). "How to preserve the benefits of design patterns". Conference on Object Oriented Programming Systems Languages and Applications (Vancouver, British Columbia, Canada: ACM): 134–143. ISBN&#160;1-58113-005-8.&#160;
+
+
+
+Fowler, Martin; Kent Beck, John Brant, William Opdyke, and Don Roberts (June 1999). Refactoring: Improving the Design of Existing Code. Addison-Wesley. ISBN&#160;0-201-48567-2.&#160; Cite uses deprecated parameter |coauthors= (help)
+Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John (1994). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley. ISBN&#160;0-201-63361-2.&#160;
+Cox, Brad J.; (1986). Object-oriented programming: an evolutionary approach. Addison-Wesley. ISBN&#160;978-0-201-10393-9.&#160;
+Cohen, Tal; Gil, Joseph (2007). "Better Construction with Factories" (PDF). Journal of Object Technology (Bertrand Meyer). Retrieved 2007-03-12.&#160;
+
+External links[edit]
+
+
+
+The Wikibook Computer Science Design Patterns has a page on the topic of: Factory method examples
+
+
+
+Factory method in UML and in LePUS3 (a Design Description Language)
+Consider static factory methods by Joshua Bloch
+Factory Method and Magento
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software design patterns
+
+
+
+
+
+
+Gang of Four patterns
+
+
+
+
+
+Creational
+
+
+
+
+Abstract factory
+Builder
+Factory method
+Prototype
+Singleton
+
+
+
+
+
+
+
+
+
+Structural
+
+
+
+
+Adapter
+Bridge
+Composite
+Decorator
+Facade
+Flyweight
+Proxy
+
+
+
+
+
+
+
+
+
+Behavioral
+
+
+
+
+Chain of responsibility
+Command
+Interpreter
+Iterator
+Mediator
+Memento
+Observer
+State
+Strategy
+Template method
+Visitor
+
+
+
+
+
+
+
+
+
+
+
+Concurrency patterns
+
+
+
+Active object
+Balking
+Double-checked locking
+Event-based asynchronous
+Guarded suspension
+Join
+Lock
+Monitor
+Proactor
+Reactor
+Read write lock
+Scheduler
+Thread pool
+Thread-local storage
+
+
+
+
+
+
+
+
+Architectural patterns
+
+
+
+Front controller
+Interceptor
+MVC
+n-tier
+Specification
+Publish-subscribe
+Naked objects
+Service Locator
+Active record pattern
+Identity map
+Data access object
+Data transfer object
+
+
+
+
+
+
+
+
+Other patterns
+
+
+
+Dependency injection
+Lazy loading
+Mock object
+Null object
+Object pool
+Servant
+Type tunnel
+
+
+
+
+
+
+
+
+Books
+
+
+
+Design Patterns
+Enterprise Integration Patterns
+
+
+
+
+
+
+
+
+People
+
+
+
+Christopher Alexander
+Erich Gamma
+Ralph Johnson
+John Vlissides
+Grady Booch
+Kent Beck
+Ward Cunningham
+Martin Fowler
+Robert Martin
+Jim Coplien
+Douglas Schmidt
+Linda Rising
+
+
+
+
+
+
+
+
+Communities
+
+
+
+The Hillside Group
+The Portland Pattern Repository
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Factory_method_pattern&amp;oldid=691337555"					
+				Categories: Software design patternsMethod (computer programming)Hidden categories: All accuracy disputesArticles with disputed statements from October 2014Pages containing cite templates with deprecated parametersArticles with example Java codeArticles with example C Sharp codeArticles with example PHP code				
+							
+		
+		
+			

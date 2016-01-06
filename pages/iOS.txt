@@ -1,0 +1,2172 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+
+			iOS
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about Apple's mobile operating system.  For the unrelated web desktop, see eyeOS.  For other uses, see IOS (disambiguation).
+
+
+
+
+
+It has been suggested that IPSW be merged into this article. (Discuss) Proposed since October 2015.
+
+
+
+iOS
+
+
+
+
+
+iOS 9 running on an iPhone 6S
+
+
+
+Developer
+Apple Inc.
+
+
+Written in
+C, C++, Objective-C, Swift
+
+
+OS family
+Unix-like, based on Darwin (BSD), OS X
+
+
+Working state
+Current
+
+
+Source model
+Closed source
+
+
+Initial release
+June&#160;29, 2007; 8 years ago&#160;(2007-06-29)
+
+
+Latest release
+
+
+iPhone 4S or later
+iPod Touch (5th generation) or later
+iPad 2 or later
+iPad Mini (1st generation) or later
+
+9.1 (13B143) (October&#160;21, 2015; 33 days ago&#160;(2015-10-21)) [±]
+
+Apple TV (2nd generation)
+
+6.2 (Build 11D257c) (June&#160;30, 2014; 16 months ago&#160;(2014-06-30)[1]) [±]
+
+Apple TV (3rd generation)
+
+7.2 (12F69) (April&#160;8, 2015; 7 months ago&#160;(2015-04-08)[2]) [±]
+
+
+Latest preview
+9.2 Beta 4 (November&#160;18, 2015; 5 days ago&#160;(2015-11-18)) [±]
+
+
+Marketing target
+Smartphones, tablet computers
+
+
+Available in
+40 languages[3][4][5][6]
+
+
+Update method
+iTunes or OTA (iOS 5 or later)
+
+
+Platforms
+
+
+
+64- and 32-bit ARM architectures:
+ARMv8-A (iOS 7 and later)
+ARMv7-A (iPhone OS 3 and later)
+
+Discontinued:
+
+ARMv6 (iPhone OS 1–iOS 4.2.1)
+
+
+
+
+
+Kernel type
+Hybrid (XNU)
+
+
+Default user interface
+Cocoa Touch (multi-touch, GUI)
+
+
+License
+Proprietary software except for open-source components
+
+
+Official website
+www.apple.com/ios/
+
+
+iOS (originally iPhone OS) is a mobile operating system created and developed by Apple Inc. and distributed exclusively for Apple hardware. It is the operating system that presently powers many of the company's mobile devices, including the iPhone, iPad, and iPod touch. In September 2015, it was the most commonly used mobile operating system in Canada, the United States, the United Kingdom, Norway, Sweden, Denmark, Japan, and Australia,[7] and the most commonly used tablet operating system in the world.[8]
+Originally unveiled in 2007, for the iPhone, it has been extended to support other Apple devices such as the iPod Touch (September 2007), iPad (January 2010), iPad Mini (November 2012) and second-generation Apple TV onward (September 2010). As of January 2015[update], Apple's App Store contained more than 1.4 million iOS applications, 725,000 of which are native for iPads.[9] These mobile apps have collectively been downloaded more than 100&#160;billion times.[10]
+The iOS user interface is based on the concept of direct manipulation, using multi-touch gestures. Interface control elements consist of sliders, switches, and buttons. Interaction with the OS includes gestures such as swipe, tap, pinch, and reverse pinch, all of which have specific definitions within the context of the iOS operating system and its multi-touch interface. Internal accelerometers are used by some applications to respond to shaking the device (one common result is the undo command) or rotating it in three dimensions (one common result is switching from portrait to landscape mode).
+iOS shares with OS X some frameworks such as Core Foundation and Foundation Kit; however, its UI toolkit is Cocoa Touch rather than OS X's Cocoa, so that it provides the UIKit framework rather than the AppKit framework. It is therefore not compatible with OS X for applications. Also while iOS also shares the Darwin foundation with OS X, Unix-like shell access is not available for users and restricted for apps, making iOS not fully Unix-compatible either.
+Major versions of iOS are released annually. The current release, iOS 9.1, was released on October 21, 2015. In iOS, there are four abstraction layers: the Core OS layer, the Core Services layer, the Media layer, and the Cocoa Touch layer. The current version of the operating system (iOS 9), dedicates around 1.3&#160;GB of the device's flash memory for iOS itself.[11] It runs on the iPhone 4S and later, iPad 2 and later, iPad Pro, all models of the iPad Mini, and the 5th-generation iPod Touch and later.
+
+
+
+Contents
+
+
+1 History
+
+1.1 Software updates
+
+
+2 Features
+
+2.1 Home screen
+
+2.1.1 System font
+2.1.2 Folders
+2.1.3 Notification Center
+
+
+2.2 Accessibility
+2.3 Included applications
+2.4 Multitasking
+
+2.4.1 Switching applications
+2.4.2 Ending tasks
+2.4.3 Task completion
+
+
+2.5 Siri
+2.6 Game Center
+
+
+3 Development
+
+3.1 SDK
+3.2 Market share
+
+
+4 Jailbreaking
+5 Unlocking
+6 Digital rights management
+7 Kernel
+8 Devices
+9 See also
+10 References
+11 Further reading
+12 External links
+
+
+
+History
+
+
+
+
+
+
+
+
+
+Original iOS logo, used until 2013 (left) and new logo from 2013 onwards (right)
+
+
+In 2005, when Steve Jobs began planning the iPhone, he had a choice to either "shrink the Mac, which would be an epic feat of engineering, or enlarge the iPod". Jobs favored the former approach but pitted the Macintosh and iPod teams, led by Scott Forstall and Tony Fadell, respectively, against each other in an internal competition, with Forstall winning by creating the iPhone OS. The decision enabled the success of the iPhone as a platform for third-party developers: using a well-known desktop operating system as its basis allowed the many third-party Mac developers to write software for the iPhone with minimal retraining.[12] Forstall was also responsible for creating a software developer's kit for programmers to build iPhone apps, as well as an App Store within iTunes.[13][14]
+The operating system was unveiled with the iPhone at the Macworld Conference &amp; Expo, January 9, 2007, and released in June of that year.[15] At first, Apple marketing literature did not specify a separate name for the operating system, stating simply what Steve Jobs claimed: "iPhone runs OS X" and runs "desktop applications"[16][17] when in fact it runs a variant of [Mac] OS X, that doesn't run OS X software unless it has been ported to the incompatible operating system. Initially, third-party applications were not supported. Steve Jobs' reasoning was that developers could build web applications that "would behave like native apps on the iPhone".[18][19] On October 17, 2007, Apple announced that a native Software Development Kit (SDK) was under development and that they planned to put it "in developers' hands in February".[20] On March 6, 2008, Apple released the first beta, along with a new name for the operating system: "iPhone OS".
+On September 5, 2007, Apple released the iPod Touch, which had most of the non-phone capabilities of the iPhone. Apple also sold more than one million iPhones during the 2007 holiday season.[21] On January 27, 2010, Apple announced the iPad, featuring a larger screen than the iPhone and iPod Touch, and designed for web browsing, media consumption, and reading iBooks.[22]
+In June 2010, Apple rebranded iPhone OS as "iOS". The trademark "IOS" had been used by Cisco for over a decade for its operating system, IOS, used on its routers. To avoid any potential lawsuit, Apple licensed the "IOS" trademark from Cisco.[23]
+By late 2011, iOS accounted for 60% of the market share for smartphones and tablets.[24] By the end of 2014, iOS accounted for 14.8% of the smartphone market[25] and 27.6% of the tablet and two-in-one market.[26] As of February 2015, StatCounter reported iOS was used on 23.18% of smartphones and 66.25% of tablets worldwide.[27]
+Software updates
+Main article: iOS version history
+See also: iPhone OS 1, iPhone OS 2, iPhone OS 3, iOS 4, iOS 5, iOS 6, iOS 7, iOS 8 and iOS 9
+Apple provides major updates to the iOS operating system approximately once a year via iTunes and also, for devices that came with iOS version 5.0 or later, over the air. The latest version is iOS 9, which is available for the iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S, iPhone 6, iPhone 6 Plus, iPhone 6S, iPhone 6S Plus, iPad 2, the third and fourth generation iPad, the first and second generation iPad Air, the iPad Pro, the first, second, third and fourth generation iPad Mini, and the fifth and sixth generation iPod Touch. The OS update was released on September 16, 2015.
+Before the iOS 4 release in 2010, iPod Touch users had to pay for system software updates. Apple claimed that this was the case because the iPod Touch was not a 'subscription device' like the iPhone (i.e., it was a one-off purchase).[28] Apple said it had 'found a way' to deliver software updates for free to iPod Touch users at WWDC 2010 when iOS 4 was unveiled.[29]
+Features
+Home screen
+Main article: SpringBoard
+
+
+
+
+
+
+
+
+
+iOS 9.1 running on an iPhone (left) and on an iPad (right)
+
+
+The home screen (rendered by and also known as "SpringBoard") displays application icons and a dock at the bottom of the screen where users can pin their most frequently used apps. The home screen appears whenever the user unlocks the device or presses the "Home" button (a physical button on the device) whilst in another app.[30] Before iOS 4 on the iPhone 3GS and newer, the screen's background could be customized with other customizations available through jailbreaking, but can now be changed out-of-the-box. The screen has a status bar across the top to display data, such as time, battery level, and signal strength. The rest of the screen is devoted to the current application. When a passcode is set and a user switches on the device, the passcode must be entered at the Lock Screen before access to the Home Screen is granted.[31]
+In iPhone OS 3.0, the Spotlight feature was introduced. It allows users to search media, apps, emails, contacts, messages, reminders, calendar events, and similar content. In iOS 7 and later, Spotlight is accessed by pulling down anywhere on the home screen (except for the top and bottom edges that open Notification Center and Control Center).[32][33] In iOS 9, there are two ways to access Spotlight. As with iOS 7 and 8, pulling down on any homescreen will show Spotlight. However, it can also be accessed as it was in iOS 3 - 6. This gives a Spotlight endowed with Siri suggestions, which include app suggestions, contact suggestions and news.[34]
+Since iOS 3.2, users are able to set a background image for the Home screen. This feature is only available on third-generation devices or newer – iPhone 3GS or newer, iPod Touch 3rd generation or newer (iOS 4.0 or later), and all iPad models (iOS 3.2 or later).
+Researchers found that users organize icons on their homescreens based on usage-frequency and relatedness of the applications, as well as for reasons of usability and aesthetics.[35]
+System font
+iOS originally used Helvetica as the system font. With the release of the iPhone 4 and iOS 4, iOS used Helvetica Neue as the system font on devices with Retina Displays, but retained Helvetica as the system font for older devices.[36] iOS 7 provided the ability to scale text in apps or switch to Helvetica Neue Bold as the default system font, as accessibility options. iOS 9 changed the system font to San Francisco, a typeface designed by Apple for maximum legibility on computer and mobile displays, originally introduced as the system font for the Apple Watch.[37]
+Folders
+With iOS 4 came the introduction of a simple folder system. When applications are in "jiggle mode", any two (with the exception of Newsstand in iOS 5 and iOS 6, which acts like a folder[38]) can be dragged on top of each other to create a folder, and from then on, more apps can be added to the folder using the same procedure, up to 12 on iPhone 4S and earlier and iPod Touch, 16 on iPhone 5, and 20 on iPad. A title for the folder is automatically selected by the category of applications inside, but the name can also be edited by the user. When apps inside folders receive badges, the numbers shown by the badges is added up and shown on the folder. Folders cannot be put into other folders, though an unofficial workaround exists that enables folders to be nested within folders.[39] iOS 7 updated the folders with pages like on the SpringBoard. Each page can hold nine apps, and the Newsstand app is now able to be placed into a folder.
+Notification Center
+Main article: Notification Center
+Before iOS 5, notifications were delivered in a modal dialog box and could not be viewed after being dismissed. In iOS 5, Apple introduced Notification Center, which allows users to view a history of notifications. The user can tap a notification to open its corresponding app, or clear it.[40] Notifications are now delivered in banners that appear briefly at the top of the screen. If a user taps a received notification, the application that sent the notification will be opened. Users can also choose to view notifications in modal alert windows by adjusting the application's notification settings. Introduced with iOS 8, widgets are now accessible through the Notification Center, defined by 3rd parties.
+When an app sends a notification while closed, a red badge appears on its icon. This badge tells the user, at a glance, how many notifications that app has sent. Opening the app clears the badge.
+Accessibility
+Located in Settings &gt; General &gt; Accessibility. This allows the user to customize various aspects of the iPhone to assist the user if assistance is needed in the area of seeing or hearing. As well as the addition of accessibility shortcuts.[41]
+Included applications
+The iOS home screen contains these default "apps". Some of these applications are hidden by default and accessed by the user through the Settings app or another method—for instance, Nike+iPod is activated through the Settings app. Many of these apps, such as Safari, the App Store, and Siri, can also be disabled in the Restrictions section of the Settings app.[42]
+Each table's green area below shows the iOS version for which each Apple model app feature first became available.
+
+Primary
+
+Series
+
+iPhone
+
+iPod Touch
+
+iPad
+
+iPad Mini
+
+
+Model
+1st
+3G
+3GS
+4
+4S
+5
+5C
+5S
+6
+6 Plus
+6S
+6S Plus
+1st
+2nd
+3rd
+4th
+5th
+6th
+1st
+2
+3rd
+4th
+Air
+Air 2
+1st
+2
+3
+
+
+Phone
+Telephone
+1.0
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+8.0
+9.0
+N/A
+N/A
+N/A
+
+
+Mail
+Email client
+1.1.3
+2.1.1
+3.1.1
+4.1
+6.0
+8.4
+3.2
+4.2.1
+5.1
+6.0
+7.0.3
+8.1
+6.0
+7.0.3
+8.1
+
+
+Safari
+Web browser
+1.1
+
+
+Music
+Portable media player
+N/A
+5.0
+5.0
+
+
+Videos
+Video player
+3.2
+4.2.1
+
+
+SpringBoard
+Home screen
+1.0
+2.0
+3.0
+4.0
+
+
+Spotlight search
+3.0
+3.0
+
+
+Folders
+N/A
+4.0
+N/A
+4.0
+4.2.1
+
+
+Home screen backgrounds
+N/A
+4.0
+N/A
+4.0
+3.2
+
+
+
+Secondary
+
+Series
+
+iPhone
+
+iPod Touch
+
+iPad
+
+iPad Mini
+
+
+Model
+1st
+3G
+3GS
+4
+4S
+5
+5C
+5S
+6
+6 Plus
+1st
+2nd
+3rd
+4th
+5th
+6th
+1st
+2
+3rd
+4th
+Air
+Air 2
+1st
+2
+3
+
+
+Messages
+Text messaging
+1.0
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+8.0
+N/A
+N/A
+N/A
+
+
+MMS
+N/A
+3.0
+
+
+iMessage instant messaging
+N/A
+5.0
+N/A
+5.0
+6.0
+5.0
+5.1
+6.0
+7.0.3
+8.1
+6.0
+7.0.3
+8.1
+
+
+Calendar
+Calendar
+1.0
+2.0
+3.0
+4.0
+1.1
+2.1.1
+3.1.1
+4.1
+3.2
+4.2.1
+
+
+Photos
+Photo viewer
+
+
+Video viewer
+2.0
+2.0
+
+
+Crop, red eye fix, auto enhance and photo rotate
+N/A
+5.0
+N/A
+5.0
+N/A
+5.0
+
+
+Camera
+Camera
+1.0
+2.0
+3.0
+4.0
+N/A
+4.1
+N/A
+4.2.1
+
+
+Camcorder
+N/A
+
+
+Auto-focus
+3.0
+4.0
+N/A
+N/A
+
+
+HDR
+N/A
+4.1
+
+
+Crop, red eye fix, auto enhance and photo rotate
+5.0
+5.0
+5.0
+
+
+Panorama
+N/A
+6.0
+N/A
+N/A
+8.0
+N/A
+8.0
+
+
+Take still photos while recording video
+N/A
+N/A
+N/A
+N/A
+
+
+Photo filters
+7.0
+7.0
+
+
+Burst mode
+N/A
+7.0
+N/A
+
+
+FaceTime
+Video calling over Wi-Fi
+N/A
+4.0
+5.0
+6.0
+7.0
+N/A
+4.1
+6.0
+4.2.1
+5.1
+6.0
+7.0.3
+8.1
+6.0
+7.0.3
+8.1
+
+
+Video calling over 3G/LTE (iPad requires a cellular network)
+N/A
+6.0
+N/A
+N/A
+N/A
+6.0
+6.0.1
+6.0.1
+
+
+FaceTime Audio
+7.0
+7.0
+7.0
+7.0
+
+
+Photo Booth
+A camera application with added special effects
+N/A
+N/A
+4.2.1
+5.1
+6.0
+6.0
+
+
+Stocks
+Stocks provided by Yahoo! Finance
+1.0
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+8.0
+1.1.3
+2.1.1
+3.1.1
+4.1
+6.0
+N/A
+N/A
+
+
+Stocks Widget for Notification Center
+N/A
+5.0
+N/A
+5.0
+
+
+Weather
+Weather provided by The Weather Channel
+N/A
+8.0
+N/A
+8.0
+
+
+Weather Widget for Notification Center
+5.0
+5.0
+6.0
+7.0
+8.0
+5.0
+6.0
+N/A
+7.0
+7.0.3
+8.1
+7.0
+7.0.3
+8.1
+
+
+Notes
+A simple note-taking program
+1.0
+2.0
+3.0
+4.0
+1.1.3
+2.1.1
+3.1.1
+4.1
+3.2
+4.2.1
+5.1
+6.0
+6.0
+
+
+Maps
+Assisted GPS (iPad requires a cellular network)
+N/A
+N/A
+6.0.1
+6.0.1
+
+
+Apple-sourced maps
+N/A
+6.0
+N/A
+6.0
+6.0
+N/A
+6.0
+6.0
+
+
+Turn-by-turn navigation using Apple-sourced maps
+N/A
+6.0
+N/A
+
+
+Reminders
+A to-do list application
+N/A
+5.0
+5.0
+5.0
+N/A
+5.0
+5.0
+5.1
+6.0
+6.0
+
+
+Location-based reminders (iPad requires a cellular network)
+N/A
+N/A
+N/A
+6.0.1
+6.0.1
+
+
+Voice Memos
+Voice recorder
+3.0
+3.0
+4.0
+3.0
+3.1.1
+4.1
+6.0
+N/A
+N/A
+
+
+Calculator
+Calculator
+1.0
+2.0
+1.1
+2.1.1
+
+
+Scientific calculator (triggered by rotating to landscape)
+2.0
+2.0
+
+
+Clock
+World clock, stopwatch, alarm clock and timer
+1.0
+1.1
+N/A
+6.0
+7.0.3
+8.1
+6.0
+7.0.3
+8.1
+
+
+Settings
+Settings
+3.2
+4.2.1
+5.1
+6.0
+
+
+Contacts
+Standalone address/phone book
+2.0
+
+
+iTunes Store
+Access to the iTunes Store and iTunes Podcast Directory
+1.1
+
+
+App Store
+To buy or get iOS apps
+2.0
+2.0
+
+
+Compass
+Compass
+N/A
+N/A
+N/A
+N/A
+
+
+Game Center
+Play multiplayer games with other users,
+track in-game achievements, view leaderboards.
+4.1
+8.0
+N/A
+4.1
+6.0
+4.2.1
+4.2.1
+5.1
+6.0
+7.0.3
+8.1
+6.0
+7.0.3
+8.1
+
+
+Voice Control
+Simple voice control (disabling Siri may be necessary)
+3.0
+4.0
+N/A
+3.1.1
+4.1
+N/A
+N/A
+
+
+Siri
+A personal voice assistant
+N/A
+N/A
+N/A
+6.0
+6.0
+7.0.3
+8.1
+6.0
+7.0.3
+8.1
+
+
+Voice dictation
+5.1
+
+
+Touch ID
+A fingerprint recognition feature built into the home button;
+able to unlock the device and make iTunes/App Store purchases
+N/A
+7.0
+N/A
+N/A
+N/A
+
+
+Wallet
+A virtual wallet application for passes, tickets, coupons and loyalty cards (called Passbook prior to iOS 9)
+N/A
+6.0
+7.0
+N/A
+6.0
+N/A
+N/A
+
+
+CarPlay
+A new in-vehicle extended iOS functionality
+N/A
+7.1.1
+N/A
+
+
+AirDrop
+An ad-hoc Wi-Fi/Bluetooth-based file sharing mechanism
+N/A
+7.0
+N/A
+7.0
+N/A
+7.0
+8.1
+7.0
+8.1
+
+
+Health
+An app that monitors and analyzes an individual's biochemistry and physiology
+N/A
+8.0
+N/A
+8.0
+N/A
+N/A
+
+
+Tips
+An app that gives tutorials for various functions
+N/A
+8.0
+8.0
+
+
+Podcasts
+Integrated podcast player
+
+
+iBooks
+Integrated e-book viewer
+
+
+News
+
+N/A
+9.0
+N/A
+9.0
+N/A
+9.0
+9.0
+
+
+Find My iPhone
+
+
+
+Find My Friends
+
+
+
+iCloud Drive
+(turned off by default – can be enabled in Settings)
+
+
+
+Discontinued
+
+Series
+
+iPhone
+
+iPod Touch
+
+iPad
+
+iPad Mini
+
+Final supported
+iOS version
+
+
+Model
+1st
+3G
+3GS
+4
+4S
+5
+5C
+5S
+6
+6 Plus
+1st
+2nd
+3rd
+4th
+5th
+6th
+1st
+2
+3rd
+4th
+Air
+Air 2
+1st
+2
+3
+
+
+iPod
+iPhone media player, iPad music player
+1.0
+2.0
+3.0
+4.0
+N/A
+N/A
+3.2
+4.2.1
+N/A
+N/A
+4.2.10 (CDMA)
+4.3.5
+
+
+YouTube
+YouTube video streamer
+5.0
+N/A
+1.1
+2.1.1
+3.1.1
+4.1
+N/A
+5.1
+N/A
+5.1.1
+
+
+Maps
+Google Maps with Google Street View
+1.1.3
+
+
+Weather
+Weather provided by Yahoo! Weather
+6.0
+7.0
+N/A
+6.0
+N/A
+N/A
+7.1.2
+
+
+Nike + iPod
+Records the distance and pace of a walk or run; can connect to Nike + iPod sensor (turned off by default – can be enabled in Settings)
+N/A
+N/A
+8.4.1
+
+
+Newsstand
+A newspaper and magazine store
+N/A
+8.0
+N/A
+5.0
+8.4
+N/A
+5.1
+6.0
+7.0.3
+8.1
+6.0
+7.0.3
+8.1
+
+
+On the iPhone and iPod Touch, apps such as Voice Memos, Contacts, Calculator, and Compass are in one folder called "Utilities" in iOS 4 and above.[43][44] Many of the included applications are designed to share data (e.g., a phone number can be selected from an email and saved as a contact or dialed for a phone call). For the iOS 7 update, the folder name was changed to "Extras".
+The Messages app supports Apple's iMessage service in iOS 5 or above; iMessage supports sending free text or multimedia messages to other iOS devices running iOS 5 and above (similar to BlackBerry Messenger), and to Macs running OS X Mavericks.
+Panoramic photography is available only on iPhone 4S and later models, and the fifth generation iPod Touch.[45][46]
+The bottom row of applications, called the dock, is used to delineate the iPhone's main purposes: originally Phone, Mail, Safari, iPod. Starting with iOS 5, the iPod app was split into two apps, Music and Videos, as it always has been on the iPod Touch, and the Music app replaced the iPod app in the dock.
+Since the inception of the iPhone, various apps were either integrated into iOS (e.g. Podcasts, iBooks, Siri, Facebook, Twitter) or disintegrated (e.g. Podcasts, iTunes U, YouTube). In iOS 6, the previously integrated YouTube app was removed from the software, and moved to the App Store. The Podcasts and iTunes U features (previously integrated in the Music and Videos apps) also became their own apps in the App Store. In iOS 7, the iPhone gains a dedicated FaceTime app (previously integrated into the Phone app), as it had been on the iPod Touch and iPad since iOS 4. In iOS 8, the iBook and Podcast apps became integrated into iOS, though the App Store app is still available for download. In iOS 9, the Find My iPhone and Find My Friends became integrated into iOS; App Store versions are unavailable for download.
+Starting January 2008, the iPod Touch retains the same applications that are present by default on the iPhone, with the exception of the Phone and Compass (and also previously, Messages before iOS 5 and Camera before the fourth-generation iPod Touch) apps. The original dock layout was Music, Videos, Photos, and iTunes. In iPhone OS 3, the layout was changed to Music, Videos, Safari, and App Store. For the fourth-generation iPod Touch, it includes FaceTime and Camera, and the dock layout had changed to Music, Mail, Safari, Videos, with the release of iOS 4. With the release of the new fifth-generation iPod Touch and iOS 6, the dock layout was changed to Messages, Mail, Safari, Music, similar to the iPhone.
+The iPad and iPad Mini come with the same applications as the iPod Touch, excluding Stocks, Weather, Calculator, and the Nike + iPod app (and also previously, Clock before iOS 6). Additionally, starting with the iPad 2, they have the unique Photo Booth app. Most of the default applications, such as Safari and Mail, are completely rewritten to take advantage of the iPad's and iPad Mini's larger displays. The original dock layout was Safari, Mail, Photos, iPod. Separate music and video apps are provided, as on the iPod Touch, although (as on the iPhone) the music app was named "iPod". In iOS 5, it was changed to "Music" and the dock layout became Safari, Mail, Photos, Music. In iOS 6, Videos replaced Photos in the dock. In iOS 7, the default dock layout was changed to match that of the iPod Touch.
+Multitasking
+Multitasking for iOS was first released in June 2010 along with the release of iOS 4.0.[47][48] Only certain devices—iPhone 4, iPhone 3GS, and iPod Touch 3rd generation—were able to use multitasking.[49] The iPad did not get multitasking until the release of iOS 4.2.1 in November 2010.[50] Currently, multitasking is supported on iPhone 3GS or newer, iPod Touch 3rd generation or newer, and all iPad models.[51]
+Implementation of multitasking in iOS has been criticized for its approach, which limits the work that applications in the background can perform to a limited function set and requires application developers to add explicit support for it.[49][52]
+Before iOS 4, multitasking was limited to a selection of the applications Apple included on the device. Users could, however "jailbreak" their device in order to unofficially multitask.[53] Starting with iOS 4, on third-generation and newer iOS devices, multitasking is supported through seven background APIs:[54]
+
+Background audio – application continues to run in the background as long as it is playing audio or video content[55]
+Voice over IP – application is suspended when a phone call is not in progress[55]
+Background location – application is notified of location changes[55]
+Push notifications
+Local notifications – application schedules local notifications to be delivered at a predetermined time[55]
+Task completion – application asks the system for extra time to complete a given task[55]
+Fast app switching – application does not execute any code and may be removed from memory at any time[55]
+
+In iOS 5, three new background APIs were introduced:
+
+Newsstand – application can download content in the background to be ready for the user[55]
+External Accessory – application communicates with an external accessory and shares data at regular intervals[55]
+Bluetooth Accessory – application communicates with a bluetooth accessory and shares data at regular intervals[55]
+
+In iOS 7, Apple introduced a new multitasking feature, providing all apps with the ability to perform background updates. This feature prefers to update the user's most frequently used apps and prefers to use WiFi networks over a cellular network, without markedly reducing the device's battery life.
+Switching applications
+In iOS 4.0 to iOS 6.x, double-clicking the home button activates the application switcher. A scrollable dock-like interface appears from the bottom, moving the contents of the screen up. Choosing an icon switches to an application. To the far left are icons which function as music controls, a rotation lock, and on iOS 4.2 and above, a volume controller.
+With the introduction of iOS 7, double clicking the home button also activates the application switcher. However, unlike previous versions it displays screenshots of open applications on top of the icon and horizontal scrolling allows for browsing through previous apps, and it is possible to close applications by dragging them up, similar to how WebOS handled multiple cards.[56]
+With the introduction of iOS 9, the application switcher received a significant visual change; whilst still retaining the card metaphor introduced in iOS 7, the application icon is smaller, and appears above the screenshot (which is now larger, due to the removal of "Recent and Favorite Contacts"), and each application "card" overlaps the other, forming a rolodex effect as the user scrolls. Now, instead of the home screen appearing at the leftmost of the application switcher, it appears rightmost.[57]
+Ending tasks
+In iOS 4.0 to iOS 6.x, briefly holding the icons in the application switcher makes them "jiggle" (similarly to the homescreen) and allows the user to force quit the applications by tapping the red minus circle that appears at the corner of the app's icon.[58] Clearing applications from multitasking stayed the same from iOS 4.0 through 6.1.6, the last version of iOS 6.
+As of iOS 7, the process has become faster and easier. In iOS 7, instead of holding the icons to close them, they are closed by simply swiping them upwards off the screen. Up to three apps can be cleared at a time compared to one in versions up to iOS 6.1.6.[59]
+Task completion
+Task completion allows apps to continue a certain task after the app has been suspended.[60][61] As of iOS 4.0, apps can request up to ten minutes to complete a task in the background.[62]
+Siri
+Main article: Siri (software)
+Siri is a personal assistant and knowledge navigator which works as an application on supported devices. The service, directed by the user's spoken commands, can do a variety of different tasks, such as call or text someone, open an app, search the web, lookup sports information, find directions or locations, and answer general knowledge questions (e.g. "How many cups are in a gallon?").[63] Siri was updated in iOS 7 with a new interface, faster answers, Wikipedia, Twitter, and Bing support and the voice was changed to sound more human. Siri is currently only available on the iPhone 4S and later iPhones, the fifth-generation iPod Touch, all of the models of the iPad Mini, and the third-generation and later iPads.
+Game Center
+Main article: Game Center
+Game Center is an online multiplayer "social gaming network"[64] released by Apple.[65] It allows users to "invite friends to play a game, start a multiplayer game through matchmaking, track their achievements, and compare their high scores on a leaderboard." iOS 5 and above adds support for profile photos.[64]
+Game Center was announced during an iOS 4 preview event hosted by Apple on April 8, 2010. A preview was released to registered Apple developers in August.[64] It was released on September 8, 2010 with iOS 4.1 on iPhone 4, iPhone 3GS, and iPod Touch 2nd generation through 4th generation.[66] Game Center made its public debut on the iPad with iOS 4.2.1.[67] There is no support for the iPhone 3G, original iPhone and the first-generation iPod Touch (the latter two devices did not have Game Center because they did not get iOS 4). However, Game Center is unofficially available on the iPhone 3G via a hack.[68]
+Development
+The applications must be written and compiled (using Xcode 5 or later and optimized for iOS 7 or later[69]) specifically for iOS and the 64-bit ARM architecture or previous 32-bit one. The Safari web browser supports web applications as with other web browsers. Authorized third-party native applications are available for devices running iPhone OS 2.0 and later through Apple's App Store.
+SDK
+Main article: iOS SDK
+
+
+
+
+iOS SDK 9.1 included in Xcode 7.1
+
+
+On October 17, 2007, in an open letter posted to Apple's "Hot News" weblog, Steve Jobs announced that a software development kit (SDK) would be made available to third-party developers in February 2008.[70] The SDK was released on March 6, 2008, and allows developers to make applications for the iPhone and iPod Touch, as well as test them in an "iPhone simulator". However, loading an application onto the devices is only possible after paying an iPhone Developer Program fee.
+The fees to join the respective developer programs for iOS and OS X were each set at US$99.00 per year. As of July 20, 2011, Apple released Xcode on its Mac App Store free to download for all OS X Lion users, instead of as a standalone download. Users can create and develop iOS and OS X applications using a free copy of Xcode; however, they cannot test their applications on a physical iOS device, or publish them to the App store, without first paying the yearly $99.00 iPhone Developer or Mac Developer Program fee.[71]
+Since the release of Xcode 3.1, Xcode is the development environment for the iOS SDK. iOS applications, like many of the higher-level frameworks and applications that are part of iOS and OS X, are written in Objective-C.[72]
+Developers are able to set any price above a set minimum for their applications to be distributed through the App Store, keeping 70% for the developer, and leaving 30% for Apple. Alternatively, they may opt to release the application for free and need not pay any costs to release or distribute the application except for the membership fee.[73]
+Market share
+Main article: Usage share of operating systems
+iOS is the second most popular mobile operating system platform in the world, after Android. On tablets iOS is generally most popular.[74]
+By the middle of 2012, there were 410 million devices activated.[75] At WWDC 2014, Tim Cook said 800&#160;million devices had been sold by June 2014.[76]
+During Apple's quarterly earnings call in January 27, 2015, Apple announced that they have now sold one billion iOS devices since 2007[77]
+Jailbreaking
+Main article: iOS jailbreaking
+Since its initial release, iOS has been subject to a variety of different hacks centered around adding functionality not allowed by Apple.[78] Prior to the 2008 debut of Apple's native iOS App Store, the primary motive for jailbreaking was to bypass Apple's purchase mechanism for installing the App Store's native applications.[79] Apple claimed that it will not release iOS software updates designed specifically to break these tools (other than applications that perform SIM unlocking); however, with each subsequent iOS update, previously un-patched jailbreak exploits are usually patched.[80]
+Since the arrival of Apple's native iOS App Store, and—along with it—third-party applications, the general motives for jailbreaking have changed.[81] People jailbreak for many different reasons, including gaining filesystem access, installing custom device themes, and modifying the device SpringBoard. An additional motivation is that it may enable the installation of pirated apps. On some devices, jailbreaking also makes it possible to install alternative operating systems, such as Android and the Linux kernel. Primarily, users jailbreak their devices because of the limitations of iOS. Depending on the method used, the effects of jailbreaking may be permanent or temporary.[82]
+In 2010, the Electronic Frontier Foundation (EFF) successfully convinced the U.S. Copyright Office to allow an exemption to the general prohibition on circumvention of copyright protection systems under the Digital Millennium Copyright Act (DMCA). The exemption allows jailbreaking of iPhones for the sole purpose of allowing legally obtained applications to be added to the iPhone.[83] The exemption does not affect the contractual relations between Apple and an iPhone owner, for example, jailbreaking voiding the iPhone warranty; however, it is solely based on Apple's discretion on whether they will fix jailbroken devices in the event that they need to be repaired. At the same time, the Copyright Office exempted unlocking an iPhone from DMCA's anticircumvention prohibitions.[84] Unlocking an iPhone allows the iPhone to be used with any wireless carrier using the same GSM or CDMA technology for which the particular phone model was designed to operate.[85]
+Unlocking
+Main article: SIM lock
+Initially most wireless carriers in the US did not allow iPhone owners to unlock an iPhone for use with other carriers. However AT&amp;T Mobility allowed iPhone owners who have satisfied the requirements of their contract to unlock their iPhone.[86] Instructions to unlock the device are available from Apple,[87] but it is ultimately the sole discretion of the carrier to authorize the device to be unlocked.[88] This allows the use of a carrier sourced iPhone on other networks. However, because T-Mobile primarily uses a different band than AT&amp;T for its 3G data signals, the iPhone will only work at 3G speeds on the T-Mobile 1900&#160;MHz network.[89] There are programs to break these restrictions, but are not supported by Apple and most often not a permanent unlock, known as soft-unlock.[90]
+Digital rights management
+The closed and proprietary nature of iOS has garnered criticism, particularly by digital rights advocates such as the Electronic Frontier Foundation, computer engineer and activist Brewster Kahle, Internet-law specialist Jonathan Zittrain, and the Free Software Foundation who protested the iPad's introductory event and have targeted the iPad with their "Defective by Design" campaign.[91][92][93][94] Competitor Microsoft, via a PR spokesman, criticized Apple's control over its platform.[95]
+At issue are restrictions imposed by the design of iOS, namely digital rights management (DRM) intended to lock purchased media to Apple's platform, the development model (requiring a yearly subscription to distribute apps developed for the iOS), the centralized approval process for apps, as well as Apple's general control and lockdown of the platform itself. Particularly at issue is the ability for Apple to remotely disable or delete apps at will.
+Some in the tech community have expressed concern that the locked-down iOS represents a growing trend in Apple's approach to computing, particularly Apple's shift away from machines that hobbyists can "tinker with" and note the potential for such restrictions to stifle software innovation.[96][97] Former Facebook developer Joe Hewitt protested against Apple's control over its hardware as a "horrible precedent" but praised iOS's sandboxing of apps.[98]
+Kernel
+The iOS kernel is XNU, the kernel of Darwin. The original iPhone OS (1.0) up to iPhone OS 3.1.3 used Darwin 9.0.0d1. iOS 4 was based on Darwin 10. iOS 5 was based on Darwin 11. iOS 6 was based on Darwin 13. iOS 7 and iOS 8 are based on Darwin 14. iOS 9 is based on Darwin 15.[99]
+Devices
+Main article: List of iOS devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sources: Apple press release library,[100] Mactracker Apple Inc. model database[101]
+See also
+
+
+
+
+Information technology portal
+
+
+
+Apple portal
+
+
+
+
+iOS version history
+List of iOS devices
+Comparison of mobile operating systems
+
+References
+
+
+^ "About Apple TV (2nd and 3rd generation) software updates". Apple. 2014-04-22. Retrieved 2014-05-01.&#160;
+^ "About the security content of Apple TV 7.2". Apple. 2015-04-08. Retrieved 2015-04-08.&#160;
+^ "Apple – iPad Pro – Specs". Apple. Retrieved October 24, 2015.&#160;
+^ "Apple – iPad mini 4 – Specs". Apple. Retrieved October 24, 2015.&#160;
+^ "Apple - iPad Air 2 - Technical Specifications". Apple. Retrieved October 24, 2015.&#160;
+^ "Apple - iPhone 6s - Technical Specifications". Apple. Retrieved October 24, 2015.&#160;
+^ "Top Mobile Operating Systems Per Country, Sept 2015". statcounter.com.&#160;
+^ "Top 7 Tablet OSs on Sept 2015". statcounter.com.&#160;
+^ Steve Ranger (January 16, 2015). "iOS versus Android. Apple App Store versus Google Play: Here comes the next battle in the app wars". ZDNet.&#160;
+^ Nathan Ingraham (June 8, 2015). "Apple's App Store has passed 100 billion app downloads". The Verge.&#160;
+^ Cunningham, Andrew (September 16, 2015). "iOS 9, thoroughly reviewed | Ars Technica". Ars Technica. Retrieved September 17, 2015.&#160;
+^ Siracusa, John. "Can't Help Falling in Love". Ars Technica. Conde Nast. Retrieved 5 September 2014.&#160;
+^ Satariano, Adam; Peter Burrows; Brad Stone (2011-12-01). "Scott Forstall, the Sorcerer's Apprentice at Apple". Businessweek. Retrieved 2011-10-13.&#160;
+^ Viticci, Federico (2012-10-29). "Major Changes at Apple: Scott Forstall Leaving, Jony Ive To Lead Human Interface Across Company". Macstories.net. Retrieved 2012-12-06.&#160;
+^ Honan, Matthew (January 9, 2007). "Apple unveils iPhone". Macworld. Retrieved January 16, 2010.&#160;
+^ "What operating system does the iPhone use? Can it run MacOS X applications like Skype and Photoshop?". July 5, 2010. Retrieved April 4, 2014.&#160;
+^ "Apple – iPhone – Features – OS X". Archived from the original on January 11, 2008. Retrieved June 15, 2010.&#160;
+^ Gonsalves, Antone (October 11, 2007). "Apple Launches iPhone Web Apps Directory". InformationWeek. Retrieved February 16, 2010.&#160;
+^ Ziegler, Chris (June 11, 2007). "Apple announces third-party software details for iPhone". Engadget. Retrieved June 9, 2010.&#160;
+^ Nik Fletcher (October 17, 2007). "Apple: "we plan to have an iPhone SDK in developers' hands in February"". TUAW – The Unofficial Apple Weblog. Retrieved June 8, 2010.&#160;
+^ "Apple Reports Fourth Quarter Results". Apple Inc. October 22, 2007. Retrieved June 9, 2010.&#160;
+^ "Apple Launches iPhone Web Apps Directory". Apple. January 27, 2010. Retrieved May 8, 2010.&#160;
+^ Tartakoff, Joseph (June 7, 2010). "Apple Avoids iPhone-Like Trademark Battle Thanks To Cisco, FaceTime Deals". paidContent. Retrieved February 2, 2011.&#160;
+^ Saylor, Michael (2012). The Mobile Wave: How Mobile Intelligence Will Change Everything. Vanguard Press. p.&#160;33. ISBN&#160;1593157207.&#160;
+^ "Android and iOS Squeeze the Competition, Swelling to 96.3% of the Smartphone Operating System Market for Both 4Q14 and CY14, According to IDC" (Press release). IDC. February 24, 2015.&#160;
+^ "Worldwide Tablet Growth Hits the Brakes, Slowing to the Low Single Digits in the Years Ahead, According to IDC" (Press release). IDC. March 12, 2015.&#160;
+^ "StatCounter Global Stats: Top 7 Mobile Operating Systems on Feb 2015". Retrieved 6 March 2015.&#160;
+^ Why Do iPod touch Software Updates Cost Money?. Ipod.about.com (September 9, 2009). Retrieved on July 30, 2013.
+^ Truta, Filip (June 15, 2010). "iOS 4 Software Update for iPod touch Is Free". Softpedia. Retrieved June 7, 2014.&#160;
+^ "http://help.apple.com/iphone/8/#/iph3bd00bbb". help.apple.com. Retrieved 2015-05-24.&#160;
+^ "About iOS passcodes - Apple Support". support.apple.com. Retrieved 2015-05-24.&#160;
+^ "Apple's iOS 7 brings quick Spotlight search access to every app page". AppleInsider. June 10, 2013. Retrieved September 18, 2013.&#160;
+^ "Search on iPad with iOS 7". October 21, 2013. Retrieved March 1, 2014.&#160;
+^ "Hands-on with the new, proactive Spotlight in iOS 9". September 16, 2015. Retrieved October 17, 2015.&#160;
+^ Matthias Böhmer, Antonio Krüger. A Study on Icon Arrangement by Smartphone Users. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '13). ACM, New York, NY, USA, 2137-2146.
+^ Gruber, John. "4". Daring Fireball. Retrieved 11 July 2015.&#160;
+^ "Fonts - Apple Developer". developer.apple.com. Retrieved 2015-09-08.&#160;
+^ "iOS: Using Newsstand". Apple Inc. Retrieved September 29, 2012.&#160;
+^ "How to create nested folders on iOS 7". Retrieved December 20, 2013.&#160;
+^ "iPhone 4S - Always know what's up in Notification Center". Apple Inc. Retrieved August 13, 2012.&#160;
+^ "iOS: A wide range of features for a wide range of needs.". Apple Inc. Retrieved June 12, 2015.&#160;
+^ "iOS: Understanding Restrictions". Apple Inc. Retrieved September 29, 2012.&#160;
+^ "iPhone Applications". Apple Inc. July 10, 2008. Retrieved July 11, 2008.&#160;
+^ "iOS 3.1 Software Update". Apple Inc.&#160;
+^ "How to take a panoramic photo with iOS 6". CNET. CBS Interactive.&#160;
+^ "Mastering panoramic photography in iOS 6". CNET. CBS Interactive.&#160;
+^ "iOS 4 iPhone Update RELEASED: A Guide To iOS 4". The Huffington Post. June 21, 2010. Retrieved April 13, 2013.&#160;
+^ Albanesius, Chloe (June 21, 2010). "Apple iPhone iOS 4 Software Update Expected Monday". PC Magazine. Retrieved April 14, 2013.&#160;
+^ a b Cheng, Jacqui (June 21, 2010). "Ars reviews iOS 4: what’s new, notable, and what needs work". Ars Technica. Retrieved April 14, 2013.&#160;
+^ Ray, Bill (November 22, 2010). "iOS 4.2 multi-tasking comes to the iPad". The Register. Retrieved April 14, 2013.&#160;
+^ "iOS: Understanding multitasking". Apple. Retrieved 2013-09-14.&#160;
+^ Newman, Jared (June 22, 2010). "Multitasking With iOS 4 is Horrible: Apple Blew It". PC World. Retrieved April 14, 2013.&#160;
+^ "iOS 4 walkthrough". June 14, 2010. Retrieved June 14, 2010.&#160;
+^ "Apple announces multitasking for iPhone OS 4 (iPhone 3GS/iPod touch G3 only)". April 8, 2010. Retrieved June 14, 2010.&#160;
+^ a b c d e f g h i "iOS Application Programming Guide – Background Execution". Developer.apple.com. Retrieved September 4, 2015.&#160;
+^ "Jon Rubinstein: OS X and iOS 7 borrow features from webOS". Retrieved September 23, 2013.&#160;
+^ Prabhu, Gautam. "iOS 9 vs. iOS 8: A look at the UI changes in iOS 9". iPhone Hacks. Retrieved 20 September 2015.&#160;
+^ "iOS: Force an app to close". Apple Inc. Retrieved October 9, 2012.&#160;
+^ "iOS 7 multitasking". Tuaw. September 18, 2013. Retrieved March 21, 2014.&#160;
+^ Snell, Jason (April 8, 2010). "Inside iPhone 4.0's multitasking". Macworld. Retrieved April 14, 2013.&#160;
+^ "Apple iPhone 4". CNET. June 23, 2010. Retrieved April 14, 2013.&#160;
+^ Hollington, Jesse (June 21, 2010). "Instant Expert: Secrets &amp; Features of iOS 4". iLounge. Retrieved April 14, 2013.&#160;
+^ "iOS 6&#160;— Ask Siri to help you get things done". Apple. Retrieved February 18, 2013.&#160;
+^ a b c "What's New in iOS 4". Apple. Retrieved June 14, 2010.&#160;
+^ "Apple's Game Center debuts next week - Game Hunters: In search of video games and interactive awesomeness". USA Today. January 9, 2010. Retrieved September 1, 2010.&#160;
+^ Holt, Chris. "iOS 4.1's GameCenter to Hit iPhone Next Week – PCWorld Business Center". Pcworld.com. Retrieved September 1, 2010.&#160;
+^ "iOS 4.2 Software Update for iPad". Apple Inc. Retrieved October 9, 2012.&#160;
+^ "Game Center". Apple. Sep 2010. Retrieved September 7, 2010.&#160;
+^ "News and Updates". apple.com.&#160;
+^ Jobs, Steve (October 17, 2007). "Third Party Applications on the iPhone". Apple Inc.&#160;
+^ "Which Developer Program is for you?". September 2012. Retrieved June 14, 2013.&#160;
+^ "Did Apple Make A Mistake Choosing Objective-C For iPhone SDK? at Simon's Blog". Psynixis.com. Retrieved May 9, 2010.&#160;
+^ "Introducing the iPhone Developer Program". Apple Inc. Retrieved June 14, 2013.&#160;
+^ "StatCounter Global Stats - Browser, OS, Search Engine including Mobile Usage Share". statcounter.com.&#160;
+^ "iOS leapfrogs Android with 410 million devices sold and 650,000 apps". InsideMobileApps. July 24, 2012. Retrieved July 24, 2012.&#160;
+^ "Apple has sold more than 800 million iOS devices, 130 million new iOS users in the last year". Retrieved June 2, 2014.&#160;
+^ "Apple has sold one billion iOS devices, company claims". Retrieved April 15, 2015.&#160;
+^ Ricker, Thomas (July 10, 2007). "iPhone Hackers: "we have owned the filesystem"". Engadget. Retrieved October 16, 2015.&#160;
+^ Healey, Jon (August 6, 2007). "Hacking the iPhone". Los Angeles Times. Retrieved August 6, 2007.&#160;
+^ "Apple's Joswiak: We Don't Hate iPhone Coders". September 11, 2007. Retrieved June 9, 2010.&#160;
+^ Baig, Edward C. (June 26, 2007). "Apple's iPhone isn't perfect, but it's worthy of the hype". USA Today. Retrieved June 28, 2007.&#160;
+^ IPad, MAX (May 6, 2010). "Jailbreaking Explained". IPad Forums. Retrieved November 4, 2012.&#160;
+^ Kravets, David (July 26, 2010). "U.S. Declares iPhone Jailbreaking Legal, Over Apple's Objections". Wired. Retrieved December 13, 2011.&#160;
+^ "U.S. Copyright Office Final 2010 Anti-Circumvention Rulemaking" (PDF). U.S. Copyright Office. July 27, 2010. Retrieved August 21, 2012.&#160;
+^ Mobile, Know Your (May 19, 2010). "Locked / Unlocked - a definition of the terms Locked and Unlocked from the Know Your Mobile mobile phone glossary". Know Your Mobile. Retrieved November 4, 2012.&#160;
+^ "AT&amp;T – What are the eligibility requirements for unlocking iPhone?". AT&amp;T. Retrieved August 21, 2012.&#160;
+^ "iPhone: About unlocking". Apple Inc. Website. May 22, 2012. Retrieved August 21, 2012.&#160;
+^ "iPhone: Wireless Carrier Support and Features". Apple Inc. Website. April 12, 2013. Retrieved May 13, 2013.&#160;
+^ "How to unlock your AT&amp;T iPhone". USA Today. April 9, 2012. Retrieved August 21, 2012.&#160;
+^ "Unauthorized modification of iOS can cause security vulnerabilities, instability, shortened battery life, and other issues". Apple Inc. Website. February 9, 2013. Retrieved May 13, 2013.&#160;
+^ "iPad DRM endangers our rights".&#160;
+^ Anderson, Nate (January 27, 2010). "Protestors: iPad is nothing more than a golden calf of DRM". Retrieved June 9, 2010.&#160;
+^ "Mobile Devices and the Next Computing Revolution". February 3, 2010. Retrieved June 9, 2010.&#160;
+^ Bobbie Johnson (February 1, 2010). "Apple iPad will choke innovation, say open internet advocates". The Guardian. Retrieved February 7, 2010.&#160;
+^ "Microsoft PR spokesman condemns iPad for being "locked down"".&#160;
+^ "Apple's Trend Away From Tinkering". Slashdot. January 31, 2010. Retrieved June 9, 2010.&#160;
+^ Steve Wozniak (Interviewee) (January 22, 2011). Campus Party Brasil 2011 – Geek Pride e Wozniak. Fragoso, Victor. Retrieved March 7, 2011.&#160;
+^ Leander Kahney (January 30, 2010). "Pundits On The iPad's Closed System: It's Doom For PCs, No It's Great". Retrieved June 9, 2010.&#160;
+^ Available in iOS 5 to iOS 7 via General &gt; About &gt; Diagnostics &amp; Usage &gt; Diagnostics &amp; Usage Data &gt;(date and time).panic.plist, after a kernel crash
+Available in iOS 8 and iOS 9 via Privacy &gt; Diagnostics &amp; Usage &gt; Diagnostics &amp; Usage Data &gt; JetsamEvent-(date and time).ips, when low in memory
+^ Apple Inc., Apple press release library, Retrieved September 19, 2007.
+^ Mactracker (mactracker.ca), Apple Inc. model database, version as of 26 July 2007.
+
+
+Further reading
+
+
+Hillegass, Aaron; Conway, Jon (March 22, 2012). iOS Programming: The Big Nerd Ranch Guide (3rd ed.). Pearson. p.&#160;590. ISBN&#160;978-0-321-82152-2.&#160;
+Turner, Kirby (December 19, 2011). Learning iPad Programming: A Hands-on Guide to Building iPad Apps with iOS 5 (1st ed.). Pearson. p.&#160;816. ISBN&#160;978-0-321-75040-2.&#160;
+Mark, Dave; LaMarche, Jeff (July 21, 2009). Beginning iPhone 3 Development: Exploring the iPhone SDK (1st ed.). Apress. p.&#160;584. ISBN&#160;1-4302-2459-2.&#160;
+Mark, Dave; LaMarche, Jeff (December 29, 2009). More iPhone 3 Development: Tackling iPhone SDK 3 (1st ed.). Apress. p.&#160;552. ISBN&#160;1-4302-2505-X.&#160;
+
+
+External links
+
+
+
+Wikimedia Commons has media related to iOS software.
+
+
+
+Official website
+Official website Dev Center at Apple Developer Connection
+iOS Reference Library – on the Apple Developer Connection website
+iOS 9 for iPhone and iPad
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+iOS and iOS-based products
+
+
+
+
+
+
+
+
+
+History
+Outline
+
+
+
+
+
+
+
+
+Hardware
+
+
+
+Apple TV
+Apple Watch
+iPad
+
+1st
+2
+3rd
+4th
+Air
+Air 2
+
+
+iPad Mini
+
+1st
+2
+3
+4
+
+
+iPad Pro
+iPhone
+
+1st
+3G
+3GS
+4
+4S
+5
+5C
+5S
+6 / 6 Plus
+6S / 6S Plus
+
+
+iPod Touch
+
+1st
+2nd
+3rd
+4th
+5th
+6th
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Software
+
+
+
+AirDrop
+CarPlay
+Cocoa Touch
+Control Center
+Core Animation
+iTunes
+iOS
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+All
+
+
+Notification Center
+SDK
+Siri
+Spotlight
+SpringBoard
+VoiceOver
+WebKit
+
+
+
+
+
+
+
+
+Bundled apps
+
+
+
+
+
+
+
+Calendar
+Contacts
+FaceTime
+Find My Friends
+Find My iPhone
+Health
+iBooks
+Mail
+Maps
+Messages
+Music
+News
+Notes
+Photo Booth
+Photos
+Reminders
+Safari
+Videos
+Wallet
+Watch
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Newsstand
+
+
+
+
+
+
+
+
+
+
+
+Apple apps
+
+
+
+
+
+
+
+AirPort Utility
+iLife
+
+GarageBand
+iMovie
+
+
+iWork
+
+Keynote
+Numbers
+Pages
+
+
+Logic Remote
+Remote
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Beats Music
+Cards
+iPhoto
+Nike + iPod
+
+
+
+
+
+
+
+
+
+
+
+Services
+
+
+
+
+
+
+
+Apple Pay
+App Store
+Game Center
+iAd
+iBookstore
+iCloud
+iMessage
+iTunes Connect
+iTunes Store
+Multitasking
+Push Notifications
+TestFlight
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+MobileMe
+
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+300-page bill
+Ax / Sx mobile processors
+FairPlay
+Free and open-source iOS applications
+History of the iPhone
+iFund
+Jailbreaking
+Metal
+Swift
+WWDC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+iPod
+
+
+
+
+
+
+Models
+
+
+
+Classic
+
+Photo
+iPod+HP
+
+
+Mini
+Shuffle
+Nano
+Touch
+
+
+
+
+
+
+
+
+Accessories
+
+
+
+Earbuds
+iPod Hi-Fi
+Nike+iPod
+
+
+
+
+
+
+
+
+Software
+
+
+
+Comparison of iPod managers
+iOS
+
+Store
+
+
+iPod game
+iTunes
+
+Store
+version history
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Advertising
+Click wheel
+Dock Connector
+
+
+
+
+
+
+
+
+
+Italics indicate discontinued products.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Operating systems by Apple Inc.
+
+
+
+
+
+
+Apple II/III/Lisa
+
+
+
+Apple II series
+
+Apple DOS
+ProDOS
+GS/OS
+
+
+Apple III
+
+SOS
+
+
+Lisa
+
+Lisa OS
+
+
+
+
+
+
+
+
+
+
+Macintosh OS
+
+
+
+
+
+Mac OS Classic
+
+
+
+
+System 1
+Systems 2, 3, and 4
+System 5
+System 6
+System 7
+Mac OS 8
+Mac OS 9
+
+
+
+
+
+
+
+
+
+Mac OS X Family
+
+
+
+
+Rhapsody (pre-release of Mac OS X)
+Darwin
+Mac OS X
+Mac OS X Server
+
+
+
+
+
+
+
+
+
+
+
+Macintosh (other)
+
+
+
+Shipped projects
+A/ROSE
+A/UX
+MkLinux
+Development projects
+
+Taligent
+Copland
+
+
+
+
+
+
+
+
+
+
+Mobile
+
+
+
+Newton OS
+iPod OS
+iOS
+watchOS
+
+
+
+
+
+
+
+
+
+Italics indicate discontinued products. Related category: Apple Inc. operating systems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Unix and Unix-like operating systems
+
+
+
+
+
+
+
+
+
+Android
+BSD
+
+386BSD
+Darwin
+
+OS X
+iOS
+
+
+DragonFly BSD
+FreeBSD
+NetBSD
+NeXTSTEP
+OpenBSD
+SunOS
+Ultrix
+
+
+Coherent
+Chrome OS
+GNU
+Linux
+LynxOS
+MINIX
+Plan 9
+QNX
+
+BlackBerry 10
+
+
+Research Unix
+System V
+
+A/UX
+AIX
+HP-UX
+illumos
+IRIX
+SCO OpenServer
+Solaris
+UnixWare
+
+
+Tru64 UNIX
+Xenix
+more...
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+ Book
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Mobile operating systems
+
+
+
+
+
+
+Linux
+kernel
+
+
+
+
+Android
+
+
+
+Baidu Yi
+CyanogenMod
+Hive UI
+Fire OS
+MIUI
+OPhone
+Replicant
+Ubuntu for Android
+Nokia X platform
+
+
+
+
+
+
+
+
+SHR
+
+
+
+OpenEmbedded
+
+Familiar Linux
+OpenZaurus
+KaeilOS
+
+
+Openmoko Linux
+
+Qt Extended Improved
+Ångström Linux-based
+
+
+
+
+
+
+
+
+
+
+Others
+
+
+
+Access Linux
+EZX Linux
+Firefox OS
+LuneOS
+MeeGo
+MotoMagx
+Sailfish OS
+Tizen
+Ubuntu Touch
+webOS
+
+
+
+
+
+
+
+
+
+
+
+XNU
+
+
+
+iOS
+
+
+
+
+
+
+
+
+QNX
+
+
+
+BlackBerry 10
+BlackBerry Tablet OS
+
+
+
+
+
+
+
+
+Windows
+
+
+
+Windows Mobile
+Windows Phone
+Windows XP Tablet PC Edition
+Windows RT
+Windows 8.1 with Bing
+Windows 10 Mobile
+
+
+
+
+
+
+
+
+Other
+
+
+
+BlackBerry OS
+EPOC
+GEOS
+Nintendo DSi
+Nintendo 3DS
+S30
+S40
+Nokia Asha platform
+Palm OS
+PSP
+PS Vita
+Symbian
+
+MOAP(S)
+UIQ
+S60
+S80
+S90
+
+
+
+
+
+
+
+
+
+
+Related
+platforms
+
+
+
+BREW
+Java ME
+JavaFX Mobile
+
+
+
+
+
+
+
+
+
+
+
+Comparison of mobile operating systems
+List of mobile software distribution platforms
+Open Handset Alliance
+Open Mobile Alliance
+Mobile application development
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+WorldCat
+VIAF: 184460395
+LCCN: n2010039603
+GND: 7845187-5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=IOS&amp;oldid=691147548"					
+				Categories: Products introduced in 2007IOS (Apple)Mach (kernel)Mobile operating systemsSmartphonesTablet operating systemsHidden categories: Wikipedia semi-protected pagesArticles to be merged from October 2015All articles to be mergedArticles containing potentially dated statements from January 2015All articles containing potentially dated statementsCommons category without a link on WikidataOfficial website different in Wikidata and WikipediaWikipedia articles with VIAF identifiersWikipedia articles with LCCN identifiersWikipedia articles with GND identifiers				
+							
+		
+		
+			

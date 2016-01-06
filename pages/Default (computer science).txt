@@ -1,0 +1,91 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Default (computer science)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (September 2015)
+
+
+A default, in computer science, refers to a setting or a value automatically assigned to a software application, computer program or device, outside of user intervention. Such settings are also called presets, especially for electronic devices. The Oxford English Dictionary dates this usage to the mid-1960s, as a variant of the older meaning of "failure in performance".
+Default values are generally intended to make a device (or control) usable "out of the box". A common setting, or at least a usable setting, is typically assigned. In many contexts, such an assignment makes the choice of that setting or value more likely (the so-called default effect)
+
+
+
+Contents
+
+
+1 Examples
+
+1.1 Application software preferences
+1.2 Television or computer monitor
+
+
+2 In application software
+3 In computer languages
+4 In operating systems
+5 References
+
+
+
+Examples[edit]
+Application software preferences[edit]
+One use of default in temperateness is for initial settings for application software. For example, the first time a user runs an application it may suggest that the user's delivery address is in the United States. This default might be appropriate if more users of that application were in the US than any other country. If the user selected a new country, it would override the default, and perhaps become the default for the next time the application is used on that computer or by that user. Changing the default for the next run would involve storing user information in some place, such as in cookies on the user's computer for an Internet application.
+Television or computer monitor[edit]
+A TV or computer monitor typically comes with a button to "restore factory presets". This allows the settings for brightness, contrast, color, etc., to be returned to the defaults recommended by the manufacturer. This button may be used when the settings get badly adjusted (say by a toddler playing with the controls). Some "fine-tuning" of the settings may still be needed from the factory settings, but they will likely be closer to the desired settings than random settings.
+In application software[edit]
+Using a default involves two goals which sometimes conflict:
+
+Minimal user interaction should be required. Setting defaults to the most commonly selected options serves this purpose.
+
+
+Panel entry errors should be minimized. Using defaults will tend to increase errors, as users may leave incorrect default settings selected. In cases where the value can be verified, this is not a severe problem. For example, the delivery country can be checked against the street address or postal codes and any mismatch can generate an error panel displayed to the user, who will then presumably make the correction.
+
+In cases where there is no clear majority and the results cannot easily be verified by other available information, such as the gender of the individual, no default should be offered. Note, however, that some software applications require that default values be supplied.
+A 1982 Apple Computer manual for developers warned: "Please do not ever use the word default in a program designed for humans. Default is something the mortgage went into right before the evil banker stole the Widow Parson's house. There is an exhaustive list of substitutes (previous, automatic, standard, etc.)".[1]
+In computer languages[edit]
+Most languages in the C family (but not C itself, as of ISO-C99) allow a function to have default parameters, that are used if the function is called with omitted parameter specifications.
+In C and programming languages based on its syntax, the switch statement (which dispatches among a number of alternatives) can make use of the default keyword to provide a case for when no other case matches.
+In Fortran, the INIT parameter on a declaration defines an initial default value for that variable.
+In operating systems[edit]
+Early operating systems used a command line interface in which the user typed short commands, often followed by various parameters and options. For operations on disks, one commonly specified the disk name or drive number (or letter). On early versions of MS-DOS, the default was usually the first floppy drive (DRIVE A:); on later versions that supported hard disk drives, the option was changed to the hard disk (DRIVE C:).
+These new versions of DOS had unexpected consequences; occasionally a user would learn the hard way that the command:
+FORMAT [no options] &lt;CR&gt;
+formatted the hard disk (DRIVE C:), by default. This could be disconcerting to a user who has just inserted a floppy disk and listed its directory (DIR), to be informed that no directory existed. The default had been the first floppy drive in earlier versions of MS-DOS, but the designers of MS-DOS had found it convenient to change the default to the most-used drive when hard disk drives were supported. For the developers, deleting the operating system would not have been a major problem, because they could easily replace it, but for a customer, losing the operating system—and several months' work—could be catastrophic.
+References[edit]
+
+
+^ Meyers, Joe; Tognazzini, Bruce (1982). Apple IIe Design Guidelines (PDF). Apple Computer. p.&#160;37.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Default_(computer_science)&amp;oldid=685762198"					
+				Categories: Computing terminologyComputer dataHidden categories: Articles needing additional references from September 2015All articles needing additional references				
+							
+		
+		
+			

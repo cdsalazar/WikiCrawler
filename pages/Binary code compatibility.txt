@@ -1,0 +1,158 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Binary code compatibility
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (November 2013)
+
+
+Binary code compatibility (binary compatible or object code compatible) is a property of computer systems, that means they can run the same executable code, typically machine code for a general purpose computer CPU. Source code compatibility, on the other hand, means that recompilation is necessary.
+For a compiled program on a general operating system, binary compatibility often implies that not only the CPUs (instruction sets) of the two computers are binary compatible, but also that interfaces and behaviours of the operating system and APIs, and the ABIs corresponding to those APIs, are sufficiently equal, i.e. "compatible".
+A term like backward-compatible usually implies object code compatibility. This means that newer computer hardware and/or software has (practically) every feature of the old, plus additional capabilities or performance. Older executable code will thus run unchanged on the newer product. For a compiled program running directly on a CPU under an OS, a "binary compatible operating system" primarily means application binary interface (ABI) compatibility with another system. However, it also often implies that APIs that the application depends on, directly or indirectly, (such as the Windows API for example) are sufficiently similar. Hardware (besides the CPU, such as for graphics) and peripherals that an application accesses may also be a factor for full compatibility, although many hardware differences are hidden by modern APIs (often partly supplied by the OS itself and partly by specific device drivers).
+In other cases, a general porting of the software must be used to make non-binary-compatible programs work.
+Binary-compatibility is a major benefit when developing computer programs that are to be run on multiple OSes. Several Unix-based OSes, such as FreeBSD or NetBSD, offer binary compatibility with more popular OSes, such as Linux-derived ones, since most binary executables are not commonly distributed for such OSes.
+Most OSes provide binary compatibility, in each version of the OS, for most binaries built to run on earlier versions of the OS. For example, many executables compiled for Windows 3.1, Windows 95 or Windows 2000 can also be run on Windows XP or Windows 7 and many applications for DOS works also on modern versions of Windows.[citation needed]
+
+
+
+Contents
+
+
+1 Binary compatible hardware
+2 Binary compatible operating systems
+3 See also
+4 References
+5 External links
+
+
+
+Binary compatible hardware[edit]
+For a digital processor implemented in hardware, binary compatibility means that (a large subset of) machine code produced for another processor can be correctly executed and has (much) the same effect as on the other processor. This is quite common among many processor families, although it is rather uncommon among the ubiquitous small embedded systems built around such processors. Full machine code compatibility would here imply exactly the same layout of interrupt service routines, I/O-ports, hardware registers, counter/timers, external interfaces and so on. For a more complex embedded system using more abstraction layers (sometimes on the border to a general computer, such as a mobile phone), this may be different.
+Binary compatible operating systems[edit]
+Binary compatible operating systems are OSes that aim to implement binary compatibility with another OS, or another variant of the same brand. This means that they are ABI-compatible (for application binary interface). As the job of an OS is to run programs, the instruction set architectures running the OSes have to be the same or compatible. Otherwise, programs can be employed within a CPU emulator or a faster dynamic translation mechanism to make them compatible.
+For example, the Linux kernel is not compatible with Windows. This does not mean that Linux can't be binary compatible with Windows applications. Additional software, Wine, is available that does that to some degree. The ReactOS OS development effort, seeks to create an open source, free software OS that is binary compatible with Microsoft's Windows NT family of OSes using Wine for application compatibility and reimplementing the Windows kernel for additional compatibility such as for drivers whereas Linux would use Linux drivers not Windows drivers. FreeBSD and other members of the BSD family have binary compatibility with the Linux kernel in usermode by translating Linux system calls into BSD ones. This enables the application and libraries code that run on Linux-based OSes to be run on BSD as well.
+Note that a binary compatible OS is different from running an alternative OS through virtualization or emulation, which is done to run software within the alternative OS in the case when the host OS isn't compatible. Sometimes virtualization is provided with the host OS (or such software can be obtained), which effectively makes the host OS compatible with programs. For example, Windows XP Mode for Windows 7 allows users to run a 64-bit version of Windows 7 and enable old software to still work in a 32-bit virtual machine running Windows XP; VMware Workstation/VMware Fusion, Parallels Workstation, and Windows Virtual PC allow other OSes to be run on Windows, Linux, and OS X.
+For another example, Mac OS X on the PowerPC had the ability to run Mac OS 9 and earlier application software through Classic—but this did not make OS X a binary compatible OS with Mac OS 9. Instead, the Classic environment was actually running Mac OS 9.1 in a virtual machine, running as a normal process inside of OS X.[1][2]
+See also[edit]
+
+Backward compatibility
+Application binary interface (ABI)
+Computer compatibility
+Bug compatibility
+Video game remake
+
+References[edit]
+
+
+^ "Mac OS X System Architecture". 2002. Archived from the original on August 2, 2002.&#160;
+^ Singh, Amit (June 29, 2006). Mac OS X Internals: A Systems Approach. Addison-Wesley. Section 2.11.8: Classic. ISBN&#160;0-321-27854-2. Classic Startup is a Mach-O application that runs Mac OS 9 within its address space. It provides a hardware abstraction layer between Mac OS 9 and Mac OS X by virtualizing traps, system calls, and interrupts. It runs in a protected memory environment, with multiple Mac OS 9 processes within it layered on top of a single Mac OS X BSD process.&#160;
+
+
+External links[edit]
+
+KDE Techbase Policies - Good compendium of C++ development rules of thumb (with some examples) for not breaking binary compatibility between releases of a library.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Binary_code_compatibility&amp;oldid=662278326"					
+				Categories: Backward compatibilityComputing terminologyHidden categories: Articles needing additional references from November 2013All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from May 2015				
+							
+		
+		
+			

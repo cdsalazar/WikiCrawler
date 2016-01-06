@@ -1,0 +1,520 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Container (abstract data type)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Container (computer science)" redirects here. For the abstract notion of containers in type theory, see Container (type theory).
+
+
+
+
+
+This article may require cleanup to meet Wikipedia's quality standards. The specific problem is: text is clunky. Please help improve this article if you can. (March 2012)
+
+
+In computer science, a container is a class, a data structure,[1][2] or an abstract data type (ADT) whose instances are collections of other objects. In other words, they store objects in an organized way that follows specific access rules. The size of the container depends on the number of objects (elements) it contains. Underlying implementation of various container types may vary in space and time complexity, which provides flexibility in choosing the right implementation for a given scenario.
+
+
+
+Contents
+
+
+1 Overview
+2 Value based and reference based containers
+
+2.1 Value based containers
+2.2 Reference based containers
+
+
+3 Single value and associative containers
+
+3.1 Single value containers
+3.2 Associative containers
+
+
+4 Examples of containers
+5 Graphic containers
+6 Implementations
+7 See also
+8 References
+9 External links
+
+
+
+Overview[edit]
+Containers can be looked at in three ways:
+
+access, that is the way of accessing the objects of the container. In the case of arrays, access is done with the array index. In the case of stacks, access is done according to the LIFO (last in, first out) order (alternative name: FILO, first in, last out)[3] and in the case of queues it is done according to the FIFO (first in, first out) order (alternative name: LILO, last in, last out);[3][4]
+storage, that is the way of storing the objects of the container;
+traversal, that is the way of traversing the objects of the container.
+
+Container classes are expected to implement methods to do the following:
+
+create an empty container;
+insert objects into the container;
+delete objects from the container;
+delete all the objects in the container (clear);
+access the objects in the container;
+access the number of objects in the container (size).
+
+Containers are sometimes implemented in conjunction with iterators.
+Value based and reference based containers[edit]
+Containers can be divided into two groups:
+
+value based containers;
+reference based containers.
+
+Value based containers[edit]
+Value based containers store copies of objects. When an object is accessed, the object returns a copy of it. If an external object changes after it has been inserted in the container, it does not affect the content of the container.
+Reference based containers[edit]
+Reference based containers store pointers or references to objects. When an object is accessed, the object returns a reference to it. If an external object changes after it has been inserted in the container, it affects the content of the container.
+Single value and associative containers[edit]
+Containers can be divided into two groups:
+
+single value containers;
+associative containers.
+
+Single value containers[edit]
+Each object is stored independently in the container and it is accessed directly or with an iterator.
+Associative containers[edit]
+An associative array, map, or dictionary is a container composed of (key,value) pairs, such that each key appears at most once in the container. The key is used to find the value, the object, if it is stored in the container.
+Examples of containers[edit]
+Containers are divided in the Standard Template Library into associative containers and standard sequence containers. Besides these two types, so-called container adaptors exist. Data structures that are implemented by containers include arrays, lists, maps, queues, sets, stacks, tables, trees, and vectors.
+Graphic containers[edit]
+Widget toolkits use special widgets also called Containers to group the other widgets together (windows, panels, ...). Apart from their graphical properties, they have the same type of behavior as container classes, as they keep a list of their child widgets, and allow to add, remove, or retrieve widgets amongst their children.
+Implementations[edit]
+
+.NET: System.Collections (MSDN)
+ActionScript3: AS3Commons Collections Framework
+C++: C++ Standard Library (SC++L) or the obsolete Standard Template Library (STL)
+Java: Java collections framework (JCF)
+Objective-C: part of the Foundation Kit
+PL/SQL Collections[5]
+Python: has built in containers list, dict, tuple &amp; set and can be further extended by the collections module
+Scala Mutable and Immutable Collections in the packages scala.collection.mutable and scala.collection.immutable
+
+See also[edit]
+
+List of data structures
+Standard Template Library#Containers
+Collection (abstract data type)
+Stack data structure
+
+References[edit]
+
+
+^ Paul E. Black (ed.), entry for data structure in Dictionary of Algorithms and Data Structures. US National Institute of Standards and Technology.15 December 2004. Accessed on Oct 04, 2011.
+^ Entry data structure in the Encyclopædia Britannica (2009) Online entry Accessed on Oct 04, 2011.
+^ a b LIFO(investopedia.com) Cite error: Invalid &lt;ref&gt; tag; name "investopedia" defined multiple times with different content (see the help page).
+^ FIFO(businessdictionary.com)
+^ "PL/SQL Collections and Records". Retrieved 2013-04-20.&#160;
+
+
+External links[edit]
+
+Container Data Structure Declaration and Initialization
+Container data structures
+Python SortedContainers module A fast implementation of sorted list, sorted dict, and sorted set data types in Python.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data structures
+
+
+
+
+
+
+Types
+
+
+
+Collection
+Container
+
+
+
+
+
+
+
+
+Abstract
+
+
+
+Associative array
+
+Multimap
+
+
+List
+Stack
+Queue
+
+Double-ended queue
+
+
+Priority queue
+
+Double-ended priority queue
+
+
+Set
+
+Multiset
+Disjoint-set
+
+
+
+
+
+
+
+
+
+
+Arrays
+
+
+
+Bit array
+Circular buffer
+Dynamic array
+Hash table
+Hashed array tree
+Sparse array
+
+
+
+
+
+
+
+
+Linked
+
+
+
+Association list
+Linked list
+Skip list
+Unrolled linked list
+XOR linked list
+
+
+
+
+
+
+
+
+Trees
+
+
+
+B-tree
+Binary search tree
+
+AA tree
+AVL tree
+Red–black tree
+Self-balancing tree
+Splay tree
+
+
+Heap
+
+Binary heap
+Binomial heap
+Fibonacci heap
+
+
+R-tree
+
+R* tree
+R+ tree
+Hilbert R-tree
+
+
+Trie
+
+Hash tree
+
+
+
+
+
+
+
+
+
+
+Graphs
+
+
+
+Binary decision diagram
+Directed acyclic graph
+Directed acyclic word graph
+
+
+
+
+
+
+
+
+
+
+
+List of data structures
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Container_(abstract_data_type)&amp;oldid=683671553"					
+				Categories: Abstract data typesObject-oriented programmingData structuresHidden categories: Pages with reference errorsPages with duplicate reference namesArticles needing cleanup from March 2012All articles needing cleanupCleanup tagged articles with a reason field from March 2012Wikipedia pages needing cleanup from March 2012Use dmy dates from March 2012				
+							
+		
+		
+			

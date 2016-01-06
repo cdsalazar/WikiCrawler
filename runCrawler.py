@@ -5,8 +5,8 @@ from os.path import isfile, join
 from stopWordRemove.removeStopWords import find_content_words
 from google import search
 
-def googleSearch(query, stop):
-	for url in search(query, stop=5):
+def googleSearch(query, depth):
+	for url in search(query, stop=depth):
 		with open('domains.txt', 'ab') as f:
 			f.write(url + '\n')
 
@@ -16,8 +16,11 @@ def search_by_domain(domain):
 		f.write('DOMAIN' + '\n')
 		f.write('_'.join(domain.split(' ')) + '\n')
 		f.write(url + '\n')
-	os.system('mkdir ' + '_'.join(domain.split(' ')))
+	# print '_'.join(domain.split(' '))
+	os.system('mkdir Domain_Docs/' + '_'.join(domain.split(' ')))
 	os.system('scrapy crawl wiki')
+	f = open('domains.txt', 'wb')
+	f.close()
 
 def search_by_qa(question, answer):
 	question_content = find_content_words(question)
@@ -26,9 +29,11 @@ def search_by_qa(question, answer):
 	query = all_content + ' site:wikipedia.org'
 	with open('domains.txt', 'ab') as f:
 			f.write('QA' + '\n')
-	googleSearch(query, 5)
+	googleSearch(query, 28)
 	os.system('mkdir pages')
 	os.system('scrapy crawl wiki')
+	f = open('domains.txt', 'wb')
+	f.close()
 
 def data_as_string():
 	result = ''
@@ -45,9 +50,9 @@ def data_as_string():
 	return result
 
 #--------------------------Exmaple Function Calls---------------------------------
-# search_by_domain('history')
-# search_by_qa('How many constructors can be created for a class?', 'Unlimited number.')
-# data_as_string()
+# search_by_domain('film')
+#search_by_qa('How many constructors can be created for a class?', 'Unlimited number.')
+#data_as_string()
 
 
 #--------------------------Old Main---------------------------------

@@ -1,0 +1,266 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Void type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the void type in computer programming languages.  For types of astronomical voids, see Void (astronomy).  For other uses, see Void (disambiguation).
+The void type, in several programming languages derived from C and Algol68, is the type for the result of a function that returns normally, but does not provide a result value to its caller. Usually such functions are called for their side effects, such as performing some task or writing to their output parameters. The usage of the void type in such context is comparable to that of the syntactic constructs which define subroutines in Visual Basic and procedures in Pascal. It is also similar to the unit type used in functional programming languages and type theory; however, there are some differences in allowable usage, in that the void type is taken to be an empty type with no values. See Unit type#In programming languages for a comparison.
+C and C++ also support the pointer to void type (specified as void *), but this is an unrelated notion. Variables of this type are pointers to data of an unspecified type, so in this context (but not the others) void acts as a universal or top type. A program can probably convert a pointer to any type of data (except a function pointer) to a pointer to void and back to the original type without losing information, which makes these pointers useful for polymorphic functions. The C language standard does not guarantee that the different pointer types have the same size.
+In C and C++[edit]
+A function with void result type ends either by reaching the end of the function or by executing a return statement with no returned value. The void type may also appear as the sole argument of a function prototype to indicate that the function takes no arguments. Note that despite the name, in all of these situations, the void type serves as a unit type, not as a zero or bottom type, even though unlike a real unit type which is a singleton, the void type is said to comprise an empty set of values, and the language does not provide any way to declare an object or represent a value with type void.
+In the earliest versions of C, functions with no specific result defaulted to a return type of int and functions with no arguments simply had empty argument lists. Pointers to untyped data were declared as integers or pointers to char. Some early C compilers had the feature, now seen as an annoyance, of generating a warning on any function call that did not use the function's returned value. Old code sometimes casts such function calls to void to suppress this warning. By the time Bjarne Stroustrup began his work on C++ in 1979–1980, void and void pointers were part of the C language dialect supported by AT&amp;T-derived compilers.[1]
+The explicit use of void vs. giving no arguments in a function prototype has different semantics in C and C++, as detailed in the following table:[2]
+
+
+C
+C++ equivalent
+
+
+void f(void);
+void f(); (preferred)
+void f(void);
+
+
+void f(); (accepts a constant but unknown number of arguments)
+no equivalent
+
+
+A C prototype taking no arguments, e.g. void f() above, has been deprecated however in C99.[3]
+References[edit]
+
+
+^ http://cm.bell-labs.com/cm/cs/who/dmr/chist.html, "Standardisation."
+^ Stroustrup, Bjarne (2009). Programming: Principles and Practice Using C++. Boston: Addison-Wesley. p.&#160;996. ISBN&#160;0-321-54372-6.&#160;
+^ Bjarne Stroustrup, C and C++: Case Studies in Compatibility. Reconcilable differences? You decide, Dr. Dobb's, September 01, 2002; print version
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Void_type&amp;oldid=679187702"					
+				Categories: Data typesType theory				
+							
+		
+		
+			

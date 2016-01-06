@@ -1,0 +1,355 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Parametric polymorphism
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Polymorphism
+
+
+
+
+Ad hoc polymorphism
+Function overloading
+Operator overloading
+Parametric polymorphism
+Double dispatch
+Multiple dispatch
+Single &amp; dynamic dispatch
+Subtyping
+Virtual function
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In programming languages and type theory, parametric polymorphism is a way to make a language more expressive, while still maintaining full static type-safety. Using parametric polymorphism, a function or a data type can be written generically so that it can handle values identically without depending on their type.[1] Such functions and data types are called generic functions and generic datatypes respectively and form the basis of generic programming.
+For example, a function append that joins two lists can be constructed so that it does not care about the type of elements: it can append lists of integers, lists of real numbers, lists of strings, and so on. Let the type variable a denote the type of elements in the lists. Then append can be typed forall a. [a] × [a] -&gt; [a], where [a] denotes the type of lists with elements of type a. We say that the type of append is parameterized by a for all values of a. (Note that since there is only one type variable, the function cannot be applied to just any pair of lists: the pair, as well as the result list, must consist of the same type of elements.) For each place where append is applied, a value is decided for a.
+Following Christopher Strachey,[2] parametric polymorphism may be contrasted with ad hoc polymorphism, in which a single polymorphic function can have a number of distinct and potentially heterogeneous implementations depending on the type of argument(s) to which it is applied. Thus, ad hoc polymorphism can generally only support a limited number of such distinct types, since a separate implementation has to be provided for each type.
+
+
+
+Contents
+
+
+1 History
+2 Higher-ranked polymorphism
+
+2.1 Rank-1 (prenex) polymorphism
+2.2 Rank-k polymorphism
+2.3 Rank-n ("higher-rank") polymorphism
+
+
+3 Predicativity and impredicativity
+
+3.1 Predicative polymorphism
+3.2 Impredicative polymorphism
+
+
+4 Bounded parametric polymorphism
+5 See also
+6 Notes
+7 References
+
+
+
+History[edit]
+Parametric polymorphism was first introduced to programming languages in ML in 1975.[3] Today it exists in Standard ML, OCaml, F#, Ada, Haskell, Mercury, Visual Prolog, Scala, Julia, and others. Java, C#, Visual Basic .NET and Delphi have each introduced "generics" for parametric polymorphism. Some implementations of type polymorphism are superficially similar to parametric polymorphism while also introducing ad hoc aspects. One example is C++ template specialization.
+The most general form of polymorphism is "higher-rank impredicative polymorphism". Two popular restrictions of this form are restricted rank polymorphism (for example, rank-1 or prenex polymorphism) and predicative polymorphism. Together, these restrictions give "predicative prenex polymorphism", which is essentially the form of polymorphism found in ML and early versions of Haskell.
+Higher-ranked polymorphism[edit]
+Rank-1 (prenex) polymorphism[edit]
+In a prenex polymorphic system, type variables may not be instantiated with polymorphic types. This is very similar to what is called "ML-style" or "Let-polymorphism" (technically ML's Let-polymorphism has a few other syntactic restrictions). This restriction makes the distinction between polymorphic and non-polymorphic types very important; thus in predicative systems polymorphic types are sometimes referred to as type schemas to distinguish them from ordinary (monomorphic) types, which are sometimes called monotypes. A consequence is that all types can be written in a form that places all quantifiers at the outermost (prenex) position. For example, consider the append function described above, which has type forall a. [a]&#160;×&#160;[a]&#160;-&gt;&#160;[a]. In order to apply this function to a pair of lists, a type must be substituted for the variable a in the type of the function such that the type of the arguments matches up with the resulting function type. In an impredicative system, the type being substituted may be any type whatsoever, including a type that is itself polymorphic; thus append can be applied to pairs of lists with elements of any type—even to lists of polymorphic functions such as append itself. Polymorphism in the language ML and its close relatives is predicative. This is because predicativity, together with other restrictions, makes the type system simple enough that type inference is possible. In languages where explicit type annotations are necessary when applying a polymorphic function, the predicativity restriction is less important; thus these languages are generally impredicative.
+Rank-k polymorphism[edit]
+
+
+
+This section requires expansion. (November 2013)
+
+
+For some fixed value k, rank-k polymorphism is a system in which a quantifier may not appear to the left of k or more arrows (when the type is drawn as a tree).[1]
+Type inference for rank-2 polymorphism is decidable, but reconstruction for rank-3 and above is not.[4]
+Rank-n ("higher-rank") polymorphism[edit]
+
+
+
+This section requires expansion. (November 2013)
+
+
+Rank-n polymorphism is polymorphism in which quantifiers may appear to the left of arbitrarily many arrows.
+Predicativity and impredicativity[edit]
+Predicative polymorphism[edit]
+In a predicative parametric polymorphic system, a type  containing a type variable  may not be used in such a way that  is instantiated to a polymorphic type. Predicative type theories include Martin-Löf Type Theory and NuPRL.
+Impredicative polymorphism[edit]
+Impredicative polymorphism (also called first-class polymorphism) is the most powerful form of parametric polymorphism.[5] A definition is said to be impredicative if it is self-referential; in type theory this allows the instantiation of a variable in a type  with any type, including polymorphic types, such as  itself. An example of this is the System F with the type variable X in the type , where X could even refer to T itself.
+In type theory, the most frequently studied impredicative typed λ-calculi are based on those of the lambda cube, especially System F.[1]
+Bounded parametric polymorphism[edit]
+Main article: Bounded quantification
+In 1985, Luca Cardelli and Peter Wegner recognized the advantages of allowing bounds on the type parameters.[6] Many operations require some knowledge of the data types, but can otherwise work parametrically. For example, to check whether an item is included in a list, we need to compare the items for equality. In Standard ML, type parameters of the form ’’a are restricted so that the equality operation is available, thus the function would have the type ’’a × ’’a list → bool and ’’a can only be a type with defined equality. In Haskell, bounding is achieved by requiring types to belong to a type class; thus the same function has the type  in Haskell. In most object-oriented programming languages that support parametric polymorphism, parameters can be constrained to be subtypes of a given type (see Subtype polymorphism and the article on Generic programming).
+See also[edit]
+
+Polymorphic recursion
+Type class#Higher-kinded polymorphism
+
+Notes[edit]
+
+
+^ a b c Pierce 2002.
+^ Strachey 1967.
+^ Milner, R., Morris, L., Newey, M. "A Logic for Computable Functions with reflexive and polymorphic types", Proc. Conference on Proving and Improving Programs, Arc-et-Senans (1975)
+^ Pierce 2002, p.&#160;359.
+^ Pierce 2002, p.&#160;340.
+^ Cardelli &amp; Wegner 1985.
+
+
+References[edit]
+
+Strachey, Christopher (1967), Fundamental Concepts in Programming Languages (Lecture notes), Copenhagen: International Summer School in Computer Programming&#160;. Republished in: Higher-Order and Symbolic Computation 13: 11–49. 2000. doi:10.1023/A:1010000313106.&#160; Missing or empty |title= (help)
+Hindley, J. Roger (1969), "The principal type scheme of an object in combinatory logic", Transactions of the American Mathematical Society (American Mathematical Society) 146: 29–60, doi:10.2307/1995158, JSTOR&#160;1995158, MR&#160;0253905&#160;.
+Girard, Jean-Yves (1971). "Une Extension de l'Interpretation de Gödel à l'Analyse, et son Application à l'Élimination des Coupures dans l'Analyse et la Théorie des Types". Proceedings of the Second Scandinavian Logic Symposium (in French). Amsterdam. pp.&#160;63–92. doi:10.1016/S0049-237X(08)70843-7.&#160;
+Girard, Jean-Yves (1972), Interprétation fonctionnelle et élimination des coupures de l’arithmétique d’ordre supérieur (Ph.D. thesis) (in French), Université Paris 7&#160;.
+Reynolds, John C. (1974), "Towards a Theory of Type Structure", Colloque sur la programmation, Lecture Notes in Computer Science (Paris) 19: 408–425, doi:10.1007/3-540-06859-7_148&#160;.
+Milner, Robin (1978). "A Theory of Type Polymorphism in Programming". Journal of Computer and System Sciences 17 (3): 348—375. doi:10.1016/0022-0000(78)90014-4.&#160;
+Cardelli, Luca; Wegner, Peter (December 1985). "On Understanding Types, Data Abstraction, and Polymorphism" (PDF). ACM Computing Surveys (New York, NY, USA: ACM) 17 (4): 471–523. doi:10.1145/6041.6042. ISSN&#160;0360-0300.&#160;
+Pierce, Benjamin C. (2002). Types and Programming Languages. MIT Press. ISBN&#160;978-0-262-16209-8.&#160;
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Parametric_polymorphism&amp;oldid=641544937"					
+				Categories: Generic programmingPolymorphism (computer science)Type theoryHidden categories: Articles to be expanded from November 2013All articles to be expandedPages with citations lacking titlesCS1 French-language sources (fr)				
+							
+		
+		
+			

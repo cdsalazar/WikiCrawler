@@ -1,0 +1,203 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Position-independent code
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"PIC code" redirects here. For "Presubscribed interexchange carrier code", see Carrier access code.
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2007)
+
+
+In computing, position-independent code (PIC) or position-independent executable (PIE) is a body of machine code that, being placed somewhere in the primary memory, executes properly regardless of its absolute address. PIC is commonly used for shared libraries, so that the same library code can be loaded in a location in each program address space where it will not overlap any other uses of memory (for example, other shared libraries). PIC was also used on older computer systems lacking an MMU,[1] so that the operating system could keep applications away from each other even within the single address space of an MMU-less system.
+Position-independent code can be executed at any memory address without modification. This differs from relocatable code, in which a link editor or program loader modifies a program before execution so it can be run only from a particular memory location. Generating position-independent code is often the default behavior for compilers, but they may place restrictions on the use of some language features, such as disallowing use of absolute addresses (position-independent code has to use relative addressing). Instructions that refer directly to specific memory addresses sometimes execute faster, and replacing them with equivalent relative-addressing instructions may result in slightly slower execution, although modern processors make the difference practically negligible.[2]
+
+
+
+Contents
+
+
+1 History
+2 Technical details
+3 Windows DLLs
+4 Position-independent executables
+5 See also
+6 References
+7 Further reading
+8 External links
+
+
+
+History[edit]
+In early computers, code was position-dependent: each program was built to be loaded into, and run from, a particular address. In order to run multiple jobs using separate programs at the same time jobs had to be scheduled such that no two concurrent jobs would run programs that required the same load addresses. For example, both a payroll program and an accounts receivable program built to run at address 32K could not both be run at the same time. Sometimes multiple versions of a program were maintained, each built for a different load address. This was the situation on IBM DOS/360 (1966) except for a special class of self-relocating programs.
+An improvement on this situation was the ability to relocate executable programs when they were loaded into memory. Only one copy of the program was required, but once loaded the program could not be moved. IBM OS/360 programs (1966) fit this model.
+In segmented systems such as Multics (1964), code is inherently position-independent, since addresses in a program are relative to the current segment rather than absolute.
+Position-independent code was developed to eliminate these restrictions for non-segmented systems. A position-independent program could be loaded at any address in memory.
+The invention of dynamic address translation (the function provided by an MMU) originally reduced the need for position-independent code because every process could have its own independent address space (range of addresses). However, multiple simultaneous jobs using the same code created a waste of virtual memory. If two jobs run entirely identical programs, dynamic address translation provides a solution by allowing the system simply to map two different jobs' address 32K to the same bytes of real memory, containing the single copy of the program.
+Different programs may share common code. For example, the payroll program and the accounts receivable program may both contain an identical sort subroutine. A shared module (a shared library is a form of shared module) gets loaded once and mapped into the two address spaces.
+Technical details[edit]
+Procedure calls inside a shared library are typically made through small procedure linkage table stubs, which then call the definitive function. This notably allows a shared library to inherit certain function calls from previously loaded libraries rather than using its own versions.
+Data references from position-independent code are usually made indirectly, through global offset tables (GOTs), which store the addresses of all accessed global variables. There is one GOT per compilation unit or object module, and it is located at a fixed offset from the code (although this offset is not known until the library is linked). When a linker links modules to create a shared library, it merges the GOTs and sets the final offsets in code. It is not necessary to adjust the offsets when loading the shared library later.
+Position independent functions accessing global data start by determining the absolute address of the GOT given their own current program counter value. This often takes the form of a fake function call in order to obtain the return value on stack (x86) or in a special register (PowerPC, SPARC, MIPS, probably at least some other RISC processors[weasel&#160;words], ESA/390), which can then be stored in a predefined standard register. Some processor architectures, such as the Motorola 68000, Motorola 6809, WDC 65C816, Knuth's MMIX, ARM and x86-64 allow referencing data by offset from the program counter. This is specifically targeted at making position-independent code smaller, less register demanding and hence more efficient.
+Windows DLLs[edit]
+Main article: Dynamic-link library
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2015)
+
+
+Dynamic-link libraries (DLLs) in Microsoft Windows do not use a global offset table for linkage between routines inside a given DLL or executable, and do not generally use position-independent code. As a result, their routines cannot be overridden by previously loaded DLLs, and the code has to be relocated by the operating system after it has been loaded into memory.
+In Windows Vista and later versions of Windows, the relocation of DLLs and executables is done by the so-called kernel memory manager, which shares the relocated binaries across multiple processes. Images are always relocated from their preferred base addresses, achieving address space layout randomization (ASLR).[3]
+Versions of Windows prior to Vista require system DLLs to be pre-mapped at non-conflicting fixed addresses at the link time in order to avoid runtime relocation of images. Runtime relocation in these older versions of Windows is performed by the DLL loader within the context of each process, and the resulting relocated portions of each image can no longer be shared between processes.
+The handing of DLLs in Windows differs from the ealier OS/2 procedure which it derives from. OS/2 presents a third alternative and attempts to load DLLs that are not position-independent into a dedicated "shared arena" in memory, and maps them once they are loaded. All users of the DLL are able to use the same in-memory copy.
+Position-independent executables[edit]
+Main article: Address space layout randomization
+Position-independent executables (PIE) are executable binaries made entirely from position-independent code. While some systems only run PIC executables, there are other reasons they are used. PIE binaries are used in some security-focused Linux distributions to allow PaX or Exec Shield to use address space layout randomization to prevent attackers from knowing where existing executable code is during a security attack using exploits that rely on knowing the offset of the executable code in the binary, such as return-to-libc attacks.
+Apple's Mac OS X and iOS fully support PIE executables as of versions 10.7 and 4.3, respectively; a warning issued when non-PIE iOS executable submitted for approval to Apple's App Store but there's no hard requirement yet and non-PIE applications are not rejected.[4][5]
+OpenBSD has PIE enabled by default on most architectures since OpenBSD 5.3, released on 1 May 2013.[6] Support for PIE in statically linked binaries, such as the executables in /bin and /sbin directories, was added near the end of 2014.[7] Beginning with Fedora&#160;23, Fedora maintainers decided to build packages with PIE enabled as the default.[8]
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+Information technology portal
+
+
+
+
+Dynamic linker
+Code segment
+COM file (although not a true PIE)
+
+References[edit]
+
+
+^ John R. Levine (October 1999). "Chapter 8: Loading and overlays". Linkers and Loaders. San Francisco: Morgan-Kauffman. pp.&#160;170–171. ISBN&#160;1-55860-496-0.&#160;
+^ Alexander Gabert (January 2004). "Position Independent Code internals". Hardened Gentoo. Retrieved 2009-12-03. direct non-PIC-aware addressing is always cheaper (read: faster) than PIC addressing.&#160;
+^ https://view.officeapps.live.com/op/view.aspx?src=http%3A%2F%2Fdownload.microsoft.com%2Fdownload%2F9%2Fc%2F5%2F9c5b2167-8017-4bae-9fde-d599bac8184a%2FMemMgt.docx
+^ "iphone - Non-PIE Binary - The executable 'project name' is not a Position Independent Executable. - Stack Overflow". stackoverflow.com.&#160;
+^ "iOS Developer Library". apple.com.&#160;
+^ "OpenBSD 5.3 Release". 2013-05-01. Retrieved 2014-10-10.&#160;
+^ "Heads Up: Snapshot Upgrades for Static PIE". 2014-12-24. Retrieved 2014-12-24.&#160;
+^ http://fedoraproject.org/wiki/Changes/Harden_All_Packages
+
+
+Further reading[edit]
+
+John R. Levine (October 1999). "Chapter 8: Loading and overlays". Linkers and Loaders. Morgan-Kauffman. ISBN&#160;1-55860-496-0.&#160;
+
+External links[edit]
+
+Introduction to Position Independent Code
+Position Independent Code internals
+Programming in Assembly Language with PIC
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Position-independent_code&amp;oldid=688267267"					
+				Categories: Operating system technologyComputer librariesComputer file formatsHidden categories: Articles needing additional references from January 2007All articles needing additional referencesAll articles with specifically marked weasel-worded phrasesArticles with specifically marked weasel-worded phrases from January 2015Articles needing additional references from January 2015				
+							
+		
+		
+			

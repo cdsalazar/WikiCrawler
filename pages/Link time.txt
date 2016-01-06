@@ -1,0 +1,66 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Link time
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article does not cite any references (sources). Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2006)
+
+
+
+
+
+
+
+This article may require cleanup to meet Wikipedia's quality standards. No cleanup reason has been specified. Please help improve this article if you can. (March 2009)
+
+
+In computer science, link time refers to either the operations performed by a linker (i.e. link time operations) or programming language requirements that must be met by compiled source code for it to be successfully linked (i.e. link time requirements).
+The operations performed at link time usually include fixing up the addresses of externally referenced objects and functions, various kinds of cross module checks (e.g. type checks on externally visible identifiers and in some languages instantiation of template). Some optimizing compilers delay code generation until link time because it is here that information about a complete program is available to them.
+The definition of a programming language may specify link time requirements that source code must meet to be successfully compiled (e.g. the maximum number of characters in an externally visible identifier that must be considered significant).
+Link time occurs after compile time and before runtime (when a program is executed). In some programming languages it may be necessary for some compilation and linking to occur at runtime. Resolving external variables in a program is done at link time.
+
+
+
+This programming-language-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Link_time&amp;oldid=590069615"					
+				Categories: Compiler constructionProgramming language topic stubsHidden categories: Articles lacking sources from December 2006All articles lacking sourcesArticles needing cleanup from March 2009All articles needing cleanupCleanup tagged articles without a reason field from March 2009Wikipedia pages needing cleanup from March 2009All stub articles				
+							
+		
+		
+			

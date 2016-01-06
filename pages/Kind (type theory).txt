@@ -1,0 +1,316 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Kind (type theory)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In the area of mathematical logic and computer science known as type theory, a kind is the type of a type constructor or, less commonly, the type of a higher-order type operator. A kind system is essentially a simply typed lambda calculus "one level up", endowed with a primitive type, denoted  and called "type", which is the kind of any data type which does not need any type parameters.
+A kind is sometimes confusingly described as the "type of a (data) type", but it is actually more of an arity specifier. Syntactically, it is natural to consider polymorphic types to be type constructors, thus non-polymorphic types to be nullary type constructors. But all nullary constructors, thus all monomorphic types, have the same, simplest kind; namely .
+Since higher-order type operators are uncommon in programming languages, in most programming practice, kinds are used to distinguish between data types and the types of constructors which are used to implement parametric polymorphism. Kinds appear, either explicitly or implicitly, in languages whose type systems account for parametric polymorphism in a programatically accessible way, such as Haskell and Scala.[1]
+
+
+
+Contents
+
+
+1 Examples
+2 Kinds in Haskell
+
+2.1 Kind inference
+
+
+3 See also
+4 References
+
+
+
+Examples[edit]
+
+, pronounced "type", is the kind of all data types seen as nullary type constructors, and also called proper types in this context. This normally includes function types in functional programming languages.
+ is the kind of a unary type constructor, e.g. of a list type constructor.
+ is the kind of a binary type constructor (via currying), e.g. of a pair type constructor, and also that of a function type constructor (not to be confused with the result of its application, which itself is a function type, thus of kind )
+ is the kind of a higher-order type operator from unary type constructors to proper types. See Pierce (2002), chapter 32 for an application.
+
+Kinds in Haskell[edit]
+(Note: Haskell documentation uses the same arrow for both function types and kinds.)
+Haskell's kind system[2] has just two rules:[vague]
+
+, pronounced "type" is the kind of all data types.
+ is the kind of a unary type constructor, which takes a type of kind  and produces a type of kind .
+
+An inhabited type (as proper types are called in Haskell) is a type which has values. For instance, ignoring type classes which complicate the picture, 4 is a value of type Int, while [1, 2, 3] is a value of type [Int] (list of Ints). Therefore, Int and [Int] have kind , but so does any function type, for instance Int -&gt; Bool or even Int -&gt; Int -&gt; Bool.
+A type constructor takes one or more type arguments, and produces a data type when enough arguments are supplied, i.e. it supports partial application thanks to currying.[3][4] This is how Haskell achieves parametric types. For instance, the type [] (list) is a type constructor - it takes a single argument to specify the type of the elements of the list. Hence, [Int] (list of Ints), [Float] (list of Floats) and even [[Int]] (list of lists of Ints) are valid applications of the [] type constructor. Therefore, [] is a type of kind . Because Int has kind , applying it to [] results in [Int], of kind . The 2-tuple constructor (,) has kind , the 3-tuple constructor (,,) has kind  and so on.
+Kind inference[edit]
+Standard Haskell does not allow polymorphic kinds. This is in contrast to parametric polymorphism on types, which is supported in Haskell. For instance, in the following example:
+
+
+data Tree z  = Leaf | Fork (Tree z) (Tree z)
+
+the kind of z could be anything, including , but also  etc. Haskell by default will always infer kinds to be , unless the type explicitly indicates otherwise (see below). Therefore the type checker will reject the following use of Tree:
+
+
+type FunnyTree = Tree []     -- invalid
+
+because the kind of [],  does not match the expected kind for z, which is always .
+Higher-order type operators are allowed however. For instance:
+
+
+data App unt z = Z (unt z)
+
+has kind , i.e. unt is expected to be a unary data constructor, which gets applied to its argument, which must be a type, and returns another type.
+GHC has the extension PolyKinds, which, together with KindSignatures, allows polymorphic kinds. For example:
+
+
+data Tree (z :: k) = Leaf | Fork (Tree z) (Tree z)
+type FunnyTree = Tree []     -- OK
+
+In GHC 8, types and kinds will merge.[5]
+See also[edit]
+
+System F-omega
+Pure type system
+
+References[edit]
+
+
+Pierce, Benjamin (2002). Types and Programming Languages. MIT Press. ISBN 0-262-16209-1.&#160;, chapter 29, "Type Operators and Kinding"
+
+
+
+
+^ Generics of a Higher Kind
+^ Kinds - The Haskell 98 Report
+^ "Chapter 4 Declarations and Binding". Haskell 2010 Language Report. Retrieved 23 July 2012.&#160;
+^ Miran, Lipovača. "Learn You a Haskell for Great Good!". Making Our Own Types and Typeclasses. Retrieved 23 July 2012.&#160;
+^ https://typesandkinds.wordpress.com/2015/08/19/planned-change-to-ghc-merging-types-and-kinds/
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Kind_(type_theory)&amp;oldid=690673920"					
+				Categories: Type theoryData typesHidden categories: All Wikipedia articles needing clarificationWikipedia articles needing clarification from August 2009				
+							
+		
+		
+			

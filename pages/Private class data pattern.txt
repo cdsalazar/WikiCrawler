@@ -1,0 +1,257 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Private class data pattern
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+The topic of this article may not meet Wikipedia's general notability guideline. Please help to establish notability by adding reliable, secondary sources about the topic. If notability cannot be established, the article is likely to be merged, redirected, or deleted.
+Find sources:&#160;"Private class data pattern"&#160;–&#160;news&#160;· newspapers&#160;· books&#160;· scholar&#160;· JSTOR&#160;· free images (October 2009)
+
+
+
+
+
+
+
+This article's lead section may not adequately summarize key points of its contents. Please consider expanding the lead to provide an accessible overview of all important aspects of the article. Please discuss this issue on the article's talk page. (May 2009)
+
+
+
+
+
+
+
+This article may need to be rewritten entirely to comply with Wikipedia's quality standards. You can help. The discussion page may contain suggestions. (May 2009)
+
+
+
+
+
+
+
+This article does not cite any references (sources). Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2007)
+
+
+
+
+
+
+
+
+Private class data is a design pattern in computer programming used to encapsulate class attributes and their manipulation.
+
+
+
+Contents
+
+
+1 Standard documentation
+
+1.1 Name and classification
+1.2 Intent
+1.3 Also known as
+1.4 Motivation
+1.5 Applicability
+1.6 Structure
+1.7 Participants
+1.8 Collaboration
+1.9 Consequences
+1.10 Implementation
+1.11 Sample code
+1.12 Known uses
+1.13 Related patterns
+
+
+2 References
+
+
+
+Standard documentation[edit]
+The following documentation categories for the private class data design pattern follows the design pattern documentation style precedent set by the Gang of Four.
+Name and classification[edit]
+
+Pattern Name&#160;
+This pattern is known as the private class data design pattern.
+Pattern Classification&#160;
+This pattern is a structural pattern.
+
+Intent[edit]
+The private class data design pattern seeks to reduce exposure of attributes by limiting their visibility. It reduces the number of class attributes by encapsulating them in single Data object. It allows the class designer to remove write privilege of attributes that are intended to be set only during construction, even from methods of the target class.
+Also known as[edit]
+PIMPL (Private IMPLementation) or Opaque pointer
+Motivation[edit]
+A class may expose its attributes (class variables) to manipulation when manipulation is no longer desirable, e.g. after construction. Using the private class data design pattern prevents that undesirable manipulation.
+A class may have one-time mutable attributes that cannot be declared final. Using this design pattern allows one-time setting of those class attributes.
+The motivation for this design pattern comes from the design goal of protecting class state by minimizing the visibility of its attributes (data).
+Applicability[edit]
+This design pattern applies to any class in any object oriented language.
+Structure[edit]
+
+
+
+This section is empty. You can help by adding to it. (January 2011)
+
+
+Participants[edit]
+
+
+
+This section is empty. You can help by adding to it. (January 2011)
+
+
+Collaboration[edit]
+
+
+
+This section is empty. You can help by adding to it. (January 2011)
+
+
+Consequences[edit]
+The consequences of using this design pattern include the following:
+
+Controlling write access to class attributes;
+Separating of data from methods that use it;
+Encapsulating class attribute (data) initialization; and
+Providing new type of final: final after constructor.
+
+Implementation[edit]
+The private class data design pattern solves the problems above by extracting a data class for the target class and giving the target class instance an instance of the extracted data class.
+
+The data class exposes each attribute (variable or property) through a getter.
+The data class exposes each attribute that must change after construction through a setter.
+
+Sample code[edit]
+The following C# code illustrates an opportunity to use the private class data design pattern:
+
+
+public class Circle
+{
+    private double radius;
+    private Color color;
+    private Point origin;
+    public Circle(double radius, Color color, Point origin)
+    {
+        this.radius = radius;
+        this.color = color;
+        this.origin = origin;
+    }
+    public double Circumference
+    {
+        get { return 2 * Math.PI * this.radius; }
+    }
+    public double Diameter
+    {
+        get { return 2 * this.radius; }
+    }
+    public void Draw(Graphics graphics)
+    {
+        //...
+    }
+}
+
+The attributes radius, color, and origin above should not change after the Circle() constructor. Note that the visibility is already limited by scoping them as private, but doing methods of class Circle can still modify them.
+The excess exposure of the attributes creates a type of (undesirable) coupling between methods that access those attributes. To reduce the visibility of the attributes and thus reduce the coupling, implement the private class data design pattern, as follows:
+
+
+public class CircleData
+{
+    private double radius;
+    private Color color;
+    private Point origin;
+    public CircleData(double radius, Color color, Point origin)
+    {
+        this.radius = radius;
+        this.color = color;
+        this.origin = origin;
+    }
+    public double Radius
+    {
+        get { return this.radius; }
+    }
+    public Color Color
+    {
+        get { return this.color; }
+    }
+    public Point Origin
+    {
+        get { return this.origin; }
+    }
+}
+public class Circle
+{
+    private CircleData circleData;
+    public Circle(double radius, Color color, Point origin)
+    {
+        this.circleData = new CircleData(radius, color, origin);
+    }
+    public double Circumference
+    {
+        get { return 2 * this.circleData.Radius * Math.PI; }
+    }
+    public double Diameter
+    {
+        get { return this.circleData.Radius * 2; }
+    }
+    public void Draw(Graphics graphics)
+    {
+        //...
+    }
+}
+
+The Circle class in the resulting code has an attribute of type CircleData to encapsulate the attributes previously exposed to all of the methods of the class Circle. That encapsulation prevents methods from changing the attributes after the Circle() constructor. Note, however, that any method of Circle can still retrieve the values of the encapsulated attributes.
+Known uses[edit]
+
+
+
+This section is empty. You can help by adding to it. (January 2011)
+
+
+Related patterns[edit]
+See Structural pattern for related patterns.
+References[edit]
+
+Sourcemaking.com article
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Private_class_data_pattern&amp;oldid=614085971"					
+				Categories: Software design patternsHidden categories: Articles with topics of unclear notability from October 2009All articles with topics of unclear notabilityWikipedia introduction cleanup from May 2009All pages needing cleanupArticles covered by WikiProject Wikify from May 2009All articles covered by WikiProject WikifyWikipedia articles needing rewrite from May 2009Articles lacking sources from January 2007All articles lacking sourcesArticles to be expanded from January 2011All articles to be expandedArticles with empty sections from January 2011All articles with empty sectionsArticles with example C Sharp code				
+							
+		
+		
+			

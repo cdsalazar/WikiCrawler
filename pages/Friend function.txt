@@ -1,0 +1,101 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Friend function
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In object-oriented programming, a friend function that is a "friend" of a given class is allowed access to private and protected data in that class that it would not normally be able to as if the data was public. [1] Normally, a function that is defined outside of a class cannot access such information. Declaring a function a friend of a class allows this, in languages where the concept is supported.
+A friend function is declared by the class that is granting access, explicitly stating what function from a class is allowed access. A similar concept is that of friend class.
+Friends should be used with caution. Too many functions or external classes declared as friends of a class with protected or private data may lessen the value of encapsulation of separate classes in object-oriented programming and may indicate a problem in the overall architecture design. Generally though, friend functions are a good thing for encapsulation, as you can keep data of a class private from all except those who you explicitly state need it, but this does mean your classes will become tightly coupled.
+Use cases[edit]
+This approach may be used in friendly function when a function needs to access private data in objects from two different classes. This may be accomplished in two similar ways
+
+a function of global or namespace scope may be declared as friend of both classes
+a member function of one class may be declared as friend of another one.
+
+
+
+#include &lt;iostream&gt;
+using namespace std;
+ 
+class Foo; // Forward declaration of class Foo in order for example to compile.
+class Bar {
+  private:
+      int a;
+  public:
+      Bar(): a(0) {}
+      void show(Bar&amp; x, Foo&amp; y);
+      friend void show(Bar&amp; x, Foo&amp; y); // declaration of global friend
+};
+ 
+class Foo {
+  private:
+      int b;
+  public: 
+      Foo(): b(6) {}
+      friend void show(Bar&amp; x, Foo&amp; y); // declaration of global friend
+      friend void Bar::show(Bar&amp; x, Foo&amp; y); // declaration of friend from other class 
+};
+ 
+// Definition of a member function of Bar; this member is a friend of Foo
+void Bar::show(Bar&amp; x, Foo&amp; y) {
+  cout &lt;&lt; "Show via function member of Bar" &lt;&lt; endl;
+  cout &lt;&lt; "Bar::a = " &lt;&lt; x.a &lt;&lt; endl;
+  cout &lt;&lt; "Foo::b = " &lt;&lt; y.b &lt;&lt; endl;
+}
+ 
+// Friend for Bar and Foo, definition of global function
+void show(Bar&amp; x, Foo&amp; y) {
+  cout &lt;&lt; "Show via global function" &lt;&lt; endl;
+  cout &lt;&lt; "Bar::a = " &lt;&lt; x.a &lt;&lt; endl;
+  cout &lt;&lt; "Foo::b = " &lt;&lt; y.b &lt;&lt; endl;
+}
+ 
+int main() {
+   Bar a;
+   Foo b;
+ 
+   show(a,b);
+   a.show(a,b);
+}
+
+References[edit]
+
+
+^ Holzner, Steven (2001). C++&#160;: Black Book. Scottsdale, Ariz.: Coriolis Group. p.&#160;397. ISBN&#160;1-57610-777-9. When you declare a function a friend of a class, that function has access to the internal data members of that object (that is, its protected, and private data members.)&#160;
+
+
+
+The C++ Programming Language by Bjarne Stroustrup
+
+External links[edit]
+
+C++ friend function tutorial at CoderSource.net
+C++ friendship and inheritance tutorial at cplusplus.com
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Friend_function&amp;oldid=683566951"					
+				Categories: Method (computer programming)Hidden categories: Articles with example C++ code				
+							
+		
+		
+			

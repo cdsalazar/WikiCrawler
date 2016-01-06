@@ -1,0 +1,2868 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Comparison of programming languages
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Programming language comparisons
+
+
+
+
+General comparison
+Basic syntax
+Basic instructions
+Exception handling
+Anonymous functions
+Conditional expressions
+Functional instructions
+Arrays
+Associative arrays
+String operations
+String functions
+List comprehension
+Object-oriented programming
+Object-oriented constructors
+Database access
+
+
+
+
+
+
+Evaluation strategy
+List of "Hello World" programs
+
+
+
+
+
+
+Web application frameworks
+Comparison of the Java and .NET platforms
+
+
+
+
+
+
+Languages with dependent types
+
+
+
+
+
+
+Comparison of individual programming languages
+
+ALGOL 58's influence on ALGOL 60
+ALGOL 60: Comparisons with other languages
+Comparison of ALGOL 68 and C++
+ALGOL 68: Comparisons with other languages
+Compatibility of C and C++
+Comparison of Pascal and Borland Delphi
+Comparison of Object Pascal and C
+Comparison of Pascal and C
+Comparison of Java and C++
+Comparison of C# and Java
+Comparison of C# and Visual Basic .NET
+Comparison of Visual Basic and Visual Basic .NET
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+Programming languages are used for controlling the behavior of a machine (often a computer). Like natural languages, programming languages conform to rules for syntax and semantics.
+There are thousands of programming languages[1] and new ones are created every year. Few languages ever become sufficiently popular that they are used by more than a few people, but professional programmers may use dozens of languages in a career.
+
+
+
+Contents
+
+
+1 General comparison
+2 Type systems
+3 Failsafe I/O and system calls
+4 Expressiveness
+5 Benchmarks
+6 Timeline of specific language comparisons
+7 See also
+8 References
+9 Further reading
+10 External links
+
+
+
+
+General comparison[edit]
+The following table compares general and technical information for a selection of commonly used programming languages. See the individual languages' articles for further information. Please note that the following table may be missing some information.
+
+
+Language
+Intended use
+Imperative
+Object-oriented
+Functional
+Procedural
+Generic
+Reflective
+Event-driven
+Other paradigm(s)
+Standardized?
+
+
+ActionScript 3.0
+Application, client-side, Web
+Yes
+Yes
+
+
+
+
+Yes
+
+1996, ECMA
+
+
+Ada
+Application, embedded, realtime, system
+Yes
+Yes
+
+Yes[2]
+Yes[3]
+
+
+concurrent,[4] distributed,[5] imperative object-oriented[6]
+1983, 2005, 2012, ANSI, ISO, GOST 27831-88[7]
+
+
+Aldor
+Highly domain-specific, symbolic computing
+Yes
+Yes
+Yes
+
+
+
+
+
+No
+
+
+ALGOL 58
+Application
+Yes
+
+
+
+
+
+
+
+No
+
+
+ALGOL 60
+Application
+Yes
+
+
+
+
+
+
+
+1960, IFIP WG 2.1, ISO[8]
+
+
+ALGOL 68
+Application
+Yes
+
+
+
+
+
+
+concurrent
+1968, IFIP WG 2.1, GOST 27974-88,[9]
+
+
+Ateji PX
+Parallel application
+
+Yes
+
+
+
+
+
+pi calculus
+No
+
+
+APL
+Application, data processing
+
+
+
+
+
+
+
+array-oriented, tacit
+1989, ISO
+
+
+Assembly language
+General
+Yes
+
+
+
+
+
+
+any, syntax is usually highly specific, related to the target processor
+No
+
+
+
+
+AutoHotkey
+GUI automation (macros), highly domain-specific
+Yes
+
+
+
+
+
+
+
+No
+
+
+AutoIt
+GUI automation (macros), highly domain-specific
+Yes
+
+
+Yes
+
+
+Yes
+
+No
+
+
+Bash
+Shell, scripting
+Yes
+
+
+Yes
+
+
+
+
+
+
+
+BASIC
+Application, education
+Yes
+
+
+Yes
+
+
+
+
+1983, ANSI, ISO
+
+
+BBj
+Application, business, Web
+
+Yes
+
+Yes
+
+
+
+
+No
+
+
+BeanShell
+Application, scripting
+Yes
+Yes
+Yes
+
+
+Yes
+
+
+In progress, JCP[10]
+
+
+BitC
+System
+Yes
+
+Yes
+
+
+
+
+
+No
+
+
+BLISS
+System
+
+
+
+Yes
+
+
+
+
+No
+
+
+BlitzMax
+Application, game
+Yes
+Yes
+
+Yes
+
+
+
+
+No
+
+
+Blue
+Education
+Yes
+Yes
+
+
+Yes
+
+
+
+No
+
+
+Boo
+Application
+
+
+
+
+
+
+
+
+No
+
+
+Bro
+domain-specific, application
+Yes
+
+
+
+
+
+Yes
+
+No
+
+
+C
+Application, system,[11] general purpose, low-level operations
+Yes
+
+
+Yes
+
+
+
+
+1989, ANSI C89, ISO C90, ISO C99, ISO C11[12]
+
+
+C++
+Application, system
+Yes
+Yes
+Yes
+Yes
+Yes
+
+
+
+1998, ISO/IEC 1998, ISO/IEC 2003, ISO/IEC 2011[13]
+
+
+C#
+Application, RAD, business, client-side, general, server-side, Web
+Yes
+Yes
+Yes[14]
+Yes
+Yes
+Yes
+Yes
+structured, concurrent
+2000, ECMA, ISO[15]
+
+
+Clarion
+General, business, Web
+Yes
+Yes
+Yes[16]
+
+
+
+
+
+Unknown
+
+
+Clean
+General
+
+
+Yes
+
+Yes
+
+
+
+No
+
+
+Clojure
+General
+
+
+Yes
+
+
+
+
+concurrent
+No
+
+
+CLU
+General
+Yes
+Yes
+
+Yes
+Yes
+
+
+
+No
+
+
+COBOL
+Application, business
+Yes
+Yes
+
+Yes
+
+
+
+
+ANSI X3.23 1968, 1974, 1985; ISO/IEC 1989:1985, 2002, 2014
+
+
+Cobra
+Application, business, general, Web
+Yes
+Yes
+Yes
+
+Yes
+Yes
+
+
+No
+
+
+ColdFusion (CFML)
+Web
+
+Yes
+
+Yes
+
+
+
+
+No
+
+
+Common Lisp
+General
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+extensible syntax, syntactic macros, multiple dispatch
+1994, ANSI
+
+
+COMAL 80
+Education
+Yes
+
+
+Yes
+
+
+
+
+No
+
+
+Crystal 1.0.0
+Education
+Yes
+
+Yes
+Yes
+
+
+
+
+No
+
+
+Cython
+Application, general, numerical computing
+Yes
+Yes
+Yes
+
+
+Yes
+
+aspect-oriented
+No
+
+
+D
+Application, system
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+generative, concurrent
+No
+
+
+Dart
+Application, Web
+Yes
+Yes
+
+
+
+
+
+structured
+Ecma-408 standard
+
+
+Dylan
+Application
+
+Yes
+Yes
+
+
+
+
+
+No
+
+
+Eiffel
+General, Application, Business, Client-side, Server-side, Web (EWF)
+Yes
+Yes
+Yes[17][18]
+
+Yes
+Yes Erl-G
+Yes Agents
+distributed SCOOP, Void-safe
+2005, ECMA, ISO[19]
+
+
+Elixir
+Application, distributed
+
+
+Yes
+
+
+
+
+concurrent, distributed
+No
+
+
+Erlang
+Application, distributed
+
+
+Yes
+
+
+
+
+concurrent, distributed
+No
+
+
+Euphoria
+Application
+
+
+
+Yes
+
+Yes
+
+
+No
+
+
+Factor
+
+
+
+
+
+
+
+
+stack-oriented
+No
+
+
+Falcon
+General, Application
+
+Yes
+Yes
+Yes
+
+
+
+prototype OOP, message oriented, tabular programming
+No
+
+
+FP
+
+
+
+Yes
+
+
+
+
+
+No
+
+
+F#
+Application
+Yes
+Yes
+Yes
+
+Yes
+
+
+
+No
+
+
+Forth
+General
+Yes
+
+can be viewed as
+
+
+
+
+stack-oriented
+1994, ANSI
+
+
+Fortran
+Application, numerical computing
+Yes
+Yes
+
+Yes
+Yes
+
+
+
+1966, ANSI 66, ANSI 77, MIL-STD-1753, ISO 90, ISO 95, ISO 2003, ISO/IEC 1539-1:2010 (2008)
+
+
+FreeBASIC
+Application, numerical computing
+Yes
+Yes
+
+Yes
+Yes
+
+
+
+No
+
+
+G2
+Application, inference, expert system
+Yes
+Yes
+
+
+
+
+Yes
+common graphical development and runtime environment
+No
+
+
+Gambas
+Application
+Yes
+Yes
+
+
+
+
+Yes
+
+No
+
+
+Game Maker Language
+Application, games
+Yes
+Yes
+
+
+
+
+Yes
+
+No
+
+
+GLBasic
+Application, games
+Yes
+Yes
+
+Yes
+
+
+
+simple object-oriented
+No
+
+
+Go
+Application, Web, server-side
+Yes
+
+
+Yes
+
+Yes
+Yes
+concurrent
+No
+
+
+Gosu
+Application, general, scripting, Web
+Yes
+Yes
+
+
+Yes
+Yes
+
+
+No
+
+
+GraphTalk
+Application
+
+Yes
+
+
+
+
+
+logic
+No
+
+
+Groovy
+Application, general, scripting, Web
+Yes
+Yes
+Yes
+
+
+
+
+aspect-oriented
+In progress, JCP[20]
+
+
+Harbour
+Application, business, data processing, general, Web
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+declarative
+No
+
+
+Haskell
+Application
+
+
+Yes
+
+Yes
+
+
+lazy evaluation
+2010, Haskell 2010[21]
+
+
+Haxe
+Application, general, Web
+Yes
+Yes
+Yes
+
+Yes
+Yes
+
+
+No
+
+
+HyperNext
+Application, education
+
+
+
+Yes
+
+
+Yes
+weakly typed
+No
+
+
+HyperTalk
+Application, RAD, General
+
+Yes
+
+
+
+
+Yes
+weakly typed
+Unknown
+
+
+Io
+Application, host-driven scripting
+Yes
+Yes
+
+
+
+
+
+
+No
+
+
+ISLISP
+General
+Yes
+Yes
+Yes
+
+Yes
+
+
+
+1997, ISO
+
+
+J
+Data processing
+
+
+
+
+
+
+
+array-oriented, function-level, tacit
+No
+
+
+JADE
+Application, distributed
+Yes
+Yes
+
+
+
+
+
+
+No
+
+
+Java
+Application, business, client-side, general, mobile development, server-side, Web
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+concurrent
+De facto standard via Java Language Specification
+
+
+Julia
+General and made for technical computing
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+multiple dispatch, meta, scalar and array-oriented, parallel, concurrent, distributed ("cloud")
+No
+
+
+JavaScript
+Client-side, Server-side, Web
+Yes
+Yes
+Yes
+
+
+Yes
+
+prototype-based
+1997, ECMA
+
+
+Joy
+Research
+
+
+Yes
+
+
+
+
+stack-oriented
+No
+
+
+K
+Data processing, business
+
+
+
+
+
+
+
+array-oriented, tacit
+Unknown
+
+
+Kotlin
+Application, mobile development, server-sider, client-side, Web
+Yes
+Yes
+Yes
+
+Yes
+Yes[22]
+
+
+No
+
+
+LabVIEW (G)
+Application, industrial instrumentation-automation
+Yes
+Yes
+Yes
+
+
+
+Yes
+dataflow, visual
+No
+
+
+Lisp
+General
+
+
+Yes
+
+
+
+
+
+Unknown
+
+
+Livecode
+Application, RAD, General
+
+Yes
+
+
+
+
+Yes
+weakly typed
+No
+
+
+Logtalk
+Artificial intelligence, application
+
+Yes
+
+
+
+Yes
+Yes
+logic
+No
+
+
+Lua
+Application, embedded scripting
+Yes
+Yes[23]
+Yes
+Yes
+
+Yes
+
+aspect-oriented
+No[24]
+
+
+Maple
+Symbolic computation, numerical computing
+Yes
+Yes
+Yes
+Yes
+
+
+
+distributed
+No
+
+
+Mathematica
+Symbolic language
+Yes
+Yes
+Yes
+Yes
+
+
+
+logic, distributed
+No
+
+
+MATLAB
+Highly domain-specific, numerical computing
+Yes
+Yes
+
+Yes
+
+
+
+
+No
+
+
+Modula-2
+Application, system
+Yes
+
+
+
+Yes
+
+
+
+1996, ISO[25]
+
+
+Modula-3
+Application
+Yes
+Yes
+
+
+Yes
+
+
+
+No
+
+
+MUMPS (M)
+Application, databases
+Yes
+
+
+Yes
+
+
+
+concurrent, multi-user, NoSQL, transaction processing
+1977, ANSI
+
+
+Nim
+Application, general, Web, scripting, system
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+multiple dispatch, Concurrent, meta
+No
+
+
+
+
+Oberon
+Application, system
+Yes
+Yes
+
+
+
+
+
+
+No
+
+
+Object Pascal (Delphi)
+Application, general, mobile App, Web
+Yes
+Yes
+
+Yes
+Yes
+Yes
+Yes
+structured
+No
+
+
+Objective-C
+Application, general
+Yes
+Yes
+
+
+
+Yes
+
+concurrent
+No
+
+
+OCaml
+Application
+Yes
+Yes
+Yes
+
+Yes
+
+
+
+No
+
+
+Occam
+General
+Yes
+
+
+Yes
+
+
+
+concurrent, process-oriented
+No
+
+
+Opa
+Web applications
+Yes
+
+Yes
+
+Yes
+
+
+distributed
+No
+
+
+Oxygene
+Application
+Yes
+Yes
+
+
+Yes
+
+
+
+No
+
+
+Oz
+Application, distribution, education
+Yes
+Yes
+Yes
+
+
+
+
+concurrent, logic
+No
+
+
+Pascal
+Application, education
+Yes
+
+
+Yes
+
+
+
+
+1983, ISO[26]
+
+
+Perl
+Application, scripting, text processing, Web
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+
+No
+
+
+PHP
+Server-side, Web Application, Web
+Yes
+Yes[27]
+
+Yes[28]
+
+Yes
+
+
+No
+
+
+PL/I
+Application
+Yes
+Yes
+
+Yes
+
+
+
+
+1969
+
+
+Plus
+Application, system development
+Yes
+
+
+Yes
+
+
+
+
+No
+
+
+Prolog
+Application, artificial intelligence
+
+
+
+
+
+
+
+logic
+1995, ISO
+
+
+PureBasic
+Application
+
+
+
+Yes
+
+
+
+
+No
+
+
+Python
+Application, general, Web, scripting, artificial intelligence, scientific computing
+Yes
+Yes
+Yes
+Yes
+
+Yes
+
+aspect-oriented
+No
+
+
+R
+Application, statistics
+Yes
+Yes
+Yes
+Yes
+
+
+
+
+No
+
+
+
+
+Racket
+Education, general, scripting
+
+Yes
+Yes
+Yes
+
+Yes
+
+modular, logic, meta
+No
+
+
+REALbasic
+Application
+
+
+
+Yes
+
+
+
+
+Unknown
+
+
+REBOL
+Distributed
+Yes
+Yes
+Yes
+
+
+
+
+dialected
+No
+
+
+RPG
+Application, system
+Yes
+
+
+Yes
+
+
+
+
+No
+
+
+Ruby
+Application, scripting, Web
+Yes
+Yes
+Yes
+
+
+Yes
+
+aspect-oriented
+2011(JIS X 3017), 2012(ISO/IEC 30170)
+
+
+Rust
+Application, system
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+concurrent
+No
+
+
+S
+Application, statistics
+Yes
+Yes
+Yes
+Yes
+
+
+
+
+No
+
+
+S-Lang
+Application, numerical, scripting
+Yes
+
+
+Yes
+
+
+
+
+No
+
+
+Scala
+Application, distributed, Web
+Yes
+Yes
+Yes
+
+Yes
+Yes
+Yes
+
+De facto standard via Scala Language Specification (SLS)
+
+
+Scheme
+Education, general
+
+
+Yes
+
+
+
+
+
+1998, R6RS
+
+
+Seed7
+Application, general, scripting, Web
+Yes
+Yes
+
+
+Yes
+Yes
+
+multi-paradigm, extensible, structured
+No
+
+
+Simula
+Education, general
+Yes
+Yes
+
+
+
+
+Yes
+discrete event simulation, multi-threaded (quasi-parallel) program execution
+1968
+
+
+Small Basic
+Application, education, games
+Yes
+
+
+
+
+
+Yes
+component-oriented
+No
+
+
+Smalltalk
+Application, General, Business, Web, Artificial Intelligence, Education
+Yes
+Yes
+
+Yes
+
+Yes
+Yes
+concurrent, declarative
+1998, ANSI
+
+
+SNOBOL
+Text processing
+
+
+
+
+
+
+
+
+Unknown
+
+
+Standard ML
+Application
+Yes
+
+Yes
+
+Yes
+
+
+
+1997, SML '97[29]
+
+
+Swift
+Application, general
+Yes
+Yes
+Yes
+
+Yes
+Yes
+Yes
+concurrent
+Yes
+
+
+Tcl
+Application, scripting, Web
+Yes
+Yes
+
+Yes
+
+Yes
+Yes
+
+No
+
+
+Visual Basic
+Application, RAD, education, business, general, (Includes VBA), office automation
+Yes
+Yes
+
+
+Yes
+
+Yes
+component-oriented
+No
+
+
+Visual Basic .NET
+Application, RAD, education, Web, business, general
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+structured, concurrent
+No
+
+
+Visual FoxPro
+Application
+
+Yes
+
+
+
+
+
+data-centric, logic
+No
+
+
+Visual Prolog
+Application
+Yes
+Yes
+Yes
+
+
+
+Yes
+declarative, logic
+No
+
+
+Windows PowerShell
+Administration
+Yes
+Yes
+Yes
+
+
+Yes
+
+pipeline
+No
+
+
+Wolfram Language
+Symbolic language
+Yes
+Yes
+Yes
+Yes
+
+
+
+logic, distributed
+No
+
+
+XL
+
+Yes
+Yes
+
+
+
+
+
+concept programming
+No
+
+
+Xojo
+Application, RAD, General, Web
+Yes
+Yes
+
+Yes
+
+Yes
+Yes
+
+No
+
+
+Language
+Intended use
+Imperative
+Object-oriented
+Functional
+Procedural
+Generic
+Reflective
+Event-driven
+Other paradigm(s)
+Standardized?
+
+
+Type systems[edit]
+Brief definitions
+
+A nominal type system means that the language decides whether types are compatible and/or equivalent based on explicit declarations and names.
+A structural type system means that the language decides whether types are compatible and/or equivalent based on the definition and characteristics of the types.
+Type checking determines whether and when types are verified. Static checking means that type errors are reported based on a program's text (source code). Dynamic checking means that type errors are reported based on a program's dynamic (run-time) behavior.
+
+
+
+Language
+Type safety
+Type expression
+Type compatibility and equivalence
+Type checking
+
+
+ActionScript 3.0
+safe
+implicit with optional explicit typing
+
+static
+
+
+Ada
+safe[TS 1]
+explicit
+nominal
+static
+
+
+Aldor
+unsafe
+implicit
+
+static
+
+
+ALGOL 58
+safe
+explicit
+
+static
+
+
+ALGOL 60
+safe
+explicit
+
+static
+
+
+ALGOL 68
+safe
+explicit
+structural
+static &amp; tagged unions
+
+
+APL
+safe
+
+
+dynamic
+
+
+AutoHotkey
+typeless
+n/a
+n/a
+n/a
+
+
+Ateji PX
+safe
+explicit
+nominal
+static
+
+
+Bash
+?
+?
+?
+?
+
+
+BASIC
+safe
+explicit
+nominal
+static
+
+
+BLISS
+typeless
+n/a
+n/a
+n/a
+
+
+BeanShell
+safe
+
+nominal
+dynamic
+
+
+Boo
+safe
+implicit with optional explicit typing
+
+static with optional dynamic typing
+
+
+Bro
+safe
+implicit with optional explicit typing
+nominal
+static
+
+
+C
+unsafe
+explicit
+nominal
+static
+
+
+C++ (ISO/IEC 14882)
+unsafe
+explicit
+nominal
+static[TS 2]
+
+
+C#
+unsafe[TS 3]
+implicit with optional explicit typing
+nominal
+static[TS 4]
+
+
+Clean
+safe
+implicit
+
+static
+
+
+Clojure
+safe
+implicit with optional explicit typing
+
+dynamic
+
+
+COBOL
+safe
+explicit
+nominal
+static
+
+
+ColdFusion (CFML)
+safe
+implicit
+
+dynamic
+
+
+Common Lisp
+safe
+implicit with optional explicit typing
+
+dynamic
+
+
+Curl
+safe
+
+nominal
+
+
+
+Cython
+safe
+implicit with optional explicit typing
+nominal (extension types) and structural (Python)
+dynamic with optional static typing
+
+
+D
+unsafe[TS 3]
+explicit
+nominal
+static
+
+
+Dylan
+safe
+
+
+dynamic
+
+
+Eiffel
+safe
+
+nominal
+static
+
+
+Erlang
+safe
+implicit
+
+dynamic
+
+
+Euphoria
+safe
+explicit, implicit with objects
+nominal
+static, dynamic with objects
+
+
+F#
+safe
+implicit
+nominal
+static
+
+
+Falcon
+safe
+implicit
+structural
+dynamic
+
+
+Forth
+typeless
+n/a
+n/a
+n/a
+
+
+Fortran
+safe
+explicit[TS 5]
+nominal
+static
+
+
+Gambas
+safe
+explicit
+nominal
+
+
+
+GLBasic
+safe
+explicit. Non-explicit declarations available through project options
+nominal
+static
+
+
+Go[30]
+safe
+implicit with optional explicit typing
+structural
+static
+
+
+Gosu
+safe
+partially implicit (local type inference)
+nominal (subclassing) and structural (structural)
+static
+
+
+Groovy
+safe
+implicit with optional explicit typing
+
+dynamic with optional static typing
+
+
+Harbour
+safe
+implicit with optional explicit typing
+
+dynamic
+
+
+Haskell
+safe
+implicit with optional explicit typing
+structural
+static
+
+
+Haxe
+safe
+implicit with optional explicit typing
+nominal (subclassing) and structural (structural)
+static with optional dynamic typing
+
+
+Io
+safe
+implicit
+
+dynamic
+
+
+ISLISP
+safe
+
+
+dynamic
+
+
+J
+safe
+
+
+dynamic
+
+
+Java
+safe[31]
+explicit
+nominal
+static
+
+
+JavaScript
+safe
+implicit
+structural
+dynamic
+
+
+Julia
+safe
+implicit with optional explicit typing[32]
+
+
+
+
+Joy
+safe
+
+
+dynamic
+
+
+Kotlin
+safe
+partially implicit (local type inference)
+nominal
+static
+
+
+LabVIEW
+safe
+
+
+
+
+
+Lua
+safe
+implicit
+
+dynamic
+
+
+Maple
+safe
+
+
+dynamic
+
+
+Mathematica
+safe
+
+
+dynamic
+
+
+MATLAB M-code
+safe
+
+
+dynamic
+
+
+Modula-2
+unsafe[TS 3]
+explicit
+nominal
+static
+
+
+Modula-3
+unsafe[TS 3]
+explicit
+structural
+static
+
+
+MUMPS (M)
+typeless
+n/a
+n/a
+n/a
+
+
+Oberon
+safe
+explicit
+nominal
+static and partially dynamic[TS 6]
+
+
+Objective-C
+safe
+explicit
+nominal
+dynamic with optional static typing[33]
+
+
+OCaml
+safe
+implicit with optional explicit typing
+structural (records are nominal)
+static
+
+
+Object Pascal (Delphi)
+safe
+explicit
+nominal
+static
+
+
+Opa
+safe
+implicit with optional explicit typing
+structural
+static
+
+
+Oxygene
+unsafe
+implicit
+
+static
+
+
+Oz
+safe
+implicit
+structural
+dynamic
+
+
+Pascal
+unsafe[TS 3]
+explicit
+nominal
+static
+
+
+Perl 5
+
+implicit
+
+dynamic
+
+
+Perl 6
+
+partially implicit[TS 7]
+
+dynamic with optional static typing
+
+
+PHP
+
+implicit
+
+dynamic
+
+
+Plus
+safe
+explicit
+structural
+static, dynamic (optional)
+
+
+Prolog
+
+
+
+dynamic
+
+
+Pure
+
+
+
+dynamic
+
+
+Python
+safe
+implicit
+structural
+dynamic
+
+
+REBOL
+safe
+implicit
+
+dynamic
+
+
+Rexx
+typeless
+n/a, implicit wrt numbers
+n/a
+static+dynamic wrt numbers
+
+
+RPG
+unsafe
+
+
+static
+
+
+Ruby
+safe
+implicit
+structural
+dynamic
+
+
+Rust
+safe
+implicit with optional explicit typing
+
+static with optional dynamic typing
+
+
+S
+
+
+
+dynamic
+
+
+S-Lang
+safe
+implicit
+
+dynamic
+
+
+Scala
+safe
+partially implicit (local type inference)
+nominal (subclassing) and structural (structural)
+static
+
+
+Scheme
+safe
+implicit
+
+dynamic (latent)
+
+
+Seed7
+safe
+explicit
+nominal
+static
+
+
+Simula
+safe
+
+
+static[TS 8]
+
+
+Smalltalk
+safe
+implicit
+
+dynamic
+
+
+Swift
+safe
+partially implicit (local type inference)
+nominal (subclassing) and structural (structural)
+static
+
+
+Standard ML
+safe
+implicit with optional explicit typing
+structural
+static
+
+
+Tcl
+
+
+
+dynamic
+
+
+Visual Basic
+safe
+implicit with optional explicit typing
+nominal
+static
+
+
+Visual Basic .NET
+unsafe[TS 3]
+explicit
+
+static
+
+
+Visual Prolog
+safe
+partially implicit
+nominal
+static
+
+
+Wolfram Language
+safe
+
+
+dynamic
+
+
+Windows PowerShell
+safe
+implicit
+
+dynamic
+
+
+XL
+safe
+
+nominal
+static
+
+
+Xojo
+safe
+explicit
+nominal
+static
+
+
+Language
+Type safety
+Type expression
+Type compatibility among composites
+Type checking
+
+
+
+
+^ Unsafe operations are well isolated by a "Unchecked_" prefix.
+^ with optional dynamic type casting (see dynamic cast)
+^ a b c d e f It is almost safe, unsafe features are not commonly used.
+^ with optional dynamic type (see dynamic member lookup)
+^ Optionally, typing can be explicitly implied by the first letter of the identifier (known as implicit typing within the Fortran community).
+^ dynamic checking of type extensions i.e. inherited types
+^ explicit for static types
+^ optional for formal and virtual procedures
+
+
+Failsafe I/O and system calls[edit]
+Most programming languages will print an error message and/or throw an exception if an input/output operation or other system call (e.g., chmod, kill) fails, unless the programmer has explicitly arranged for different handling of these events. Thus, these languages fail safely in this regard.
+Some (mostly older) languages require that the programmer explicitly add checks for these kinds of errors. Psychologically, different cognitive biases (e.g., optimism bias) may affect novice and experts alike and these omissions can lead to erroneous behavior.
+
+
+Language
+Failsafe I/O
+
+
+Ada
+Yes (exceptions)
+
+
+ALGOL
+Yes (exceptions or return value depending on function)
+
+
+AutoHotkey
+No (global ErrorLevel must be explicitly checked)
+
+
+Bash
+Optional[FSIO 1]
+
+
+Bro
+Yes
+
+
+C
+No[FSIO 2]
+
+
+C++
+No[FSIO 3]
+
+
+C#
+Yes
+
+
+COBOL
+No
+
+
+Common Lisp
+Yes
+
+
+D
+Yes[citation needed]
+
+
+Eiffel
+No – It actually depends on the library and it is not defined by the language
+
+
+Erlang
+Yes
+
+
+Falcon
+Yes
+
+
+Fortran
+Yes
+
+
+GLBasic
+No – Will generally cause program to crash
+
+
+Go
+Yes (unless result explicitly ignored)
+
+
+Gosu
+Yes
+
+
+Harbour
+Yes
+
+
+Haskell
+Yes
+
+
+ISLISP
+Yes
+
+
+Java
+Yes
+
+
+Julia
+Yes
+
+
+Kotlin
+Yes
+
+
+LabVIEW
+Yes
+
+
+Lua
+No (some functions do not warn or throw exceptions)
+
+
+Mathematica
+Yes
+
+
+Object Pascal (Delphi)
+Some
+
+
+Objective-C
+Yes (exceptions)
+
+
+OCaml
+Yes (exceptions)
+
+
+Perl
+No[FSIO 4]
+
+
+Perl 6
+Yes
+
+
+PHP
+Yes
+
+
+Python
+Yes
+
+
+REBOL
+Yes
+
+
+Rexx
+Yes (with optional signal on… trap handling)
+
+
+RPG
+No
+
+
+Ruby
+Yes
+
+
+Rust
+Yes (unless result explicitly ignored)
+
+
+S
+Unknown
+
+
+Smalltalk
+Yes
+
+
+Scala
+Yes[34]
+
+
+Standard ML
+Yes[citation needed]
+
+
+Tcl
+Yes
+
+
+Visual Basic
+Yes
+
+
+Visual Prolog
+Yes
+
+
+Wolfram Language
+Yes
+
+
+Xojo
+Yes
+
+
+Language
+Failsafe I/O
+
+
+
+
+^ set -e enables termination if any unchecked exit status is nonzero.
+^ gcc can warn on unchecked error status. Newer versions of Visual Studio usually throw exceptions on failed I/O when using stdio.
+^ g++ can warn on unchecked error status. Newer versions of Visual Studio usually throw exceptions on failed I/O when using stdio.
+^ Considerable error checking can be enabled optionally, but by default Perl is not failsafe.
+
+
+Expressiveness[edit]
+
+
+Language
+Statements ratio[35]
+Lines ratio[36]
+
+
+C
+1
+1
+
+
+C++
+2.5
+1
+
+
+Fortran
+2
+0.8
+
+
+Java
+2.5
+1.5
+
+
+Perl
+6
+6
+
+
+Smalltalk
+6
+6.25
+
+
+Python
+6
+6.5
+
+
+The literature on programming languages contains an abundance of informal claims about their relative expressive power, but there is no framework for formalizing such statements nor for deriving interesting consequences.[37] This table provides two measures of expressiveness from two different sources. An additional measure of expressiveness, in GZip bytes, can be found on the Computer Language Benchmarks Game.
+
+Benchmarks[edit]
+Benchmarks are designed to mimic a particular type of workload on a component or system. The computer programs used for compiling some of the benchmark data in this section may not have been fully optimized, and the relevance of the data is disputed. The most accurate benchmarks are those that are customized to your particular situation. Other people's benchmark data may have some value to others, but proper interpretation brings many challenges. The Computer Language Benchmarks Game site warns against over-generalizing from benchmark data, but contains a large number of micro-benchmarks of reader-contributed code snippets, with an interface that generates various charts and tables comparing specific programming languages and types of tests.
+Timeline of specific language comparisons[edit]
+
+1973 – Comparative Notes on Algol 68 and PL/I – S. H. Valentine – February 1973
+1976 – Evaluation of ALGOL 68, JOVIAL J3B, Pascal, Simula 67, and TACPOL Versus TINMAN – Requirements for a Common High Order Programming Language.
+1977 – A comparison of PASCAL and ALGOL 68[38] – Andrew S. Tanenbaum – June 1977.
+1993 – Five Little Languages and How They Grew – BLISS, Pascal, ALGOL 68, BCPL &amp; C – Dennis M. Ritchie – April 1993.
+2009 – On Go – oh, go on – How well will Google's Go stand up against Brand X programming language? – David Given – November 2009
+
+See also[edit]
+
+Alphabetical list of programming languages
+Comparison of basic instructions of programming languages
+Comparison of programming languages (string functions)
+Comparison of programming languages (strings)
+Comparison of programming languages (syntax)
+Comparison of programming languages (array)
+Comparison of programming languages (object-oriented programming)
+Comparison of programming languages (list comprehension)
+Comparison of programming languages (mapping)
+Comparison of programming paradigms
+Comparison of multi-paradigm programming languages
+Comparison of type systems
+Educational programming language
+Measuring programming language popularity
+Programming language
+TIOBE index
+
+References[edit]
+
+
+^ As of May 2006 Diarmuid Pigott's Encyclopedia of Computer Languages hosted at Murdoch University, Australia lists 8512 computer languages.
+^ Ada Reference Manual, ISO/IEC 8652:2005(E) Ed. 3, Section 6: Subprograms
+^ Ada Reference Manual, ISO/IEC 8652:2005(E) Ed. 3, Section 12: Generic Units
+^ Ada Reference Manual, ISO/IEC 8652:2005(E) Ed. 3, Section 9: Tasks and Synchronization
+^ Ada Reference Manual, ISO/IEC 8652:2005(E) Ed. 3 Annex E: Distributed Systems
+^ Ada Reference Manual, ISO/IEC 8652:2005(E) Ed. 3, 3.9 Tagged Types and Type Extensions
+^ Vak.ru
+^ ISO 1538:1984
+^ Vak.ru
+^ JSR 274
+^ CM.bell-labs.com
+^ ANSI C89, ISO/IEC 9899:1990, 1999, 2011
+^ ISO/IEC 14882:1998, 2003, 2011
+^ Codeproject.com: Functional Programming in C# 3.0 using Lambda Expression
+^ ECMA-334; ISO/IEC 23270:2006
+^ Softvelocity.com
+^ Basic Eiffel language mechanisms
+^ Closure (computer programming)
+^ ECMA-367; ISO/IEC 25436:2006
+^ JSR 241
+^ "The Haskell 2010 Language Report". Retrieved 2011-12-07.&#160; Most Haskell implementations extend the Haskell 2010 standard.
+^ "M8 is out!". As a first peek into the future reflective capabilities of Kotlin, you can now access properties as first-class objects in Kotlin&#160;
+^ Lua doesn't have explicit "object" type (more general type of "table" is used for object definition), but does have explicit syntax for object method calling
+^ Version releases are accompanied with a definitive Lua Reference Manual showing full syntax and semantics; a reference implementation, and a test suite. These are used to generate other Lua VM implementations and compilers such as Kahlua and LLVM-Lua.
+^ ISO/IEC 10514-1:1996
+^ ISO 7185
+^ PHP Manual, Chapter 19. Classes and Objects (PHP 5),
+^ PHP Manual, Chapter 17. Functions
+^ SMLNJ.org
+^ The Go Programming Language Specification
+^ Sheng Liang, Gilad Bracha. Dynamic class loading in the Java virtual machine. Volume 33, Issue 10 of ACM SIGPLAN Notices, October 1998.
+^ http://julia.readthedocs.org/en/latest/manual/types/
+^ Developer.apple.com
+^ Scala runs on the Java Virtual Machine from which it inherits the runtime exception handling.
+^ Data from Code Complete, p. 100. The Statements ratio column "shows typical ratios of source statements in several high-level languages to the equivalent code in C. A higher ratio means that each line of code in the language listed accomplishes more than does each line of code in C.
+^ The ratio of line count tests won by each language to the number won by C when using the Compare to feature at benchmarksgame.alioth.debian.org. Last updated May, 2006. C gcc was used for C, C++ g++ was used for C++, FORTRAN G95 was used for FORTRAN, Java JDK Server was used for Java, and Smalltalk GST was used for Smalltalk.
+^ Felleisen, Matthias. On the Expressive Power of Programming Languages. ESOP '90 3rd European Symposium on Programming. CiteSeerX: 10.1.1.51.4656.&#160;
+^ http://dare.ubvu.vu.nl/bitstream/1871/2609/1/11054.pdf
+
+
+Further reading[edit]
+
+Cezzar, Ruknet. A Guide to Programming Languages: Overview and Comparison. ISBN&#160;978-0-89006-812-0.&#160;
+
+External links[edit]
+
+Comparison of programming languages at DMOZ
+99-bottles-of-beer.net — one program in over a thousand variations and multiple languages.
+The speed, size and dependability of programming languages — charts and narrative based on The Computer Language Benchmarks Game data.
+Shapes: Source Code Size and Run Time - charts based on current Benchmarks Game data.
+Comparison of syntaxes with sample codes.
+Syntax Across Languages
+History of Programming Language Statements — history and comparison of programming languages.
+Rosetta Code — a programming language comparison wiki
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Comparison_of_programming_languages&amp;oldid=689161890"					
+				Categories: Programming language comparisonsHidden categories: All articles with unsourced statementsArticles with unsourced statements from February 2011Articles with DMOZ links				
+							
+		
+		
+			

@@ -1,0 +1,316 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Rational data type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Some programming languages provide a built-in (primitive) rational data type to represent rational numbers like 1/3 and -11/17 without rounding, and to do arithmetic on them. Examples are the ratio type of Common Lisp, and analogous types provided by most languages for algebraic computation, such as Mathematica and Maple. Many languages that do not have a built-in rational type still provide it as a library-defined type.
+
+
+
+Contents
+
+
+1 Representation
+2 Language support
+
+2.1 Common Lisp
+
+
+3 References
+
+
+
+Representation[edit]
+A variable or value of that type is usually represented as a fraction m/n where m and n are two integer numbers, either with a fixed or arbitrary precision. Depending on the language, the denominator n may be constrained to be non-zero, and the two numbers may be kept in reduced form (without any common divisors except 1).
+Languages that support a rational data type usually provide special syntax for building such values, and also extend the basic arithmetic operations ('+', '−', '×', '/', integer powers) and comparisons ('=', '&lt;', '&gt;', '≤') to act on them — either natively or through operator overloading facilities provided by the language. These operations may be translated by the compiler into a sequence of integer machine instructions, or into library calls. Support may also extend to other operations, such as formatting, rounding to an integer or floating point value, etc.. As in mathematics, those languages often interpret an integer value as equivalent to a rational value with a unit denominator.
+Language support[edit]
+
+J provides rational numbers in the base language. For example, 1r3 is one-third. Rationals in J use arbitrary precision integers for both the numerator and denominator, allowing arbitrary precision non-integers. For instance, 12683021339465478347804472r7322545784478161858100577 represents the square root of three to 50 decimal digits.[1]
+Julia provides rational numbers with the rational operator, //. For example, 6//9 == 2//3 &amp;&amp; typeof(-4//9) == Rational{Int64}.[2]
+Haskell provides a Rational type, which is really an alias for Ratio Integer (Ratio being a polymorphic type implementing rational numbers for any Integral type of numerators and denominators). The fraction is constructed using the&#160;% operator.[3]
+OCaml's Num library implements arbitrary-precision rational numbers.
+Perl's Math::BigRat core module implements arbitrary-precision rational numbers. The bigrat pragma can be used to turn on transparent BigRat support.
+Starting with Python 2.6, Python's standard library includes a Fraction class in the module fractions.[4]
+Ruby's standard library includes a Rational class in the module rational.
+Smalltalk represents rational numbers using a Fraction class in the form p/q where p and q are arbitrary size integers. Applying the arithmetic operations *, +, -, /, to fractions returns a reduced fraction.
+The Apache Commons Math library provides rational numbers for Java with its Fraction class.
+Clojure can perform arithmetic on rational numbers and offers a literal form to represent them.
+For C &amp; C++ there are projects like the GNU Multiple Precision Arithmetic Library.
+
+Common Lisp[edit]
+Common Lisp provides a numeric data type for arbitrarily sized rational numbers: RATIO.[5]
+
+
+ 1/3
+ ⇒ 1/3
+
+The type of a rational number is RATIO:
+
+
+ (type-of 1/3)
+ ⇒ RATIO
+
+Dividing two integers may return a rational number and the multiplication of a rational number may return an integer number:
+
+
+ (/ 6 8)
+ ⇒ 3/4
+ (* 3/4 16)
+ ⇒ 12
+
+The numerator and denominator may be obtained using the homonymous functions, that reduce a rational to canonical form and compute the numerator or denominator of that form respectively:[6]
+
+
+ (numerator 12/16)
+ ⇒ 3
+ (denominator 12/16)
+ ⇒ 4
+
+Computing with large integers returning a large rational number:
+
+
+ (/ (1- (expt 2 200)) (1- (expt 2 43)))
+ ⇒ 1606938044258990275541962092341162602522202993782792835301375/8796093022207
+
+References[edit]
+
+^ http://www.jsoftware.com/jwiki/Vocabulary/NumericPrecisions
+^ http://docs.julialang.org/en/latest/manual/complex-and-rational-numbers/#rational-numbers
+^ http://www.haskell.org/onlinereport/ratio.html
+^ https://docs.python.org/library/fractions.html
+^ Common Lisp HyperSpec: RATIO
+^ Function NUMERATOR, DENOMINATOR at the Common Lisp HyperSpec
+
+
+Donald Knuth, The Art of Computer Programming, vol. 2. Addison-Wesley.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Rational_data_type&amp;oldid=683567349"					
+				Categories: Data types				
+							
+		
+		
+			

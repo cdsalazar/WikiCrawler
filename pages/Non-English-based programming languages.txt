@@ -1,0 +1,320 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Non-English-based programming languages
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article may require cleanup to meet Wikipedia's quality standards. The specific problem is: list inclusion criteria. Please help improve this article if you can. (February 2015)
+
+
+Non-English-based programming languages are computer programming languages that, unlike better-known programming languages, do not use keywords taken from, or inspired by, the English vocabulary.
+
+
+
+Contents
+
+
+1 Prevalence of English-based programming languages
+2 International programming languages
+3 Based on non-English languages
+4 Languages based on symbols instead of keywords
+5 Modifiable parser syntax
+6 References
+7 Sources
+8 External links
+
+
+
+Prevalence of English-based programming languages[edit]
+Further information: English in computing
+There has been an overwhelming trend in programming languages to use the English language to inspire the choice of keywords and code libraries. According to the HOPL online database of languages,[1] out of the 8500+ programming languages recorded, roughly 2400 of them were developed in the United States, 600 in the United Kingdom, 160 in Canada, and 75 in Australia.
+In other words, over a third of all programming languages were developed in a country with English as the primary language. This does not take into account the usage share of each language, situations where a language was developed in a non-English-speaking country but used English to appeal to an international audience (see the case of Python from the Netherlands, or Ruby from Japan, or Lua from Brazil), and situations where it was based on another language which used English (see the case of Caml, developed in France but using English keywords).
+International programming languages[edit]
+ALGOL 68's standard was published in numerous languages, and the standard allowed the internationalisation of the programming language itself.
+On December 20, 1968, the "Final Report" (MR 101) was adopted by the Working Group, then subsequently approved by the General Assembly of UNESCO's IFIP for publication. Translations of the standard were made for Russian, German, French, Bulgarian, and then later Japanese. The standard was made available in Braille. ALGOL 68 went on to become the GOST/ГОСТ-27974-88 standard in the Soviet Union.
+
+GOST 27974-88 Programming language ALGOL 68 - Язык программирования АЛГОЛ 68[2]
+GOST 27975-88 Programming language ALGOL 68 extended - Язык программирования АЛГОЛ 68 расширенный[3]
+
+In English, Algol68's reverent case statement reads case ~ in ~ out ~ esac. In Cyrillic, this reads выб ~ в ~ либо ~ быв.
+Based on non-English languages[edit]
+See also: List of Chinese programming languages
+
+Aheui – An esoteric programming language similar to Befunge but using Hangul (Korean)[4]
+AMMORIA – Open source object oriented Arabic programming language, designed especially for Arabs.[5]
+Analitik – A Russian-based language for symbolic manipulations with algebraic expressions used in the Soviet series of MIR computers.[6]
+ARLOGO – The first open-source Arabic programming language, based on the UCB Logo interpreter.
+丙正正 – Chinese C++.
+Changjo – A language using Hangul (Korean). It is used for multimedia and game programming.
+ChaScript – A scripting language based on Bengali. It is built using ECMA script grammar.[7][8]
+Chinese BASIC – Chinese-localized BASIC dialects based on Applesoft BASIC; for Taiwanese Apple II clones and the Multitech Microprofessor II.
+Dolittle, ドリトル – A Japanese programming language developed for educational purposes.[9]
+DRAKON — A visual language in which any language may be used.
+Drama – An assembly language for didactical purposes based on Dutch.
+Dzintars – Ruby translated into Latvian.
+Easy Programming Language (易语言) – A Chinese rapid application development language.
+எழில், Ezhil programming language – A Tamil programming language developed for educational purposes.[10]
+farsinet – A Persian (Farsi, فارسی, پارسی) OO programming language for .NET framework. It is similar to C# and Delphi.
+Fjölnir – An Icelandic imperative programming language of the 1980s.
+FOCAL – Keywords were originally in English, but DEC produced versions of FOCAL in several European languages.
+4th Dimension – On local versions, its internal language uses French or German keywords.
+G-Portugol – A programming language with Portuguese keywords.[11]
+GOTO++ – A French esoteric programming language loosely based on French and English.[12]
+Himawari, ひまわり – A Japanese programming language.[13] It is used for hobby and business applications.
+Hindawi Programming System – A set of variants of C, C++, lex, yacc, assembly, BASIC, logo and Ada, in Bengali, Gujarati and Hindi.
+Hindi Programming Language – A Hindi programming language for the .NET Framework.[14]
+hForth – A Forth system with an optional Korean keyword set.[15]
+Jeem ج – An Arabic programming language, based on C++ with simple graphics implementation.[1].
+Karel – An educational programming language with Czech and Slovak versions.
+Kotodama on Squeak, ことだま on Squeak – A Japanese programming language based on Squeak for educational purposes.[16]
+Kumir – A Russian-based programming language similar to Pascal and IDE, mainly intended for educational usage in schools. The name is an acronym, which means Комплект ученический 'Мир' ('Mir' student's environment).
+Latino – A language with a completely Spanish-based syntax (https://github.com/primitivorm/latino).
+Linotte – A French programming language.
+Logo – In one of its Apple II editions, it was available in French.
+Loughaty (MyProLang) – A general-purpose natural Arabic programming language based on a proprietary syntax.[17]
+LSE – Langage Symbolique d'Enseignement, a French, pedagogical, programming language designed in the 1970s at the École Supérieure d'Électricité. A kind of BASIC, but with procedures, functions, and local variables, like in Pascal.
+Mama – An educational programming language and development environment, designed to help young students start programming by building 3D animations and games. It is currently available in English, Hebrew, Yiddish, and Chinese.
+Mind – A Japanese programming language.[18] It is used for hobby and business applications.
+MS Word and MS Excel – Their macro languages used to be localized in non-English languages.
+ML4 – A language for client/server database programming, with keywords in English or German.[19]
+Nadeshiko, なでしこ – A Japanese programming language.[20][21] It is used for hobby and business applications.
+1C:Enterprise – A Russian framework and language for business applications. English keywords can also be used.
+Ook! – An exotic and esoteric programming language with three distinct syntax elements only. According to the language author, Ook! is designed for orang-utans.[22]
+Pauscal – A language with a completely Spanish-based syntax; compiler for 32-bit Windows.
+Phoenix – A C-like high-level imperative procedural Arabic programming language.[23]
+PSeInt – A pseudocode interpreter for Spanish. PSeInt is an abbreviation for Pseudocode Interpreter.
+قلب (qlb) – An Arabic Scheme-like programming language exploring the role of human culture in coding.[24]
+Produire, プロデル – An object-oriented Japanese programming language.[25] It is used for hobby and business applications.
+Rapira – A Russian-based interpreted procedural programming language with strong dynamic type system.
+Robik – A simple Russian-based programming language for teaching basics of programming to children.
+RoboMind – An educational programming language available in Arabic, Chinese, Dutch, English, French, German, Greek, Polish, Brazilian Portuguese, Spanish, Swedish, and Turkish.
+SAKO – A language created in the 1950s and nicknamed the "Polish Fortran".
+Scratch – An introductory visual programming language from MIT's Media Lab with support for programming in multiple languages included as standard.
+Sema – An Arabic CSS implementation.[26]
+Simorgh (SPL) سیمرغ – An object-oriented, general-purpose, interpreted and precompiled, portable and open-source programming language.
+Ssiat – A language using Hangul (Korean). The name Ssiat (씨앗) means "seed" in Korean.
+Swaram – A simple, general-purpose and procedural language designed for programming in Tamil.[27]
+Superlogo – A Dutch creation for computer-aided instruction, based on Logo.
+TamliLogo – A Hebrew implementation of Logo.
+TI-Calculator BASIC – The 68000 version is localized. Unfortunately, various configuration strings are localized too, preventing direct binary compatibility.
+TTSneo – A Japanese programming language [2]. It is used for hobby applications.
+W-Language – A French programming language used in the WinDev CASE Tool. A Chinese version[28] is also available.
+YMB (Yazyk mashin buchgalterskih) – ЯМБ (язык машин бухгалтерских) – A Russian programming language for Iskra-554, Iskra-555, and Neva computers.
+ZhPy – A full-featured Python module which converts Chinese keywords, variables, and parameters.
+
+Languages based on symbols instead of keywords[edit]
+
+APL – A language based on mathematical notation and abstractions.
+Brainfuck – A minimalist esoteric programming language, created for the purpose of having a compiler fit in fewer than 256 bytes. Its predecessor P′′ used to prove assertions about structured programming languages and also used symbols.
+J – An APL-like language which uses only ASCII special characters and adds function-level programming.
+Light Pattern - a language which uses a series of photographs rather than text as source code.[29]
+Mouse (programming language) – A minimalist language created by Dr. Peter Grogono which uses ASCII characters for keywords.
+Piet – An art-based esoteric programming language.
+Plankalkül – The first high-level non-von Neumann programming language, designed by Konrad Zuse during World War II in Germany.
+Whitespace – An esoteric language based on whitespace characters (spaces, tabs, and line breaks).
+
+Modifiable parser syntax[edit]
+
+Babylscript – A multilingual version of JavaScript which uses multiple tokenizers to support localized keywords in different languages and which allows objects and functions to have different names in different languages.
+Component Pascal – A preprocessor that translates native-language keywords into English in an educational version of the BlackBox Component Builder available as open source from http://www.inr.ac.ru/~info21/software.htm. The translation is controlled via a modifiable vocabulary and supported by modifiable compiler error messages. A complete Russian version is used in education, and it should be possible to accommodate other left-to-right languages (e.g., the Kabardian language has been tried as a proof of concept).
+HyperTalk – A programming language, which allows translation via custom resources, used in Apple's HyperCard.
+IronPerunis – An IronPython 2.7 localisation to Lithuanian and Russian.
+AppleScript – A language which once allowed for different "dialects" including French and Japanese; however, these were removed in later versions.
+Maude – Completely user-definable syntax and semantics, within the bounds of the ASCII character set.[30]
+Perl – While Perl's keywords and function names are generally in English, it allows modification of its parser to modify the input language, such as in Damian Conway's Lingua::Romana::Perligata module, which allows programs to be written in Latin or his Lingua::tlhInganHol::yIghun Perl language in Klingon. They do not just change the keywords but also the grammar to match the language.
+Perunis – Python 2.6 localization to Lithuanian and Russian.
+Ioke – Ioke is a folding language. It allows you to write highly expressive code that writes code. Examples of same program in Chinese, Danish, Hindi and Spanish
+
+References[edit]
+
+
+^ In HOPL (History of Programming Languages), advanced search finds languages by country.
+^ "GOST 27974-88 Programming language ALGOL 68 - Язык программирования АЛГОЛ 68" (PDF) (in Russian). GOST. 1988. Retrieved November 15, 2008.&#160;
+^ "GOST 27975-88 Programming language ALGOL 68 extended - Язык программирования АЛГОЛ 68 расширенный" (PDF) (in Russian). GOST. 1988. Retrieved November 15, 2008.&#160;
+^ "Aheui", Esolang (wiki)&#160;.
+^ Ammoria, SourceForge&#160;.
+^ Analitik, ACM&#160;.
+^ ChaScript: Breaking the language barrier using bengali programming system, IEEE&#160;.
+^ Chascript&#160;.
+^ "Dolittle", EPlang, JP&#160;.
+^ Students, UTA&#160;.
+^ GPT, DE: Berlios&#160;.
+^ GOTO++&#160;.
+^ ひまわり-日本語プログラミング言語 (in Japanese), Kujira hand&#160;.
+^ Hindi programming language, SKT network&#160;.
+^ hForth, Taygeta&#160;.
+^ "Squeak", Crew, JP: Keio&#160;.
+^ IA eng (PDF)&#160;.
+^ 日本語プログラミング言語 Mind (in Japanese), JP: Scripts lab&#160;.
+^ C/S Entwicklungsumgebung ML4, ML-Software&#160;.
+^ Nadesi&#160;.
+^ Project Hosting, Google&#160;.
+^ "Ook!", Esoteric Programming Languages, DM&#160;.
+^ Phoenix, SourceForge&#160;.
+^ QLB lang&#160;.
+^ RDR, Utopia T&#160;.
+^ "Blazeeboy". Github. Retrieved 2013-08-19.&#160; |contribution= ignored (help)
+^ Ganesh (PDF), Infitt, 2003&#160;.
+^ Windev (in Chinese)&#160;.
+^ Temkin (August 2015). "Light Pattern: Writing Code with Photographs". Leonardo. doi:10.1162/LEON_a_01091. Retrieved 11/23/2015.&#160; Check date values in: |access-date= (help)
+^ Language Design in Maude, by matthias, 2006/06/05, LShift Ltd.
+
+
+Sources[edit]
+
+Pigott, Diarmuid (2006). "HOPL, the History of Programming Languages". Retrieved 2008-04-14.&#160;
+
+External links[edit]
+
+SAKO information page at HOPL – By Diarmuid Pigott
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Non-English-based_programming_languages&amp;oldid=692086511"					
+				Categories: Non-English-based programming languagesLists of programming languagesNatural language and computingHidden categories: Pages using duplicate arguments in template callsCS1 Russian-language sources (ru)CS1 uses Japanese-language script (ja)CS1 Japanese-language sources (ja)CS1 errors: chapter ignoredCS1 Chinese-language sources (zh)CS1 errors: datesArticles needing cleanup from February 2015All articles needing cleanupCleanup tagged articles with a reason field from February 2015Wikipedia pages needing cleanup from February 2015				
+							
+		
+		
+			

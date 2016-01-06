@@ -1,0 +1,359 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Low-level programming language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (July 2015)
+
+
+In computer science, a low-level programming language is a programming language that provides little or no abstraction from a computer's instruction set architecture—commands or functions in the language map closely to processor instructions. Generally this refers to either machine code or assembly language. The word "low" refers to the small or nonexistent amount of abstraction between the language and machine language; because of this, low-level languages are sometimes described as being "close to the hardware." Because of the close relationship between the language and the hardware architecture programs written in low-level languages tend to be relatively non-portable.
+Low-level languages can convert to machine code without a compiler or interpreter— second generation programming languages use a simpler processor called an assembler— and the resulting code runs directly on the processor. A program written in a low-level language can be made to run very quickly, with a small memory footprint. An equivalent program in a high-level language can be less efficient and use more memory. Low-level languages are simple, but considered difficult to use, due to numerous technical details that the programmer must remember. By comparison, a high-level programming language isolates execution semantics of a computer architecture from the specification of the program, which simplifies development.
+Low-level programming languages are sometimes divided into two categories: first generation, and second generation.
+
+
+
+Contents
+
+
+1 Machine code
+2 Assembly
+3 Low-level programming in high-level languages
+4 References
+
+
+
+Machine code[edit]
+
+
+
+
+Front panel of a PDP-8/E minicomputer. The row of switches at the bottom can be used to toggle in a machine language program
+
+
+Machine code is the only language a computer can process directly without a previous transformation. Currently, programmers almost never write programs directly in machine code, because it requires attention to numerous details that a high-level language handles automatically, requires memorizing or looking up numerical codes for every instruction, and is extremely difficult to modify.
+True machine code is a stream of raw, usually binary, data. A programmer coding in "machine code" normally codes instructions and data in a more readable form such as decimal, octal, or hexadecimal which is translated to internal format by a program called a loader or toggled into the computer's memory from a front panel.
+Although few programs are written in machine language programmers often become adept at reading it through working with core dumps or debugging from the front panel.
+Example: A function in hexadecimal representation of 32-bit x86 machine code to calculate the nth Fibonacci number:
+
+8B542408 83FA0077 06B80000 0000C383
+FA027706 B8010000 00C353BB 01000000
+C9010000 008D0419 83FA0376 078BD98B
+B84AEBF1 5BC3
+
+Assembly[edit]
+Second generation languages provide one abstraction level on top of the machine code. In the early days of coding on computers like the TX-0 and PDP-1, the first thing MIT hackers did was write assemblers.[1] Assembly language has little semantics or formal specification, being only a mapping of human-readable symbols, including symbolic addresses, to opcodes, addresses, numeric constants, strings and so on. Typically, one machine instruction is represented as one line of assembly code. Assemblers produce object files that can link with other object files or be loaded on their own.
+Most assemblers provide macros to generate common sequences of instructions.
+Example: The same Fibonacci number calculator as above, but in x86 assembly language using MASM syntax:
+
+
+fib:
+    mov edx, [esp+8]
+    cmp edx, 0
+    ja @f
+    mov eax, 0
+    ret
+    
+    @@:
+    cmp edx, 2
+    ja @f
+    mov eax, 1
+    ret
+    
+    @@:
+    push ebx
+    mov ebx, 1
+    mov ecx, 1
+    
+    @@:
+        lea eax, [ebx+ecx]
+        cmp edx, 3
+        jbe @f
+        mov ebx, ecx
+        mov ecx, eax
+        dec edx
+    jmp @b
+    
+    @@:
+    pop ebx
+    ret
+
+In this code example, hardware features of the x86 processor (its registers) are named and manipulated directly. The function loads its input from a precise location in the stack (8 bytes higher than the location stored in the ESP stack pointer) and performs its calculation by manipulating values in the EAX, EBX, ECX and EDX registers until it has finished and returns. Note that in this assembly language, there is no concept of returning a value. The result having been stored in the EAX register, the RET command simply moves code processing to the code location stored on the stack (usually the instruction immediately after the one that called this function) and it is up to the author of the calling code to know that this function stores its result in EAX and to retrieve it from there. x86 assembly language imposes no standard for returning values from a function (and so, in fact, has no concept of a function); it is up to the calling code to examine state after the procedure returns if it needs to extract a value.
+Compare this with the same function in C:
+
+
+unsigned int fib(unsigned int n)
+{
+    if (n &lt;= 0)
+        return 0;
+    else if (n &lt;= 2)
+        return 1;
+    else {
+        int a,b,c;
+        a = 1;
+        b = 1;
+        while (1) {
+            c = a + b;
+            if (n &lt;= 3) return c;
+            a = b;
+            b = c;
+            n--;
+        }
+    }
+}
+
+This code is very similar in structure to the assembly language example but there are significant differences in terms of abstraction:
+
+While the input (parameter n) is loaded from the stack, its precise position on the stack is not specified. The C compiler calculates this based on the calling conventions of the target architecture.
+The assembly language version loads the input parameter from the stack into a register and in each iteration of the loop decrements the value in the register, never altering the value in the memory location on the stack. The C compiler could do the same or could update the value in the stack. Which one it chooses is an implementation decision completely hidden from the code author (and one with no side effects, thanks to C language standards).
+The local variables a, b and c are abstractions that do not specify any specific storage location on the hardware. The C compiler decides how to actually store them for the target architecture.
+The return function specifies the value to return, but does not dictate how it is returned. The C compiler for any specific architecture implement a standard mechanism for returning the value. On x86 architecture the compiler returns the value in the EAX register, as in the assembly language example (the author of the assembly language example has chosen to copy the C convention but assembly language does not require this).
+
+These abstractions make the C code compilable without modification on any architecture for which a C compiler has been written. The x86 assembly language code is specific to the x86 architecture.
+Low-level programming in high-level languages[edit]
+In the late 1960s, high-level languages such as PL/S, BLISS, BCPL, extended ALGOL (for Burroughs large systems) and C included some degree of access to low-level programming functions. One method for this is Inline assembly, in which assembly code is embedded in a high-level language that supports this feature. Some of these languages also allow architecture-dependent compiler optimization directives to adjust the way a compiler uses the target processor architecture.
+References[edit]
+
+
+^ Levy, Stephen (1994). Hackers: Heroes of the Computer Revolution, Penguin Books. p. 32. ISBN 0-14-100051-1
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+x86 assembly topics
+
+
+
+
+
+
+Topics
+
+
+
+Assembly language
+Comparison of assemblers
+Disassembler
+Instruction set
+Low-level programming language
+Machine code
+Microassembler
+x86 assembly language
+
+
+
+
+
+
+
+
+x86 Assemblers
+
+
+
+A86/A386
+FASM
+GNU Assembler (GAS)
+High Level Assembly (HLA)
+Microsoft Macro Assembler (MASM)
+Netwide Assembler (NASM)
+Turbo Assembler (TASM)
+Open Watcom Assembler (WASM)
+Yasm
+
+
+
+
+
+
+
+
+Programming issues
+
+
+
+Call stack
+Flags
+
+Carry flag
+Direction flag
+Interrupt flag
+Overflow flag
+Zero flag
+
+
+Opcode
+Program counter
+Processor register
+x86 calling conventions
+x86 instruction listings
+x86 registers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Low-level_programming_language&amp;oldid=685311070"					
+				Categories: Programming language classificationHidden categories: Articles needing additional references from July 2015All articles needing additional references				
+							
+		
+		
+			

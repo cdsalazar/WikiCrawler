@@ -1,0 +1,340 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Memory segmentation
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about segmented computer memory.  For segments in object code, see Object file.
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (January 2011)
+
+
+Memory segmentation is the division of a computer's primary memory into segments or sections. In a computer system using segmentation, a reference to a memory location includes a value that identifies a segment and an offset within that segment. Segments or sections are also used in object files of compiled programs when they are linked together into a program image and when the image is loaded into memory.
+Segments usually correspond to natural divisions of a program such as individual routines or data tables so segmentation is generally more visible to the programmer than paging alone.[1] Different segments may be created for different program modules, or for different classes of memory usage such as code and data segments. Certain segments may be shared between programs.[1]
+
+
+
+Contents
+
+
+1 Hardware implementation
+
+1.1 Segmentation without paging
+1.2 Segmentation with paging
+
+
+2 History
+3 x86 architecture
+4 See also
+5 References
+6 External links
+
+
+
+Hardware implementation[edit]
+In a system using segmentation, computer memory addresses consist of a segment id and an offset within the segment. A hardware memory management unit (MMU) is responsible for translating the segment and offset into a physical memory address, and for performing checks to make sure the translation can be done and that the reference to that segment and offset is permitted.
+Each segment has a length and set of permissions (for example, read, write, execute) associated with it. A process is only allowed to make a reference into a segment if the type of reference is allowed by the permissions, and if the offset within the segment is within the range specified by the length of the segment. Otherwise, a hardware exception such as a segmentation fault is raised.
+Segments may also be used to implement virtual memory. In this case each segment has an associated flag indicating whether it is present in main memory or not. If a segment is accessed that is not present in main memory, an exception is raised, and the operating system will read the segment into memory from secondary storage.
+Segmentation is one method of implementing memory protection.[2] Paging is another, and they can be combined. The size of a memory segment is generally not fixed and may be as small as a single byte.[3]
+Segmentation has been implemented in several different ways on different hardware, with or without paging. The Intel x86 implementation of segments does not fit either model and is discussed separately below.
+Segmentation without paging[edit]
+Associated with each segment is information that indicates where the segment is located in memory— the segment base. When a program references a memory location the offset is added to the segment base to generate a physical memory address.
+An implementation of virtual memory on a system using segmentation without paging requires that entire segments be swapped back and forth between main memory and secondary storage. When a segment is swapped in, the operating system has to allocate enough contiguous free memory to hold the entire segment. Often memory fragmentation results in there being not enough contiguous memory even though there may be enough in total.
+Segmentation with paging[edit]
+Instead of an actual memory location the segment information includes the address of a page table for the segment. When a program references a memory location the offset is translated to a memory address using the page table. A segment can be extended simply by allocating another memory page and adding it to the segment's page table.
+An implementation of virtual memory on a system using segmentation with paging usually only moves individual pages back and forth between main memory and secondary storage, similar to a paged non-segmented system. Pages of the segment can be located anywhere in main memory and need not be contiguous. This usually results in a reduced amount of input/output between primary and secondary storage and reduced memory fragmentation
+History[edit]
+The Burroughs Corporation B5000 computer was one of the first to implement segmentation, and "perhaps the first commercial computer to provide virtual memory"[4] based on segmentation. The later B6500 computer also implemented segmentation; a version of its architecture is still in use today on the Unisys ClearPath Libra servers.
+The GE-645 computer, a modification of the GE-635 with segmentation and paging support added, was designed in 1964 to support Multics.
+The Intel iAPX 432,[5] begun in 1975, attempted to implement a true segmented architecture with memory protection on a microprocessor.
+Prime, Stratus, Apollo, IBM System/38, and IBM AS/400 computers use memory segmentation.
+x86 architecture[edit]
+Main article: x86 memory segmentation
+The memory segmentation used by early x86 processors, beginning with the Intel 8086, does not provide any protection. Any program running on these processors can access any segment with no restrictions. A segment is only identified by its starting location; there is no length checking.
+Segmentation in the Intel 80286 and later provides protection: with the introduction of the 80286, Intel retroactively named the sole operating mode of the previous x86 CPU models "real mode" and introduced a new "protected mode" with protection features. For backward compatibility, all x86 CPUs start in "real mode" with no memory protection, fixed 64&#160;KiB segments, and only 20-bit (1024&#160;KiB) addressing. An 80286 or later processor must be switched into another mode by software in order to use its full address space and advanced MMU features.
+In the x86 implementation of segmentation the segment table, rather than pointing to a page table for the segment, contains the segment address in linear memory. This address is then mapped to a physical address using a separate page table. Unlike other paged implementations of segmentation this prevents segments from dynamically growing in size.
+The x86-64 architecture does not use segmentation in long mode (64-bit mode). Four of the segment registers: CS, SS, DS, and ES are forced to 0, and the limit to 264. The segment registers FS and GS can still have a nonzero base address. This allows operating systems to use these segments for special purposes.
+See also[edit]
+
+Data segment
+BSS Segment
+Virtual address space
+Virtual memory
+x86 memory segmentation
+Segmentation fault
+
+References[edit]
+
+
+^ a b Englander, Irv (2003), The architecture of computer hardware and systems software (3rd ed.), Wiley, ISBN&#160;0-471-07325-3&#160;
+^ Arpaci-Dusseau, Remzi H.; Arpaci-Dusseau, Andrea C. (2014), Operating Systems: Three Easy Pieces [Chapter: Segmentation] (PDF), Arpaci-Dusseau Books&#160; External link in |title= (help)
+^ Intel Corporation (2012). Intel® 64 and IA-32 Architectures Software Developer’s Manual Volume 3 (3A, 3B &amp; 3C): System Programming Guide (PDF). pp.&#160;3–13.&#160;
+^ Mayer, Alastair J.W. "The Architecture of the Burroughs B5000 - 20 Years Later and Still Ahead of the Times?". Retrieved March 15, 2012.&#160;
+^ Intel Corporation (1981). Introduction to the IAPX 432 Architecture (PDF). p.&#160;78.&#160;
+
+
+External links[edit]
+
+IA-32 Intel Architecture Software Developer’s Manual Volume 3A: System Programming Guide. http://www.intel.com/products/processor/manuals/index.htm.
+Operating Systems: Internals and Design Principles by William Stallings. Publisher: Prentice Hall. ISBN 0-13-147954-7. ISBN 978-0-13-147954-8.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Memory management
+
+
+
+
+
+
+
+
+
+Memory management as a function of an operating system
+
+
+
+
+
+
+
+
+Manual memory management
+
+
+
+Static memory allocation
+C dynamic memory allocation
+new and delete (C++)
+
+
+
+
+
+
+
+
+Virtual memory
+
+
+
+Demand paging
+Page table
+Paging
+Virtual memory compression
+
+
+
+
+
+
+
+
+Hardware
+
+
+
+Memory management unit
+Translation lookaside buffer
+
+
+
+
+
+
+
+
+Garbage collection
+
+
+
+Boehm garbage collector
+Finalizer
+Garbage
+Mark-compact algorithm
+Reference counting
+Strong reference
+Weak reference
+
+
+
+
+
+
+
+
+Memory segmentation
+
+
+
+Protected mode
+Real mode
+Virtual 8086 mode
+x86 memory segmentation
+
+
+
+
+
+
+
+
+Memory safety
+
+
+
+Buffer overflow
+Buffer over-read
+Dangling pointer
+Stack overflow
+
+
+
+
+
+
+
+
+Issues
+
+
+
+Fragmentation
+Memory leak
+Unreachable memory
+
+
+
+
+
+
+
+
+Other
+
+
+
+Automatic variable
+International Symposium on Memory Management
+Region-based memory management
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Memory_segmentation&amp;oldid=685683594"					
+				Categories: Memory managementHidden categories: CS1 errors: external linksArticles lacking in-text citations from January 2011All articles lacking in-text citations				
+							
+		
+		
+			

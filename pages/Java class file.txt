@@ -1,0 +1,601 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Java class file
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Class (file format))
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the data format.  For classes in Java, see Class (computer programming).
+
+Class
+
+Filename extension
+.class
+
+
+Developed&#160;by
+Sun Microsystems
+
+
+Type of format
+Bytecode
+
+
+A Java class file is a file (with the .class filename extension) containing Java bytecode that can be executed on the Java Virtual Machine (JVM). A Java class file is produced by a Java compiler from Java programming language source files (.java files) containing Java classes. If a source file has more than one class, each class is compiled into a separate class file.
+JVMs are available for many platforms, and a class file compiled on one platform will execute on a JVM of another platform. This makes Java platform-independent.
+
+
+
+Contents
+
+
+1 History
+2 File layout and structure
+
+2.1 Sections
+2.2 Magic Number
+2.3 General layout
+2.4 Representation in a C-like programming language
+2.5 The constant pool
+
+
+3 See also
+4 References
+5 Further reading
+
+
+
+History[edit]
+On 11 December 2006, the class file format was modified under Java Specification Request (JSR) 202.[1]
+File layout and structure[edit]
+Sections[edit]
+There are 10 basic sections to the Java Class File structure:
+
+Magic Number: 0xCAFEBABE
+Version of Class File Format: the minor and major versions of the class file
+Constant Pool: Pool of constants for the class
+Access Flags: for example whether the class is abstract, static, etc.
+This Class: The name of the current class
+Super Class: The name of the super class
+Interfaces: Any interfaces in the class
+Fields: Any fields in the class
+Methods: Any methods in the class
+Attributes: Any attributes of the class (for example the name of the sourcefile, etc.)
+
+Magic Number[edit]
+Class files are identified by the following 4 byte header (in hexadecimal): CA FE BA BE (the first 4 entries in the table below). The history of this magic number was explained by James Gosling:[2]
+
+"We used to go to lunch at a place called St Michael's Alley. According to local legend, in the deep dark past, the Grateful Dead used to perform there before they made it big. It was a pretty funky place that was definitely a Grateful Dead Kinda Place. When Jerry died, they even put up a little Buddhist-esque shrine. When we used to go there, we referred to the place as Cafe Dead. Somewhere along the line it was noticed that this was a HEX number. I was re-vamping some file format code and needed a couple of magic numbers: one for the persistent object file, and one for classes. I used CAFEDEAD for the object file format, and in grepping for 4 character hex words that fit after "CAFE" (it seemed to be a good theme) I hit on BABE and decided to use it. At that time, it didn't seem terribly important or destined to go anywhere but the trash-can of history. So CAFEBABE became the class file format, and CAFEDEAD was the persistent object format. But the persistent object facility went away, and along with it went the use of CAFEDEAD - it was eventually replaced by RMI."
+
+General layout[edit]
+Because the class file contains variable-sized items and does not also contain embedded file offsets (or pointers), it is typically parsed sequentially, from the first byte toward the end. At the lowest level the file format is described in terms of a few fundamental data types:
+
+u1: an unsigned 8-bit integer
+u2: an unsigned 16-bit integer in big-endian byte order
+u4: an unsigned 32-bit integer in big-endian byte order
+table: an array of variable-length items of some type. The number of items in the table is identified by a preceding count number, but the size in bytes of the table can only be determined by examining each of its items.
+
+Some of these fundamental types are then re-interpreted as higher-level values (such as strings or floating-point numbers), depending on context. There is no enforcement of word alignment, and so no padding bytes are ever used. The overall layout of the class file is as shown in the following table.
+
+
+byte offset
+size
+type or value
+description
+
+
+0
+4 bytes
+u1 =
+0xCA hex
+magic number (CAFEBABE) used to identify file as conforming to the class file format
+
+
+1
+u1 =
+0xFE hex
+
+
+2
+u1 =
+0xBA hex
+
+
+3
+u1 =
+0xBE hex
+
+
+4
+2 bytes
+u2
+minor version number of the class file format being used
+
+
+5
+
+
+6
+2 bytes
+u2
+major version number of the class file format being used.
+J2SE 8 = 52 (0x34 hex),
+J2SE 7 = 51 (0x33 hex),
+J2SE 6.0 = 50 (0x32 hex),
+J2SE 5.0 = 49 (0x31 hex),
+JDK 1.4 = 48 (0x30 hex),
+JDK 1.3 = 47 (0x2F hex),
+JDK 1.2 = 46 (0x2E hex),
+JDK 1.1 = 45 (0x2D hex).
+For details of earlier version numbers see footnote 1 at The JavaTM Virtual Machine Specification 2nd edition
+
+
+7
+
+
+8
+2 bytes
+u2
+constant pool count, number of entries in the following constant pool table. This count is at least one greater than the actual number of entries; see following discussion.
+
+
+9
+
+
+10
+cpsize (variable)
+table
+constant pool table, an array of variable-sized constant pool entries, containing items such as literal numbers, strings, and references to classes or methods. Indexed starting at 1, containing (constant pool count - 1) number of entries in total (see note).
+
+
+...
+
+
+...
+
+
+...
+
+
+10+cpsize
+2 bytes
+u2
+access flags, a bitmask
+
+
+11+cpsize
+
+
+12+cpsize
+2 bytes
+u2
+identifies this class, index into the constant pool to a "Class"-type entry
+
+
+13+cpsize
+
+
+14+cpsize
+2 bytes
+u2
+identifies super class, index into the constant pool to a "Class"-type entry
+
+
+15+cpsize
+
+
+16+cpsize
+2 bytes
+u2
+interface count, number of entries in the following interface table
+
+
+17+cpsize
+
+
+18+cpsize
+isize (variable)
+table
+interface table, an array of variable-sized interfaces
+
+
+...
+
+
+...
+
+
+...
+
+
+18+cpsize+isize
+2 bytes
+u2
+field count, number of entries in the following field table
+
+
+19+cpsize+isize
+
+
+20+cpsize+isize
+fsize (variable)
+table
+field table, variable length array of fields
+
+
+...
+
+
+...
+
+
+...
+
+
+20+cpsize+isize+fsize
+2 bytes
+u2
+method count, number of entries in the following method table
+
+
+21+cpsize+isize+fsize
+
+
+22+cpsize+isize+fsize
+msize (variable)
+table
+method table, variable length array of methods
+
+
+...
+
+
+...
+
+
+...
+
+
+22+cpsize+isize+fsize+msize
+2 bytes
+u2
+attribute count, number of entries in the following attribute table
+
+
+23+cpsize+isize+fsize+msize
+
+
+24+cpsize+isize+fsize+msize
+asize (variable)
+table
+attribute table, variable length array of attributes
+
+
+...
+
+
+...
+
+
+...
+
+
+Representation in a C-like programming language[edit]
+Since C doesn't support multiple variable length arrays within a struct, the code below won't compile and only serves as a demonstration.
+
+
+struct Class_File_Format {
+   u4 magic_number;
+
+   u2 minor_version;   
+   u2 major_version;
+
+   u2 constant_pool_count;   
+  
+   cp_info constant_pool[constant_pool_count - 1];
+
+   u2 access_flags;
+
+   u2 this_class;
+   u2 super_class;
+
+   u2 interfaces_count;   
+   
+   u2 interfaces[interfaces_count];
+
+   u2 fields_count;   
+   field_info fields[fields_count];
+
+   u2 methods_count;
+   method_info methods[methods_count];
+
+   u2 attributes_count;   
+   attribute_info attributes[attributes_count];
+}
+
+The constant pool[edit]
+The constant pool table is where most of the literal constant values are stored. This includes values such as numbers of all sorts, strings, identifier names, references to classes and methods, and type descriptors. All indexes, or references, to specific constants in the constant pool table are given by 16-bit (type u2) numbers, where index value 1 refers to the first constant in the table (index value 0 is invalid).
+Due to historic choices made during the file format development, the number of constants in the constant pool table is not actually the same as the constant pool count which precedes the table. First, the table is indexed starting at 1 (rather than 0), but the count should actually be interpreted as the maximum index plus one.[3] Additionally, two types of constants (longs and doubles) take up two consecutive slots in the table, although the second such slot is a phantom index that is never directly used.
+The type of each item (constant) in the constant pool is identified by an initial byte tag. The number of bytes following this tag and their interpretation are then dependent upon the tag value. The valid constant types and their tag values are:
+
+
+Tag byte
+Additional bytes
+Description of constant
+
+
+1
+2+x bytes
+(variable)
+UTF-8 (Unicode) string: a character string prefixed by a 16-bit number (type u2) indicating the number of bytes in the encoded string which immediately follows (which may be different than the number of characters). Note that the encoding used is not actually UTF-8, but involves a slight modification of the Unicode standard encoding form.
+
+
+3
+4 bytes
+Integer: a signed 32-bit two's complement number in big-endian format
+
+
+4
+4 bytes
+Float: a 32-bit single-precision IEEE 754 floating-point number
+
+
+5
+8 bytes
+Long: a signed 64-bit two's complement number in big-endian format (takes two slots in the constant pool table)
+
+
+6
+8 bytes
+Double: a 64-bit double-precision IEEE 754 floating-point number (takes two slots in the constant pool table)
+
+
+7
+2 bytes
+Class reference: an index within the constant pool to a UTF-8 string containing the fully qualified class name (in internal format) (big-endian)
+
+
+8
+2 bytes
+String reference: an index within the constant pool to a UTF-8 string (big-endian too)
+
+
+9
+4 bytes
+Field reference: two indexes within the constant pool, the first pointing to a Class reference, the second to a Name and Type descriptor. (big-endian)
+
+
+10
+4 bytes
+Method reference: two indexes within the constant pool, the first pointing to a Class reference, the second to a Name and Type descriptor. (big-endian)
+
+
+11
+4 bytes
+Interface method reference: two indexes within the constant pool, the first pointing to a Class reference, the second to a Name and Type descriptor. (big-endian)
+
+
+12
+4 bytes
+Name and type descriptor: two indexes to UTF-8 strings within the constant pool, the first representing a name (identifier) and the second a specially encoded type descriptor.
+
+
+15
+3 bytes
+Method handle: this structure is used to represent a method handle and consists of one byte of type descriptor, followed by an index within the constant pool.[3]
+
+
+16
+2 bytes
+Method type: this structure is used to represent a method type, and consists of an index within the constant pool.[3]
+
+
+18
+4 bytes
+InvokeDynamic: this is used by an invokedynamic instruction to specify a bootstrap method, the dynamic invocation name, the argument and return types of the call, and optionally, a sequence of additional constants called static arguments to the bootstrap method.[3]
+
+
+There are only two integral constant types, integer and long. Other integral types appearing in the high-level language, such as boolean, byte, and short must be represented as an integer constant.
+Class names in Java, when fully qualified, are traditionally dot-separated, such as "java.lang.Object". However within the low-level Class reference constants, an internal form appears which uses slashes instead, such as "java/lang/Object".
+The Unicode strings, despite the moniker "UTF-8 string", are not actually encoded according to the Unicode standard, although it is similar. There are two differences (see UTF-8 for a complete discussion). The first is that the codepoint U+0000 is encoded as the two-byte sequence C0 80 (in hex) instead of the standard single-byte encoding 00. The second difference is that supplementary characters (those outside the BMP at U+10000 and above) are encoded using a surrogate-pair construction similar to UTF-16 rather than being directly encoded using UTF-8. In this case each of the two surrogates is encoded separately in UTF-8. For example U+1D11E is encoded as the 6-byte sequence ED A0 B4 ED B4 9E, rather than the correct 4-byte UTF-8 encoding of F0 9D 84 9E.
+See also[edit]
+
+
+
+
+Java portal
+
+
+
+
+Java bytecode
+
+References[edit]
+
+
+^ JSR 202 Java Class File Specification Update
+^ James Gosling private communication to Bill Bumgarner
+^ a b c d http://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html#jvms-4.4
+
+
+Further reading[edit]
+
+Tim Lindholm, Frank Yellin (1999). The Java Virtual Machine Specification (Second ed.). Prentice Hall. ISBN&#160;0-201-43294-3. Retrieved 2008-10-13.&#160; The official defining document of the Java Virtual Machine, which includes the class file format. Both the first and second editions of the book are freely available online for viewing and/or download.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Java
+
+
+
+
+
+
+Java platforms
+
+
+
+Java language
+JVM
+Micro Edition
+Standard Edition
+Enterprise Edition
+Java Card
+Android SDK
+
+
+
+
+
+
+
+
+
+
+
+Oracle technologies
+
+
+
+Squawk
+Java Development Kit
+OpenJDK
+Java virtual machine
+JavaFX
+Maxine VM
+
+
+
+
+
+
+
+
+Platform technologies
+
+
+
+Applets
+Servlets
+MIDlets
+JSP
+Web Start (JNLP)
+
+
+
+
+
+
+
+
+Major third-party technologies
+
+
+
+Eclipse
+GNU Classpath
+GWT
+Harmony
+Hibernate
+IcedTea
+Jazelle
+Spring
+Struts
+TopLink
+WildFly
+
+
+
+
+
+
+
+
+History
+
+
+
+Java version history
+Java Community Process
+Sun Microsystems
+Free Java implementations
+
+
+
+
+
+
+
+
+Major programming languages
+
+
+
+BeanShell
+Clojure
+Groovy
+Oxygene
+Java Tcl
+JRuby
+Jython
+Processing
+Rhino
+Scala
+more…
+
+
+
+
+
+
+
+
+Java conferences
+
+
+
+JavaOne
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Java_class_file&amp;oldid=674647218"					
+				Categories: Java platformComputer file formats				
+							
+		
+		
+			

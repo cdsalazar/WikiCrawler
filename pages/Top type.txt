@@ -1,0 +1,356 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Top type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+It has been suggested that Singly rooted hierarchy be merged into this article. (Discuss) Proposed since April 2012.
+
+
+The top type in the type theory of mathematics, logic, and computer science, commonly abbreviated as top or by the down tack symbol (⊤), is the universal type, sometimes called the universal supertype as all other types in any given type system are subtypes of top. In most cases it is the type which contains every possible object in the type system of interest. It is in contrast with the bottom type, or the universal subtype, which every other type is supertype of and in most cases it is the type that contains no members at all.
+
+
+
+Contents
+
+
+1 Support in programming languages
+
+1.1 Other languages
+
+
+2 In logic
+3 Notes
+4 References
+5 External links
+
+
+
+Support in programming languages[edit]
+Several typed programming languages provide explicit support for the top type.
+Note that in statically-typed languages, there are two different, often confused, concepts when discussing the top type.
+
+A "universal base class" or other item at the top of a runtime class hierarchy (often relevant in object-oriented programming) or type hierarchy; it is often possible to create objects with this actual (runtime) type, or it could be found when one examines the type hierarchy programmatically, in languages that support it
+A (compile-time) static type in the code whose variables can be assigned any value (or a subset thereof, like any object pointer value), similar to dynamic typing
+
+The first concept often implies the second, i.e. if a universal base class exists, then a variable that can point to an object of this class can also point to an object of any class. However, several languages have types in the second regard above (e.g. void * in C++, id in Objective-C, interface {} in Go), static types whose variables can accept any object value, but which do not reflect real runtime types that an object can have in the type system, so are not top types in the first regard.
+In dynamically-typed languages, the second concept does not exist (any value can be assigned to any variable anyway), so only the first (class hierarchy) is discussed. In this article, we try to stick to the first concept when discussing top types, but also mention the second concept in languages where it is significant.
+
+Most object-oriented programming languages include a universal base class:
+
+Name
+Languages
+
+
+Object
+Smalltalk, JavaScript, Ruby (pre-1.9.2),[1] and some others.
+
+
+java.lang.Object
+Java. Frequently written without the package prefix, as Object. Note also that it is not a supertype of the primitive types; although, since Java 1.5, autoboxing allows implicit or explicit type conversion of a primitive value to Object, e.g. ((Object)42).toString()
+
+
+System.Object
+C#, Visual Basic .NET and other .NET Framework languages
+
+
+object
+Python since the type/class unification in Version 2.2 (new-style objects only; old-style objects in 2.x do not have this as a base class)
+
+
+TObject
+Object Pascal
+
+
+t
+Lisp, many dialects such as Common Lisp
+
+
+Any
+Scala[2]
+
+
+GENERAL
+Eiffel
+
+
+UNIVERSAL
+Perl 5
+
+
+Variant
+Visual Basic up to version 6
+
+
+interface{}
+Go
+
+
+BasicObject
+Ruby (version 1.9.2 and beyond)
+
+
+The following object-oriented languages do not have a universal base class:
+
+C++. The "pointer to void" type can accept any non-function pointer, even though the void type itself is not the universal type but the bottom type.
+Objective-C. It is possible to create a new base class by not specifying a parent class for a class, although this is highly unusual. Object is conventionally used as the base class in the original Objective-C runtimes. In the OpenStep and Cocoa Objective-C libraries, NSObject is conventionally the universal base class. The top type for pointers to objects is id.
+Swift. It is possible to create a new base class by not specifying a parent class for a class. The protocol Any can accept any type.
+PHP.
+
+Other languages[edit]
+Languages which fall outside of the object-oriented classification typically have no universal supertype (or support subtype polymorphism at all).
+While Haskell purposefully lacks subtyping, it has several other forms of polymorphism including parametric polymorphism. The most generic type class parameter is forall a. a. Similarly in Rust, &lt;T:&#160;?Sized&gt; is the most generic parameter (&lt;T&gt; is not, as it implies the Sized trait).
+The top type is used as a generic type, particularly in languages without parametric polymorphism. For example, before the introduction of generics in Java 5, collection classes in the Java library (excluding Java arrays) held references of type Object; in this way any non-intrinsic type could be inserted into a collection. The top type is also frequently used to hold objects of unknown type.
+In languages with a structural type system, the top type is the empty structure. For example, objects in OCaml are structurally typed; the empty object type (the type of objects with no methods), "&lt; &gt;", is the top type of object types. Any OCaml object can be explicitly upcasted to this type, although the result would be of no use. Go also uses structural typing; and all types implement the empty interface: interface {}.
+The top type may also be seen as the implied type of non-statically typed languages. Languages with runtime typing often provide downcasting (or type refinement) to allow the programmer to discover a more specific type for an object at run-time. Note that downcasting from void * in C++ cannot be done in a "safe" manner, where failed downcasts are detected by the language runtime.
+In logic[edit]
+The notion of "top" is also found in propositional calculus, corresponding to a formula which is true in every possible interpretation. It has a similar meaning in predicate calculus. In Description Logic top is used to refer to the set of all concepts. This is intuitively like the use of the top type in programming languages. For example, in the Web Ontology Language (OWL), which supports various Description Logics, top corresponds to the class owl:Thing, where all classes are subclasses of owl:Thing. (the bottom type or empty set corresponds to owl:Nothing).
+Notes[edit]
+
+
+^ "Class: BasicObject (Ruby 1.9.2)". Retrieved April 7, 2014.&#160;
+^ "An Overview of the Scala Programming Language" (PDF). 2006. Retrieved April 7, 2014.&#160;
+
+
+References[edit]
+
+Pierce, Benjamin C. (2002). Types and Programming Languages. MIT Press. ISBN&#160;0-262-16209-1.&#160;
+
+External links[edit]
+
+c2.com: Top type
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Top_type&amp;oldid=669338638"					
+				Categories: Data typesType theoryHidden categories: Articles to be merged from April 2012All articles to be merged				
+							
+		
+		
+			

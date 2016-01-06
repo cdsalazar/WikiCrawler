@@ -1,0 +1,65 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Class variable
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Not to be confused with Static variable.
+In object-oriented programming with classes, a class variable is a variable defined in a class of which a single copy exists, regardless of how many instances of the class exist.[1][2][3][4]
+A class variable is not an instance variable. It is a special type of class attribute (or class property, field, or data member). The same dichotomy between instance and class members applies to methods ("member functions") as well; a class may have both instance methods and class methods.
+Static member variables and static member functions[edit]
+In some languages, class variables and class methods are either statically resolved, not via dynamic dispatch, or their memory statically allocated at compile time (once for the entire class, as static variables), not dynamically allocated at run time (at every instantiation of an object). In other cases, however, either or both of these are dynamic. For example, if classes can be dynamically defined (at run time), class variables of these classes are allocated dynamically when the class is defined, and in some languages class methods are also dispatched dynamically.
+Thus in some languages, static member variable or static member function are used synonymously with or in place of "class variable" or "class function", but these are not synonymous across languages. These terms are commonly used in Java, C#, and C++, where class variables and class methods are declared with the static keyword, and referred to as static member variables or static member functions.
+Example[edit]
+
+
+struct Request {
+
+    static int count;
+    int number;
+
+    Request() {
+        number = count; // modifies the instance variable "this-&gt;number"
+        ++count; // modifies the class variable "Request::count"
+    }
+
+};
+
+int Request::count = 0;
+
+In this C++ example, the class variable Request::count is incremented on each call to the constructor, so that Request::count always holds the number of Requests that have been constructed, and each new Request object is given a number in sequential order. Since count is a class variable, there is only one object Request::count; in contrast, each Request object contains its own distinct number field.
+Notes[edit]
+
+
+^ "The Java Tutorial, Variables". Retrieved 2010-10-21.&#160;
+^ "The Java Tutorial, Understanding Instance and Class Members". Retrieved 2010-10-21.&#160;
+^ "The Python Language Reference, Compound Statements". Retrieved 2010-10-21.&#160;
+^ "Objective-C Runtime Reference". Retrieved 2010-10-21.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Class_variable&amp;oldid=685831689"					
+				Categories: Object-oriented programmingVariable (computer science)				
+							
+		
+		
+			

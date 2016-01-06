@@ -1,0 +1,461 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Backslash
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+\
+
+
+
+Backslash
+
+
+
+
+
+
+
+&#160;⧵
+&#160;⧹
+&#160;＼
+
+
+Reverse solidus operator
+Big reverse solidus
+Fullwidth reverse solidus
+
+
+
+
+
+
+
+
+
+Punctuation
+
+
+apostrophe
+’&#160;&#160;'
+
+
+brackets
+[&#160;]&#160;&#160;(&#160;)&#160;&#160;{&#160;}&#160;&#160;⟨&#160;⟩
+
+
+colon
+:
+
+
+comma
+,&#160;&#160;،&#160;&#160;、
+
+
+dash
+‒&#160; –&#160; —&#160; ―
+
+
+ellipsis
+…&#160;&#160;...&#160;&#160;. . .
+
+
+exclamation mark
+&#160;!
+
+
+full stop, period
+.
+
+
+hyphen
+‐
+
+
+hyphen-minus
+-
+
+
+question mark
+&#160;?
+
+
+quotation marks
+‘&#160;’&#160;&#160;“&#160;”&#160;&#160;'&#160;'&#160;&#160;"&#160;"
+
+
+semicolon
+;
+
+
+slash, stroke, solidus
+/&#160;&#160;⁄
+
+
+
+
+
+
+
+
+Word dividers
+
+
+interpunct
+·
+
+
+space
+&#160;&#160;  &#160;  
+
+
+
+
+
+
+
+
+General typography
+
+
+ampersand
+&amp;
+
+
+asterisk
+*
+
+
+at sign
+@
+
+
+backslash
+\
+
+
+bullet
+•
+
+
+caret
+^
+
+
+dagger
+† ‡
+
+
+degree
+°
+
+
+ditto mark
+″
+
+
+inverted exclamation mark
+¡
+
+
+inverted question mark
+¿
+
+
+number&#160;sign, pound, hash, octothorpe
+#
+
+
+numero sign
+№
+
+
+obelus
+÷
+
+
+multiplication sign
+×
+
+
+ordinal indicator
+º ª
+
+
+percent, per mil
+&#160;% ‰
+
+
+plus and minus
++ −
+
+
+equals sign
+=
+
+
+basis point
+‱
+
+
+pilcrow
+¶
+
+
+prime
+′&#160;&#160;″&#160;&#160;‴
+
+
+section sign
+§
+
+
+tilde
+~
+
+
+underscore, understrike
+_
+
+
+vertical bar, pipe, broken&#160;bar
+|&#160;&#160;‖&#160;&#160;¦
+
+
+
+
+
+
+
+
+Intellectual property
+
+
+copyright
+©
+
+
+sound-recording copyright
+℗
+
+
+registered trademark
+®
+
+
+service mark
+℠
+
+
+trademark
+™
+
+
+
+
+
+
+
+
+Currency
+
+
+generic currency symbol
+¤
+
+
+currency symbols
+
+
+₳ ​ ฿ ​ ₵ ​¢ ​₡ ​₢ ​ $ ​₫ ​₯ ​ ₠ ​€ ​ ƒ ​₣ ​ ₲ ​ ₴ ​ ₭ ​ ₺ ​ ℳ ​₥ ​ ₦ ​ ₧ ​₱ ​₰ ​£ ​ ៛ ​₽ ​₹ ₨ ​ ₪ ​ ৳ ​₸ ​₮ ​ ₩ ​ ¥
+
+
+
+
+
+
+
+Uncommon typography
+
+
+asterism
+⁂
+
+
+hedera
+❧
+
+
+index, fist
+☞
+
+
+interrobang
+‽
+
+
+irony punctuation
+⸮
+
+
+lozenge
+◊
+
+
+reference mark
+※
+
+
+tie
+⁀
+
+
+
+
+
+Related
+
+
+
+
+
+
+
+
+Diacritics
+Logic symbols
+
+
+
+Whitespace characters
+
+
+
+
+
+In other scripts
+
+
+
+
+
+Chinese
+Hebrew
+Japanese
+Korean
+
+
+
+
+
+
+
+ Category
+ Portal
+
+
+ Book
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+The backslash (\) is a typographical mark (glyph) used mainly in computing and is the mirror image of the common slash (/). It is sometimes called a hack, whack, escape (from C/UNIX), reverse slash, slosh, backslant, downhill, backwhack, and in rare occasions, bash, reverse slant, and reversed virgule.[1][2] In Unicode, it is encoded at U+005C \ reverse solidus (HTML&#160;&amp;#92;).
+
+
+
+Contents
+
+
+1 History
+2 Usage
+3 Confusion in Usage
+4 References
+5 External links
+
+
+
+History[edit]
+Bob Bemer introduced the "\" character into ASCII[3] on September 18, 1961,[4] as the result of character frequency studies. In particular the \ was introduced so that the ALGOL boolean operators ∧ (AND) and ∨ (OR) could be composed in ASCII as "/\" and "\/" respectively.[4][5] Both these operators were included in early versions of the C programming language supplied with Unix V6, Unix V7 and more currently BSD 2.11.
+Usage[edit]
+In many programming languages such as C, Perl, and PHP and in Unix scripting languages, the backslash is an escape character, used to indicate that the character following it should be treated specially (if it would otherwise be treated normally), or normally (if it would otherwise be treated specially). For instance inside a C quoted string the sequence \n produces a newline byte instead of an 'n', and the sequence \" produces an actual double quote rather than the special meaning of the double quote ending the string. In various regular expression languages it is used this way, changing subsequent literal characters into metacharacters and vice versa. Following this usage, the double backslash sequence \\ of course produces a normal literal backslash.
+Outside strings, the only common use in languages is at the end of a line to indicate that the trailing newline character should be ignored, so that the following line is treated as if it were part of the current line. In this context it may be called a "continuation".[6]
+The backslash is used in the TeX typesetting system and in RTF files to begin markup tags. In Haskell, the backslash is used both to introduce special characters and to introduce lambda functions (since it is a reasonable approximation in ASCII of the Greek letter lambda, λ).[7]
+MS-DOS 2.0, released 1983, copied the hierarchical file system from Unix and thus used the (forward) slash, but (possibly on the insistence of IBM) added the backslash to allow paths to be typed at the command line interpreter's prompt while retaining compatibility with MS-DOS 1.0 and CP/M where the slash was the command-line option indicator (typing "DIR/W" gave the "wide" option to the "DIR" command, so some other method was needed if you actually wanted to run a program called W inside a directory called DIR).[8] Except for COMMAND.COM, all other parts of the operating system accept both characters in a path, but the Microsoft convention remains to use a backslash, and APIs that return paths use backslashes.[9] This holds true for MS-DOS and PC DOS, but also all other DOS operating systems like DR-DOS, PTS-DOS, RxDOS or FreeDOS as well as to Concurrent DOS, Multiuser DOS, FlexOS, 4680 OS, 4690 OS, OS/2 and Windows. In some versions of DOS, the option character can be changed from / to - via SWITCHAR, which allows COMMAND.COM to preserve / in the command name.
+The Microsoft Windows family of operating systems inherited the MS-DOS behavior and so still support either character - but individual Windows programs and sub-systems may, wrongly, only accept the backslash as a path delimiter, or may misinterpret a forward slash if it is used as such. Some programs will only accept forward slashes if the path is placed in double-quotes.[10] The failure of Microsoft's security features to recognize unexpected-direction slashes in local and Internet paths, while other parts of the operating system still act upon them, has led to some serious lapses in security. Resources that should not be available have been accessed with paths using particular mixes, such as http://example.net/secure\private.aspx.[11][12]
+In mathematics, a backslash-like symbol is used for the set difference.[13]
+In some dialects of the BASIC programming language, the backslash is used as an operator symbol to indicate integer division.[14]
+In MATLAB and GNU Octave the backslash is used for left matrix divide, while the slash is for right matrix divide.[15]
+In PHP version 5.3 and higher, the backslash is used to indicate a namespace.[16]
+In USFM,[17] the backslash is used to mark format features for editing Bible translations.
+In the Iraqw language, the backslash is used for the voiced pharyngeal fricative.
+Confusion in Usage[edit]
+In the Japanese encodings ISO 646 (a 7-bit code based on ASCII), JIS X 0201 (an 8-bit code), and Shift JIS (a multi-byte encoding which is 8-bit for ASCII), the code point 0x5C that would be used for backslash in ASCII is instead rendered as a yen mark (¥), while in Korean encoding, it is drawn as a won currency symbol (₩). Computer programs still treat the code as a backslash in these environments, causing confusion, especially in MS-DOS filenames.[18] Due to extensive use of the backslash code point to represent the yen mark, even today some Unicode fonts like MS Mincho render the backslash character as a ¥, so the Unicode characters 00A5 (¥) and 005C (\) look identical when these fonts are selected. Several other ISO 646 versions also replace backslash with characters like Ö (German, Swedish), Ø (Danish, Norwegian), ç (French) and Ñ (Spanish), leading to similar problems. Since the character was originally not available in all character sets and keyboard layouts, ANSI C can transcribe it in form of the trigraph ??/ which, outside string literals, is equivalent to the \ character. RFC 1345 recommends to transcribe the character as digraph //, if not available.[19][20]
+References[edit]
+
+
+^ Macquarie Dictionary (3rd edition)
+^ Raymond, Eric S. "ASCII".&#160;
+^ "Mini-Biography of Bob Bemer". Thocp.net. Retrieved 2013-06-16.&#160;
+^ a b "How ASCII Got Its Backslash", Bob Bemer
+^ Bob Bemer (2002-07-07). "The Great Curly Brace Trace Chase". Computer History Vignettes. Bob Bemer. Retrieved 2009-10-11.&#160;
+^ "GNU 'make' manual". Gnu.org. Retrieved 2013-06-16.&#160;
+^ O'Sullivan, Stewart, and Goerzen, Real World Haskell, ch. 4: anonymous (lambda) functions, p.99
+^ "Why is the DOS path character "\"?". Blogs.msdn.com. 2005-06-24. Retrieved 2013-06-16.&#160;
+^ "Path.GetFullPath Method". .NET Framework Class Library. Microsoft. Archived from the original on 21 December 2008. Retrieved 2009-01-02.&#160;
+^ "When did Windows start accepting forward slash as a path separator?". Bytes.com. Archived from the original on 6 February 2009. Retrieved 2009-01-02.&#160;
+^ Kaplan, Simone (2004). "Microsoft Probes Flaw in ASP.NET". DevSource, sponsored by Microsoft. Ziff Davis Enterprise Holdings Inc. Retrieved 2009-06-14.&#160;
+^ Burnett, Mark (2004). "Security Holes That Run Deep". SecurityFocus. Retrieved 2009-06-14.&#160;
+^ "Quantities and units -- Part 2: Mathematical signs and symbols to be used in the natural sciences and technology". ISO 80000-2:2009. International Organization for Standardization.&#160;
+^ "Arithmetic Operators in Visual Basic". Visual Basic Language Features: Operators and Expressions. MSDN. Retrieved 7 October 2012.&#160;
+^ Eaton, John W.; David Bateman; Søren Hauberg (February 2011). "GNU Octave: A high-level interactive language for numerical computations" (PDF). Free Software Foundation. p.&#160;145. Retrieved 7 October 2012.&#160;
+^ "Namespaces overview".&#160;
+^ "USFM - Unified Standard Format Markers". paratext.org.&#160;
+^ "When is a backslash not a backslash?". Blogs.msdn.com. Retrieved 2013-06-16.&#160;
+^ "RFC 1345". Tools.ietf.org. 1991-12-26. Retrieved 2013-06-16.&#160;
+^ "World ENews 1345". Tools.ietf.org. 1991-12-26. Retrieved 2013-06-16.&#160;
+
+
+External links[edit]
+
+Bob Bemer. "How ASCII got its backslash". Archived from the original on 2013-07-19.&#160;
+Backslash Definition by The Linux Information Project (LINFO)
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Backslash&amp;oldid=689235817"					
+				Categories: PunctuationTypographical symbols				
+							
+		
+		
+			

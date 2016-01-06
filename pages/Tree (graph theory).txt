@@ -1,0 +1,223 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Tree (graph theory)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+It has been suggested that Arborescence (graph theory) be merged into this article. (Discuss) Proposed since July 2014.
+
+
+
+
+Trees
+
+
+
+A labeled tree with 6 vertices and 5 edges
+
+
+
+Vertices
+v
+
+
+Edges
+v&#160;−&#160;1
+
+
+Chromatic number
+2 if v &gt; 1
+
+
+In mathematics, and more specifically in graph theory, a tree is an undirected graph in which any two vertices are connected by exactly one path. In other words, any connected graph without simple cycles is a tree. A forest is a disjoint union of trees.
+The various kinds of data structures referred to as trees in computer science have underlying graphs that are trees in graph theory, although such data structures are generally rooted trees, thus in fact being directed graphs, and may also have additional ordering of branches.
+Rooted trees in their directed graph form may be called directed rooted trees.[1] Other terms for this include[2] arborescence,[3] out-arborescence,[4] out-tree,[3][5] and even branching.[3]
+The term "tree" was coined in 1857 by the British mathematician Arthur Cayley.[6]
+
+
+
+Contents
+
+
+1 Definitions
+
+1.1 Plane tree
+
+
+2 Example
+3 Facts
+4 Enumeration
+
+4.1 Labeled trees
+4.2 Unlabeled trees
+
+
+5 Types of trees
+6 See also
+7 Notes
+8 References
+9 Further reading
+
+
+
+Definitions[edit]
+A tree is an undirected simple graph G that satisfies any of the following equivalent conditions:
+
+G is connected and has no cycles.
+G has no cycles, and a simple cycle is formed if any edge is added to G.
+G is connected, but is not connected if any single edge is removed from G.
+G is connected and the 3-vertex complete graph  is not a minor of G.
+Any two vertices in G can be connected by a unique simple path.
+
+If G has finitely many vertices, say n of them, then the above statements are also equivalent to any of the following conditions:
+
+G is connected and has n − 1 edges.
+G has no simple cycles and has n − 1 edges.
+
+As elsewhere in graph theory, the order-zero graph (graph with no vertices) is generally excluded from consideration: while it is vacuously connected as a graph (any two vertices can be connected by a path), it is not 0-connected (or even (−1)-connected) in algebraic topology, unlike non-empty trees, and violates the "one more node than edges" relation.
+A leaf is a vertex of degree 1. An internal vertex is a vertex of degree at least 2.
+An irreducible (or series-reduced) tree is a tree in which there is no vertex of degree 2.
+ A forest is an undirected graph, all of whose connected components are trees; in other words, the graph consists of a disjoint union of trees. Equivalently, a forest is an undirected cycle-free graph. As special cases, an empty graph, a single tree, and the discrete graph on a set of vertices (that is, the graph with these vertices that has no edges), all are examples of forests.
+The term hedge sometimes refers to an ordered sequence of trees.
+A polytree[7] (also known as oriented tree[8][9] or singly connected network[10]) is a directed acyclic graph (DAG) whose underlying undirected graph is a tree. In other words, if we replace its directed arcs with undirected edges, we obtain an undirected graph that is both connected and acyclic.
+A directed tree is a directed graph which would be a tree if the directions on the edges were ignored, i.e. a polytree. Some authors restrict the phrase to the case where the edges are all directed towards a particular vertex, or all directed away from a particular vertex (see arborescence).
+ A tree is called a rooted tree if one vertex has been designated the root, in which case the edges have a natural orientation, towards or away from the root. The tree-order is the partial ordering on the vertices of a tree with u ≤ v if and only if the unique path from the root to v passes through u. A rooted tree which is a subgraph of some graph G is a normal tree if the ends of every edge in G are comparable in this tree-order whenever those ends are vertices of the tree (Diestel 2005, p.&#160;15). Rooted trees, often with additional structure such as ordering of the neighbors at each vertex, are a key data structure in computer science; see tree data structure. In a context where trees are supposed to have a root, a tree without any designated root is called a free tree.
+In a rooted tree, the parent of a vertex is the vertex connected to it on the path to the root; every vertex except the root has a unique parent. A child of a vertex v is a vertex of which v is the parent. A descendent of any vertex v is any vertex which is either the child of v or is (recursively) the descendent of any of the children of v. A sibling to a vertex v is any other vertex on the tree which has the same parent as v.
+
+A labeled tree is a tree in which each vertex is given a unique label. The vertices of a labeled tree on n vertices are typically given the labels 1, 2, ..., n. A recursive tree is a labeled rooted tree where the vertex labels respect the tree order (i.e., if u &lt; v for two vertices u and v, then the label of u is smaller than the label of v).
+A k-ary tree is a rooted tree for which each vertex has at most k children.[11] 2-ary trees are sometimes called binary trees, while 3-ary trees are sometimes called ternary trees.
+A terminal vertex of a tree is a vertex of degree 1. In a rooted tree, the leaves are all terminal vertices; additionally, the root, if not a leaf itself, is a terminal vertex if it has precisely one child.
+Plane tree[edit]
+An ordered tree or plane tree is a rooted tree for which an ordering is specified for the children of each vertex. This is called a "plane tree" because an ordering of the children is equivalent to an embedding of the tree in the plane, with the root at the top and the children of each vertex lower than that vertex. Given an embedding of a rooted tree in the plane, if one fixes a direction of children, say left to right, then an embedding gives an ordering of the children. Conversely, given an ordered tree, and conventionally drawing the root at the top, then the child nodes in an ordered tree can be drawn left-to-right, yielding an essentially unique planar embedding .
+A leaf in a rooted tree is a vertex of degree 1 that is not the root. A terminal vertex of a tree is a vertex of degree 1. In a rooted tree, the leaves are all terminal vertices; additionally, the root, if not a leaf itself, is a terminal vertex if it has precisely one child.
+Example[edit]
+The example tree shown above has 6 vertices and 6 − 1 = 5 edges. The unique simple path connecting the vertices 2 and 6 is 2-4-5-6.
+Facts[edit]
+
+Every tree is a bipartite graph and a median graph. Every tree with only countably many vertices is a planar graph.
+
+
+Every connected graph G admits a spanning tree, which is a tree that contains every vertex of G and whose edges are edges of G.
+
+
+Every connected graph with only countably many vertices admits a normal spanning tree (Diestel 2005, Prop. 8.2.4).
+
+
+There exist connected graphs with uncountably many vertices which do not admit a normal spanning tree (Diestel 2005, Prop. 8.5.2).
+
+
+Every finite tree with n vertices, with n &gt; 1, has at least two terminal vertices (leaves). This minimal number of terminal vertices is characteristic of path graphs; the maximal number, n − 1, is attained by star graphs.
+
+
+For any three vertices in a tree, the three paths between them have exactly one vertex in common.
+
+Enumeration[edit]
+Labeled trees[edit]
+Cayley's formula states that there are nn−2 trees on n labeled vertices. It can be proved by first showing that the number of trees with vertices 1,2,...,n, of degrees d1,d2,...,dn respectively, is the multinomial coefficient
+
+
+
+An alternative proof uses Prüfer sequences.
+Cayley's formula is the special case of complete graphs in a more general problem of counting spanning trees in an undirected graph, which is addressed by the matrix tree theorem. The similar problem of counting all the subtrees regardless of size has been shown to be #P-complete in the general case (Jerrum (1994)).
+Unlabeled trees[edit]
+Counting the number of unlabeled free trees is a harder problem. No closed formula for the number t(n) of trees with n vertices up to graph isomorphism is known. The first few values of t(n) are:
+
+1, 1, 1, 1, 2, 3, 6, 11, 23, 47, 106, 235, 551, 1301, 3159, ... (sequence A000055 in OEIS).
+
+Otter (1948) proved the asymptotic estimate:
+
+
+
+with the values C and α known to be approximately 0.534949606... and 2.95576528565... (sequence A051491 in OEIS), respectively. (Here,  means that .) This is a consequence of his asymptotic estimate for the number  of unlabeled rooted trees with n vertices:
+
+
+
+with D around 0.43992401257... and the same α as above (cf. Knuth (1997), Chap. 2.3.4.4 and Flajolet &amp; Sedgewick (2009), Chap. VII.5, p. 475).
+The first few values of r(n) are:[12]
+
+1, 1, 2, 4, 9, 20, 48, 115, 286, 719, 1842, 4766, 12486, 32973, ....
+
+See also: Combinatorial species § Unlabelled structures
+Types of trees[edit]
+A star graph is a tree which consists of a single internal vertex (and n&#160;−&#160;1 leaves). In other words, a star graph of order n is a tree of order n with as many leaves as possible. Its diameter is at most 2.
+A tree with two leaves (the fewest possible) is a path graph; a forest in which all components are isolated nodes and path graphs is called a linear forest. If all vertices in a tree are within distance one of a central path subgraph, then the tree is a caterpillar tree. If all vertices are within distance two of a central path subgraph, then the tree is a lobster.
+See also[edit]
+
+Decision tree
+Pseudoforest
+Tree structure
+Tree data structure
+Unrooted binary tree
+
+Notes[edit]
+
+
+^ Stanley Gill Williamson (1985). Combinatorics for Computer Science. Courier Dover Publications. p.&#160;288. ISBN&#160;978-0-486-42076-9.&#160;
+^ In particular, some authors consider that directed rooted trees are not descriptive enough as to the direction of the arcs, for instance Mehran Mesbahi; Magnus Egerstedt (2010). Graph Theoretic Methods in Multiagent Networks. Princeton University Press. p.&#160;38. ISBN&#160;1-4008-3535-6.&#160;
+^ a b c Jonathan L. Gross; Jay Yellen; Ping Zhang (2013). Handbook of Graph Theory, Second Edition. CRC Press. p.&#160;116. ISBN&#160;978-1-4398-8018-0.&#160;
+^ Ding-Zhu Du; Ker-I Ko; Xiaodong Hu (2011). Design and Analysis of Approximation Algorithms. Springer Science &amp; Business Media. p.&#160;108. ISBN&#160;978-1-4614-1701-9.&#160;
+^ Per Hage and Frank Harary (1996). Island Networks: Communication, Kinship, and Classification Structures in Oceania. Cambridge University Press. p.&#160;43. ISBN&#160;978-0-521-55232-5.&#160;
+^ Cayley (1857) "On the theory of the analytical forms called trees," Philosophical Magazine, 4th series, 13&#160;: 172–176.
+However it should be mentioned that in 1847, K.G.C. von Staudt, in his book Geometrie der Lage (Nürnberg, (Germany): Bauer und Raspe, 1847), presented a proof of Euler's polyhedron theorem which relies on trees on pages 20–21. Also in 1847, the German physicist Gustav Kirchhoff investigated electrical circuits and found a relation between the number (n) of wires/resistors (branches), the number (m) of junctions (vertices), and the number (μ) of loops (faces) in the circuit. He proved the relation via an argument relying on trees. See: Kirchhoff, G. R. (1847) "Ueber die Auflösung der Gleichungen, auf welche man bei der Untersuchung der linearen Vertheilung galvanischer Ströme geführt wird" (On the solution of equations to which one is led by the investigation of the linear distribution of galvanic currents), Annalen der Physik und Chemie, 72 (12)&#160;: 497–508.
+^ See Dasgupta (1999).
+^ See Harary &amp; Sumner (1980).
+^ See Simion (1991).
+^ See Kim &amp; Pearl (1983).
+^ See Black, Paul E. (4 May 2007). "k-ary tree". U.S. National Institute of Standards and Technology. Retrieved 8 February 2015.&#160;
+^ See Li (1996).
+
+
+References[edit]
+
+Dasgupta, Sanjoy (1999), "Learning polytrees", in Proc. 15th Conference on Uncertainty in Artificial Intelligence (UAI 1999), Stockholm, Sweden, July–August 1999 (PDF), pp.&#160;134–141&#160;.
+Harary, Frank; Sumner, David (1980), "The dichromatic number of an oriented tree", Journal of Combinatorics, Information &amp; System Sciences 5 (3): 184–187, MR&#160;603363&#160;.
+Kim, Jin H.; Pearl, Judea (1983), "A computational model for causal and diagnostic reasoning in inference engines", in Proc. 8th International Joint Conference on Artificial Intelligence (IJCAI 1983), Karlsruhe, Germany, August 1983 (PDF), pp.&#160;190–193&#160;.
+Li, Gang (1996), "Generation of Rooted Trees and Free Trees", M.S. Thesis, Dept. of Computer Science, University of Victoria, BC, Canada (PDF), p.&#160;9&#160;.
+Simion, Rodica (1991), "Trees with 1-factors and oriented trees", Discrete Mathematics 88 (1): 93–104, doi:10.1016/0012-365X(91)90061-6, MR&#160;1099270&#160;.
+
+Further reading[edit]
+
+
+
+Wikimedia Commons has media related to Tree (graph theory).
+
+
+
+Diestel, Reinhard (2005), Graph Theory (3rd ed.), Berlin, New York: Springer-Verlag, ISBN&#160;978-3-540-26183-4&#160;.
+Flajolet, Philippe; Sedgewick, Robert (2009), Analytic Combinatorics, Cambridge University Press, ISBN&#160;978-0-521-89806-5&#160;
+Hazewinkel, Michiel, ed. (2001), "Tree", Encyclopedia of Mathematics, Springer, ISBN&#160;978-1-55608-010-4&#160;
+Knuth, Donald E. (November 14, 1997), The Art of Computer Programming Volume 1: Fundamental Algorithms (3rd ed.), Addison-Wesley Professional&#160;
+Jerrum, Mark (1994), "Counting trees in a graph is #P-complete", Information Processing Letters 51 (3): 111–116, doi:10.1016/0020-0190(94)00085-9, ISSN&#160;0020-0190&#160;.
+Otter, Richard (1948), "The Number of Trees", Annals of Mathematics. Second Series 49 (3): 583–599, doi:10.2307/1969046, JSTOR&#160;1969046&#160;.
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Tree_(graph_theory)&amp;oldid=686191648"					
+				Categories: Trees (graph theory)Hidden categories: Articles to be merged from July 2014All articles to be mergedCommons category with local link different than on Wikidata				
+							
+		
+		
+			

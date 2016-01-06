@@ -1,0 +1,442 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Thread-local storage
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2012)
+
+
+Thread-local storage (TLS) is a computer programming method that uses static or global memory local to a thread.
+TLS is used in some places where ordinary, single-threaded programs would use global variables but where this would be inappropriate in multithreaded cases. An example of such situations is where functions use a global variable to set an error condition (for example the global variable errno used by many functions of the C library). If errno were a global variable, a call of a system function on one thread may overwrite the value previously set by a call of a system function on a different thread, possibly before following code on that different thread could check for the error condition. The solution is to have errno be a variable that looks like it is global, but in fact exists once per thread -- i.e., it lives in thread-local storage. A second use case would be multiple threads accumulating information into a global variable. To avoid a race condition, every access to this global variable would have to be protected by a mutex. Alternatively, each thread might accumulate into a thread-local variable (that, by definition, can not be read from or written to from other threads, implying that there can be no race conditions). Threads then only have to synchronise a final accumulation from their own thread-local variable into a single, truly global variable.
+Many systems impose restrictions on the size of the thread-local memory block, in fact often rather tight limits. On the other hand, if a system can provide at least a memory address (pointer) sized variable thread-local, then this allows the use of arbitrarily sized memory blocks in a thread-local manner, by allocating such a memory block dynamically and storing the memory address of that block in the thread-local variable.
+
+
+
+Contents
+
+
+1 Windows implementation
+2 Pthreads implementation
+3 Language-specific implementation
+
+3.1 C and C++
+3.2 Common Lisp (and maybe other dialects)
+3.3 D
+3.4 Java
+3.5 .NET languages: C# and others
+3.6 Object Pascal
+3.7 Objective-C
+3.8 Perl
+3.9 Python
+3.10 Ruby
+
+
+4 References
+5 External links
+
+
+
+Windows implementation[edit]
+The application programming interface (API) function TlsAlloc can be used to obtain an unused TLS slot index; the TLS slot index will then be considered ‘used’.
+The TlsGetValue and TlsSetValue functions are then used to read and write a memory address to a thread-local variable identified by the TLS slot index. TlsSetValue only affects the variable for the current thread. The TlsFree function can be called to release the TLS slot index.
+There is a Win32 Thread Information Block for each thread. One of the entries in this block is the thread-local storage table for that thread.[1] TlsAlloc returns an index to this table, unique per address space, for each call. Each thread has its own copy of the thread-local storage table. Hence, each thread can independently use TlsSetValue(index) and obtain the specified value via TlsGetValue(index), because these set and look up an entry in the thread's own table.
+Apart from TlsXxx function family, Windows executables can define a section which is mapped to a different page for each thread of the executing process. Unlike TlsXxx values, these pages can contain arbitrary and valid addresses. These addresses, however, are different for each executing thread and therefore should not be passed to asynchronous functions (which may execute in a different thread) or otherwise passed to code which assume that a virtual address is unique within the whole process. TLS sections are managed using memory paging and its size is quantized to a page size (4kB on x86 machines). Such sections may only be defined inside a main executable of a program - DLLs should not contain such sections, because they are not correctly initialized when loading with LoadLibrary.
+Pthreads implementation[edit]
+In the Pthreads API, memory local to a thread is designated with the term Thread-specific data.
+The functions pthread_key_create and pthread_key_delete are used respectively to create and delete a key for thread-specific data. The type of the key is explicitly left opaque and is referred to as pthread_key_t. This key can be seen by all threads. In each thread, the key can be associated with thread-specific data via pthread_setspecific. The data can later be retrieved using pthread_getspecific.
+In addition pthread_key_create can optionally accept a destructor function that will automatically be called at thread exit, if the thread-specific data is not NULL. The destructor receives the value associated with the key as parameter so it can perform cleanup actions (close connections, free memory, etc.). Even when a destructor is specified, the program must still call pthread_key_delete to free the thread-specific data at process level (the destructor only frees the data local to the thread).
+Language-specific implementation[edit]
+Apart from relying on programmers to call the appropriate API functions, it is also possible to extend the programming language to support TLS.
+C and C++[edit]
+In C11, the keyword _Thread_local is used to define thread-local variables. The header &lt;threads.h&gt;, if supported, defines thread_local as a synonym for that keyword. Example usage:
+
+
+#include &lt;threads.h&gt;
+thread_local int foo = 0;
+
+C++11 introduces the thread_local[2] keyword which can be used in the following cases
+
+Namespace level (global) variables
+File static variables
+Function static variables
+Static member variables
+
+Aside from that, various C++ compiler implementations provide specific ways to declare thread-local variables:
+
+Solaris Studio C/C++, IBM XL C/C++,[3] GNU C,[4] Clang[5] and Intel C++ Compiler (Linux systems)[6] use the syntax:
+
+__thread int number;
+
+
+Visual C++,[7] Intel C/C++ (Windows systems),[8] C++Builder, and Digital Mars C++ use the syntax:
+
+__declspec(thread) int number;
+
+
+C++Builder also supports the syntax:
+
+int __thread number;
+
+
+
+On Windows versions before Vista and Server 2008, __declspec(thread) works in DLLs only when those DLLs are bound to the executable, and will not work for those loaded with LoadLibrary() (a protection fault or data corruption may occur).[9]
+Common Lisp (and maybe other dialects)[edit]
+Common Lisp provides a feature called dynamically scoped variables.
+Dynamic variables have a binding which is private to the invocation of a function and all of the children called by that function.
+This abstraction naturally maps to thread-specific storage, and Lisp implementations that provide threads do this. Common Lisp has numerous standard dynamic variables, and so threads cannot be sensibly added to an implementation of the language without these variables having thread-local semantics in dynamic binding.
+For instance the standard variable *print-base* determines the default radix in which integers are printed. If this variable is overridden, then all enclosing code will print integers in an alternate radix:
+
+
+;;; function foo and its children will print
+;; in hexadecimal:
+(let ((*print-base* 16)) (foo))
+
+If functions can execute concurrently on different threads, this binding has to be properly thread-local, otherwise each thread will fight over who controls a global printing radix.
+D[edit]
+In D version 2, all static and global variables are thread-local by default and are declared with syntax similar to "normal" global and static variables in other languages. Global variables must be explicitly requested using the shared keyword:
+
+
+int threadLocal;  // This is a thread-local variable.
+shared int global;  // This is a global variable shared with all threads.
+
+The shared keyword works both as the storage class, and as a type qualifier – shared variables are subject to some restrictions which statically enforce data integrity.[10] To declare a "classic" global variable without these restrictions, the unsafe __gshared keyword must be used:[11]
+
+
+__gshared int global;  // This is a plain old global variable.
+
+Java[edit]
+In Java, thread-local variables are implemented by the ThreadLocal class object. ThreadLocal holds variable of type T, which is accessible via get/set methods. For example ThreadLocal variable holding Integer value looks like this:
+
+
+private static final ThreadLocal&lt;Integer&gt; myThreadLocalInteger = new ThreadLocal&lt;Integer&gt;();
+
+.NET languages: C# and others[edit]
+In .NET Framework languages such as C#, static fields can be marked with the ThreadStatic attribute:
+
+
+class FooBar {
+   [ThreadStatic] static int foo;
+}
+
+In .NET 4.0 the System.Threading.ThreadLocal&lt;T&gt; class is available for allocating and lazily loading thread-local variables.
+
+
+class FooBar {
+   private static System.Threading.ThreadLocal&lt;int&gt; foo;
+}
+
+Also an API is available for dynamically allocating thread-local variables.
+Object Pascal[edit]
+In Object Pascal (Delphi) or Free Pascal the threadvar reserved keyword can be used instead of 'var' to declare variables using the thread-local storage.
+
+
+var
+   mydata_process: integer;
+threadvar
+   mydata_threadlocal: integer;
+
+Objective-C[edit]
+In Cocoa, GNUstep, and OpenStep, each NSThread object has a thread-local dictionary that can be accessed through the thread's threadDictionary method.
+
+
+NSMutableDictionary *dict = [[NSThread currentThread] threadDictionary];
+dict[@"A key"] = @"Some data";
+
+Perl[edit]
+In Perl threads were added late in the evolution of the language, after a large body of extant code was already present on the Comprehensive Perl Archive Network (CPAN). Thus, threads in Perl by default take their own local storage for all variables, to minimise the impact of threads on extant non-thread-aware code. In Perl, a thread-shared variable can be created using an attribute:
+
+
+use threads;
+use threads::shared;
+
+my $localvar;
+my $sharedvar :shared;
+
+Python[edit]
+In Python version 2.4 or later, local class in threading module can be used to create thread-local storage.
+
+
+import threading
+mydata = threading.local()
+mydata.x = 1
+
+Ruby[edit]
+Ruby can create/access thread-local variables using []=/[] methods:
+
+
+Thread.current[:user_id] = 1
+
+References[edit]
+
+
+^ Pietrek, Matt (May 2006). "Under the Hood". MSDN. Retrieved 6 April 2010.&#160;
+^ Section 3.7.2 in C++11 standard
+^ IBM XL C/C++: Thread-local storage
+^ GCC 3.3.1: Thread-Local Storage
+^ Clang 2.0: release notes
+^ Intel C++ Compiler 8.1 (linux) release notes: Thread-local Storage
+^ Visual Studio 2003: Thread extended storage-class modifier
+^ Intel C++ Compiler 10.0 (windows): Thread-local storage
+^ "Rules and Limitations for TLS"
+^ Alexandrescu, Andrei (July 6, 2010). "Chapter 13 - Concurrency". The D Programming Language. InformIT. p.&#160;3. Retrieved January 3, 2014.&#160;
+^ Bright, Walter (May 12, 2009). "Migrating to Shared". dlang.org. Retrieved January 3, 2014.&#160;
+
+
+External links[edit]
+
+ELF Handling For Thread-Local Storage — Document about an implementation in C or C++.
+ACE_TSS&lt; TYPE &gt; Class Template Reference
+RWTThreadLocal&lt;Type&gt; Class Template Documentation
+Article "Use thread-local Storage to Pass Thread Specific Data" by Doug Doedens
+"Thread-Local Storage" by Lawrence Crowl
+Article "It's Not Always Nice To Share" by Walter Bright
+Practical ThreadLocal usage in Java: http://blogs.captechconsulting.com/blog/balaji-muthuvarathan/persistence-pattern-using-threadlocal-and-ejb-interceptors
+GCC "[1]"
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software design patterns
+
+
+
+
+
+
+Gang of Four patterns
+
+
+
+
+
+Creational
+
+
+
+
+Abstract factory
+Builder
+Factory method
+Prototype
+Singleton
+
+
+
+
+
+
+
+
+
+Structural
+
+
+
+
+Adapter
+Bridge
+Composite
+Decorator
+Facade
+Flyweight
+Proxy
+
+
+
+
+
+
+
+
+
+Behavioral
+
+
+
+
+Chain of responsibility
+Command
+Interpreter
+Iterator
+Mediator
+Memento
+Observer
+State
+Strategy
+Template method
+Visitor
+
+
+
+
+
+
+
+
+
+
+
+Concurrency patterns
+
+
+
+Active object
+Balking
+Double-checked locking
+Event-based asynchronous
+Guarded suspension
+Join
+Lock
+Monitor
+Proactor
+Reactor
+Read write lock
+Scheduler
+Thread pool
+Thread-local storage
+
+
+
+
+
+
+
+
+Architectural patterns
+
+
+
+Front controller
+Interceptor
+MVC
+n-tier
+Specification
+Publish-subscribe
+Naked objects
+Service Locator
+Active record pattern
+Identity map
+Data access object
+Data transfer object
+
+
+
+
+
+
+
+
+Other patterns
+
+
+
+Dependency injection
+Lazy loading
+Mock object
+Null object
+Object pool
+Servant
+Type tunnel
+
+
+
+
+
+
+
+
+Books
+
+
+
+Design Patterns
+Enterprise Integration Patterns
+
+
+
+
+
+
+
+
+People
+
+
+
+Christopher Alexander
+Erich Gamma
+Ralph Johnson
+John Vlissides
+Grady Booch
+Kent Beck
+Ward Cunningham
+Martin Fowler
+Robert Martin
+Jim Coplien
+Douglas Schmidt
+Linda Rising
+
+
+
+
+
+
+
+
+Communities
+
+
+
+The Hillside Group
+The Portland Pattern Repository
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Thread-local_storage&amp;oldid=685831709"					
+				Categories: Software design patternsThreads (computing)Variable (computer science)Hidden categories: Articles needing additional references from December 2012All articles needing additional referencesUse dmy dates from May 2011				
+							
+		
+		
+			

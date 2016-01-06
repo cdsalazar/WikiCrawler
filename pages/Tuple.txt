@@ -1,0 +1,644 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Tuple
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the mathematical concept.  For the musical term, see Tuplet.
+"Octuple" redirects here. For the type of rowing boat, see Octuple scull.
+"Duodecuple" redirects here. For the term in music, see Twelve-tone technique.
+A tuple is a finite ordered list of elements. In mathematics, an n-tuple is a sequence (or ordered list) of n elements, where n is a non-negative integer. There is only one 0-tuple, an empty sequence. An n-tuple is defined inductively using the construction of an ordered pair. Tuples are usually written by listing the elements within parentheses "" and separated by commas; for example,  denotes a 5-tuple. Sometimes other symbols are used to surround the elements, such as square brackets "[ ]" or angle brackets "". Braces "{ }" are never used for tuples, as they are the standard notation for sets. Tuples are often used to describe other mathematical objects, such as vectors. In computer science, tuples are directly implemented as product types in most functional programming languages. More commonly, they are implemented as record types, where the components are labeled instead of being identified by position alone. This approach is also used in relational algebra. Tuples are also used in relation to programming the semantic web with Resource Description Framework or RDF. Tuples are also used in linguistics[1] and philosophy.[2]
+
+
+
+Contents
+
+
+1 Etymology
+
+1.1 Names for tuples of specific lengths
+
+
+2 Properties
+3 Definitions
+
+3.1 Tuples as functions
+3.2 Tuples as nested ordered pairs
+3.3 Tuples as nested sets
+
+
+4 n-tuples of m-sets
+5 Type theory
+6 See also
+7 Notes
+8 References
+
+
+
+Etymology[edit]
+The term originated as an abstraction of the sequence: single, double, triple, quadruple, quintuple, sextuple, septuple, octuple, ..., n‑tuple, ..., where the prefixes are taken from the Latin names of the numerals. The unique 0‑tuple is called the null tuple. A 1‑tuple is called a singleton, a 2‑tuple is called an ordered pair and a 3‑tuple is a triple or triplet. n can be any nonnegative integer. For example, a complex number can be represented as a 2‑tuple, a quaternion can be represented as a 4‑tuple, an octonion can be represented as an 8‑tuple and a sedenion can be represented as a 16‑tuple.
+Although these uses treat ‑tuple as the suffix, the original suffix was ‑ple as in "triple" (three-fold) or "decuple" (ten‑fold). This originates from a medieval Latin suffix ‑plus (meaning "more"[dubious – discuss]) related to Greek ‑πλοῦς, which replaced the classical and late antique ‑plex (meaning "folded"), as in "duplex".[3]
+Names for tuples of specific lengths[edit]
+
+
+Tuple Length 
+Name
+Alternative names
+
+
+0
+empty tuple
+unit / empty sequence
+
+
+1
+single
+singleton / monuple
+
+
+2
+double
+couple / (ordered) pair / dual / twin / product
+
+
+3
+triple
+treble / triplet / triad
+
+
+4
+quadruple
+quad
+
+
+5
+quintuple
+pentuple
+
+
+6
+sextuple
+hexuple
+
+
+7
+septuple
+heptuple
+
+
+8
+octuple
+
+
+
+9
+nonuple
+
+
+
+10
+decuple
+
+
+
+11
+undecuple
+hendecuple
+
+
+12
+duodecuple
+
+
+
+13
+tredecuple
+
+
+
+14
+quattuordecuple
+
+
+
+15
+quindecuple
+
+
+
+16
+sexdecuple
+
+
+
+17
+septendecuple
+
+
+
+18
+octodecuple
+
+
+
+19
+novemdecuple
+
+
+
+20
+vigintuple
+
+
+
+21
+unvigintuple
+
+
+
+22
+duovigintuple
+
+
+
+23
+trevigintuple
+
+
+
+24
+quattuorvigintuple
+
+
+
+25
+quinvigintuple
+
+
+
+26
+sexvigintuple
+
+
+
+27
+septenvigintuple
+
+
+
+28
+octovigintuple
+
+
+
+29
+novemvigintuple
+
+
+
+30
+trigintuple
+
+
+
+40
+quadragintuple
+
+
+
+50
+quinquagintuple
+
+
+
+60
+sexagintuple
+
+
+
+70
+septuagintuple
+
+
+
+80
+octogintuple
+
+
+
+90
+nongentuple
+
+
+
+100
+centuple
+
+
+
+1,000
+milluple
+
+
+
+Properties[edit]
+The general rule for the identity of two n-tuples is
+
+ if and only if 
+
+Thus a tuple has properties that distinguish it from a set.
+
+A tuple may contain multiple instances of the same element, so
+tuple ; but set .
+Tuple elements are ordered: tuple , but set .
+A tuple has a finite number of elements, while a set or a multiset may have an infinite number of elements.
+
+Definitions[edit]
+There are several definitions of tuples that give them the properties described in the previous section.
+Tuples as functions[edit]
+If we are dealing with sets, an n-tuple can be regarded as a function, F, whose domain is the tuple's implicit set of element indices, X, and whose codomain, Y, is the tuple's set of elements. Formally:
+
+
+
+where:
+
+
+
+In slightly less formal notation this says:
+
+
+
+Tuples as nested ordered pairs[edit]
+Another way of modeling tuples in Set Theory is as nested ordered pairs. This approach assumes that the notion of ordered pair has already been defined; thus a 2-tuple
+
+The 0-tuple (i.e. the empty tuple) is represented by the empty set .
+An n-tuple, with n &gt; 0, can be defined as an ordered pair of its first entry and an (n - 1)-tuple (which contains the remaining entries when n &gt; 1):
+
+
+
+
+
+This definition can be applied recursively to the (n - 1)-tuple:
+
+
+
+Thus, for example:
+
+
+
+A variant of this definition starts "peeling off" elements from the other end:
+
+The 0-tuple is the empty set .
+For n &gt; 0:
+
+
+
+
+
+This definition can be applied recursively:
+
+
+
+Thus, for example:
+
+
+
+Tuples as nested sets[edit]
+Using Kuratowski's representation for an ordered pair, the second definition above can be reformulated in terms of pure set theory:
+
+The 0-tuple (i.e. the empty tuple) is represented by the empty set ;
+Let  be an n-tuple , and let . Then, . (The right arrow, , could be read as "adjoined with".)
+
+In this formulation:
+
+
+
+n-tuples of m-sets[edit]
+In discrete mathematics, especially combinatorics and finite probability theory, n-tuples arise in the context of various counting problems and are treated more informally as ordered lists of length n.[4] n-tuples whose entries come from a set of m elements are also called arrangements with repetition, permutations of a multiset and, in some non-English literature, variations with repetition. The number of n-tuples of an m-set is mn. This follows from the combinatorial rule of product.[5] If S is a finite set of cardinality m, this number is the cardinality of the n-fold Cartesian power S × S × ... S. Tuples are elements of this product set.
+Type theory[edit]
+Main article: Product type
+In type theory, commonly used in programming languages, a tuple has a product type; this fixes not only the length, but also the underlying types of each component. Formally:
+
+
+
+and the projections are term constructors:
+
+
+
+The tuple with labeled elements used in the relational model has a record type. Both of these types can be defined as simple extensions of the simply typed lambda calculus.[6]
+The notion of a tuple in type theory and that in set theory are related in the following way: If we consider the natural model of a type theory, and use the Scott brackets to indicate the semantic interpretation, then the model consists of some sets  (note: the use of italics here that distinguishes sets from types) such that:
+
+
+
+and the interpretation of the basic terms is:
+
+.
+
+The n-tuple of type theory has the natural interpretation as an n-tuple of set theory:[7]
+
+
+
+The unit type has as semantic interpretation the 0-tuple.
+See also[edit]
+
+
+
+Look up tuple in Wiktionary, the free dictionary.
+
+
+
+Arity
+Exponential object
+Formal language
+OLAP: Multidimensional Expressions
+Prime k-tuple
+Relation (mathematics)
+Tuplespace
+
+Notes[edit]
+
+
+^ "N‐tuple - Oxford Reference". oxfordreference.com. Retrieved 1 May 2015.&#160;
+^ "Ordered n-tuple - Oxford Reference". oxfordreference.com. Retrieved 1 May 2015.&#160;
+^ OED, s.v. "triple", "quadruple", "quintuple", "decuple"
+^ D'Angelo &amp; West 2000, p.&#160;9
+^ D'Angelo &amp; West 2000, p.&#160;101
+^ Pierce, Benjamin (2002). Types and Programming Languages. MIT Press. pp.&#160;126–132. ISBN&#160;0-262-16209-1.&#160;
+^ Steve Awodey, From sets, to types, to categories, to sets, 2009, preprint
+
+
+References[edit]
+
+
+D'Angelo, John P.; West, Douglas B. (2000), Mathematical Thinking / Problem-Solving and Proofs (2nd ed.), Prentice-Hall, ISBN&#160;978-0-13-014412-6&#160;
+Keith Devlin, The Joy of Sets. Springer Verlag, 2nd ed., 1993, ISBN 0-387-94094-4, pp.&#160;7–8
+Abraham Adolf Fraenkel, Yehoshua Bar-Hillel, Azriel Lévy, Foundations of set theory, Elsevier Studies in Logic Vol. 67, Edition 2, revised, 1973, ISBN 0-7204-2270-1, p.&#160;33
+Gaisi Takeuti, W. M. Zaring, Introduction to Axiomatic Set Theory, Springer GTM 1, 1971, ISBN 978-0-387-90024-7, p.&#160;14
+George J. Tourlakis, Lecture Notes in Logic and Set Theory. Volume 2: Set theory, Cambridge University Press, 2003, ISBN 978-0-521-75374-6, pp.&#160;182–193
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Set theory
+
+
+
+
+
+
+Axioms
+
+
+
+Choice
+
+countable
+dependent
+
+
+Extensionality
+Infinity
+Pairing
+Power set
+Regularity
+Union
+Martin's axiom
+
+
+Axiom schema
+
+replacement
+specification
+
+
+
+
+
+
+
+
+
+
+
+
+
+Operations
+
+
+
+Cartesian product
+Complement
+De Morgan's laws
+Disjoint union
+Intersection
+Power set
+Set difference
+Symmetric difference
+Union
+
+
+
+
+
+
+
+
+
+
+
+Concepts
+Methods
+
+
+
+
+
+
+Cardinality
+Cardinal number&#160;(large)
+Class
+Constructible universe
+Continuum hypothesis
+Diagonal argument
+Element
+
+ordered pair
+tuple
+
+
+Family
+Forcing
+One-to-one correspondence
+Ordinal number
+Transfinite induction
+Venn diagram
+
+
+
+
+
+
+
+
+Set types
+
+
+
+Countable
+Empty
+Finite&#160;(hereditarily)
+Fuzzy
+Infinite
+Recursive
+Subset&#160;· Superset
+Transitive
+Uncountable
+Universal
+
+
+
+
+
+
+
+
+Theories
+
+
+
+Alternative
+Axiomatic
+Naive
+Cantor's theorem
+
+
+Zermelo
+
+General
+
+
+Principia Mathematica
+
+New Foundations
+
+
+Zermelo–Fraenkel
+
+von Neumann–Bernays–Gödel
+
+Morse–Kelley
+
+
+Kripke–Platek
+Tarski–Grothendieck
+
+
+
+
+
+
+
+
+
+
+
+
+
+Paradoxes
+Problems
+
+
+
+
+
+
+Russell's paradox
+Suslin's problem
+
+
+
+
+
+
+
+
+Set theorists
+
+
+
+Abraham Fraenkel
+Bertrand Russell
+Ernst Zermelo
+Georg Cantor
+John von Neumann
+Kurt Gödel
+Lotfi A. Zadeh
+Paul Bernays
+Paul Cohen
+Richard Dedekind
+Thomas Jech
+Willard Quine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4660884-9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Tuple&amp;oldid=691002291"					
+				Categories: Data managementMathematical notationSequences and seriesBasic concepts in set theoryType theoryHidden categories: All accuracy disputesArticles with disputed statements from July 2015Wikipedia articles with GND identifiers				
+							
+		
+		
+			

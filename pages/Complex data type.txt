@@ -1,0 +1,310 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Complex data type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Not to be confused with Aggregate data type.
+Some programming languages provide a complex data type for complex number storage and arithmetic as a built-in (primitive) data type.
+In some programming environments the term complex data type (in contrast to primitive data types) is a synonym to the composite data type.[1][2]
+
+
+
+Contents
+
+
+1 Complex number arithmetic
+2 Language support
+3 History
+4 References
+
+
+
+Complex number arithmetic[edit]
+A complex variable or value is usually represented as a pair of floating point numbers. Languages that support a complex data type usually provide special syntax for building such values, and extend the basic arithmetic operations ('+', '−', '×', '÷') to act on them. These operations are usually translated by the compiler into a sequence of floating-point machine instructions or into library calls. Those languages may also provide support for other operations, such as formatting, equality testing, etc. As in mathematics, those languages often interpret a floating-point value as equivalent to a complex value with a zero imaginary part.
+Language support[edit]
+
+The FORTRAN's type COMPLEX
+The C99 standard of the C programming language includes complex data types and complex math functions in the standard library header &lt;complex.h&gt;
+The C++ standard library provides a complex templated class as well as complex math functions in the header &lt;complex&gt;
+The Go programming language has built-in types complex64 (each component is 32-bit float) and complex128 (each component is 64-bit float)
+The Perl core module Math::Complex provides support for complex numbers
+Python support complex numbers built-in with the type complex. Imaginary number literals can be specified by appending a "j". Complex math functions are provided in the standard library module cmath [3]
+Ruby provides a Complex class in the standard library module complex
+OCaml supports complex numbers with the standard library module Complex
+Haskell supports complex numbers with the standard library module Data.Complex (previously called Complex)
+Mercury provides complex numbers with full operator overloading support in the extras distribution, using libcomplex_numbers.
+Java does not have a standard complex number class, but there exists a number of incompatible free implementations of a complex number class:
+
+The Apache Commons Math library provides complex numbers for Java with its Complex class
+The JScience library has a Complex number class
+The JAS library allows the use of complex numbers.
+Netlib has a complex number class for Java
+javafastcomplex also adds complex number support for Java
+jcomplexnumber is a project on implementation of complex number in Java
+JLinAlg includes complex numbers with arbitrary precision.
+
+
+Common Lisp: The ANSI Common Lisp standard supports complex numbers of floats, rationals and arbitrary precision integers. Its basic mathematical functions are defined for complex numbers, where applicable. For example the square root of -1 is a complex number:
+
+
+
+ ? (sqrt -1)
+#C(0 1)            ; the result of (sqrt -1)
+
+
+Scheme: Complex numbers and functions (e.g. sin) are included in the language specification. Their implementation is however optional in the R5RS standard, while in R6RS is mandatory.
+The .NET Framework provides System.Numerics.Complex since version 4.0.
+The smart BASIC for iOS naturally supports complex numbers in notation a + bi. Any variable, math operation or function can accept both real and complex numbers as arguments and return real or complex numbers depending on result. For example the square root of -4 is a complex number:
+
+
+PRINT SQRT(-4)
+2i
+
+History[edit]
+
+
+
+This section requires expansion. (November 2015)
+
+
+The COMPLEX data type was provided in FORTRAN IV.[4]
+
+References[edit]
+
+
+^ IBM Informix Database Design and Implementation Guide
+^ Flash 8 Documentation[dead link]
+^ Python v2.6.5 documentation
+^ A guide to Fortran IV programming Daniel D. McCracken - 1972 - 288 pages. "The capability provided by Fortran complex operations is a great savings in programming effort in certain problems. "
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Complex_data_type&amp;oldid=691079917"					
+				Categories: Data typesHidden categories: All articles with dead external linksArticles with dead external links from May 2010Articles to be expanded from November 2015All articles to be expanded				
+							
+		
+		
+			

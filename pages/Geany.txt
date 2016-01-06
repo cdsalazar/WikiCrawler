@@ -1,0 +1,954 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Geany
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+Geany
+
+
+
+
+
+
+
+Original author(s)
+Enrico Tröger
+
+
+Developer(s)
+Geany authors
+
+
+Initial release
+October&#160;19, 2005; 10 years ago&#160;(2005-10-19)
+
+
+Stable release
+1.26 / November&#160;15, 2015; 8 days ago&#160;(2015-11-15)
+
+
+Written in
+C
+
+
+Operating system
+Cross-platform
+
+
+Type
+IDE
+
+
+License
+GNU GPL v2 or later[1]
+
+
+Website
+www.geany.org
+
+
+
+
+
+
+Customized Geany IDE
+
+
+Geany (IPA:ʒeːniː) is a lightweight "cross-platform" GUI based text editor[2] using Scintilla and GTK+, including basic Integrated Development Environment (IDE) features. It is designed to have short load times, with limited dependency on separate packages or external libraries. It is available for a wide range of operating systems, such as BSD, Linux, Mac OS X,[3] Solaris and Windows. Among the supported programming languages and markup languages are C, C++, C#, Java, JavaScript, PHP, HTML, LaTeX, CSS, Python, Perl, Ruby, Pascal, Haskell, Erlang, Vala and many others.[4]
+In contrast to traditional Unix-based editors like Emacs or Vim, Geany more closely resembles programming editors available for Microsoft Windows such as Programmer's Notepad or Notepad++, both of which also use Scintilla.
+It is free software licensed under the terms of the GNU GPL version 2 or later.[1] After version 0.21 the next version was numbered 1.22 as requested by many users to reflect the maturity of the product.[5]
+
+
+
+Contents
+
+
+1 Features
+2 See also
+3 References
+4 External links
+
+
+
+Features[edit]
+
+Auto-completion
+Multiple document support
+Project support
+Syntax highlighting
+Code folding (partially)
+Symbol lists
+Code navigation
+Embedded terminal emulator[6]
+Build system to compile and execute code using external tools
+Extensible via plugins
+Column / block / vertical select (via SHIFT + CTRL + arrow keys)
+User configurable keyboard action to editor function mapping[7]
+
+See also[edit]
+
+Comparison of integrated development environments
+ Free software portal
+
+References[edit]
+
+
+^ a b "GNU General Public License&#160;: Version 2, June 1991". Geany.svn.sourceforge.net. Retrieved 2014-02-03.&#160;
+^ "Fast, powerful Geany editor offers IDE features". Linux.com. Retrieved 2014-02-03.&#160;
+^ "geany.darwinports.com". geany.darwinports.com. Retrieved 2014-02-03.&#160;
+^ "Geany". Geany. Retrieved 2014-02-03.&#160;
+^ "Geany news archive". Many users told us our version numbers didn't reflect the maturity of Geany to their eyes, and wished it to be changed to reflect that. So after some discussion we decided to rename this version 1.22 instead of 0.22.&#160;
+^ "Freelancer's Playground! | Using Geany’s VTE". Bayu.freelancer.web.id. 2008-08-26. Retrieved 2014-02-03.&#160;
+^ http://www.geany.org/manual/current/index.html#keybinding-preferences
+
+
+External links[edit]
+ Media related to Geany at Wikimedia Commons
+
+Official website
+Official Plugins Repository
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for C and C++
+
+
+
+
+
+
+Open source
+
+
+
+Anjuta
+Code::Blocks
+CodeLite
+Dev-C++
+Eclipse
+Geany
+GNAT Programming Studio
+KDevelop
+Kuzya
+MonoDevelop
+NetBeans
+QDevelop
+Qt Creator
+Ultimate++
+wxDev-C++
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Pelles C
+Oracle Solaris Studio (previously called Sun Studio)
+Visual Studio Express
+Xcode
+
+
+
+
+
+
+
+
+Retail
+
+
+
+C++Builder
+CodeWarrior
+IBM VisualAge
+Visual Studio
+SlickEdit
+
+
+
+
+
+
+
+
+
+
+
+&#160;Category
+ Comparison
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+HTML editors
+
+
+
+
+
+
+
+
+
+Web design
+Web design program
+
+
+
+
+
+
+
+
+Open source
+
+
+
+Amaya
+Aptana
+Arachnophilia
+Atom
+Bluefish
+Brackets
+Eclipse
+gwrite
+Komodo Edit
+NetBeans
+Quanta Plus
+TextMate
+Visual Studio Code
+
+
+
+
+
+Mozilla Composer-based
+
+
+
+
+BlueGriffon
+KompoZer
+SeaMonkey Composer
+
+
+
+
+
+
+
+
+
+Scintilla-based
+
+
+
+
+FlashDevelop
+Geany
+Notepad++
+Notepad2
+Programmer's Notepad
+gPHPedit
+SciTE
+
+
+
+
+
+
+
+
+
+Web-based
+
+
+
+
+Aloha Editor
+CKEditor
+Froala Editor
+Maqetta
+TinyMCE
+WYMeditor
+YUI Rich Text Editor
+
+
+
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Codelobster
+TED Notepad
+FirstPage
+Google Web Designer
+HTML-Kit
+openElement
+PSPad
+SharePoint Designer
+TextWrangler
+Visual Studio Community
+Visual Studio Express
+WebMatrix
+
+
+
+
+
+
+
+
+Commercial
+software
+
+
+
+
+
+Cross-platform
+
+
+
+
+Adobe Contribute
+Adobe Dreamweaver
+Komodo IDE
+Macaw Web Editor
+PhpStorm
+Sublime Text
+UltraEdit
+
+
+
+
+
+
+
+
+
+OS X only
+
+
+
+
+Coda
+BBEdit
+Freeway
+PageSpinner
+Sandvox
+Site Studio
+skEdit
+Smultron
+
+
+
+
+
+
+
+
+
+Windows only
+
+
+
+
+CoffeeCup HTML Editor
+EditPlus
+EmEditor
+EZGenerator
+NetObjects Fusion
+NoteTab
+PHPEdit
+TextPad
+TopStyle
+Visual Studio
+Web Architect
+Xara Web Designer
+
+
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+Adobe GoLive
+Adobe PageMill
+Alleycode HTML Editor
+AOLpress
+Arena
+Claris Home Page
+ConTEXT
+Frame-IT!
+iWeb
+HomeSite
+HotDog
+HoTMetaL
+Microsoft Expression Web
+Microsoft FrontPage
+Netscape Composer
+Nvu
+Nexus (WorldWideWeb)
+tkWWW
+
+
+
+
+
+
+
+
+Helper tools
+
+
+
+CSE HTML Validator
+CSSTidy
+HTML Tidy
+FrameGang
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Comparison
+ List
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+GTK+ applications
+
+
+
+
+
+
+Platform
+
+
+
+
+GTK+
+
+
+
+GTK+
+
+GDK
+ATK
+ClutterActor
+GTK+ Scene Graph Kit
+Pango
+Pigment
+
+
+GLib
+
+GObject
+GIO
+
+
+IBus
+Orca
+dconf
+Genie
+Vala
+Keyring
+GNOME-DB
+GVFS
+Hildon
+Librsvg
+MetaTracker
+libxslt
+libxml2
+
+
+
+
+
+
+
+
+freedesktop.org
+(shared)
+
+
+
+AppStream
+D-Bus
+GStreamer
+NetworkManager
+Poppler
+libcanberra
+Wayland
+X.Org Server
+PulseAudio
+PackageKit
+HarfBuzz
+Cairo
+
+
+
+
+
+
+
+
+Development
+
+
+
+
+GUI designer, RAD
+
+
+
+Glade Interface Designer
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Anjuta
+Builder
+Bluefish
+Meld
+Devhelp
+Nemiver
+Poedit
+Geany
+Gtranslator
+gPHPedit
+PyRoom
+SciTE
+UberWriter
+PIDA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GNOME
+
+
+
+GNOME Shell
+GNOME Games
+Core Applications
+
+Boxes
+Calculator
+Character Map
+Dictionary
+Disks
+Files
+Software
+Terminal
+Videos
+Web
+
+
+Other
+
+dconf editor
+
+
+
+
+
+
+
+
+
+
+Cinnamon
+
+
+
+Nemo
+
+
+
+
+
+
+
+
+Xfce
+
+
+
+Thunar
+
+
+
+
+
+
+
+
+LXDE
+
+
+
+PCMan File Manager
+LXMusic
+
+
+
+
+
+
+
+
+Graphical shells
+
+
+
+GNOME Panel
+Docky
+GNOME Do
+Avant Window Navigator
+GLX-Dock
+
+
+
+
+
+
+
+
+3rd-party
+applications
+
+
+
+
+Office
+
+
+
+AbiWord
+Dia
+Gnumeric
+Evince
+Evolution
+Dictionary
+Ease
+OCRFeeder
+
+
+
+
+
+
+
+
+Education
+
+
+
+Gramps
+GCompris
+DrGeo
+GeoGebra
+Ghemical
+Celestia
+Chemtool
+Wine-Doors
+
+
+
+
+
+
+
+
+Graphics
+
+
+
+GIMP
+GNU Paint
+Inkscape
+gThumb
+gPhoto
+Eye of GNOME
+Sushi
+Shotwell
+F-Spot
+Viewnior
+
+
+
+
+
+
+
+
+Internet
+
+
+
+Balsa
+Sylpheed
+Claws Mail
+Empathy
+Ekiga
+Gobby
+gtk-gnutella
+GpsDrive
+SFLphone
+Vino (VNC server)
+Vinagre
+Midori
+Uzbl
+transmission-gtk
+
+
+
+
+
+
+
+
+Audio
+
+
+
+Audacious
+Banshee
+Buzztrax
+Exaile
+Rhythmbox
+Sound Juicer
+Quod Libet
+
+Ex Falso
+
+
+EasyTag
+Asunder
+Cheese
+Snappy
+
+
+
+
+
+
+
+
+Video
+
+
+
+gtkam
+Avidemux
+Cinelerra
+Kino
+LiVES
+OpenShot Video Editor
+Pitivi
+Gnome MPlayer
+
+
+
+
+
+
+
+
+Utilities
+
+
+
+Brasero
+dconf-editor
+Diodon
+File Roller
+gedit
+gnote
+Screenshot
+GParted
+Guake
+Leafpad
+Tilda
+Tomboy
+Workrave
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Category:GTK+
+ Category:Software that uses GTK+
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+This free-software-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+This programming-tool-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Geany&amp;oldid=690790680"					
+				Categories: Code navigation toolsFree integrated development environmentsFree software programmed in CFree text editorsGNOME ApplicationsGNOME Developer ToolsLinux integrated development environmentsLinux text editorsSoftware that uses ScintillaSoftware using the GPL licenseText editors that use GTK+Unix text editorsWindows text editorsFree software stubsComputer programming tool stubsHidden categories: All stub articles				
+							
+		
+		
+			

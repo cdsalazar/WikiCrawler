@@ -1,0 +1,553 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Java Platform, Standard Edition
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Java editions
+
+
+
+
+
+
+
+Java Card
+Micro Edition (ME)
+Standard Edition (SE)
+Enterprise Edition (EE)
+JavaFX (Merged to Java SE 8)
+PersonalJava (discontinued)
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+Java Platform, Standard Edition or Java SE is a widely used platform for development and deployment of portable code for desktop and server environments.[1] Java SE uses the object-oriented Java programming language. It is part of the Java software platform family. Java SE defines a wide range of general purpose APIs – such as Java APIs for the Java Class Library – and also includes the Java Language Specification and the Java Virtual Machine Specification.[2] One of the most well-known implementations of Java SE is Oracle Corporation's Java Development Kit (JDK).[3]
+
+
+
+Contents
+
+
+1 Nomenclature, standards and specifications
+2 General purpose packages
+
+2.1 java.lang
+
+2.1.1 java.lang.ref
+2.1.2 java.lang.reflect
+
+2.1.2.1 Techniques
+
+2.1.2.1.1 Discovery
+2.1.2.1.2 Use by name
+
+
+2.1.2.2 Arrays and proxies
+
+
+
+
+2.2 java.io
+
+2.2.1 Streams
+2.2.2 Random access
+2.2.3 File system
+
+
+2.3 java.nio
+2.4 java.math
+2.5 java.net
+2.6 java.text
+2.7 java.util
+
+
+3 Special purpose packages
+
+3.1 java.applet
+3.2 java.beans
+3.3 java.awt
+3.4 java.rmi
+3.5 java.security
+3.6 java.sql
+3.7 javax.rmi
+3.8 javax.swing
+3.9 javax.swing.text.html.parser
+3.10 javax.xml.bind.annotation
+
+
+4 OMG packages
+
+4.1 org.omg.CORBA
+4.2 org.omg.PortableInterceptor
+
+
+5 Critical security issues with the Java SE plugin
+6 References
+7 External links
+
+
+
+Nomenclature, standards and specifications[edit]
+Java SE was known as Java 2 Platform, Standard Edition or J2SE from version 1.2 until version 1.5. The "SE" is used to distinguish the base platform from the Enterprise Edition (Java EE) and Micro Edition (Java ME) platforms. The "2" was originally intended to emphasize the major changes introduced in version 1.2, but was removed in version 1.6. The naming convention has been changed several times over the Java version history. Starting with J2SE 1.4 (Merlin), Java SE has been developed under the Java Community Process, which produces descriptions of proposed and final specifications for the Java platform called Java Specification Requests (JSR).[4] JSR 59 was the umbrella specification for J2SE 1.4 and JSR 176 specified J2SE 5.0 (Tiger). Java SE 6 (Mustang) was released under JSR 270.
+Java Platform, Enterprise Edition (Java EE) is a related specification that includes all the classes in Java SE, plus a number that are more useful to programs that run on servers as opposed to workstations.
+Java Platform, Micro Edition (Java ME) is a related specification intended to provide a certified collection of Java APIs for the development of software for small, resource-constrained devices such as cell phones, PDAs and set-top boxes.
+The Java Runtime Environment (JRE) and Java Development Kit (JDK) are the actual files downloaded and installed on a computer to run or develop Java programs, respectively.
+General purpose packages[edit]
+java.lang[edit]
+The Java package java.lang contains fundamental classes and interfaces closely tied to the language and runtime system. This includes the root classes that form the class hierarchy, types tied to the language definition, basic exceptions, math functions, threading, security functions, as well as some information on the underlying native system. This package contains 22 of 32 Error classes provided in JDK 6.
+The main classes and interfaces in java.lang are:
+
+Object – the class that is the root of every class hierarchy.
+Enum – the base class for enumeration classes (as of J2SE 5.0).
+Class – the class that is the root of the Java reflection system.
+Throwable – the class that is the base class of the exception class hierarchy.
+Error, Exception, and RuntimeException – the base classes for each exception type.
+Thread – the class that allows operations on threads.
+String – the class for strings and string literals.
+StringBuffer and StringBuilder – classes for performing string manipulation (StringBuilder as of J2SE 5.0).
+Comparable – the interface that allows generic comparison and ordering of objects (as of J2SE 1.2).
+Iterable – the interface that allows generic iteration using the enhanced for loop (as of J2SE 5.0).
+ClassLoader, Process, Runtime, SecurityManager, and System – classes that provide "system operations" that manage the dynamic loading of classes, creation of external processes, host environment inquiries such as the time of day, and enforcement of security policies.
+Math and StrictMath – classes that provide basic math functions such as sine, cosine, and square root (StrictMath as of J2SE 1.3).
+The primitive wrapper classes that encapsulate primitive types as objects.
+The basic exception classes thrown for language-level and other common exceptions.
+
+Classes in java.lang are automatically imported into every source file.
+java.lang.ref[edit]
+The java.lang.ref package provides more flexible types of references than are otherwise available, permitting limited interaction between the application and the Java Virtual Machine (JVM) garbage collector. It is an important package, central enough to the language for the language designers to give it a name that starts with "java.lang", but it is somewhat special-purpose and not used by a lot of developers. This package was added in J2SE 1.2.
+Java has an expressive system of references and allows for special behavior for garbage collection. A normal reference in Java is known as a "strong reference." The java.lang.ref package defines three other types of references — soft, weak, and phantom references. Each type of reference is designed for a specific use.
+
+A SoftReference can be used to implement a cache. An object that is not reachable by a strong reference (that is, not strongly reachable), but is referenced by a soft reference is called "softly reachable." A softly reachable object may be garbage collected at the discretion of the garbage collector. This generally means that softly reachable objects are only garbage collected when free memory is low—but again, this is at the garbage collector's discretion. Semantically, a soft reference means, "Keep this object when nothing else references it, unless the memory is needed."
+
+
+A WeakReference is used to implement weak maps. An object that is not strongly or softly reachable, but is referenced by a weak reference is called "weakly reachable". A weakly reachable object is garbage collected in the next collection cycle. This behavior is used in the class java.util.WeakHashMap. A weak map allows the programmer to put key/value pairs in the map and not worry about the objects taking up memory when the key is no longer reachable anywhere else. Another possible application of weak references is the string intern pool. Semantically, a weak reference means "get rid of this object when nothing else references it at the next garbage collection."
+
+
+A PhantomReference is used to reference objects that have been marked for garbage collection and have been finalized, but have not yet been reclaimed. An object that is not strongly, softly or weakly reachable, but is referenced by a phantom reference is called "phantom reachable." This allows for more flexible cleanup than is possible with the finalization mechanism alone. Semantically, a phantom reference means "this object is no longer needed and has been finalized in preparation for being collected."
+
+Each of these reference types extends the Reference class, which provides the get() method to return a strong reference to the referent object (or null if the reference has been cleared or if the reference type is phantom), and the clear() method to clear the reference.
+The java.lang.ref also defines the class ReferenceQueue, which can be used in each of the applications discussed above to keep track of objects that have changed reference type. When a Reference is created it is optionally registered with a reference queue. The application polls the reference queue to get references that have changed reachability state.
+java.lang.reflect[edit]
+Reflection is a constituent of the Java API that lets Java code examine and "reflect" on Java components at runtime and use the reflected members. Classes in the java.lang.reflect package, along with java.lang.Class and java.lang.Package accommodate applications such as debuggers, interpreters, object inspectors, class browsers, and services such as object serialization and JavaBeans that need access to either the public members of a target object (based on its runtime class) or the members declared by a given class. This package was added in JDK 1.1.
+Reflection is used to instantiate classes and invoke methods using their names, a concept that allows for dynamic programming. Classes, interfaces, methods, fields, and constructors can all be discovered and used at runtime. Reflection is supported by metadata that the JVM has about the program.
+Techniques[edit]
+There are two basic techniques involved in reflection:
+
+Discovery – this involves taking an object or class and discovering the members, superclasses, implemented interfaces, and then possibly using the discovered elements.
+Use by name – involves starting with the symbolic name of an element and using the named element.
+
+Discovery[edit]
+Discovery typically starts with an object and calling the Object.getClass() method to get the object's Class. The Class object has several methods for discovering the contents of the class, for example:
+
+getMethods() – returns an array of Method objects representing all the public methods of the class or interface
+getConstructors() – returns an array of Constructor objects representing all the public constructors of the class
+getFields() – returns an array of Field objects representing all the public fields of the class or interface
+getClasses() – returns an array of Class objects representing all the public classes and interfaces that are members (e.g. inner classes) of the class or interface
+getSuperclass() – returns the Class object representing the superclass of the class or interface (null is returned for interfaces)
+getInterfaces() – returns an array of Class objects representing all the interfaces that are implemented by the class or interface
+
+Use by name[edit]
+The Class object can be obtained either through discovery, by using the class literal (e.g. MyClass.class) or by using the name of the class (e.g. Class.forName("mypackage.MyClass")). With a Class object, member Method, Constructor, or Field objects can be obtained using the symbolic name of the member. For example:
+
+getMethod("methodName", Class...) – returns the Method object representing the public method with the name "methodName" of the class or interface that accepts the parameters specified by the Class... parameters.
+getConstructor(Class...) – returns the Constructor object representing the public constructor of the class that accepts the parameters specified by the Class... parameters.
+getField("fieldName") – returns the Field object representing the public field with the name "fieldName" of the class or interface.
+
+Method, Constructor, and Field objects can be used to dynamically access the represented member of the class. For example:
+
+Field.get(Object) – returns an Object containing the value of the field from the instance of the object passed to get(). (If the Field object represents a static field then the Object parameter is ignored and may be null.)
+Method.invoke(Object, Object...) – returns an Object containing the result of invoking the method for the instance of the first Object parameter passed to invoke(). The remaining Object... parameters are passed to the method. (If the Method object represents a static method then the first Object parameter is ignored and may be null.)
+Constructor.newInstance(Object...) – returns the new Object instance from invoking the constructor. The Object... parameters are passed to the constructor. (Note that the parameterless constructor for a class can also be invoked by calling newInstance().)
+
+Arrays and proxies[edit]
+The java.lang.reflect package also provides an Array class that contains static methods for creating and manipulating array objects, and since J2SE 1.3, a Proxy class that supports dynamic creation of proxy classes that implement specified interfaces.
+The implementation of a Proxy class is provided by a supplied object that implements the InvocationHandler interface. The InvocationHandler's []) invoke(Object, Method, Object[]) method is called for each method invoked on the proxy object—the first parameter is the proxy object, the second parameter is the Method object representing the method from the interface implemented by the proxy, and the third parameter is the array of parameters passed to the interface method. The invoke() method returns an Object result that contains the result returned to the code that called the proxy interface method.
+java.io[edit]
+The java.io package contains classes that support input and output. The classes in the package are primarily stream-oriented; however, a class for random access files is also provided. The central classes in the package are InputStream and OutputStream, which are abstract base classes for reading from and writing to byte streams, respectively. The related classes Reader and Writer are abstract base classes for reading from and writing to character streams, respectively. The package also has a few miscellaneous classes to support interactions with the host file system.
+Streams[edit]
+The stream classes follow the decorator pattern by extending the base subclass to add features to the stream classes. Subclasses of the base stream classes are typically named for one of the following attributes:
+
+the source/destination of the stream data
+the type of data written to/read from the stream
+additional processing or filtering performed on the stream data
+
+The stream subclasses are named using the naming pattern XxxStreamType where Xxx is the name describing the feature and StreamType is one of InputStream, OutputStream, Reader, or Writer.
+The following table shows the sources/destinations supported directly by the java.io package:
+
+
+
+
+Source/Destination
+Name
+Stream types
+In/Out
+Classes
+
+
+byte array (byte[])
+ByteArray
+byte
+in, out
+ByteArrayInputStream, ByteArrayOutputStream
+
+
+char array (char[])
+CharArray
+char
+in, out
+CharArrayReader, CharArrayWriter
+
+
+file
+File
+byte, char
+in, out
+FileInputStream, FileOutputStream, FileReader, FileWriter
+
+
+string (StringBuffer)
+String
+char
+in, out
+StringReader, StringWriter
+
+
+thread (Thread)
+Piped
+byte, char
+in, out
+PipedInputStream, PipedOutputStream, PipedReader, PipedWriter
+
+
+
+
+Other standard library packages provide stream implementations for other destinations, such as the InputStream returned by the java.net.Socket.getInputStream() method or the Java EE javax.servlet.ServletOutputStream class.
+Data type handling and processing or filtering of stream data is accomplished through stream filters. The filter classes all accept another compatible stream object as a parameter to the constructor and decorate the enclosed stream with additional features. Filters are created by extending one of the base filter classes FilterInputStream, FilterOutputStream, FilterReader, or FilterWriter.
+The Reader and Writer classes are really just byte streams with additional processing performed on the data stream to convert the bytes to characters. They use the default character encoding for the platform, which as of J2SE 5.0 is represented by the Charset returned by the java.nio.charset.Charset.defaultCharset() static method. The InputStreamReader class converts an InputStream to a Reader and the OutputStreamWriter class converts an OutputStream to a Writer. Both these classes have constructors that support specifying the character encoding to use. If no encoding is specified, the program uses the default encoding for the platform.
+The following table shows the other processes and filters that the java.io package directly supports. All these classes extend the corresponding Filter class.
+
+
+
+
+Operation
+Name
+Stream types
+In/Out
+Classes
+
+
+buffering
+Buffered
+byte, char
+in, out
+BufferedInputStream, BufferedOutputStream, BufferedReader, BufferedWriter
+
+
+"push back" last value read
+Pushback
+byte, char
+in
+PushbackInputStream, PushbackReader
+
+
+read/write primitive types
+Data
+byte
+in, out
+DataInputStream, DataOutputStream
+
+
+object serialization (read/write objects)
+Object
+byte
+in, out
+ObjectInputStream, ObjectOutputStream
+
+
+
+
+Random access[edit]
+The RandomAccessFile class supports random access reading and writing of files. The class uses a file pointer that represents a byte-offset within the file for the next read or write operation. The file pointer is moved implicitly by reading or writing and explicitly by calling the seek(long) or skipBytes(int) methods. The current position of the file pointer is returned by the getFilePointer() method.
+File system[edit]
+The File class represents a file or directory path in a file system. File objects support the creation, deletion and renaming of files and directories and the manipulation of file attributes such as read-only and last modified timestamp. File objects that represent directories can be used to get a list of all the contained files and directories.
+The FileDescriptor class is a file descriptor that represents a source or sink (destination) of bytes. Typically this is a file, but can also be a console or network socket. FileDescriptor objects are used to create File streams. They are obtained from File streams and java.net sockets and datagram sockets.
+java.nio[edit]
+Main article: New I/O
+In J2SE 1.4, the package java.nio (NIO or New I/O) was added to support memory-mapped I/O, facilitating I/O operations closer to the underlying hardware with sometimes dramatically better performance. The java.nio package provides support for a number of buffer types. The subpackage java.nio.charset provides support for different character encodings for character data. The subpackage java.nio.channels provides support for channels, which represent connections to entities that are capable of performing I/O operations, such as files and sockets. The java.nio.channels package also provides support for fine-grained locking of files.
+java.math[edit]
+The java.math package supports multiprecision arithmetic (including modular arithmetic operations) and provides multiprecision prime number generators used for cryptographic key generation. The main classes of the package are:
+
+BigDecimal – provides arbitrary-precision signed decimal numbers. BigDecimal gives the user control over rounding behavior through RoundingMode.
+BigInteger – provides arbitrary-precision integers. Operations on BigInteger do not overflow or lose precision. In addition to standard arithmetic operations, it provides modular arithmetic, GCD calculation, primality testing, prime number generation, bit manipulation, and other miscellaneous operations.
+MathContext – encapsulate the context settings that describe certain rules for numerical operators.
+RoundingMode – an enumeration that provides eight rounding behaviors.
+
+java.net[edit]
+The java.net package provides special IO routines for networks, allowing HTTP requests, as well as other common transactions.
+java.text[edit]
+The java.text package implements parsing routines for strings and supports various human-readable languages and locale-specific parsing.
+java.util[edit]
+Data structures that aggregate objects are the focus of the java.util package. Included in the package is the Collections API, an organized data structure hierarchy influenced heavily by the design patterns considerations.
+Special purpose packages[edit]
+java.applet[edit]
+Main article: Java applet
+Created to support Java applet creation, the java.applet package lets applications be downloaded over a network and run within a guarded sandbox. Security restrictions are easily imposed on the sandbox. A developer, for example, may apply a digital signature to an applet, thereby labeling it as safe. Doing so allows the user to grant the applet permission to perform restricted operations (such as accessing the local hard drive), and removes some or all the sandbox restrictions. Digital certificates are issued by certificate authorities.
+java.beans[edit]
+Main article: JavaBeans
+Included in the java.beans package are various classes for developing and manipulating beans, reusable components defined by the JavaBeans architecture. The architecture provides mechanisms for manipulating properties of components and firing events when those properties change.
+The APIs in java.beans are intended for use by a bean editing tool, in which beans can be combined, customized, and manipulated. One type of bean editor is a GUI designer in an integrated development environment.
+java.awt[edit]
+Main article: Abstract Window Toolkit
+The java.awt, or Abstract Window Toolkit, provides access to a basic set of GUI widgets based on the underlying native platform's widget set, the core of the GUI event subsystem, and the interface between the native windowing system and the Java application. It also provides several basic layout managers, a datatransfer package for use with the Clipboard and Drag and Drop, the interface to input devices such as mice and keyboards, as well as access to the system tray on supporting systems. This package, along with javax.swing contains the largest number of enums (7 in all) in JDK 6.
+java.rmi[edit]
+Main article: Java Remote Method Invocation
+The java.rmi package provides Java remote method invocation to support remote procedure calls between two java applications running in different JVMs.
+java.security[edit]
+Support for security, including the message digest algorithm, is included in the java.security package.
+java.sql[edit]
+Main article: Java Database Connectivity
+An implementation of the JDBC API (used to access SQL databases) is grouped into the java.sql package.
+javax.rmi[edit]
+Main article: RMI-IIOP
+The javax.rmi package provides the support for the remote communication between applications, using the RMI over IIOP protocol. This protocol combines RMI and CORBA features.
+Java SE Core Technologies - CORBA / RMI-IIOP
+javax.swing[edit]
+Main article: Swing (Java)
+Swing is a collection of routines that build on java.awt to provide a platform independent widget toolkit. javax.swing uses the 2D drawing routines to render the user interface components instead of relying on the underlying native operating system GUI support.
+This package contains the largest number of classes (133 in all) in JDK 6. This package, along with java.awt also contains the largest number of enums (7 in all) in JDK 6. It supports pluggable looks and feels (PLAFs) so that widgets in the GUI can imitate those from the underlying native system. Design patterns permeate the system, especially a modification of the model-view-controller pattern, which loosens the coupling between function and appearance. One inconsistency is that (as of J2SE 1.3) fonts are drawn by the underlying native system, and not by Java, limiting text portability. Workarounds, such as using bitmap fonts, do exist. In general, "layouts" are used and keep elements within an aesthetically consistent GUI across platforms.
+javax.swing.text.html.parser[edit]
+The javax.swing.text.html.parser package provides the error tolerant HTML parser that is used for writing various web browsers and web bots.
+javax.xml.bind.annotation[edit]
+The javax.xml.bind.annotation package contains the largest number of Annotation Types (30 in all) in JDK 6. It defines annotations for customizing Java program elements to XML Schema mapping.
+OMG packages[edit]
+org.omg.CORBA[edit]
+Main article: CORBA
+The org.omg.CORBA package provides the support for the remote communication between applications using the General Inter-ORB Protocol and supports other features of the common object request broker architecture. Same as RMI and RMI-IIOP, this package is for calling remote methods of objects on other virtual machines (usually via network).
+This package contains the largest number of Exception classes (45 in all) in JDK 6. From all communication possibilities CORBA is portable between various languages; however, with this comes more complexity.
+org.omg.PortableInterceptor[edit]
+The org.omg.PortableInterceptor package contains the largest number of interfaces (39 in all) in JDK 6. It provides a mechanism to register ORB hooks through which ORB services intercept the normal flow of execution of the ORB.
+Critical security issues with the Java SE plugin[edit]
+Several critical security vulnerabilities have been reported, the most recent in January 2013.[5][6] Security alerts from Oracle announce critical security-related patches to Java SE.[7]
+References[edit]
+
+
+^ "Java SE Overview - at a Glance". Oracle Corporation. Retrieved January 1, 2013.&#160;
+^ "Java SE 6 Release Contents". Oracle Corporation and/or its affiliates. Retrieved January 1, 2013.&#160;
+^ "Java SE 7 Features and Enhancements". Oracle Corporation. Retrieved January 1, 2013.&#160;
+^ "Java Specification Requests Overview". Oracle Corporation and/or its affiliates. Retrieved January 1, 2013.&#160;
+^ Dangerous vulnerability in latest Java version The H Security, Jan. 10, 2013
+^ Another critical Java vulnerability puts 1 billion users at risk Computerworld Security Blog, Sept. 25, 2012
+^ Oracle Critical Patch Updates, Security Alerts
+
+
+External links[edit]
+
+
+
+
+Java portal
+
+
+
+
+Oracle Technology Network's Java SE
+Java Training
+Java SE 8 API Javadocs
+Java SE API documentation
+JSR 270 (Java SE 6)
+1.8
+1.7
+1.6
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Java
+
+
+
+
+
+
+Java platforms
+
+
+
+Java language
+JVM
+Micro Edition
+Standard Edition
+Enterprise Edition
+Java Card
+Android SDK
+
+
+
+
+
+
+
+
+
+
+
+Oracle technologies
+
+
+
+Squawk
+Java Development Kit
+OpenJDK
+Java virtual machine
+JavaFX
+Maxine VM
+
+
+
+
+
+
+
+
+Platform technologies
+
+
+
+Applets
+Servlets
+MIDlets
+JSP
+Web Start (JNLP)
+
+
+
+
+
+
+
+
+Major third-party technologies
+
+
+
+Eclipse
+GNU Classpath
+GWT
+Harmony
+Hibernate
+IcedTea
+Jazelle
+Spring
+Struts
+TopLink
+WildFly
+
+
+
+
+
+
+
+
+History
+
+
+
+Java version history
+Java Community Process
+Sun Microsystems
+Free Java implementations
+
+
+
+
+
+
+
+
+Major programming languages
+
+
+
+BeanShell
+Clojure
+Groovy
+Oxygene
+Java Tcl
+JRuby
+Jython
+Processing
+Rhino
+Scala
+more…
+
+
+
+
+
+
+
+
+Java conferences
+
+
+
+JavaOne
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Java_Platform,_Standard_Edition&amp;oldid=687112894"					
+				Categories: Computing platformsJava platformJava specification requests				
+							
+		
+		
+			

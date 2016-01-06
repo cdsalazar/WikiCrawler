@@ -1,0 +1,257 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Concepts (C++)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (July 2012)
+
+
+
+
+
+
+
+This article relies too much on references to primary sources. Please improve this article by adding secondary or tertiary sources. (July 2012)
+
+
+
+
+
+
+
+This article may be too technical for most readers to understand. Please help improve this article to make it understandable to non-experts, without removing the technical details. The talk page may contain suggestions. (July 2012)
+
+
+
+
+
+
+
+
+Concepts and the related notion of axioms were an extension to C++'s template system proposed for C++11. They were designed to improve compiler diagnostics and to allow programmers to codify in the program some formal properties of templates that they write. Incorporating these limited formal specifications into the program (in addition to improving code clarity) can guide some compiler optimizations, and can potentially help improve program reliability through the use of formal verification tools to check that the implementation and specification actually match.
+In July 2009, the C++11 committee decided to remove concepts from the draft standard, as they were considered "not ready" for C++11.[1][2] There are unofficial plans to add concepts back in a future version of the standard in some form,[3] but no official decision has been made yet. This article documents concepts as they last appeared in a published working paper.[4] A preliminary version of concepts for C++ was implemented as ConceptGCC, and will be made available in GCC 6.[5]
+There are plans for a form of concepts to be introduced into C++ in a cut down form called Concepts Lite (it checks function arguments, but not their usage), with plans to extend it to be fully functional concepts at a later date (using the revised and new syntax, without requiring the C++0x style of concept definition).[6]
+
+
+
+Contents
+
+
+1 Motivation
+2 Concept definition
+3 Concept maps
+4 Axioms
+5 See also
+6 Notes
+7 References
+8 External links
+
+
+
+Motivation[edit]
+C++ class templates and function templates must impose restrictions on the types that they take. For instance, the standard library containers require that the contained types be assignable. Unlike the dynamic polymorphism that class inheritance hierarchies exhibit, where a function that accepts an object of type Foo&amp; can be passed any subtype of Foo, for templates any class can be supplied as a template parameter so long as it supports all of the operations that users of actual instantiations of that type use. In the case of polymorphism, the requirement an argument must meet is clear (being a subtype of Foo), but in the case of a template the interface an object must meet is implicit in the implementation of that template. Concepts provide a mechanism for codifying the interface that a template parameter must meet.
+The primary motivation of the introduction of concepts is to improve the quality of compiler error messages. If a programmer attempts to use a type that does not provide the interface a template requires, the compiler will generate an error. However, such errors are often difficult to understand, especially for less experienced programmers. There are two main reasons for this. First, error messages are often displayed with template parameters spelled out in full; this leads to extremely large error messages. On some compilers, simple errors can generate several kilobytes of error messages. Second, they often do not immediately refer to the actual location of the error. For example, if the programmer tries to construct a vector of objects that do not have a copy constructor, the first error almost always refers to the code within the vector class itself that attempts to copy construct its contents; the programmer must be skilled enough to understand that the real error was that the type doesn't support everything the vector class requires.
+In an attempt to resolve this issue, it was proposed that C++11 add the language feature of concepts. Similar to how object-oriented programming (OOP) uses a base class to define restrictions on what a type can do, a concept is a named construct that specifies what a type must provide. Unlike OOP, however, the concept definition itself is not always associated explicitly with the type being passed into the template, but with the template definition itself:
+
+
+template&lt;LessThanComparable T&gt;
+const T&amp; min(const T &amp;x, const T &amp;y) {
+    return (y &lt; x) ? y : x;
+}
+
+Rather than using an arbitrary class or typename for the template type parameter, it uses LessThanComparable, which is a concept that was previously defined. If a type passed into the min function template does not satisfy the requirements of the LessThanComparable concept, then a compile error will result, telling the user that the type used to instantiate the template does not fit the LessThanComparable concept.
+A more generalized form of the concept is as follows:
+
+
+template&lt;typename T&gt; requires LessThanComparable&lt;T&gt;
+const T&amp; min(const T &amp;x, const T &amp;y) {
+    return (y &lt; x) ? y : x;
+}
+
+The keyword requires begins a list of requirements, which are specified by one or more concepts. In the requirement list, multiple concepts can be combined with logical operators like those of negation (!) and logical conjunction (&amp;&amp;) in order to form template constraints. For example, a user may prevent the use of types meeting the requirements of the concept 'LessThanComparable&lt;T&gt;' by using the syntax 'requires !LessThanComparable&lt;T&gt;.' This mechanism can be used in a way similar to template specialization. A general template would handle types with fewer features, explicitly disallowing the use of other, more feature-rich, concepts. Those concepts, in turn, might have their own specializations that could use those particular features to achieve greater performance or some other functionality. The operation &amp;&amp; of logical conjunction is also easy to use in the requirement list. For example, a user could specify that a template requires the objects passed to it to be of types having both assignment and copy construction simply by adding requires Assignable&lt;T&gt; &amp;&amp; CopyConstructible&lt;T&gt; to such a template's declaration and/or definition.
+Concept definition[edit]
+Concepts are defined as follows:
+
+
+auto concept LessThanComparable&lt;typename T&gt; {
+    bool operator&lt;(T, T);
+}
+
+The keyword auto, in this instance, means that any type that supports the operations specified in the concept will be considered to support the concept. Without the use of the auto keyword, the type must use a concept map in order to declare itself as supporting the concept.
+This concept says that any type that has an operator &lt; that takes two objects of that type and returns a bool will be considered LessThanComparable. The operator need not be a free-standing function; it could be a member function of the type T.
+Concepts can involve multiple objects as well. For example, concepts can express that a type is convertible from one type to another:
+
+
+auto concept Convertible&lt;typename T, typename U&gt; {
+    operator U(const T&amp;);
+}
+
+In order to use this in a template, it must use a generalized form of concept usage:
+
+
+template&lt;typename U, typename T&gt; requires Convertible&lt;T, U&gt;
+U convert(const T&amp; t) {
+    return t;
+}
+
+Concepts may be composed. For example, given a concept named Regular:
+
+
+concept InputIterator&lt;typename Iter, typename Value&gt; {
+    requires Regular&lt;Iter&gt;;
+    Value operator*(const Iter&amp;);
+    Iter&amp; operator++(Iter&amp;);
+    Iter operator++(Iter&amp;, int);
+}
+
+The first template parameter to the InputIterator concept must conform to the Regular concept.
+Concepts can also be derived from one another, like inheritance. Like in class inheritance, types that meet the requirements of the derived concept also meet the requirements of the base concept. It is defined as per class derivation:
+
+
+concept ForwardIterator&lt;typename Iter, typename Value&gt; : InputIterator&lt;Iter, Value&gt; {
+    // Add other requirements here.
+}
+
+Typenames can also be associated with a concept. These impose the requirement that, in templates that use those concepts, these typenames are available:
+
+
+concept InputIterator&lt;typename Iter&gt; {
+    typename value_type;
+    typename reference;
+    typename pointer;
+    typename difference_type;
+    requires Regular&lt;Iter&gt;;
+    requires Convertible&lt;reference, value_type&gt;;
+    reference operator*(const Iter&amp;); // dereference
+    Iter&amp; operator++(Iter&amp;); // pre-increment
+    Iter operator++(Iter&amp;, int); // post-increment
+    // ...
+}
+
+Concept maps[edit]
+Concept maps allow types to be explicitly bound to a concept. They also allow types to, where possible, adopt the syntax of a concept without changing the definition of the type. As an example:
+
+
+concept_map InputIterator&lt;char*&gt; {
+    typedef char value_type;
+    typedef char&amp; reference;
+    typedef char* pointer;
+    typedef std::ptrdiff_t difference_type;
+};
+
+This map fills in the required typenames for the InputIterator concept when applied to char* types.
+As an added degree of flexibility, concept maps themselves can be templated. The above example can be extended to all pointer types:
+
+
+template&lt;typename T&gt; concept_map InputIterator&lt;T*&gt; {
+    typedef T value_type;
+    typedef T&amp; reference;
+    typedef T* pointer;
+    typedef std::ptrdiff_t difference_type;
+};
+
+Further, concept maps can act as mini-types, with function definitions and other constructs commonly associated with classes:
+
+
+concept Stack&lt;typename X&gt; {
+    typename value_type;
+    void push(X&amp;, const value_type&amp;);
+    void pop(X&amp;);
+    value_type top(const X&amp;);
+    bool empty(const X&amp;);
+};
+
+template&lt;typename T&gt; concept_map Stack&lt;std::vector&lt;T&gt;&gt; {
+    typedef T value_type;
+    void push(std::vector&lt;T&gt;&amp; v, const T&amp; x) { v.push_back(x); }
+    void pop(std::vector&lt;T&gt;&amp; v) { v.pop_back(); }
+    T top(const std::vector&lt;T&gt;&amp; v) { return v.back(); }
+    bool empty(const std::vector&lt;T&gt;&amp; v) { return v.empty(); }
+};
+
+This concept map allows templates that take types that implement the concept Stack to take a std::vector, remapping the function calls directly to the std::vector calls. Ultimately, this allows a pre-existing object to be converted, without touching the definition of the object, into an interface that a function template can utilize.
+Finally, some requirements can be checked using static assertions. These can verify some requirements that templates need, but are really aimed at a different problem.
+Axioms[edit]
+Axioms are a facility pertaining to concepts supplied by C++11 to express the semantic properties of concepts. For example, the concept Semigroup can be defined with an axiom Associativity as
+
+
+concept Semigroup&lt;typename Op, typename T&gt; : CopyConstructible&lt;T&gt; {
+    T operator()(Op, T, T);
+
+    axiom Associativity(Op op, T x, T y, T z) {
+        op(x, op(y, z)) == op(op(x, y), z);
+    }
+}
+
+Compilers are allowed, but not required, to take advantage of the semantics specified by axioms to perform optimizations that possibly have side-effects on the observable behavior of the program, which are typically prohibited (with few exceptions such as copy constructor elision). In the above example, compilers may reassociate nested calls to operator() of type Op on several values of type T provided that there is a concept map for types Op and T to the concept Semigroup.
+Axioms can also assist in software verification, software testing, and other program analyses and transformations.
+See also[edit]
+
+Concept (generic programming)
+Type class
+
+Notes[edit]
+
+^ InformIT: The Removal of Concepts From C++11
+^ “At this meeting [of Committee, Frankfurt, July 2009], Concepts, the major feature of C++ 0x, which enables constrained genericity, or template argument prototyping, has been removed from the C++0x draft.” Michael Wong, the IBM and Canadian representative to the C++ Standard and OpenMP Committee. The View (or trip report) from the July 2009 C++ Standard meeting
+^ Michael Wong: "I am sure this will not be the last we will hear of it." [1]
+Bjarne Stroustrup: "all expressed support for "concepts," just "later" and "eventually." ... I hope we will see "concepts" in a revision of C++ in maybe five years." [2]
+Beman Dawes: "The committee is very much in favor of Concepts ... Committee members seem to lean toward letting the two rival Concept teams go back to work outside of the committee process. The expectation being they will come back to the committee when they are ready to restart the standardization process."[3]
+^ "N2914 "Working Draft, Standard for Programming Language C++"" (PDF). 22 June 2009.&#160;
+^ ""GCC 6 Release Series - Changes, New Features, and Fixes"".&#160;
+^ http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3701.pdf
+
+References[edit]
+
+Sutton, Andrew; Stroustrup, Bjarne (2011). "Design of Concept Libraries for C++" (PDF).&#160;
+
+External links[edit]
+
+C++ Concepts: a Postmortem
+A Concept Design for C++ - Bjarne Stroustrup on Channel 9
+A Concept Design for C++ concerning work post-rejection from C++11
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Concepts_(C%2B%2B)&amp;oldid=685987816"					
+				Categories: C++Hidden categories: Articles needing additional references from July 2012All articles needing additional referencesArticles lacking reliable references from July 2012All articles lacking reliable referencesWikipedia articles that are too technical from July 2012All articles that are too technicalArticles needing expert attention from July 2012All articles needing expert attentionUse dmy dates from January 2012Articles with example C++ code				
+							
+		
+		
+			

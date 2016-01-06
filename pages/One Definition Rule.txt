@@ -1,0 +1,133 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			One Definition Rule
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				The One Definition Rule (ODR) is an important concept in the C++ programming language. It is defined in the ISO C++ Standard (ISO/IEC 14882) 2003, at section 3.2.
+
+
+
+Contents
+
+
+1 Summary
+2 Examples
+3 More than one definition
+4 Definitions of static const data members
+5 See also
+6 References
+
+
+
+Summary[edit]
+In short, the ODR states that:
+
+In any translation unit, a template, type, function, or object can have no more than one definition. Some of these can have any number of declarations. A definition provides an instance.
+In the entire program, an object or non-inline function cannot have more than one definition; if an object or function is used, it must have exactly one definition. You can declare an object or function that is never used, in which case you don't have to provide a definition. In no event can there be more than one definition.
+Some things, like types, templates, and extern inline functions, can be defined in more than one translation unit. For a given entity, each definition must be the same. Non-extern objects and functions in different translation units are different entities, even if their names and types are the same.
+
+Some violations of the ODR must be diagnosed by the compiler. Other violations, particularly those that span translation units, are not required to be diagnosed.[1]
+Examples[edit]
+In general, a translation unit shall contain no more than one definition of any class type. In this example, two definitions of the class type C occur in the same translation unit. This typically occurs if a header file is included twice by the same source file without appropriate header guards.
+
+
+class C {}; // first definition of C
+class C {}; // error, second definition of C
+
+In the following, forming a pointer to S or defining a function taking a reference to S are examples of legal constructs, because they do not require the type of S to be complete. Therefore, a definition is not required.[2]
+Defining an object of type S, a function taking an argument of type S, or using S in a sizeof expression are examples of contexts where S must be complete, and therefore require a definition.[2]
+
+
+struct S;     // declaration of S
+S * p;        // ok, no definition required
+void f(S&amp;);   // ok, no definition required
+void f(S*);   // ok, no definition required 
+S f();        // ok, no definition required - this is a function declaration only!
+
+S s;          // error, definition required
+sizeof(S);    // error, definition required
+
+More than one definition[edit]
+In certain cases, there can be more than one definition of a type or a template. A program consisting of multiple header files and source files will typically have more than one definition of a type, but not more than one definition per translation unit.
+If a program contains more than one definition of a type, then each definition must be equivalent.[3]
+Definitions of static const data members[edit]
+In pre-standard C++, all static data members required a definition outside of their class. However, during the C++ standardization process it was decided to lift this requirement for static const integral members. The intent was to allow uses such as:
+
+
+struct C {
+  static const int N = 10;
+};
+char data[C::N]; // N "used" without out-of-class definition
+
+without a namespace scope definition for N.
+Nevertheless, the wording of the 1998 C++ standard still required a definition if the member was used in the program.[4] This included the member appearing anywhere except as the operand to sizeof or typeid, effectively making the above ill-formed.[5]
+This was identified as a defect, and the wording was adjusted to allow such a member to appear anywhere a constant expression is required, without requiring an out-of-class definition. This includes array bounds, case expressions, static member initializers, and nontype template arguments.[6]
+
+
+struct C {
+  static const int N = 10;
+  static const int U = N; // Legal per C++03
+};
+
+char data[C::N]; // Legal per C++03
+
+template&lt;int&gt; struct D;
+
+template&lt;&gt; struct D&lt;C::N&gt; {}; // Legal per C++03
+
+However, using a static const integral member anywhere except where an integral constant-expression is required requires a definition:[7]
+
+
+struct C {
+  static const int N = 10;
+};
+
+int main() {
+  int i = C::N; // ill-formed, definition of C::N required
+}
+
+This requirement was relaxed in a later standard, C++11.[7]
+See also[edit]
+
+Header file
+Include guard
+
+References[edit]
+
+
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §3.2 One definition rule [basic.def.odr] para. 3
+^ a b ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §3.2 One definition rule [basic.def.odr] para. 4
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §3.2 One definition rule [basic.def.odr] para. 5
+^ ISO/IEC (1998). ISO/IEC 14882:1998(E): Programming Languages - C++ §9.4.2 Static data members [class.static.data] para. 4
+^ ISO/IEC (1998). ISO/IEC 14882:1998(E): Programming Languages - C++ §3.2 One definition rule [basic.def.odr] para. 2
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §5.19 Constant expressions [expr.const] para. 1
+^ a b "When is a definition of a static data member required?". WG21. Retrieved 2009-04-15.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=One_Definition_Rule&amp;oldid=667770874"					
+				Categories: C++Hidden categories: Articles with example C++ code				
+							
+		
+		
+			

@@ -1,0 +1,217 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Trait (computer programming)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article may be too technical for most readers to understand. Please help improve this article to make it understandable to non-experts, without removing the technical details. The talk page may contain suggestions. (March 2012)
+
+
+In computer programming, a trait is a concept used in object-oriented programming: a trait represents a collection of methods that can be used to extend the functionality of a class. Essentially a trait is similar to a class made only of concrete methods that is used to extend another class with a mechanism similar to multiple inheritance, but paying attention to name conflicts, hence with some support from the language for a name-conflict resolution policy to use when merging.
+Traits provide a "simple conceptual model for structuring object-oriented programs"[1][2] similar to mixins. Traits provide a simple way to create classes that reuse behavior from software components.
+Traits are somewhat between an interface and a mixin: an interface is made only of method signatures, while a trait includes also the full method definitions, on the other side mixins include method definitions, but they can also carry state through attributes while traits usually don't.
+An interface is used by a class by "implementing" its methods. A mixin is used by a class by mixing-into itself all the features of the mixin: i.e. the attributes and the methods. A trait is used by a class by merging the collection of extra methods provided with some mechanism to resolve name conflicts.
+Hence an object defined as a trait is created as the composition of methods, which can be used by other classes without requiring multiple inheritance. In case of a naming collision, when more than one trait to be used by a class has a method with the same name, the programmer must explicitly disambiguate which one of those methods will be used in the class; thus manually solving the "diamond problem" of repeated inheritance. This is different from other composition methods in object-oriented programming, where conflicting names are automatically resolved by scoping rules.
+Whereas mixins can be composed only using the inheritance operation, traits offer a much wider selection of operations, including:[3][4]
+
+symmetric sum: an operation that merges two disjoint traits to create a new trait
+override (or asymmetric sum): an operation that forms a new trait by adding additional methods possibly overriding some of the methods of an existing trait
+alias: an operation that creates a new trait by adding a new name for an existing method
+and exclusion: an operation that forms a new trait by removing a method from an existing trait. (Combined with the alias operation yields a shallow rename operation).
+
+A trait differs from an interface in that it provides implementations of its methods, not just type signatures.
+
+
+
+Contents
+
+
+1 Properties
+2 Supported languages
+3 Implementation
+4 Examples
+
+4.1 PHP
+
+
+5 References
+6 External links
+
+
+
+Properties[edit]
+Traits have the following properties:
+
+Provides a set of methods that implement behaviour.
+Requires a set of methods that parameterize the provided behaviour.
+Traits can be composed:
+
+Trait composition is symmetric; the ordering of adding traits does not matter. For example, given trait S = A + B, then trait T = B + A is the same as S.
+Conflicting methods are excluded from the composition.
+Nested traits are equivalent to flattened traits; the composition hierarchy does not affect the traits behaviour. For example given trait S = A + X, where X = B + C, then trait T = A + B + C is the same as S.[5]
+
+
+
+Supported languages[edit]
+Traits come from the Self programming language[6] and are supported by the following programming languages:
+
+Fortress programming language: Where they also play the role of types.
+Perl 5: Implemented with the Moose module, they are called "roles".
+Perl 6: It calls them "roles", and are a part of the language.
+JavaScript Delegation – Functions as Roles (Traits and Mixins)
+Java 8: Default methods[7]
+Squeak Smalltalk
+D: using __traits language extension[8] and std.traits module[9] helper templates, for compile time traits. Available in D 2 since version 2.003, with later extended functionality. Together with other language features (notably templets and mixins) they allow flexible automatic generation of methods based on interfaces and types. D also allows explicit aliasing of member methods and variables, including forwarding to multiple member classes.[10]
+Pharo
+PHP 5.4[11]
+Ruby: Modules can be used to implement traits.[12]
+Rust
+Lasso[13]
+Scala[14] The busy Java developer's guide to Scala: Of traits and behaviors[15]
+Python: using a Traits package[16]
+Groovy: From version 2.3[17]
+Kotlin[18]
+Racket[19]
+
+Traits for the Smalltalk programming language were initially developed at the Software Composition Group, University of Bern.[20] AmbientTalk combines the properties of Self traits (object-based multiple inheritance) and Smalltalk's Squeak traits (requiring explicit composition of traits by the programmer); AmbientTalk builds upon the research on stateful and freezable traits to enable state within traits, which was not allowed in the first definitions.[21]
+The concept has been applied as libraries to mainstream languages like C++, PHP, and JavaScript.[22]
+Abstract classes as mixins in the multiple-inheritance Curl programming language permit method implementations and thus constituted traits by another name. Module mixins in Ruby are similar to traits to some degree. Racket supports traits as a library and uses macros, structures, and first-class classes to implement them.
+Implementation[edit]
+In computer programming, a traits class is a class template used to associate state and/or behaviour to a compile-time entity, typically a data type or a constant, without modifying the existing entity. In the C++ programming language and PHP programming language, this is normally achieved by defining a primary class template, and creating explicit or partial specializations for the relevant types.
+It is used in Standard Template Library and the C++ standard library to support generic container classes. The technique is used extensively in the Boost TypeTraits library.
+Traits function differently in PHP. Since version 5.4.0,[11] PHP allows users to specify templates that provide the ability to "inherit" from more than one (trait-)class, as a pseudo multiple inheritance. Traits in PHP are not as dynamic as C++ in using different data types.
+Examples[edit]
+PHP[edit]
+Since version 5.4.0 PHP allows traits. This example uses one template class (trait) to enhance another class:
+
+
+// The template
+trait TSingleton
+{
+    private static $_instance = null;
+
+    public static function getInstance()
+    {
+        if (null === self::$_instance)
+        {
+            self::$_instance = new self();
+        }
+
+        return self::$_instance;
+    }
+}
+
+class FrontController
+{
+    use TSingleton;
+}
+
+// Can also be used in already extended classes
+class WebSite extends SomeClass
+{
+    use TSingleton;
+}
+
+This gives the user power to simulate aspects of multiple inheritance:
+
+
+trait TBounding
+{
+    public $x, $y, $width, $height;
+}
+
+trait TMoveable
+{
+    public function moveTo($x, $y)
+    {
+        // ...
+    }
+}
+
+trait TResizeable
+{
+    public function resize($newWidth, $newHeight)
+    {
+        // ...
+    }
+}
+
+class Rectangle
+{
+    use TBounding, TMoveable, TResizeable;
+
+    public function fillColor($color)
+    {
+        // ...
+    }
+}
+
+References[edit]
+
+
+^ Nathanael Schärli, Stéphane Ducasse, Oscar Nierstrasz, Andrew P. Black. Traits: Composable Units of Behaviour. Proceedings of the European Conference on Object-Oriented Programming (ECOOP). Lecture Notes in Computer Science, Volume 2743, Springer-Verlag, 2003, pp. 248-274
+^ Stéphane Ducasse, Oscar Nierstrasz, Nathanael Schärli, Roel Wuyts, Andrew P. Black: Traits: A mechanism for fine-grained reuse. ACM Trans. Program. Lang. Syst. 28(2): 331-388 (2006)
+^ Fisher, Kathleen; Reppy, John (2003). "Statically typed traits" (PDF). University of Chicago.&#160;
+^ Fisher, Kathleen; Reppy, John (2003). "A typed calculus of traits" (PDF). University of Chicago.&#160;
+^ http://web.cecs.pdx.edu/~black/publications/TR_CSE_02-012.pdf
+^ G. Curry, L. Baer, D. Lipkie, and B. Lee. Traits: An approach to multiple-inheritance subclassing. In SIGOA conference on Office Information Systems, pages 1–9, Philadelphia, Pennsylvania, USA, 1982. ACM Press
+^ "Default Methods".&#160;
+^ "Traits".&#160;
+^ "std.traits".&#160;
+^ "Classes".&#160;
+^ a b Marr, Stefan. "Request for Comments: Horizontal Reuse for PHP". The PHP.net wiki. The PHP Group. Retrieved 31 January 2011.&#160;
+^ David. "Ruby Naseby".&#160;
+^ "Traits — LassoGuide 9.2 documentation".&#160;
+^ "A Tour of Scala: Traits".&#160;
+^ "The busy Java developer's guide to Scala: Of traits and behaviors".&#160;
+^ "Enthought Traits".&#160; (NOTE: Enthought Traits are not the same kind of Traits as described in this article)
+^ Codehaus Groovy Community. "Groovy - Home".&#160;
+^ "Traits".&#160;
+^ "Traits".&#160;
+^ Software Composition Group. "SCG: SCG Bibliography".&#160;
+^ Adding State and Visibility Control to Traits Using Lexical Nesting. Genoa Proceedings of the 23rd European Conference on ECOOP 2009 --- Object-Oriented Programming table of contents. Editor: Sophia Drossopoulou Department of Computing, Imperial College London, London, UK SW7 2AZ. Pages 220 - 243. Publisher Springer-Verlag Berlin, Heidelberg ©2009 ISBN 978-3-642-03012-3 doi:10.1007/978-3-642-03013-0_11. Appears in LNCS: Lecture Notes In Computer Science.
+^ Robust Trait Composition for Javascript. Tom Van Cutsem, Mark S. Miller
+
+
+External links[edit]
+
+Generic Programming Techniques from Boost
+iterator_traits&lt;Iterator&gt; from SGI
+Traits: a new and useful template technique, Nathan C. Myers, C++ Report, June 1995 issue
+Traits - PHP Documentation
+Traits
+traits.js - Traits for JavaScript
+CocktailJS - ANNOTATIONS. TRAITS. TALENTS., April 2013
+The many talents of JavaScript for generalizing Role Oriented Programming approaches like Traits and Mixins, April 11, 2014
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Trait_(computer_programming)&amp;oldid=690807394"					
+				Categories: Type theoryC++Programming language topicsHidden categories: Wikipedia articles that are too technical from March 2012All articles that are too technicalArticles needing expert attention from March 2012All articles needing expert attention				
+							
+		
+		
+			

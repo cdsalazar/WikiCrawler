@@ -1,0 +1,340 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Memory address
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2009)
+
+
+In computing, memory address is a data concept used at various levels by software and hardware to access the computer's primary storage memory. Memory addresses are fixed-length sequences of digits conventionally displayed and manipulated as unsigned integers.[1] Such numerical semantic bases itself upon features of CPU (such as the instruction pointer and incremental address registers), as well upon use of the memory like an array endorsed by various programming languages.
+
+
+
+Contents
+
+
+1 Types of memory addresses
+2 Unit of address resolution
+
+2.1 Word size versus address size
+
+
+3 Contents of each memory location
+
+3.1 Address space in application programming
+
+
+4 Addressing schemes
+5 Memory models
+
+5.1 Memory models in x86 architecture
+
+
+6 See also
+7 References
+
+
+
+Types of memory addresses[edit]
+There are many types of memory addresses. In other words, a computer, and even one program may have several different memory address spaces.
+A digital computer's memory, more specifically main memory, consists of many memory locations, each having a physical address, a code, which the CPU (or other device) can use to access it. Generally only system software, i.e. the BIOS, operating systems, and some specialized utility programs (e.g., memory testers), address physical memory using machine code operands or processor registers, instructing the CPU to direct a hardware device, called the memory controller, to use the memory bus or system bus, or separate control, address and data busses, to execute the program's commands. The memory controllers' bus consists of a number of parallel lines, each represented by a binary digit (bit). The width of the bus, and thus the number of addressable storage units, and the number of bits in each unit, varies among computers.
+A computer program uses memory addresses to execute machine code, store and retrieve data. Most application programs do not have a knowledge about physical addresses. Rather, they address logical addresses, or virtual addresses, using computer's memory management unit and operating system memory mapping; see below.
+Unit of address resolution[edit]
+See also: Word (computer architecture) and Binary prefix § Main memory
+Most modern computers are byte-addressable, with each address identifying a single eight bit byte of storage; data too large to be stored in a single byte may reside in multiple bytes occupying a sequence of consecutive addresses. There exist word-addressable computers, where minimal addressable storage unit is exactly the processor's word. For example, the Data General Nova minicomputer, and the Texas Instruments TMS9900 and National Semiconductor IMP-16 microcomputers used 16 bit words, and there were many 36-bit mainframe computers (e.g., PDP-10) which used 18-bit word addressing, not byte addressing, giving an address space of 218 36-bit words, approximately 1 megabyte of storage. The efficiency of addressing of memory depends on the bit size of the bus used for addresses – the more bits used, the more addresses are available to the computer. For example, an 8-bit-byte-addressable machine with a 20-bit address bus (e.g. Intel 8086) can address 220 (1,048,576) memory locations, or one MiB of memory, while a 32-bit bus (e.g. Intel 80386) addresses 232 (4,294,967,296) locations, or a 4 GiB address space. In contrast, a 36-bit word-addressable machine with an 18-bit address bus addresses only 218 (262,144) 36-bit locations (9,437,184 bits), equivalent to 1,179,648 8-bit bytes, or 1152 KB, or 1.125 MiB—slightly more than the 8086.
+Some older computers (decimal computers), were decimal digit-addressable. For example, each address in the IBM 1620's magnetic-core memory identified a single six bit binary-coded decimal digit, consisting of a parity bit, flag bit and four numerical bits. The 1620 used 5-digit decimal addresses, so in theory the highest possible address was 99,999. In practice, the CPU supported 20,000 memory locations, and up to two optional external memory units could be added, each supporting 20,000 addresses, for a total of 60,000 (00000–59999).
+Word size versus address size[edit]
+A word size is characteristic to a given computer architecture. It denotes the number of digits that a CPU can process at one time. Modern processors, including embedded systems, usually have a word size of 8, 16, 24, 32 or 64 bits; most current general purpose computers use 32 or 64 bits. Many different sizes have been used historically, including 8, 9, 10, 12, 18, 24, 36, 39, 40, 48 and 60 bits.
+Very often, when referring to the word size of a modern computer, one is also describing the size of address space on that computer. For instance, a computer said to be "32-bit" also usually allows 32-bit memory addresses; a byte-addressable 32-bit computer can address 232 = 4,294,967,296 bytes of memory, or 4 gibibytes (GiB). This seems logical and useful, as it allows one memory address to be efficiently stored in one word.
+However, this does not always hold true. Computers can have memory addresses larger or smaller than their word size. For instance, many 8-bit processors, such as the MOS Technology 6502, supported 16-bit addresses— if not, they would have been limited to a mere 256 bytes of memory addressing. The 16-bit Intel 8088 and Intel 8086 supported 20-bit addressing via segmentation, allowing them to access 1 MiB rather than 64 KiB of memory. All Intel Pentium processors since the Pentium Pro include Physical Address Extensions (PAE) which support mapping 36-bit physical addresses to 32-bit virtual addresses.
+In theory, modern byte-addressable 64-bit computers can address 264 bytes (16 exbibytes), but in practice the amount of memory is limited by the CPU, the memory controller, or the printed circuit board design (e.g. number of physical memory connectors or amount of soldered-on memory).
+Contents of each memory location[edit]
+See also: binary data
+Each memory location in a stored-program computer holds a binary number or decimal number of some sort. Its interpretation, as data of some data type or as an instruction, and use are determined by the instructions which retrieve and manipulate it.
+Some early programmers combined instructions and data in words as a way to save memory, when it was expensive: The Manchester Mark 1 had space in its 40-bit words to store little bits of data – its processor ignored a small section in the middle of a word – and that was often exploited as extra data storage.[citation needed] Self-replicating programs such as viruses treat themselves sometimes as data and sometimes as instructions. Self-modifying code is generally deprecated nowadays, as it makes testing and maintenance disproportionally difficult to the saving of a few bytes, and can also give incorrect results because of the compiler or processor's assumptions about the machine's state, but is still sometimes used deliberately, with great care.
+Address space in application programming[edit]
+In modern multitasking environment, an application process usually has in its address space (or spaces) chunks of memory of following types:
+
+Machine code, including:
+
+program's own code (historically known as code segment or text segment);
+shared libraries.
+
+
+Data, including:
+
+initialized data (data segment);
+uninitialized (but allocated) variables;
+run-time stack;
+heap;
+shared memory and memory mapped files.
+
+
+
+Some parts of address space may be not mapped at all.
+Addressing schemes[edit]
+Main article: Addressing mode
+A computer program can access an address given explicitly – in low-level programming this is usually called an absolute address, or sometimes a specific address, and is known as pointer data type in higher-level languages. But a program can also use relative address which specifies a location in relation to somewhere else (the base address). There are many more indirect addressing modes.
+Mapping logical addresses to physical and virtual memory also adds several levels of indirection; see below.
+Memory models[edit]
+Many programmers prefer to address memory such that there is no distinction between code space and data space (cf. above), as well as from physical and virtual memory (see below) — in other words, numerically identical pointers refer to exactly the same byte of RAM.
+However, many early computers did not support such a flat memory model — in particular, Harvard architecture machines force program storage to be completely separate from data storage. Many modern DSPs (such as the Motorola 56000) have three separate storage areas — program storage, coefficient storage, and data storage. Some commonly used instructions fetch from all three areas simultaneously — fewer storage areas (even if there were the same total bytes of storage) would make those instructions run slower.
+Memory models in x86 architecture[edit]
+Main article: Intel Memory Model
+Early x86 computers used the segmented memory model addresses based on a combination of two numbers: a memory segment, and an offset within that segment. Some segments were implicitly treated as code segments, dedicated for instructions, stack segments, or normal data segments. Although the usages were different, the segments did not have different memory protections reflecting this. In the flat memory model all segments (segment registers) are generally set to zero, and only offsets are variable.
+See also: Long mode
+See also[edit]
+
+Memory model (programming)
+Memory allocation
+Memory address register
+Base address
+Offset (computer science), also known as a displacement
+Endianness
+Memory management unit (MMU)
+Page table
+Memory protection
+Memory segmentation
+Low-level programming language
+
+References[edit]
+
+
+^ http://www.personal.psu.edu/dlw27/IST225/Hex_Dec_Memory.pdf
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Memory_address&amp;oldid=682671104"					
+				Categories: Computer memoryHidden categories: Articles needing additional references from January 2009All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from October 2011				
+							
+		
+		
+			

@@ -1,0 +1,281 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Decimal data type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Some programming languages (or compilers for them) provide a built-in (primitive) or library decimal data type to represent non-repeating decimal fractions like 0.3 and -1.17 without rounding, and to do arithmetic on them. Examples are the decimal.Decimal type of Python, and analogous types provided by other languages.
+
+
+
+Contents
+
+
+1 Rationale
+2 Standard formats
+3 Language support
+4 References
+
+
+
+Rationale[edit]
+Fractional numbers are supported on most programming languages as floating-point numbers or fixed-point numbers. However, such representations typically restrict the denominator to a power of two. Most decimal fractions (or most fractions in general) cannot be represented exactly as a fraction with a denominator that is a power of two. For example, the simple decimal fraction 0.3 (3/10) might be represented as 5404319552844595/18014398509481984 (0.299999999999999988897769...). This inexactness causes many problems that are familiar to experienced programmers. For example, the expression 0.1 * 7 == 0.7 might counterintuitively evaluate to false in some systems, due to the inexactness of the representation of decimals.
+Although all decimal fractions are fractions, and thus it is possible to use a rational data type to represent it exactly, it may be more convenient in many situations to consider only non-repeating decimal fractions (fractions whose denominator is a power of ten). For example, fractional units of currency worldwide are mostly based on a denominator that is a power of ten. Also, most fractional measurements in science are reported as decimal fractions, as opposed to fractions with any other system of denominators.
+A decimal data type could be implemented as either a floating-point number or as a fixed-point number. In the fixed-point case, the denominator would be set to a fixed power of ten. In the floating-point case, a variable exponent would represent the power of ten to which the mantissa of the number is multiplied.
+Languages that support a rational data type usually allow the construction of such a value from a string, instead of a base-2 floating-point number, due to the loss of exactness the latter would cause. Usually the basic arithmetic operations ('+', '−', '×', '/', integer powers) and comparisons ('=', '&lt;', '&gt;', '≤') would be extended to act on them — either natively or through operator overloading facilities provided by the language. These operations may be translated by the compiler into a sequence of integer machine instructions, or into library calls. Support may also extend to other operations, such as formatting, rounding to an integer or floating point value, etc..
+Standard formats[edit]
+IEEE 754 specifies three standard floating-point decimal data types of different precision:
+
+Decimal32 floating-point format
+Decimal64 floating-point format
+Decimal128 floating-point format
+
+Language support[edit]
+
+C# have built-in type- decimal, that indicates a 128-bit data with Precision of 28-29 significant digits, it Approximate Range of (-7.9 x 10^28 to 7.9 x 10^28) / (10^(0 to 28)). [1]
+Starting with Python 2.4, Python's standard library includes a Decimal class in the module decimal.[2]
+Ruby's standard library includes a BigDecimal class in the module bigdecimal
+Java's standard library includes a Class java.math.BigDecimal class
+In Objective-C, the Cocoa and GNUstep APIs provide an NSDecimalNumber class and an NSDecimal C datatype for representing decimals whose mantissa is up to 38 digits long, and exponent is from -128 to 127.
+Some IBM systems and SQL systems support DECFLOAT format with at least the two larger formats[3]
+ABAP's new DECFLOAT data type includes decimal64 (as DECFLOAT16) and decimal128 (as DECFLOAT34) formats[4]
+PL/I natively supports both fixed-point and floating-point decimal data.
+GNU Compiler Collection (aka gcc) provides support for decimal floats as an extension[5]
+
+References[edit]
+
+^ http://msdn.microsoft.com/en-us/library/364x0z75.aspx
+^ https://docs.python.org/library/decimal.html
+^ http://www.ibm.com/developerworks/data/library/techarticle/dm-0801chainani/
+^ http://sapignite.com/decfloat-in-abap/
+^ "GCC Manual". 6.13 Decimal Floating Types.&#160;
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Decimal_data_type&amp;oldid=652771611"					
+				Categories: Data types				
+							
+		
+		
+			

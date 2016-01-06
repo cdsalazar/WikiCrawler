@@ -1,0 +1,149 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Data integrity
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs attention from an expert in Databases. Please add a reason or a talk parameter to this template to explain the issue with the article. WikiProject Databases (or its Portal) may be able to help recruit an expert. (November 2010)
+
+
+Data integrity refers to maintaining and assuring the accuracy and consistency of data over its entire life-cycle,[1] and is a critical aspect to the design, implementation and usage of any system which stores, processes, or retrieves data. The term data integrity is broad in scope and may have widely different meanings depending on the specific context&#160;–  even under the same general umbrella of computing. This article provides only a broad overview of some of the different types and concerns of data integrity.
+Data integrity is the opposite of data corruption, which is a form of data loss. The overall intent of any data integrity technique is the same: ensure data is recorded exactly as intended (such as a database correctly rejecting mutually exclusive possibilities,) and upon later retrieval, ensure the data is the same as it was when it was originally recorded. In short, data integrity aims to prevent unintentional changes to information. Data integrity is not to be confused with data security, the discipline of protecting data from unauthorized parties.
+Any unintended changes to data as the result of a storage, retrieval or processing operation, including malicious intent, unexpected hardware failure, and human error, is failure of data integrity. If the changes are the result of unauthorized access, it may also be a failure of data security. Depending on the data involved this could manifest itself as benign as a single pixel in an image appearing a different color than was originally recorded, to the loss of vacation pictures or a business-critical database, to even catastrophic loss of human life in a life-critical system.
+
+
+
+Contents
+
+
+1 Integrity types
+
+1.1 Physical integrity
+1.2 Logical integrity
+
+
+2 Databases
+
+2.1 Types of integrity constraints
+2.2 Examples
+
+
+3 File systems
+4 Data storage
+5 See also
+6 References
+7 Further reading
+
+
+
+Integrity types[edit]
+Physical integrity[edit]
+Physical integrity deals with challenges associated with correctly storing and fetching the data itself. Challenges with physical integrity may include electromechanical faults, design flaws, material fatigue, corrosion, power outages, natural disasters, acts of war and terrorism, and other special environmental hazards such as ionizing radiation, extreme temperatures, pressures and g-forces. Ensuring physical integrity includes methods such as redundant hardware, an uninterruptible power supply, certain types of RAID arrays, radiation hardened chips, error-correcting memory, use of a clustered file system, using file systems that employ block level checksums such as ZFS, storage arrays that compute parity calculations such as exclusive or or use a cryptographic hash function and even having a watchdog timer on critical subsystems.
+Physical integrity often makes extensive use of error detecting algorithms known as error-correcting codes. Human-induced data integrity errors are often detected through the use of simpler checks and algorithms, such as the Damm algorithm or Luhn algorithm. These are used to maintain data integrity after manual transcription from one computer system to another by a human intermediary (e.g. credit card or bank routing numbers). Computer-induced transcription errors can be detected through hash functions.
+In production systems these techniques are used together to ensure various degrees of data integrity. For example, a computer file system may be configured on a fault-tolerant RAID array, but might not provide block-level checksums to detect and prevent silent data corruption. As another example, a database management system might be compliant with the ACID properties, but the RAID controller or hard disk drive's internal write cache might not be.
+Logical integrity[edit]
+See also: Mutex and Copy-on-write
+This type of integrity is concerned with the correctness or rationality of a piece of data, given a particular context. This includes topics such as referential integrity and entity integrity in a relational database or correctly ignoring impossible sensor data in robotic systems. These concerns involve ensuring that the data "makes sense" given its environment. Challenges include software bugs, design flaws, and human errors. Common methods of ensuring logical integrity include things such as a check constraints, foreign key constraints, program assertions, and other run-time sanity checks.
+Both physical and logical integrity often share many common challenges such as human errors and design flaws, and both must appropriately deal with concurrent requests to record and retrieve data, the latter of which is entirely a subject on its own.
+Databases[edit]
+Data integrity contains guidelines for data retention, specifying or guaranteeing the length of time data can be retained in a particular database. It specifies what can be done with data values when their validity or usefulness expires. In order to achieve data integrity, these rules are consistently and routinely applied to all data entering the system, and any relaxation of enforcement could cause errors in the data. Implementing checks on the data as close as possible to the source of input (such as human data entry), causes less erroneous data to enter the system. Strict enforcement of data integrity rules causes the error rates to be lower, resulting in time saved troubleshooting and tracing erroneous data and the errors it causes algorithms.
+Data integrity also includes rules defining the relations a piece of data can have, to other pieces of data, such as a Customer record being allowed to link to purchased Products, but not to unrelated data such as Corporate Assets. Data integrity often includes checks and correction for invalid data, based on a fixed schema or a predefined set of rules. An example being textual data entered where a date-time value is required. Rules for data derivation are also applicable, specifying how a data value is derived based on algorithm, contributors and conditions. It also specifies the conditions on how the data value could be re-derived.
+Types of integrity constraints[edit]
+Data integrity is normally enforced in a database system by a series of integrity constraints or rules. Three types of integrity constraints are an inherent part of the relational data model: entity integrity, referential integrity and domain integrity:
+
+Entity integrity concerns the concept of a primary key. Entity integrity is an integrity rule which states that every table must have a primary key and that the column or columns chosen to be the primary key should be unique and not null.
+Referential integrity concerns the concept of a foreign key. The referential integrity rule states that any foreign-key value can only be in one of two states. The usual state of affairs is that the foreign-key value refers to a primary key value of some table in the database. Occasionally, and this will depend on the rules of the data owner, a foreign-key value can be null. In this case we are explicitly saying that either there is no relationship between the objects represented in the database or that this relationship is unknown.
+Domain integrity specifies that all columns in a relational database must be declared upon a defined domain. The primary unit of data in the relational data model is the data item. Such data items are said to be non-decomposable or atomic. A domain is a set of values of the same type. Domains are therefore pools of values from which actual values appearing in the columns of a table are drawn.
+User-defined integrity refers to a set of rules specified by a user, which do not belong to the entity, domain and referential integrity categories.
+
+If a database supports these features it is the responsibility of the database to insure data integrity as well as the consistency model for the data storage and retrieval. If a database does not support these features it is the responsibility of the applications to ensure data integrity while the database supports the consistency model for the data storage and retrieval.
+Having a single, well-controlled, and well-defined data-integrity system increases
+
+stability (one centralized system performs all data integrity operations)
+performance (all data integrity operations are performed in the same tier as the consistency model)
+re-usability (all applications benefit from a single centralized data integrity system)
+maintainability (one centralized system for all data integrity administration).
+
+As of 2012[update], since all modern databases support these features (see Comparison of relational database management systems), it has become the de facto responsibility of the database to ensure data integrity. Out-dated and legacy systems that use file systems (text, spreadsheets, ISAM, flat files, etc.) for their consistency model lack any[citation needed] kind of data-integrity model. This requires organizations to invest a large amount of time, money and personnel in building data-integrity systems on a per-application basis that needlessly duplicate the existing data integrity systems found in modern databases. Many companies, and indeed many database systems themselves, offer products and services to migrate out-dated and legacy systems to modern databases to provide these data-integrity features. This offers organizations substantial savings in time, money and resources because they do not have to develop per-application data-integrity systems that must be refactored each time the business requirements change.
+Examples[edit]
+An example of a data-integrity mechanism is the parent-and-child relationship of related records. If a parent record owns one or more related child records all of the referential integrity processes are handled by the database itself, which automatically ensures the accuracy and integrity of the data so that no child record can exist without a parent (also called being orphaned) and that no parent loses their child records. It also ensures that no parent record can be deleted while the parent record owns any child records. All of this is handled at the database level and does not require coding integrity checks into each applications.
+File systems[edit]
+Various research results show that neither widespread filesystems (including UFS, Ext, XFS, JFS and NTFS) nor hardware RAID solutions provide sufficient protection against data integrity problems.[2][3][4][5][6]
+Some filesystems (including Btrfs and ZFS) provide internal data and metadata checksumming, what is used for detecting silent data corruption and improving data integrity. If a corruption is detected that way and internal RAID mechanisms provided by those filesystems are also used, such filesystems can additionally reconstruct corrupted data in a transparent way.[7] This approach allows improved data integrity protection covering the entire data paths, which is usually known as end-to-end data protection.[8]
+Data storage[edit]
+Main article: Data Integrity Field
+Apart from data in databases, standards exist to address the integrity of data on storage devices.[9]
+See also[edit]
+
+End-to-end data integrity
+Message authentication
+National Information Systems Security Glossary
+
+References[edit]
+
+
+^ Boritz, J. "IS Practitioners' Views on Core Concepts of Information Integrity". International Journal of Accounting Information Systems. Elsevier. Retrieved 12 August 2011.&#160;
+^ Vijayan Prabhakaran (2006). "IRON FILE SYSTEMS" (PDF). Doctor of Philosophy in Computer Sciences. University of Wisconsin-Madison. Retrieved 9 June 2012.&#160;
+^ "Parity Lost and Parity Regained".&#160;
+^ "An Analysis of Data Corruption in the Storage Stack" (PDF).&#160;
+^ "Impact of Disk Corruption on Open-Source DBMS" (PDF).&#160;
+^ "Baarf.com". Baarf.com. Retrieved November 4, 2011.&#160;
+^ Bierman, Margaret; Grimmer, Lenz (August 2012). "How I Use the Advanced Capabilities of Btrfs". Retrieved 2014-01-02.&#160;
+^ Yupu Zhang, Abhishek Rajimwale, Andrea C. Arpaci-Dusseau, Remzi H. Arpaci-Dusseau. "End-to-end Data Integrity for File Systems: A ZFS Case Study" (PDF). Computer Sciences Department, University of Wisconsin. Retrieved 2014-01-02.&#160;
+^ Smith, Hubbert (2012). Data Center Storage: Cost-Effective Strategies, Implementation, and Management. CRC Press. ISBN&#160;9781466507814. Retrieved 2012-11-15. T10-DIF (data integrity field), also known as T10-PI (protection information model), is a data-integrity extension to the existing information packets that spans servers and storage systems and disk drives.&#160;
+
+
+Further reading[edit]
+
+&#160;This article incorporates&#160;public domain material from the General Services Administration document "Federal Standard 1037C" (in support of MIL-STD-188).
+Xiaoyun Wang; Hongbo Yu (2005). "How to Break MD5 and Other Hash Functions" (PDF). EUROCRYPT. ISBN&#160;3-540-25910-4.&#160;
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4214306-8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Data_integrity&amp;oldid=691585346"					
+				Categories: Applied sciencesData qualityTransaction processingHidden categories: Articles needing expert attention with no reason or talk parameterArticles needing expert attention from November 2010All articles needing expert attentionDatabases articles needing expert attentionArticles containing potentially dated statements from 2012All articles containing potentially dated statementsAll articles with unsourced statementsArticles with unsourced statements from November 2012Wikipedia articles incorporating text from the Federal Standard 1037CWikipedia articles incorporating text from MIL-STD-188Wikipedia articles with GND identifiers				
+							
+		
+		
+			

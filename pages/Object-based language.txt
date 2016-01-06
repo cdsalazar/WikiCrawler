@@ -1,0 +1,163 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Object-based language
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Object-based languages)
+												
+					Jump to:					navigation, 					search
+				
+				The term "object-based language" may be used in a technical sense to describe any programming language that uses the idea of encapsulating state and operations inside "objects". Object-based languages need not support inheritance or subtyping, but those that do are also said to be "object-oriented". Object-based languages that do not support inheritance or subtyping are usually not considered to be true object-oriented languages.
+Examples of object-oriented languages, in rough chronological order, include Simula, Smalltalk, C++ (whose object model was based on Simula's), Objective-C (whose object model was based on Smalltalk's), Eiffel, Xojo (previously REALbasic), Python, Ruby, Java, Visual Basic .NET, C#, and Fortran 2003. Examples of a language that is object-based, but not object-oriented are early versions of Ada, Visual Basic (VB), and Fortran 90. These languages all support the definition of an object as a data structure, but lack polymorphism and inheritance.
+In practice, the term "object-based" is usually applied to those object-based languages that are not also object-oriented, although all object-oriented languages are also object-based, by definition. Instead, the terms "object-based" and "object-oriented" are normally used as mutually exclusive alternatives, rather than as categories that overlap.
+Sometimes, the term "object-based" is applied to prototype-based languages, true object-oriented languages that do not have classes, but in which objects instead inherit their code and data directly from other "template" objects. An example of a commonly used prototype-based scripting language is JavaScript.
+Both object-based and object-oriented languages (whether class-based or prototype-based) may be statically type-checked. Statically checking prototype-based languages can be difficult, because these languages often allow objects to be dynamically extended with new behavior, and even to have their parent object (from which they inherit) changed, at run time.[1][2]
+References[edit]
+
+
+^ Wegner, Peter (December 1987). Meyrowitz, Norman, ed. "Dimensions of Object-Based Language Design". OOPSLA'87 Conference Proceedings 22 (12): 168––182.&#160;
+^ Barbey, S; M. Kempe; A. Strohmeier (1993). "Object-Oriented Programming with Ada 9X". Draft Technical Report (Swiss Federal Institute of Technology in Lausanne Software Engineering Laboratory). Retrieved 15 December 2013. Ada 83 itself is generally not considered to be object-oriented; rather, according to the terminology of Wegner [Weg 87], it is said to be object-based, since it provides only a restricted form of inheritance and it lacks polymorphism.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Object-based_language&amp;oldid=671431255"					
+				Categories: Computer programming				
+							
+		
+		
+			

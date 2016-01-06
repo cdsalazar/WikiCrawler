@@ -1,0 +1,946 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			GNUstep
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2010)
+
+
+
+
+
+
+
+This article is in a list format that may be better presented using prose. You can help by converting this article to prose, if appropriate. Editing help is available. (January 2012)
+
+
+
+
+
+
+
+This article relies too much on references to primary sources. Please improve this article by adding secondary or tertiary sources. (February 2011)
+
+
+
+
+
+
+
+
+
+The GNUstep Project
+
+
+
+
+
+GNUstep screenshot, showing a variety of applications developed with the GNUstep libraries, including a gomoku game, calculator, and TextEdit.[1]
+
+
+
+Developer(s)
+GNUstep Developers
+
+
+Stable release
+make 2.6.5, base 1.24.5, gui 0.23.0, back 0.23.1 / July&#160;26, 2013; 2 years ago&#160;(2013-07-26)
+
+
+Preview release
+only in the SVN software repository
+
+
+Written in
+Objective-C
+
+
+Operating system
+Cross-platform
+
+
+Type
+Widget toolkit
+
+
+License
+GNU General Public License for the applications
+GNU Lesser General Public License for the libraries.
+
+
+Website
+www.gnustep.org
+
+
+GNUstep is a free software implementation of the Cocoa (formerly OpenStep) Objective-C frameworks, widget toolkit, and application development tools for Unix-like operating systems and Microsoft Windows. It is part of the GNU Project.
+GNUstep features a cross-platform, object-oriented IDE. Like Apple Cocoa, GNUstep also has a Java interface, as well as Ruby,[2] Guile and Scheme[3] bindings. The GNUstep developers track some additions to Apple's Cocoa to remain compatible. The roots of the GNUstep application interface are the same as the roots of Cocoa: NeXTSTEP and OpenStep. GNUstep thus predates Cocoa, which emerged when Apple acquired NeXT's technology and incorporated it into the development of the original Mac OS X, while GNUstep was initially an effort by GNU developers to replicate the technically ambitious NeXTSTEP's programmer-friendly features.
+
+
+
+Contents
+
+
+1 History
+2 Software architecture
+
+2.1 Rendering
+2.2 Paradigms
+
+
+3 Applications
+
+3.1 Written from scratch
+3.2 Ported from NeXTSTEP, OPENSTEP, or Mac OS X
+
+
+4 Class capabilities
+
+4.1 Foundation Kit
+4.2 Application Kit
+
+
+5 See also
+6 References
+7 External links
+
+
+
+History[edit]
+GNUstep began when Paul Kunz and others at Stanford Linear Accelerator Center wanted to port HippoDraw from NeXTSTEP to another platform. Instead of rewriting HippoDraw from scratch and reusing only the application design, they decided to rewrite the NeXTSTEP object layer on which the application depended. This was the first version of libobjcX. It enabled them to port HippoDraw to Unix systems running the X Window System without changing a single line of their application source. After the OpenStep specification was released to the public in 1994, they decided to write a new objcX which would adhere to the new APIs. The software would become known as "GNUstep".[4]
+Software architecture[edit]
+
+
+
+
+Illustrates software components of the Linux desktop stack like the display server, graphics control element libraries or graphical shells.
+
+
+Rendering[edit]
+GNUStep contain a set of graphical control elements written in the Objective-C programming language. The graphical user interface (GUI) of e.g. GNUMail is composed of graphics control element. GNUMail has to interact with the windowing system, e.g. X11 or Wayland, and its graphical user interface has to be rendered. GNUstep's backend provides a small set of functions used by the user interface library to interface to the actual windowing system. It also has a rendering engine which emulates common PostScript functions. The package gnustep-back provides the following backends:
+
+cairo – default backend using the Cairo 2D graphics library.
+winlib – default backend on Microsoft Windows systems. Cairo and Windows API variants.
+art – old (deprecated) backend on unix-like systems. Uses the vector-based PostScriptlike 2d graphics library libArt.
+xlib – old (deprecated) X11 backend.
+
+Paradigms[edit]
+GNUstep inherits some design principles proposed in OPENSTEP (GNUstep predates Cocoa, but Cocoa is based on OPENSTEP) as well as the Objective-C language.
+
+Model–view–controller paradigm
+Target–action
+Drag-and-drop
+Delegation
+Message forwarding (through NSInvocation)
+
+Applications[edit]
+Here are some examples of applications written for or ported to GNUstep.
+See also: Category:Software that uses GNUstep
+Written from scratch[edit]
+
+Addresses
+GNUMail, an e-mail client
+GNUstep Database Library 2, an Enterprise Objects Framework clone
+GNUstepWeb, an application server
+Gorm, an interface builder
+GWorkspace, a workspace and file manager
+Grr, an RSS feed reader
+Oolite, a clone of Elite, a space simulation game with trading components
+PRICE, imaging application
+ProjectCenter, the Project Builder or Xcode equivalent.
+TalkSoup
+Terminal
+Zipper
+
+Ported from NeXTSTEP, OPENSTEP, or Mac OS X[edit]
+
+Adun
+BioCocoa
+Chess
+Cenon
+EdenMath
+Eggplant
+Emacs
+Fortunate
+Gomoku
+NeXTGO
+TextEdit
+TimeMon
+
+Class capabilities[edit]
+Foundation Kit[edit]
+
+strings
+collections (arrays, sets, dictionaries) and enumerators
+file management
+object archiving
+advanced date manipulation
+distributed objects and inter-process communication
+URL handling
+notifications (and distributed notifications)
+easy multi-threading
+timers
+locks
+exception handling
+
+Application Kit[edit]
+
+user interface elements (table views, browsers, matrices, scroll views)
+graphics (WYSIWYG, postscript-like graphics, bezier paths, image handling with multiple representations, graphical contexts)
+color management (calibrated vs. device colors; CMYK, RGB, HSB, gray and named color representations; alpha transparency)
+text system features: rich text format, text attachments, layout manager, typesetter, rules, paragraph styles, font management, spelling
+document management
+printing features: print operations, print panel and page layout
+help manager
+pasteboard (aka clip board) services
+spell checker
+workspace bindings for applications
+drag and drop operations
+services sharing among applications
+
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+
+Étoilé, GNUstep-based desktop environment
+GNUstep Renaissance, framework for XML description of portable GNUstep/Mac OS X user interfaces
+Miller Columns, the method of file tree browsing the GWorkspace File Viewer uses
+Property list, often used file format to store user settings
+StepTalk, Scripting framework
+Window Maker, a window manager designed to emulate the NeXT GUI as part of the wider GNUstep project
+
+References[edit]
+
+
+^ Ported from NeXTSTEP. Recent builds, when built with libobjc2, can use a newer version ported from Mac OS X Snow Leopard
+^ GNUstep Developer Tools - RIGS
+^ GScheme
+^ GNUstep history
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to GNUstep.
+
+
+
+GNUstep.org project homepage
+GNUstep Applications and Developer Tutorials
+The GNUstep Application Project
+A 2003 interview with GNUstep developer Nicola Pero
+FLOSS Weekly Interview with Gregory Casamento and Riccardo Mottola from GNUstep
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+GNU Project
+
+
+
+
+
+
+History
+
+
+
+GNU Manifesto
+Free Software Foundation
+
+Europe
+India
+Latin America
+
+
+History of free software
+
+
+
+
+
+
+
+
+
+
+
+Licenses
+
+
+
+GNU General Public License
+GNU Lesser General Public License
+Affero General Public License
+GNU Free Documentation License
+GPL linking exception
+
+
+
+
+
+
+
+
+Software
+
+
+
+GNU (variants)
+Hurd
+Linux-libre
+glibc
+Bash
+coreutils
+findutils
+Build system
+GCC
+binutils
+GDB
+GRUB
+GNOME
+GNUstep
+GIMP
+GNU Emacs
+GNU TeXmacs
+GNU Octave
+GNU R
+GSL
+GMP
+GNU Electric
+GNU Archimedes
+GNUnet
+GNU Privacy Guard
+Gnuzilla (IceCat)
+GNU Health
+GNUmed
+GNU LilyPond
+GNU Go
+GNU Chess
+Gnash
+more...
+
+
+
+
+
+
+
+
+Public
+speakers
+
+
+
+Alexandre Oliva
+Benjamin Mako Hill
+Bradley M. Kuhn
+Eben Moglen
+Federico Heinz
+Georg C. F. Greve
+John Sullivan
+Loïc Dachary
+Nagarjuna G.
+Ricardo Galli
+Richard Stallman
+Robert J. Chassell
+
+
+
+
+
+
+
+
+Other topics
+
+
+
+GNU/Linux naming controversy
+Revolution OS
+Free Software Foundation anti-Windows campaigns
+Defective by Design
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+List of widget toolkits
+
+
+
+
+
+
+Low-level
+
+
+
+BeOS, ZETA, Haiku
+Macintosh Toolbox, Carbon
+Intrinsics
+Intuition
+Windows API
+Xlib
+XCB
+
+
+
+
+
+
+
+
+High-level
+
+
+
+
+
+On AmigaOS
+
+
+
+
+BOOPSI
+MUI
+ReAction GUI
+Zune
+
+
+
+
+
+
+
+
+
+On Mac OS
+and OS X
+
+
+
+
+Carbon
+Cocoa
+MacApp
+MacZoop
+PowerPlant
+
+
+
+
+
+
+
+
+
+On Windows
+
+
+
+
+MFC
+OWL
+Silverlight
+SmartWin++
+VCL
+Windows Forms
+WPF
+WTL
+WinRT XAML
+
+
+
+
+
+
+
+
+
+On Unix,
+under X11
+
+
+
+
+Athena (Xaw)
+InterViews
+LessTif
+Motif
+OPEN LOOK
+
+
+
+
+
+
+
+
+
+Cross-platform,
+by language
+
+
+
+
+
+
+C
+
+
+
+
+GTK+
+IUP
+Tk
+wxC
+XForms
+XVT
+
+
+
+
+
+
+
+
+
+C++
+
+
+
+
+CEGUI
+CLX
+FLTK
+FOX toolkit
+GLUI
+Gtkmm
+JUCE
+Qt
+Rogue Wave Views
+TnFOX
+Ultimate++
+VCF
+Wt
+wxWidgets
+YAAF
+
+
+
+
+
+
+
+
+
+Objective-C
+
+
+
+
+GNUstep
+
+
+
+
+
+
+
+
+
+CLI
+
+
+
+
+Gtk#
+Moonlight
+Tao
+wx.NET
+
+
+
+
+
+
+
+
+
+D
+
+
+
+
+DFL
+DlangUI
+DWT
+GtkD
+QtD
+wxD
+
+
+
+
+
+
+
+
+
+Flash
+
+
+
+
+Apache Flex (MXML)
+
+
+
+
+
+
+
+
+
+Haskell
+
+
+
+
+Gtk2Hs
+wxHaskell
+
+
+
+
+
+
+
+
+
+Java
+
+
+
+
+
+
+desktop
+
+
+
+
+AWT
+FXML (JavaFX)
+Qt Jambi
+Swing
+SWT
+wx4j
+
+
+
+
+
+
+
+
+
+web
+
+
+
+
+GWT
+FXML (JavaFX)
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript
+
+
+
+
+Dojo Toolkit
+Echo
+Ext JS
+Google Closure
+jQuery UI
+Qooxdoo
+YUI
+
+
+
+
+
+
+
+
+
+Common Lisp
+
+
+
+
+CAPI
+CLIM
+Common Graphics
+Ltk
+McCLIM
+
+
+
+
+
+
+
+
+
+Lua
+
+
+
+
+IUP
+wxLua
+
+
+
+
+
+
+
+
+
+Pascal
+
+
+
+
+LCL
+
+
+
+
+
+
+
+
+
+Object Pascal
+
+
+
+
+CLX
+fpGUI
+IP Pascal
+LCL
+
+
+
+
+
+
+
+
+
+Perl
+
+
+
+
+Perl/Tk
+wxPerl
+
+
+
+
+
+
+
+
+
+PHP
+
+
+
+
+PHP-GTK
+PHP-Qt
+wxPHP
+
+
+
+
+
+
+
+
+
+Python
+
+
+
+
+PyGObject
+PyGTK
+Pyjamas
+PyQt
+PySide
+Tkinter
+wxPython
+
+
+
+
+
+
+
+
+
+Ruby
+
+
+
+
+Shoes
+QtRuby
+wxRuby
+
+
+
+
+
+
+
+
+
+Tcl
+
+
+
+
+Tcl/Tk
+
+
+
+
+
+
+
+
+
+XML
+
+
+
+
+Ample SDK
+GladeXML
+Lively Kernel
+Pyjamas
+Rialto Toolkit
+XAML
+XUI
+XUL
+Wt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=GNUstep&amp;oldid=673748661"					
+				Categories: Compatibility layersCross-platform free softwareGNU Project softwareGNUstepNeXTOS X APIsSoftware that uses CairoWidget toolkitsX Window SystemHidden categories: Articles needing additional references from January 2010All articles needing additional referencesArticles needing cleanup from January 2012All pages needing cleanupArticles with sections that need to be turned into prose from January 2012Articles lacking reliable references from February 2011All articles lacking reliable references				
+							
+		
+		
+			

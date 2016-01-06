@@ -1,0 +1,109 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			javac
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about Oracle's Java compiler.  For a general article about Java compilers, see Java compiler.
+
+javac
+
+Written in
+Java[1]
+
+
+Operating system
+Cross-platform
+
+
+Type
+Compiler
+
+
+License
+GNU General Public License
+
+
+Website
+www.oracle.com/technetwork/java/javase/downloads/index.html
+
+
+javac (pronounced "java-see", or often "javack") is the primary Java compiler, included in the Java Development Kit (JDK) from Oracle Corporation.
+The compiler accepts source code conforming to the Java language specification (JLS) and produces bytecode conforming to the Java Virtual Machine Specification (JVMS).
+javac is itself written in Java. The compiler can also be invoked programmatically.[2]
+
+
+
+Contents
+
+
+1 History
+2 See also
+3 References
+4 External links
+
+
+
+History[edit]
+On 13 November 2006, Sun's Java Virtual Machine (JVM) and Java Development Kit (JDK) were made available[3] under the GPL license (see Sun's OpenJDK Hotspot page).
+Since version 0.95, GNU Classpath, a free implementation of the Java Class Library, supports compiling and running javac using the Classpath runtime (GIJ) and compiler (GCJ), and also allows one to compile the GNU Classpath class library, tools and examples with javac itself.[4]
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+Java portal
+
+
+
+
+Java compiler for a general presentation of Java compilers, and a list of other existing alternative compilers.
+Java (programming language)
+Java Platform
+OpenJDK
+
+References[edit]
+
+
+^ Lextrait, Vincent (January 2010). "The Programming Languages Beacon, v10.0". Retrieved 14 March 2010.&#160;
+^ "[...]an application can access javac programmatically." Shawn Silverman (2002-08-30). JavaWorld - Java tip 131 "Java Tip 131: Make a statement with javac!" Check |url= scheme (help). JavaWorld.com. Retrieved 2008-08-09.&#160;
+^ Sun opens Java (feature story)
+^ "This release supports compiling and running the GPL OpenJDK javac compiler[...]" "GNU Classpath 0.95 Announcement".&#160;
+
+
+External links[edit]
+
+Sun's OpenJDK javac page
+The Java Virtual Machine Specification
+JSR 199 Java Compiler API Java Specification Request for invoking the Java compiler from a Java program
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Javac&amp;oldid=681564088"					
+				Categories: Java platformJava (programming language)Hidden categories: Pages with URL errors				
+							
+		
+		
+			

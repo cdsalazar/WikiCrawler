@@ -1,0 +1,337 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			struct (C programming language)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				See also: Record (computer science)
+A struct in the C programming language (and many derivatives) is a complex data type declaration that defines a physically grouped list of variables to be placed under one name in a block of memory, allowing the different variables to be accessed via a single pointer, or the struct declared name which returns the same address. The struct can contain many other complex and simple data types in an association, so is a natural organizing type for records like the mixed data types in lists of directory entries reading a hard drive (file length, name, extension, physical (cylinder, disk, head indexes) address, etc.), or other mixed record type (patient names, address, telephone... insurance codes, balance, etc.).
+The C struct directly corresponds to the assembly language data type of the same use, and both reference a contiguous block of physical memory, usually delimited (sized) by word-length boundaries. Language implementations which could utilize half-word or byte boundaries (giving denser packing, using less memory) were considered advanced in the mid-eighties. Being a block of contiguous memory, each variable within is located a fixed offset from the index zero reference, the pointer. As an illustration, many BASIC interpreters once fielded a string data struct organization with one value recording string length, one indexing (cursor value of) the previous line, one pointing the string data.
+Because the contents of a struct are stored in contiguous memory, the sizeof operator must be used to get the number of bytes needed to store a particular type of struct, just as it can be used for primitives. The alignment of particular fields in the struct (with respect to word boundaries) is implementation-specific and may include padding, although modern compilers typically support the #pragma pack directive, which changes the size in bytes used for alignment.[1]
+In the C++ language, a struct is identical to a C++ class but a difference in the default visibility exists: class members are by default private, whereas struct members are by default public.
+
+
+
+Contents
+
+
+1 In other languages
+2 Declaration
+3 Struct initialization
+4 Assignment
+5 Pointers to struct
+6 typedef
+7 See also
+8 References
+
+
+
+In other languages[edit]
+Like its C counterpart, the struct data type in C# (Structure in Visual Basic .NET) is similar to a class. The biggest difference between a struct and a class in these languages is that when a struct is passed as an argument to a function, any modifications to the struct in that function will not be reflected in the original variable (unless pass-by-reference is used).[2]
+This distinction differs from C++, where classes or structs can be allocated either on the stack (similar to C#) or on the heap, with an explicit pointer. In C++, the only difference between a struct and a class is that the members and base classes of a struct are public by default. (A class defined with the class keyword has private members and base classes by default.)
+Declaration[edit]
+The general syntax for a struct declaration in C is:
+
+
+struct tag_name {
+   type member1;
+   type member2;
+   /* declare as many members as desired, but the entire structure size
+   must be known to the compiler. */
+};
+
+Here tag_name is optional in some contexts.
+Such a struct declaration may also appear in the context of a typedef declaration of a type alias or the declaration or definition of a variable:
+
+
+typedef struct tag_name {
+   type member1;
+   type member2;
+} struct_alias;
+
+Often, such entities are better declared separately, as in:
+
+
+typedef struct tag_name struct_alias;
+
+// These two statements now have the same meaning:
+// struct tag_name struct_instance;
+// struct_alias struct_instance;
+
+For example:
+
+
+struct account {
+   int account_number;
+   char *first_name;
+   char *last_name;
+   float balance;
+};
+
+defines a type, referred to as struct account. To create a new variable of this type, we can write
+
+
+struct account s;
+
+which has an integer component, accessed by s.account_number, and a floating-point component, accessed by s.balance, as well as the first_name and last_name components. The structure s contains all four values, and all four fields may be changed independently.
+A pointer to an instance of the "account" structure will point to the memory address of the first variable, "account_number". The total storage required for a struct object is the sum of the storage requirements of all the fields, plus any internal padding.
+The primary use of a struct is for the construction of complex data types, but in practice they are sometimes used to circumvent standard C conventions to create a kind of primitive subtyping. For example, common Internet protocols[examples needed] rely on the fact that C compilers insert padding between struct fields in predictable ways; thus the code
+
+
+struct ifoo_version_42 {
+   long x, y, z;
+   char *name;
+   long a, b, c;
+};
+struct ifoo_old_stub {
+   long x, y;
+};
+void operate_on_ifoo(struct ifoo_version_42 *);
+struct ifoo_old_stub s;
+. . .
+operate_on_ifoo(&amp;s);
+
+is often assumed to work as expected,[clarification needed] if the operate_on_ifoo function only accesses fields x and y of its argument because a C compiler will map the struct elements to memory space exactly as it is written in the source code, thus the x and y will point to exactly the same memory space in both structs.
+Struct initialization[edit]
+There are three ways to initialize a structure. For the struct type
+
+
+/* Forward declare a type "point" to be a struct. */
+typedef struct point point;
+/* Declare the struct with integer members x, y */
+struct point {
+   int    x;
+   int    y;
+};
+
+C89-style initializers are used when contiguous members may be given.[3]
+
+
+/* Define a variable p of type point, and initialize its first two members in place */
+point p = {1,2};
+
+For non contiguous or out of order members list, designated initializer style[4] may be used
+
+
+/* Define a variable p of type point, and set members using designated  initializers*/
+point p = {.y = 2, .x = 1};
+
+If an initializer is given or if the object is statically allocated, omitted elements are initialized to 0.[5]
+A third way of initializing a structure is to copy the value of an existing object of the same type
+
+
+/* Define a variable q of type point, and set members to the same values as those of p */
+point q = p;
+
+Assignment[edit]
+The following assignment of a struct to another struct will copy as one might expect. Depending on the contents, a compiler might use memcpy() in order to perform this operation.
+
+
+#include &lt;stdio.h&gt;
+
+/* Define a type point to be a struct with integer members x, y */
+typedef struct {
+   int    x;
+   int    y;
+} point;
+
+int main(void) {
+
+/* Define a variable p of type point, and initialize all its members inline! */
+    point p = {1,3};
+
+/* Define a variable q of type point. Members are uninitialized. */
+    point q;
+
+/* Assign the value of p to q, copies the member values from p into q. */
+    q = p;
+
+/* Change the member x of q to have the value of 3 */
+    q.x = 3;
+
+/* Demonstrate we have a copy and that they are now different. */
+    if (p.x != q.x) printf("The members are not equal! %d != %d", p.x, q.x);
+
+/* Define a variable r of type point. Members are uninitialized. */
+    point r;
+
+/* Assign values using coumpound literal (ISO C99/supported by GCC &gt; 2.95) */
+    r = (point) {1,2};
+
+    return 0;
+}
+
+Pointers to struct[edit]
+Pointers can be used to refer to a struct by its address. This is particularly useful for passing structs to a function by reference or to refer to another instance of the struct type as a field. The pointer can be dereferenced just like any other pointer in C — using the * operator. There is also a -&gt; operator in C which dereferences the pointer to struct (left operand) and then accesses the value of a member of the struct (right operand).
+
+
+struct point {
+   int x;
+   int y;
+};
+struct point my_point = { 3, 7 };
+struct point *p = &amp;my_point;  /* To declare and define p as a pointer of type struct point,
+                                 and initialize it with the address of my_point. */
+
+(*p).x = 8;                   /* To access the first member of the struct */
+p-&gt;x = 8;                     /* Another way to access the first member of the struct */
+
+C does not allow recursive declaration of struct; a struct can not contain a field that has the type of the struct itself. But pointers can be used to refer to an instance of it:
+
+
+typedef struct list_element list_element;
+struct list_element {
+   point p;
+   list_element * next;
+};
+list_element el = { .p = { .x = 3, .y =7 }, };
+list_element le = { .p = { .x = 4, .y =5 }, .next = &amp;el };
+
+Here the instance el would contain a point with coordinates 3 and 7. Its next pointer would be a null pointer since the initializer for that field is omitted. The instance le in turn would have its own point and its next pointer would refer to el.
+typedef[edit]
+Main article: typedef
+Typedefs can be used as shortcuts, for example:
+
+
+typedef struct {
+   int    account_number;
+   char   *first_name;
+   char   *last_name;
+   float  balance;
+} account;
+
+Different users have differing preferences; proponents usually claim:
+
+shorter to write
+can simplify more complex type definitions
+can be used to forward declare a struct type
+
+As an example, consider a type that defines a pointer to a function that accepts pointers to struct types and returns a pointer to struct:
+Without typedef:
+
+
+struct point {
+   int    x;
+   int    y;
+};
+struct point *(*point_compare_func) (struct point *a, struct point *b);
+
+With typedef:
+
+
+typedef struct point point_type;
+struct point {
+   int    x;
+   int    y;
+};
+point_type *(*point_compare_func) (point_type *a, point_type *b);
+
+A common naming convention for such a typedef is to append a "_t" (here point_t) to the struct tag name, but such names are reserved by POSIX so such a practice should be avoided. A much easier convention is to use just the same identifier for the tag name and the type name:
+
+
+typedef struct point point;
+struct point {
+   int    x;
+   int    y;
+};
+point *(*point_compare_func) (point *a, point *b);
+
+Without typedef a function that takes function pointer the following code would have to be used. Although valid, it becomes increasingly hard to read.
+
+
+/* Using the struct point type from before */
+
+/* Define a function that returns a pointer to the biggest point,
+   using a function to do the comparison. */
+struct point *
+biggest_point (size_t size, struct point *points,
+               struct point *(*point_compare) (struct point *a, struct point *b))
+{
+    int i;
+    struct point *biggest = NULL;
+
+    for (i=0; i &lt; size; i++) {
+        biggest = point_compare(biggest, points + i);
+    }
+    return biggest;
+}
+
+Here a second typedef for a function pointer type can be useful
+
+
+typedef point *(*point_compare_func_type) (point *a, point *b);
+
+Now with the two typedefs being used the complexity of the function signature is drastically reduced.
+
+
+/* Using the struct point type from before and the typedef for the function pointer */
+
+/* Define a function that returns a pointer to the biggest point,
+   using a function to do the comparison. */
+point *
+biggest_point (size_t size, point * points, point_compare_func_type point_compare)
+{
+    int i;
+    point * biggest = NULL;
+
+    for (i=0; i &lt; size; i++) {
+        biggest = point_compare(biggest, points + i);
+    }
+    return biggest;
+}
+
+However, there are a handful of disadvantages in using them:
+
+They pollute the main namespace (see below), however this is easily overcome with prefixing a library name to the type name.
+Harder to figure out the aliased type (having to scan/grep through code), though most IDEs provide this lookup automatically.
+Typedefs do not really "hide" anything in a struct or union&#160;— members are still accessible (account.balance). To really hide struct members, one needs to use 'incompletely-declared' structs.
+
+
+
+/* Example for namespace clash */
+
+typedef struct account { float balance; } account;
+struct account account; /* possible */
+account account; /* error */
+
+See also[edit]
+
+Bit field
+Composite data type
+Union type
+Flexible array member
+
+References[edit]
+
+^ C struct memory layout? - Stack Overflow
+^ Parameter passing in C#
+^ Kelley, Al; Pohl, Ira (2004). A Book On C: Programming in C (Fourth ed.). p.&#160;418. ISBN&#160;0-201-18399-4.&#160;
+^ "IBM Linux compilers. Initialization of structures and unions".&#160;
+^ "The New C Standard, §6.7.8 Initialization".&#160;
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;oldid=692730775"					
+				Categories: C (programming language)Hidden categories: Wikipedia articles needing clarification from July 2013Wikipedia articles needing clarification from November 2012				
+							
+		
+		
+			

@@ -1,0 +1,1435 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Xcode
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+Xcode
+
+
+
+
+
+Xcode App Store page
+
+
+
+Developer(s)
+Apple Inc.
+
+
+Stable release
+7.1.1 (7B1005) (November&#160;9, 2015; 11 days ago&#160;(2015-11-09)) [±]
+
+
+Preview release
+7.2 beta 4 (7C62b) (November&#160;18, 2015; 2 days ago&#160;(2015-11-18)) [±]
+
+
+Written in
+C, C++, Objective-C, Objective-C++
+
+
+Operating system
+Mac OS X 10.3 (Version 1.x)
+Mac OS X 10.4 (Version 2.x)
+Mac OS X 10.5 (Versions 2.5, 3.0, 3.1)
+Mac OS X 10.6 (Versions 3.2, 4.0, 4.1, 4.2, 4.3)
+Mac OS X 10.7 (Versions 4.1, 4.2, 4.3, 4.4, 4.5, 4.6)
+OS X 10.8 (Version 4.4, 4.5, 4.6, 5.x)
+OS X 10.9 (Version 5.x, 6.0, 6.1, 6.2)
+OS X 10.10 (Version 6.x, 7.x)
+OS X 10.11 (Version 7.x)
+
+
+Type
+Integrated Development Environment (IDE)
+
+
+License
+Freeware with open source components
+
+
+Website
+developer.apple.com/xcode/
+
+
+Xcode is an integrated development environment (IDE) containing a suite of software development tools developed by Apple for developing software for OS X and iOS. First released in 2003, the latest stable release is version 7.1 and is available via the Mac App Store free of charge for OS X Yosemite and OS X El Capitan users.[1] Registered developers can download preview releases and previous versions of the suite through the Apple Developer website.[2] However, Apple recently made a beta version of version 7.x of the software available to those of the public with Apple Developer accounts.[3]
+
+
+
+Contents
+
+
+1 Major features
+2 Composition
+3 Version history
+
+3.1 1.x series
+3.2 2.x series
+3.3 3.x series
+3.4 4.x series
+3.5 5.x series
+3.6 6.x series
+3.7 7.x series
+
+
+4 Version comparison table
+
+4.1 Xcode 1.0 - Xcode 2.x (before iOS support)
+4.2 Xcode 3.0 - Xcode 4.x
+4.3 Xcode 5.0 - 6.x (since arm64 support)
+4.4 Xcode 7.0 - 7.x (since Swift 2.0 support)
+
+
+5 Toolchain versions
+6 References
+7 See also
+8 External links
+
+
+
+Major features[edit]
+Previously Xcode supported distributing a product build process over multiple systems. One technology involved was called Shared Workgroup Build, which used the Bonjour protocol to automatically discover systems providing compiler services, and a modified version of the free software product distcc to facilitate the distribution of workloads. Earlier versions of Xcode provided a system called Dedicated Network Builds. These features are absent in the supported versions of Xcode.
+Thanks to the Mach-O executable format, which allows for “fat binaries", containing code for multiple architectures, Xcode can build universal binaries, which allow software to run on both PowerPC and Intel-based (x86) platforms and that can include both 32-bit and 64-bit code for both architectures. Using the iOS SDK, Xcode can also be used to compile and debug applications for iOS that run on the ARM processor.
+Xcode also includes Apple's WebObjects tools and frameworks for building Java web applications and web services (previously sold as a separate product). As of Xcode 3.0, Apple dropped[4] WebObjects development inside Xcode; WOLips[5] should be used instead. Xcode 3 still includes the WebObjects frameworks.
+Xcode includes the GUI tool Instruments, which runs atop DTrace, a dynamic tracing framework created by Sun Microsystems and released as part of OpenSolaris.
+Composition[edit]
+The main application of the suite is the integrated development environment (IDE), also named Xcode. The Xcode suite also includes most of Apple's developer documentation, and built-in Interface Builder, an application used to construct graphical user interfaces.
+Up to Xcode 4.1, the Xcode suite included a modified version of the GNU Compiler Collection. In Xcode 3.1 up to Xcode 4.6.3, it included the llvm-gcc compiler, with front ends from the GNU Compiler Collection and a code generator based on LLVM.[6] In Xcode 3.2 and later, it included the Clang C/C++/Objective-C compiler, with newly-written front ends and a code generator based on LLVM, and the Clang Static Analyzer.[7] Starting with Xcode 4.2, the Clang compiler became the default compiler,[8] Starting with Xcode 5.0, Clang was the only compiler provided.
+Up to Xcode 4.6.3, the Xcode suite used the GNU Debugger (GDB) as the back-end for the IDE's debugger. Starting with Xcode 4.3, the LLDB debugger was also provided; starting with Xcode 4.5 LLDB replaced GDB as the default back-end for the IDE's debugger.[9] Starting with Xcode 5.0, GDB was no longer supplied.[10]
+Xcode supports C, C++, Objective-C, Objective-C++, Java, AppleScript, Python, Ruby, Rez, and Swift source code with a variety of programming models, including but not limited to Cocoa, Carbon, and Java. Third parties have added support for GNU Pascal,[11] Free Pascal,[12] Ada,[13] C#,[14] Perl,[15] and D.
+Version history[edit]
+1.x series[edit]
+Xcode 1.0 was released in fall 2003. Xcode 1.0 was based on Project Builder, but had an updated UI, ZeroLink, Fix &amp; Continue, distributed build support, and Code Sense indexing.
+The next significant release, Xcode 1.5, had better code completion and an improved debugger.
+2.x series[edit]
+Xcode 2.0 was released with Mac OS X v10.4 "Tiger". It included the Quartz Composer visual programming language, better Code Sense indexing for Java, and Ant support. It also included the Apple Reference Library tool, which lets you search and read online documentation from Apple’s website and local documentation installed on your machine.
+Xcode 2.1 could create universal binaries. It supported Shared Precompiled Headers, unit testing targets, conditional breakpoints, and watchpoints. It also had better dependency analysis.
+The final version of Xcode for Mac OS X v10.4 was 2.5.
+3.x series[edit]
+Xcode 3.0 was released with Mac OS X v10.5 "Leopard". Notable changes since 2.1 include[16] the DTrace debugging tool (now called Instruments), refactoring support, context-sensitive documentation, and Objective-C 2.0 with garbage collection. It also supports Project Snapshots, which provide a basic form of version control; Message Bubbles, which show build errors debug values alongside code; and building four-architecture fat binaries (32 and 64-bit Intel and PowerPC).
+Xcode 3.1 was an update release of the developer tools for Mac OS X, and was the same version included with the iPhone SDK. It could target non-Mac OS X platforms, including iPhone OS 2.0. It included the GCC 4.2 and LLVM GCC 4.2 compilers. Another new feature since Xcode 3.0 is that Xcode's SCM support now supports Subversion 1.5.
+Xcode 3.2 was released with Mac OS X v10.6 "Snow Leopard" and will not install on any earlier version of Mac OS X. It supports static program analysis, among other features. It also drops official support for targeting versions earlier than iPhone OS 3.0. But it is still possible to target older versions, and the simulator supports iPhone OS 2.0 through 3.1. Also, Java support is "exiled" in 3.2 to the organizer.[17]
+Xcode 3.2.6 is the last version that can be downloaded for free for users of Mac OS X v10.6. Downloading it requires a free registration at Apple's developer site.
+4.x series[edit]
+In June 2010 at the World Wide Developers Conference, Apple announced version 4 of Xcode during the Developer Tools State of the Union address. Version 4 of the developer tools consolidates the Xcode editing tools and Interface Builder into a single application, among other enhancements.[18][19] Apple released the final code for Xcode 4.0 on March 9, 2011. The software was made available for free to all registered members of the $99 per year Mac Developer program and the $99 per year iOS Developer program. It was also sold for $4.99 to non-members on the Mac App Store (no longer available). Xcode 4.0 drops support for many older systems, including all PowerPC development as well as SDKs for Mac OS X 10.4 and 10.5, and all iOS SDKs older than 4.3. The deployment target can still be set to produce binaries for those older platforms, but for the Mac OS platforms one is then limited to creating x86 and x86_64 binaries. Later, Xcode was "Free" to the General Public. Before version 4.1, Xcode cost $4.99.[20]
+Xcode 4.1 was made available for free on July 20, 2011 (the day of Mac OS X Lion's release) to all users of Mac OS X Lion on the Mac App Store. On August 29, 2011, Xcode 4.1 was made available for Mac OS X Snow Leopard for members of the paid Mac or iOS developer programs.[21] Xcode 4.1 was the last version to include GCC instead of only LLVM GCC or Clang.
+On October 12, 2011, Xcode 4.2 was released concurrently with the release of iOS 5.0, and it included many more and improved features, such as storyboarding and automatic reference counting (ARC).[22] Xcode 4.2 is the last version to support Mac OS X 10.6 "Snow Leopard", but is only available to registered developers with paid accounts; without a paid account, 3.2.6 is the latest download that appears for Snow Leopard.[23]
+Xcode 4.3, released on February 16, 2012, is distributed as a single application bundle, Xcode.app, installed from the Mac App Store. Xcode 4.3 reorganizes the Xcode menu to include development tools.[24] Xcode 4.3.1 was released on March 7, 2012 to add support for iOS 5.1.[25] Xcode 4.3.2 was released on March 22, 2012 with enhancements to the iOS Simulator and a suggested move to the LLDB debugger as opposed to the GDB debugger (which appear to be un-documented changes).[citation needed] Xcode 4.3.3, released in May 2012, featured an updated SDK for Mac OS X 10.7.4 "Lion" and a few bug fixes.[26]
+Xcode 4.4 was released on July 25, 2012.[27] It runs on both Mac OS X Lion (10.7) and OS X Mountain Lion (10.8) and is the first version of Xcode to contain the OS X 10.8 "Mountain Lion" SDK. Xcode 4.4 includes support for automatic synthesizing of declared properties, new Objective-C features such as literal syntax and subscripting, improved localization, and more.[28] On August 7, 2012, Xcode 4.4.1 was released with a few bug fixes.
+Xcode 4.5 was released on September 19, 2012, on the same day that iOS 6 was released. It added support for iOS 6 and the 4-inch Retina display found on iPhone 5 and iPod touch 5th generation. It also brought some new Objective-C features to iOS, simplified localization, and added auto-layout support for iOS.[9] On October 3, 2012, Xcode 4.5.1 was released with bug fixes and stability improvements.[1] Less than a month later, Xcode 4.5.2 was released, with support for iPad mini and iPad with Retina display, and bug fixes and stability improvements.
+Xcode 4.6 was released on January 28, 2013, on the same day that iOS 6.1 was released.
+5.x series[edit]
+In June 2013 at the World Wide Developers Conference, Apple announced version 5 of Xcode.[29] Xcode 5.0 was released on September 18, 2013. It added support for iOS 7 SDK, with always support of OS X 10.8 Mountain Lion SDK but not the support of OS X 10.9 Mavericks SDK. This latest was only included in the betas version. It also added a version of Clang generating 64-bit ARM code for iOS 7. Apple removed support for building Garbage Collected Cocoa binaries in Xcode 5.1.[30]
+6.x series[edit]
+On June 2, 2014 at the World Wide Developers Conference, Apple announced version 6 of Xcode. Features include "Playgrounds", live debugging tools, as well as an entirely new programming language called Swift.[31] Xcode 6 was released on September 17, 2014, at the same time as the release of iOS, and can now be downloaded on the Mac App Store.
+7.x series[edit]
+On June 8, 2015 at the World Wide Developers Conference, Apple announced version 7 of Xcode. Xcode 7 introduced support for Swift 2, as well as Metal for OS X. Xcode 7 also adds support for deployment on iOS devices without an Apple Developer license.[32] Xcode 7 was released on September 16, 2015.
+
+
+This list is incomplete; you can help by expanding it.
+
+
+Version comparison table[edit]
+Xcode 1.0 - Xcode 2.x (before iOS support)[edit]
+
+
+Version history
+
+
+Version
+Build
+Release date
+Runs on versions of OS X
+OS X SDK(s)
+
+
+
+1.0
+
+
+September 28, 2003
+OS X Panther (10.3.x)
+OS X Puma (10.1.x), OS X Jaguar (10.2.x), and OS X Panther (10.3.x)
+
+
+
+1.1
+
+
+December 19, 2003
+
+
+
+1.2
+
+
+April 22, 2004
+
+
+
+1.5
+
+
+August 4, 2004
+
+
+
+2.0
+
+
+April 29, 2005
+OS X Tiger (10.4.x)
+OS X Jaguar (10.2.x), OS X Panther (10.3.x), and OS X Tiger (10.4.x)
+
+
+
+2.1
+
+
+June 6, 2005
+
+
+
+2.2
+
+
+November 10, 2005
+
+
+
+2.2.1
+
+
+January 13, 2006
+
+
+
+2.3
+
+
+May 23, 2006
+
+
+
+2.4
+
+
+August 17, 2006
+
+
+
+2.4.1
+
+
+October 31, 2006
+
+
+
+2.5
+
+
+October 30, 2007
+OS X Tiger (10.4.x) and OS X Leopard (10.5.x)
+
+
+Version
+Build
+Release date
+Runs on versions of OS X
+OS X SDK(s)
+
+
+Xcode 3.0 - Xcode 4.x[edit]
+
+
+Version history
+
+
+Version
+Build
+Release date
+min OS X to run
+OS X SDK(s)
+iOS SDK(s) included
+Min iOS Deployment Target
+iOS arm supported
+additional iOS Simulators
+
+
+
+3.0
+
+
+October 26, 2007
+10.5.x
+OS X Panther (10.3.x), OS X Tiger (10.4.x), and OS X Leopard (10.5.x)
+iOS 2.x + each down to iOS 2.0
+iOS 2.0
+armv6
+-
+
+
+
+3.1
+
+
+August 2, 2008
+
+
+
+3.1.1
+
+
+October 17, 2008
+
+
+
+3.1.2
+
+
+November 23, 2008
+
+
+
+3.1.3
+
+
+June 17, 2009
+10.5.7[33]
+iOS 3.1.3 (7E18) or lower[33] + each down to iOS 2.0
+armv6 + for iOS 3.x: armv7
+
+
+
+3.1.4
+
+1203
+July 15, 2009
+
+
+
+3.2
+
+
+August 28, 2009
+10.6.0
+OS X Tiger (10.4.x), OS X Leopard (10.5.x), and OS X Snow Leopard (10.6.x)
+
+
+
+3.2.1
+
+
+October 9, 2009
+
+
+
+3.2.2
+
+1650
+April 3, 2010
+10.6.2[34]
+iOS 3.2 (7B367) + each down to iOS 3.0
+iOS 3.0
+armv6,&#160;armv7
+
+
+
+3.2.3
+
+
+June 22, 2010
+10.6.4[35][36][37]
+iOS 4.0.x[38] + iOS 3.2
+
+
+
+3.2.4
+
+
+September 8, 2010
+iOS 4.1 + iOS 3.2
+iOS 4.0.2 (8A400)
+
+
+
+3.2.5
+
+1760
+October 14, 2010
+iOS 4.2 (8C134)
+iOS 4.1 (8B117) + iOS 4.0.2 (8A400) + iOS 3.2 (7W367a)
+
+
+
+3.2.6
+
+1761
+February 14, 2011
+10.6.6[39][40]
+iOS 4.3 (8F190)
+iOS 4.2 (8C134) + iOS 4.1 (8B117) + iOS 4.0.2 (8A400) + iOS 3.2 (7W367a)
+
+
+
+4.0
+
+4A304a
+March 14, 2011
+OS X Snow Leopard (10.6.x)
+
+
+
+4.0.1
+
+4A1006
+March 25, 2011
+
+
+
+4.0.2
+
+4A2002a
+April 14, 2011
+iOS 4.3.2 (8H7)
+
+
+
+4.1
+
+4B110 (10.7) 4B110f (10.6)
+July 20, 2011[41]
+10.6.7[42][43] and 10.7
+OS X Snow Leopard (10.6.x) and OS X Lion (10.7.x)
+-
+
+
+
+4.1.1
+
+
+August 4, 2011[44]
+
+
+
+4.2
+
+4D199 (10.7) 4C199 (10.6)
+October 12, 2011
+iOS 5.0 (9A334)
+downloadable: iOS 4.3.2 (8H7)[45]
+
+
+
+4.2.1
+
+4D502
+November 18, 2011
+10.7[46][47]
+
+
+
+4.3
+
+4E109
+February 16, 2012
+10.7.3[48][49]
+
+
+
+4.3.1
+
+4E1019
+March 7, 2012
+iOS 5.1 (9B176)
+downloadable: iOS 5.0 + only for OS X 10.7:[50] iOS 4.3
+
+
+
+4.3.2
+
+4E2002
+March 22, 2012
+
+
+
+4.3.3
+
+4E3002
+May 9, 2012
+
+
+
+4.4
+
+
+July 25, 2012
+10.7.4[51][52]
+OS X Lion (10.7.x) and OS X Mountain Lion (10.8.x)
+
+
+
+4.4.1
+
+4F1003
+August 7, 2012
+
+
+
+4.5
+
+
+September 19, 2012
+iOS 6.0 (10A403)
+iOS 4.3[53]
+armv7,&#160;armv7s
+downloadable: iOS 5.1 + iOS 5.0 + only for OS X 10.7: iOS 4.3
+
+
+
+4.5.1
+
+
+October 3, 2012
+
+
+
+4.5.2
+
+4G2008
+November 1, 2012
+
+
+
+4.6
+
+4H127
+Feb 20, 2013
+iOS 6.1 (10B141)
+downloadable: iOS 6.0 + iOS 5.1 + iOS 5.0 + only for OS X 10.7: iOS 4.3
+
+
+
+4.6.1
+
+4H512
+March 14, 2013
+
+
+
+4.6.2
+
+4H1003
+April 15, 2013
+
+
+
+4.6.3
+
+4H1503
+June 14, 2013
+
+
+Version
+Build
+Release date
+min OS X to run
+OS X SDK(s)
+iOS SDK(s) included
+Min iOS Deployment Target
+iOS arm supported
+additional iOS Simulators
+
+
+Xcode 5.0 - 6.x (since arm64 support)[edit]
+
+
+Version history
+
+
+Version
+Build
+Release date
+min OS X to run
+OS X SDK(s)
+iOS SDK(s) included
+Min iOS Deployment Target
+iOS arm supported
+downloadable iOS Simulators
+
+
+
+5.0
+
+5A1413
+September 18, 2013
+10.8.4[54][55]
+OS X v10.8
+iOS 7.0 (11A465)
+iOS 4.3 or iOS 6.0 (for arch with arm64)[56]
+armv7,&#160;armv7s,&#160;arm64
+iOS 6.1 + iOS 6.0 + only for OS X 10.8:[57] iOS 5.1 + iOS 5.0
+
+
+
+5.0.1
+
+5A2053
+October 22, 2013
+OS X v10.8 + OS X v10.9
+iOS 7.0.3 (11B508)
+iOS 4.3 or iOS 5.1.1 (for arch with arm64)[58]
+
+
+
+5.0.2
+
+5A3005
+November 12, 2013
+
+
+
+5.1
+
+5B130a
+March 10, 2014
+iOS 7.1 (11D167)
+iOS 7.0 + iOS 6.1[59][60]
+
+
+
+5.1.1
+
+5B1008
+April 10, 2014
+iOS 6.1
+
+
+
+6.0.1
+
+6A317
+Sep 17, 2014
+10.9.4
+OS X v10.9
+iOS 8.0 (12A365)
+Default: armv7, arm64
+Manually:[61] armv7s
+iOS 7.1 + only for OS X 10.9[62] iOS 7.0
+
+
+
+6.1
+
+6A1052c 6A1052d
+October 16, 2014[63] October 20, 2014[64]
+OS X v10.9 + OS X v10.10
+iOS 8.1 (12B411)
+
+
+
+6.1.1
+
+6A2008a
+December 2, 2014
+
+
+
+6.2
+
+6C131e
+March 9, 2015
+iOS 8.2 (12D508)
+iOS 8.1 + iOS 7.1
+
+
+
+6.3
+
+6D570
+April 8, 2015
+10.10
+OS X v10.10
+iOS 8.3 (12F69)
+iOS 8.2 + iOS 8.1 + iOS 7.1
+
+
+
+6.3.1
+
+6D1002
+April 21, 2015
+
+
+
+6.3.2
+
+6D2105
+May 18, 2015
+
+
+
+6.4
+
+6E35b
+June 30, 2015
+iOS 8.4 (12H141)
+iOS 8.3 + iOS 8.2 + iOS 8.1 + iOS 7.1
+
+
+Version
+Build
+Release date
+min OS X to run[65]
+OS X SDK(s)
+iOS SDK(s) included
+Min iOS Deployment Target
+iOS arm supported
+downloadable iOS Simulators
+
+
+Xcode 7.0 - 7.x (since Swift 2.0 support)[edit]
+
+
+Version history
+
+
+Version
+Build
+Release date
+min OS X to run
+OS X SDK(s)
+iOS SDK included
+watchOS SDK included
+tvOS SDK included
+downloadable iOS Simulators
+
+
+
+7.0
+
+7A220
+September 16, 2015
+10.10.4
+OS X v10.11 (15A278)
+iOS 9 (13A340)
+watchOS 2 (13S343)
+-
+iOS 8.4 + iOS 8.3 + iOS 8.2 + iOS 8.1
+
+
+
+7.0.1
+
+7A1001
+September 28, 2015
+
+
+
+7.1
+
+7B91b
+October 21, 2015
+10.10.5
+iOS 9.1 (13B137)
+tvOS 9.0 (13T393)
+iOS 9.0 + iOS 8.4 + iOS 8.3 + iOS 8.2 + iOS 8.1
+
+
+
+7.1.1
+
+7B1005
+November 9, 2015
+
+
+
+7.2
+
+7C62
+November 10, 2015
+OS X v10.11.2 beta (15C38a)
+iOS 9.2 beta (13C70)
+tvOS 9.1 beta (13U5069b)
+
+
+Version
+Build
+Release date
+min OS X to run[66]
+OS X SDK(s)[67]
+iOS SDK included[68]
+watchOS SDK included[69]
+tvOS SDK included[70]
+downloadable iOS Simulators[71]
+
+
+
+
+
+Discontinued
+
+Current release
+
+Beta
+
+
+Toolchain versions[edit]
+
+
+Toolchain versions history
+
+
+Xcode
+cctools
+ld64
+GCC 4.0
+GCC 4.2
+LLVM-GCC 4.2
+LLVM
+Apple LLVM / Apple Clang
+
+
+2.5
+622.9
+62.1
+5370
+-
+-
+-
+-
+
+
+3.1.4
+698.1
+85.2.1
+5493
+5577
+5555
+2064.3
+-
+
+
+3.2
+750
+95.2.12
+5493
+5646
+5646
+2118
+-
+
+
+3.2.1
+750
+95.2.12
+5493
+5646
+5646
+2206
+-
+
+
+3.2.2
+773
+97.2
+5493
+5659
+5646
+2207.5
+1.0.2
+
+
+3.2.3
+782
+97.14
+5494
+5664
+5658
+2326.10
+1.5 (60)
+
+
+3.2.4
+782
+97.14
+5494
+5664
+5658
+2326.10
+1.5 (60)
+
+
+3.2.5
+782
+97.17
+5494
+5664
+5658
+2333.4
+1.6 (70)
+
+
+3.2.6
+795
+97.17
+5494
+5666
+5658
+2335.6
+1.7 (77) (based on LLVM 2.9svn)
+
+
+4.0
+800
+123.2
+5494
+5666
+5658
+2335.9
+2.0 (137) (based on LLVM 2.9svn)
+
+
+4.0.2
+&#160;?
+&#160;?
+5494
+5666
+5658
+2335.9
+2.0 (137) (based on LLVM 2.9svn)
+
+
+4.1
+806
+123.2.1
+-
+5666
+5658
+2335.15.00
+2.1 (163.7.1) (based on LLVM 3.0svn)
+
+
+4.2
+809
+127.2
+-
+-
+5658
+2336.1.00
+3.0 (211.10.1) (based on LLVM 3.0svn)
+
+
+4.3
+822
+112
+-
+-
+5658
+2336.9.00
+3.1 (tags/Apple/clang-318.0.45) (based on LLVM 3.1svn)
+
+
+4.3.1
+&#160;?
+&#160;?
+-
+-
+5658
+2336.9.00
+3.1 (tags/Apple/clang-318.0.54) (based on LLVM 3.1svn)
+
+
+4.3.2
+&#160;?
+&#160;?
+-
+-
+5658
+2336.9.00
+3.1 (tags/Apple/clang-318.0.58) (based on LLVM 3.1svn)[72]
+
+
+4.3.3
+&#160;?
+&#160;?
+-
+-
+5658
+2336.9.00
+3.1 (tags/Apple/clang-318.0.61) (based on LLVM 3.1svn)[72]
+
+
+4.4
+829
+133.3
+-
+-
+5658
+2336.11.00
+4.0 (tags/Apple/clang-421.0.57) (based on LLVM 3.1svn)[72]
+
+
+4.4.1
+&#160;?
+&#160;?
+-
+-
+5658
+2336.11.00
+4.0 (tags/Apple/clang-421.0.60) (based on LLVM 3.1svn)[72]
+
+
+4.5
+836
+134.9
+-
+-
+5658
+2336.11.00
+4.1 (tags/Apple/clang-421.11.65) (based on LLVM 3.1svn)[72]
+
+
+4.5.1
+&#160;?
+&#160;?
+-
+-
+5658
+2336.11.00
+4.1 (tags/Apple/clang-421.11.66) (based on LLVM 3.1svn)[72]
+
+
+4.5.2
+&#160;?
+&#160;?
+-
+-
+5658
+2336.11.00
+4.1 (tags/Apple/clang-421.11.66) (based on LLVM 3.1svn)[72]
+
+
+4.6
+839
+136
+-
+-
+5658
+2336.11.00
+4.2 (clang-425.0.24) (based on LLVM 3.2svn)[72]
+
+
+4.6.1
+&#160;?
+&#160;?
+-
+-
+5658
+2336.11.00
+4.2 (clang-425.0.27) (based on LLVM 3.2svn)[72]
+
+
+4.6.2
+&#160;?
+&#160;?
+-
+-
+5658
+2336.11.00
+4.2 (clang-425.0.28) (based on LLVM 3.2svn)[72]
+
+
+4.6.3
+&#160;?
+&#160;?
+-
+-
+5658
+2336.11.00
+4.2 (clang-425.0.28) (based on LLVM 3.2svn)[72]
+
+
+Xcode
+cctools
+ld64
+GCC 4.0[73]
+GCC 4.2[74]
+LLVM-GCC 4.2[75]
+LLVM[76]
+Apple LLVM / Apple Clang[77]
+
+
+
+
+Toolchain versions history
+
+
+Xcode
+cctools
+ld64
+Apple LLVM / Apple Clang
+Swift
+
+
+5.0.0
+846.2.1
+224.1
+5.0 (clang-500.2.75) (based on LLVM 3.3svn)[72]
+
+
+5.0.1
+846.2.4
+224.1
+5.0 (clang-500.2.79) (based on LLVM 3.3svn)[72]
+
+
+5.0.2
+846.2.4
+224.1
+5.0 (clang-500.2.79) (based on LLVM 3.3svn)[72]
+
+
+5.1
+855
+236.3
+5.1 (clang-503.0.38) (based on LLVM 3.4svn)[72]
+
+
+5.1.1
+855
+236.4
+5.1 (clang-503.0.40) (based on LLVM 3.4svn)[72]
+
+
+6.0.1
+&#160;?
+&#160;?
+6.0 (clang-600.0.51) (based on LLVM 3.5svn)[72]
+1.0 (swift-600.0.51.4)
+
+
+6.1
+862
+241.9
+6.0 (clang-600.0.54) (based on LLVM 3.5svn)[72]
+1.1 (swift-600.0.54.20)
+
+
+6.1.1
+862
+241.9
+6.0 (clang-600.0.56) (based on LLVM 3.5svn)[72]
+1.1 (swift-600.0.56.1)
+
+
+6.2
+862
+241.9
+6.0 (clang-600.0.57) (based on LLVM 3.5svn)[72]
+1.1 (swift-600.0.57.4)
+
+
+6.3
+870
+242
+6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)[72]
+1.2 (swiftlang-602.0.49.3)
+
+
+6.3.1
+870
+242
+6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)[72]
+1.2 (swiftlang-602.0.49.6)
+
+
+6.3.2
+870
+242
+6.1.0 (clang-602.0.53) (based on LLVM 3.6.0svn)[72]
+1.2 (swiftlang-602.0.53.1)
+
+
+6.4
+870
+242.2
+6.1.0 (clang-602.0.53) (based on LLVM 3.6.0svn)[72]
+1.2 (swiftlang-602.0.53.1)
+
+
+7.0
+877.5
+253.3
+7.0.0 (clang-700.0.72)[72]
+2.0 (swiftlang-700.0.59)
+
+
+7.1
+877.7
+253.6
+7.0.0 (clang-700.1.76)[72]
+2.1 (swiftlang-700.1.101.6)
+
+
+Xcode
+cctools[citation needed]
+ld64[citation needed]
+Apple LLVM / Apple Clang[78]
+Swift[79]
+
+
+References[edit]
+
+
+^ a b "Xcode on the Mac App Store". Apple Inc. Retrieved November 10, 2014.&#160;
+^ "Mac Dev Center". Apple Developer. Retrieved July 31, 2011.&#160;
+^ "Xcode Downloads". Apple Developer. Retrieved July 26, 2014.&#160;
+^ David Holt says: (May 15, 2010). "Facts about WebObjects (WebObjects Community)". Wocommunity.org. Retrieved June 21, 2010.&#160;
+^ "WOLips". Wiki.objectstyle.org. February 27, 2010. Retrieved June 21, 2010.&#160;
+^ Prince McLean (June 20, 2008). "Apple's other open secret: the LLVM Compiler". Retrieved April 3, 2012.&#160;
+^ "XCode 3.2: teh awesome edition". August 30, 2009. Archived from the original on June 16, 2013.&#160;
+^ "New Features in Xcode 4: Xcode 4.2". Apple. September 16, 2015. Retrieved October 18, 2015.&#160;
+^ a b "New Features in Xcode 4: Xcode 4.5". Apple Inc. September 16, 2015. Retrieved October 18, 2015.&#160;
+^ "New Features in Xcode 5: Xcode 5.0". September 16, 2015. Retrieved October 18, 2015.&#160;
+^ Adriaan van Os. "GNU Pascal and Xcode". Microbizz.nl. Retrieved June 21, 2010.&#160;
+^ "Using Free Pascal with Xcode". Pascal-central.com. Retrieved June 21, 2010.&#160;
+^ "Tools". macada.org. Retrieved February 8, 2011.&#160;
+^ "CSharpPlugin - cocoa-sharp-dev - Google Code". Code.google.com. Retrieved June 21, 2010.&#160;
+^ "CamelBones, an Objective-C/Perl bridge for Mac OS X &amp; GNUStep - Home". Camelbones.sourceforge.net. December 1, 2004. Retrieved June 21, 2010.&#160;
+^ Apple - Mac OS X Leopard - Features - 300+ New Features[dead link]
+^ "Apple Developer Tools for Java". Apple. Retrieved February 8, 2011.&#160;
+^ "WWDC Software Notes: Safari 5, Xcode 4, iTunes 9.2". Mac Rumors. June 8, 2010. Retrieved June 21, 2010.&#160;
+^ "Developer Tools - What's New in Xcode 4". Apple Developer. Retrieved February 8, 2011.&#160;
+^ "Apple makes Xcode free to all with release of 4.1 on Mac App Store". AppleInsider. July 20, 2011. Retrieved July 3, 2013.&#160;
+^ "New Features in Xcode 4: Xcode 4.1". Apple Inc. Retrieved October 18, 2015.&#160;
+^ "New Features in Xcode 4: Xcode 4.2". Apple Inc. Retrieved October 18, 2015.&#160;
+^ "Why can't I download Xcode 4.2 for Snow Leopard?". Retrieved May 2, 2015.&#160;
+^ "What's New in Xcode 4.3". Apple Inc. Retrieved October 3, 2012.&#160;
+^ "New Features in Xcode 4: Xcode 4.3.1 and 4.3.2". Apple Inc. Retrieved October 18, 2015.&#160;
+^ "New Features in Xcode 4: Xcode 4.3.3". Apple Inc. Retrieved October 18, 2015.&#160;
+^ "Xcode 4.4 rolls out to OS X, iOS developers via the Mac App Store". 9to5Mac. July 25, 2012. Retrieved August 2, 2012.&#160;
+^ "New Features in Xcode 4: Xcode 4.4". Apple Inc. Retrieved October 18, 2015.&#160;
+^ "Apple seeds first iOS 7 and OS X Mavericks betas to developers". AppleInsider. June 10, 2013. Retrieved June 11, 2013.&#160;
+^ "New Features in Xcode 5: Xcode 5.1". April 20, 2015. Retrieved May 2, 2015.&#160;
+^ "Xcode 6, Swift, CloudKit, and more surprising developer news from WWDC 2014". TechRepublic. June 5, 2014. Retrieved June 6, 2014.&#160;
+^ "New Features in Xcode 7: Xcode 7.0". developer.apple.com. Retrieved 2015-06-09.&#160;
+^ a b "iPhone Software Development: Old versions of iPhone SDK". Retrieved May 2, 2015.&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Old versions of iPhone SDK". There were several releases of Xcode 3.2.3: with iOS 4.0; with iOS 4.0.1; with iOS 4.0.2 SDK&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Xcode". Retrieved May 2, 2015.&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Mac App Store - Xcode". Retrieved May 2, 2015.&#160;
+^ "How to Install Older iOS Simulators in XCode 4.2.1 (SDK5.0)". Retrieved May 2, 2015.&#160;
+^ "iphone - Xcode 4.2.1 for Snow Leopard - Stack Overflow". Retrieved May 2, 2015.&#160;
+^ "Mac App Store - Xcode". Retrieved May 2, 2015.&#160;
+^ "Mac App Store - Xcode". Retrieved May 2, 2015.&#160;
+^ "Mac App Store - Xcode". Mac App Store. Retrieved May 2, 2015.&#160;
+^ "iphone - Install Simulator SDK 4.3 to Xcode 4.4 on Mountain Lion - Stack Overflow". Retrieved May 2, 2015.&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Mac App Store - Xcode". Mac App Store. Retrieved May 2, 2015.&#160;
+^ "Unauthorized - Apple Developer" (PDF). Retrieved May 2, 2015.&#160;
+^ "Mac App Store - Xcode". Mac App Store. Retrieved May 2, 2015.&#160;
+^ "Mac App Store - Xcode". Mac App Store. Retrieved May 2, 2015.&#160;
+^ "Xcode 5 and iOS 7: Architecture and Valid architectures".&#160;
+^ "ios5 - Use iOS 5 Simulator in XCode 5? - Stack Overflow". Retrieved May 2, 2015.&#160;
+^ "About 64-Bit Cocoa Touch Apps".&#160;
+^ "Install ios 5 simulator to xcode 5.1?". Retrieved May 2, 2015.&#160;
+^ "iphone - ios 6.0 Simulator in xcode 5.1 - Stack Overflow". Retrieved May 2, 2015.&#160;
+^ "ios - Xcode 6 Standard architectures exclude armv7s - Stack Overflow". Retrieved May 2, 2015.&#160;
+^ "xcode - iOS 6.1 simulator on OSX 10.10 Yosemite - Stack Overflow". Retrieved May 2, 2015.&#160;
+^ Developer Portal version
+^ MAS version
+^ LSMinimumSystemVersion from Info.plist
+^ plutil -p Xcode.app/Contents/Info.plist | grep LSMinimumSystemVersion
+^ cd Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/; plutil -p */System/Library/CoreServices/SystemVersion.plist
+^ ls Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/ | grep '(.*)'
+^ ls Xcode.app/Contents/Developer/Platforms/WatchOS.platform/DeviceSupport/ | grep '(.*)'
+^ ls Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/DeviceSupport/ | grep '(.*)'
+^ from preferences -&gt; downloads
+^ a b c d e f g h i j k l m n o p q r s t u v w x y z "Xcode clang version record gist". Retrieved May 29, 2013.&#160;
+^ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.0 --version
+^ /Developer/usr/bin/gcc-4.2 --version
+^ Xcode.app/Contents/Developer/usr/bin/llvm-gcc --version
+^ Xcode.app/Contents/Developer/usr/bin/llvm-gcc --version
+^ Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --version
+^ Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --version
+^ Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift --version
+
+
+See also[edit]
+
+XcodeGhost
+
+External links[edit]
+
+Xcode – Mac App Store
+Apple Developer Connection: Xcode tools and resources
+Mac Developer Library: Xcode 4 Release Notes
+Download Xcode
+Test Xcode 4.4.x app on jailbroken iPhone/iPad 5.x
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for C and C++
+
+
+
+
+
+
+Open source
+
+
+
+Anjuta
+Code::Blocks
+CodeLite
+Dev-C++
+Eclipse
+Geany
+GNAT Programming Studio
+KDevelop
+Kuzya
+MonoDevelop
+NetBeans
+QDevelop
+Qt Creator
+Ultimate++
+wxDev-C++
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Pelles C
+Oracle Solaris Studio (previously called Sun Studio)
+Visual Studio Express
+Xcode
+
+
+
+
+
+
+
+
+Retail
+
+
+
+C++Builder
+CodeWarrior
+IBM VisualAge
+Visual Studio
+SlickEdit
+
+
+
+
+
+
+
+
+
+
+
+&#160;Category
+ Comparison
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+OS X Developer Tools
+
+
+
+
+
+
+
+
+
+Interface Builder
+Xcode
+Quartz Composer
+Dashcode
+Instruments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Xcode&amp;oldid=691500372"					
+				Categories: Integrated development environmentsUser interface buildersOS X text editorsOS X-only software made by Apple Inc.IOS (Apple)IOS development softwareHistory of softwareOS X programming tools2003 softwareHidden categories: All articles with dead external linksArticles with dead external links from June 2010Use mdy dates from October 2013All articles with unsourced statementsArticles with unsourced statements from April 2012Incomplete lists from November 2012Articles with unsourced statements from November 2015				
+							
+		
+		
+			

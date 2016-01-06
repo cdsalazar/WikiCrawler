@@ -1,0 +1,552 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Metaclass
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article possibly contains original research. Please improve it by verifying the claims made and adding inline citations. Statements consisting only of original research should be removed. (September 2013)
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (September 2013)
+
+
+
+
+
+
+
+
+In object-oriented programming, a metaclass is a class whose instances are classes. Just as an ordinary class defines the behavior of certain objects, a metaclass defines the behavior of certain classes and their instances. Not all object-oriented programming languages support metaclasses. Among those that do, the extent to which metaclasses can override any given aspect of class behavior varies. Metaclasses can be implemented by having classes be first-class citizen, in which case a metaclass is simply an object that constructs classes. Each language has its own metaobject protocol, a set of rules that govern how objects, classes, and metaclasses interact.[1]
+
+
+
+Contents
+
+
+1 Python example
+2 In Smalltalk-80
+3 In Ruby
+4 In Objective-C
+5 Support in languages and tools
+6 See also
+7 References
+
+
+
+Python example[edit]
+In Python, the builtin class type is a metaclass.[2][3][4] Consider this simple Python class:
+
+
+class Car(object):
+    def __init__(self, make, model, year, color):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.color = color
+
+    @property
+    def description(self):
+        """ Return a description of this car. """
+        return "%s %s %s %s" % (self.color, self.year, self.make, self.model)
+
+At run time, Car itself is an instance of type. The source code of the Car class, shown above, does not include such details as the size in bytes of Car objects, their binary layout in memory, how they are allocated, that the __init__ method is automatically called each time a Car is created, and so on. These details come into play not only when a new Car object is created, but also each time any attribute of a Car is accessed. In languages without metaclasses, these details are defined by the language specification and can't be overridden. In Python, the metaclass - type - controls these details of Car's behavior. They can be overridden by using a different metaclass instead of type.
+The above example contains some redundant code to do with the four attributes make, model, year, and color. It is possible to eliminate some of this redundancy using a metaclass. In Python, a metaclass is most easily defined as a subclass of type.
+
+
+ class AttributeInitType(type):
+     def __call__(self, *args, **kwargs):
+         """ Create a new instance. """
+
+         # First, create the object in the normal default way.
+         obj = type.__call__(self, *args)
+
+         # Additionally, set attributes on the new object.
+         for name, value in kwargs.items():
+             setattr(obj, name, value)
+
+         # Return the new object.
+         return obj
+
+This metaclass only overrides object creation. All other aspects of class and object behavior are still handled by type.
+Now the class Car can be rewritten to use this metaclass. This is done in Python 2 by assigning to __metaclass__ within the class definition:
+
+
+ class Car(object):
+     __metaclass__ = AttributeInitType
+
+     @property
+     def description(self):
+         """ Return a description of this car. """
+         return " ".join(str(getattr(self, attr, "Unknown"))
+                         for attr in self.__slots__)
+
+In Python 3 you provide a named argument, metaclass=M to the class definition instead:
+
+
+ class Car(object, metaclass=AttributeInitType):
+     @property
+     def description(self):
+         """ Return a description of this car. """
+         return " ".join(str(getattr(self, attr, "Unknown"))
+                         for attr in self.__slots__)
+
+Car objects can then be instantiated like this:
+
+
+ new_car = Car(make='Toyota', model='Prius', year=2005, color='Green')
+ old_car = Car(make='Ford', model='Prefect', year=1979)
+
+In Smalltalk-80[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (October 2013)
+
+
+
+
+
+
+The Smalltalk-80 metaclass hierarchy as a UML diagram
+
+
+
+
+
+
+Diagram of the inheritance and instance relationships between classes and metaclasses in Smalltalk
+
+
+In Smalltalk, everything is an object. Additionally, Smalltalk is a class based system, which means that every object has a class that defines the structure of that object (i.e. the instance variables the object has) and the messages an object understands. Together this implies that a class in Smalltalk is an object and that therefore a class needs to be an instance of a class (called metaclass).
+As an example, a car object c is an instance of the class Car. In turn, the class Car is again an object and as such an instance of the metaclass of Car called Car class. Note the blank in the name of the metaclass. The name of the metaclass is the Smalltalk expression that, when evaluated, results in the metaclass object. Thus evaluating Car class results in the metaclass object for Car whose name is Car class (one can confirm this by evaluating Car class name which returns the name of the metaclass of Car.)
+Class methods actually belong to the metaclass, just as instance methods actually belong to the class. When a message is sent to the object 2, the search for the method starts in Integer. If it is not found it proceeds up the superclass chain, stopping at Object whether it is found or not.
+When a message is sent to Integer the search for the method starts in Integer class and proceeds up the superclass chain to Object class. Note that, so far, the metaclass inheritance chain exactly follows that of the class inheritance chain. But the metaclass chain extends further because Object class is the subclass of Class. All metaclasses are subclasses of Class.
+In early Smalltalks, there was only one metaclass called Class. This implied that the methods all classes have were the same, in particular the method to create new objects, i.e., new. To allow classes to have their own methods and their own instance variables (called class instance variables and should not be confused with class variables), Smalltalk-80 introduced for each class C their own metaclass C class. This means that each metaclass is effectively a singleton class.
+Since there is no requirement that metaclasses behave differently from each other, all metaclasses are instances of only one class called Metaclass. The metaclass of Metaclass is called Metaclass class which again is an instance of class Metaclass.
+In Smalltalk-80, every class (except Object) has a superclass. The abstract superclass of all metaclasses is Class, which describes the general nature of classes.
+The superclass hierarchy for metaclasses parallels that for classes, except for class Object. ALL metaclasses are subclasses of Class, therefore:
+
+Object class superclass == Class.
+
+Like conjoined twins, classes and metaclasses are born together. Metaclass has an instance variable thisClass, which points to its conjoined class. Note that the usual Smalltalk class browser does not show metaclasses as separate classes. Instead the class browser allows to edit the class together with its metaclass at the same time.
+The names of classes in the metaclass hierarchy are easily confused with the concepts of the same name. For instance:
+
+Object is the base class that provides common methods for all objects; "an object" is an integer, or a widget, or a Car, etc.
+Class is the base of the metaclasses that provides common methods for all classes (though it is not a metaclass itself); "a class" is something like Integer, or Widget, or Car, etc.
+Metaclass provides common methods for all metaclasses.
+
+Four classes provide the facilities to describe new classes. Their inheritance hierarchy (from Object), and the main facilities they provide are:
+
+Object - default behavior common to all objects, like class access
+
+Behavior - minimum state for compiling methods and creating/running objects
+
+ClassDescription (abstract class) - class/variable naming, comments
+
+Class - similar, more comprehensive, facilities to superclasses
+Metaclass - initializing class variables, instance creation messages
+
+
+
+
+
+
+
+In Ruby[edit]
+Ruby purifies the Smalltalk-80 concept of metaclasses by introducing eigenclasses, removing the Metaclass class, and (un)redefining the class-of map. The change can be schematized as follows:[5]
+
+
+
+
+Smalltalk-80
+
+
+Classes
+
+
+Implicit
+metaclasses
+
+&#160;&#160;
+
+
+
+Terminal
+objects
+
+
+
+
+
+→
+
+
+Ruby
+
+
+Classes
+
+
+Eigenclasses of
+classes
+
+
+Eigenclasses
+of
+eigenclasses
+
+
+
+
+Terminal
+objects
+
+
+Eigenclasses of
+terminal objects
+
+
+
+
+
+
+Note in particular the correspondence between Smalltalk's implicit metaclasses and Ruby's eigenclasses of classes. The Ruby eigenclass model makes the concept of implicit metaclasses fully uniform: every object x has its own meta-object, called the eigenclass of x, which is one meta-level higher than x. The "higher order" eigenclasses usually exist purely conceptually – they do not contain any methods or store any (other) data in most Ruby programs.[6]
+The following diagrams show a sample core structure of Smalltalk-80 and Ruby in comparison.[7] In both languages, the structure consists of a built-in part which contains the circular objects (i.e. objects that appear in a cycle formed by a combination of blue or green links) and a user-part which has four explicit objects: classes A and B and terminal objects u and v. Green links show the child→parent relation of inheritance (with the implicit upward direction), blue links show the complementary member→container relation of instantiation (a blue link from x points to the least actual container of x that is the start point for the method lookup when a method is invoked on x). Gray nodes display the eigenclasses (resp. implicit metaclasses in the case of Smalltalk-80).
+
+
+Smalltalk-80
+&#160;
+Ruby
+
+
+
+
+
+
+
+The diagram on the right also provides a picture of lazy evaluation of eigenclasses in Ruby. The v object can have its eigenclass evaluated (allocated) as a consequence of adding singleton methods to v.
+According to the Ruby's introspection method named class, the class of every class (and of every eigenclass) is constantly the Class class (denoted by c in the diagram). Class, and Struct are the only classes that have classes as instances.[8][disputed – discuss] Subclassing of Class is disallowed. Following the standard definition of metaclasses we can conclude that Class and Struct are the only metaclasses in Ruby. This seems to contradict the correspondence between Ruby and Smalltalk, since in Smalltalk-80, every class has its own metaclass. The discrepancy is based on the disagreement between the class introspection method in Ruby and Smalltalk. While the map x ↦ x.class coincides on terminal objects, it differs in the restriction to classes. As already mentioned above, for a class x, the Ruby expression x.class evaluates constantly to Class. In Smalltalk-80, if x is a class then the expression x class corresponds to the Ruby's x.singleton_class – which evaluates to the eigenclass of x.
+In Objective-C[edit]
+
+
+
+
+
+This section needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (October 2013)
+
+
+
+
+
+
+
+This section's tone or style may not reflect the encyclopedic tone used on Wikipedia. See Wikipedia's guide to writing better articles for suggestions. (September 2013)
+
+
+
+
+
+
+Diagram of the inheritance and instance relationships between classes and metaclasses in Objective-C. Note that Objective-C has multiple root classes; each root class would have a separate hierarchy. This diagram only shows the hierarchy for an example root class NSObject. Each other root class would have a similar hierarchy.
+
+
+Metaclasses in Objective-C are almost the same as those in Smalltalk-80—not surprising since Objective-C borrows a lot from Smalltalk. Like Smalltalk, in Objective-C, the instance variables and methods are defined by an object's class. A class is an object, hence it is an instance of a metaclass.
+Like Smalltalk, in Objective-C, class methods are simply methods called on the class object, hence a class's class methods must be defined as instance methods in its metaclass. Because different classes can have different sets of class methods, each class must have its own separate metaclass. Classes and metaclasses are always created as a pair: the runtime has functions objc_allocateClassPair() and objc_registerClassPair() to create and register class-metaclass pairs, respectively.
+There are no names for the metaclasses; however, a pointer to any class object can be referred to with the generic type Class (similar to the type id being used for a pointer to any object).
+Because class methods are inherited through inheritance, like Smalltalk, metaclasses must follow an inheritance scheme paralleling that of classes (e.g. if class A's parent class is class B, then A's metaclass's parent class is B's metaclass), except that of the root class.
+Unlike Smalltalk, the metaclass of the root class inherits from the root class (usually NSObject using the Cocoa framework) itself. This ensures that all class objects are ultimately instances of the root class, so that you can use the instance methods of the root class, usually useful utility methods for objects, on class objects themselves.
+Since metaclass objects do not behave differently (you cannot add class methods for a metaclass, so metaclass objects all have the same methods), they are all instances of the same class—the metaclass of the root class (unlike Smalltalk). Thus, the metaclass of the root class is an instance of itself. The reason for this is that all metaclasses inherit from root class; hence, they must inherit the class methods of the root class.[9]
+Support in languages and tools[edit]
+The following are some of the most prominent programming languages that support metaclasses.
+
+Common Lisp, via CLOS
+Delphi and other versions of Object Pascal influenced by it
+Groovy
+Objective-C
+Python
+Perl, via the metaclass pragma, as well as Moose
+Ruby
+Smalltalk
+
+Some less widespread languages that support metaclasses include OpenJava, OpenC++, OpenAda, CorbaScript, ObjVLisp, Object-Z, MODEL-K, XOTcl, and MELDC. Several of these languages date from the early 1990s and are of academic interest.[10]
+Logtalk, an object-oriented extension of Prolog, also supports metaclasses.
+Resource Description Framework (RDF) and Unified Modeling Language (UML) both support metaclasses.
+See also[edit]
+
+Metamodel
+Metaprogramming
+Metaobject
+Kind (type theory)
+Reflection
+Dynamism
+Adapter pattern
+Metaclass (Semantic Web)
+
+References[edit]
+
+
+^ Ira R. Forman and Scott Danforth (1999). Putting Metaclasses to Work. ISBN&#160;0-201-43305-2.&#160;
+^ IBM Metaclass programming in Python, parts 1, 2 and 3
+^ Artima Forum: Metaclasses in Python 3.0 (part 1 of 2) (part 2 of 2)
+^ David Mertz. "A Primer on Python Metaclass Programming". ONLamp. Retrieved June 28, 2006.&#160;
+^ "The Ruby Object Model: Comparison with Smalltalk-80".&#160;
+^ Paolo Perrotta. Metaprogramming Ruby. Pragmatic Bookshelf. ISBN&#160;978-1-934356-47-0.&#160;
+^ "Object Membership: The Core Structure of Object Technology".&#160;
+^ "Struct". Ruby Doc. Retrieved 1 May 2015.&#160;
+^ Cocoa with Love: What is a meta-class in Objective-C?
+^ An implementation of mixins in Java using metaclasses
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Metaclass&amp;oldid=679874222"					
+				Categories: Class (computer programming)Hidden categories: Articles that may contain original research from September 2013All articles that may contain original researchArticles needing additional references from September 2013All articles needing additional referencesArticles needing additional references from October 2013All accuracy disputesArticles with disputed statements from May 2015Wikipedia articles needing style editing from September 2013All articles needing style editingArticles with example Python code				
+							
+		
+		
+			

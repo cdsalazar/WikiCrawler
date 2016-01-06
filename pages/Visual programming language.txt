@@ -1,0 +1,375 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Visual programming language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+An implementation of a "Hello, world!" program in the Scratch programming language
+
+
+In computing, a visual programming language (VPL) is any programming language that lets users create programs by manipulating program elements graphically rather than by specifying them textually.[1][2] A VPL allows programming with visual expressions, spatial arrangements of text and graphic symbols, used either as elements of syntax or secondary notation. For example, many VPLs (known as dataflow or diagrammatic programming)[3] are based on the idea of "boxes and arrows", where boxes or other screen objects are treated as entities, connected by arrows, lines or arcs which represent relations.
+
+
+
+Contents
+
+
+1 Definition
+2 Visual languages
+
+2.1 Educational
+2.2 Multimedia
+2.3 Video games
+2.4 Systems / simulation
+2.5 Automation
+2.6 Data warehousing/ business intelligence
+2.7 Miscellaneous
+2.8 Legacy
+
+
+3 Visual styles
+4 See also
+5 References
+6 External links
+
+
+
+Definition[edit]
+VPLs may be further classified, according to the type and extent of visual expression used, into icon-based languages, form-based languages, and diagram languages. Visual programming environments provide graphical or iconic elements which can be manipulated by users in an interactive way according to some specific spatial grammar for program construction.
+A visually transformed language is a non-visual language with a superimposed visual representation. Naturally visual languages have an inherent visual expression for which there is no obvious textual equivalent.[citation needed]
+Current developments try to integrate the visual programming approach with dataflow programming languages to either have immediate access to the program state, resulting in online debugging, or automatic program generation and documentation. Dataflow languages also allow automatic parallelization, which is likely to become one of the greatest programming challenges of the future.[4]
+An instructive counterexample for visual programming languages is Microsoft Visual Studio. The languages it encompasses (Visual Basic, Visual C#, Visual J#, etc.) are commonly confused with, but are not visual programming languages. All of these languages are textual and not graphical. MS Visual Studio is a visual programming environment, but not a visual programming language, hence the confusion.
+Visual languages[edit]
+
+
+This list might be incomplete and may never be able to satisfy particular standards for completeness. You can help by expanding it with reliably sourced entries.
+
+
+The following contains a list of visual programming languages.
+Educational[edit]
+
+Alice
+TouchDevelop, a cross platform programming environment developed at Microsoft Research
+AgentSheets, easy to use game authoring and computational science authoring tool
+App Inventor for Android, a tool for creating applications for Google Android, based on Blockly and Kawa
+Etoys scripting
+Flowgorithm, creates executable flowcharts which can be converted to several languages.
+Hopscotch, a visual programming language for mobile touchscreen devices (available on the iPad).
+Kodu, a visual programming tool which builds on ideas begun with Logo
+LARP, creates executable flowcharts, for the Windows Platform
+Open Roberta online programming environment from Fraunhofer IAIS designed for kids
+Raptor, creates executable flowcharts.
+Scratch, a product of MIT designed for kids in K-12 and after school programs
+Snap!, an extension of Scratch with first class procedures and lists which is used for teaching by UC Berkeley (browser-based reimplementation of BYOB (programming language))
+Stagecast Creator, formerly Apple's Cocoa: Internet Authoring for Kids
+StarLogo, an agent-based simulation language developed by Mitchel Resnick, Eric Klopfer, and others at MIT Media Lab. It is an extension of the Logo programming language, a dialect of Lisp.
+ToonTalk, programming system for children
+TREPL, an online programming environment for people learning about algorithms and OOP
+Visual Logic, creates executable flowcharts.
+
+Multimedia[edit]
+
+AudioMulch, an audio signal flow based sound and music creation environment
+Blender (software), the open source 3D graphics package, includes a "node editor" to create shading programs as graphs. Also, custom nodes allows create systems as sverchok, blendgraph or other.
+Cameleon, graphical functional language
+Clickteam's The games factory/Multimedia fusion series, environments made for visually developing games
+Filter Forge Node based filter generation for image processing.
+Grasshopper 3d, a generative modeling interface for Rhinoceros 3D
+Kyma (sound design language), a visual programming language for sound design used by musicians, researchers, and sound designers.
+Mama (software) - a programming language and IDE for building 3D animations and games
+Max (software), visual programming environment for building interactive, real-time music and multimedia applications
+
+Max/MSP
+Pure Data
+nato.0+55+3d
+
+
+Nuke, a Python-based visual programming language for visual effects compositing by The Foundry
+OpenMusic, a visual programming language for music composition (based on Common Lisp Object System (CLOS)) applications, and mobile applications
+Pure Data (Pd) is a visual programming language developed for creating interactive computer music and multimedia works.
+Quartz Composer, a language for processing and rendering graphical data (Mac OS X)
+Reaktor, a DSP and MIDI-processing language by Native Instruments
+Scala Multimedia Authoring suite and complete multimedia system for AmigaOS and Windows
+Softimage,with ICE Interactive Creative Environment.
+SynthEdit, a Synthesizer construction tool using a VPL.
+Virtools, a middleware used to create interactive 3D experiences
+WireFusion, visual programming environment for creating interactive 3D web presentations
+Vsxu, music visual / real time 3D graphics generation (Windows, GNU/Linux, and Mac OS X)
+vvvv, real-time video synthesis
+
+Video games[edit]
+
+Construct 2 is a HTML5 based game editor developed by Scirra Ltd.
+Unreal Engine 4 has a node-based visual programming language called Blueprints
+Godot, in-house open source MIT Licensed game development software made by OKAM Studio
+GameSalad is a visual game creation tool developed by GameSalad, Inc.
+Kodu, a software designed to program games with a 3D Interface developed by Microsoft Research
+Stencyl, a video game creation tool
+GameMaker: Studio, has a drag and drop game creation system developed by YoYo Games.
+RedWire uses an electronics metaphor of chips being wired together to execute game code. It is open source and cross-platform using HTML5 with a web browser.
+
+Besides, many modern video games make use of behavior trees, which are in principle a family of simple programming languages designed to model behaviors for non-player characters. The behaviors are modeled as trees, and are often edited in graphical editors.
+Systems / simulation[edit]
+
+Adobe: Flash/Flash Builder a software suite including its own programming language actionscript and graphical language for the design of multi-platform applications and animations.
+Analytica
+CODE
+EICASLAB, a software suite including a graphical language for supporting the design of control architectures
+Flowcode is a graphical programming language to program embedded microprocessors
+Function block diagrams, used in programmable logic controllers
+KNIME, the Konstanz Information Miner, is an open source data analytics, reporting and integration platform.
+LabVIEW, a graphical language designed for engineers and scientists
+Ladder logic, a language that simulates relay logic commonly used in programmable logic controllers
+MeVisLab, cross-platform application framework for medical image processing and scientific visualization
+Microsoft Visual Programming Language, dataflow language for robotics programming that is a component of Microsoft Robotics Studio
+MindRover, a robot programming game incorporating a dataflow "wiring" language
+Minibloq, visual programming language for robotics and Arduino compatible boards.
+MST Workshop, an interactive visual programming language for creating mathematical solutions, rapid prototyping, two-dimensional and three-dimensional graphic applications
+NXT-G, a visual programming language for the Lego Mindstorms NXT robotics kit
+OpenDX scientific data visualization using a visual programming language and data flow model
+OpenWire - adds visual dataflow programming abilities to Delphi via Visual Component Library (VCL) components and a graphical editor (homonymous binary protocol is unrelated)
+OutSystems language, a visual modeling language to develop and change all layers of business centric web applications
+Prograph
+Ptolemy
+Qucs graphical interface to set up simulation of electronic circuit signal and noise behavior
+ROBO Pro, a visual programming language for the fischertechnik robotics kit
+Scicos A graphical language associated with the numerical analysis package ScicosLab (originally SciLab).
+Simulink
+Sequential function chart, a Petri-net like programming language for programmable logic controllers
+Softimage ICE, a node-based system that is used to create and modify 3D models, simulate particles and perform various other tasks
+VEE
+VisSim, modeling and simulation language, allows making mathematical models quickly and executing them in real-time
+
+Automation[edit]
+
+Automator
+CiMPLE, Visual Programming Language by ThinkLABs for teaching robotics
+Flow a graphical integration language used in the webMethods platform
+Pipeline Pilot is a scientific visual and dataflow programming language, and the authoring tool for the Accelrys Enterprise Platform.
+PLUS+1 GUIDE, a graphical programming environment from Sauer-Danfoss typically used for off-highway machines.
+
+Data warehousing/ business intelligence[edit]
+
+SQL Server Integration Services, a platform for data integration and workflow applications, by Microsoft
+Informatica Powercenter is an advanced ETL tool to design mappings grafically for data load in Data Warehouse systems, by Informatica
+Ab Initio, a more advanced tool for ETL processing by creating graphs
+IBM InfoSphere DataStage, Also an ETL tool by IBM
+IBM Cognos Business Intelligence, is an example for front-end programs in Business Intelligence applications, which are used to generate SQL queries to run against RDBMS databases
+Feature Manipulation Engine, an integrated collection of Spatial ETL tools for data transformation and data translation produced by Safe Software Inc.
+
+Miscellaneous[edit]
+
+iCon-L (de: iCon-L) is an open visual programming system used with robots.[5]
+Kwikpoint, an isotype visual translator created by Alan Stillman
+Lava
+Limnor, a general purpose programming system. Limnor Studio is an IDE for rapid software development.
+Morphic (software), makes it easier to build and edit graphical objects by direct manipulation and from within programs; the whole Self (programming language) programming environment is built using Morphic
+PUPI is a toolkit for creating visual programming interfaces with the ability to generate nodes directly from Microsoft .NET classes.
+StreamBase Systems, StreamBase EventFlow is a visual programming language for processing streaming events
+Tersus, an open source platform for the development of rich web applications by visually defining user interface, client side behavior and server side processing
+TouchDevelop, programming for mobile devices
+WebML, is a visual language for designing complex data-intensive Web applications that can be automatically generated
+Yahoo! Pipes is an visual data-flow programming system to process web data [6]
+YAWL, graphical workflow language
+
+Legacy[edit]
+
+AppWare, also known as MicroBrew, icon based programming for Mac OS and Microsoft Windows
+Macromedia Authorware - flowchart based programming language
+Helix and Double Helix, a pioneering database management system for the Apple Macintosh platform, created in 1983
+Illumination Software Creator, a language and IDE for visually creating desktop and mobile software
+Lily, browser based visual programming environment
+ThingLab
+
+Visual styles[edit]
+
+Flowchart
+DRAKON, a language designed for developing the Soviet Buran spacecraft
+Executable UML, a profile of the Universal Modeling Language specification defining an executable semantics for a subset of UML
+Subtext
+
+See also[edit]
+
+Argument map
+Cognitive dimensions of notations - Notation assessment for visual and non-visual languages
+Concept map
+Dataflow programming
+Deutsch limit, an adage about the information density of language primitives in a visual notation
+Domain-specific modeling
+Drakon-chart
+Flow-based programming
+Flowchart
+Graph drawing
+Unified Modeling Language
+Visual language
+Visual thinking
+Widget Workshop
+Programming game
+Drag and drop
+
+References[edit]
+
+
+^ Graphical Programming Environments for Educational Robots: Open Roberta - Yet Another One? from the IEEE
+^ The Maturity of Visual Programming
+^ Diagrammatic-graphical programming languages and DoD-STD-2167A from the IEEE
+^ Johnston, W.M.; Hanna, J.R.P.; Millar, R.J. (2004). "Advances in dataflow programming languages" (PDF). ACM Computing Surveys 36 (1): 1–34. doi:10.1145/1013208.1013209. Retrieved 2011-02-16.&#160;
+^ Stefan Enderle, Wolfgang Guenther, Hans-Juergen Hilscher, Holger Kenn. "xROB-S and iCon-X: Flexible Hardware, Visual Programming and Software Component Reuse". 2009.
+^ Yahoo! pipes
+
+
+This article was originally based on material from the Free On-line Dictionary of Computing, used with permission. Update as needed.
+External links[edit]
+
+Visual programming languages at DMOZ
+Visual Programming Languages - Snapshots
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Visual_programming_language&amp;oldid=690928095"					
+				Categories: Programming language classificationVisual programming languagesHidden categories: All articles with unsourced statementsArticles with unsourced statements from April 2010Dynamic listsArticles with DMOZ links				
+							
+		
+		
+			

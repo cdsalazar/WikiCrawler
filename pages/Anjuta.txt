@@ -1,0 +1,700 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Anjuta
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+Anjuta
+
+
+
+
+
+
+Screenshot&#160;
+
+Anjuta in action
+
+
+
+
+
+Original author(s)
+Naba Kumar
+
+
+Developer(s)
+Johannes&#160;Schmid, Sebastien&#160;Granjoux, Massimo&#160;Cora', James&#160;Liggett and others
+
+
+Initial release
+December&#160;27, 1999; 15 years ago&#160;(1999-12-27)[1]
+
+
+Stable release
+3.13.92 (September&#160;14, 2014; 14 months ago&#160;(2014-09-14)) [±]
+
+
+Preview release
+3.7.1 (October&#160;29, 2012; 3 years ago&#160;(2012-10-29)) [±]
+
+
+Development status
+Active[2]
+
+
+Written in
+C (GTK+)
+
+
+Operating system
+Unix-like
+
+
+Platform
+GNOME
+
+
+Available in
+19 languages[3]
+
+
+Type
+Integrated development environment
+
+
+License
+GNU General Public License[4]
+
+
+Website
+anjuta.org
+
+
+Anjuta is an integrated development environment written for the GNOME project.[5] It has support for the C,[6] C++,[6] Java, JavaScript, Python and Vala programming languages. It comes standard on base installation DVDs of major Linux distributions such as Ubuntu,[7] openSUSE,[7] Fedora,[7] and Mandriva Linux[citation needed] (amongst others).
+
+
+
+Contents
+
+
+1 Anjuta DevStudio (2.x)
+2 Features
+3 Reception
+4 See also
+5 References
+6 Further reading
+7 External links
+
+
+
+Anjuta DevStudio (2.x)[edit]
+
+Anjuta extras
+
+Stable release
+3.6.0 / October&#160;26, 2012; 3 years ago&#160;(2012-10-26)
+
+
+Website
+www.anjuta.org
+
+
+The goal of Anjuta DevStudio is to provide a customizable and extensible IDE framework and at the same time provide implementations of common development tools. Libanjuta is the framework that realizes the Anjuta IDE plugin framework and Anjuta DevStudio realizes many of the common development plugins.
+It integrates programming tools such as the Glade Interface Designer and the Devhelp API help browser.
+Features[edit]
+Anjuta features:
+
+an interactive debugger built over GDB and integrated compiler[4]
+a source code editor with source browsing,
+code completion and syntax highlighting,
+project management,[4]
+application wizards.[4]
+version control system integration
+
+Reception[edit]
+The German magazine LinuxUser recognized Anjuta 1.0.0 (released in 2002) as a good step to increase the number of native GNOME/GTK applications, stating that the application has a very intuitive GUI and new useful features.[8]
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+
+Comparison of integrated development environments
+List of GNOME applications
+
+References[edit]
+
+
+^ "Anjuta DevStudio: Integrated Development Environment". Projects.gnome.org. 1999-12-27. Retrieved 2010-05-12.&#160;
+^ "anjuta&#160;— Develop software in an integrated development environment". Git.gnome.org. Retrieved 2010-05-12.&#160;
+^ Naba Kumar. "Module Statistics: anjuta". L10n.gnome.org. Retrieved 2010-05-17.&#160;
+^ a b c d Schürmann, Tim (2002). "schweizer messer - Entwicklungsumgebungen im Vergleich". LinuxUser (in German) (2). Retrieved 23 March 2012.&#160; Cite error: Invalid &lt;ref&gt; tag; name "linuxuser" defined multiple times with different content (see the help page).
+^ Stiebert, Julius (12 March 2008). "Gnome 2.22 mit Desktop-Effekten" (in German). Golem.de. Retrieved 23 February 2012.&#160;
+^ a b Kleijn, Alexandra (12 March 2008). "Gnome 2.22 - Das neue Halbjahres-Release der Desktop-Umgebung" (in German). Heinz Heise. Retrieved 23 February 2012.&#160;
+^ a b c Thoma, Jörg (8 April 2011). "Tutorials für Entwickler" (in German). Golem.de. Retrieved 23 February 2012.&#160;
+^ "News und Programme rund um Gnome". LinuxUser (in German) (1). 2003. Retrieved 23 March 2012.&#160;
+
+
+Further reading[edit]
+
+Schulz, Hajo (2002). "Selbst geschneidert&#160;— Software-Kollektion für Entwickler". c't (in German) (13): 150.&#160;
+
+External links[edit]
+
+Official website
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+GNOME
+
+
+
+
+
+
+Core Applications
+
+
+
+Boxes
+Calculator
+Character Map
+Dictionary
+Disks
+Files
+Software
+Terminal
+Videos
+Web
+
+
+
+
+
+
+
+
+
+
+
+
+
+Additional Applications
+
+
+
+
+
+Development
+
+
+
+
+Anjuta
+Builder
+Glade Interface Designer
+Meld
+Devhelp
+Nemiver
+Geany
+Gtranslator
+
+
+
+
+
+
+
+
+
+Office
+
+
+
+
+AbiWord
+Dia
+Gnumeric
+Evince
+Evolution
+Ease
+LaTeXila
+OCRFeeder
+
+
+
+
+
+
+
+
+
+Graphics
+
+
+
+
+Eye of GNOME
+F-Spot
+GIMP
+Inkscape
+Shotwell
+Simple Scan
+
+
+
+
+
+
+
+
+
+Internet
+
+
+
+
+Balsa
+Empathy
+Ekiga
+Gobby
+SFLphone
+Vino (VNC server)
+Vinagre
+transmission-gtk
+
+
+
+
+
+
+
+
+
+Media
+
+
+
+
+Banshee
+Cheese
+Pitivi
+Rhythmbox
+Sound Juicer
+EasyTag
+
+
+
+
+
+
+
+
+
+Games
+
+
+
+
+GNOME Games
+
+Chess
+Mines
+
+
+gbrainy
+PyChess
+
+
+
+
+
+
+
+
+
+Utilities
+
+
+
+
+Brasero
+dconf-editor
+File Roller
+gedit
+gnote
+GParted
+Tomboy
+
+
+
+
+
+
+
+
+
+
+
+Platform components
+
+
+
+
+
+User interface
+
+
+
+
+
+
+GNOME 3
+
+
+
+
+GDM
+Mutter
+GNOME Shell
+Tango Desktop Project
+Orca
+
+
+
+
+
+
+
+
+
+GNOME 2
+
+
+
+
+Metacity
+GNOME Panel
+Clearlooks
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+Cinnamon
+MATE
+Diodon
+Docky
+GNOME Do
+Avant Window Navigator
+
+
+
+
+
+
+
+
+
+
+
+
+GNOME Base
+
+
+
+
+GTK+
+
+GDK
+ATK
+Clutter
+
+
+Pango
+GLib
+
+GObject
+GIO
+
+
+IBus
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+dconf
+Genie
+Keyring
+GNOME-DB
+GVFS
+Librsvg
+MetaTracker
+Vala
+libxslt
+libxml2
+
+
+
+
+
+
+
+
+
+freedesktop.org
+
+
+
+
+AppStream
+D-Bus
+GStreamer
+NetworkManager
+Poppler
+Wayland
+X.Org Server
+PulseAudio
+PackageKit
+HarfBuzz
+Cairo
+
+
+
+
+
+
+
+
+
+
+
+Community
+
+
+
+GNOME Foundation
+GUADEC
+The GNOME Project
+Controversy over GNOME 3
+Outreach Program for Women
+
+
+
+
+
+
+
+
+People
+
+
+
+Miguel de Icaza
+Luis Villa
+Havoc Pennington
+Karen Sandler
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for C and C++
+
+
+
+
+
+
+Open source
+
+
+
+Anjuta
+Code::Blocks
+CodeLite
+Dev-C++
+Eclipse
+Geany
+GNAT Programming Studio
+KDevelop
+Kuzya
+MonoDevelop
+NetBeans
+QDevelop
+Qt Creator
+Ultimate++
+wxDev-C++
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Pelles C
+Oracle Solaris Studio (previously called Sun Studio)
+Visual Studio Express
+Xcode
+
+
+
+
+
+
+
+
+Retail
+
+
+
+C++Builder
+CodeWarrior
+IBM VisualAge
+Visual Studio
+SlickEdit
+
+
+
+
+
+
+
+
+
+
+
+&#160;Category
+ Comparison
+
+
+
+
+
+
+
+
+
+
+
+This GNOME-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+This programming-tool-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Anjuta&amp;oldid=664799614"					
+				Categories: GNOME Developer ToolsFree integrated development environmentsLinux integrated development environmentsIntegrated development environments that use GTK+GNOME stubsComputer programming tool stubsHidden categories: Pages with reference errorsCS1 German-language sources (de)Pages with duplicate reference namesAll articles with unsourced statementsArticles with unsourced statements from February 2012All stub articles				
+							
+		
+		
+			

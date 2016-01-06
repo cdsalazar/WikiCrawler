@@ -1,0 +1,299 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Clang
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the C, Objective-C, and C++ compiler.  For the phenomenon of rhyming word association, see Clanging.
+
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article may rely excessively on sources too closely associated with the subject, potentially preventing the article from being verifiable and neutral. Please help improve it by replacing them with more appropriate citations to reliable, independent, third-party sources. (February 2015)
+
+
+
+
+
+
+
+Some or all of this article's listed sources may not be reliable. Please help this article by looking for better, more reliable sources, or by checking whether the references meet the criteria for reliable sources. Unreliable citations may be challenged or deleted. (February 2015)
+
+
+
+
+
+
+
+
+
+Clang
+
+
+
+
+Original author(s)
+Chris Lattner and others
+
+
+Developer(s)
+Apple Inc. and others
+
+
+Stable release
+3.7[1] / 1&#160;September 2015; 2 months ago&#160;(2015-09-01)
+
+
+Development status
+Active
+
+
+Written in
+C++
+
+
+Operating system
+Unix-like
+
+
+Platform
+Cross-platform
+
+
+Type
+Compiler
+
+
+License
+University of Illinois/NCSA Open Source License[2]
+
+
+Website
+clang.llvm.org
+
+
+Clang /ˈklæŋ/[3] is a compiler front end for the C, C++, Objective-C and Objective-C++ programming languages. It uses LLVM as its back end and has been part of the LLVM release cycle since LLVM 2.6.
+It is designed to offer a complete replacement to the GNU Compiler Collection (GCC). It is open-source,[4] developed by Apple; other companies such as Microsoft, Google, ARM, Sony and Intel are involved. Its source code is available under the University of Illinois/NCSA License, a permissive free software licence.
+The Clang project includes the Clang front end and the Clang static analyzer and several code analysis tools.[5]
+
+
+
+Contents
+
+
+1 Background
+2 Design
+3 Performance and GCC compatibility
+4 Status history
+5 See also
+6 References
+7 External links
+
+
+
+Background[edit]
+Starting in 2005, Apple has made extensive use of LLVM in a number of commercial systems,[6] including the iPhone development kit and Xcode 3.1.
+One of the first uses of LLVM was an OpenGL code compiler for OS X that converts OpenGL calls into more fundamental calls for graphics processing units (GPU) that do not support certain features. This allowed Apple to support the entire OpenGL application programming interface (API) on computers using Intel Graphics Media Accelerator (GMA) chipsets, increasing performance on those machines.[7] For sufficiently capable GPUs, the code is compiled to take full advantage of the underlying hardware, but on GMA machines, LLVM compiles the same OpenGL code into subroutines to ensure it continues to work properly.
+LLVM was originally intended to use GCC's front end, but GCC turned out to cause some problems for both the LLVM developers and Apple. The GCC source code is a large and somewhat cumbersome system for developers to work with; as one long-time GCC developer put it, "Trying to make the hippo dance is not really a lot of fun".[8]
+Apple software makes heavy use of Objective-C, but the Objective-C front-end in GCC is a low priority for the current GCC developers. Also, GCC does not fit smoothly into Apple's IDE.[9] Finally, GCC is GPL version 3 licensed, which requires developers who distribute extensions for (or modified versions of) GCC to make their source code available, whereas LLVM has a BSD-like license[10] which permits including the source in proprietary software.
+Apple chose to develop a new compiler front end from scratch, supporting C, Objective-C and C++.[9] This "clang" project was open-sourced in July 2007.[11]
+Design[edit]
+Clang is intended specifically to work on top of LLVM.[10] The combination of Clang and LLVM provides the majority of a toolchain, allowing the replacement of the whole GCC stack. Because it is built with a library-based design, like the rest of LLVM, Clang is easy to embed into other applications. This is one reason why a majority of the OpenCL implementations are built with Clang and LLVM.[citation needed]
+One of Clang's primary goals is to better support incremental compilation to allow the compiler to be more tightly tied to the IDE GUI. In contrast, GCC is designed to work in a "classic" compile-link-debug cycle, and although it provides useful ways to support incremental and interrupted compiling on-the-fly, integrating it with other tools is not always easy. For instance, GCC uses a step called "fold" that is key to the overall compile process, which has the side effect of translating the code tree into a form that does not look very much like the original source code. If an error is found during or after the fold step, it can be difficult to translate that back into a single location in the original source. Additionally, vendors using the GCC stack within IDEs use separate tools to index the code, to provide features like syntax highlighting and autocomplete.
+Clang is designed to retain more information during the compilation process than GCC, and preserve the overall form of the original code. The objective of this is to make it easier to map errors back into the original source. The error reports offered by Clang are also aimed to be more detailed and specific, as well as machine-readable, so IDEs can index the output of the compiler during compilation. Modular design of the compiler can offer source code indexing, syntax checking, and other features normally associated with rapid application development systems. The parse tree is also more suitable for supporting automated code refactoring, as it remains in a parsable text form at all times.
+Clang is modularized, well documented, and based almost entirely on replaceable link-time libraries — as opposed to source-code modules that are combined at compile time. In some cases the libraries are provided in several versions that can be swapped out at runtime; for instance the parser comes with a version that offers performance measurement of the compile process.
+Clang is a compiler only for C and C-like languages. It does not offer compiler front-ends for languages other than C, C++, Objective-C, and Objective-C++. For other languages, including Java, Fortran, and Ada, LLVM remains dependent on GCC. In many cases, Clang can be used or swapped out for GCC as needed, with no other effects on the toolchain as a whole.[citation needed] It supports most of the commonly used GCC options.
+Performance and GCC compatibility[edit]
+Clang is designed to be highly compatible with GCC.[12] Clang's command-line interface is similar to and shares many flags and options with GCC. Clang implements many GNU language extensions and enables them by default. Clang implements many GCC compiler intrinsics purely for compatibility. For example, even though Clang implements atomic intrinsics which correspond exactly with C11 atomics, it also implements GCC's __sync_* intrinsics for compatibility with GCC and libstdc++. Clang also maintains ABI compatibility with GCC-generated object code. In practice Clang can often be used as a drop-in replacement for GCC.[citation needed]
+Clang's developers aim to reduce memory footprint and increase compilation speed compared to competing compilers, such as GCC. In October 2007, they report that Clang compiled the Carbon libraries well over twice as fast as GCC, while using about one-sixth GCC's memory and disk space.[13] However, as of 2011 this was not a typical result.[14][15] As of the middle of 2014, runtime performance has improved to the point where Clang wins more than a third of the benchmarks, with GCC winning a majority.[16]
+While there are still a few tests where performance of a Clang-compiled program lags behind performance of the GCC-compiled program, by large factors (up to 5.5x),[16] it has been reported that Clang "continues to be under very active development," and a hope was expressed for further improvement.[14]
+Status history[edit]
+This table presents only significant steps and releases in Clang history.
+
+
+Date
+Highlights
+
+
+11 July 2007
+Clang frontend released under an open-source license
+
+
+25 February 2009
+Clang/LLVM able to compile a working FreeBSD kernel.[17][18]
+
+
+16 March 2009
+Clang/LLVM able to compile a working DragonFly BSD kernel.[19][20]
+
+
+23 October 2009
+Clang 1.0 released along with LLVM 2.6 for the first time.
+
+
+December 2009
+Code generation for C and Objective-C reach production quality (support for C++ and Objective-C++ still incomplete). Clang C++ able to parse GCC 4.2 libstdc++ and generate working code for non-trivial programs[10] and was able to compile itself[21]
+
+
+2 February 2010
+Clang self-hosting.[22]
+
+
+20 February 2010
+The source code of HelenOS was modified to successfully compile with Clang, and passed all kernel and user space regression tests on IA-32.[23]
+
+
+20 May 2010
+The latest version of Clang successfully built the Boost C++ libraries, and passed nearly all tests.[24]
+
+
+10 June 2010
+Clang/LLVM became an integral part of FreeBSD (The default compiler is still GCC)[25]
+
+
+25 October 2010
+Clang/LLVM able to compile a working modified Linux Kernel.[26]
+
+
+January 2011
+Preliminary work completed to support the draft C++0x standard, with a few of the draft's new features supported in the development version of Clang.[27][28]
+
+
+10 February 2011
+Clang able to compile a working HotSpot Java Virtual Machine[14]
+
+
+19 January 2012
+Clang becomes an optional component in NetBSD's cross-platform build system (GCC is still default)[29]
+
+
+28 February 2012
+Clang 3.0 able to rebuild more than 91% of the Debian archive[30]
+
+
+29 February 2012
+Clang becomes the default compiler in MINIX 3[31]
+
+
+12 May 2012
+Clang/LLVM is announced to replace GCC in FreeBSD[32]
+
+
+5 November 2012
+Clang becomes the default compiler in FreeBSD 10.x[33]
+
+
+18 February 2013
+Clang/LLVM able to compile a working modified Android Linux Kernel for Nexus 7.[34][35]
+
+
+19 April 2013
+Clang is C++11 feature complete.[36]
+
+
+6 November 2013
+Clang is C++14 feature complete.[37]
+
+
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+
+LLDB
+Portable C Compiler
+
+References[edit]
+
+
+^ http://llvm.org/releases/
+^ LLVM License, retrieved 2014-07-24&#160;
+^ Christopher, Eric (3 July 2008). "simply wonder pronunciation of Clang". LLVMdev (Mailing list). Retrieved 2015-09-22.&#160;
+^ Clang "Getting started" instructions, Clang.llvm.org, retrieved 2012-09-18&#160;
+^ "Clang Static Analyzer". LLVM. Retrieved 3 September 2009.&#160;
+^ Treat, Adam (19 February 2005). "mkspecs and patches for LLVM compile of Qt4". Qt4-preview-feedback (Mailing list).&#160;
+^ Lattner, Chris (25 May 2007). LLVM for OpenGL and other stuff (Slides). LLVM Developers' Meeting.&#160;
+^ Zadeck, Kenneth (19 November 2005). "Re: LLVM/GCC Integration Proposal". GCC development (Mailing list).&#160;
+^ a b Naroff, Steve (25 May 2007). New LLVM C Front-end (Slides). LLVM Developers' Meeting.&#160;
+^ a b c Clang team, clang: a C language family frontend for LLVM
+^ Lattner, Chris (11 July 2007). "New LLVM C front-end: "clang"". cfe-dev (Mailing list).&#160;
+^ Clang - Features and Goals: GCC Compatibility, 15 April 2013&#160;
+^ Clang - Features and Goals: Fast compiles and Low Memory Use, October 2007&#160;
+^ a b c Simonis, Volker (10 February 2011). "Compiling the HotSpot VM with Clang". Retrieved 13 February 2011. While the overall GCC compatibility is excellent and the compile times are impressive, the performance of the generated code is still lacking behind a recent GCC version. &#160;
+^ "Benchmarking LLVM &amp; Clang Against GCC 4.5". Phoronix. 21 April 2010. Retrieved 13 February 2011. Binaries from LLVM-GCC and Clang both struggled to compete with GCC 4.5.0 in the timed HMMer benchmark of a Pfam database search. LLVM-GCC and Clang were about 23% slower(...)Though LLVM / Clang isn't the performance champion at this point, both components continue to be under very active development and there will hopefully be more news to report in the coming months&#160;
+^ a b "GCC 4.9 VS. LLVM CLANG 3.5 LINUX COMPILER BENCHMARKS". OpenBenchmarking.org. 14 April 2014. Retrieved 25 June 2014.&#160;
+^ Divacky, Roman. "[ANNOUNCE] clang/llvm can compile booting FreeBSD kernel on i386/amd64".&#160;
+^ Building FreeBSD with Clang, Wiki.freebsd.org, 2012-08-24, retrieved 2012-09-18&#160;
+^ Hornung, Alex. "llvm/clang once more".&#160;
+^ Clang, DragonFlyBSD, retrieved 2012-09-18&#160;
+^ "Clang can compile LLVM and Clang". LLVM Project Blog.&#160;
+^ "Clang Successfully Self-Hosts". LLVM Project Blog.&#160;
+^ "HelenOS mainline changeset head,294".&#160;
+^ Gregor, Doug. "Clang++ Builds Boost!". LLVM Project Blog.&#160;
+^ Davis, Brad. "FreeBSD Status Reports April - June, 2010".&#160;
+^ Clang builds a working Linux Kernel (Boots to RL5 with SMP, networking and X, self hosts), Lists.cs.uiuc.edu, retrieved 2012-09-18&#160;
+^ Gregor, Douglas (26 January 2011). "New C++0x feature support in Clang" (Mailing list). Retrieved 29 January 2011.&#160;
+^ "C++ and C++'0x Support in Clang". LLVM.&#160;
+^ Sonnenberger, Jörg (2012-01-19). "Status of NetBSD and LLVM". Retrieved 2014-02-26.&#160;
+^ Ledru, Sylvestre. "Rebuild of the Debian archive with clang".&#160;
+^ "Official Minix 3 website: News".&#160;
+^ Gerzo, Daniel (12 May 2012). "FreeBSD Quarterly Status Report January-March, 2012" (Mailing list). Retrieved 14 May 2012.&#160;
+^ Davis, Brooks (5 November 2012). "HEADS UP: Clang now the default on x86" (Mailing list). Retrieved 7 November 2012.&#160;
+^ Webster, Behan (18 February 2013). "LLVMLinux: Compiling Android with LLVM" (PDF). Retrieved 11 May 2013.&#160;
+^ Tinti, Vinicius (17 March 2013). "LLVMLinux: Nexus 7". Retrieved 11 May 2013.&#160;
+^ Du Toit, Stefanus. "Clang is C++11 feature complete as of *just now*!".&#160;
+^ "[llvm-project] Revision 194194".&#160;
+
+
+External links[edit]
+
+Official website
+LLVMdev: New LLVM C front-end: "clang", announcement (11 July 2007)
+Presentation: Ted Kremenek - Finding Bugs with the Clang Static Analyzer, Slides
+Presentation: Steve Naroff - Clang Internals, Slides
+2009 DevMtg Clang presentation
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Clang&amp;oldid=687233889"					
+				Categories: Apple Inc. softwareC compilersC++ compilersFree compilers and interpretersSoftware using the NCSA licenseStatic program analysis toolsHidden categories: Articles lacking reliable references from February 2015All articles lacking reliable referencesAll articles with unsourced statementsArticles with unsourced statements from February 2012Articles with unsourced statements from June 2008Articles with unsourced statements from June 2014Use dmy dates from January 2012				
+							
+		
+		
+			

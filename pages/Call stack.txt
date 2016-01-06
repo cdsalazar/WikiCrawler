@@ -1,0 +1,260 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Call stack
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (September 2012)
+
+
+In computer science, a call stack is a stack data structure that stores information about the active subroutines of a computer program. This kind of stack is also known as an execution stack, control stack, run-time stack, or machine stack, and is often shortened to just "the stack". Although maintenance of the call stack is important for the proper functioning of most software, the details are normally hidden and automatic in high-level programming languages. Many computer instruction sets provide special instructions for manipulating stacks.
+A call stack is used for several related purposes, but the main reason for having one is to keep track of the point to which each active subroutine should return control when it finishes executing. An active subroutine is one that has been called but is yet to complete execution after which control should be handed back to the point of call. Such activations of subroutines may be nested to any level (recursive as a special case), hence the stack structure. If, for example, a subroutine DrawSquare calls a subroutine DrawLine from four different places, DrawLine must know where to return when its execution completes. To accomplish this, the address following the call instruction, the return address, is pushed onto the call stack with each call.
+
+
+
+Contents
+
+
+1 Description
+2 Functions of the call stack
+3 Structure
+
+3.1 Stack and frame pointers
+3.2 Storing the address to the caller's frame
+3.3 Lexically nested routines
+3.4 Overlap
+
+
+4 Use
+
+4.1 Call site processing
+4.2 Subroutine entry processing
+4.3 Return processing
+4.4 Unwinding
+
+
+5 Inspection
+6 Security
+7 See also
+8 References
+9 Further reading
+10 External links
+
+
+
+Description[edit]
+Since the call stack is organized as a stack, the caller pushes the return address onto the stack, and the called subroutine, when it finishes, pulls or pops the return address off the call stack and transfers control to that address. If a called subroutine calls on to yet another subroutine, it will push another return address onto the call stack, and so on, with the information stacking up and unstacking as the program dictates. If the pushing consumes all of the space allocated for the call stack, an error called a stack overflow occurs, generally causing the program to crash. Adding a subroutine's entry to the call stack is sometimes called "winding"; conversely, removing entries is "unwinding".
+There is usually exactly one call stack associated with a running program (or more accurately, with each task or thread of a process), although additional stacks may be created for signal handling or cooperative multitasking (as with setcontext). Since there is only one in this important context, it can be referred to as the stack (implicitly, "of the task"); however, in the Forth programming language the data stack or parameter stack is accessed more explicitly than the call stack and is commonly referred to as the stack (see below).
+In high-level programming languages, the specifics of the call stack are usually hidden from the programmer. They are given access only to a set of functions, and not the memory on the stack itself. This is an example of abstraction. Most assembly languages, on the other hand, require programmers to be involved with manipulating the stack. The actual details of the stack in a programming language depend upon the compiler, operating system, and the available instruction set.
+Functions of the call stack[edit]
+As noted above, the primary purpose of a call stack is to store the return addresses. When a subroutine is called, the location (address) of the instruction at which it can later resume needs to be saved somewhere. Using a stack to save the return address has important advantages over alternative calling conventions. One is that each task has its own stack, and thus the subroutine can be reentrant, that is, can be active simultaneously for different tasks doing different things. Another benefit is that recursion is automatically supported. When a function calls itself recursively, a return address needs to be stored for each activation of the function so that it can later be used to return from the function activation. This capability is automatic with a stack.
+A call stack may serve additional purposes, depending on the language, operating system, and machine environment. Among them can be:
+
+Local data storage
+A subroutine frequently needs memory space for storing the values of local variables, the variables that are known only within the active subroutine and do not retain values after it returns. It is often convenient to allocate space for this use by simply moving the top of the stack by enough to provide the space. This is very fast when compared to dynamic memory allocation, which uses the heap space. Note that each separate activation of a subroutine gets its own separate space in the stack for locals.
+Parameter passing
+Subroutines often require that values for parameters be supplied to them by the code which calls them, and it is not uncommon that space for these parameters may be laid out in the call stack. Generally if there are only a few small parameters, processor registers will be used to pass the values, but if there are more parameters than can be handled this way, memory space will be needed. The call stack works well as a place for these parameters, especially since each call to a subroutine, which will have differing values for parameters, will be given separate space on the call stack for those values.
+Evaluation stack
+Operands for arithmetic or logical operations are most often placed into registers and operated on there. However, in some situations the operands may be stacked up to an arbitrary depth, which means something more than registers must be used (this is the case of register spilling). The stack of such operands, rather like that in an RPN calculator, is called an evaluation stack, and may occupy space in the call stack.
+Pointer to current instance
+Some object-oriented languages (e.g., C++), store the this pointer along with function arguments in the call stack when invoking methods. The this pointer points to the object instance associated with the method to be invoked.
+Enclosing subroutine context
+Some programming languages (e.g., Pascal and Ada) support nested subroutines, allowing an inner routine to access the context of its outer enclosing routine, i.e., the parameters and local variables within the scope of the outer routine. Such static nesting can repeat - a function declared within a function declared within a function... The implementation must provide a means by which a called function at any given static nesting level can reference the enclosing frame at each enclosing nesting level. Commonly this reference is implemented by a pointer to the encompassing frame, called a "downstack link" or "static link", to distinguish it from the "dynamic link" that refers to the immediate caller (which need not be the static parent function).
+For example, languages often allow inner routines to call themselves recursively, resulting in multiple call frames for the inner routine's invocations, all of whose static links point to the same outer routine context. Instead of a static link, the references to the enclosing static frames may be collected into an array of pointers known as a display which is indexed to locate a desired frame. The Burroughs B6500 had such a display in hardware that supported up to 32 levels of static nesting.
+Other return state
+Beside the return address, in some environments there may be other machine or software states that need to be restored when a subroutine returns. This might include things like privilege level, exception handling information, arithmetic modes, and so on. If needed, this may be stored in the call stack just as the return address is.
+
+ The typical call stack is used for the return address, locals, and parameters (known as a call frame). In some environments there may be more or fewer functions assigned to the call stack. In the Forth programming language, for example, ordinarily only the return address, counted loop parameters and indexes, and possibly local variables are stored on the call stack (which in that environment is named the return stack), although any data can be temporarily placed there using special return stack handling code so long as the needs of calls and returns are respected; parameters are ordinarily stored on a separate data stack or parameter stack, typically called the stack in Forth terminology even though there is a call stack since it is usually accessed more explicitly. Some Forths also have a third stack for floating point parameters.
+Structure[edit]
+
+
+
+
+Call stack layout
+
+
+A call stack is composed of stack frames (also called activation records or activation frames). These are machine dependent and ABI-dependent data structures containing subroutine state information. This data is sometimes referred to as CFI (Call Frame Information). [1] Each stack frame corresponds to a call to a subroutine which has not yet terminated with a return. For example, if a subroutine named DrawLine is currently running, having been called by a subroutine DrawSquare, the top part of the call stack might be laid out like in the picture on the right.
+A diagram like this can be drawn in either direction as long as the placement of the top, and so direction of stack growth, is understood. Furthermore, independently of this, architectures differ as to whether call stacks grow towards higher addresses or towards lower addresses. The logic of the diagram is independent of the addressing choice.
+The stack frame at the top of the stack is for the currently executing routine. The stack frame usually includes at least the following items (in push order):
+
+the arguments (parameter values) passed to the routine (if any);
+the return address back to the routine's caller (e.g. in the DrawLine stack frame, an address into DrawSquare's code); and
+space for the local variables of the routine (if any).
+
+Stack and frame pointers[edit]
+When stack frame sizes can differ, such as between different functions or between invocations of a particular function, popping a frame off the stack does not constitute a fixed decrement of the stack pointer. At function return, the stack pointer is instead restored to the frame pointer, the value of the stack pointer just before the function was called. Each stack frame contains a stack pointer to the top of the frame immediately below. The stack pointer is a mutable register shared between all invocations. A frame pointer of a given invocation of a function is a copy of the stack pointer as it was before the function was invoked.[2]
+The locations of all other fields in the frame can be defined relative either to the top of the frame, as negative offsets of the stack pointer, or relative to the top of the frame below, as positive offsets of the frame pointer. The location of the frame pointer itself must inherently be defined as a negative offset of the stack pointer.
+Storing the address to the caller's frame[edit]
+In most systems a stack frame has a field to contain the previous value of the frame pointer register, the value it had while the caller was executing. For example, the stack frame of DrawLine would have a memory location holding the frame pointer value that DrawSquare uses (not shown in the diagram above). The value is saved upon entry to the subroutine and restored upon return. Having such a field in a known location in the stack frame enables code to access each frame successively underneath the currently executing routine's frame, and also allows the routine to easily restore the frame pointer to the caller's frame, just before it returns.
+Lexically nested routines[edit]
+Further information: Nested function and Non-local variable
+Programming languages that support nested subroutines also have a field in the call frame that points to the stack frame of the latest activation of the procedure that most closely encapsulates the callee, i.e. the immediate scope of the callee. This is called an access link or static link (as it keeps track of static nesting during dynamic and recursive calls) and provides the routine (as well as any other routines it may invoke) access to the local data of its encapsulating routines at every nesting level. Some architectures, compilers, or optimization cases store one link for each enclosing level (not just the immediately enclosing), so that deeply nested routines that access shallow data do not have to traverse several links; this strategy is often called a "display".[3]
+Access links can be optimized away when an inner function does not access any (non-constant) local data in the encapsulation, as is the case with pure functions communicating only via arguments and return values, for example. Some historical computers, such as the Burroughs large systems, had special "display registers" to support nested functions, while compilers for most modern machines (such as the ubiquitous x86) simply reserve a few words on the stack for the pointers, as needed.
+Overlap[edit]
+For some purposes, the stack frame of a subroutine and that of its caller can be considered to overlap, the overlap consisting of the area where the parameters are passed from the caller to the callee. In some environments, the caller pushes each argument onto the stack, thus extending its stack frame, then invokes the callee. In other environments, the caller has a preallocated area at the top of its stack frame to hold the arguments it supplies to other subroutines it calls. This area is sometimes termed the outgoing arguments area or callout area. Under this approach, the size of the area is calculated by the compiler to be the largest needed by any called subroutine.
+Use[edit]
+Call site processing[edit]
+Usually the call stack manipulation needed at the site of a call to a subroutine is minimal (which is good since there can be many call sites for each subroutine to be called). The values for the actual arguments are evaluated at the call site, since they are specific to the particular call, and either pushed onto the stack or placed into registers, as determined by the used calling convention. The actual call instruction, such as "branch and link", is then typically executed to transfer control to the code of the target subroutine.
+Subroutine entry processing[edit]
+In the called subroutine, the first code executed is usually termed the subroutine prologue, since it does the necessary housekeeping before the code for the statements of the routine is begun.
+The prologue will commonly save the return address left in a register by the call instruction by pushing the value onto the call stack. Similarly, the current stack pointer and/or frame pointer values may be pushed. Alternatively, some instruction set architectures automatically provide comparable functionality as part of the action of the call instruction itself, and in such an environment the prologue need not do this.
+If frame pointers are being used, the prologue will typically set the new value of the frame pointer register from the stack pointer. Space on the stack for local variables can then be allocated by incrementally changing the stack pointer.
+The Forth programming language allows explicit winding of the call stack (called there the "return stack").
+Return processing[edit]
+When a subroutine is ready to return, it executes an epilogue that undoes the steps of the prologue. This will typically restore saved register values (such as the frame pointer value) from the stack frame, pop the entire stack frame off the stack by changing the stack pointer value, and finally branch to the instruction at the return address. Under many calling conventions the items popped off the stack by the epilogue include the original argument values, in which case there usually are no further stack manipulations that need to be done by the caller. With some calling conventions, however, it is the caller's responsibility to remove the arguments from the stack after the return.
+Unwinding[edit]
+Returning from the called function will pop the top frame off of the stack, perhaps leaving a return value. The more general act of popping one or more frames off the stack to resume execution elsewhere in the program is called stack unwinding and must be performed when non-local control structures are used, such as those used for exception handling. In this case, the stack frame of a function contains one or more entries specifying exception handlers. When an exception is thrown, the stack is unwound until a handler is found that is prepared to handle (catch) the type of the thrown exception.
+Some languages have other control structures that require general unwinding. Pascal allows a global goto statement to transfer control out of a nested function and into a previously invoked outer function. This operation requires the stack to be unwound, removing as many stack frames as necessary to restore the proper context to transfer control to the target statement within the enclosing outer function. Similarly, C has the setjmp and longjmp functions that act as non-local gotos. Common Lisp allows control of what happens when the stack is unwound by using the unwind-protect special operator.
+When applying a continuation, the stack is (logically) unwound and then rewound with the stack of the continuation. This is not the only way to implement continuations; for example, using multiple, explicit stacks, application of a continuation can simply activate its stack and wind a value to be passed. The Scheme programming language allows arbitrary thunks to be executed in specified points on "unwinding" or "rewinding" of the control stack when a continuation is invoked.
+Inspection[edit]
+See also: Profiling (computer programming) and Deep sampling
+The call stack can sometimes be inspected as the program is running. Depending on how the program is written and compiled, the information on the stack can be used to determine intermediate values and function call traces. This has been used to generate fine-grained automated tests,[4] and in cases like Ruby and Smalltalk, to implement first-class continuations. As an example, the GNU Debugger (GDB) implements interactive inspection of the call stack of a running, but paused, C program.[5]
+Taking regular-time samples of the call stack can be useful in profiling the performance of programs, because if a subroutine's pointer appears on the call stack sampling data many times, it is likely a code bottleneck and should be inspected for performance problems.[dubious – discuss]
+Security[edit]
+Main article: Stack buffer overflow
+In a language with free pointers or non-checked array writes (such as in C), the mixing of control flow data affecting the execution of code (return addresses or saved frame pointers) and simple program data (parameters or return values) in a call stack is a security risk, possibly exploitable through stack buffer overflows as the most common type of buffer overflows.
+One of such attacks involves filling one buffer with arbitrary executable code, and then overflowing the same or some other buffer to overwrite some return address with a value that points directly to the executable code. As a result, when the function returns, the computer executes that code. This kind of an attack can be easily blocked with W^X.[citation needed] Similar attacks can succeed even with W^X protection enabled, including the return-to-libc attack or the attacks coming from return-oriented programming. Various mitigations have been proposed, such as storing arrays in a completely separate location from the return stack, as is the case in the Forth programming language.[6]
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+
+
+Automatic memory allocation
+Calling convention
+Coroutine
+Overhead (computing)
+Spaghetti stack
+Stack-based memory allocation
+Stack machine
+
+
+References[edit]
+
+
+^ Nicholas Carlini and David Wagner. Abstract of article: ROP is Still Dangerous: Breaking Modern Defenses. In Proceedings of the 23rd USENIX Security Symposium, pages 385-399, August 2014.
+^ "Understanding the Stack". cs.umd.edu. 2003-06-22. Retrieved 2014-05-21.&#160;
+^ Alternative Microprocessor Design
+^ McMaster, S.; Memon, A. (2006). "Call Stack Coverage for GUI Test-Suite Reduction". 17th International Symposium on Software Reliability Engineering (PDF). pp.&#160;33–44. doi:10.1109/ISSRE.2006.19. ISBN&#160;0-7695-2684-5. CiteSeerX: 10.1.1.88.873.&#160;
+^ "Debugging with GDB: Examining the Stack". chemie.fu-berlin.de. 1997-10-17. Retrieved 2014-12-16.&#160;
+^ Doug Hoyte. "The Forth Programming Language - Why YOU should learn it".
+
+
+Further reading[edit]
+
+Dijkstra, E. W. (1960). "Recursive Programming". Numerische Mathematik 2 (1): 312–318. doi:10.1007/BF01386232.&#160;
+Wilson, P. R.; Johnstone, M. S.; Neely, M.; Boles, D. (1995). "Dynamic storage allocation: A survey and critical review". Memory Management. Lecture Notes in Computer Science 986. pp.&#160;1–116. doi:10.1007/3-540-60368-9_19. ISBN&#160;978-3-540-60368-9. CiteSeerX: 10.1.1.47.275.&#160;
+
+External links[edit]
+
+Function Calling and Frame Pointer Operations in 68000
+The libunwind project - a platform-independent unwind API
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Call_stack&amp;oldid=683600635"					
+				Categories: SubroutinesMemory managementHidden categories: Articles needing additional references from September 2012All articles needing additional referencesAll accuracy disputesArticles with disputed statements from June 2011All articles with unsourced statementsArticles with unsourced statements from October 2014				
+							
+		
+		
+			

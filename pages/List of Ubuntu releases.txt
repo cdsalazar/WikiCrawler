@@ -1,0 +1,1220 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			List of Ubuntu releases
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Ubuntu 12.04)
+												
+					Jump to:					navigation, 					search
+				
+				Main article: Ubuntu (operating system)
+
+
+
+
+Ubuntu 15.10 Wily Werewolf
+
+
+Ubuntu releases are made semiannually by Canonical Ltd, the developers of the Ubuntu operating system, using the year and month of the release as a version number. The first Ubuntu release, for example, was Ubuntu 4.10 and was released on 20 October 2004.[1][2] Consequently, version numbers for future versions are provisional; if the release is delayed until a different month (or even year) to that planned, the version number will change accordingly.[3]
+Ubuntu releases are timed to be approximately one month after GNOME releases, which are in turn about one month after releases of X.Org, resulting in each Ubuntu release including a newer version of GNOME and X.[4][5][6]
+Every fourth release, in the second quarter of even-numbered years, has been designated as a Long Term Support (LTS) release, indicating that they are supported and receive updates for five years, with paid technical support also available from Canonical Ltd. However the desktop version of LTS releases before 12.04 were supported for only three years. Releases 6.06, 8.04, 10.04, 12.04 and 14.04 are the LTS releases.[7] Non-LTS releases prior to 13.04 have typically been supported for 18 months, and have always been supported until at least the date of the next LTS release. This has changed, however, for 13.04 and subsequent non-LTS releases, with the support period being halved to 9 months.[8]
+
+
+
+Contents
+
+
+1 Naming convention
+2 Release history
+
+2.1 Ubuntu 4.10 (Warty Warthog)
+2.2 Ubuntu 5.04 (Hoary Hedgehog)
+2.3 Ubuntu 5.10 (Breezy Badger)
+2.4 Ubuntu 6.06 LTS (Dapper Drake)
+2.5 Ubuntu 6.10 (Edgy Eft)
+2.6 Ubuntu 7.04 (Feisty Fawn)
+2.7 Ubuntu 7.10 (Gutsy Gibbon)
+2.8 Ubuntu 8.04 LTS (Hardy Heron)
+2.9 Ubuntu 8.10 (Intrepid Ibex)
+2.10 Ubuntu 9.04 (Jaunty Jackalope)
+2.11 Ubuntu 9.10 (Karmic Koala)
+2.12 Ubuntu 10.04 LTS (Lucid Lynx)
+2.13 Ubuntu 10.10 (Maverick Meerkat)
+2.14 Ubuntu 11.04 (Natty Narwhal)
+2.15 Ubuntu 11.10 (Oneiric Ocelot)
+2.16 Ubuntu 12.04 LTS (Precise Pangolin)
+2.17 Ubuntu 12.10 (Quantal Quetzal)
+2.18 Ubuntu 13.04 (Raring Ringtail)
+2.19 Ubuntu 13.10 (Saucy Salamander)
+2.20 Ubuntu 14.04 LTS (Trusty Tahr)
+2.21 Ubuntu 14.10 (Utopic Unicorn)
+2.22 Ubuntu 15.04 (Vivid Vervet)
+2.23 Ubuntu 15.10 (Wily Werewolf)
+
+
+3 Future releases
+
+3.1 Ubuntu 16.04 LTS (Xenial Xerus)
+
+
+4 Table of versions
+5 Version timeline
+6 Version end of life
+7 See also
+8 References
+9 External links
+
+
+
+Naming convention[edit]
+Ubuntu releases are also given code names, using an adjective and an animal with the same first letter (e.g. Dapper Drake). With the exception of the first two releases, code names are in alphabetical order, allowing a quick determination of which release is newer. Names are occasionally chosen so that animal appearance or habits reflects some new feature (e.g., "Koala's favourite leaf is Eucalyptus"; see below). Ubuntu releases are often referred to using only the adjective portion of the code name (e.g. Feisty).[9]
+Release history[edit]
+Ubuntu 4.10 (Warty Warthog)[edit]
+
+
+
+
+Ubuntu 4.10 (Warty Warthog)
+
+
+Ubuntu 4.10 (Warty Warthog), released on 20 October 2004, was Canonical's first release of Ubuntu, building upon Debian, with plans for a new release every six months and eighteen months of support thereafter.[2] Ubuntu 4.10's support ended on 30 April 2006.[10] Ubuntu 4.10 was offered as a free download and, through Canonical's ShipIt [11] service, was also mailed to users free of charge in CD format.[12]
+Ubuntu 5.04 (Hoary Hedgehog)[edit]
+
+
+
+
+Ubuntu 5.04 (Hoary Hedgehog)
+
+
+Ubuntu 5.04 (Hoary Hedgehog), released on 8 April 2005,[13][14] was Canonical's second release of Ubuntu. Ubuntu 5.04's support ended on 31 October 2006.[15] Ubuntu 5.04 added many new features including an update manager,[16] upgrade notifier, readahead and grepmap, suspend, hibernate and standby support, dynamic frequency scaling for processors, ubuntu hardware database, Kickstart installation, and APT authentication.[17][18] Ubuntu 5.04 allowed installation from USB devices. Beginning with Ubuntu 5.04, UTF-8 became the default character encoding,[19]
+Ubuntu 5.10 (Breezy Badger)[edit]
+
+
+
+
+Ubuntu 5.10 (Breezy Badger)
+
+
+Ubuntu 5.10 (Breezy Badger), released on 12 October 2005,[20][21] was Canonical's third release of Ubuntu. Ubuntu 5.10's support ended on 13 April 2007.[22] Ubuntu 5.10 added several new features including a graphical bootloader (Usplash), an Add/Remove Applications tool,[23] a menu editor (Alacarte), an easy language selector, logical volume management support, full Hewlett-Packard printer support, OEM installer support, a new Ubuntu logo in the top-left, and Launchpad integration for bug reporting and software development.[24]
+Ubuntu 6.06 LTS (Dapper Drake)[edit]
+
+
+
+
+Ubuntu 6.06 (Dapper Drake)
+
+
+Ubuntu 6.06 (Dapper Drake), released on 1 June 2006,[25][26][27] was Canonical's fourth release, and the first Long Term Support (LTS) release. Ubuntu 6.06 was released behind schedule, having been intended as 6.04. It is sometimes jokingly described as their first 'Late To Ship' (LTS) release.[28] Development was not complete in April 2006 and Mark Shuttleworth approved slipping the release date to June, making it 6.06 instead.[29]
+Ubuntu 6.06's support ended on 14 July 2009 for desktops and ended in June 2011 for servers.[30] Ubuntu 6.06 included several new features, including having the Live CD and Install CD merged onto one disc,[31] a graphical installer on Live CD (Ubiquity), Usplash on shutdown as well as startup, a network manager for easy switching of multiple wired and wireless connections, Humanlooks theme implemented using Tango guidelines, based on Clearlooks and featuring orange colors instead of brown, and GDebi graphical installer for package files.[32][33] Ubuntu 6.06 did not include a means to install from a USB device, but did for the first time allow installation directly onto removable USB devices.
+Ubuntu 6.10 (Edgy Eft)[edit]
+
+
+
+
+Ubuntu 6.10 (Edgy Eft)
+
+
+Ubuntu 6.10 (Edgy Eft), released on 26 October 2006,[34][35][36] was Canonical's fifth release of Ubuntu. Ubuntu 6.10's support ended on 25 April 2008.[37][38] Ubuntu 6.10 added several new features including a heavily modified Human theme, Upstart init daemon, automated crash reports (Apport), Tomboy note taking application, and F-Spot photo manager. EasyUbuntu, a third party program designed to make Ubuntu easier to use, was included in Ubuntu 6.10 as a meta-package.[39]
+Ubuntu 7.04 (Feisty Fawn)[edit]
+
+
+
+
+Ubuntu 7.04 (Feisty Fawn)
+
+
+Ubuntu 7.04 (Feisty Fawn), released on 19 April 2007,[40][41][42] was Canonical's sixth release of Ubuntu. Ubuntu 7.04's support ended on 19 October 2008.[43] Ubuntu 7.04 included several new features, among them a migration assistant to help former Microsoft Windows users transition to Ubuntu, support for Kernel-based Virtual Machine, assisted codec and restricted drivers installation including Adobe Flash, Java, MP3 support, easier installation of Nvidia and ATI drivers, Compiz desktop effects, support for Wi-Fi Protected Access, the addition of Sudoku and chess, a disk usage analyzer (baobab), GNOME Control Center, and Zeroconf support for many devices.[17][44] Ubuntu 7.04 dropped support for PowerPC architecture.
+Ubuntu 7.10 (Gutsy Gibbon)[edit]
+
+
+
+
+Ubuntu 7.10 (Gutsy Gibbon)
+
+
+Ubuntu 7.10 (Gutsy Gibbon), released on 18 October 2007,[45][46][47] was Canonical's seventh release of Ubuntu. Ubuntu 7.10's support ended on 18 April 2009.[48][49] Ubuntu 7.10 included several new features, among them AppArmor security framework,[50] fast desktop search,[51] a Firefox plug-in manager (Ubufox),[52] a graphical configuration tool for X.Org, full NTFS support (read/write) via NTFS-3G, and a revamped printing system with PDF printing by default.[52] Compiz Fusion was enabled as default in Ubuntu 7.10[53] and Fast user switching was added.[51]
+Ubuntu 8.04 LTS (Hardy Heron)[edit]
+
+
+
+
+Ubuntu 8.04 (Hardy Heron)
+
+
+Ubuntu 8.04 (Hardy Heron), released on 24 April 2008,[54][55][56] was Canonical's eighth release of Ubuntu and the second Long Term Support (LTS) release.[57][58] Ubuntu 8.04's support ended on 12 May 2011 for desktops[59] and ended in April 2013 for servers. Ubuntu 8.04 included several new features, among them Tracker desktop search integration,[60] Brasero disk burner,[61] Transmission BitTorrent client,[61] Vinagre VNC client,[61] system sound through PulseAudio,[62] and Active Directory authentication and login using Likewise Open.[63] In addition Ubuntu 8.04 included updates for better Tango compliance,[64] various Compiz usability improvements, automatic grabbing and releasing of the mouse cursor when running on a VMware virtual machine, and an easier method to remove Ubuntu. Ubuntu 8.04 was the first version of Ubuntu to include the Wubi installer on the Live CD that allows Ubuntu to be installed as a single file on a Windows hard drive without the need to repartition the disk. The first version of the Ubuntu Netbook Remix was also introduced.[65] Support for Ubuntu Hardy Heron was officially ended on 9 May 2013.
+Ubuntu 8.10 (Intrepid Ibex)[edit]
+
+
+
+
+Ubuntu 8.10 (Intrepid Ibex). The default wallpaper depicts an Ibex, with its large curved horns.
+
+
+Ubuntu 8.10 (Intrepid Ibex), released on 30 October 2008,[66][67] was Canonical's ninth release of Ubuntu. Support ended on 30 April 2010.[68] Ubuntu 8.10 introduced several new features including improvements to mobile computing and desktop scalability, increased flexibility for Internet connectivity, an Ubuntu Live USB creator and a guest account,[69] which allowed others to use a computer allowing very limited user rights (e.g. accessing the Internet, using software and checking e-mail).[70] The guest account had its own home folder and nothing done on it was stored permanently on the computer's hard disk.[71] Intrepid Ibex also included an encrypted private directory for users,[72] the inclusion of Dynamic Kernel Module Support, a tool that allows kernel drivers to be automatically rebuilt when new kernels are released and support for creating USB flash drive images.[17][73]
+Ubuntu 9.04 (Jaunty Jackalope)[edit]
+
+
+
+
+Ubuntu 9.04 (Jaunty Jackalope)
+
+
+Ubuntu 9.04 (Jaunty Jackalope), released on 23 April 2009,[74] was Canonical's tenth release of Ubuntu. Support ended on 23 October 2010.[75] New features included faster boot time,[76] integration of web services and applications into the desktop interface. Because of that, they named it after mythical animal Jackalope.[77] It was the first release named after a mythical animal, the second being Utopic Unicorn. It had a new usplash screen, a new login screen and also support for both Wacom (hotplugging) and netbooks.[76] It also included a new notification system, Notify OSD,[78] and themes. It marked the first time that all of Ubuntu's core development moved to the Bazaar distributed revision control system.[79][80]
+Ubuntu 9.04 was the first version to support the ARM architecture with native support for ARMv5EL and ARMv6EL-VFP.[81]
+Ubuntu 9.10 (Karmic Koala)[edit]
+
+
+
+
+Ubuntu 9.10 (Karmic Koala)
+
+
+Ubuntu 9.10 (Karmic Koala), released on 29 October 2009,[82] was Canonical's 11th release of Ubuntu. It was supported until April 2011.[83][84]
+In an announcement to the community on 20 February 2009, Mark Shuttleworth explained that 9.10 would focus on improvements in cloud computing on the server using Eucalyptus, saying "...a Koala's favourite leaf is Eucalyptus",[85] as well as further improvements in boot speed and development of the Netbook Remix.[86]
+The initial announcement of version 9.10 indicated that this release might include a new theme, however the project was moved forward to 10.04,[86][87] and only minor revisions were made to the default theme. Other graphical improvements included a new set of boot up and shutdown splash screens, a new login screen that transitions seamlessly into the desktop and greatly improved performance on Intel graphics chipsets.
+In June 2009, Canonical created the One Hundred Paper Cuts project, focusing developers to fix minor usability issues. A "paper cut" was defined as, "a trivially fixable usability bug that the average user would encounter on his/her first day of using a brand new installation of the latest version of Ubuntu Desktop Edition."[88]
+The desktop installation of Ubuntu 9.10 replaced Pidgin with Empathy Instant Messenger as its default instant messaging client.[89] The default filesystem is ext4, and the Ubuntu One client, which interfaces with Canonical's new online storage system, is installed by default.[90] It introduced Grub 2 beta as default bootloader.[91] It also debuted a new application called the Ubuntu Software Center that unifies package management. Canonical stated their intention for this application to replace Add/Remove Programs (gnome-app-install) in 9.10 and possibly Synaptic, Software Sources, Gdebi and Update Manager in Ubuntu 10.04.[92] Karmic Koala also includes a slideshow during the installation process (through ubiquity-slideshow) that highlights applications and features in Ubuntu.
+Ubuntu 10.04 LTS (Lucid Lynx)[edit]
+
+
+
+
+Ubuntu 10.04 (Lucid Lynx)
+
+
+Shuttleworth first announced Ubuntu 10.04 (Lucid Lynx)[9] on 19 September 2009 at the Atlanta Linux Fest; Canonical released it on 29 April 2010.[93][94] It is Canonical's 12th release of Ubuntu and the third Long Term Support (LTS) release. Canonical provided support for the desktop version of Ubuntu 10.04 until 9 May 2013 and the server version until 30 April 2015.[95]
+The new release includes, among other things, improved support for Nvidia proprietary graphics drivers, while switching to the open source Nvidia graphics driver, Nouveau, by default. Plymouth was also introduced allowing boot animations.[96][97][98]
+GIMP was removed from the Lucid installation CD due to its professional-grade complexity and its file size. F-Spot provides normal user-level graphics-editing capabilities and GIMP remains available for download in the repositories.[99]
+The distribution emphasizes the new importance of web services and social networking with integrated interfaces for posting to sites like Facebook and Twitter, complementing the IM and email integration already in Ubuntu.
+On 4 March 2010, it was announced that Lucid Lynx would feature a new theme, including new logos, taking Ubuntu's new visual style[100] into account:
+
+The new style in Ubuntu is inspired by the idea of "Light".
+We're drawn to Light because it denotes both warmth and clarity, and intrigued by the idea that "light" is a good value in software. Good software is "light" in the sense that it uses your resources efficiently, runs quickly, and can easily be reshaped as needed. Ubuntu represents a break with the bloatware of proprietary operating systems and an opportunity to delight to those who use computers for work and play. More and more of our communications are powered by light, and in future, our processing power will depend on our ability to work with light, too.
+Visually, light is beautiful, light is ethereal, light brings clarity and comfort.
+Historical perspective: From 2004–2010, the theme in Ubuntu was "Human". Our tagline was "Linux for Human Beings" and we used a palette reflective of the full range of humanity. Our focus as a project was bringing Linux from the data center into the lives of our friends and global family.
+
+Critical responses to the new theme have been mixed. Ars Technica's Ryan Paul said "The new themes and updated color palette are nice improvement for Ubuntu... After testing the new theme for several hours, I feel like it's a step forward, but it still falls a bit short of my expectations." Paul also noted that the most controversial aspect of the new design amongst users has been the placement of the window control buttons on the left instead of the right side of the windows.[101][102] TechSource's Jun Auza expressed concern that the new theme is too close to that used by Apple's Mac OS X: "I think Ubuntu is having an identity crisis right now and should seriously consider changing several things in terms of look and feel to avoid being branded as a Mac OS X rip-off, or worse, get sued by Apple." Auza also summarized Ubuntu user feedback: "I believe the fans are divided right now. Some have learned to love the brown color scheme since it uniquely represents Ubuntu, while others wanted change."[103]
+The first point release, 10.04.1, was made available on 17 August 2010,[104] and the second update, 10.04.2, was released on 17 February 2011.[105] The third update, 10.04.3, was released on 21 July 2011,[106] and the fourth and final update, 10.04.4, was released on 16 February 2012.
+Ubuntu 10.10 (Maverick Meerkat)[edit]
+
+
+
+
+Ubuntu 10.10 (Maverick Meerkat)
+
+
+The naming of Ubuntu 10.10 (Maverick Meerkat) was announced by Mark Shuttleworth on 2 April 2010, along with the release's goals of improving the netbook experience and a server focus on hybrid cloud computing. Ubuntu 10.10 was released on 10 October 2010 (10.10.10) at around 10:10 UTC.[107][108][109][110][111] This is a departure from the traditional schedule of releasing at the end of October to get "the perfect 10",[112] and a playful reference to The Hitchhiker's Guide to the Galaxy, since, in binary, 101010 is equal to the number 42, the "Answer to the Ultimate Question of Life, the Universe and Everything" within the series.[113] It was Canonical's 13th release of Ubuntu. New features included the new Unity interface for the Netbook Edition, a new default photo manager, Shotwell, replacing F-Spot, the ability to purchase applications in the Software Center, and an official Ubuntu font used by default.[114] Support for Ubuntu Maverick Meerkat 10.10 was officially ended on 10 April 2012.[115]
+Ubuntu 11.04 (Natty Narwhal)[edit]
+
+
+
+
+Ubuntu 11.04 Desktop (Natty Narwhal) using Unity.
+
+
+The naming of Ubuntu 11.04 (Natty Narwhal) was announced on 17 August 2010 by Mark Shuttleworth.[116] Ubuntu 11.04 Natty Narwhal was released on 28 April 2011.[117] It is Canonical's 14th release of Ubuntu.
+Ubuntu 11.04 used the Unity user interface instead of GNOME Shell as default. The move to Unity was controversial as some GNOME developers feared it would fracture the community and marginalize GNOME Shell.[118][119] The GNOME desktop environment is still available in Ubuntu 11.04 under the title Ubuntu Classic as a fallback to Unity.
+Ubuntu 11.04 employed Banshee as the default music player, replacing Rhythmbox. Other new applications included Mozilla Firefox 4 and LibreOffice, which replaced OpenOffice.org.[120][121][122] The OpenStack cloud computing platform was added in this release.[123][124]
+Starting with Ubuntu 11.04, the Ubuntu Netbook Edition was merged into the desktop edition.[125]
+In reviewing Ubuntu 11.04 upon its stable release, Ryan Paul of Ars Technica said "There is a lot to like in Ubuntu 11.04, but also a lot of room for improvement." Jesse Smith of Distrowatch said "I'm of the opinion there are good features in this release, but 11.04 definitely suffered from being rushed out the door while it was still beta quality. Ubuntu aims to be novice-friendly, but this release is buggy and I think they missed the mark this time around. I'm limiting my recommendation of 11.04 to people who want to play with an early release of Unity."[126][127] Support for Ubuntu 11.04 officially ended on 28 October 2012.[128]
+Ubuntu 11.10 (Oneiric Ocelot)[edit]
+
+
+
+
+Ubuntu 11.10 final release (13 October 2011) running Unity 4.22.0
+
+
+The naming of Ubuntu 11.10 (Oneiric Ocelot) was announced on 7 March 2011 by Mark Shuttleworth. He explained that Oneiric means "dreamy".[129] Ubuntu 11.10 was released on schedule on 13 October 2011 and is Canonical's 15th release of Ubuntu.[130]
+In April 2011 Shuttleworth announced that Ubuntu 11.10 would not include the classic GNOME desktop as a fall back to Unity, unlike Ubuntu 11.04 Natty Narwhal. Instead, 11.10 included a 2D version of Unity as a fallback for computers that lacked the hardware resources for the Compiz-based 3D version. However, the classic GNOME desktop remained available in Ubuntu 11.10 through a package in the Ubuntu repositories.[131] Shuttleworth also confirmed that Unity in Ubuntu 11.10 would run as a shell for GNOME 3 on top of GNOME 3 libraries, unlike in Ubuntu 11.04 where it ran as a shell for GNOME 2. Moreover, users were able to install the entire GNOME 3 stack along with GNOME Shell directly from the Ubuntu repositories; to be presented with a "GNOME 3 desktop" choice at login.[132] During the development cycle there were many changes to Unity, including the placement of the Ubuntu button on the Launcher instead of on the Panel, the autohiding of the window controls (and the global menu) of maximized windows, the introduction of more transparency into the Dash (and the Panel when the Dash was opened) and the introduction of window controls for the Dash.[133]
+In May 2011, it was announced that PiTiVi would be no longer part of the Ubuntu ISO, starting with Ubuntu 11.10 Oneiric Ocelot. The reasons given for removing it included poor user reception, lack of fit with the default user-case for Ubuntu, lack of polish and the application's lack of development maturity. PiTiVi will not be replaced on the ISO with another video editor. Other changes include removing Computer Janitor, as it caused broken systems for users, and the removal of the Synaptic package manager, which can optionally be installed via the Ubuntu Software Center. Déjà Dup has been added as Ubuntu's backup program.[134] Mozilla Thunderbird has replaced the Evolution email client. All removed applications will remain available to users for installation from the Ubuntu Software Center and repositories.[135][136][137][138] Support for Ubuntu Oneiric Ocelot was officially ended on 9 May 2013.
+Ubuntu 12.04 LTS (Precise Pangolin)[edit]
+
+
+
+
+Ubuntu 12.04 LTS desktop
+
+
+Ubuntu 12.04 LTS (Precise Pangolin) is Canonical's sixteenth release of Ubuntu and its fourth Long Term Support (LTS) release, made available on schedule on 26 April 2012.[139][140] It is named after the pangolin anteater.[141] Previous LTS releases have been supported for three years for the desktop version and five years for the server version; this release will be supported for five years for both versions.[142][143]
+Changes in this release include a much faster startup time for the Ubuntu Software Center and refinements to Unity. This release also replaced the Banshee media player with Rhythmbox as the default media player and dropped the Tomboy note-taking application and the supporting Mono framework as well.[144][145] Also, the window dodge feature has been removed from the Unity launcher starting with Ubuntu 12.04.[146]
+Ubuntu 12.04 incorporated a new head-up display (HUD) feature that allows hotkey searching for application menu items from the keyboard, without needing the mouse. Shuttleworth said that the HUD "will ultimately replace menus in Unity applications" but for Ubuntu 12.04 at least the menus will remain.[147]
+Ubuntu 12.04 is the first Ubuntu release shipped with IPv6 privacy extensions turned on by default. Ubuntu 11.10 already supported IPv6 on the desktop and in the installer (stateless address autoconfiguration SLAAC, stateless DHCPv6 and stateful DHCPv6).[148]
+Like other LTS releases, 12.04 will include point releases that bundle updates to shorten downloads for users installing the release later in its lifecycle. The point releases and dates are: 12.04.1 (23 August 2012), 12.04.2 (14 February 2013), 12.04.3 (scheduled for release on 22 August 2013, but actually released on 23 August 2013) and 12.04.4 (6 February 2014).[149] While the most recent point release was 12.04.5, released on 7 August 2014.[150]
+Jesse Smith of DistroWatch said that many people, like he, had questioned Ubuntu's direction, including Unity. But with Ubuntu 12.04 he felt that the puzzle pieces, which individually may have been underwhelming, had come together to form a whole, clear picture. He said "Unity, though a step away from the traditional desktop, has several features which make it attractive, such as reducing mouse travel. The HUD means that newcomers can find application functionality with a quick search and more advanced users can use the HUD to quickly run menu commands from the keyboard." He wrote that Unity had grown to maturity, while indicating that he was bothered by its lack of flexibility. He did notice issues, however, especially that the HUD did not work in LibreOffice and performance in a virtual machine was unsatisfactory. He concluded that Ubuntu's overall experience was "head and shoulders above anything else in the Linux ecosystem."[151]
+Jim Lynch wrote "Ubuntu 12.04 is definitely worth an upgrade if you’re running an earlier version. Unity is finally coming into its own in this release, plus there are other enhancements that make upgrading worthwhile. Ubuntu is getting better and better with each release. I was one of the Unity skeptics initially, but I’ve come to accept it as part of Ubuntu."[152]
+Jack Wallen of TechRepublic – who had strongly criticized early versions of Unity – said "Since Ubuntu 12.04 was released, and I migrated over from Linux Mint, I’m working much more efficiently. This isn’t really so much a surprise to me, but to many of the detractors who assume Unity a very unproductive desktop... well, I can officially say they are wrong. [...] I realize that many people out there have spurned Unity (I was one of them for a long time), but the more I use it, the more I realize that Canonical really did their homework on how to help end users more efficiently interact with their computers. Change is hard – period. For many, the idea of change is such a painful notion they wind up missing out on some incredible advancements. Unity is one such advancement."[153]
+Ubuntu 12.10 (Quantal Quetzal)[edit]
+
+
+
+
+Ubuntu 12.10's default desktop
+
+
+On 23 April 2012 Shuttleworth announced that Ubuntu 12.10 would be named Quantal Quetzal. As this will be the first of a series of three releases before the next LTS release, Shuttleworth indicated that it will include a refreshed look, with work to be done on typography and iconography. The release takes its name from the quetzal, a species of Central American birds.[154] Ubuntu 12.10 was released on schedule on 18 October 2012 and is Canonical's seventeenth release of the operating system.[155]
+Ryan Paul, writing for Ars Technica, said in April 2012 when the name was announced "A Quetzal is a colorful bird that is common to Central America. The most well-known variety, the resplendent quetzal, is known for its beauty. The name is a good fit for Ubuntu, which aims to soar in the cloud, offer visual appeal without compromising function, and avoid smacking into closed windows."[156]
+The Ubuntu Developer Summit held in May 2012 set the priorities for this release. They are forecast to include an improved boot up sequence and log-in screen, dropping Unity 2D in favor of lower hardware requirements for Unity 3D, wrap around dialogs and toolbars for the HUD and a "vanilla" version of Gnome-Shell as an option. The release would likely include GNOME 3.6, Python 3 and the 3.5 Linux kernel.[157] It would ship with Python 3 in the image, but with Python 2 available in the repositories, via the "python" package.[158] The kernel will have the PAE switched on by default.[159]
+In July 2012, development versions of Ubuntu 12.10 received a new combined user, session and system menu.[160] This release also included Ubuntu Web Apps, a means of running web applications directly from the desktop, without having to open a browser.[161] It would use Nautilus 3.4 as its file manager, in place of the 3.5 and newer versions, to retain features deleted from later versions.[162]
+In September 2012, Canonical’s Kate Stewart announced that the Ubuntu 12.10 image would not fit on a compact disc, saying "There is no longer a traditional CD sized image, DVD or alternate image, but rather a single 800MB Ubuntu image that can be used from USB or DVD."[163] However, a third-party project has created a version of Ubuntu 12.10 that fits on a CD. It uses LZMA2 compression instead of the DEFLATE compression used on the official Ubuntu DVD image.[164]
+Also in late September 2012, it was announced that the version of Unity to be shipped with Ubuntu 12.10 would by default include searches of Amazon.com for searched terms. This move caused immediate controversy among Ubuntu users, particularly with regard to privacy issues, and caused Mark Shuttleworth to issue a statement indicating that this feature is not adware and labelled many of the objections "FUD" (Fear, uncertainty and doubt). Shuttleworth stated "What we have in 12.10 isn’t the full experience, so those who leap to judgement are at maximum risk of having to eat their words later. Chill out. If the first cut doesn’t work for you, remove it, or just search the specific scope you want (there are hotkeys for all the local scopes)." Regardless, users filed a Launchpad bug report on the feature requesting that it be made a separate lens and not included with general desktop searches for files, directories and applications. The degree of community push-back on the issue resulted in plans by the developers to make the dash and where it searches user-configurable via a GUI-setting dialogue. Despite concerns that the setting dialogue would not make the final version of Ubuntu 12.10, it was completed and is present in the final version of 12.10.[165][166][167][168][169][170]
+In the week prior to the stable release of Ubuntu 12.10 data-privacy advocate Luís de Sousa indicated that the inclusion of the shopping lens, installed without explicit permission of the user, violates European Directive 95/46/EC on data privacy. That directive requires that the "data subject has unambiguously given his consent" in situations where personal identifying information is sent.[171]
+In reviewing Ubuntu 12.10 at the end of October 2012 for DistroWatch, Jesse Smith raised concerns about the Amazon shopping lens, saying, "it has raised a number of privacy concerns in the community and, looking over Ubuntu's legal notice about privacy does not provide any reassurance. The notice informs us Canonical reserves the right to share our keystrokes, search terms and IP address with a number of third parties, including Facebook, Twitter, Amazon and the BBC. This feature is enabled by default, but can be turned off through the distribution's settings panel." He also found that the dash provided very slow performance and that the release was "practically unusable in the VirtualBox environment". He summed up his experiences, "After a day and a half of using Ubuntu 12.10 it was an internal struggle not to wipe my hard drive and just find another distribution to review. During the first twenty-four hours Ubuntu spied on me, provided performance which was distinctly sub par, the interface regularly popped up errors (sometimes so frequently the first pop-up wouldn't have faded out of view before the next one appeared), the update notification didn't work and it wasn't possible to turn off accessibility features through the graphical interface. Adding insult to injury, the Unity dash kept locking up or losing focus while I was trying to use it and the operating system crashed more times than not while trying to shutdown or logout. Switching away from Unity to GNOME Fallback helped the performance issues I had experienced with the Dash, but it didn't remove the annoying pop-up errors and performance (while usable) still wasn't as good as I would expect. And what really makes me scratch my head is Ubuntu 12.04 worked really well on this same hardware."[172]
+In early November, the Electronic Frontier Foundation made a statement on the shopping lens issue, "Technically, when you search for something in Dash, your computer makes a secure HTTPS connection to productsearch.ubuntu.com, sending along your search query and your IP address. If it returns Amazon products to display, your computer then insecurely loads the product images from Amazon's server over HTTP. This means that a passive eavesdropper, such as someone sharing a wireless network with you, will be able to get a good idea of what you're searching for on your own computer based on Amazon product images. It's a major privacy problem if you can't find things on your own computer without broadcasting what you're looking for to the world."[173]
+Writing about Ubuntu 12.10 in a December 2012 review, Jim Lynch addressed the Amazon controversy:
+
+
+“
+One of the desktop changes that some folks might not like is the web app link to Amazon.com... This might come across as a bridge too far in terms of the outright commercialization of Ubuntu. And it is an eery  [sic] reminder of all the garbage that gets installed on Windows PCs by default, by the hardware companies. Is this where Ubuntu is going? Will you someday boot into your Ubuntu desktop only to find tons of commercial crapware clogging up your desktop by default? I sure hope not, as it will be another reason for people to avoid Ubuntu.
+”
+
+
+He concluded by saying, "Overall, Ubuntu 12.10 is a decent upgrade for current Ubuntu users. However, the inclusion of the Amazon icon on the launcher, and the discontinuation of Unity 2D might irritate some people."[174]
+Support for Ubuntu 12.10 Quantal Quetzal officially ended on 16 May 2014.
+Ubuntu 13.04 (Raring Ringtail)[edit]
+
+
+
+
+Ubuntu 13.04 (Raring Ringtail)
+
+
+On 17 October 2012, Shuttleworth announced that Ubuntu 13.04 would be named Raring Ringtail and said about this release “[In the next six months] we want to have the phone, tablet and TV all lined up. So I think it’s time to look at the core of Ubuntu and review it through a mobile lens: let’s measure our core platform by mobile metrics, things like battery life, number of running processes, memory footprint, and polish the rough edges that we find when we do that."[175]
+The Wubi installer was dropped as of 13.04, due to its incompatibility with Windows 8, and general lack of support and development.[176][177] Previously, on 29 October 2012, at Ubuntu Developer Summit Registration there had been a discussion of redesigning Wubi for Ubuntu 13.04.[178]
+Ubuntu 13.04 was released on schedule on 25 April 2013.[179]
+In reviewing Ubuntu 13.04 Jim Lynch from Desktop Linux Reviews said, "I found Ubuntu 13.04 to be a slightly disappointing upgrade. While there are definitely some enhancements in this release, there’s also nothing very special about it ... Alas, there’s nothing in Ubuntu 13.04 that makes me want to consider it for use as my daily distro. Don’t misunderstand me, there’s nothing overtly wrong with Ubuntu 13.04 either. It installed and performed very well for me. Unity 7 also has some helpful and attractive updates that Ubuntu users will enjoy, and there are other things in this release that help improve the overall Ubuntu experience...I suspect it is simply because Ubuntu has settled into a comfortable middle age, it works and it works very well for what it does."[180]
+Support for Ubuntu 13.04 officially ended on 27 January 2014.
+Ubuntu 13.10 (Saucy Salamander)[edit]
+
+
+
+
+Ubuntu 13.10 (Saucy Salamander)
+
+
+Ubuntu 13.10 is named Saucy Salamander.[181] It was released on schedule on 17 October 2013.
+Consideration was given to changing the default browser from Mozilla Firefox to Chromium, but problems with timely updates to Ubuntu's Chromium package caused developers to retain Firefox for this release.[182][183]
+Ubuntu 13.10 was intended to be the first Ubuntu release to replace the aging X11 with the Mir display server, with X11 programs to have operated through the XMir compatibility layer.[184] However, after the development of XMir ran into "outstanding technical difficulties" for multiple monitors, Canonical decided to postpone the default use of Mir in Ubuntu.[181] Mir will still be released as the default display server for Ubuntu Touch 13.10.[185]
+Ryan Paul of Ars Technica wrote that although 13.10 brings useful enhancements, it is "a relatively thin update". He also said "the new Dash concept is intriguing, but its usefulness is a bit limited"; and even though he thinks that universal Web search is potentially useful, he's somewhat uncomfortable with how Canonical joins it with local system searches.[181]
+In a review of Ubuntu 13.10 Joey Sneddon of OMG Ubuntu criticized the new Smart Scopes feature, saying, "...it’s less of a help and more of a hindrance. With so many web services offering results for a search term – however innocuous it might be – the Dash ends up resembling a wall painted in unintelligible, irrelevant mess." Sneddon noted that internet search engines turn in more useful and better organized results and recommended selectively disabling individual scopes to reduce the noise factor.[186]
+Jim Lynch of Linux Desktop Reviews described the release as "boring" and noted, "alas, Ubuntu 13.10 follows in the footsteps of Ubuntu 13.04. The big new desktop feature is Smart Scopes ... Beyond that there’s not a whole lot that is interesting or exciting to talk about. It turns out that Saucy Salamander is one truly dull amphibian. Canonical really should rename this release to 'Snoozing Salamander' instead." Lynch described the Smart Scopes, "this is a very useful function, and it can save you a lot of time when looking for information. I understand that some people will regard this as a privacy violation, no problem. There’s an easy way to disable Smart Scopes."[187]
+Maria Korolov writing for Network World in December 2013 said of the release, "there is a benefit to be had in being able to search for files you own on both local drives and in cloud services such as Google Drive and Flickr. That's the idea behind Unity Smart Scopes...The result is a cluttered mess. The first thing many users will probably do after installing Ubuntu 13.10 is to get rid of most of these results...mixing generic Web results in with your own files is just confusing."[188]
+In its year-end Readers Choice Awards Linux Journal readers voted Ubuntu as Best Linux Distribution and Best Desktop Distribution for 2013.[189]
+Support for Ubuntu 13.10 ended on 17 July 2014.[190]
+Ubuntu 14.04 LTS (Trusty Tahr)[edit]
+
+
+
+
+Ubuntu 14.04 Trusty Tahr
+
+
+Mark Shuttleworth announced on 31 October 2011 that by Ubuntu 14.04, Ubuntu would support smartphones, tablets, TVs and smart screens.[191]
+On 18 October 2013, it was announced that Ubuntu 14.04 would be dubbed "Trusty Tahr".[192][193]
+This version was released on 17 April 2014, and is the 20th release of Ubuntu. Shuttleworth indicated that the focus in this development cycle would be a release characterized by "performance, refinement, maintainability, technical debt" and encouraged the developers to make "conservative choices". Technical debt refers to catching up and refining supporting work for earlier changes. The development cycle for this release focused on the tablet interface, specifically for the Nexus 7 and Nexus 10 tablets. There were few changes to the desktop as 14.04 used the existing mature Unity 7 interface. Ubuntu 14.04 included the ability to turn off the global menu system and used locally integrated menus instead for individual applications. Other features were the retention of Xorg and not Mir or XMir, a Unity 8 developers' preview, new mobile applications, a redesigned USB Start-Up Disk Creator tool, a new forked version of the GNOME Control Center, called the Unity Control Center and default SSD TRIM support. GNOME 3.10 is installed by default.[193][194][195][196][197][198][199][200][201]
+The release initially included Linux kernel 3.13, but this was updated to 3.19 with the point release of 14.04.3 on 5 August 2015.[202]
+Joey Sneddon of OMG Ubuntu noted that recent Ubuntu releases have received lower and lower amounts of mainstream press coverage and termed it an "established product that has, by and large, remained a niche interest".[203]
+In reviewing Ubuntu 14.04 LTS in April 2014 Jim Lynch concluded: "Ubuntu 14.04 seems to be all about refining the Ubuntu desktop. While there are not a lot of amazing new features in this release, there are quite a few very useful and needed tweaks that add up to a much better desktop experience. Canonical’s designers seem to be listening to Ubuntu users again, and they seem willing to make the changes necessary to give the users what they want. That may be the single most important thing about Ubuntu 14.04. It could be an indication of a sea change in Canonical’s attitude toward Ubuntu users."[204]
+Jack Wallin writing for Tech Republic termed Ubuntu 14.04 LTS, "as polished a distribution as you'll find. It's cleaner, performs better, and is all around improved. Some users may say that this is the most boring release Canonical has unleashed in years, but I believe it to be one of the finest."[205]
+Terry Relph-Knight of ZDNet said, "although there are no amazing 'must-have' new features in Ubuntu 14.04, it is worth upgrading just to get the latest LTS release with a more recent kernel and default applications."[206]
+Scott Gilbertson of Ars Technica stated, "Ubuntu is one of the most polished desktops around, certainly the most polished in the Linux world, but in many ways that polish is increasingly skin deep at the expense of some larger usability issues which continue to go unaddressed release after release."[207]
+Ubuntu 14.10 (Utopic Unicorn)[edit]
+
+
+
+
+A screenshot of the Ubuntu 14.10 "Utopic Unicorn" desktop with the mascot wallpaper
+
+
+On 23 April 2014 Shuttleworth announced that Ubuntu 14.10 would carry the name Utopic Unicorn.[208][209] Version 14.10 was released on 23 October, having only minor updates to the kernel, Unity Desktop, and included packages such as LibreOffice and Mozilla Firefox and Thunderbird. The kernel was updated to 3.16 for hardware support (e.g. graphics) and has for security, full kernel address space layout randomization applied to the kernel and its modules, plus the closure of a number of information leaks in /proc.[210]
+This version is the 21st release. Ubuntu 14.10 was officially characterized as a release that addressed "bug fixes and incremental quality improvements" and so it incorporated very few new features.[211]
+Joey Sneddon of OMG Ubuntu wrote in reviewing this release, "Ubuntu 14.10, codenamed “Utopic Unicorn”, is saddled with a modest changelog, composed largely of bug fixes, stability improvements and key software updates. All worthy, but falls a little way short of the “fresh ideas and new art” that should “raise the roof” – quotes from Mark Shuttleworth’s “U” name announcement...For the release taking place in the week of Ubuntu’s 10th anniversary, this may all read like a bit of an anticlimax. No headline user features, no visual changes (bar a few new icons for the sidebar of Nautilus) — there’s not even a new default wallpaper to look at...But on the flip side it’s perhaps the most fitting release; the one that shows just how far Ubuntu has come in the past few years. Mature, dependable and sure in its own (Ambiance-themed) skin, buggy feature churn has given way to a sustained era of assured stability...Ubuntu 14.10 is a rock-solid, hearty and dependable release. Perhaps more here than ever before. There’s no getting away from the fact that it’s an uninspiring update on paper, and is far from being anything approaching essential."[212]
+Michael Larabel of Phoronix wrote, "At the end of the day simple end-users won't see much of a difference over Ubuntu 14.04 LTS, which is a bit sad given that this is the tenth anniversary release of Ubuntu Linux. For everyday Linux desktop users the many upgraded packages are great but there isn't too much more to celebrate about today on the desktop front."[213]
+Scott Gilbertson, writing for The Register, explained, "I've been covering Ubuntu for seven of the release’s 10 years and 14.10 is the first time I've had to dig deep into the release notes just to find something new to test...If you needed further proof that Canonical is currently solely focused on bringing its Unity 8 interface to mobile devices, 14.10 is the best evidence yet...Almost nothing Canonical develops has changed in this release – there isn't even a new desktop wallpaper. There are some updates to be sure, but they don’t hail from Canonical...The lack of updates isn't unexpected, in fact that's been the plan all along...Desktop Ubuntu is currently in a kind of suspended animation, waiting on Unity 8 and Mir to be ready for its coming metamorphosis. The short story is that it makes no sense for Canonical to keep refining Unity 7 when it will soon be retired."[214]
+Ubuntu 15.04 (Vivid Vervet)[edit]
+
+
+
+
+Ubuntu 15.04 Vivid Vervet
+
+
+On 20 October 2014 Shuttleworth announced that Ubuntu 15.04 would be named Vivid Vervet. It was released on 23 April 2015.[215][216][217][218] This was the 22nd Ubuntu release.
+Ubuntu 15.04 used systemd instead of Upstart by default.[219] This release also featured locally integrated menus by default, replacing the previous default global menus.[220]
+Silviu Stahie, writing for Softpedia, said about this release while it was in beta, "Ubuntu 15.04 is not an exciting release, but that it's only a surface impression. The truth is that it's an important upgrade because some very important changes have been made, including the adoption of systemd. Users will notice that not too many visual changes have been implemented in Ubuntu 15.04, but that was to be expected. The team is transitioning to a new Unity version that is still not ready for general use, so it's easy to understand why Ubuntu 15.04 is not all that different from Ubuntu 14.10."[221]
+This release included modest improvements in Intel Haswell graphics performance and bigger improvements for AMD Radeon graphics cards using the open-source Radeon R600 and RadeonSI Gallium3D drivers.[222]
+In reviewing this release, Joey Sneddon, of OMG Ubuntu, said "Ubuntu 15.04 is yet another solid entry in the distribution’s long release history. A dependable desktop operating system suited for end users but with plenty of convenient extras to woo developers with. Though the Unity 7 desktop is largely mothballed as work progresses on the new converged experience with Unity 8, the modest refinements received here buff the experience. Unity in Ubuntu 15.04 shines brighter, a glowing example of a desktop that ‘just works’ for users.".[223]
+Jesse Smith of DistroWatch wrote, "One of the changes I was interested in exploring was Ubuntu's switch from the Upstart init software to systemd. In this regard I was pleasantly surprised. I find most distributions, when they initially make the switch to systemd, introduce bugs or, at the very least, break backward compatibility. Sometimes service managers stop working properly and network device names usually change. Even if everything works as it should, the administrator needs to adjust to systemd's approach to logging and adopt a different method of managing services. Ubuntu has taken an approach I like with regards to adopting systemd." He concluded, "on the surface, Ubuntu 15.04 does not bring many changes. There are a few cosmetic adjustments, but nothing major that desktop users are likely to notice. Most of the interesting work appears to be going on behind the scenes... Ubuntu 15.04 feels very stable and easy to configure. This is an operating system that is virtually effortless to set up and run and I feel the Unity 7 desktop does a nice job of providing lots of features while staying out of the way... All in all, I like what Canonical has done with Ubuntu 15.04. This feels like a small, incremental evolution for Ubuntu and Unity. The init switch, which has disrupted the users of several other distributions, goes largely unnoticed in Ubuntu and I think that is worthy of praise."[224]
+Ubuntu 15.10 (Wily Werewolf)[edit]
+
+
+
+
+Ubuntu 15.10 Wily Werewolf
+
+
+Shuttleworth announced on 4 May 2015 that Ubuntu 15.10 would be called Wily Werewolf.[225] He initially expressed hope that the release would include the Mir display server, but it was released on 22 October 2015 without Mir. It was the 23rd release of Ubuntu.[226][227][228]
+Ubuntu 15.10 eliminated the disappearing window edge scrollbars in favour of the upstream GNOME scrollbars, a move designed to save developer time in creating patches and updates.[229]
+In reviewing the release, Chris Jones wrote, "Ubuntu 15.10 as an operating system for Review is pretty lackluster. There's nothing new as such and there's nothing we can really say that is going to change your opinion from its predecessor, 15.04. Therefore, we recommend you to upgrade either out of habit and according to your regular upgrade schedule rather than out of a specific necessity for a specific feature of this release. Because there is really nothing that could possibly differentiate it from the older, yet still very stable 15.04 release. But if you're going to stick with 15.04 for a little longer, we do recommend that you look at upgrading the kernel to the latest 4.2 branch. It is worth it. If you really want a reason to upgrade? Linux kernel 4.2 would be our sole reason for taking Ubuntu 15.10 into consideration."[230]
+Joey Sneddon of OMG Ubuntu noted, "For a release named after a terrifying mythological creature Ubuntu 15.10 is surprisingly tame. There are no dramatic transformations, no bone popping or shirt ripping and certainly no hair sprouting under the milky eye of full moon. In fact, a new wallpaper and change in scrollbar appearance is about as shapeshift-y as this werewolf gets."[231]
+Steven J. Vaughan-Nichols of ZDNet praised the release for its integration of cloud services, such as the new Ubuntu OpenStack cloud deployment and management tool, OpenStack Autopilot as well as its server tools. Ubuntu's machine container hypervisor, LXD, included by default in 15.10, was singled out. Vaughan-Nichols concluded, "with these advances, chances are you're more likely to use Ubuntu, hidden behind the scenes, on clouds and servers."[232]
+A Hectic Geek review noted problems with X.Org Server crashes and concluded "If you use Ubuntu 14.04 LTS and if it’s working out for you, then there really is no need to switch to a non-LTS release, especially to the 15.10."[233]
+A review on Dedoimedo identified problems with Samba, Bluetooth, desktop searching, battery life and the smartphone interface and found the release inconsistent, saying, "unpredictability is horrible. Give me a good experience, or give me a bad experience, but please try not to seesaw between them erratically. Continuous, steady change in behavior, any which way." The review concluded, "it underperforms compared to some of its siblings and ancestors. Not the best, definitely not worth a perma upgrade, but you might find it more palatable to your hardware and use cases. Overall, though Wily isn't the best of distros. It sure gave me the willies. 7/10."[234]
+Future releases[edit]
+Ubuntu 16.04 LTS (Xenial Xerus)[edit]
+Shuttleworth announced on 21 October 2015 that Ubuntu 16.04 LTS will be called Xenial Xerus.[235]
+Ubuntu 16.04 LTS, due to be released on 21 April 2016, is expected to include Unity 8 running natively on Mir.[236] It will use systemd instead of Upstart as its init system.[237][238][239] This release will replace the Ubuntu Software Center with the GNOME Software and eliminate Empathy and Brasero, from the ISO file.[240][241] It is also planned that Ubuntu 16.04 LTS will move entirely from Python 2 to Python 3, which will require dropping or porting Python 2 packages.[242] The desktop will be Unity 7 with Unity 8 optional. Snappy packages will be supported.[243]
+In May 2015 Shuttleworth indicated that Ubuntu 16.04 LTS will likely include Unity 8 and Mir, but that users will have a choice of that or Unity 7 and X.org. He said, "Unity 8 will be an option for 16.04 and we'll let the community decide the default for 16.04."[244]
+Table of versions[edit]
+
+
+Version
+Code name
+Release date
+Supported until
+Kernel version
+
+
+Desktops
+Servers
+
+
+4.10
+Warty Warthog
+2004-10-20
+Old version, no longer supported: 2006-04-30
+2.6.8
+
+
+5.04
+Hoary Hedgehog
+2005-04-08
+Old version, no longer supported: 2006-10-31
+2.6.10
+
+
+5.10
+Breezy Badger
+2005-10-13
+Old version, no longer supported: 2007-04-13
+2.6.12
+
+
+6.06 LTS
+Dapper Drake
+2006-06-01
+Old version, no longer supported: 2009-07-14
+Old version, no longer supported: 2011-06-01
+2.6.15
+
+
+6.10
+Edgy Eft
+2006-10-26
+Old version, no longer supported: 2008-04-25
+2.6.17
+
+
+7.04
+Feisty Fawn
+2007-04-19
+Old version, no longer supported: 2008-10-19
+2.6.20
+
+
+7.10
+Gutsy Gibbon
+2007-10-18
+Old version, no longer supported: 2009-04-18
+2.6.22
+
+
+8.04 LTS
+Hardy Heron
+2008-04-24
+Old version, no longer supported: 2011-05-12
+Old version, no longer supported: 2013-05-09
+2.6.24
+
+
+8.10
+Intrepid Ibex
+2008-10-30
+Old version, no longer supported: 2010-04-30
+2.6.27
+
+
+9.04
+Jaunty Jackalope
+2009-04-23
+Old version, no longer supported: 2010-10-23
+2.6.28
+
+
+9.10
+Karmic Koala
+2009-10-29
+Old version, no longer supported: 2011-04-30
+2.6.31
+
+
+10.04 LTS
+Lucid Lynx
+2010-04-29
+Old version, no longer supported: 2013-05-09
+Old version, no longer supported: 2015-04-30
+2.6.32
+
+
+10.10
+Maverick Meerkat
+2010-10-10
+Old version, no longer supported: 2012-04-10
+2.6.35
+
+
+11.04
+Natty Narwhal
+2011-04-28
+Old version, no longer supported: 2012-10-28
+2.6.38
+
+
+11.10
+Oneiric Ocelot
+2011-10-13
+Old version, no longer supported: 2013-05-09
+3.0
+
+
+12.04 LTS
+Precise Pangolin
+2012-04-26[245]
+Older version, yet still supported: 2017-04-26[142]
+3.2+[246]
+
+
+12.10
+Quantal Quetzal
+2012-10-18
+Old version, no longer supported: 2014-05-16[247]
+3.5[248]
+
+
+13.04
+Raring Ringtail
+2013-04-25
+Old version, no longer supported: 2014-01-27[8]
+3.8[249]
+
+
+13.10
+Saucy Salamander
+2013-10-17[250]
+Old version, no longer supported: 2014-07-17[190]
+3.11
+
+
+14.04 LTS
+Trusty Tahr
+2014-04-17[251]
+Older version, yet still supported: 2019-04
+3.13[252]/3.19[202]
+
+
+14.10
+Utopic Unicorn
+2014-10-23[209]
+Old version, no longer supported: 2015-07-23[253]
+3.16[254]
+
+
+15.04
+Vivid Vervet
+2015-04-23[217]
+Older version, yet still supported: 2016-01
+3.19.3[255]
+
+
+15.10
+Wily Werewolf
+2015-10-22[228]
+Current stable version: 2016-07
+4.2[256]
+
+
+16.04 LTS
+Xenial Xerus
+2016-04-21[239]
+Future release: 2021-04
+4.3[257]
+
+
+
+
+Legend:
+Old version
+Older version, still supported
+Latest version
+Latest preview version
+Future release
+
+
+
+
+
+Version timeline[edit]
+
+Version end of life[edit]
+After each version of Ubuntu has reached its end-of-life time, its repositories are removed from the main Ubuntu servers and consequently the mirrors.[258] Older versions of Ubuntu repositories and releases can be found on the old Ubuntu releases website.[259][260]
+See also[edit]
+
+List of Ubuntu-based distributions
+List of Linux distributions
+
+
+
+
+
+
+
+
+
+Free software portal
+Linux portal
+Information technology portal
+
+
+
+
+
+
+
+
+References[edit]
+
+
+^ "About Ubuntu The Ubuntu story". Canonical Ltd. Retrieved 27 August 2010.&#160;
+^ a b Shuttleworth, Mark (20 October 2004). "Ubuntu 4.10 announcement". ubuntu-announce (Mailing list). Retrieved 19 August 2008.&#160;
+^ "TimeBasedReleases". Ubuntu Team Wiki. Canonical Ltd. Retrieved 27 August 2010.&#160;
+^ "Releases". Canonical Ltd. Retrieved 28 February 2010.&#160;
+^ "GNOME's Time-Based Release Schedule". Gnome Live Wiki. Retrieved 27 August 2010.&#160;
+^ Stone, Daniel (30 August 2009). "New release process". xorg-devel (Mailing list). Retrieved 27 August 2010.&#160;
+^ "LTS". Ubuntu Team Wiki. Canonical Ltd. Retrieved 27 August 2010.&#160;
+^ a b "Ubuntu Technical Board Looks at Shuttleworth’s Proposal for Release Management Methodology". Ubuntu Fridge. Retrieved 20 March 2013.&#160;
+^ a b "DevelopmentCodeNames". Ubuntu Team Wiki. Canonical Ltd. Retrieved 8 May 2009.&#160;
+^ Zimmerman, Matt (28 March 2006). "Ubuntu 4.10 reaches end of life on 30 April 2006". ubuntu-announce (Mailing list). Retrieved 19 August 2008.&#160;
+^ "ShipIt has closed". Retrieved 21 November 2012.&#160;
+^ "Announcing Ubuntu 4.10 "The Warty Warthog Release"". 20 October 2004. Retrieved 20 April 2013.&#160;
+^ Zimmerman, Matt (8 April 2005). "Ubuntu 5.04 announcement". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "5.04 Release Notes". 8 April 2005. Archived from the original on 30 April 2008. Retrieved 19 August 2008.&#160;
+^ Armstrong, Christina (23 October 2006). "Ubuntu 5.04 reaches end-of-life on 31 October 2006". ubuntu-security-announce (Mailing list). Retrieved 19 August 2008.&#160;
+^ "Get Ubuntu: Upgrade". Canonical Ltd. Retrieved 27 August 2010.&#160;
+^ a b c Tux Radar (23 April 2009). "The road to Jaunty: a look back at Ubuntu's history". Retrieved 19 August 2008.&#160;
+^ "DraftHoaryReleaseAnnouncement". Ubuntu Team Wiki. Canonical Ltd. 31 July 2005. Retrieved 5 March 2008.&#160;[dead link]
+^ "HoaryGoals". Ubuntu Wiki. Canonical. Retrieved 3 September 2010.&#160;
+^ Zimmerman, Matt (12 October 2005). "Ubuntu 5.10 announcement". ubuntu-announce (Mailing list). Retrieved 19 August 2008.&#160;
+^ "Ubuntu 5.10 release notes". Canonical Ltd. Retrieved 21 December 2006.&#160;
+^ Fog Heen, Tollef (14 March 2007). "Ubuntu 5.10 reaches end-of-life on 13 April 2007". ubuntu-security-announce (Mailing list). Retrieved 19 August 2008.&#160;
+^ "Add/Remove Applications". Community Ubuntu Documentation. Canonical Ltd. Retrieved 11 October 2010.&#160;[dead link]
+^ "BreezyReleaseNotes". Ubuntu Team Wiki. Canonical Ltd. 31 July 2005. Retrieved 5 March 2008.&#160;[dead link]
+^ Zimmerman, Matt (1 June 2006). "Ubuntu 6.06 announcement". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "Ubuntu 6.06 LTS release notes". Canonical Ltd. Retrieved 19 August 2008.&#160;[dead link]
+^ "Ubuntu 6.06 LTS announcement". Retrieved 19 August 2008.&#160;
+^ Remnant, Scott James (19 October 2014). "Happy 10th Birthday, Ubuntu". Retrieved 20 October 2014.&#160;
+^ Full Circle Magazine (April 2007). "FullCircle Magazine Issue 0". Retrieved 9 June 2009.&#160;[dead link]
+^ Langasek, Steve (8 July 2009). "Ubuntu 6.06 LTS Desktop Edition reaches end-of-life on 14 July 2009". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "LiveCD". Community Ubuntu Documentation. Canonical Ltd. Retrieved 27 August 2010.&#160;
+^ "Package gdebi". Retrieved 11 October 2010.&#160;
+^ "DapperDrake". Ubuntu Team Wiki. Canonical Ltd. 26 January 2007. Retrieved 5 March 2008.&#160;
+^ Tollef, Fog Heen (26 October 2006). "Announcing Ubuntu 6.10". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "Ubuntu 6.10 release notes". Retrieved 21 December 2006.&#160;[dead link]
+^ "Ubuntu 6.10 announcement". 26 October 2006. Retrieved 19 August 2008.&#160;
+^ Langasek, Steve (25 March 2008). "Ubuntu 6.10 reaches end-of-life on 26 April 2008". ubuntu-security-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "End of Life announcement for Ubuntu 6.10". Canonical Ltd. 25 March 2008. Retrieved 1 April 2008.&#160;
+^ "EdgyReleaseNotes". Ubuntu Team Wiki. Canonical Ltd. 16 October 2007. Retrieved 5 March 2008.&#160;[dead link]
+^ Ubuntu Announcements (19 April 2007). "Ubuntu 7.04 released". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "Ubuntu 7.04 release notes". Canonical Ltd. Retrieved 27 August 2010.&#160;
+^ "Ubuntu 7.04 announcement". Ubuntu Team Wiki. Canonical Ltd. Retrieved 19 August 2008.&#160;
+^ Langasek, Steve (26 August 2008). "Ubuntu 7.04 reaches end-of-life on 19 October 2008". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "feistybeta". 23 March 2007. Retrieved 5 March 2008.&#160;
+^ Ubuntu Announcements (18 October 2007). "Ubuntu 7.10 released". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ Shuttleworth, Mark (12 April 2007). "Introducing the Gutsy Gibbon". ubuntu-devel-announce (Mailing list). Retrieved 19 August 2008.&#160;
+^ "GutsyReleaseSchedule". Ubuntu Team Wiki. Canonical Ltd. Retrieved 19 August 2008.&#160;
+^ Langasek, Steve (23 March 2009). "Ubuntu 7.10 reaches end-of-life on 18 April 2009". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "End of Life announcement for Ubuntu 7.10". Canonical Ltd. Retrieved 27 March 2008.&#160;
+^ "Gutsy Gibbon – Tribe 3 test release". Retrieved 2 June 2008.&#160;
+^ a b "Gutsy Gibbon – Tribe 4 test release". Retrieved 2 June 2008.&#160;
+^ a b "Gutsy Gibbon – Tribe 5 test release". Retrieved 2 June 2008.&#160;
+^ "Gutsy Gibbon – Tribe 2 test release". Retrieved 2 June 2008.&#160;
+^ Ubuntu Announcements (24 April 2008). "Ubuntu 8.04 LTS released". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "Milestone ubuntu-8.04 for Ubuntu due 24 April 2008". Retrieved 19 August 2008.&#160;
+^ "Introducing the Hardy Heron". 29 August 2007. Retrieved 19 August 2008.&#160;
+^ "Ubuntu Weekly Newsletter: Issue 36". Ubuntu Team Wiki. Canonical Ltd. Retrieved 2 July 2008.&#160;
+^ "Ubuntu's new Linux sports debugging tool". Retrieved 19 August 2008.&#160;
+^ Handler, N. (April 2011). "Ubuntu 8.04 reaches end-of-life on 12 May 2011". Retrieved 15 May 2011.&#160;
+^ "Ubuntu developer summit Boston". 1 November 2007. Retrieved 2 June 2008.&#160;[dead link]
+^ a b c Pitt, Martin (14 January 2008). "Accepted: ubuntu-meta 1.87 (source)". hardy-changes (Mailing list). Retrieved 21 January 2008.&#160;
+^ "Blueprint: "Fix the Linux audio mess once and for all"". Retrieved 19 July 2008.&#160;
+^ "Latest Server Release Expands Ubuntu Enterprise Profile". 21 April 2008. Retrieved 5 July 2008.&#160;
+^ "Hardy Heron Artwork". Ubuntu Team Wiki. Canonical Ltd. Retrieved 19 August 2008.&#160;
+^ "Download Ubuntu Eee 8.04.1 for your Eee PC". Webtrickz. Retrieved 29 October 2008.&#160;
+^ Ubuntu Announcements (30 October 2008). "Ubuntu 8.10 released". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "Milestone ubuntu-8.10 for Ubuntu due 30 October 2008". Retrieved 28 April 2008.&#160;
+^ Langasek, Steve (29 March 2010). "Ubuntu 8.10 reaches end-of-life on 30 April 2010". ubuntu-security-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "Guest account specification". Ubuntu Team Wiki. Canonical Ltd. Retrieved 19 August 2008.&#160;
+^ Thomas, Keir (31 October 2008). "A User's Look at Ubuntu 8.10 Intrepid Ibex". Retrieved 27 August 2010.&#160;
+^ "Ubuntu Intrepid Ibex Features". MoPedia. 5 September 2008. Archived from the original on 22 February 2009. Retrieved 27 August 2010.&#160;
+^ "EncryptedPrivateDirectory". Ubuntu Team Wiki. Canonical Ltd. Retrieved 27 August 2010.&#160;
+^ "IntrepidIbex/TechnicalOverview". Ubuntu Team Wiki. Canonical Ltd. Retrieved 27 August 2010.&#160;
+^ Ubuntu Announcements (23 April 2009). "Ubuntu 9.04 released". ubuntu-announce (Mailing list). Retrieved 23 April 2009.&#160;
+^ Robbie Williamson (23 September 2009). "Ubuntu 9.04 reaches end-of-life on 23 October 2010". ubuntu-announce (Mailing list). Retrieved 3 October 2010.&#160;
+^ a b "First look: Ubuntu 9.04 "Jaunty Jackalope" Release Candidate | Hardware 2.0 | ZDNet.com". Blogs.zdnet.com. 20 April 2009. Retrieved 30 April 2010.&#160;
+^ "Introducing the Jaunty Jackalope". Lists.ubuntu.com. 11 September 2008. Retrieved 25 May 2012.&#160;
+^ "NotifyOSD". Ubuntu Team Wiki. Canonical Ltd. Retrieved 30 April 2009.&#160;
+^ Shuttleworth, Mark (28 September 2008). "Introducing the Jaunty Jackalope". ubuntu-devel-announce (Mailing list). Retrieved 9 September 2008.&#160;
+^ "JauntyReleaseSchedule". Ubuntu Team Wiki. Canonical Ltd. Retrieved 3 March 2009.&#160;
+^ Hodgin, Rick (14 April 2009). "Ubuntu 9.04 due April 23, includes native ARM port". News Organization. Retrieved 15 March 2015.&#160;
+^ Ubuntu Announcements (29 October 2009). "Ubuntu 9.10 released". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "KarmicReleaseSchedule". Ubuntu Team Wiki. Canonical Ltd. Retrieved 3 March 2009.&#160;
+^ "Ubuntu reaches end-of-life on April 30, 2011". Retrieved 30 April 2011.&#160;
+^ "Introducing the Karmic Koala, our mascot for Ubuntu 9.10". Lists.ubuntu.com. 19 February 2009. Retrieved 25 May 2012.&#160;
+^ a b Shuttleworth, Mark (February 2009). "Introducing the Karmic Koala, our mascot for Ubuntu 9.10". ubuntu-devel-announce (Mailing list). Retrieved 21 February 2009.&#160;
+^ Nestor, Marius (June 2009). "Ubuntu 9.10 Alpha 2 Released – The Karmic Koala Chronicles". Retrieved 22 June 2009.&#160;
+^ "One Hundred Paper Cuts". Retrieved 27 August 2010.&#160;
+^ ""empathy" binary package in Ubuntu Karmic i386". Retrieved 27 August 2010.&#160;
+^ "Karmic Koala Alpha 3". Canonical Ltd. 29 October 2009. Retrieved 30 April 2010.&#160;
+^ "Grub2 - Community Ubuntu Documentation". Help.ubuntu.com. Retrieved 25 May 2012.&#160;
+^ Larabel, Michael (August 2009). "Canonical Unveils The Ubuntu Software Store". Retrieved 15 August 2009.&#160;
+^ Ubuntu Announcements (29 April 2010). "Ubuntu 10.04 LTS released". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ Paul, Ryan (September 2009). "Ubuntu 10.04 LTS announced, codenamed Lucid Lynx". Retrieved 24 October 2009.&#160;
+^ Marius Nestor (30 April 2015). "Ubuntu 10.04 LTS (Lucid Lynx) Reached End of Life on April 30, 2015". Softpedia. Retrieved 1 May 2015.&#160;
+^ "Bug #454821&#160;: Bugs&#160;: "xserver-xorg-video-nv" package&#160;: Ubuntu". Canonical Ltd. 2010. Retrieved 24 February 2010.&#160;
+^ "Lucid Alpha 2". Canonical Ltd. 2010. Retrieved 23 February 2010.&#160;
+^ "Publishing history of "plymouth" package in Ubuntu". Canonical Ltd. June 2010. Retrieved 29 June 2010.&#160;
+^ Paul, Ryan (November 2009). "Giving up the GIMP is a sign of Ubuntu's mainstream maturity". Retrieved 1 May 2010.&#160;
+^ "Light: Ubuntu is Lightware". ubuntu.com. Retrieved 4 March 2010.&#160;
+^ Paul, Ryan (March 2010). "Hands-on: a close look at Ubuntu's new non-brown theme". Retrieved 8 March 2010.&#160;
+^ Paul, Ryan (March 2010). "Ubuntu dumps the brown, introduces new theme and branding". Retrieved 8 March 2010.&#160;
+^ Auza, Jun (March 2010). "Ubuntu's New Look, a Pale Imitation of Mac OS X?". Retrieved 8 March 2010.&#160;
+^ Williamson, Robbie (18 August 2010). "Ubuntu 10.04.1 LTS released". ubuntu-announce (Mailing list). Retrieved 27 August 2010.&#160;
+^ "Ubuntu 10.04.2 LTS released". 18 February 2011. Retrieved 18 February 2011.&#160;
+^ "Ubuntu 10.04.3 (Lucid Lynx) LTS released!". 21 July 2011. Retrieved 21 July 2011.&#160;
+^ "Shooting for the Perfect 10.10 with Maverick Meerkat". 2 April 2010. Retrieved 27 August 2010.&#160;
+^ Paul, Ryan (April 2010). "Ubuntu 10.10 to be codenamed Maverick Meerkat". Retrieved 2 April 2010.&#160;
+^ "MaverickReleaseSchedule". Ubuntu Team Wiki. Canonical Ltd. April 2010. Retrieved 6 April 2010.&#160;
+^ Robbie Williamson. "Ubuntu 10.10 Release Announcement". ubuntu-announce (Mailing list). Retrieved 16 October 2010.&#160;
+^ "Article on Ubuntu 10.10 Release". Andrew Lyle. Retrieved 18 October 2010.&#160;
+^ "Shooting for the Perfect 10.10 with Maverick Meerkat". Mark Shuttleworth. 2 April 2010. Retrieved 8 June 2010.&#160;
+^ Mark Shuttleworth (11 May 2010). "ubuntu-marketing: 10.10.10". lists.ubuntu.com. Retrieved 4 February 2011.&#160;
+^ Paul, Ryan (October 2010). "Ubuntu 10.10 arrives with impressive new netbook environment". Ars Technica. Retrieved 15 October 2010.&#160;
+^ "Ubuntu 10.10 (Maverick Meerkat) end-of-life", fridge.ubuntu.com
+^ Mark Shuttleworth (17 August 2010). "N-imal?". Retrieved 17 August 2010.&#160;
+^ Paul, Ryan (28 April 2011). "Ubuntu 11.04 released, a Natty Narwhal rises from the depths". Ars Technica. Retrieved 29 April 2011.&#160;
+^ Mark Shuttleworth (25 October 2010). "Ubuntu changes its desktop from GNOME to Unity". Retrieved 26 October 2010.&#160;
+^ Paul, Ryan (October 2010). "Shuttleworth: Unity shell will be default desktop in Ubuntu 11.04". Ars Technica. Retrieved 26 October 2010.&#160;
+^ Canonical Ltd (January 2011). "Publishing history of "libreoffice" package in Ubuntu". Retrieved 20 January 2011.&#160;
+^ "LibreOffice for natty, replacing the current OpenOffice packaging". Lists.ubuntu.com. Retrieved 21 October 2011.&#160;
+^ "Default Applications Listing for 11.04". Wiki.ubuntu.com. 26 June 2011. Retrieved 21 October 2011.&#160;
+^ "Canonical switches to OpenStack for Ubuntu Linux cloud". Zdnet.com. 10 May 2011. Retrieved 21 October 2011.&#160;
+^ Prickett, Timothy (10 May 2011). "Ubuntu eats OpenStack for clouds". Theregister.co.uk. Retrieved 21 October 2011.&#160;
+^ Canonical Ltd (December 2010). "Natty Narwhal Alpha 1". Retrieved 3 December 2010.&#160;
+^ Paul, Ryan (April 2011). "Ubuntu 11.04 released, a Natty Narwhal rises from the depths". Ars Technica. Retrieved 30 April 2011.&#160;
+^ Smith, Jesse (May 2011). "A look at Ubuntu 11.04". Distrowatch. Retrieved 10 May 2011.&#160;
+^ Sneddon, Joey (28 October 2012). "Ubuntu 11.04 Support Ends Today". OMG Ubuntu. Retrieved 28 October 2012.&#160;
+^ Shuttleworth, Mark (March 2011). "Next after Natty?". Retrieved 9 September 2011.&#160;
+^ "OneiricReleaseSchedule – Ubuntu Wiki". Wiki.ubuntu.com. 7 October 2011. Retrieved 21 October 2011.&#160;
+^ Andrew (24 August 2011). "Installing / Using Classic GNOME Desktop In Ubuntu 11.10 Oneiric Ocelot ~ Web Upd8: Ubuntu / Linux blog". Webupd8.org. Retrieved 4 January 2012.&#160;
+^ Mark Shuttleworth. "Celebrating Gnome 3.0".&#160;
+^ « » (16 August 2011). "&gt;&gt; Blog &gt;&gt; Dash takes shape for 11.10 Unity". Mark Shuttleworth. Retrieved 21 October 2011.&#160;
+^ "synaptic removed from ubuntu 11.10". June 2011. Retrieved 23 June 2011.&#160;
+^ Sneddon, Joey (May 2011). "Video editor PiTiVi to be removed as default app in Ubuntu 11.10". OMG Ubuntu. Retrieved 14 May 2011.&#160;
+^ Sneddon, Joey (May 2011). "App changes for Ubuntu 11.10: See ya, Computer Janitor and Hello Deja Dup!". OMG Ubuntu. Retrieved 14 May 2011.&#160;
+^ Sneddon, Joey (May 2011). "Thunderbird on track to be default e-mail app in Ubuntu 11.10". OMG Ubuntu. Retrieved 14 May 2011.&#160;
+^ Sneddon, Joey (August 2011). "Thunderbird Confirmed as Default Mail App For Ubuntu 11.10". OMG Ubuntu. Retrieved 10 August 2011.&#160;
+^ Mark Shuttleworth. "Next after Natty?".&#160;
+^ "PrecisseReleaseSchedule – Ubuntu Wiki". Wiki.ubuntu.com. Retrieved 26 April 2012.&#160;
+^ Shuttleworth, Mark (October 2011). "P is for…". Retrieved 5 October 2011.&#160;
+^ a b "Ubuntu 12.04 to feature extended support period for desktop users". Canonical.com. Retrieved 21 October 2011.&#160;
+^ Paul, Ryan (28 May 2012). "Precision and purpose: Ubuntu 12.04 and the Unity HUD reviewed". Ars Technica. Retrieved 1 November 2012.&#160;
+^ Andrei, Alin (15 November 2011). "Expected Changes In Ubuntu 12.04 Precise Pangolin". Web Upd8. Retrieved 8 November 2011.&#160;
+^ Sneddon, Joey (4 November 2011). "Banshee, Tomboy And Mono Dropped from Ubuntu 12.04 CD". OMG Ubuntu. Retrieved 8 November 2011.&#160;
+^ "Window dodge feature in Ubuntu 12.04".&#160;
+^ Shuttleworth, Mark (24 January 2012). "Introducing the HUD. Say hello to the future of the menu.". Retrieved 25 January 2012.&#160;
+^ Graber, Stéphane. "Networking in Ubuntu 12.04 LTS - Bonding". Retrieved 16 August 2012.&#160;
+^ Kernel team IRC meeting (7 January 2014), Minutes from the Ubuntu Kernel Team meeting, 2014-01-07. Retrieved 27 January 2014
+^ "PrecisePangolin/ReleaseSchedule - Ubuntu Wiki". Wiki.ubuntu.com. Retrieved 31 January 2013.&#160;
+^ Smith, Jesse (7 May 2012). "Review of Ubuntu 12.04". DistroWatch. Retrieved 1 November 2013.&#160;
+^ Lynch, Jim (9 May 2012). "Ubuntu 12.04". Linux Desktop Reviews. Retrieved 14 May 2012.&#160;
+^ Wallen, Jack (25 June 2012). "Ubuntu Unity: Making the desktop seriously efficient again". TechRepublic. Retrieved 1 November 2013.&#160;
+^ Shuttleworth, Mark (23 April 2012). "Quality has a new name". Retrieved 23 April 2012.&#160;
+^ Canonical Ltd (23 April 2012). "Quantal Quetzal Release Schedule". Retrieved 24 April 2012.&#160;
+^ Paul, Ryan (25 April 2012). "Theming update planned for Ubuntu 12.10, codenamed Quantal Quetzal". Ars Technica. Retrieved 30 April 2012.&#160;
+^ Sneddon, Joey (12 May 2012). "UDS-Q Summary: Bye-Bye Unity 2D, Hello GNOME-Shell Spin". OMG! Ubuntu!. Retrieved 12 May 2012.&#160;
+^ "Quantal Quetzal TechnicalOverview Beta1". Ubuntu.&#160;
+^ "EnablingPAE - Community Ubuntu Documentation". Help.ubuntu.com. Retrieved 21 October 2012.&#160;
+^ Sneddon, Joey (11 July 2012). "New Session Menu Lands in Ubuntu 12.10". OMG Ubuntu. Retrieved 12 July 2012.&#160;
+^ Noyes, Katherine (16 July 2012). "Ubuntu Linux 12.10 Will Integrate Web Apps into the Desktop | PCWorld Business Center". Pcworld.com. Retrieved 20 July 2012.&#160;
+^ Sneddon, Joey. "Ubuntu 12.10 Will Ship With Older Version of Nautilus". OMG! Ubuntu!. Retrieved 25 August 2012.&#160;
+^ Sneddon, Joey (8 September 2012). "It’s Official: The Ubuntu LiveCD is Dead". OMG Ubuntu. Retrieved 10 September 2012.&#160;
+^ "ubuntucd - CD compressed versions of Ubuntu - Google Project Hosting". Code.google.com. Retrieved 21 October 2012.&#160;
+^ Sneddon, Joey (21 September 2012). "Online Shopping Feature Arrives in Ubuntu 12.10". OMG! Ubuntu!. Retrieved 25 September 2012.&#160;
+^ Vaughan, Steven J. "Shuttleworth defends Ubuntu Linux integrating Amazon". ZDNet. Retrieved 25 September 2012.&#160;
+^ Shuttleworth, Mark (23 September 2012), Amazon search results in the Dash. Retrieved 25 September 2012
+^ "Bug #1054776 "Don't include remote searches in the home lens"&#160;: Bugs&#160;: "unity-lens-shopping" package&#160;: Ubuntu". Bugs.launchpad.net. 20 September 2012. Retrieved 25 September 2012.&#160;
+^ Sneddon, Joey. "Mark Shuttleworth Explains Ubuntu’s New ‘Amazon Suggestions’ Feature". OMG! Ubuntu!. Retrieved 25 September 2012.&#160;
+^ Sneddon, Joey. "Ubuntu 12.10 Amazon Shopping Results to be Made Optional". OMG! Ubuntu!. Retrieved 26 September 2012.&#160;
+^ Sneddon, Joey (10 October 2012). "Blogger Claims Ubuntu’s New Shopping Lens Breaks EU Law". OMG Ubuntu. Retrieved 11 October 2012.&#160;
+^ Smith, Jesse (29 October 2012). "Ubuntu 12.10 Desktop". DistroWatch. Retrieved 3 November 2012.&#160;
+^ DistroWatch staff (5 November 2012). "DistroWatch Weekly, Issue 481, 5 November 2012". DistroWatch. Retrieved 6 November 2012.&#160;
+^ Lynch, Jim (5 December 2012). "Ubuntu 12.10". Linux Desktop Reviews. Retrieved 6 December 2012.&#160;
+^ Shuttleworth, Mark (17 October 2012). "Not the Runty Raccoon, the Rufflered Rhino or (even) the Randall Ross". Retrieved 18 October 2012.&#160;
+^ "Intention to drop Wubi from 13.04 release". Lists.ubuntu.com. Retrieved 28 April 2013.&#160;
+^ "WUBI To Be Dropped from Ubuntu 13.04, Windows Users Lose Out". OMG!Ubuntu. Retrieved 9 April 2013.&#160;
+^ "[Phoronix] Ubuntu Looks To Improve Its Windows Installer". Phoronix.com. Retrieved 1 November 2012.&#160;
+^ "RaringRingtail/ReleaseSchedule - Ubuntu Wiki". Wiki.ubuntu.com. 14 March 2013. Retrieved 28 April 2013.&#160;
+^ Lynch, Jim (25 April 2013). "Ubuntu 13.04". Desktop Linux Reviews. Retrieved 28 April 2013.&#160;
+^ a b c Paul, Ryan (17 October 2013). "Ubuntu 13.10 review: The Linux OS of the future remains a year away". Ars Technica. Retrieved 2 November 2013.&#160;
+^ Sneddon, Joey (16 May 2013). "Chromium Likely to Replace Firefox As Default Browser in Ubuntu 13.10". OMG! Ubuntu!. Retrieved 13 August 2013.&#160;
+^ Sneddon, Joey (13 August 2013). "Firefox To Remain Default Browser in Ubuntu 13.10". OMG! Ubuntu!. Retrieved 13 August 2013.&#160;
+^ Sneddon, Joey (27 June 2013). "Mir To Ship As Default Display Server in Ubuntu 13.10". OMG! Ubuntu!. Retrieved 13 August 2013.&#160;
+^ Tran, Sam (2 October 2013). "XMir Dropped from Ubuntu 13.10 Default Due to ‘Technical Difficulties’". OMG! Ubuntu!. Retrieved 3 October 2013.&#160;
+^ Sneddon, Joey (17 October 2013). "Title of Article". OMG Ubuntu. Retrieved 18 October 2013.&#160;
+^ Lynch, Jim (15 October 2013). "Ubuntu 13.10 Saucy Salamander". Linux Desktop Reviews. Retrieved 18 October 2013.&#160;
+^ Korolov, Maria (9 December 2013). "Ubuntu 13.10: The good, the bad and the ugly". Network World. Retrieved 3 April 2014.&#160;
+^ Powers, Shawn (2 December 2013). "Readers' Choice Awards 2013". Linux Journal. Retrieved 9 December 2013.&#160;
+^ a b "Ubuntu 13.10 (Saucy Salamander) reaches End of Life on July 17 2014". Lists.ubuntu.com. 17 October 2013. Retrieved 18 July 2014.&#160;
+^ Shuttleworth, Mark (31 October 2011). "Ubuntu on phones, tablets, TV’s and smart screens everywhere".&#160;
+^ Joey-Elijah Sneddon (18 October 2013). "Ubuntu 14.04 LTS Named 'Trusty Tahr'". OMG! Ubuntu!. Retrieved 19 October 2013.&#160;
+^ a b Shuttleworth, Mark (18 October 2013). "Quantal, raring, saucy…". Retrieved 18 October 2013.&#160;
+^ "Ubuntu 14.04 LTS Release Schedule".&#160;
+^ Sneddon, Joey (15 November 2013). "Ubuntu Tablet Will be ‘Key Focus’ During Ubuntu 14.04 LTS Cycle". OMG! Ubuntu!. Retrieved 15 November 2013.&#160;
+^ Joey-Elijah Sneddon. "Ubuntu 14.04 Adds Global Menu "Off" Switch". OMG! Ubuntu!. Retrieved 30 November 2013.&#160;
+^ Joey-Elijah Sneddon (19 November 2013). "What to Expect in Ubuntu 14.04 LTS Next April". Omgubuntu.co.uk. Retrieved 30 November 2013.&#160;
+^ Joey-Elijah Sneddon (14 December 2013). "Ubuntu Confirm GNOME Control Centre Fork for 14.04". OMG! Ubuntu!. Retrieved 14 December 2013.&#160;
+^ Sneddon, Joey-Elijah, (19 December 2013), Ubuntu 14.04 to Feature SSD TRIM Support By Default, OMG Ubuntu. Retrieved 19 December 2013
+^ Sneddon, Joey-Elijah, (18 January 2013), GNOME 3.10 Will Be Available To Install In Ubuntu 14.04 LTS, OMG Ubuntu, retrieved 18 January 2013
+^ Sneddon, Joey (20 February 2014). "Better Late Than Never: Ubuntu To Offer Locally Integrated Menus in 14.04". OMG Ubuntu. Retrieved 24 February 2014.&#160;
+^ a b "release notes for Ubuntu 14.04.3 (Trusty Tahr)". Retrieved 3 October 2015.&#160;
+^ Sneddon, Joey (23 April 2014). "How has the Press Reacted to Ubuntu 14.04? We Round Up the Reviews". OMG Ubuntu. Retrieved 23 April 2014.&#160;
+^ Lynch, Jim (17 April 2014). "Ubuntu 14.04 LTS". Linux Desktop Reviews. Retrieved 22 April 2014.&#160;
+^ Wallin, Jack (18 April 2014). "Ubuntu 14.04 wows through subtlety". Tech Republic. Retrieved 23 April 2014.&#160;
+^ Relph-Knight, Terry (17 April 2014). "Ubuntu 14.04 LTS (Trusty Tahr) review: Solid and stable, but no big changes". ZDNet. Retrieved 23 April 2014.&#160;
+^ Gilbertson, Scott (23 April 2014). "Ubuntu 14.04 review: Missing the boat on big changes". Ars Technica. Retrieved 23 April 2014.&#160;
+^ Shuttleworth, Mark (23 April 2014). "U talking to me?". Retrieved 23 April 2014.&#160;
+^ a b "Utopic Unicorn Schedule". wiki.ubuntu.com. Retrieved 10 June 2014.&#160;
+^ "UtopicUnicorn/ReleaseNotes". wiki.ubuntu.com. Retrieved 20 October 2014.&#160;
+^ Wong, Anthony (23 October 2014). "Ubuntu 14.10 Release Notes". Retrieved 25 October 2014.&#160;
+^ Sneddon, Joey (23 October 2014). "Ubuntu 14.10 Released, Ready to Download Now". OMG Ubuntu. Retrieved 24 October 2014.&#160;
+^ Larabel, Michael (23 October 2014). "Ubuntu 14.10 Officially Released". Phoronix. Retrieved 24 October 2014.&#160;
+^ Gilbertson, Scott (24 October 2014). "Ubuntu's shiny 10th birthday Unicorn: An upgrade fantasy". The Register. Retrieved 25 October 2014.&#160;
+^ Shuttleworth, Mark (20 October 2014). "V is for Vivid". Retrieved 20 October 2014.&#160;
+^ Sneddon, Joey. "This is the name of Ubuntu 15.04 — And It’s Not Velociraptor". OMG Ubuntu. Retrieved 20 October 2014.&#160;
+^ a b Sneddon, Joey. "Ubuntu 15.04 Gets Tentative Release Date of April 23, 2015". OMG Ubuntu. Retrieved 18 November 2014.&#160;
+^ Canonical Ltd (5 December 2014). "Vivid Vervet Release Schedule". Retrieved 19 December 2014.&#160;
+^ "Ubuntu Cloud Switches Over To Using Systemd By Default". phoronix.com. Retrieved 27 April 2015.&#160;
+^ Andrei, Alin (27 March 2015). "Ubuntu 15.04 Vivid Vervet Final Beta Available For Download". webupd8. Retrieved 27 March 2015.&#160;
+^ Stahie, Silviu (2 April 2015). "See What's New in Ubuntu 15.04 Vivid Vervet". Softpedia. Retrieved 15 April 2015.&#160;
+^ "Ubuntu 15.04 Offers Faster OpenGL For AMD Radeon GPUs On Open-Source". phoronix.com. Retrieved 27 April 2015.&#160;
+^ Sneddon, Joey (23 April 2015). "Ubuntu 15.04 Released, This Is What’s New". OMG Ubuntu. Retrieved 23 April 2015.&#160;
+^ Smith, Jesse (27 April 2015). "First impressions of Ubuntu 15.04". DistroWatch. Retrieved 28 April 2015.&#160;
+^ Shuttleworth, Mark (4 May 2015). "Announcing the "wily werewolf"". Retrieved 4 May 2015.&#160;
+^ "Ubuntu 15.04 Makes a 'Snappy' Entrance". eweek.com. Retrieved 4 May 2015.&#160;
+^ Heath, Nick (11 October 2013). "Mark Shuttleworth on how the Ubuntu Edge dream lives on in the iPhone". ZDNet. Retrieved 23 October 2014.&#160;
+^ a b "WilyWerewolf/ReleaseSchedule - Ubuntu Wiki". ubuntu.com. Retrieved 24 May 2015.&#160;
+^ Joey-Elijah Sneddon. "Ubuntu 15.10 Ditches Unity Overlay Scrollbars". OMG! Ubuntu!. Retrieved 23 August 2015.&#160;
+^ Jones, Chris (22 October 2015). "Ubuntu 15.10, Codenamed Wily Werewolf, Review". Unix Men. Retrieved 22 October 2015.&#160;
+^ Sneddon, Joey (22 October 2015). "Ubuntu 15.10 Available to Download, This Is What’s New". OMG Ubuntu. Retrieved 22 October 2015.&#160;
+^ Steven J. Vaughan-Nichols. "The Wily Werewolf, Ubuntu 15.10, is unleashed". ZDNet. Retrieved 24 October 2015.&#160;
+^ "Ubuntu 15.10 Review: Less Exciting &amp; Largely Unchanged". Hectic Geek. Retrieved 3 November 2015.&#160;
+^ "Ubuntu 15.10 Wily Werewolf review - Fast and spurious". dedoimedo.com. Retrieved 3 November 2015.&#160;
+^ Shuttleworth, Mark (21 October 2015). "Mark Shuttleworth &#160;» Blog Archive &#160;» X marks the spot". markshuttleworth.com. Retrieved 21 October 2015.&#160;
+^ Sneddon, Joey-Elijah (18 March 2014). "Mir Display Server May Not Arrive on Desktops As Default Until 2016". OMG Ubuntu. Retrieved 18 March 2014.&#160;
+^ "Mark Shuttleworth&#160;» Blog Archive&#160;» Losing graciously". Retrieved 30 October 2014.&#160;
+^ "[Phoronix] Ubuntu Systemd Plans: Will Be Default By Ubuntu 16.04 LTS". Retrieved 19 December 2014.&#160;
+^ a b "XenialXerus/ReleaseSchedule - Ubuntu Wiki". ubuntu.com. Retrieved 23 October 2015.&#160;
+^ Sam Tran. "Ubuntu Software Centre To Be Replaced in 16.04 LTS". OMG! Ubuntu!. Retrieved 4 November 2015.&#160;
+^ Silviu Stahie (5 November 2015). "Ubuntu 16.04 LTS to Drop Ubuntu Software Center for GNOME Software". softpedia. Retrieved 5 November 2015.&#160;
+^ "Ubuntu 16.04 LTS Will Try To Be Python-3-Only, No Python 2 By Default - Phoronix". phoronix.com. Retrieved 5 November 2015.&#160;
+^ http://news.softpedia.com/news/ubuntu-16-04-lts-with-unity-7-to-support-snappy-packages-495769.shtml
+^ Silviu Stahie (4 May 2015). "Ubuntu 16.04 LTS Won't Have Unity 8 by Default, the Community Will Decide". Softpedia. Retrieved 5 May 2015.&#160;
+^ "Precise Release Schedule". wiki.ubuntu.com. Retrieved 21 October 2011.&#160;
+^ "LTS Enablement Stacks". Retrieved 10 February 2014.&#160;
+^ "Date of EOL changed to overlap Ubuntu 14.04 release". Retrieved 13 May 2014.&#160;
+^ "Ubuntu Kernel Team - Quantal Release Status". Retrieved 3 October 2012.&#160;
+^ "Ubuntu Kernel Team - Raring Release Status". Retrieved 12 January 2013.&#160;
+^ "Saucy Release Schedule". wiki.ubuntu.com. Retrieved 3 May 2013.&#160;
+^ "Trusty Release Schedule". wiki.ubuntu.com. Retrieved 19 October 2013.&#160;
+^ Larabel, Michael (28 March 2014). "Linux 3.14 Isn't Going To Make It Into Ubuntu 14.04 LTS". Phoronix. Retrieved 4 April 2014.&#160;
+^ "Ubuntu 14.10 (Utopic Unicorn) reaches End of Life on July 23, 2015". lists.ubuntu.com. Retrieved 6 July 2015.&#160;
+^ "Ubuntu 14.10 (Utopic Unicorn) Now Based on Linux Kernel 3.16", 22 July 2014, Silviu Stahie
+^ Stahie, Silviu (8 April 2015). "Ubuntu 15.04 Launches in Two Weeks, Will Be Based on Linux Kernel 3.19.3 After All". Softpedia. Retrieved 8 April 2015.&#160;
+^ Marius Nestor (14 July 2015). "Ubuntu 15.10 Is Rebased on Linux Kernel 4.2, Tracking of Linux Kernel 4.2 Continues". softpedia. Retrieved 15 July 2015.&#160;
+^ Marius Nestor (28 October 2015). "The master-next kernel is now based on Linux 4.3 RC7". softpedia. Retrieved 6 November 2015.&#160;
+^ Moffitt, Nick (31 May 2007). "Old packages from unsupported Ubuntu releases will be removed from archive.ubuntu.com". ubuntu-mirrors-announce (Mailing list). Retrieved 1 December 2008.&#160;
+^ "Ubuntu Releases". Ubuntu. Retrieved 11 August 2008.&#160;
+^ "Old Ubuntu Releases". Old-releases.ubuntu.com. Retrieved 17 July 2013.&#160;
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Ubuntu (operating system).
+
+
+
+Ubuntu Releases website
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Ubuntu
+
+
+
+
+
+
+General
+
+
+
+Canonical Ltd.
+Releases
+Ubuntu (philosophy)
+Ubuntu Foundation
+
+
+
+
+
+
+
+
+People
+
+
+
+Jono Bacon
+Ben Collins
+Benjamin Mako Hill
+Ian Jackson
+Scott James Remnant
+Mark Shuttleworth
+Jeff Waugh
+Jane Silber
+
+
+
+
+
+
+
+
+Derivatives
+
+
+
+
+Official editions
+
+
+
+Ubuntu
+Ubuntu Server
+Ubuntu Touch
+Ubuntu TV
+Ubuntu Kylin
+
+
+
+
+
+
+
+
+Community
+supported
+
+
+
+Edubuntu
+Kubuntu
+Lubuntu
+Mythbuntu
+Ubuntu GNOME
+Ubuntu MATE
+Ubuntu Studio
+Xubuntu
+
+
+
+
+
+
+
+
+Terminated
+
+
+
+Gobuntu
+Ubuntu Mobile
+Ubuntu Netbook Edition
+Ubuntu JeOS
+
+
+
+
+
+
+
+
+Unofficial
+
+
+
+Cubuntu
+EasyPeasy
+elementary OS
+Emmabuntüs
+Linux Mint
+Trisquel
+
+
+
+
+
+
+
+
+
+
+
+Applications
+
+
+
+Bazaar
+Juju
+Live USB creator
+Software Updater
+Ubiquity
+Ubuntu SDK
+Ubuntu Software Center
+
+
+
+
+Discontinued
+
+
+
+OpenCD
+StartUp-Manager
+Ubuntu One
+
+
+
+
+
+
+
+
+Related applications
+
+
+
+Brasero
+GNOME Files
+
+
+
+
+
+
+
+
+
+
+
+Technology and
+User interface
+
+
+
+LightDM
+Mir display server
+Side Stage
+Ubuntu for Android
+Unity interface
+Uncomplicated Firewall
+Upstart
+Usplash
+Wubi
+XSplash
+
+
+
+
+Related technology
+
+
+
+AppArmor
+APT
+deb format
+dpkg
+
+
+
+
+
+
+
+
+
+
+
+Hardware
+
+
+
+System76
+Ubuntu Edge
+
+
+
+
+
+
+
+
+Support
+
+
+
+Ask Ubuntu
+Launchpad
+Medibuntu
+Paper cut bug
+Personal Package Archive
+Restricted extras
+Ubuntu Professional Certification
+Ubuntu Forums
+Ubuntu One Account (Ubuntu SSO)
+
+
+
+
+By third party
+
+
+
+GetDeb
+
+
+
+
+
+
+
+
+
+
+
+Fonts
+
+
+
+Ubuntu Font Family
+Ubuntu-Title
+
+
+
+
+
+
+
+
+Media
+
+
+
+Full Circle
+Ubuntu User
+
+
+
+
+
+
+
+
+Related
+topics
+
+
+
+Debian
+Linux kernel
+aptitude
+dash
+debconf package
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+ Book
+ Wikiversity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=List_of_Ubuntu_releases&amp;oldid=691819278#Ubuntu_12.04_LTS_.28Precise_Pangolin.29"					
+				Categories: Lists of softwareUbuntu (operating system)Software version historiesHidden categories: All articles with dead external linksArticles with dead external links from May 2012Use dmy dates from April 2015				
+							
+		
+		
+			

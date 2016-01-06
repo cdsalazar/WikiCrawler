@@ -1,0 +1,299 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Operator (computer programming)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Operator (programming))
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2012)
+
+
+Programming languages typically support a set of operators: constructs which behave generally like functions, but which differ syntactically or semantically from usual functions. Common simple examples include arithmetic (addition with +, comparison with &gt;) and logical operations (such as AND or &amp;&amp;). More involved examples include assignment (usually = or&#160;:=), field access in a record or object (usually .), and the scope resolution operator (often ::). Languages usually define a set of built-in operators, and in some cases allow user-defined operators. 
+
+
+Contents
+
+
+1 Syntax
+2 Semantics
+3 User-defined operators
+4 Examples
+5 Compilation
+6 Operator overloading
+7 Operand coercion
+8 Operator features in programming languages
+9 See also
+10 Notes
+11 References
+
+
+
+Syntax[edit]
+Syntactically operators usually contrast to functions. In most languages, functions may be seen as a special form of prefix operator with fixed precedence level and associativity, often with compulsory parentheses e.g. Func(a) (or (Func a) in LISP). Most languages support programmer-defined functions, but cannot really claim to support programmer-defined operators, unless they have more than prefix notation and more than a single precedence level. Semantically operators can be seen as special form of function with different calling notation and a limited number of parameters (usually 1 or 2).
+The position of the operator with respect to its operands may be prefix, infix or postfix, and the syntax of an expression involving an operator depends on its arity (number of operands), precedence, and (if applicable), associativity. Most programming languages support binary operators and a few unary operators, with a few supporting more operands, such as the ?: operator in C, which is ternary. Commonly, unary operations are prefix, such as unary minus -x, or occasionally postfix, such as post-increment x++; and binary operations are infix, such as x + y or x = y. Infix operations of higher arity require additional symbols, such as the ternary operator&#160;?: in C, written as a&#160;? b&#160;: c – indeed, this is the only common example, it is often referred to as the ternary operator. Prefix and postfix operations can easily support any desired arity, however, such as 1 2 3 4 +.
+Occasionally[1][2] parts of a language may be described as "matchfix" or "circumfix"[3][4] operators, either to simplify the language's description or implementation. A circumfix operator consists of two or more parts which enclose its operands. Circumfix operators have the highest precedence, with their contents being evaluated and the resulting value used in the surrounding expression. The most familiar circumfix operator are the parentheses mentioned above, used to indicate which parts of an expression are to be evaluated before others. Another example from physics is the inner product notation of Dirac's bra–ket notation. Circumfix operators are especially useful to denote operations that involve many or varying numbers of operands.
+The specification of a language will specify the syntax the operators it supports, while languages such as Prolog that support programmer-defined operators require that the syntax be defined by the programmer.
+Semantics[edit]
+The semantics of operators particularly depends on value, evaluation strategy, and argument passing mode (such as boolean short-circuiting). Simply, an expression involving an operator is evaluated in some way, and the resulting value may be just a value (an r-value), or may be an object allowing assignment (an l-value).
+In simple cases this is identical to usual function calls; for example, addition x + y is generally equivalent to a function call add(x, y) and less-than comparison x &lt; y to lt(x, y), meaning that the arguments are evaluated in their usual way, then some function is evaluated and the result is returned as a value. However, the semantics can be significantly different. For example, in assignment a = b the target a is not evaluated, but instead its location (address) is used to store the value of b – corresponding to call-by-reference semantics. Further, an assignment may be a statement (no value), or may be an expression (value), with the value itself either an r-value (just a value) or an l-value (able to be assigned to). As another example, the scope resolution operator&#160;:: and the element access operator . (as in Foo::Bar or a.b) operate not on values, but on names, essentially call-by-name semantics, and their value is a name.
+Use of l-values as values of operator expressions is particularly notable in array indexing and unary increment and decrement operators. In C, for instance, the following statements are legal and well-defined, and depend on the fact that these operators return an l-value:
+
+
+y = ++x++;
+x = ++a[i];
+
+An important use is when a left-associative binary operator modifies its left argument (or produces a side effect) and then evaluates to that argument as an l-value.[a] This allows a sequence of operators all affecting the original argument, allowing a fluent interface, similar to method cascading. A common example is the &lt;&lt; operator in the C++ iostream library, which allows fluent output, as follows:
+
+
+cout &lt;&lt; "Hello" &lt;&lt; " " &lt;&lt; "world!" &lt;&lt; endl;
+
+User-defined operators[edit]
+A language may contain a fixed number of built-in operators (e.g. +, -, *, &lt;, &lt;=,&#160;!, =, etc. in C and C++), or it may allow the creation of programmer-defined operators (e.g. F#, OCaml, Haskell). Some programming languages restrict operator symbols to special characters like + or := while others allow also names like div (e.g. Pascal).
+Most languages have a built-in set of operators, but do not allow user-defined operators, as this significantly complicates parsing.[b] Many languages only allow operators to be used for built-in types, but others allow existing operators to be used for user-defined types; this is known as operator overloading. Some languages allow new operators to be defined, however, either at compile time or at run time. This may involve meta-programming (specifying the operators in a separate language), or within the language itself. Definition of new operators, particularly runtime definition, often makes correct static analysis of programs impossible, since the syntax of the language may be Turing-complete, so even constructing the syntax tree may require solving the halting problem, which is impossible. This occurs for Perl, for example, and some dialects of Lisp.
+Examples[edit]
+See also: Category:Operators (programming).
+Common examples that differ syntactically are mathematical arithmetic operations, e.g. "&gt;" for "greater than", with names often outside the language's set of identifiers for functions, and called with a syntax different from the language's syntax for calling functions. As a function, "greater than" would generally be named by an identifier, such as gt or greater_than and called as a function, as gt(x, y). Instead, the operation uses the special character &gt; (which is tokenized separately during lexical analysis), and infix notation, as x &gt; y.
+Common examples that differ semantically (by argument passing mode) are boolean operations, which frequently feature short-circuit evaluation: e.g. a short-circuiting conjunction (X AND Y) that only evaluates later arguments if earlier ones are not false, in a language with strict call-by-value functions. This behaves instead similarly to if/then/else.
+Less common operators include:
+
+Comma operator: e, f
+Dereference operator: *p and address-of operator: &amp;x
+Elvis operator: x&#160;?: y
+Null coalescing operator: x&#160;?? y
+Spaceship operator (for three-way comparison): x &lt;=&gt; y
+
+Compilation[edit]
+A compiler can implement operators and functions with subroutine calls or with inline code. Some built-in operators supported by a language have a direct mapping to a small number of instructions commonly found on central processing units, though others (e.g. '+' used to express string concatenation) may have complicated implementations.
+Operator overloading[edit]
+Main article: Operator overloading
+In some programming languages an operator may be ad-hoc polymorphic, that is, have definitions for more than one kind of data, (such as in Java where the + operator is used both for the addition of numbers and for the concatenation of strings). Such an operator is said to be overloaded. In languages that support operator overloading by the programmer (such as C++) but have a limited set of operators, operator overloading is often used to define customized uses for operators.
+In the example IF ORDER_DATE &gt; "12/31/2011" AND ORDER_DATE &lt; "01/01/2013" THEN CONTINUE ELSE STOP, the operators are: "&gt;" (greater than), "AND" and "&lt;" (less than).
+Operand coercion[edit]
+Further information: Type conversion
+Some languages also allow for the operands of an operator to be implicitly converted, or coerced, to suitable data types for the operation to occur. For example, in Perl coercion rules lead into 12 + "3.14" producing the result of 15.14. The text "3.14" is converted to the number 3.14 before addition can take place. Further, 12 is an integer and 3.14 is either a floating or fixed-point number (a number that has a decimal place in it) so the integer is then converted to a floating point or fixed-point number respectively.
+Javascript follows opposite rules—finding the same expression above, it will convert the integer 12 into a string "12", then concatenate the two operands to form "123.14".
+In the presence of coercions in a language, the programmer must be aware of the specific rules regarding operand types and the operation result type to avoid subtle programming mistakes.
+Operator features in programming languages[edit]
+The following table shows the operator features in several programming languages:
+
+
+Programming language
+Nonalphanumeric operator symbols
+Alphanumeric operator symbols
+Prefix
+Infix
+Postfix
+Precedence
+Associativity
+Overloading
+Programmer-defined overloading
+Programmer-defined operator symbols
+
+
+ALGOL 68
++* ** * /&#160;%&#160;%*&#160;%× - + &lt; &lt;= &gt;= &gt; = /= &amp; -:= +:= *:= /:=&#160;%:=&#160;%*:= +=:&#160;:=:&#160;:/=:
+(All operators have bold Alphanumeric equivalents, c.f. next column. Some have non ASCII equivalents, c.f. below.) ¬ +× ⊥ ↑ ↓ ⌊ ⌈ × ÷ ÷× ÷* □ ≤ ≥ ≠ ∧ ∨ ×:= ÷:= ÷×:= ÷*:=&#160;%×:=&#160;:≠:
+
+not abs arg bin entier leng level odd repr round shorten i shl shr up down lwb upb lt le ge gt eq ne and or over mod elem minusab plusab timesab divab overab modab plusto is isnt
+Yes
+Yes
+No
+Yes (prefix operators always have priority 10)
+Infix operators are left associative, prefix operators are right associative
+Yes
+Yes
+Yes
+
+
+C
+() [] -&gt; .&#160;! ~ ++ -- + - * &amp; /&#160;% &lt;&lt; &gt;&gt; &lt; &lt;= &gt; &lt;= ==&#160;!= ^ | &amp;&amp; || ?: = += -= *= /=&#160;%= &amp;= ^= |= &lt;&lt;= &gt;&gt;=
+sizeof
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+No
+
+
+C++ (more)
+sizeof typeid new delete throw decltype static_cast dynamic_cast reinterpret_cast const_cast
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+
+
+Java
+new instanceof
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+No
+
+
+Haskell
++ - * / ^ ^^ ** == /= &gt; &lt; &gt;= &lt;= &amp;&amp; || &gt;&gt;= &gt;&gt; $ $! . ++&#160;!!&#160;: Many more in common libraries
+The function's name must be put into backticks
+Yes
+Yes
+No
+Yes
+Yes
+Yes, using Type classes
+Yes
+
+
+Pascal
+* / + - = &lt; &gt; &lt;&gt; &lt;= &gt;=&#160;:=
+not div mod and or in
+Yes
+Yes
+No
+Yes
+Yes
+Yes
+No
+No
+
+
+Seed7
+{} [] -&gt; **&#160;! + - * / &lt;&lt; &gt;&gt; &amp; &gt;&lt; | = &lt;&gt; &gt; &gt;= &lt; &lt;= &lt;&amp;&#160;:= +:= -:= *:= /:= &lt;&lt;:= &gt;&gt;:= &amp;:= @:=
+conv varConv parse conj div rem mdiv mod times mult in not and or digits lpad rpad lpad0
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+
+Eiffel
+[] + - * / // = /=
+not and or implies "and then" "or else"
+Yes
+Yes
+No
+Yes
+Yes
+No
+Yes
+Yes
+
+
+Prolog
+
+spy nospy not is mod
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+No
+Yes
+
+
+Lisp
+Lisp defines all functions and symbols as operators.[5] Following the definition in this page, Lisp has no operators.
+
+Yes (operators are regular functions)
+No
+No
+No
+No
+No
+No
+Yes
+
+
+Smalltalk
+(yes - Up to two characters[6])
+Alphanumeric symbols need a colon after the keyword
+No
+Yes
+Yes
+No
+No
+Yes
+Yes
+Yes
+
+
+Perl
+-&gt; ++ -- **&#160;! ~ \ + - . =~&#160;!~ * /&#160;% &lt; &gt; &lt;= &gt;= ==&#160;!= &lt;=&gt; ~~ &amp; | ^ &amp;&amp; || '
+print sort chmod chdir rand and or not xor lt gt le ge eq ne cmp x
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+
+
+See also[edit]
+
+Relational operator
+
+Notes[edit]
+
+
+^ Conversely a right-associative operator with its right argument, though this is rarer.
+^ Introducing a new operator changes the lexical specification of the language, which changes the lexical analysis. The arity and precedence of the operator is then part of the phrase syntax of the language, which changes the phrase-level analysis. For example, adding an operator @ requires lexing and tokenizing this character, and the phrase structure (syntax tree) depends on the arity and precedence of this operator.
+
+
+References[edit]
+
+
+^ Mathematica reference
+^ Maxima reference
+^ [1]
+^ [2]
+^ "The Common Lisp HyperSpec".&#160;
+^ Goldberg, Adele. "Smalltalk-80: The Language and its Implementation, p. 27, ISBN 0-201-11371-6" (PDF).&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Operator_(computer_programming)&amp;oldid=683287893"					
+				Categories: Operators (programming)Programming constructsHidden categories: Articles needing additional references from January 2012All articles needing additional references				
+							
+		
+		
+			

@@ -1,0 +1,600 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Subset
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Superset)
+												
+					Jump to:					navigation, 					search
+				
+				"Superset" redirects here. For other uses, see Superset (disambiguation).
+
+
+
+
+Euler diagram showing
+A is a proper subset of B and conversely B is a proper superset of A
+
+
+In mathematics, especially in set theory, a set A is a subset of a set B, or equivalently B is a superset of A, if A is "contained" inside B, that is, all elements of A are also elements of B. A and B may coincide. The relationship of one set being a subset of another is called inclusion or sometimes containment.
+The subset relation defines a partial order on sets.
+The algebra of subsets forms a Boolean algebra in which the subset relation is called inclusion.
+
+
+
+Contents
+
+
+1 Definitions
+2 ⊂ and ⊃ symbols
+3 Examples
+4 Other properties of inclusion
+5 See also
+6 References
+7 External links
+
+
+
+Definitions[edit]
+If A and B are sets and every element of A is also an element of B, then:
+
+
+
+A is a subset of (or is included in) B, denoted by ,
+
+
+or equivalently
+
+B is a superset of (or includes) A, denoted by 
+
+
+
+ If A is a subset of B, but A is not equal to B (i.e. there exists at least one element of B which is not an element of A), then
+
+
+
+A is also a proper (or strict) subset of B; this is written as 
+
+
+or equivalently
+
+B is a proper superset of A; this is written as 
+
+
+
+For any set S, the inclusion relation ⊆ is a partial order on the set  of all subsets of S (the power set of S).
+When quantified, A ⊆ B is represented as: ∀x{x∈A → x∈B}.[1]
+
+⊂ and ⊃ symbols[edit]
+Some authors use the symbols ⊂ and ⊃ to indicate subset and superset respectively; that is, with the same meaning and instead of the symbols, ⊆ and ⊇.[2] So for example, for these authors, it is true of every set A that A ⊂ A.
+Other authors prefer to use the symbols ⊂ and ⊃ to indicate proper subset and superset, respectively, instead of ⊊ and ⊋.[3] This usage makes ⊆ and ⊂ analogous to the inequality symbols ≤ and &lt;. For example, if x ≤ y then x may or may not equal y, but if x &lt; y, then x may not equal y, and is less than y. Similarly, using the convention that ⊂ is proper subset, if A ⊆ B, then A may or may not equal B, but if A ⊂ B, then A definitely does not equal B.
+Examples[edit]
+
+
+
+
+The regular polygons form a subset of the polygons
+
+
+
+The set A = {1, 2} is a proper subset of B = {1, 2, 3}, thus both expressions A ⊆ B and A ⊊ B are true.
+The set D = {1, 2, 3} is a subset of E = {1, 2, 3}, thus D ⊆ E is true, and D ⊊ E is not true (false).
+Any set is a subset of itself, but not a proper subset. (X ⊆ X is true, and X ⊊ X is false for any set X.)
+The empty set {&#160;}, denoted by ∅, is also a subset of any given set X. It is also always a proper subset of any set except itself.
+The set {x: x is a prime number greater than 10} is a proper subset of {x: x is an odd number greater than 10}
+The set of natural numbers is a proper subset of the set of rational numbers; likewise, the set of points in a line segment is a proper subset of the set of points in a line. These are two examples in which both the subset and the whole set are infinite, and the subset has the same cardinality (the concept that corresponds to size, that is, the number of elements, of a finite set) as the whole; such cases can run counter to one's initial intuition.
+The set of rational numbers is a proper subset of the set of real numbers. In this example, both sets are infinite but the latter set has a larger cardinality (or power) than the former set.
+
+Another example in an Euler diagram:
+
+
+
+
+
+
+
+A is a proper subset of B
+
+
+
+
+
+
+
+
+
+C is a subset but not a proper subset of B
+
+
+
+
+Other properties of inclusion[edit]
+
+
+
+
+A ⊆ B and B ⊆ C imply A ⊆ C
+
+
+Inclusion is the canonical partial order in the sense that every partially ordered set (X, ) is isomorphic to some collection of sets ordered by inclusion. The ordinal numbers are a simple example—if each ordinal n is identified with the set [n] of all ordinals less than or equal to n, then a ≤ b if and only if [a] ⊆ [b].
+For the power set  of a set S, the inclusion partial order is (up to an order isomorphism) the Cartesian product of k = |S| (the cardinality of S) copies of the partial order on {0,1} for which 0 &lt; 1. This can be illustrated by enumerating S = {s1, s2, …, sk} and associating with each subset T ⊆ S (which is to say with each element of 2S) the k-tuple from {0,1}k of which the ith coordinate is 1 if and only if si is a member of T.
+See also[edit]
+
+Containment order
+
+References[edit]
+
+
+^ Rosen, Kenneth H. (2012). Discrete Mathematics and Its Applications (7th ed.). New York: McGraw-Hill. p.&#160;119. ISBN&#160;978-0-07-338309-5.&#160;
+^ Rudin, Walter (1987), Real and complex analysis (3rd ed.), New York: McGraw-Hill, p.&#160;6, ISBN&#160;978-0-07-054234-1, MR&#160;924157&#160;
+^ Subsets and Proper Subsets (PDF), retrieved 2012-09-07&#160;
+
+
+
+Jech, Thomas (2002). Set Theory. Springer-Verlag. ISBN&#160;3-540-44085-2.&#160;
+
+External links[edit]
+
+Weisstein, Eric W., "Subset", MathWorld.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Mathematical logic
+
+
+
+
+
+
+General
+
+
+
+Formal language
+Formation rule
+Formal system
+Deductive system
+Formal proof
+Formal semantics
+Well-formed formula
+Set
+Element
+Class
+Classical logic
+Axiom
+Natural deduction
+Rule of inference
+Relation
+Theorem
+Logical consequence
+Axiomatic system
+Type theory
+Symbol
+Syntax
+Theory
+
+
+
+
+
+
+
+
+Traditional logic
+
+
+
+Proposition
+Inference
+Argument
+Validity
+Cogency
+Syllogism
+Square of opposition
+Venn diagram
+
+
+
+
+
+
+
+
+
+Propositional
+calculus
+Boolean logic
+
+
+
+
+Boolean functions
+Propositional calculus
+Propositional formula
+Logical connectives
+Truth tables
+
+
+
+
+
+
+
+
+Predicate logic
+
+
+
+First-order
+Quantifiers
+Predicate
+Second-order
+Monadic predicate calculus
+
+
+
+
+
+
+
+
+Naive set theory
+
+
+
+Set
+Empty set
+Enumeration
+Extensionality
+Finite set
+Infinite set
+Subset
+Power set
+Countable set
+Uncountable set
+Recursive set
+Domain
+Range
+Map
+Function
+Relation
+Ordered pair
+
+
+
+
+
+
+
+
+Set theory
+
+
+
+Foundations of mathematics
+Zermelo–Fraenkel set theory
+Axiom of choice
+General set theory
+Kripke–Platek set theory
+Von Neumann–Bernays–Gödel set theory
+Morse–Kelley set theory
+Tarski–Grothendieck set theory
+
+
+
+
+
+
+
+
+Model theory
+
+
+
+Model
+Interpretation
+Non-standard model
+Finite model theory
+Truth value
+Validity
+
+
+
+
+
+
+
+
+Proof theory
+
+
+
+Formal proof
+Deductive system
+Formal system
+Theorem
+Logical consequence
+Rule of inference
+Syntax
+
+
+
+
+
+
+
+
+Computability
+theory
+
+
+
+Recursion
+Recursive set
+Recursively enumerable set
+Decision problem
+Church–Turing thesis
+Computable function
+Primitive recursive function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Set theory
+
+
+
+
+
+
+Axioms
+
+
+
+Choice
+
+countable
+dependent
+
+
+Extensionality
+Infinity
+Pairing
+Power set
+Regularity
+Union
+Martin's axiom
+
+
+Axiom schema
+
+replacement
+specification
+
+
+
+
+
+
+
+
+
+
+
+
+
+Operations
+
+
+
+Cartesian product
+Complement
+De Morgan's laws
+Disjoint union
+Intersection
+Power set
+Set difference
+Symmetric difference
+Union
+
+
+
+
+
+
+
+
+
+
+
+Concepts
+Methods
+
+
+
+
+
+
+Cardinality
+Cardinal number&#160;(large)
+Class
+Constructible universe
+Continuum hypothesis
+Diagonal argument
+Element
+
+ordered pair
+tuple
+
+
+Family
+Forcing
+One-to-one correspondence
+Ordinal number
+Transfinite induction
+Venn diagram
+
+
+
+
+
+
+
+
+Set types
+
+
+
+Countable
+Empty
+Finite&#160;(hereditarily)
+Fuzzy
+Infinite
+Recursive
+Subset&#160;· Superset
+Transitive
+Uncountable
+Universal
+
+
+
+
+
+
+
+
+Theories
+
+
+
+Alternative
+Axiomatic
+Naive
+Cantor's theorem
+
+
+Zermelo
+
+General
+
+
+Principia Mathematica
+
+New Foundations
+
+
+Zermelo–Fraenkel
+
+von Neumann–Bernays–Gödel
+
+Morse–Kelley
+
+
+Kripke–Platek
+Tarski–Grothendieck
+
+
+
+
+
+
+
+
+
+
+
+
+
+Paradoxes
+Problems
+
+
+
+
+
+
+Russell's paradox
+Suslin's problem
+
+
+
+
+
+
+
+
+Set theorists
+
+
+
+Abraham Fraenkel
+Bertrand Russell
+Ernst Zermelo
+Georg Cantor
+John von Neumann
+Kurt Gödel
+Lotfi A. Zadeh
+Paul Bernays
+Paul Cohen
+Richard Dedekind
+Thomas Jech
+Willard Quine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Subset&amp;oldid=680865808"					
+				Categories: Basic concepts in set theory				
+							
+		
+		
+			

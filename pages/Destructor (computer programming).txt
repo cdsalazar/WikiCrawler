@@ -1,0 +1,135 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Destructor (computer programming)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Destructor (computer science))
+												
+					Jump to:					navigation, 					search
+				
+				In object-oriented programming, a destructor (sometimes shortened to dtor) is a method which is automatically invoked when the object is destroyed. It can happen when its lifetime is bound to scope and the execution leaves the scope, when it is embedded into another object whose lifetime ends, or when it was allocated dynamically and is released explicitly. Its main purpose is to free the resources (memory allocations, open files or sockets, database connections, resource locks, etc.) which were acquired by the object along its life cycle and/or deregister from other entities which may keep references to it. The use of destructors is a necessity to the concept of Resource Acquisition Is Initialization (RAII).
+In a language with an automatic garbage collection mechanism, it would be difficult to deterministically ensure the invocation of a destructor, and hence these languages are generally considered unsuitable for RAII. In such languages, unlinking an object from existing resources must be done by an explicit call of an appropriate function (usually called Dispose()). This method is also recommended for freeing resources rather than using finalizers for that.
+
+
+
+Contents
+
+
+1 Destructor syntax
+2 In C++
+
+2.1 Example
+
+
+3 In C with GCC extensions
+4 REALbasic
+5 See also
+6 References
+
+
+
+Destructor syntax[edit]
+
+C++ has the naming convention in which destructors have the same name as the class of which they are associated with, but prefixed with a tilde (~).
+In Object Pascal, destructors have the keyword "destructor" and can have user-defined names (but are mostly called "Destroy").
+In Perl, the destructor method is named DESTROY.
+In Python, the destructor method is named __del__. [1]
+In Moose object system for Perl, the destructor method is named DEMOLISH.
+In Objective-C, the destructor method is named "dealloc".
+In Swift, the destructor method is named deinit.
+In PHP 5, the destructor method is named "__destruct". There were no destructors in previous versions of PHP.[2]
+
+In C++[edit]
+The destructor has the same name as the class, but with a tilde (~) in front of it. If the object was created as an automatic variable, its destructor is automatically called when it goes out of scope. If the object was created with a new expression, then its destructor is called when the delete operator is applied to a pointer to the object. Usually that operation occurs within another destructor, typically the destructor of a smart pointer object.
+In inheritance hierarchies, the declaration of a virtual destructor in the base class ensures that the destructors of derived classes are invoked properly when an object is deleted through a pointer-to-base-class. Objects that may be deleted in this way need to inherit a virtual destructor.
+A destructor should never throw an exception.[3]
+Example[edit]
+
+
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+
+class foo_t
+{
+	friend std::ostream &amp; operator &lt;&lt; ( std::ostream &amp; os, foo_t const &amp; foo )
+	{
+		os &lt;&lt; foo.data;
+		return os;
+	}
+
+private:
+	char * data;
+	foo_t( foo_t const &amp; other );                // disable copy construction
+	foo_t&amp; operator = ( foo_t const &amp; other );   // disable assignment
+
+public:
+	foo_t( void ) : data( new char[ 14 ] ) { std::strcpy( data, "Hello, World!" ); } 
+	~foo_t( void ) { delete [] data; }
+};
+ 
+int main()
+{
+	foo_t foo;
+	std::cout &lt;&lt; foo &lt;&lt; '\n';
+}
+
+Objects which cannot be safely copied and/or assigned should be disabled from such semantics by declaring their corresponding functions within a non-public encapsulation level (in the above example, "private"). A detailed description of this technique can be found in Scott Meyers' popular book, Effective C++ (Item 6: "Explicitly disallow the use of compiler-generated functions you do not want."[4]).
+In C with GCC extensions[edit]
+The GNU Compiler Collection's C compiler comes with 2 extensions that allow to implement destructors:
+
+the "destructor" function attribute allows defining global prioritized destructor functions: when main() returns, these functions are called in priority order before the process terminates. See also [5]
+the "cleanup" variable attribute allows attaching a destructor function to a variable: the function is called when the variable goes out of scope.
+
+REALbasic[edit]
+Destructors in REALbasic can be in one of two forms. Each form uses a regular method declaration with a special name (with no parameters and no return value). The older form uses the same name as the Class itself with a ~ (tilde) prefix. The newer form uses the name "Destructor". The newer form is the preferred one because it makes refactoring the class easier.
+
+Class Foobar
+  // Old form
+  Sub ~Foobar()
+  End Sub
+
+  // New form
+  Sub Destructor()
+  End Sub
+End Class
+
+See also[edit]
+
+Finalizer
+Constructor
+Object lifetime
+Resource Acquisition Is Initialization
+
+References[edit]
+
+
+^ https://docs.python.org/2/reference/datamodel.html#object.__del__
+^ Constructors and Destructors, from PHP online documentation
+^ GotW #47: Uncaught exceptions Accessed 31 July 2011.
+^ Scott Meyers: Effective C++, Addison-Wesley, ISBN 0-321-33487-6
+^ Erickson, Jon (2008). Hacking the art of exploitation. No Starch Press. ISBN&#160;1-59327-144-1.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Destructor_(computer_programming)&amp;oldid=663480169"					
+				Categories: Method (computer programming)C++				
+							
+		
+		
+			

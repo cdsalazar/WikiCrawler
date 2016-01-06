@@ -1,0 +1,308 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Authority control
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For information on authority control usage within Wikipedia, see Help:Authority control.
+In library science, authority control is a process that organizes library catalog and bibliographic information[1][2] by using a single, distinct name for each topic. The word authority in authority control derives from the idea that the names of people, places, things, and concepts are authorized, i.e., they are established in one particular form.[3][4][5] These one-of-a-kind headings are applied consistently throughout the catalog,[6] and work with other organizing data such as linkages and cross references.[6][7] Each heading is described briefly in terms of its scope and usage, and this organization helps the library staff maintain the catalog and make it user-friendly for researchers.[8]
+Cataloguers assign each subject—such as an author, book, series or corporation—a particular unique heading term which is then used consistently, uniquely, and unambiguously to describe all references to that same subject, even if there are variations such as different spellings, pen names, or aliases.[9] The unique header can guide users to all relevant information including related or collocated subjects.[9] Authority records can be combined into a database and called an authority file, and maintaining and updating these files as well as "logical linkages"[10] to other files within them is the work of librarians and other information cataloguers. Accordingly, authority control is an example of controlled vocabulary and of bibliographic control.
+While in theory any piece of information is amenable to authority control such as personal and corporate names, uniform titles, series names, and subjects,[2] library cataloguers typically focus on author names and book titles. Subject headings from the Library of Congress fulfill a function similar to authority records, although they are usually considered separately. As time passes, information changes, prompting needs for reorganization. According to one view, authority control is not about creating a perfect seamless system but rather it is an ongoing effort to keep up with these changes and try to bring "structure and order" to the task of helping users find information.[8]
+
+
+
+Contents
+
+
+1 Benefits of authority control
+2 Examples
+
+2.1 Differing names describe the same subject
+2.2 Same name describes two different subjects
+
+
+3 Authority records and files
+4 Access control
+5 Authority control and cooperative cataloging
+6 Standards
+7 See also
+8 References
+
+
+
+Benefits of authority control[edit]
+
+Better researching. Authority control helps researchers get a handle on a specific subject with less wasted effort.[9] A well-designed digital catalog/database enables a researcher to query a few words of an entry to bring up the already established term or phrase, thus improving accuracy and saving time.[11]
+Makes searching more predictable.[12] It can be used in conjunction with keyword searching using "and" or "not" or "or" or other Boolean operators on a web browser.[10] It increases chances that a given search will return relevant items.[11]
+Consistency of records.[13][14][15]
+Organization and structure of information.[9]
+Efficiency for cataloguers. The process of authority control is not only of great help to researchers searching for a particular subject to study, but it can help cataloguers organize information as well. Cataloguers can use authority records when trying to categorize new items, since they can see which records have already been catalogued and can therefore avoid unnecessary work.[9][10]
+Maximises library resources.[9]
+Easier to maintain the catalog. It enables cataloguers to detect and correct errors. In some instances, software programs support workers tasked with maintaining the catalog to do ongoing tasks such as automated clean-up.[16] It helps creators and users of metadata.[11]
+Fewer errors. It can help catch errors caused by typos or misspellings which can sometimes accumulate over time, sometimes known as quality drift. For example, machines can catch misspellings such as "Elementary school techers" and "Pumpkilns" which can then be corrected by library staff.[8]
+
+Examples[edit]
+Differing names describe the same subject[edit]
+
+
+
+
+Princess Diana is described in one authority file as "Diana, Princess of Wales, 1961-1997" which is an official heading.
+
+
+Sometimes within a catalog there are different names or spellings for only one person or subject.[9][12] This can bring confusion since researchers may miss some information. Authority control is used by cataloguers to collocate materials that logically belong together but which present themselves differently. Records are used to establish uniform titles which collocate all versions of a given work under one unique heading even when such versions are issued under different titles. With authority control, one unique preferred name represents all variations and will include different variations, spellings and misspellings, uppercase versus lowercase variants, differing dates, and so forth. For example, in Wikipedia, the subject of Princess Diana is described by an article Diana, Princess of Wales as well as numerous other descriptors, but both Princess Diana and Diana, Princess of Wales describe the same person; an authority record would choose one title as the preferred one for consistency. In an online library catalog, various entries might look like the following:[2]
+
+
+
+
+
+Diana. (1)
+Diana, Princess of Wales. (1)
+Diana, Princess of Wales, 1961-1997 (13)
+Diana, Princess of Wales 1961-1997 (1)
+Diana, Princess of Wales, 1961-1997 (2)
+DIANA, PRINCESS OF WALES, 1961-1997. (1)
+Diana, Princess of Wales, - Iconography. (2)[2]
+
+
+
+
+
+These different terms describe the same person. Accordingly, authority control reduces these entries to one unique entry or official authorized heading, sometimes termed an access point:
+
+
+
+Diana, Princess of Wales, 1961-1997[17]
+
+
+
+
+
+
+Library
+Heading
+
+
+Virtual International Authority File
+VIAF ID: 107032638
+
+
+Wikipedia
+Diana, Princess of Wales[18]
+
+
+WorldCat
+Diana Princess of Wales 1961-1997
+
+
+Integrated Authority File
+Diana, Wales, Prinzessin
+
+
+U.S. Library of Congress
+Diana, Princess of Wales, 1961-1997
+
+
+Biblioteca Nacional de España
+Windsor, Diana, Princess of Wales
+
+
+Getty Union List of Artist Names
+Diana, Princess of Wales English noble and patron, 1961-1997
+
+
+National Library of the Netherlands
+Diana, prinses van Wales, 1961-1997[17]
+
+
+Generally there are different authority file headings chosen by different national libraries, possibly inviting confusion, but there are different approaches internationally to try to lessen the confusion. One international effort to prevent such confusion is the Virtual International Authority File which is a collaborative attempt to provide a single heading for a particular subject. It is a way to standardize information from different national libraries such as the German National Library and the United States Library of Congress. The idea is to create a single worldwide virtual authority file. For example, the ID for Princess Diana in the German Integrated Authority File (GND) is 118525123 while the United States Library of Congress uses the term Diana, Princess of Wales, 1961-1997; other national libraries have other choices. The Virtual International Authority File choice for all of these variations is VIAF ID: 107032638—that is, a common number representing all of these variations.[17]
+Wikipedia prefers the term "Diana, Princess of Wales", but at the bottom of Wikipedia's page about her, there are links to various international cataloguing efforts for reference purposes.
+Same name describes two different subjects[edit]
+Sometimes two different authors have been published under the same name.[9] This can happen if there is a title which is identical to another title or to a collective uniform title.[9] This, too, can cause confusion. Different authors can be distinguished correctly from each other by, for example, adding a middle initial to one of the names; in addition, other information can be added to one entry to clarify the subject, such as birth year, death year, range of active years such as 1918–1965 when the person flourished, or a brief descriptive epithet. When cataloguers come across different subjects with similar or identical headings, they can disambiguate them using authority control.
+Authority records and files[edit]
+A customary way of enforcing authority control in a bibliographic catalog is to set up a separate index of authority records, which relates to and governs the headings used in the main catalog. This separate index is often referred to as an "authority file." It contains an indexable record of all decisions made by cataloguers in a given library (or—as is increasingly the case—cataloguing consortium), which cataloguers consult when making, or revising, decisions about headings. As a result, the records contain documentation about sources used to establish a particular preferred heading, and may contain information discovered while researching the heading which may be useful.[16]
+While authority files provide information about a particular subject, their primary function is not to provide information but to organize it.[16] They contain enough information to establish that a given author or title is unique, but that is all; irrelevant but interesting information is generally excluded. Although practices vary internationally, authority records in the English-speaking world generally contain the following information:
+
+Headings show the preferred title chosen as the official and authorized version. It is important that the heading be unique; if there is a conflict with an identical heading, then one of the two will have to be chosen:
+
+
+Since the headings function as access points, making sure that they are distinct and not in conflict with existing entries is important. For example, the English novelist William Collins (1824–89), whose works include the Moonstone and The Woman in White is better known as Wilkie Collins. Cataloguers have to decide which name the public would most likely look under, and whether to use a see also reference to link alternative forms of an individual's name.
+— Moya K. Mason.[19][20]
+
+
+Cross references are other forms of the name or title that might appear in the catalog and include:
+
+
+see references are forms of the name or title that describe the subject but which have been passed over or deprecated in favor of the authorized heading form
+see also references point to other forms of the name or title that are also authorized. These see also references generally point to earlier or later forms of a name or title.
+
+
+Statement(s) of justification is a brief account made by the cataloguer about particular information sources used to determine both authorized and deprecated forms. Sometimes this means citing the title and publication date of the source, the location of the name or title on that source, and the form in which it appears on that source.
+
+
+
+
+
+
+
+
+For example, the Irish writer Brian O'Nolan, who lived from 1911 to 1966, wrote under many pen names such as Flann O'Brien and Myles na Gopaleen. Catalogers at the United States Library of Congress chose one form—"O'Brien, Flann, 1911-1966"—as the official heading.[21] The example contains all three elements of a valid authority record: the first heading O'Brien, Flann, 1911-1966 is the form of the name that the Library of Congress chose as authoritative. In theory, every record in the catalog that represents a work by this author should have this form of the name as its author heading. What follows immediately below the heading beginning with Na Gopaleen, Myles, 1911-1966 are the see references. These forms of the author's name will appear in the catalog, but only as transcriptions and not as headings. If a user queries the catalog under one of these variant forms of the author's name, he or she would receive the response: "See O'Brien, Flann, 1911-1966." There is an additional spelling variant of the Gopaleen name: "Na gCopaleen, Myles, 1911-1966" has an extra C inserted because the author also employed the non-anglicized Irish spelling of his pen-name, in which the capitalized C shows the correct root word while the preceding g indicates its pronunciation in context. So if a library user comes across this spelling variant, he or she will be led to the same author regardless. See also references, which point from one authorized heading to another authorized heading, are exceedingly rare for personal name authority records, although they often appear in name authority records for corporate bodies. The final four entries in this record beginning with His At Swim-Two-Birds ... 1939. constitute the justification for this particular form of the name: it appeared in this form on the 1939 edition of the author's novel At Swim-Two-Birds, whereas the author's other noms de plume appeared on later publications.
+
+
+
+
+Card catalog records such as this one used to be physical cards contained in long rectangular drawers in a library; today, generally, this information is stored in online databases.[22]
+
+
+
+
+
+
+Authority control with "Kesey, Ken" as the chosen heading.[22]
+
+
+Access control[edit]
+The act of choosing a single authorized heading to represent all forms of a name is quite often a difficult and complex task, considering that any given individual may have legally changed their name or used a variety of legal names in the course of their lifetime, as well as a variety of nicknames, pen names, stage names or other alternative names. It may be particularly difficult to choose a single authorized heading for individuals whose various names have controversial political or social connotations, when the choice of authorized heading may be seen as endorsement of the associated political or social ideology.
+An alternative to using authorized headings is the idea of access control, where various forms of a name are related without the endorsement of one particular form.[23]
+Authority control and cooperative cataloging[edit]
+Before the advent of digital online public access catalogs and the Internet, creating and maintaining a library's authority files were generally carried out by individual cataloging departments within each library. Naturally, then, there was considerable difference in the authority files of the different libraries. For the early part of library history, it was generally accepted that, as long as a library's catalog was internally consistent, the differences between catalogs in different libraries did not matter greatly.
+As libraries became more attuned to the needs of researchers and began interacting more with other libraries, the value of standard cataloging practices came to be recognized. With the advent of automated database technologies, catalogers began to establish cooperative consortia, such as OCLC and RLIN in the United States, in which cataloging departments from libraries all over the world contributed their records to, and took their records from, a shared database. This development prompted the need for national standards for authority work.
+In the United States, the primary organization for maintaining cataloging standards with respect to authority work operates under the aegis of the Library of Congress, and is known as the Name Authority Cooperative Program, or NACO Authority.[24]
+Standards[edit]
+There are various standards using different acronyms.
+Standards for authority metadata:
+
+MARC standards for authority records in machine-readable format.[25]
+Metadata Authority Description Schema (MADS), an XML schema for an authority element set that may be used to provide metadata about agents (people, organizations), events, and terms (topics, geographics, genres, etc.).
+Encoded Archival Context, an XML schema for authority records conforming to ISAAR.
+
+Standards for object identification, controlled by an identification-authority:
+
+Legal personality identification systems (person-IDs) and authorities:
+
+ISAAR (CPF) – International Standard Archival Authority Record for Corporate Bodies, Persons, and Families.[26] Published by the International Council on Archives[27]
+ISNI – International Standard Name Identifier
+DAI – Digital Author Identification, another subset of ISNI.
+LCCN – Library of Congress Control Number
+NDL – National Diet Library
+ORCID – Open Researcher and Contributor ID, a subset of the ISNI, to uniquely identify scientific and other academic authors.
+VIAF – Virtual International Authority File, an aggregation of authority files currently focused on personal and corporate names.
+WorldCat/identities
+
+
+Bibliographic object identification systems and authorities:
+
+DOI – Digital object identifier
+urn:lex, for law-document identifiers, controlled by local law authorities.
+ISBN – International Standard Book Number
+ISSN – International Standard Serial Number
+
+
+Other identification systems (for generic named-entities) and authorities:
+
+GeoNames
+
+
+
+Standards for identified-object metadata (examples): vCard, Dublin Core, etc.
+See also[edit]
+
+Integrated Authority File (Gemeinsame Normdatei or GND), authority file of German Libraries
+Knowledge Organization Systems
+Library classification systems:
+
+Dewey Decimal Classification
+Library of Congress Classification
+
+
+Ontology (information science)
+Proprietary services
+
+ResearcherID
+
+
+Registration authority
+Simple Knowledge Organization System (SKOS) for representation of thesauri, classification schemes, taxonomies, subject-heading systems, or any other type of structured controlled vocabulary.
+
+References[edit]
+
+
+^ Block, Rick J. 1999. "Authority Control: What It Is and Why It Matters.", accessed March 30, 2006
+^ a b c d "Why Does a Library Catalog Need Authority Control and What Is it?". IMPLEMENTING AUTHORITY CONTROL. United States: Vermont Department of Libraries. 2003. Retrieved 2015-05-22.&#160;
+^ "auctor [sic; see note below] (search term)". Online Etymology Dictionary. Douglas Harper. 2013. Retrieved 2013-07-19. author (n) — c.1300, autor "father," from O.Fr. auctor, acteor "author, originator, creator, instigator (12c., Mod.Fr. auteur), from L. auctorem (nom. auctor) ... --
+authority (n.) — early 13c., autorite "book or quotation that settles an argument," from O.Fr. auctorité "authority, prestige, right, permission, dignity, gravity; the Scriptures" (12c.; Mod.Fr. autorité), ... (see author). ...&#160;
+
+Note: root words for both author and authority are words such as auctor or autor and autorite from the 13th century.
+^ "authority (control)". Memidex. December 7, 2012. Retrieved 2012-12-07. Etymology ... autorite "book or quotation that settles an argument", from Old French auctorité...&#160;
+^ "authority". Merriam-Webster Dictionary. December 7, 2012. Retrieved 2012-12-07. See "Origin of authority" -- Middle English auctorite, from Anglo-French auctorité, from Latin auctoritat-, auctoritas opinion, decision, power, from auctor First Known Use: 13th century...&#160;
+^ a b "Authority Control at the NMSU Library". United States: New Mexico State University. 2007. Retrieved November 25, 2012.&#160;
+^ "Authority Control in the Card Environment". IMPLEMENTING AUTHORITY CONTROL. United States: Vermont Department of Libraries. 2003. Retrieved 2015-05-22.&#160;
+^ a b c Kathleen L. Wells of the University of Southern Mississippi Libraries (November 25, 2012). "Got Authorities? Why Authority Control Is Good for Your Library". Tennessee Libraries.&#160;
+^ a b c d e f g h i "Cataloguing authority control policy". National Library of Australia. November 25, 2012. The primary purpose of authority control is to assist the catalogue user in locating items of interest.&#160;
+^ a b c "Authority Control at LTI". LTI. November 25, 2012.&#160;
+^ a b c "brief guidelines on authority control decision-making". NCSU Libraries. November 25, 2012.&#160;
+^ a b "Authority Control in Unicorn WorkFlows August 2001". Rutgers University. November 25, 2012. Why Authority Control?&#160;
+^ Burger, Robert H. Authority Work: the Creation, Use, Maintenance and Evaluation of Authority Records and Files. Littleton, Colo.&#160;: Libraries Unlimited, 1985
+^ Clack, Doris Hargrett. Authority Control: Principles, Applications, and Instructions. Chicago&#160;: American Library Association, 1990.
+^ Maxwell, Robert L. Maxwell's Guide to Authority Work. Chicago&#160;: American Library Association, 2002.
+^ a b c Calhoun, Karen (June 1998). "A Bird's Eye View of Authority Control in Cataloging". Cornell University Library. Retrieved November 25, 2012.&#160;
+^ a b c Virtual International Authority File records for Princess Diana, retrieved March 12, 2013
+^ Note: this is the article title as of March 12, 2013
+^ Mason, Moya K (November 25, 2012). "Purpose of Authority Work and Files"&#160;
+^ Wynar, BS (1992). "Introduction to Cataloguing and Classification" (8th ed.). Littleton, CO: Libraries Unlimited&#160;.
+^ "Authorities files". Library of Congress&#160;; the original record has been abbreviated for clarity.
+^ a b Calhoun, Karen. "A Bird's Eye View of Authority Control in Cataloging". Cornell University Library&#160;.
+^ Note: See Linda Barnhart's Access Control Records: Prospects and Challenges from the 1996 OCLC conference entitled&#160;; "Authority Control in the 21st Century " For more information.
+^ "NACO Home: NACO (Program for Cooperative Cataloging (PCC), Library of Congress)". Loc.gov. Retrieved 2015-03-16.&#160;
+^ Library of Congress Network Development and MARC Standards Office. "MARC 21 Format for Authority Data: Table of Contents (Network Development and MARC Standards Office, Library of Congress)". Loc.gov. Retrieved 2011-12-18.&#160;
+^ ISAAR(CPF): International Standard Archival Authority Record for Corporate Bodies, Persons, and Families, Second edition at the Wayback Machine (archived June 5, 2007)
+^ "ICArchives&#160;: Page d'accueil&#160;: Accueil". Ica.org. Retrieved 2011-12-18.&#160;
+
+
+
+
+
+
+
+Authority control
+
+
+
+LCCN: sh85009792
+GND: 4239774-1
+BNF: cb11953411c (data)
+NDL: 00945169
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Authority_control&amp;oldid=673890494"					
+				Categories: Library cataloging and classificationLibrary scienceMetadataHidden categories: Articles with inconsistent citation formatsWikipedia articles with LCCN identifiersWikipedia articles with GND identifiersWikipedia articles with BNF identifiers				
+							
+		
+		
+			

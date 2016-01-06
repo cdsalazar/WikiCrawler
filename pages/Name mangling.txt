@@ -1,0 +1,663 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Name mangling
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about name mangling in computer languages.  For name mangling in file systems, see filename mangling.  For other uses, see Name conflict.
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (December 2011)
+
+
+In compiler construction, name mangling (also called name decoration) is a technique used to solve various problems caused by the need to resolve unique names for programming entities in many modern programming languages.
+It provides a way of encoding additional information in the name of a function, structure, class or another datatype in order to pass more semantic information from the compilers to linkers.
+The need arises where the language allows different entities to be named with the same identifier as long as they occupy a different namespace (where a namespace is typically defined by a module, class, or explicit namespace directive) or have different signatures (such as function overloading).
+Any object code produced by compilers is usually linked with other pieces of object code (produced by the same or another compiler) by a type of program called a linker. The linker needs a great deal of information on each program entity. For example, to correctly link a function it needs its name, the number of arguments and their types, and so on.
+
+
+
+Contents
+
+
+1 C name decoration in Microsoft Windows
+2 Name mangling in C++
+
+2.1 Simple example
+2.2 Complex example
+2.3 How different compilers mangle the same functions
+2.4 Handling of C symbols when linking from C++
+2.5 Standardised name mangling in C++
+2.6 Real-world effects of C++ name mangling
+
+
+3 Name mangling in Java
+
+3.1 Creating unique names for inner and anonymous classes
+3.2 Java Native Interface
+
+
+4 Name mangling in Python
+5 Name mangling in Borland's Turbo Pascal / Delphi range
+6 Name mangling in Free Pascal
+7 Name mangling in Objective-C
+8 Name mangling in Swift
+9 Name mangling in Fortran
+10 Name mangling in Rust
+11 See also
+12 References
+13 External links
+
+
+
+C name decoration in Microsoft Windows[edit]
+Although name mangling is not generally required or used by languages that do not support function overloading (such as C and classic Pascal), they use it in some cases to provide additional information about a function. For example, compilers targeted at Microsoft Windows platforms support a variety of calling conventions, which determine the manner in which parameters are sent to subroutines and results returned. Because the different calling conventions are not compatible with one another, compilers mangle symbols with codes detailing which convention should be used to call the specific routine.
+The mangling scheme was established by Microsoft, and has been informally followed by other compilers including Digital Mars, Borland, and GNU GCC, when compiling code for the Windows platforms. The scheme even applies to other languages, such as Pascal, D, Delphi, Fortran, and C#. This allows subroutines written in those languages to call, or be called by, existing Windows libraries using a calling convention different from their default.
+When compiling the following C examples:
+
+
+int _cdecl    f (int x) { return 0; }
+int _stdcall  g (int y) { return 0; }
+int _fastcall h (int z) { return 0; }
+
+32 bit compilers emit, respectively:
+
+_f
+_g@4
+@h@4
+
+In the stdcall and fastcall mangling schemes, the function is encoded as _name@X and @name@X respectively, where X is the number of bytes, in decimal, of the argument(s) in the parameter list (including those passed in registers, for fastcall). In the case of cdecl, the function name is merely prefixed by an underscore.
+Note that the 64-bit convention on Windows (Microsoft C) has no leading underscore. This difference may in some rare cases lead to unresolved externals when porting such code to 64 bits. For example, Fortran code can use 'alias' to link against a C method by name as follows:
+
+
+SUBROUTINE f()
+!DEC$ ATTRIBUTES C, ALIAS:'_f' :: f
+END SUBROUTINE
+
+This will compile and link fine under 32 bits, but generate an unresolved external '_f' under 64 bits. One work around for this is to not use 'alias' at all (in which the method names typically need to be capitalized in C and Fortran), or to use the BIND option:
+
+
+SUBROUTINE f() BIND(C,NAME="f")
+END SUBROUTINE
+
+Name mangling in C++[edit]
+C++ compilers are the most widespread users of name mangling. The first C++ compilers were implemented as translators to C source code, which would then be compiled by a C compiler to object code; because of this, symbol names had to conform to C identifier rules. Even later, with the emergence of compilers which produced machine code or assembly directly, the system's linker generally did not support C++ symbols, and mangling was still required.
+The C++ language does not define a standard decoration scheme, so each compiler uses its own. C++ also has complex language features, such as classes, templates, namespaces, and operator overloading, that alter the meaning of specific symbols based on context or usage. Meta-data about these features can be disambiguated by mangling (decorating) the name of a symbol. Because the name-mangling systems for such features are not standardized across compilers, few linkers can link object code that was produced by different compilers.
+Simple example[edit]
+Consider the following two definitions of f() in a C++ program:
+
+
+int  f (void) { return 1; }
+int  f (int)  { return 0; }
+void g (void) { int i = f(), j = f(0); }
+
+These are distinct functions, with no relation to each other apart from the name. If they were natively translated into C with no changes, the result would be an error — C does not permit two functions with the same name. The C++ compiler therefore will encode the type information in the symbol name, the result being something resembling:
+
+
+int  __f_v (void) { return 1; }
+int  __f_i (int)  { return 0; }
+void __g_v (void) { int i = __f_v(), j = __f_i(0); }
+
+Notice that g() is mangled even though there is no conflict; name mangling applies to all symbols.
+Complex example[edit]
+For a more complex example, we'll consider an example of a real-world name mangling implementation that is used by GNU GCC 3.x, and how it mangles the following example class. The mangled symbol is shown below the respective identifier name.
+
+
+namespace wikipedia 
+{
+   class article 
+   {
+   public:
+      std::string format (void); 
+         /* = _ZN9wikipedia7article6formatEv */
+
+      bool print_to (std::ostream&amp;); 
+         /* = _ZN9wikipedia7article8print_toERSo */
+
+      class wikilink 
+      {
+      public:
+         wikilink (std::string const&amp; name);
+            /* = _ZN9wikipedia7article8wikilinkC1ERKSs */
+      };
+   };
+}
+
+All mangled symbols begin with _Z (note that an underscore followed by a capital is a reserved identifier in C, so conflict with user identifiers is avoided); for nested names (including both namespaces and classes), this is followed by N, then a series of &lt;length, id&gt; pairs (the length being the length of the next identifier), and finally E. For example, wikipedia::article::format becomes
+
+_ZN9wikipedia7article6formatE
+
+For functions, this is then followed by the type information; as format() is a void function, this is simply v; hence:
+
+_ZN9wikipedia7article6formatEv
+
+For print_to, a standard type std::ostream (or more properly std::basic_ostream&lt;char, char_traits&lt;char&gt; &gt;) is used, which has the special alias So; a reference to this type is therefore RSo, with the complete name for the function being:
+
+_ZN9wikipedia7article8print_toERSo
+
+How different compilers mangle the same functions[edit]
+There isn't a standard scheme by which even trivial C++ identifiers are mangled, and consequently different compiler vendors (or even different versions of the same compiler, or the same compiler on different platforms) mangle public symbols in radically different (and thus totally incompatible) ways. Consider how different C++ compilers mangle the same functions:
+
+
+Compiler
+void h(int)
+void h(int, char)
+void h(void)
+
+
+Intel C++ 8.0 for Linux
+_Z1hi
+_Z1hic
+_Z1hv
+
+
+HP aC++ A.05.55 IA-64
+
+
+IAR EWARM C++ 5.4 ARM
+
+
+GCC 3.x and 4.x
+
+
+IAR EWARM C++ 7.4 ARM
+_Z&lt;number&gt;hi
+_Z&lt;number&gt;hic
+_Z&lt;number&gt;hv
+
+
+GCC 2.9x
+h__Fi
+h__Fic
+h__Fv
+
+
+HP aC++ A.03.45 PA-RISC
+
+
+Microsoft Visual C++ v6-v10 (mangling details)
+?h@@YAXH@Z
+?h@@YAXHD@Z
+?h@@YAXXZ
+
+
+Digital Mars C++
+
+
+Borland C++ v3.1
+@h$qi
+@h$qizc
+@h$qv
+
+
+OpenVMS C++ V6.5 (ARM mode)
+H__XI
+H__XIC
+H__XV
+
+
+OpenVMS C++ V6.5 (ANSI mode)
+
+CXX$__7H__FIC26CDH77
+CXX$__7H__FV2CB06E8
+
+
+OpenVMS C++ X7.1 IA-64
+CXX$_Z1HI2DSQ26A
+CXX$_Z1HIC2NP3LI4
+CXX$_Z1HV0BCA19V
+
+
+SunPro CC
+__1cBh6Fi_v_
+__1cBh6Fic_v_
+__1cBh6F_v_
+
+
+Tru64 C++ V6.5 (ARM mode)
+h__Xi
+h__Xic
+h__Xv
+
+
+Tru64 C++ V6.5 (ANSI mode)
+__7h__Fi
+__7h__Fic
+__7h__Fv
+
+
+Watcom C++ 10.6
+W?h$n(i)v
+W?h$n(ia)v
+W?h$n()v
+
+
+Notes:
+
+The Compaq C++ compiler on OpenVMS VAX and Alpha (but not IA-64) and Tru64 has two name mangling schemes. The original, pre-standard scheme is known as ARM model, and is based on the name mangling described in the C++ Annotated Reference Manual (ARM). With the advent of new features in standard C++, particularly templates, the ARM scheme became more and more unsuitable — it could not encode certain function types, or produced identical mangled names for different functions. It was therefore replaced by the newer "ANSI" model, which supported all ANSI template features, but was not backwards compatible.
+On IA-64, a standard ABI exists (see external links), which defines (among other things) a standard name-mangling scheme, and which is used by all the IA-64 compilers. GNU GCC 3.x, in addition, has adopted the name mangling scheme defined in this standard for use on other, non-Intel platforms.
+The Visual Studio and Windows SDK include the program undname which prints the C-style function prototype for a given mangled name.
+On Microsoft Windows the Intel compiler uses the Visual C++ name mangling for compatibility.[1]
+For the IAR EWARM C++ 7.4 ARM compiler the best way to determine the name of a function is to compile with the assembler output turned on and to look at the output in the ".s" file thus generated.
+
+Handling of C symbols when linking from C++[edit]
+The job of the common C++ idiom:
+
+
+#ifdef __cplusplus 
+extern "C" {
+#endif
+    /* ... */
+#ifdef __cplusplus
+}
+#endif
+
+is to ensure that the symbols following are "unmangled" – that the compiler emits a binary file with their names undecorated, as a C compiler would do. As C language definitions are unmangled, the C++ compiler needs to avoid mangling references to these identifiers.
+For example, the standard strings library, &lt;string.h&gt; usually contains something resembling:
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+void *memset (void *, int, size_t);
+char *strcat (char *, const char *);
+int   strcmp (const char *, const char *);
+char *strcpy (char *, const char *);
+
+#ifdef __cplusplus
+}
+#endif
+
+Thus, code such as:
+
+
+if (strcmp(argv[1], "-x") == 0) 
+    strcpy(a, argv[2]);
+else 
+    memset (a, 0, sizeof(a));
+
+uses the correct, unmangled strcmp and memset. If the extern had not been used, the (SunPro) C++ compiler would produce code equivalent to:
+
+
+if (__1cGstrcmp6Fpkc1_i_(argv[1], "-x") == 0) 
+    __1cGstrcpy6Fpcpkc_0_(a, argv[2]);
+else 
+    __1cGmemset6FpviI_0_ (a, 0, sizeof(a));
+
+Since those symbols do not exist in the C runtime library (e.g. libc), link errors would result.
+Standardised name mangling in C++[edit]
+Though it would seem that standardised name mangling in the C++ language would lead to greater interoperability between compiler implementations, such a standardization by itself would not suffice to guarantee C++ compiler interoperability and it might even create a false impression that interoperability is possible and safe when it isn't. Name mangling is only one of several application binary interface (ABI) details that need to be decided and observed by a C++ implementation. Other ABI aspects like exception handling, virtual table layout, structure and stack frame padding, etc. also cause differing C++ implementations to be incompatible. Further, requiring a particular form of mangling would cause issues for systems where implementation limits (e.g., length of symbols) dictate a particular mangling scheme. A standardised requirement for name mangling would also prevent an implementation where mangling was not required at all — for example, a linker which understood the C++ language.
+The C++ standard therefore does not attempt to standardise name mangling. On the contrary, the Annotated C++ Reference Manual (also known as ARM, ISBN 0-201-51459-1, section 7.2.1c) actively encourages the use of different mangling schemes to prevent linking when other aspects of the ABI, such as exception handling and virtual table layout, are incompatible.
+Nevertheless, as detailed in the section above, on some platforms[example needed] the full C++ ABI has been standardized, including name mangling.
+Real-world effects of C++ name mangling[edit]
+Because C++ symbols are routinely exported from DLL and shared object files, the name mangling scheme is not merely a compiler-internal matter. Different compilers (or different versions of the same compiler, in many cases) produce such binaries under different name decoration schemes, meaning that symbols are frequently unresolved if the compilers used to create the library and the program using it employed different schemes. For example, if a system with multiple C++ compilers installed (e.g., GNU GCC and the OS vendor's compiler) wished to install the Boost C++ Libraries, it would have to be compiled twice — once for the vendor compiler and once for GCC.
+It is good for safety purposes that compilers producing incompatible object codes (codes based on different ABIs, regarding e.g., classes and exceptions) use different name mangling schemes. This guarantees that these incompatibilities are detected at the linking phase, not when executing the software (which could lead to obscure bugs and serious stability issues).
+For this reason name decoration is an important aspect of any C++-related ABI.
+Name mangling in Java[edit]
+In Java, the signature of a method or a class contains its name and the types of its method arguments and return value where applicable. The format of signatures is documented, as the language, compiler, and .class file format were all designed together (and had object-orientation and universal interoperability in mind from the start).
+Creating unique names for inner and anonymous classes[edit]
+The scope of anonymous classes is confined to their parent class, so the compiler must produce a "qualified" public name for the inner class, to avoid conflict where other classes with the same name (inner or not) exist in the same namespace. Similarly, anonymous classes must have "fake" public names generated for them (as the concept of anonymous classes only exists in the compiler, not the runtime). So, compiling the following java program
+
+
+public class foo {
+    class bar {
+        public int x;
+    }
+
+    public void zark () {
+        Object f = new Object () {
+            public String toString() {
+                return "hello";
+            }
+        };
+    }
+}
+
+will produce three .class files:
+
+foo.class, containing the main (outer) class foo
+foo$bar.class, containing the named inner class foo.bar
+foo$1.class, containing the anonymous inner class (local to method foo.zark)
+
+All of these class names are valid (as $ symbols are permitted in the JVM specification) and these names are "safe" for the compiler to generate, as the Java language definition prohibits $ symbols in normal java class definitions.
+Name resolution in Java is further complicated at runtime, as fully qualified class names are unique only inside a specific classloader instance. Classloaders are ordered hierarchically and each Thread in the JVM has a so-called context class loader, so in cases where two different classloader instances contain classes with the same name, the system first tries to load the class using the root (or system) classloader and then goes down the hierarchy to the context class loader.
+Java Native Interface[edit]
+Java's native method support allows Java language programs to call out to programs written in another language (generally either C or C++). There are two name-resolution concerns here, neither of which is implemented in a particularly standard manner:
+
+Java to native name translation
+normal C++ name mangling
+
+Name mangling in Python[edit]
+In Python, mangling is used for "private" class members which are designated as such by giving them a name with two leading underscores and no more than one trailing underscore. For example, __thing will be mangled, as will ___thing and __thing_, but __thing__ and __thing___ will not. Python's runtime does not restrict access to such members, the mangling only prevents name collisions if a derived class defines a member with the same name.
+On encountering name mangled attributes, Python transforms these names by a single underscore and the name of the enclosing class, for example:
+
+
+class Test(object):
+    def __mangled_name(self):
+        pass
+    def normal_name(self):
+        pass
+
+t = Test()
+print dir(t)
+
+will output:
+
+['_Test__mangled_name', 
+'__doc__', 
+'__module__', 
+'normal_name']
+
+Name mangling in Borland's Turbo Pascal / Delphi range[edit]
+To avoid name mangling in Pascal, use:
+
+
+exports
+  myFunc name 'myFunc',
+  myProc name 'myProc';
+
+Name mangling in Free Pascal[edit]
+Free Pascal supports function and operator overloading, thus it also uses name mangling to support these features. On the other hand, Free Pascal is capable of calling symbols defined in external modules created with another language and exporting its own symbols to be called by another language. For further information, consult Chapter 6.2 and Chapter 7.1 of Free Pascal Programmer's Guide.
+Name mangling in Objective-C[edit]
+Essentially two forms of method exist in Objective-C, the class ("static") method, and the instance method. A method declaration in Objective-C is of the following form
+
++ method name: argument name1:parameter1 ...
+– method name: argument name1:parameter1 ...
+
+Class methods are signified by +, instance methods use -. A typical class method declaration may then look like:
+
+
+ + (id) initWithX: (int) number andY: (int) number;
+ + (id) new;
+
+with instance methods looking like
+
+
+ – (id) value;
+ – (id) setValue: (id) new_value;
+
+Each of these method declarations have a specific internal representation. When compiled, each method is named according to the following scheme for class methods:
+
+_c_Class_methodname_name1_name2_ ...
+
+and this for instance methods:
+
+_i_Class_methodname_name1_name2_ ...
+
+The colons in the Objective-C syntax are translated to underscores. So, the Objective-C class method + (id) initWithX: (int) number andY: (int) number;, if belonging to the Point class would translate as _c_Point_initWithX_andY_, and the instance method (belonging to the same class) - (id) value; would translate to _i_Point_value.
+Each of the methods of a class are labeled in this way. However, in order to look up a method that a class may respond to would be tedious if all methods are represented in this fashion. Each of the methods is assigned a unique symbol (such as an integer). Such a symbol is known as a selector. In Objective-C, one can manage selectors directly — they have a specific type in Objective-C — SEL.
+During compilation, a table is built that maps the textual representation (such as _i_Point_value) to selectors (which are given a type SEL). Managing selectors is more efficient than manipulating the textual representation of a method. Note that a selector only matches a method's name, not the class it belongs to — different classes can have different implementations of a method with the same name. Because of this, implementations of a method are given a specific identifier too — these are known as implementation pointers, and are given a type also, IMP.
+Message sends are encoded by the compiler as calls to the id objc_msgSend (id receiver, SEL selector, ...) function, or one of its cousins, where receiver is the receiver of the message, and SEL determines the method to call. Each class has its own table that maps selectors to their implementations — the implementation pointer specifies where in memory the actual implementation of the method resides. There are separate tables for class and instance methods. Apart from being stored in the SEL to IMP lookup tables, the functions are essentially anonymous.
+The SEL value for a selector does not vary between classes. This enables polymorphism.
+The Objective-C runtime maintains information about the argument and return types of methods. However, this information is not part of the name of the method, and can vary from class to class.
+Since Objective-C does not support namespaces, there is no need for mangling of class names (that do appear as symbols in generated binaries).
+Name mangling in Swift[edit]
+
+
+
+
+
+This article's tone or style may not reflect the encyclopedic tone used on Wikipedia. See Wikipedia's guide to writing better articles for suggestions. (November 2015)
+
+
+All information is taken from article inside swift. I believe it should be here, but I don't know how to add and format it properly.
+Swift keeps metadata about functions (and more) in their respective symbols, which is called name mangling. This metadata includes the function’s name (obviously), attributes, module name, argument types, return type, and more. Take this for example:
+
+
+class Shape{ 
+    func numberOfSides() -&gt; Int { 
+        return 5 
+    } 
+}
+
+The mangled name for the simpleDescription method is _TFC9swifttest5Shape17simpleDescriptionfS0_FT_Si. Here’s the breakdown: _T – The prefix for all Swift symbols. Everything will start with this.
+F – Function.
+C – Function of a class. (method)
+9swifttest – The module name, with a prefixed length.
+5Shape – The class name the function belongs to, again, with a prefixed length.
+17simpleDescription – The function name.
+f – The function attribute. In this case it’s ‘f’, which is just a normal function. We’ll get to that in a minute.
+S0_FT – I’m not exactly sure what this means, but it appears to mark the start of the arguments and return type.
+‘_’ – This underscore separates the argument types from the return type. Since the function takes no arguments, it comes directly after S0_FT.
+S – This is the beginning of the return type. The ‘S’ stands for Swift; the return type is a Swift builtin type. The next character determines the type.
+i – This is the Swift builtin type. A lowercase ‘I’, which stands for Int.
+Function Attributes
+
+
+Character
+Type
+
+
+f
+Normal Function
+
+
+s
+Setter
+
+
+g
+Getter
+
+
+d
+Destructor
+
+
+D
+Deallocator
+
+
+c
+Constructor
+
+
+C
+Allocator
+
+
+Swift Builtins
+
+
+Character
+Type
+
+
+a
+Array
+
+
+b
+Bool
+
+
+c
+UnicodeScalar
+
+
+d
+Double
+
+
+f
+Float
+
+
+i
+Int
+
+
+u
+UInt
+
+
+Q
+ImplicitlyUnwrappedOptional
+
+
+S
+String
+
+
+Name mangling in Fortran[edit]
+Name mangling is also necessary in Fortran compilers, originally because the language is case insensitive. Further mangling requirements were imposed later in the evolution of the language because of the addition of modules and other features in the Fortran 90 standard. The case mangling, especially, is a common issue that must be dealt with in order to call Fortran libraries (such as LAPACK) from other languages (such as C).
+Because of the case insensitivity, the name of a subroutine or function "FOO" must be converted to a canonical case and format by the Fortran compiler so that it will be linked in the same way regardless of case. Different compilers have implemented this in various ways, and no standardization has occurred. The AIX and HP-UX Fortran compilers convert all identifiers to lower case ("foo"), while the Cray Unicos Fortran compilers converted identifiers all upper case ("FOO"). The GNU g77 compiler converts identifiers to lower case plus an underscore ("foo_"), except that identifiers already containing an underscore ("FOO_BAR") have two underscores appended ("foo_bar__"), following a convention established by f2c. Many other compilers, including SGI's IRIX compilers, GNU Fortran, and Intel's Fortran compiler (except on Microsoft Windows), convert all identifiers to lower case plus an underscore ("foo_" and "foo_bar_"). On Microsoft Windows, the Intel Fortran compiler defaults to uppercase without an underscore.[2]
+Identifiers in Fortran 90 modules must be further mangled, because the same procedure name may occur in different modules. Since the Fortran 2003 Standard requires that module procedure names not conflict with other external symbols,[3] compilers tend to use the module name and the procedure name, with a distinct marker in between. For example, in the following module
+
+
+module m 
+contains
+   integer function five()
+      five = 5
+   end function five
+end module m
+
+The name of the function will be mangled as __m_MOD_five (e.g., GNU Fortran), m_MP_five_ (e.g., Intel's ifort), m.five_ (e.g., Oracle's sun95), etc. Since Fortran does not allow overloading the name of a procedure, but uses generic interface blocks and generic type-bound procedures instead, the mangled names do not need to incorporate clues about the arguments.
+The Fortran 2003 BIND option overrides any name mangling done by the compiler, as shown above.
+Name mangling in Rust[edit]
+
+
+
+This section requires expansion. (June 2014)
+
+
+Function names are mangled by default in Rust. However, this can be disabled by the #[no_mangle] function attribute. This attribute can be used to export functions to C, C++, or Objective-C. Additionally, along with the #[start] function attribute or the #[no_main] crate attribute, it allows the user to define a C-style entry point for the program.[4]
+See also[edit]
+
+Language binding
+Foreign function interface
+Calling convention
+Stropping
+Application programming interface – API
+Application Binary Interface – ABI
+Comparison of application virtual machines
+Java Native Interface
+SWIG – opensource interfaces bindings generator from many languages to many languages
+Microsoft Visual C++ Name Mangling
+
+References[edit]
+
+
+^ http://software.intel.com/en-us/forums/showthread.php?t=56817
+^ User and Reference Guide for the Intel Fortran Compiler 15.0, Intel Corporation (2014), Summary of Mixed-Language Issues. Accessed 17 Nov. 2014.
+^ https://software.intel.com/en-us/node/510637
+^ "Writing Safe Unsafe and Low-Level Code". Rust Manual. rust-lang.org. Retrieved 23 June 2014.&#160;
+
+
+External links[edit]
+
+Linux Itanium ABI for C++, including name mangling scheme.
+Macintosh C/C++ ABI Standard Specification
+c++filt — filter to demangle encoded C++ symbols for GNU/Intel compilers
+undname — msvc tool to demangle names.
+demangler.com — An online tool for demangling GCC and MSVC C++ symbols
+The Objective-C Runtime System — From Apple's The Objective-C Programming Language 1.0
+Calling conventions for different C++ compilers by Agner Fog contains detailed description of name mangling schemes for various x86 and x64 C++ compilers (pp.&#160;24–42 in 2011-06-08 version)
+C++ Name Mangling/Demangling Quite detailed explanation of Visual C++ compiler name mangling scheme
+PHP UnDecorateSymbolName a php script that demangles Microsoft Visual C's function names.
+Mixing C and C++ Code
+Symbol management – 'Linkers and Loaders' by John R. Levine
+Name mangling demystified by Fivos Kefallonitis
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Name_mangling&amp;oldid=690520047"					
+				Categories: C++Computer librariesJava (programming language)Compiler constructionHidden categories: Articles lacking in-text citations from December 2011All articles lacking in-text citationsWikipedia articles needing style editing from November 2015All articles needing style editingArticles to be expanded from June 2014All articles to be expanded				
+							
+		
+		
+			

@@ -1,0 +1,215 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Static memory allocation
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+It has been suggested that this article be merged into Static variable. (Discuss) Proposed since January 2013.
+
+
+See also: Static variable
+Static memory allocation is the allocation of memory at compile-time before the associated program is executed, unlike dynamic memory allocation or automatic memory allocation where memory is allocated as required at run-time.[1]
+An application of this technique involves a program module (e.g. function or subroutine) declaring static data locally, such that these data are inaccessible in other modules unless references to it are passed as parameters or returned. A single copy of static data is retained and accessible through many calls to the function in which it is declared. Static memory allocation therefore has the advantage of modularising data within a program design in the situation where these data must be retained through the runtime of the program.
+The use of static variables within a class in object oriented programming enables a single copy of such data to be shared between all the objects of that class.
+Object constants known at compile-time, like string literals, are usually allocated statically. In object-oriented programming, the virtual method tables of classes are usually allocated statically. A statically defined value can also be global in its scope ensuring the same immutable value is used throughout a run for consistency.
+References[edit]
+
+
+^ Jack Rons. "What is static memory allocation and dynamic memory allocation?". http://www.merithub.com/: MeritHub [An Institute of Career Development]. Retrieved 2011-06-16. The compiler allocates required memory space for a declared variable. By using the addressof operator, the reserved address is obtained and this address may be assigned to a pointer variable. Since most of the declared variables have static memory, this way of assigning pointer value to a pointer variable is known as static memory allocation. Memory is assigned during compilation time.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Memory management
+
+
+
+
+
+
+
+
+
+Memory management as a function of an operating system
+
+
+
+
+
+
+
+
+Manual memory management
+
+
+
+Static memory allocation
+C dynamic memory allocation
+new and delete (C++)
+
+
+
+
+
+
+
+
+Virtual memory
+
+
+
+Demand paging
+Page table
+Paging
+Virtual memory compression
+
+
+
+
+
+
+
+
+Hardware
+
+
+
+Memory management unit
+Translation lookaside buffer
+
+
+
+
+
+
+
+
+Garbage collection
+
+
+
+Boehm garbage collector
+Finalizer
+Garbage
+Mark-compact algorithm
+Reference counting
+Strong reference
+Weak reference
+
+
+
+
+
+
+
+
+Memory segmentation
+
+
+
+Protected mode
+Real mode
+Virtual 8086 mode
+x86 memory segmentation
+
+
+
+
+
+
+
+
+Memory safety
+
+
+
+Buffer overflow
+Buffer over-read
+Dangling pointer
+Stack overflow
+
+
+
+
+
+
+
+
+Issues
+
+
+
+Fragmentation
+Memory leak
+Unreachable memory
+
+
+
+
+
+
+
+
+Other
+
+
+
+Automatic variable
+International Symposium on Memory Management
+Region-based memory management
+
+
+
+
+
+
+
+
+See also[edit]
+
+Constant
+Dynamic memory allocation
+Global variable
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Static_memory_allocation&amp;oldid=645183004"					
+				Categories: Memory managementHidden categories: Articles to be merged from January 2013All articles to be merged				
+							
+		
+		
+			

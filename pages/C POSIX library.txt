@@ -1,0 +1,718 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			C POSIX library
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+C POSIX library
+
+
+
+
+&lt;assert.h&gt;
+&lt;complex.h&gt;
+&lt;ctype.h&gt;
+&lt;dirent.h&gt;
+&lt;dlfcn.h&gt;
+&lt;errno.h&gt;
+&lt;fcntl.h&gt;
+&lt;fenv.h&gt;
+&lt;float.h&gt;
+&lt;inttypes.h&gt;
+&lt;iso646.h&gt;
+&lt;limits.h&gt;
+&lt;locale.h&gt;
+&lt;math.h&gt;
+&lt;pthread.h&gt;
+&lt;setjmp.h&gt;
+&lt;signal.h&gt;
+&lt;stdarg.h&gt;
+&lt;stdbool.h&gt;
+&lt;stddef.h&gt;
+&lt;stdint.h&gt;
+&lt;stdio.h&gt;
+&lt;stdlib.h&gt;
+&lt;string.h&gt;
+&lt;sys/stat.h&gt;
+&lt;tgmath.h&gt;
+&lt;time.h&gt;
+&lt;unistd.h&gt;
+&lt;utime.h&gt;
+&lt;wchar.h&gt;
+&lt;wctype.h&gt;
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+The C POSIX library is a specification of a C standard library for POSIX systems. It was developed at the same time as the ANSI C standard. Some effort was made to make POSIX compatible with standard C; POSIX includes additional functions to those introduced in standard C.
+C POSIX library header files[edit]
+
+
+
+
+
+This article may require cleanup to meet Wikipedia's quality standards. The specific problem is: 
+If Official List of headers in the POSIX library on opengroup.org really is the official list of POSIX headers, then this list is incomplete, same for C POSIX library. Please help improve this article if you can. (August 2013)
+
+
+Note this table does not include the header files defined by the ISO C standard.
+
+
+Header File
+Description
+First Released
+
+
+&lt;aio.h&gt;
+Asynchronous input and output
+Issue 5
+
+
+&lt;arpa/inet.h&gt;
+Functions for manipulating numeric IP addresses (part of Berkeley sockets)
+Issue 6
+
+
+&lt;assert.h&gt;
+Verify Assumptions
+&#160;??
+
+
+&lt;complex.h&gt;
+Complex Arithmetic, see C mathematical functions
+&#160;??
+
+
+&lt;cpio.h&gt;
+Magic numbers for the cpio archive format.
+Issue 3
+
+
+&lt;dirent.h&gt;
+Allows the opening and listing of directories.
+Issue 2
+
+
+&lt;dlfcn.h&gt;
+Dynamic linking
+Issue 5
+
+
+&lt;errno.h&gt;
+Retrieving Error Number
+&#160;??
+
+
+&lt;fcntl.h&gt;
+File opening, locking and other operations.
+Issue 1
+
+
+&lt;fenv.h&gt;
+Floating-Point Environment, see C mathematical functions
+&#160;??
+
+
+&lt;float.h&gt;
+Floating Types, see C data types
+&#160;??
+
+
+&lt;fmtmsg.h&gt;
+Message display structures
+Issue 4
+
+
+&lt;fnmatch.h&gt;
+Filename matching
+Issue 4
+
+
+&lt;ftw.h&gt;
+File tree traversal
+Issue 1
+
+
+&lt;glob.h&gt;
+Pathname "globbing" (pattern-matching)
+Issue 4
+
+
+&lt;grp.h&gt;
+User group information and control.
+Issue 1
+
+
+&lt;iconv.h&gt;
+Codeset conversion facility
+Issue 4
+
+
+&lt;inttypes.h&gt;
+Fixed Size Integer Types, see C data types
+&#160;??
+
+
+&lt;iso646.h&gt;
+Alternative Spellings, see C alternative tokens
+&#160;??
+
+
+&lt;langinfo.h&gt;
+Language information constants. Build on C localization functions
+Issue 2
+
+
+&lt;libgen.h&gt;
+Pathname manipulation
+Issue 4
+
+
+&lt;limits.h&gt;
+Implementation-Defined Constants, see C data types
+&#160;??
+
+
+&lt;locale.h&gt;
+Category Macros, see C localization functions
+&#160;??
+
+
+&lt;math.h&gt;
+Mathematical Declarations, see C mathematical functions
+&#160;??
+
+
+&lt;monetary.h&gt;
+String formatting of monetary units
+Issue 4
+
+
+&lt;mqueue.h&gt;
+Message queue
+Issue 5
+
+
+&lt;ndbm.h&gt;
+NDBM database operations
+Issue 4
+
+
+&lt;net/if.h&gt;
+Listing of local network interfaces
+Issue 6
+
+
+&lt;netdb.h&gt;
+Translating protocol and host names into numeric addresses. Part of Berkeley sockets
+Issue 6
+
+
+&lt;netinet/in.h&gt;
+Defines Internet protocol and address family. Part of Berkeley sockets
+Issue 6
+
+
+&lt;netinet/tcp.h&gt;
+Additional TCP control options. Part of Berkeley sockets
+Issue 6
+
+
+&lt;nl_types.h&gt;
+Localization message catalog functions
+Issue 2
+
+
+&lt;poll.h&gt;
+Asynchronous file descriptor multiplexing
+Issue 4
+
+
+&lt;pthread.h&gt;
+Defines an API for creating and manipulating POSIX threads.
+Issue 5
+
+
+&lt;pwd.h&gt;
+passwd (user information) access and control.
+Issue 1
+
+
+&lt;regex.h&gt;
+Regular expression matching
+Issue 4
+
+
+&lt;sched.h&gt;
+Execution scheduling
+Issue 5
+
+
+&lt;search.h&gt;
+Search tables
+Issue 1
+
+
+&lt;semaphore.h&gt;
+POSIX semaphores
+Issue 5
+
+
+&lt;setjmp.h&gt;
+Stack Environment Declarations
+&#160;??
+
+
+&lt;signal.h&gt;
+Signals, see C signal handling
+&#160;??
+
+
+&lt;spawn.h&gt;
+Process spawning
+Issue 6
+
+
+&lt;stdarg.h&gt;
+Handle Variable Argument List
+&#160;??
+
+
+&lt;stdbool.h&gt;
+Boolean Type and Values, see C data types
+&#160;??
+
+
+&lt;stddef.h&gt;
+Standard Type Definitions, see C data types
+&#160;??
+
+
+&lt;stdint.h&gt;
+Integer Types, see C data types
+&#160;??
+
+
+&lt;stdio.h&gt;
+Standard Buffered Input/Oupt, see C file input/output
+&#160;??
+
+
+&lt;stdlib.h&gt;
+Standard Library Definitions, see C standard library
+&#160;??
+
+
+&lt;string.h&gt;
+Several String Operations, see C string handling
+&#160;??
+
+
+&lt;strings.h&gt;
+Case-insensitive string comparisons
+Issue 4
+
+
+&lt;stropts.h&gt;
+Stream manipulation, including ioctl
+Issue 4
+
+
+&lt;sys/ipc.h&gt;
+Inter-process communication (IPC).
+Issue 2
+
+
+&lt;sys/mman.h&gt;
+Memory management, including POSIX Shared Memory and Memory mapped files
+Issue 4
+
+
+&lt;sys/msg.h&gt;
+POSIX message queues.
+Issue 2
+
+
+&lt;sys/resource.h&gt;
+Resource usage, priorities, and limiting
+Issue 4
+
+
+&lt;sys/select.h&gt;
+Synchronous I/O multiplexing
+Issue 6
+
+
+&lt;sys/sem.h&gt;
+XSI (SysV style) semaphores
+Issue 2
+
+
+&lt;sys/shm.h&gt;
+XSI (SysV style) Shared Memory
+Issue 2
+
+
+&lt;sys/socket.h&gt;
+Main Berkley sockets header
+Issue 6
+
+
+&lt;sys/stat.h&gt;
+File information (stat et al.).
+Issue 1
+
+
+&lt;sys/statvfs.h&gt;
+File System information
+Issue 4
+
+
+&lt;sys/time.h&gt;
+Time and date functions and structures.
+Issue 4
+
+
+&lt;sys/times.h&gt;
+File access and modification times
+Issue 1
+
+
+&lt;sys/types.h&gt;
+Various data types used elsewhere.
+Issue 1
+
+
+&lt;sys/uio.h&gt;
+Vectored I/O operations
+Issue 4
+
+
+&lt;sys/un.h&gt;
+Unix domain sockets
+Issue 6
+
+
+&lt;sys/utsname.h&gt;
+Operating system information, including uname
+Issue 1
+
+
+&lt;sys/wait.h&gt;
+Status of terminated child processes (see wait)
+Issue 3
+
+
+&lt;syslog.h&gt;
+System error logging
+Issue 4
+
+
+&lt;tar.h&gt;
+Magic numbers for the tar archive format.
+Issue 3
+
+
+&lt;termios.h&gt;
+Allows terminal I/O interfaces.
+Issue 3
+
+
+&lt;tgmath.h&gt;
+Type-Generic Macros, see C mathematical functions
+&#160;??
+
+
+&lt;time.h&gt;
+Type-Generic Macros, see C date and time functions
+&#160;??
+
+
+&lt;trace.h&gt;
+Tracing of runtime behavior (DEPRECATED)
+Issue 6
+
+
+&lt;ulimit.h&gt;
+Resource limiting (DEPRECATED in favor of &lt;sys/resource.h&gt;)
+Issue 1
+
+
+&lt;unistd.h&gt;
+Various essential POSIX functions and constants.
+Issue 1
+
+
+&lt;utime.h&gt;
+inode access and modification times.
+Issue 3
+
+
+&lt;utmpx.h&gt;
+user accounting database functions
+Issue 4
+
+
+&lt;wchar.h&gt;
+Wide-Character Handling, see C string handling
+&#160;??
+
+
+&lt;wctype.h&gt;
+Wide-Character Classification and Mapping Utilities, see C character classification
+&#160;??
+
+
+&lt;wordexp.h&gt;
+Word-expansion like the shell would perform
+Issue 4
+
+
+References[edit]
+
+Official List of headers in the POSIX library on opengroup.org
+Lists headers in the POSIX library at the Wayback Machine (archived July 24, 2010)
+Description of the posix library from the Flux OSKit
+
+Further reading[edit]
+
+
+Gallmeister, Bill (January 1, 1995), POSIX.4 Programmers Guide: Programming for the Real World (1st ed.), O'Reilly Media, p.&#160;564, ISBN&#160;1-56592-074-0&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+C programming language
+
+
+
+
+
+
+
+
+
+ANSI C
+
+C89 and C90
+
+
+C99
+C11
+Embedded C
+MISRA C
+
+
+
+
+
+
+
+
+C features
+
+
+
+Functions
+Header files
+Libraries
+Operators
+String
+Syntax
+Preprocessor
+Data types
+
+
+
+
+
+
+
+
+C standard library functions
+
+
+
+Char (ctype.h)
+File I/O (stdio.h)
+Math (math.h)
+Dynamic memory (stdlib.h)
+String (string.h)
+Time (time.h)
+Variadic (stdarg.h)
+POSIX
+
+
+
+
+
+
+
+
+C standard libraries
+
+
+
+Bionic
+
+libhybris
+
+
+dietlibc
+EGLIBC
+glibc
+klibc
+Microsoft Run-time Library
+musl
+Newlib
+uClibc
+BSD libc
+
+
+
+
+
+
+
+
+Compilers
+
+
+
+Comparison of C compilers
+ACK
+Borland Turbo C
+Clang
+GCC
+LCC
+Pelles C
+PCC
+TCC
+Microsoft Visual Studio Express C++
+Watcom C/C++
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Comparison of C IDEs
+Anjuta
+Code::Blocks
+CodeLite
+Eclipse
+Geany
+Microsoft Visual Studio
+NetBeans
+
+
+
+
+
+
+
+
+C and other languages
+
+
+
+Compatibility of C and C++
+Comparison of C and Embedded C
+Comparison of C and Pascal
+Comparison of programming languages
+
+
+
+
+
+
+
+
+Descendant languages
+
+
+
+C++
+C#
+D
+Objective-C
+Alef
+Limbo
+Go
+Vala
+
+
+
+
+
+
+
+
+
+
+
+ Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=C_POSIX_library&amp;oldid=689619808"					
+				Categories: C POSIX libraryPOSIXHidden categories: Articles needing cleanup from August 2013All articles needing cleanupCleanup tagged articles with a reason field from August 2013Wikipedia pages needing cleanup from August 2013				
+							
+		
+		
+			

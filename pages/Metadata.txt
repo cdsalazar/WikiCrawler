@@ -1,0 +1,879 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Metadata
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Metadata is "data about data".[1] Two types of metadata exist: structural metadata and descriptive metadata. Structural metadata is data about the containers of data. Descriptive metadata uses individual instances of application data or the data content.
+Metadata was traditionally in the card catalogs of libraries. As information has become increasingly digital, metadata is also used to describe digital data using metadata standards specific to a particular discipline. Describing the contents and context of data or data files increases their usefulness. For example, a web page may include metadata specifying what language the page is written in, what tools were used to create it, and where to find more information about the subject; this metadata can automatically improve the reader's experience.
+The main purpose of metadata is to facilitate in the discovery of relevant information, more often classified as resource discovery. Metadata also helps organize electronic resources, provide digital identification, and helps support archiving and preservation of the resource. Metadata assists in resource discovery by "allowing resources to be found by relevant criteria, identifying resources, bringing similar resources together, distinguishing dissimilar resources, and giving location information."[2]
+
+
+
+Contents
+
+
+1 Definition
+
+1.1 Libraries
+1.2 Photographs
+1.3 Telecommunications
+1.4 Video
+1.5 Web pages
+
+
+2 Creation
+3 Metadata types
+4 Metadata structures
+
+4.1 Metadata syntax
+4.2 Hierarchical, linear and planar schemata
+4.3 Metadata hypermapping
+4.4 Granularity
+
+
+5 Metadata standards
+6 Metadata usage
+
+6.1 Data virtualization
+6.2 Statistics and census services
+6.3 Library and information science
+6.4 Metadata and the law
+
+6.4.1 United States of America
+
+
+6.5 Australia
+6.6 Metadata in healthcare
+6.7 Metadata and data warehousing
+6.8 Metadata on the Internet
+6.9 Metadata in the broadcast industry
+6.10 Geospatial metadata
+6.11 Ecological and environmental metadata
+6.12 Digital music
+6.13 Cloud applications
+
+
+7 Metadata administration and management
+
+7.1 Metadata storage
+7.2 Database management
+
+
+8 See also
+9 References
+10 External links
+
+
+
+Definition[edit]
+Metadata means "data about data". Although the "meta" prefix (from the Greek preposition and prefix μετά-) means "after" or "beyond", it is used to mean "about" in epistemology. Metadata is defined as the data providing information about one or more aspects of the data, such as:
+
+Means of creation of the data
+Purpose of the data
+Time and date of creation
+Creator or author of the data
+Location on a computer network where the data was created
+Standards used
+
+For example, a digital image may include metadata that describe how large the picture is, the color depth, the image resolution, when the image was created, and other data.[3] A text document's metadata may contain information about how long the document is, who the author is, when the document was written, and a short summary of the document.
+Metadata is data. As such, metadata can be stored and managed in a database, often called a metadata registry or metadata repository.[4] However, without context and a point of reference, it might be impossible to identify metadata just by looking at them.[5] For example: by itself, a database containing several numbers, all 13 digits long could be the results of calculations or a list of numbers to plug into an equation - without any other context, the numbers themselves can be perceived as the data. But if given the context that this database is a log of a book collection, those 13-digit numbers may now be identified as ISBNs - information that refers to the book, but is not itself the information within the book.
+The term "metadata" was coined in 1968 by Philip Bagley, in his book "Extension of Programming Language Concepts" where it is clear that he uses the term in the ISO 11179 "traditional" sense, which is "structural metadata" i.e. "data about the containers of data"; rather than the alternate sense "content about individual instances of data content" or metacontent, the type of data usually found in library catalogues.[6][7] Since then the fields of information management, information science, information technology, librarianship, and GIS have widely adopted the term. In these fields the word metadata is defined as "data about data".[8] While this is the generally accepted definition, various disciplines have adopted their own more specific explanation and uses of the term.
+Libraries[edit]
+Metadata has been used in various forms as a means of cataloging archived information. The Dewey Decimal System employed by libraries for the classification of library materials by subject is an early example of metadata usage. Library catalogues used 3x5 inch cards to display a book's title, author, subject matter, and an abbreviated alpha-numeric string (call number) which indicated the physical location of the book within the library's shelves. Such data help classify, aggregate, identify, and locate a particular book. Another form of older metadata collection is the use by US Census Bureau of what is known as the "Long Form." The Long Form asks questions that are used to create demographic data to find patterns of distribution.[9]
+Photographs[edit]
+Metadata may be written into a digital photo file that will identify who owns it, copyright and contact information, what camera created the file, along with exposure information and descriptive information such as keywords about the photo, making the file searchable on the computer and/or the Internet. Some metadata is written by the camera and some is input by the photographer and/or software after downloading to a computer. Most digital cameras write metadata, and some enable you to edit it;[10] this functionality has been available on most Nikon DSLRs since the Nikon D3 and on most new Canon cameras since the Canon EOS 7D.
+Photographic Metadata Standards are governed by organizations that develop the following standards. They include, but are not limited to:
+
+IPTC Information Interchange Model IIM (International Press Telecommunications Council),
+IPTC Core Schema for XMP
+XMP – Extensible Metadata Platform (an ISO standard)
+Exif – Exchangeable image file format, Maintained by CIPA (Camera &amp; Imaging Products Association) and published by JEITA (Japan Electronics and Information Technology Industries Association)
+Dublin Core (Dublin Core Metadata Initiative – DCMI)
+PLUS (Picture Licensing Universal System).
+
+Telecommunications[edit]
+Information on the times, origins and destinations of phone calls, electronic messages, instant messages and other modes of telecommunication, as opposed to message content, is another form of metadata. Bulk collection of this call detail record metadata by intelligence agencies has proven controversial after disclosures by Edward Snowden.
+Video[edit]
+Metadata is particularly useful in video, where information about its contents (such as transcripts of conversations and text descriptions of its scenes) is not directly understandable by a computer, but where efficient search is desirable.
+Web pages[edit]
+Web pages often include metadata in the form of meta tags. Description and keywords in meta tags are commonly used to describe the Web page's content. Most search engines use these data when adding pages to their search index.
+Creation[edit]
+Metadata can be created either by automated information processing or by manual work. Elementary metadata captured by computers can include information about when an object was created, who created it, when it was last updated, file size, and file extension.
+For the purposes of this article, an "object" refers to any of the following:
+
+A physical item such as a book, CD, DVD, map, chair, table, flower pot, etc.
+An electronic file such as a digital image, digital photo, document, program file, database table, etc.
+
+Metadata types[edit]
+While the metadata application is manyfold covering a large variety of fields, there are specialised and well-accepted models to specify types of metadata. Bretherton &amp; Singley (1994) distinguish between two distinct classes: structural/control metadata and guide metadata.[11] Structural metadata is used to describe the structure of database objects such as tables, columns, keys and indexes. Guide metadata is used to help humans find specific items and is usually expressed as a set of keywords in a natural language. According to Ralph Kimball metadata can be divided into 2 similar categories: technical metadata and business metadata. Technical metadata corresponds to internal metadata, and business metadata corresponds to external metadata. Kimball adds a third category named process metadata. On the other hand, NISO distinguishes among three types of metadata: descriptive, structural, and administrative.[8]
+Descriptive metadata is typically used for discovery and identification, as information used to search and locate an object such as title, author, subjects, keywords, publisher. Structural metadata gives a description of how the components of an object are organized. An example of structural metadata would be how pages are ordered to form chapters of a book. Finally, administrative metadata gives information to help manage the source. It refers to the technical information including file type or when and how the file was created. Two sub-types of administrative metadata are rights management metadata and preservation metadata. Rights management metadata explain intellectual property rights, while preservation metadata contains information that is needed to preserve and save a resource.[2]
+Metadata structures[edit]
+Metadata (metacontent), or more correctly, the vocabularies used to assemble metadata (metacontent) statements, are typically structured according to a standardized concept using a well-defined metadata scheme, including: metadata standards and metadata models. Tools such as controlled vocabularies, taxonomies, thesauri, data dictionaries, and metadata registries can be used to apply further standardization to the metadata. Structural metadata commonality is also of paramount importance in data model development and in database design.
+Metadata syntax[edit]
+Metadata (metacontent) syntax refers to the rules created to structure the fields or elements of metadata (metacontent).[12] A single metadata scheme may be expressed in a number of different markup or programming languages, each of which requires a different syntax. For example, Dublin Core may be expressed in plain text, HTML, XML, and RDF.[13]
+A common example of (guide) metacontent is the bibliographic classification, the subject, the Dewey Decimal class number. There is always an implied statement in any "classification" of some object. To classify an object as, for example, Dewey class number 514 (Topology) (i.e. books having the number 514 on their spine) the implied statement is: "&lt;book&gt;&lt;subject heading&gt;&lt;514&gt;. This is a subject-predicate-object triple, or more importantly, a class-attribute-value triple. The first two elements of the triple (class, attribute) are pieces of some structural metadata having a defined semantic. The third element is a value, preferably from some controlled vocabulary, some reference (master) data. The combination of the metadata and master data elements results in a statement which is a metacontent statement i.e. "metacontent = metadata + master data". All of these elements can be thought of as "vocabulary". Both metadata and master data are vocabularies which can be assembled into metacontent statements. There are many sources of these vocabularies, both meta and master data: UML, EDIFACT, XSD, Dewey/UDC/LoC, SKOS, ISO-25964, Pantone, Linnaean Binomial Nomenclature, etc. Using controlled vocabularies for the components of metacontent statements, whether for indexing or finding, is endorsed by ISO 25964: "If both the indexer and the searcher are guided to choose the same term for the same concept, then relevant documents will be retrieved."[this quote needs a citation] This is particularly relevant when considering search engines of the internet, such as Google. The process indexes pages then matches text strings using its complex algorithm; there is no intelligence or "inferencing" occurring, just the illusion thereof.
+Hierarchical, linear and planar schemata[edit]
+Metadata schema can be hierarchical in nature where relationships exist between metadata elements and elements are nested so that parent-child relationships exist between the elements. An example of a hierarchical metadata schema is the IEEE LOM schema where metadata elements may belong to a parent metadata element. Metadata schema can also be one-dimensional, or linear, where each element is completely discrete from other elements and classified according to one dimension only. An example of a linear metadata schema is Dublin Core schema which is one dimensional. Metadata schema are often two dimensional, or planar, where each element is completely discrete from other elements but classified according to two orthogonal dimensions.[14]
+Metadata hypermapping[edit]
+In all cases where the metadata schemata exceed the planar depiction, some type of hypermapping is required to enable display and view of metadata according to chosen aspect and to serve special views. Hypermapping frequently applies to layering of geographical and geological information overlays.[15]
+Granularity[edit]
+The degree to which the data or metadata is structured is referred to as their granularity. Metadata with a high granularity allow for deeper structured information and enable greater levels of technical manipulation. A lower level of granularity means that metadata can be created for considerably lower costs but will not provide as detailed information. The major impact of granularity is not only on creation and capture, but moreover on maintenance. As soon as the metadata structures get outdated, the access to the referred data will get outdated. Hence granularity shall take into account the effort to create as well as the effort to maintain.
+Metadata standards[edit]
+International standards apply to metadata. Much work is being accomplished in the national and international standards communities, especially ANSI (American National Standards Institute) and ISO (International Organization for Standardization) to reach consensus on standardizing metadata and registries.
+The core metadata registry standard is ISO/IEC 11179 Metadata Registries (MDR), the framework for the standard is described in ISO/IEC 11179-1:2004.[16] A new edition of Part 1 is in its final stage for publication in 2015 or early 2016. It has been revised to align with the current edition of Part 3, ISO/IEC 11179-3:2013 [17] which extends the MDR to support registration of Concept Systems. (see ISO/IEC 11179). This standard specifies a schema for recording both the meaning and technical structure of the data for unambiguous usage by humans and computers. This standard refers to metadata as information objects about data, or "data about data". In ISO/IEC 11179 Part-3, the information objects are data about Data Elements, Value Domains, and other reusable semantic and representational information objects that describe the meaning and technical details of a data item. It also prescribes the details for a metadata registry, and for registering and administering the information objects within a Metadata Registry. ISO/IEC 11179 Part 3 also has provisions for describing compound structures that are derivations of other data elements, for example through calculations, collections of one or more data elements, or other forms of derived data. It should also be noted that while this standard describes itself originally as a "data element" registry, its purpose is to support describing and registering metadata content independently of any particular application, lending the descriptions to being discovered and reused by humans or computers in developing new applications, databases, or for analysis of data collected in accordance with the registered metadata content. It is important to note that this standard has become the general basis for other kinds of metadata registries, reusing and extending the registration and administration portion of the standard.
+The Dublin Core metadata terms are a set of vocabulary terms which can be used to describe resources for the purposes of discovery. The original set of 15 classic [18] metadata terms, known as the Dublin Core Metadata Element Set [19] are endorsed in the following standards documents:
+
+IETF RFC 5013 [20]
+ISO Standard 15836-2009 [21]
+NISO Standard Z39.85.[22]
+
+Although not a standard, Microformat (also mentioned in the section metadata on the internet below) is a web-based approach to semantic markup which seeks to re-use existing HTML/XHTML tags to convey metadata. Microformat follows XHTML and HTML standards but is not a standard in itself. One advocate of microformats, Tantek Çelik, characterized a problem with alternative approaches:
+
+
+“
+Here's a new language we want you to learn, and now you need to output these additional files on your server. It's a hassle. (Microformats) lower the barrier to entry.[23]
+”
+
+
+Metadata usage[edit]
+Data virtualization[edit]
+Main article: Data virtualization
+Data virtualization has emerged as the new software technology to complete the virtualization stack in the enterprise. Metadata are used in data virtualization servers which are enterprise infrastructure components, alongside database and application servers. Metadata in these servers are saved as persistent repository and describe business objects in various enterprise systems and applications. Structural metadata commonality is also important to support data virtualization.
+Statistics and census services[edit]
+Standardization work has had a large impact on efforts to build metadata systems in the statistical community[citation needed]. Several metadata standards[which?] are described, and their importance to statistical agencies is discussed. Applications of the standards[which?] at the Census Bureau, Environmental Protection Agency, Bureau of Labor Statistics, Statistics Canada, and many others are described[citation needed]. Emphasis is on the impact a metadata registry can have in a statistical agency.
+Library and information science[edit]
+Libraries employ metadata in library catalogues, most commonly as part of an Integrated Library Management System. Metadata are obtained by cataloguing resources such as books, periodicals, DVDs, web pages or digital images. These data are stored in the integrated library management system, ILMS, using the MARC metadata standard. The purpose is to direct patrons to the physical or electronic location of items or areas they seek as well as to provide a description of the item/s in question.
+More recent and specialized instances of library metadata include the establishment of digital libraries including e-print repositories and digital image libraries. While often based on library principles, the focus on non-librarian use, especially in providing metadata, means they do not follow traditional or common cataloging approaches. Given the custom nature of included materials, metadata fields are often specially created e.g. taxonomic classification fields, location fields, keywords or copyright statement. Standard file information such as file size and format are usually automatically included.[24]
+Standardization for library operation has been a key topic in international standardization (ISO) for decades. Standards for metadata in digital libraries include Dublin Core, METS, MODS, DDI, ISO standard Digital Object Identifier (DOI), ISO standard Uniform Resource Name (URN), PREMIS schema, Ecological Metadata Language, and OAI-PMH. Leading libraries in the world give hints on their metadata standards strategies.[25][26]
+Metadata and the law[edit]
+United States of America[edit]
+
+
+
+
+
+The examples and perspective in this section may not represent a worldwide view of the subject. Please improve this article and discuss the issue on the talk page. (March 2015)
+
+
+Problems involving metadata in litigation in the United States are becoming widespread.[when?] Courts have looked at various questions involving metadata, including the discoverability of metadata by parties. Although the Federal Rules of Civil Procedure have only specified rules about electronic documents, subsequent case law has elaborated on the requirement of parties to reveal metadata.[27] In October 2009, the Arizona Supreme Court has ruled that metadata records are public record.[28]
+Document metadata has proven particularly important in legal environments in which litigation has requested metadata, which can include sensitive information detrimental to a party in court.
+Using metadata removal tools to "clean" documents can mitigate the risks of unwittingly sending sensitive data. This process partially (see data remanence) protects law firms from potentially damaging leaking of sensitive data through electronic discovery.
+Australia[edit]
+In Australia the need to strengthen National Security has resulted in the introduction of New Metadata Storage Law[29] This new law means that both security and policing agencies will be allowed to access up to two years of an individuals metadata, to supposedly make it easier to stop any terrorist attacks and serious crimes from happening.
+At the moment the Law doesn't allow access to content of peoples messages, phone calls or email and web-browsing history but it would not take much to change or find a reason to allow access.
+Metadata in healthcare[edit]
+Australian researches in medicine started a lot of metadata definition for applications in health care. That approach offers the first recognized attempt to adhere to international standards in medical sciences instead of defining a proprietary standard under the WHO umbrella first.
+The medical community yet did not approve the need to follow metadata standards despite respective research.[30]
+Metadata and data warehousing[edit]
+Data warehouse (DW) is a repository of an organization's electronically stored data. Data warehouses are designed to manage and store the data whereas the business intelligence (BI) focuses on the usage of the data to facilitate reporting and analysis.[31] Metadata is an important tool in how data is stored in data warehouses.
+The purpose of a data warehouse is to house standardized, structured, consistent, integrated, correct, cleansed and timely data, extracted from various operational systems in an organization. The extracted data are integrated in the data warehouse environment in order to provide an enterprise wide perspective, one version of the truth. Data are structured in a way to specifically address the reporting and analytic requirements. The design of structural metadata commonality using a data modeling method such as entity relationship model diagramming is very important in any data warehouse development effort. They detail metadata on each piece of data within the data warehouse.
+An essential component of a data warehouse/business intelligence system is the metadata and tools to manage and retrieve the metadata. Ralph Kimball[32] describes metadata as the DNA of the data warehouse as metadata defines the elements of the data warehouse and how they work together.
+Kimball et al.[33] refers to three main categories of metadata: Technical metadata, business metadata and process metadata. Technical metadata are primarily definitional, while business metadata and process metadata are primarily descriptive. Keep in mind that the categories sometimes overlap.
+
+Technical metadata define the objects and processes in a DW/BI system, as seen from a technical point of view. The technical metadata includes the system metadata which defines the data structures such as: tables, fields, data types, indexes and partitions in the relational engine, and databases, dimensions, measures, and data mining models. Technical metadata defines the data model and the way it is displayed for the users, with the reports, schedules, distribution lists, and user security rights.
+
+
+Business metadata is a content from the data warehouse described in more user-friendly terms. The business metadata tell you what data you have, where they come from, what they mean and what their relationship is to other data in the data warehouse. Business metadata may also serve as a documentation for the DW/BI system. Users who browse the data warehouse are primarily viewing the business metadata.
+
+
+Process metadata is used to describe the results of various operations in the data warehouse. Within the ETL process, all key data from tasks are logged on execution. This includes start time, end time, CPU seconds used, disk reads, disk writes, and rows processed. When troubleshooting the ETL or query process, this sort of data becomes valuable. Process metadata are the fact measurement when building and using a DW/BI system. Some organizations make a living out of collecting and selling this sort of data to companies - in that case the process metadata becomes the business metadata for the fact and dimension tables. Collecting process metadata is in the interest of business people who can use the data to identify the users of their products, which products they are using, and what level of service they are receiving.
+
+Metadata on the Internet[edit]
+The HTML format used to define web pages allows for the inclusion of a variety of types of metadata, from basic descriptive text, dates and keywords to further advanced metadata schemes such as the Dublin Core, e-GMS, and AGLS[34] standards. Pages can also be geotagged with coordinates. Metadata may be included in the page's header or in a separate file. Microformats allow metadata to be added to on-page data in a way that users do not see, but computers can readily access.
+Interestingly, many search engines are cautious about using metadata in their ranking algorithms due to exploitation of metadata and the practice of search engine optimization, SEO, to improve rankings. See Meta element article for further discussion. This cautious attitude may be justified as people, according to Doctorow,[35] are not executing care and diligence when creating their own metadata and that metadata is part of a competitive environment where the metadata is used to promote the metadata creators own purposes. Studies show that search engines respond to web pages with metadata implementations,[36] and Google has an announcement on its site showing the meta tags that its search engine understands.[37] Enterprise search startup Swiftype recognizes metadata as a relevance signal that webmasters can implement for their website-specific search engine, even releasing their own extension, known as Meta Tags 2.[38]
+Metadata in the broadcast industry[edit]
+In broadcast industry, metadata is linked to audio and video Broadcast media to:
+
+identify the media: clip or playlist names, duration, timecode, etc.
+describe the content: notes regarding the quality of video content, rating, description (for example, during a sport event, keywords like goal, red card will be associated to some clips)
+classify media: metadata allow to sort the media or to easily and quickly find a video content (a TV news could urgently need some archive content for a subject). For example, the BBC have a large subject classification system, Lonclass, a customized version of the more general-purpose Universal Decimal Classification.
+
+This metadata can be linked to the video media thanks to the video servers. Most major broadcast sport events like FIFA World Cup or the Olympic Games use these metadata to distribute their video content to TV stations through keywords. It is often the host broadcaster[39] who is in charge of organizing metadata through its International Broadcast Centre and its video servers. Those metadata are recorded with the images and are entered by metadata operators (loggers) who associate in live metadata available in metadata grids through software (such as Multicam(LSM) or IPDirector used during the FIFA World Cup or Olympic Games).[40][41]
+Geospatial metadata[edit]
+Metadata that describe geographic objects (such as datasets, maps, features, or simply documents with a geospatial component) have a history dating back to at least 1994 (refer MIT Library page on FGDC Metadata). This class of metadata is described more fully on the Geospatial metadata page.
+Ecological and environmental metadata[edit]
+Ecological and environmental metadata are intended to document the who, what, when, where, why, and how of data collection for a particular study. Metadata should be generated in a format commonly used by the most relevant science community, such as Darwin Core, Ecological Metadata Language,[42] or Dublin Core. Metadata editing tools exist to facilitate metadata generation (e.g. Metavist,[43] Mercury: Metadata Search System, Morpho[44]). Metadata should describe provenance of the data (where they originated, as well as any transformations the data underwent) and how to give credit for (cite) the data products.
+Digital music[edit]
+When audio went from analogue to digital, it became possible to label audio files with more information than could be contained in just the file name. That descriptive information is called audio tag or audio metadata in general. Computer programs specialized in adding or modifying this information are called tag editors.
+Metadata can be used to name, describe, catalogue and indicate ownership or copyright for a digital audio file, and its presence makes it much easier to locate a specific audio file within a group – through use of a search engine that accesses the metadata. As different digital audio formats were developed, it was agreed that a standardized and specific location would be set aside within the digital files where this information could be stored.
+As a result, almost all digital audio formats, including mp3, broadcast wav and AIFF files, have similar standardized locations that can be populated with metadata.
+CDs such as recordings of music will carry a layer of metadata about the recordings such as dates, artist, genre, copyright owner, etc. The metadata, not normally displayed by CD players, can be accessed and displayed by specialized music playback and/or editing applications.
+The metadata for compressed and uncompressed digital music is often encoded in the ID3 tag. Common editors such as TagLib support MP3, Ogg Vorbis, FLAC, MPC, Speex, WavPack TrueAudio, WAV, AIFF, MP4, and ASF file formats.
+Cloud applications[edit]
+With the availability of Cloud applications, which include those to add metadata to content, metadata is increasingly available over the Internet.
+Metadata administration and management[edit]
+Metadata storage[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2010)
+
+
+Metadata can be stored either internally,[45] in the same file or structure as the data (this is also called embedded metadata), or externally, in a separate file or field from the described data. A data repository typically stores the metadata detached from the data, but can be designed to support embedded metadata approaches. Each option has advantages and disadvantages:
+
+Internal storage means metadata always travel as part of the data they describe; thus, metadata are always available with the data, and can be manipulated locally. This method creates redundancy (precluding normalization), and does not allow managing all of a system's metadata in one place. It arguably increases consistency, since the metadata is readily changed whenever the data is changed.
+External storage allows collocating metadata for all the contents, for example in a database, for more efficient searching and management. Redundancy can be avoided by normalizing the metadata's organization. In this approach, metadata can be united with the content when information is transferred, for example in Streaming media; or can be referenced (for example, as a web link) from the transferred content. On the down side, the division of the metadata from the data content, especially in standalone files that refer to their source metadata elsewhere, increases the opportunity for misalignments between the two, as changes to either may not be reflected in the other.
+
+Metadata can be stored in either human-readable or binary form. Storing metadata in a human-readable format such as XML can be useful because users can understand and edit it without specialized tools.[46] On the other hand, these formats are rarely optimized for storage capacity, communication time, and processing speed. A binary metadata format enables efficiency in all these respects, but requires special libraries to convert the binary information into human-readable content.
+Database management[edit]
+Each relational database system has its own mechanisms for storing metadata. Examples of relational-database metadata include:
+
+Tables of all tables in a database, their names, sizes, and number of rows in each table.
+Tables of columns in each database, what tables they are used in, and the type of data stored in each column.
+
+In database terminology, this set of metadata is referred to as the catalog. The SQL standard specifies a uniform means to access the catalog, called the information schema, but not all databases implement it, even if they implement other aspects of the SQL standard. For an example of database-specific metadata access methods, see Oracle metadata. Programmatic access to metadata is possible using APIs such as JDBC, or SchemaCrawler.[47]
+See also[edit]
+
+
+Agris: International Information System for the Agricultural Sciences and Technology
+Classification scheme
+Crosswalk (metadata)
+DataONE
+Data Dictionary (aka metadata repository)
+Dublin Core
+Folksonomy
+GEOMS – Generic Earth Observation Metadata Standard
+IPDirector
+ISO/IEC 11179
+Knowledge tag
+Mercury: Metadata Search System
+Meta element
+Metadata Access Point Interface
+Metadata discovery
+Metadata facility for Java
+Metadata from Wikiversity
+Metadata publishing
+Metadata registry
+Metamathematics
+METAFOR Common Metadata for Climate Modelling Digital Repositories
+Microcontent
+Microformat
+Multicam (LSM)
+Ontology (computer science)
+Official statistics
+Paratext
+Preservation Metadata
+SDMX
+Semantic Web
+SGML
+The Metadata Company
+Universal Data Element Framework
+Vocabulary OneSource
+XSD
+
+
+References[edit]
+
+
+^ http://www.merriam-webster.com/dictionary/metadata
+^ a b National Information Standards Organization; Rebecca Guenther; Jaqueline Radebaugh (2004). Understanding Metadata (PDF). Bethesda, MD: NISO Press. ISBN&#160;1-880124-62-9. Retrieved 2 April 2014.&#160;
+^ "ADEO Imaging: TIFF Metadata". Retrieved 2013-05-20.&#160;
+^ Hüner, K.; Otto, B.; Österle, H.: Collaborative management of business metadata, in: International Journal of Information Management, 2011
+^ "Metadata Standards And Metadata Registries: An Overview" (PDF). Retrieved 2011-12-23.&#160;
+^ Philip Bagley (Nov 1968), Extension of programming language concepts (PDF), Philadelphia: University City Science Center&#160;
+^ "The notion of "metadata" introduced by Bagley". Solntseff, N+1; Yezerski, A (1974), A survey of extensible programming languages, Annual Review in Automatic Programming 7, Elsevier Science Ltd, pp.&#160;267–307, doi:10.1016/0066-4138(74)90001-9&#160;
+^ a b NISO. Understanding Metadata (PDF). NISO Press. ISBN&#160;1-880124-62-9. Retrieved 5 January 2010.&#160;
+^ National Archives of Australia (2002). "AGLS Metadata Element Set - Part 2: Usage Guide - A non-technical guide to using AGLS metadata for describing resources". Retrieved 17 March 2010.&#160;
+^ Rutter, Chris. "What is metadata: copyright photos in 4 steps". Digital Camera Magazine. Future Publishing.&#160;
+^ Bretherton, F. P.; Singley, P.T. (1994). Metadata: A User's View, Proceedings of the International Conference on Very Large Data Bases (VLDB). pp.&#160;1091–1094.&#160;
+^ Cathro, Warwick (1997). "Metadata: an overview". Retrieved 6 January 2010.&#160;
+^ DCMI (5 Oct 2009). "Semantic Recommendations". Retrieved 6 January 2010.&#160;
+^ "Types of Metadata". University of Melbourne. 15 August 2006. Archived from the original on 2009-10-24. Retrieved 6 January 2010.&#160;
+^ Kübler, Stefanie; Skala, Wolfdietrich; Voisard, Agnès. "THE DESIGN AND DEVELOPMENT OF A GEOLOGIC HYPERMAP PROTOTYPE" (PDF).&#160;
+^ "ISO/IEC 11179-1:2004 Information technology - Metadata registries (MDR) - Part 1: Framework". Iso.org. 2009-03-18. Retrieved 2011-12-23.&#160;
+^ "ISO/IEC 11179-3:2013 Information technology-Metadata registries - Part 3: Registry metamodel and basic attributes". iso.org. 2014. Retrieved 2-15-08-22.&#160; Check date values in: |access-date= (help)
+^ "DCMI Specifications". Dublincore.org. 2009-12-14. Retrieved 2013-08-17.&#160;
+^ "Dublin Core Metadata Element Set, Version 1.1". Dublincore.org. Retrieved 2013-08-17.&#160;
+^ J. Kunze, T. Baker (2007). "The Dublin Core Metadata Element Set". ietf.org. Retrieved 17 August 2013.&#160;
+^ "ISO 15836:2009 - Information and documentation - The Dublin Core metadata element set". Iso.org. 2009-02-18. Retrieved 2013-08-17.&#160;
+^ "NISO Standards - National Information Standards Organization". Niso.org. 2007-05-22. Retrieved 2013-08-17.&#160;
+^ "What’s the Next Big Thing on the Web? It May Be a Small, Simple Thing -- Microformats". Knowledge@Wharton. Wharton School of the University of Pennsylvania. 2005-07-27.&#160;
+^ Solodovnik, Iryna (2011). "Metadata issues in Digital Libraries: key concepts and perspectives". JLIS.it (University of Florence) 2 (2). doi:10.4403/jlis.it-4663. Retrieved 29 June 2013.&#160;
+^ Library of Congress Network Development and MARC Standards Office (2005-09-08). "Library of Congress Washington DC on metadata". Loc.gov. Retrieved 2011-12-23.&#160;
+^ "Deutsche Nationalbibliothek Frankfurt on metadata".&#160;
+^ Gelzer, Reed D. (February 2008). "Metadata, Law, and the Real World: Slowly, the Three Are Merging" 79 (2). American Health Information Management Association. pp.&#160;56–57, 64. Retrieved 8 January 2010.&#160;
+^ Walsh, Jim (30 October 2009). "Ariz. Supreme Court rules electronic data is public record". The Arizona Republic (Arizona, United States). Retrieved 8 January 2010.&#160;
+^ Senate passes controversial metadata laws
+^ M. Löbe, M. Knuth, R. Mücke TIM: A Semantic Web Application for the Specification of Metadata Items in Clinical Research, CEUR-WS.org, urn:nbn:de:0074-559-9
+^ Inmon, W.H. Tech Topic: What is a Data Warehouse? Prism Solutions. Volume 1. 1995.
+^ Kimball, Ralph (2008). The Data Warehouse Lifecycle Toolkit (Second ed.). New York: Wiley. pp.&#160;10, 115–117, 131–132, 140, 154–155. ISBN&#160;978-0-470-14977-5.&#160;
+^ Kimball 2008, pp.&#160;116–117
+^ National Archives of Australia, AGLS Metadata Standard, accessed 7 January 2010, [1]
+^ Metacrap: Putting the torch to seven straw-men of the meta-utopia http://www.well.com/~doctorow/metacrap.htm
+^ The impact of webpage content characteristics on webpage visibility in search engine results http://web.simmons.edu/~braun/467/part_1.pdf
+^ "Meta tags that Google understands". Google.com. Retrieved 2014-05-22.&#160;
+^ "Meta Tags 2 | Swiftype". Swiftype. 3-10-2014. Retrieved 3-10-2014.&#160; Check date values in: |access-date=, |date= (help)
+^ "HBS is the FIFA host broadcaster". Hbs.tv. 2011-08-06. Retrieved 2011-12-23.&#160;
+^ "Host Broadcast Media Server and Related Applications" (PDF). Retrieved 2013-08-17.&#160;
+^ "logs during sport events". Broadcastengineering.com. Retrieved 2011-12-23.&#160;
+^ [2][dead link]
+^ "Metavist 2". Metavist.djames.net. Retrieved 2011-12-23.&#160;
+^ "KNB Data&#160;:: Morpho". Knb.ecoinformatics.org. 2009-05-20. Retrieved 2011-12-23.&#160;
+^ Dan O'Neill. "ID3.org".&#160;
+^ De Sutter, Robbie; Notebaert, Stijn; Van de Walle, Rik (Sep 2006), "Evaluation of Metadata Standards in the Context of Digital Audio-Visual Libraries", in Gonzalo, Julio; Thanos, Constantino; Verdejo, M. Felisa; et al., Research and Advanced Technology for Digital Libraries: 10th European Conference, EDCL 2006, Springer, p.&#160;226, ISBN&#160;978-3540446361&#160; |display-editors= suggested (help)
+^ Sualeh Fatehi. "SchemaCrawler". SourceForge.&#160;
+
+
+External links[edit]
+
+
+
+
+
+This article's use of external links may not follow Wikipedia's policies or guidelines. Please improve this article by removing excessive or inappropriate external links, and converting useful links where appropriate into footnote references. (August 2013)
+
+
+
+
+
+Look up metadata in Wiktionary, the free dictionary.
+
+
+
+[3], The Meaning of Metadata, written by Mark Baker
+[4], How is Metadata Used?, MSDN Library
+Mercury: Metadata Management, Data Discovery and Access, managed by Oak Ridge National Laboratory Distributed Active Archive Center
+Guardian US interactive team. "A Guardian guide to your Metadata." The Guardian. Wednesday 12 June 2013.
+Metacrap: Putting the torch to seven straw-men of the meta-utopia – Cory Doctorow's opinion on the limitations of metadata on the Internet, 2001
+Retrieving Meta Data from Documents and Pictures Online - AnonWatch
+Understanding Metadata - NISO, 2004
+DataONE Investigator Toolkit
+Journal of Library Metadata, Routledge, Taylor &amp; Francis Group, ISSN 1937-5034
+International Journal of Metadata, Semantics and Ontologies (IJMSO), Inderscience Publishers, ISSN 1744-263X
+AFC2IC Vocabulary OneSource Tool
+Metadata and metacontent at the Wayback Machine (archived January 26, 2013) (PDF, archived version)
+Managing Metadata blog
+What is Metadata
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software engineering
+
+
+
+
+
+
+Fields
+
+
+
+Computer programming
+Requirements engineering
+Software deployment
+Software design
+Software maintenance
+Software testing
+Systems analysis
+Formal methods
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Data modeling
+Enterprise architecture
+Functional specification
+Modeling language
+Orthogonality
+Programming paradigm
+Software
+Software archaeology
+Software architecture
+Software configuration management
+Software development methodology
+Software development process
+Software quality
+Software quality assurance
+Software verification and validation
+Structured analysis
+
+
+
+
+
+
+
+
+Orientations
+
+
+
+Agile
+Aspect-oriented
+Object orientation
+Ontology
+Service orientation
+SDLC
+
+
+
+
+
+
+
+
+Models
+
+
+
+
+
+Developmental
+
+
+
+
+Agile
+EUP
+Executable UML
+Incremental model
+Iterative model
+Prototype model
+RAD
+UP
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+SPICE
+CMMI
+Data model
+ER model
+Function model
+Information model
+Metamodeling
+Object model
+Systems model
+View model
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+IDEF
+UML
+SysML
+
+
+
+
+
+
+
+
+
+
+
+
+Software
+engineers
+
+
+
+
+Kent Beck
+Grady Booch
+Fred Brooks
+Barry Boehm
+Ward Cunningham
+Tom DeMarco
+Edsger W. Dijkstra
+Martin Fowler
+C. A. R. Hoare
+Watts Humphrey
+Michael A. Jackson
+Ivar Jacobson
+Stephen J. Mellor
+Bertrand Meyer
+David Parnas
+Winston W. Royce
+James Rumbaugh
+Niklaus Wirth
+Edward Yourdon
+Victor Basili
+
+
+
+
+
+
+
+
+Related fields
+
+
+
+Computer science
+Computer engineering
+Project management
+Risk management
+Systems engineering
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data warehouse
+
+
+
+
+
+
+
+
+
+
+&#160;
+Creating the data warehouse
+
+
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Database
+Dimension
+Dimensional modeling
+Fact
+OLAP
+Star schema
+Aggregate
+
+
+
+
+
+
+
+
+Variants
+
+
+
+Anchor Modeling
+Column-oriented DBMS
+Data Vault Modeling
+HOLAP
+MOLAP
+ROLAP
+Operational data store
+
+
+
+
+
+
+
+
+Elements
+
+
+
+Data dictionary/Metadata
+Data mart
+Sixth normal form
+Surrogate key
+
+
+
+
+
+
+
+
+Fact
+
+
+
+Fact table
+Early-arriving fact
+Measure
+
+
+
+
+
+
+
+
+Dimension
+
+
+
+Dimension table
+Degenerate
+Slowly changing
+
+
+
+
+
+
+
+
+Filling
+
+
+
+Extract-Transform-Load (ETL)
+Extract
+Transform
+Load
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Using the data warehouse
+
+
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Business intelligence
+Dashboard
+Data mining
+Decision support system (DSS)
+OLAP cube
+
+
+
+
+
+
+
+
+Languages
+
+
+
+Data Mining Extensions (DMX)
+MultiDimensional eXpressions (MDX)
+XML for Analysis (XMLA)
+
+
+
+
+
+
+
+
+Tools
+
+
+
+Business intelligence tools
+Reporting software
+Spreadsheet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Related
+
+
+
+
+
+
+
+
+
+
+People
+
+
+
+Bill Inmon
+Ralph Kimball
+
+
+
+
+
+
+
+
+Products
+
+
+
+Comparison of OLAP Servers
+Data warehousing products and their producers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+LCCN: sh96000740
+GND: 4410512-5
+NDL: 00981806
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Metadata&amp;oldid=691567506"					
+				Categories: Data managementKnowledge representationLibrary cataloging and classificationMetadataTechnical communicationBusiness intelligenceHidden categories: CS1 errors: datesAll articles with dead external linksArticles with dead external links from August 2013Pages using citations with old-style implicit et al. in editorsWikipedia indefinitely move-protected pagesArticles with unsourced quotesAll articles with unsourced statementsArticles with unsourced statements from May 2013All articles with specifically marked weasel-worded phrasesArticles with specifically marked weasel-worded phrases from May 2013Articles with limited geographic scope from March 2015Vague or ambiguous time from February 2011Articles needing additional references from June 2010All articles needing additional referencesWikipedia external links cleanup from August 2013Wikipedia spam cleanup from August 2013Wikipedia articles with LCCN identifiersWikipedia articles with GND identifiers				
+							
+		
+		
+			

@@ -1,0 +1,482 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Type conversion
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For the aviation licensing process, see Type conversion (aviation).
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (May 2011)
+
+
+In computer science, type conversion, typecasting, and coercion are different ways of, implicitly or explicitly, changing an entity of one data type into another. This is done to take advantage of certain features of type hierarchies or type representations. One example would be small integers, which can be stored in a compact format and converted to a larger representation when used in arithmetic computations. In object-oriented programming, type conversion allows programs to treat objects of one type as one of their ancestor types to simplify interacting with them.
+Each programming language has its own rules on how types can be converted. In general, both objects and fundamental data types can be converted. In most languages, the word coercion is used to denote an implicit conversion, either during compilation or during run time. A typical example would be an expression mixing integer and floating point numbers (like 5 + 0.1), where the integers are normally converted into the latter. Explicit type conversions can either be performed via built-in routines (or a special syntax) or via separately defined conversion routines such as an overloaded object constructor.
+In most ALGOL-based languages with nested function definitions, such as Ada, Delphi, Modula-2 and Pascal, conversion and casting are distinctly different concepts. In these languages, conversion refers to either implicitly or explicitly changing a value from one data type to another, e.g. a 16-bit integer to a 32-bit integer. The storage requirements may change as a result of the conversion. A loss of precision or truncation may also occur. The word cast, on the other hand, refers to explicitly changing the interpretation of the bit pattern representing a value from one type to another. For example 32 contiguous bits may be treated as an array of 32 booleans, a 4-byte string, an unsigned 32-bit integer or an IEEE single precision floating point value. While the storage requirements are never changed, it still requires knowledge of low level details such as representation format, byte order, and alignment requirements in order to be meaningful.
+In the C family of languages and ALGOL 68, the word cast typically refers to an explicit type conversion (as opposed to an implicit conversion), regardless of whether this is a re-interpretation of a bit-pattern or a real conversion.
+
+
+
+Contents
+
+
+1 C-like languages
+
+1.1 Implicit type conversion
+
+1.1.1 Type promotion
+
+
+1.2 Explicit type conversion
+
+1.2.1 Using overloaded object constructor
+
+
+
+
+2 C#
+3 Eiffel
+
+3.1 Definition of type conversion in Eiffel
+3.2 Example
+
+
+4 See also
+5 References
+6 External links
+
+
+
+C-like languages[edit]
+Implicit type conversion[edit]
+Implicit type conversion, also known as coercion, is an automatic type conversion by the compiler. Some languages allow compilers to provide coercion; others require it.
+In a mixed-type expression, data of one or more subtypes can be converted to a supertype as needed at runtime so that the program will run correctly. For example, the following is legal C language code:
+
+
+double  d;
+long    l;
+int     i;
+
+if (d &gt; i)   d = i;
+if (i &gt; l)   l = i;
+if (d == l)  d *= 2;
+
+Although d, l and i belong to different data types, they will be automatically converted to equal data types each time a comparison or assignment is executed. This behavior should be used with caution, as unintended consequences can arise. Data can be lost when floating-point representations are converted to integer representations as the fractional components of the floating-point values will be truncated (rounded towards zero). Conversely, converting from an integer representation to a floating-point one can also lose precision, since the floating-point type may be unable to represent the integer exactly (for example, float might be an IEEE 754 single precision type, which cannot represent the integer 16777217 exactly, while a 32-bit integer type can). This can lead to unintuitive behavior, as demonstrated by the following code:
+
+
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int i_value   = 16777217;
+    float f_value = 16777216.0;
+    printf("The integer is: %d\n", i_value);
+    printf("The float is:   %f\n", f_value);
+    printf("Their equality: %d\n", i_value == f_value);
+}
+
+On compilers that implement floats as IEEE single precision, and ints as at least 32 bits, this code will give this peculiar print-out:
+
+
+    The integer is: 16777217
+    The float is: 16777216.000000
+    Their equality: 1
+
+Note that 1 represents equality in the last line of the print-out. This odd behavior is caused by an implicit conversion of i_value to float when it is compared with f_value. The conversion causes loss of precision, which makes the values equal before the comparison.
+Important takeaways:
+
+float to int causes truncation, i.e. removal of the fractional part;
+double to float causes rounding of digit;
+long long to int causes dropping of excess higher order bits.
+
+Type promotion[edit]
+One special case of implicit type conversion is type promotion, where the compiler automatically expands the binary representation of objects of integer or floating-point types. Promotions are commonly used with types smaller than the native type of the target platform's ALU prior to arithmetic and logical operations in order to make such operations possible, or more efficient if the ALU can work with more than one type. C and C++ perform such promotion for objects of boolean, character, wide character, enumeration, and short integer types which are promoted to int, and for objects of type float, which are promoted to double. Unlike some other type conversions, promotions never lose precision or modify the value stored in the object.
+In Java:
+
+
+int x = 3;
+double y = 3.5;
+System.out.println(x+y); //The output will be 6.5
+
+Explicit type conversion[edit]
+Explicit type conversion is a type conversion which is explicitly defined within a program (instead of being done by a compiler for implicit type conversion).
+
+
+double da = 3.3;
+double db = 3.3;
+double dc = 3.4;
+int result = (int)da + (int)db + (int)dc; //result == 9
+//if implicit conversion would be used (as with "result = da + db + dc"), result would be equal to 10
+
+There are several kinds of explicit conversion.
+
+checked
+Before the conversion is performed, a runtime check is done to see if the destination type can hold the source value. If not, an error condition is raised.
+unchecked
+No check is performed. If the destination type cannot hold the source value, the result is undefined.
+bit pattern
+The raw bit representation of the source is copied verbatim, and it is re-interpreted according to the destination type. This can also be achieved via aliasing.
+
+In object-oriented programming languages, objects can also be downcast&#160;: a reference of a base class is cast to one of its derived classes.
+Using overloaded object constructor[edit]
+
+
+class Myclass {
+public:
+    double myD;
+    Myclass(double d) : myD(d) {};
+};
+
+int main(int argc, char *argv[])
+{
+    Myclass obj = 5.2; // here is the type conversion
+    return 0;
+}
+
+C#[edit]
+In C#, type conversion can be made in a safe or unsafe (i.e. C-like) manner, the former called checked type cast.[1]
+
+
+Animal animal = new Cat();
+
+Bulldog b = (Bulldog) animal;   // if (animal is Bulldog), stat.type(animal) is Bulldog, else an exception
+b = animal as Bulldog;          // if (animal is Bulldog), b = (Bulldog) animal, else b = null
+
+animal = null;
+b = animal as Bulldog;          // b == null
+
+Eiffel[edit]
+In Eiffel the notion of type conversion is integrated into the rules of the type system. The Assignment Rule says that an assignment, such as:
+
+
+ x := y
+
+is valid if and only if the type of its source expression, y in this case, is compatible with the type of its target entity, x in this case. In this rule, compatible with means that the type of the source expression either conforms to or converts to that of the target. Conformance of types is defined by the familiar rules for polymorphism in object-oriented programming. For example, in the assignment above, the type of y conforms to the type of x if the class upon which y is based is a descendant of that upon which x is based.
+Definition of type conversion in Eiffel[edit]
+The actions of type conversion in Eiffel, specifically converts to and converts from are defined as:
+
+A type based on a class CU converts to a type T based on a class CT (and T converts from U) if either
+
+CT has a conversion procedure using U as a conversion type, or
+CU has a conversion query listing T as a conversion type
+
+
+Example[edit]
+Eiffel is a fully compliant language for Microsoft .Net. Prior to the development of .Net, Eiffel was already equipped with an extensive class libraries. Using the .Net type libraries, particularly with commonly used types such as strings, poses a conversion problem. Existing Eiffel software uses the string classes (such as STRING_8) from the Eiffel libraries, but Eiffel software written for .Net must use the .Net string class (System.String) in many cases, for example when calling .Net methods which expect items of the .Net type to be passed as arguments. So, the conversion of these types back and forth needs to be as seamless as possible.
+
+
+    my_string: STRING_8                 -- Native Eiffel string
+    my_system_string: SYSTEM_STRING     -- Native Microsoft .Net string
+
+        ...
+
+            my_string := my_system_string
+
+In the code above, two strings are declared, one of each different type (SYSTEM_STRING is the Eiffel compliant alias for System.String). Because System.String does not conform to STRING_8, then the assignment above is valid only if System.String converts to STRING_8.
+The Eiffel class STRING_8 has a conversion procedure make_from_cil for objects of type System.String. Conversion procedures are also always designated as creation procedures (similar to constructors). The following is an excerpt from the STRING_8 class:
+
+
+    class STRING_8
+        ...
+    create
+        make_from_cil
+        ...
+    convert
+        make_from_cil ({SYSTEM_STRING})
+        ...
+
+The presence of the conversion procedure makes the assignment:
+
+
+            my_string := my_system_string
+
+semantically equivalent to:
+
+
+            create my_string.make_from_cil (my_system_string)
+
+in which my_string is constructed as a new object of type STRING_8 with content equivalent to that of my_system_string.
+To handle an assignment with original source and target reversed:
+
+
+            my_system_string := my_string
+
+the class STRING_8 also contains a conversion query to_cil which will produce a System.String from an instance of STRING_8.
+
+
+    class STRING_8
+        ...
+    create
+        make_from_cil
+        ...
+    convert
+        make_from_cil ({SYSTEM_STRING})
+        to_cil: {SYSTEM_STRING}
+        ...
+
+The assignment:
+
+
+            my_system_string := my_string
+
+then, becomes equivalent to:
+
+
+            my_system_string := my_string.to_cil
+
+In Eiffel, the setup for type conversion is included in the class code, but then appears to happen as automatically as explicit type conversion in client code. The includes not just assignments but other types of attachments as well, such as argument (parameter) substitution.
+See also[edit]
+
+Downcasting
+dynamic_cast
+Type punning
+
+References[edit]
+
+
+^ Mössenböck, Hanspeter (25 March 2002). "Advanced C#: Checked Type Casts" (PDF). Institut für Systemsoftware, Johannes Kepler Universität Linz, Fachbereich Informatik. p.&#160;5. Retrieved 4 August 2011.&#160; at C# Tutorial
+
+
+External links[edit]
+
+Casting in ABAP
+Casting in Ada
+Casting in C++
+Casting in Java
+Implicit Conversions in C#
+Implicit Type Casting at Cppreference.com
+Static and Reinterpretation castings in C++
+Upcasting and Downcasting
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Type_conversion&amp;oldid=675809166"					
+				Categories: Data typesOperators (programming)Type theoryHidden categories: Articles needing additional references from May 2011All articles needing additional referencesUse dmy dates from January 2012				
+							
+		
+		
+			

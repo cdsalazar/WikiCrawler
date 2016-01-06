@@ -1,0 +1,326 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Futures and promises
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer science, future, promise, and delay refer to constructs used for synchronization in some concurrent programming languages. They describe an object that acts as a proxy for a result that is initially unknown, usually because the computation of its value is yet incomplete.
+The term promise was proposed in 1976 by Daniel P. Friedman and David Wise,[1] and Peter Hibbard called it eventual.[2] A somewhat similar concept future was introduced in 1977 in a paper by Henry Baker and Carl Hewitt.[3]
+The terms future, promise, and delay are often used interchangeably, although some differences in usage between future and promise are treated below. Specifically, when usage is distinguished, a future is a read-only placeholder view of a variable, while a promise is a writable, single assignment container which sets the value of the future.[4] Notably, a future may be defined without specifying which specific promise will set its value, and different possible promises may set the value of a given future, though this can be done only once for a given future. In other cases a future and a promise are created together and associated with each other: the future is the value, the promise is the function that sets the value – essentially the return value (future) of an asynchronous function (promise). Setting the value of a future is also called resolving, fulfilling, or binding it.
+
+
+
+Contents
+
+
+1 Applications
+2 Implicit vs. explicit
+3 Promise pipelining
+4 Read-only views
+5 Thread-specific futures
+6 Blocking vs non-blocking semantics
+7 Related constructs
+8 Relations between the expressiveness of different forms of future
+9 Evaluation strategy
+10 Semantics of futures in the Actor model
+11 History
+12 List of implementations
+
+12.1 Coroutines
+12.2 Channels
+
+
+13 References
+14 External links
+
+
+
+Applications[edit]
+Futures and promises originated in functional programming and related paradigms (such as logic programming) to decouple a value (a future) from how it was computed (a promise), allowing the computation to be done more flexibly, notably by parallelizing it. It later found use in distributed computing, in reducing the latency from communication round trips. More recently, it has gained popularity by allowing writing asynchronous programs in direct style, rather than in continuation-passing style.
+Implicit vs. explicit[edit]
+Use of futures may be implicit (any use of the future automatically obtains its value, as if it were an ordinary reference) or explicit (the user must call a function to obtain the value, such as the get method of java.util.concurrent.Future in Java). Obtaining the value of an explicit future can be called stinging or forcing. Explicit futures can be implemented as a library, whereas implicit futures are usually implemented as part of the language.
+The original Baker and Hewitt paper described implicit futures, which are naturally supported in the Actor model of computation and pure object-oriented programming languages like Smalltalk. The Friedman and Wise paper described only explicit futures, probably reflecting the difficulty of efficiently implementing implicit futures on stock hardware. The difficulty is that stock hardware does not deal with futures for primitive data types like integers. For example, an add instruction does not know how to deal with 3 + future factorial(100000). In pure object or Actor languages this problem can be solved by sending future factorial(100000) the message +[3], which asks the future to add 3 to itself and return the result. Note that the message passing approach works regardless of when factorial(100000) finishes computation and that no stinging/forcing is needed.
+Promise pipelining[edit]
+The use of futures can dramatically reduce latency in distributed systems. For instance, futures enable promise pipelining,[5][6] as implemented in the languages E and Joule, which was also called call-stream in the language Argus.
+Consider an expression involving conventional remote procedure calls, such as:
+
+
+ t3 := ( x.a() ).c( y.b() )
+
+which could be expanded to
+
+
+ t1 := x.a();
+ t2 := y.b();
+ t3 := t1.c(t2);
+
+Each statement needs a message to be sent and a reply received before the next statement can proceed. Suppose, for example, that x, y, t1, and t2 are all located on the same remote machine. In this case, two complete network round-trips to that machine must take place before the third statement can begin to execute. The third statement will then cause yet another round-trip to the same remote machine.
+Using futures, the above expression could be written
+
+
+ t3 := (x &lt;- a()) &lt;- c(y &lt;- b())
+
+which could be expanded to
+
+
+ t1 := x &lt;- a();
+ t2 := y &lt;- b();
+ t3 := t1 &lt;- c(t2);
+
+The syntax used here is that of the language E, where x &lt;- a() means to send the message a() asynchronously to x. All three variables are immediately assigned futures for their results, and execution proceeds to subsequent statements. Later attempts to resolve the value of t3 may cause a delay; however, pipelining can reduce the number of round-trips needed. If, as in the previous example, x, y, t1, and t2 are all located on the same remote machine, a pipelined implementation can compute t3 with one round-trip instead of three. Because all three messages are destined for objects which are on the same remote machine, only one request need be sent and only one response need be received containing the result. Note also that the send t1 &lt;- c(t2) would not block even if t1 and t2 were on different machines to each other, or to x or y.
+Promise pipelining should be distinguished from parallel asynchronous message passing. In a system supporting parallel message passing but not pipelining, the message sends x &lt;- a() and y &lt;- b() in the above example could proceed in parallel, but the send of t1 &lt;- c(t2) would have to wait until both t1 and t2 had been received, even when x, y, t1, and t2 are on the same remote machine. The relative latency advantage of pipelining becomes even greater in more complicated situations involving many messages.
+Promise pipelining also should not be confused with pipelined message processing in Actor systems, where it is possible for an actor to specify and begin executing a behaviour for the next message before having completed processing of the current message.
+Read-only views[edit]
+In some programming languages such as Oz, E, and AmbientTalk, it is possible to obtain a read-only view of a future, which allows reading its value when resolved, but does not permit resolving it:
+
+In Oz, the !! operator is used to obtain a read-only view.
+In E and AmbientTalk, a future is represented by a pair of values called a promise/resolver pair. The promise represents the read-only view, and the resolver is needed in order to set the future's value.
+In C++11 a std::future provides a read-only view. The value is set directly by using a std::promise, or set to the result of a function call using std::packaged_task or std::async.
+In the Dojo Toolkit's Deferred API as of version 1.5, a consumer-only promise object represents a read-only view.[7]
+In Alice ML, futures only provide a read-only view, whereas a promise contains both a future and the ability to resolve the future[8][9]
+In .NET 4.0 System.Threading.Tasks.Task&lt;T&gt; represents a read-only view. Resolving the value can be done through System.Threading.Tasks.TaskCompletionSource&lt;T&gt;.
+
+Support for read-only views is consistent with the Principle of Least Authority, since it enables the ability to set the value to be restricted to subjects that need to set it. In a system that also supports pipelining, the sender of an asynchronous message (with result) receives the read-only promise for the result, and the target of the message receives the resolver.
+Thread-specific futures[edit]
+Some languages, such as Alice ML, define futures that are associated with a specific thread that computes the future's value.[9] This computation may be started either eagerly when the future is created, or lazily when its value is first needed. A lazy future is similar to a thunk (in the sense of a delayed computation).
+Alice ML also supports futures that can be resolved by any thread, and calls these promises.[8] Note that this usage of promise is different from its usage in E as described above: an Alice promise is not a read-only view, and Alice also does not support pipelining for promises themselves. Instead, pipelining naturally happens for futures (including ones associated with promises).
+Blocking vs non-blocking semantics[edit]
+If the value of a future is accessed asynchronously, for example by sending a message to it, or by explicitly waiting for it using a construct such as when in E, then there is no difficulty in delaying until the future is resolved before the message can be received or the wait completes. This is the only case to be considered in purely asynchronous systems such as pure Actor languages.
+However, in some systems it may also be possible to attempt to immediately or synchronously access a future's value. Then there is a design choice to be made:
+
+the access could block the current thread or process until the future is resolved (possibly with a timeout). This is the semantics of dataflow variables in the language Oz.
+the attempted synchronous access could always signal an error, for example throwing an exception. This is the semantics of remote promises in E.[10]
+potentially, the access could succeed if the future is already resolved, but signal an error if it is not. This would have the disadvantage of introducing nondeterminism and the potential for race conditions, and does not appear to be a common design choice.
+
+As an example of the first possibility, in C++11, a thread that needs the value of a future can block until it is available by calling the wait() or get() member functions. You can also specify a timeout on the wait using the wait_for() or wait_until() member functions to avoid indefinite blocking. If the future arose from a call to std::async then a blocking wait (without a timeout) may cause synchronous invocation of the function to compute the result on the waiting thread.
+Related constructs[edit]
+An I-var (as in the language Id) is a future with blocking semantics as defined above. An I-structure is a data structure containing I-vars. A related synchronization construct that can be set multiple times with different values is called an M-var. M-vars support atomic operations to take or put the current value, where taking the value also sets the M-var back to its initial empty state.[11]
+A concurrent logic variable is similar to a future, but is updated by unification, in the same way as logic variables in logic programming. Thus it can be bound more than once to unifiable values (but cannot be set back to an empty or unresolved state). The dataflow variables of Oz act as concurrent logic variables, and also have blocking semantics as mentioned above.
+A concurrent constraint variable is a generalization of concurrent logic variables to support constraint logic programming: the constraint may be narrowed multiple times, indicating smaller sets of possible values. Typically there is a way to specify a thunk that should be run whenever the constraint is narrowed further; this is necessary to support constraint propagation.
+Relations between the expressiveness of different forms of future[edit]
+Eager thread-specific futures can be straightforwardly implemented in terms of non-thread-specific futures, by creating a thread to calculate the value at the same time as creating the future. In this case it is desirable to return a read-only view to the client, so that only the newly created thread is able to resolve this future.
+To implement implicit lazy thread-specific futures (as provided by Alice ML, for example) in terms in non-thread-specific futures, needs a mechanism to determine when the future's value is first needed (for example, the WaitNeeded construct in Oz[12]). If all values are objects, then the ability to implement transparent forwarding objects is sufficient, since the first message sent to the forwarder indicates that the future's value is needed.
+Non-thread-specific futures can be implemented in terms of thread-specific futures, assuming that the system supports message passing, by having the resolving thread send a message to the future's own thread. However, this could be argued to be unnecessary complexity: in programming languages based on threads, the most expressive approach appears to be to provide a combination of non-thread-specific futures, read-only views, and either a 'WaitNeeded' construct or support for transparent forwarding.
+Evaluation strategy[edit]
+Further information: Call by future
+The evaluation strategy of futures, which may be termed call by future, is non-deterministic: the value of a future will be evaluated at some time between when the future is created and when its value is used, but the precise time is not determined beforehand and can change from run to run. The computation may be started as soon as the future is created (eager evaluation) or only when the value is actually needed (lazy evaluation), and may be suspended part-way through or executed in one run. Once the value of a future is assigned, it is not recomputed on future accesses; this is like the memoization used in call by need.
+A lazy future is a future that deterministically has lazy evaluation semantics: the computation of the future's value starts when the value is first needed, as in call by need. Lazy futures are of use in languages whose evaluation strategy is by default not lazy. For example, in C++11 such lazy futures can be created by passing the std::launch::deferred launch policy to std::async, along with the function to compute the value.
+Semantics of futures in the Actor model[edit]
+In the Actor model, an expression of the form future &lt;Expression&gt; is defined by how it responds to an Eval message with environment E and customer C as follows: The future expression responds to the Eval message by sending the customer C a newly created actor F (the proxy for the response of evaluating &lt;Expression&gt;) as a return value concurrently with sending &lt;Expression&gt; an Eval message with environment E and customer C. The default behavior of F is as follows:
+
+When F receives a request R, then it checks to see if it has already received a response (that can either be a return value or a thrown exception) from evaluating &lt;Expression&gt; proceeding as follows:
+
+If it already has a response V, then
+
+If V is a return value, then it is sent the request R.
+If V is an exception, then it is thrown to the customer of the request R.
+
+
+If it does not already have a response, then R is stored in the queue of requests inside the F.
+
+
+
+
+When F receives the response V from evaluating &lt;Expression&gt;, then V is stored in F and
+
+If V is a return value, then all of the queued requests are sent to V.
+If V is an exception, then it is thrown to the customer of each of the queued requests.
+
+
+
+However, some futures can deal with requests in special ways to provide greater parallelism. For example, the expression 1 + future factorial(n) can create a new future that will behave like the number 1+factorial(n). This trick does not always work. For example the following conditional expression:
+
+if m&gt;future factorial(n) then print("bigger") else print("smaller")
+
+suspends until the future for factorial(n) has responded to the request asking if m is greater than itself.
+History[edit]
+The future and/or promise constructs were first implemented in programming languages such as MultiLisp and Act 1. The use of logic variables for communication in concurrent logic programming languages was quite similar to futures. These started with Prolog with Freeze and IC Prolog, and became a true concurrency primitive with Relational Language, Concurrent Prolog, Guarded Horn Clauses (GHC), Parlog, Strand, Vulcan, Janus, Mozart/Oz, Flow Java, and Alice ML. The single-assignment I-var from dataflow programming languages, originating in Id and included in Reppy's Concurrent ML, is much like the concurrent logic variable.
+The promise pipelining technique (using futures to overcome latency) was invented by Barbara Liskov and Liuba Shrira in 1988,[13] and independently by Mark S. Miller, Dean Tribble and Rob Jellinghaus in the context of Project Xanadu circa 1989.[14]
+The term promise was coined by Liskov and Shrira, although they referred to the pipelining mechanism by the name call-stream, which is now rarely used.
+Both the design described in Liskov and Shrira's paper, and the implementation of promise pipelining in Xanadu, had the limitation that promise values were not first-class: an argument to, or the value returned by a call or send could not directly be a promise (so the example of promise pipelining given earlier, which uses a promise for the result of one send as an argument to another, would not have been directly expressible in the call-stream design or in the Xanadu implementation). It appears that promises and call-streams were never implemented in any public release of Argus[15] (the programming language used in the Liskov and Shrira paper); Argus development stopped around 1988.[16] The Xanadu implementation of promise pipelining only became publicly available with the release of the source code for Udanax Gold[17] in 1999, and was never explained in any published document.[18] The later implementations in Joule and E support fully first-class promises and resolvers.
+Several early Actor languages, including the Act series of languages,[19][20] supported both parallel message passing and pipelined message processing, but not promise pipelining. (Although it is technically possible to implement the last of these features in terms of the first two, there is no evidence that the Act languages did so.)
+More recently, there has been a major revival of interest in futures and promises, due particularly to their use in responsiveness of user interfaces, and their use in web development, due to the request–response model of message-passing. Several mainstream languages now have language support for futures and promises, most notably popularized by the async and await constructions in .NET 4.5 (announced 2010, released 2012)[21][22] largely inspired by the asynchronous workflows of F#,[23] which dates to 2007.[24] This has subsequently been adopted by other languages, notably Dart (2014),[25] Python (2015),[26] Hack (HHVM), and drafts of ECMAScript 7 (JavaScript), Scala, and C++.
+List of implementations[edit]
+Languages supporting futures, promises, concurrent logic variables, dataflow variables, or I-vars, either by direct language support or in the standard library, include:
+
+ABCL/f[27]
+Alice ML
+AmbientTalk (including first-class resolvers and read-only promises)
+Clojure[28]
+C++11 (std::future and std::promise)
+C#, since .NET 4.5,[21] through the async and await keywords.[22]
+Compositional C++
+Dart (with Future/Completer classes[29] and the await/async keywords[25])
+Flow Java
+Glasgow Haskell (I-vars and M-vars only)
+Id (I-vars and M-vars only)
+Io[30]
+Java through java.util.concurrent.Future
+JavaScript (limited, as of ECMAScript 6)
+Lucid (dataflow only)
+MultiLisp
+.NET through Tasks
+Oxygene
+Oz version 3[31]
+Python concurrent.futures, since 3.2,[32] as proposed by the PEP 3148, and Python 3.5 added async and await [33]
+R (promises for lazy evaluation - still single threaded)
+Racket[34]
+Scala
+Scheme
+Squeak Smalltalk
+Strand
+Swift
+Visual Basic 11 (through the Async and Await keywords)[22]
+μC++
+
+Languages also supporting promise pipelining include:
+
+E
+Joule
+
+Non-standard library based implementations of futures:
+
+For Common Lisp: Eager Future2 and PCall
+For C++:
+
+Boost library [35]
+Dlib [36]
+Qt [37]
+
+
+For C# and other .NET languages: The Parallel Extensions library
+For Groovy: GPars
+For JavaScript:
+
+Cujo.js's when.js provides promises conforming to the Promises/A+ 1.1 specification.
+The Dojo Toolkit supplies both promises and Twisted style Deferreds
+MochiKit MochKit.Async inspired by Twisted's Deferreds
+jQuery's Deferred Object is based on the CommonJS Promises/A design.
+Angularjs
+node-promise
+Q by Kris Kowal, conforms to Promises/A+ 1.1.
+RSVP.js also conforms to Promises/A+ 1.1.
+YUI's Promise class conforms to the Promises/A+ 1.0 specification.
+Bluebird by Petka Antonov
+The Closure Library's promise package conforms to the Promises/A+ specification.
+See Promise/A+'s list for more implementations based on the Promise/A+ design.
+
+
+
+
+For Java:
+
+JDeferred provides Deferred/Promise API and behavior similar to JQuery.Deferred object
+ParSeq provides Task/Promise API ideal for asynchronous pipelining and branching, maintained by LinkedIn.
+
+
+For Objective-C: MAFuture (reference), RXPromise, ObjC-CollapsingFutures, PromiseKit, objc-promise, OAPromise
+For OCaml: Lazy module implements lazy explicit futures.
+For Perl: Future, Promises and Reflex
+For PHP: React/Promise
+For Python:
+
+Built-in implementation
+pythonfutures
+Twisted's Deferreds
+
+
+For R:
+
+future provides an extendable Future API and an implementation of lazy and eager synchronous and multi-core asynchronous futures.
+
+
+For Ruby:
+
+The Promise gem
+libuv gem, which implements promises
+Celluloid gem, which implements futures
+future-resource
+
+
+For Swift:
+
+The Async framework, which implements C#-style async/non-blocking await
+FutureKit - which implements a version specifically targeting Apple GCD.
+
+
+
+Coroutines[edit]
+Futures can be implemented in terms of coroutines[26] or generators,[38] resulting in the same evaluation strategy (e.g., cooperative multitasking or lazy evaluation).
+Channels[edit]
+Main article: Channel (programming)
+Futures can easily be implemented in terms of channels: a future is a one-element channel, and a promise is a process that sends to the channel, fulfilling the future.[39] This allows futures to be implemented in concurrent programming languages with support for channels, such as CSP and Go – the resulting futures are explicit, as they must be accessed by reading from the channel, rather than just evaluation.
+References[edit]
+
+^ Friedman, Daniel; David Wise (1976). The Impact of Applicative Programming on Multiprocessing. International Conference on Parallel Processing. p.&#160;263-272.&#160;
+^ Hibbard, Peter (1976). Parallel Processing Facilities. New Directions in Algorithmic Languages, (ed.) Stephen A. Schuman, IRIA, 1976.&#160;
+^ Henry Baker and Carl Hewitt (August 1977). The Incremental Garbage Collection of Processes. Proceedings of the Symposium on Artificial Intelligence Programming Languages,. ACM Sigplan Notices 12, 8. pp.&#160;55–59.&#160;
+^ "SIP-14 - Futures and Promises"
+^ Promise Pipelining at erights.org
+^ Promise Pipelining on the C2 wiki
+^ Robust promises with Dojo deferred, Site Pen, 2010-05-03&#160;.
+^ a b "Promise", Alice Manual, DE: Uni-SB&#160;.
+^ a b "Future", Alice manual, DE: Uni-SB&#160;.
+^ Promise, E rights&#160;.
+^ Control Concurrent MVar, Haskell&#160;.
+^ WaitNeeded, Mozart Oz&#160;.
+^ Barbara Liskov and Liuba Shrira (1988). "Promises: Linguistic Support for Efficient Asynchronous Procedure Calls in Distributed Systems". Proceedings of the SIGPLAN '88 Conference on Programming Language Design and Implementation; Atlanta, Georgia, United States, pp. 260–267. ISBN 0-89791-269-1, published by ACM. Also published in ACM SIGPLAN Notices, Volume 23, Issue 7, July 1988. doi:10.1145/53990.54016.&#160;
+^ Promise, Sunless Sea, archived from the original on October 23, 2007&#160;.
+^ Argus, MIT&#160;.
+^ Liskov, Barbara, Distributed computing and Argus, Oral history, IEEE GHN&#160;.
+^ Gold, Udanax&#160;.
+^ Pipeline, E rights&#160;.
+^ Henry Lieberman (June 1981). "A Preview of Act 1". MIT AI memo 625.&#160;
+^ Henry Lieberman (June 1981). "Thinking About Lots of Things at Once without Getting Confused: Parallelism in Act 1". MIT AI memo 626.&#160;
+^ a b "Async in 4.5: Worth the Await - .NET Blog - Site Home - MSDN Blogs". Blogs.msdn.com. Retrieved 2014-05-13.&#160;
+^ a b c "Asynchronous Programming with Async and Await (C# and Visual Basic)". Msdn.microsoft.com. Retrieved 2014-05-13.&#160;
+^ Tomas Petricek (29 October 2010). "Asynchronous C# and F# (I.): Simultaneous introduction".&#160;
+^ Don Syme; Tomas Petricek; Dmitry Lomov (21 Oct 2010). "The F# Asynchronous Programming Model, PADL 2011".&#160;
+^ a b Gilad Bracha (October 2014). "Dart Language Asynchrony Support: Phase 1".&#160;
+^ a b "PEP 0492 -- Coroutines with async and await syntax".&#160;
+^ Kenjiro Taura, Satoshi Matsuoka, and Akinori Yonezawa (1994). "ABCL/f: A Future-Based Polymorphic Typed Concurrent Object-Oriented Language -- Its Design and Implementation.". In Proceedings of the DIMACS workshop on Speciﬁcation of Parallel Algorithms, number 18 in Dimacs Series in Discrete Mathematics and Theoretical Computer Science. American Mathematical Society. pp.&#160;275–292.&#160;
+^ Rich Hickey (2009). "changes.txt at 1.1.x from richhickey's clojure".&#160;
+^ "Dart SDK dart async Completer".&#160;
+^ Steve Dekorte (2005). "Io, The Programming Language".&#160;
+^ Seif Haridi; Nils Franzen. "Tutorial of Oz". MOzart Global User Library. Retrieved 12 April 2011.&#160;
+^ Python 3.2 Release
+^ Python 3.5 Release
+^ "Parallelism with Futures". PLT. Retrieved 2 March 2012.&#160;
+^ "Chapter 30. Thread 4.0.0". Retrieved 26 June 2013.&#160;
+^ "Dlib C++ Library #thread_pool". Retrieved 26 June 2013.&#160;
+^ "QtCore 5.0: QFuture Class". Qt Project. Retrieved 26 June 2013.&#160;
+^ Does async/await solve a real problem?
+^ "Futures", Go Language Patterns
+
+External links[edit]
+
+Concurrency patterns presentation given at scaleconf
+Future Value and Promise Pipelining at the Portland Pattern Repository
+Easy Threading with Futures in Python
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Futures_and_promises&amp;oldid=689987424"					
+				Categories: Inter-process communicationActor modelHidden categories: Pages with syntax highlighting errorsUse dmy dates from July 2013				
+							
+		
+		
+			

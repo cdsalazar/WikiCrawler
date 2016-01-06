@@ -1,0 +1,100 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Handle (computing)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For the interactive method of resizing visual elements in a user interface, see Adjustment handles.
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (April 2014)
+
+
+In computer programming, a handle is an abstract reference to a resource. Handles are used when application software references blocks of memory or objects managed by another system, such as a database or an operating system. Resource handles can be opaque identifiers, in which case they are often integer numbers, or they can be pointers that allow access to further information. Common resource handles are file descriptors, sockets, database connections, process identifiers (PIDs), and job IDs.
+
+
+
+Contents
+
+
+1 Comparison to pointers
+2 Examples
+3 See also
+4 References
+5 External links
+
+
+
+Comparison to pointers[edit]
+While a pointer contains the address of the item to which it refers, a handle is an abstraction of a reference which is managed externally; its opacity allows the referent to be relocated in memory by the system without invalidating the handle, which is impossible with pointers. The extra layer of indirection also increases the control the managing system has over operations performed on the referent. Typically the handle is an index or a pointer into a global array of tombstones.
+A handle leak is a type of software bug that occurs when a computer program asks for a handle to a resource but does not free the handle when it is no longer used; this is a form of resource leak, similar to a memory leak for a pointer to memory.
+Examples[edit]
+Handles were a popular solution to memory management in operating systems of the 1980s, such as Mac OS[1] and Windows. The FILE data structure in the C standard I/O library is a file handle, abstracting from the underlying file representation (on Unix these are file descriptors). Like other desktop environments, the Windows API heavily uses handles to represent objects in the system and to provide a communication pathway between the operating system and user space. For example, a window on the desktop is represented by a handle of type HWND (handle, window).
+Doubly indirect handles have fallen out of favour in recent times, as increases in available memory and improved virtual memory algorithms have made the use of the simpler pointer more attractive. However, many operating systems still apply the term to pointers to opaque, "private" data structures—opaque pointers—or to indexes into internal arrays passed from one process to its client.
+See also[edit]
+
+
+
+
+Information technology portal
+
+
+
+
+Memory pool
+Weak reference
+
+References[edit]
+
+
+^ Hertzfeld, Andy (January 1982), The Original Macintosh: Hungarian, retrieved 2010-05-10&#160;
+
+
+External links[edit]
+
+Pushing the Limits of Windows: Handles
+
+
+
+
+
+This software article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Handle_(computing)&amp;oldid=651298142"					
+				Categories: Data typesHidden categories: Articles needing additional references from April 2014All articles needing additional referencesAll stub articlesSoftware stubs				
+							
+		
+		
+			

@@ -1,0 +1,136 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Undefined behavior
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Undefined behaviour)
+												
+					Jump to:					navigation, 					search
+				
+				Not to be confused with Undefined value&#160;or Unspecified behavior.
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (October 2008)
+
+
+In computer programming, undefined behavior (UB) is the result of executing computer code written in a programming language for which the language specification does not prescribe how that code should be handled. Undefined behavior is unpredictable and a frequent cause of software bugs.
+The behavior of some programming languages—most famously C and C++—is undefined in some cases.[1] In the standards for these languages, the semantics of certain operations are undefined. An implementation is allowed to assume that such operations never occur in standard-conforming program code; the implementation will be considered correct whatever it does in such cases, analogous to don't-care terms in digital logic. This assumption can make various program transformations valid or simplify their proof of correctness, giving flexibility to the implementation. It is the responsibility of the programmer to write code that never invokes undefined behavior, although compiler implementations are allowed to issue diagnostics when this happens.
+For example, in C the use of any automatic variable before it has been initialized yields undefined behavior, as does division by zero or indexing an array outside of its defined bounds (see buffer overflow). In general, any instance of undefined behavior leaves the abstract execution machine in an unknown state, and any subsequent behavior is also undefined. If it is not required that the compiler diagnose undefined behavior, programs invoking undefined behavior may compile and run producing correct results, incorrect results, or have any other behavior. Because of this, undefined behavior can create errors that are difficult to detect.
+Under some circumstances there can be specific restrictions on undefined behavior. For example, the instruction set specifications of a CPU might leave the behavior of some forms of an instruction undefined, but if the CPU supports memory protection then the specification will probably include a blanket rule stating that no user-accessible instruction may cause a hole in the operating system's security; so an actual CPU would be permitted to corrupt user registers in response to such an instruction, but would not be allowed to, for example, switch into supervisor mode.
+In C and C++, implementation-defined behavior is also used, where the language standard does not specify the behavior, but the implementation must choose a behavior and document and observe its rules. These standards also use unspecified behavior to mean that from a given set of possibilities it is not specified which behavior an implementation must choose, it need not document the choice or even be consistent, but it must choose one possibility.
+In the C community, undefined behavior may be humorously referred to as "nasal demons", after a comp.std.c post that explained undefined behavior as allowing the compiler to do anything it chooses, even "to make demons fly out of your nose".[2]
+
+
+
+Contents
+
+
+1 Examples in C and C++
+2 Risks of undefined behavior
+3 References
+4 Further reading
+5 External links
+
+
+
+Examples in C and C++[edit]
+Attempting to modify a string literal causes undefined behavior:[3]
+
+
+char *p = "wikipedia"; // ill-formed C++11, deprecated C++98/C++03
+p[0] = 'W'; // undefined behavior
+
+One way to prevent this is defining it as an array instead of a pointer.
+
+
+char p[] = "wikipedia"; // RIGHT
+p[0] = 'W';
+
+In C++, one can use a standard string as follows:
+
+
+std::string s = "wikipedia"; // RIGHT
+s[0] = 'W';
+
+Integer division by zero results in undefined behavior:[4]
+
+
+int x = 1;
+return x / 0; // undefined behavior
+
+Certain pointer operations may result in undefined behavior:[5]
+
+
+int arr[4] = {0, 1, 2, 3};
+int *p = arr + 5;  // undefined behavior
+
+Reaching the end of a value-returning function (other than main()) without a return statement may result in undefined behavior:
+
+
+int f()
+{
+}  /* undefined behavior */
+
+The original The C Programming Language book cites the following examples of code which “can (and does) produce different results on different machines”[6] (which could be considered just unspecified or implementation-defined behavior in today's terms)[citation needed]:
+
+
+printf("%d %d\n", ++n, power(2, n));    /* WRONG */
+
+
+
+a[i] = i++;
+
+The later ANSI C standard chose to leave similar constructions undefined, e.g. “This paragraph renders undefined statement expressions such as i = ++i + 1; while allowing i = i + 1;”.[7]
+Risks of undefined behavior[edit]
+HTML versions 4 and earlier left error handling undefined. Over time pages started relying on unspecified error-recovery implemented in popular browsers. This caused difficulties for vendors of less-popular browsers who were forced to reverse-engineer and implement bug compatible error recovery. This has led to de facto standard that was much more complicated than it could have been if this behavior was specified from the start.[citation needed]
+Undefined behavior in server programs can cause security issues. When GCC's developers changed their compiler in 2008 such that it omitted certain overflow checks that relied on undefined behavior, CERT issued a warning against the newer versions of the compiler.[8] Linux Weekly News pointed out that the same behavior was observed in PathScale C, Microsoft Visual C++ 2005 and several other compilers;[9] the warning was later amended to warn about various compilers.[10]
+References[edit]
+
+
+^ Lattner, Chris (May 13, 2011). "What Every C Programmer Should Know About Undefined Behavior". LLVM Project Blog. LLVM.org. Retrieved May 24, 2011.&#160;
+^ "nasal demons". The Jargon File. Retrieved 12 June 2014.&#160;
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §2.13.4 String literals [lex.string] para. 2
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §5.6 Multiplicative operators [expr.mul] para. 4
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §5.7 Additive operators [expr.add] para. 5
+^ Kernighan, Brian W.; Ritchie, Dennis M. (February 1978). The C Programming Language (1st ed.). Englewood Cliffs, NJ: Prentice Hall. p.&#160;50. ISBN&#160;0-13-110163-3.&#160;
+^ ANSI X3.159-1989 Programming Language C, footnote 26
+^ "Vulnerability Note VU#162289 — gcc silently discards some wraparound checks". Vulnerability Notes Database. CERT. 4 April 2008. Archived from the original on 9 April 2014.&#160;
+^ Jonathan Corbet (16 April 2008). "GCC and pointer overflows". Linux Weekly News.&#160;
+^ "Vulnerability Note VU#162289 — C compilers may silently discard some wraparound checks". Vulnerability Notes Database. CERT. 8 October 2008 [4 April 2008].&#160;
+
+
+Further reading[edit]
+
+Peter van der Linden, Expert C Programming. ISBN 0-13-177429-8
+UB Canaries (April 2015), John Regehr (University of Utah, USA)
+
+External links[edit]
+
+Corrected version of the C99 standard. Look at section 6.10.6 for #pragma
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Undefined_behavior&amp;oldid=691017226"					
+				Categories: Programming language implementationC (programming language)C++Hidden categories: Articles lacking in-text citations from October 2008All articles lacking in-text citationsAll articles with unsourced statementsArticles with unsourced statements from February 2015Articles with unsourced statements from June 2014Articles with example C++ code				
+							
+		
+		
+			

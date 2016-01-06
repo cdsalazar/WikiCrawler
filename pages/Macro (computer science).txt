@@ -1,0 +1,309 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Macro (computer science)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Macro language" redirects here. For human macrolanguages, see ISO 639 macrolanguage.
+
+
+
+
+jEdit's macro editor
+
+
+A macro (short for "macroinstruction", from Greek μακρο- 'long') in computer science is a rule or pattern that specifies how a certain input sequence (often a sequence of characters) should be mapped to a replacement output sequence (also often a sequence of characters) according to a defined procedure. The mapping process that instantiates (transforms) a macro use into a specific sequence is known as macro expansion. A facility for writing macros may be provided as part of a software application or as a part of a programming language. In the former case, macros are used to make tasks using the application less repetitive. In the latter case, they are a tool that allows a programmer to enable code reuse or even to design domain-specific languages.
+Macros are used to make a sequence of computing instructions available to the programmer as a single program statement, making the programming task less tedious and less error-prone.[1][2] (Thus, they are called "macros" because a big block of code can be expanded from a small sequence of characters.) Macros often allow positional or keyword parameters that dictate what the conditional assembler program generates and have been used to create entire programs or program suites according to such variables as operating system, platform or other factors. The term derives from "macro instruction", and such expansions were originally used in generating assembly language code.
+
+
+
+Contents
+
+
+1 Keyboard and mouse macros
+
+1.1 Application macros and scripting
+
+1.1.1 Macro virus
+
+
+
+
+2 Text substitution macros
+
+2.1 Embeddable languages
+
+
+3 Procedural macros
+4 Syntactic macros
+
+4.1 Early Lisp macros
+4.2 Hygienic macros
+4.3 Applications
+
+
+5 Macros for machine-independent software
+6 See also
+7 References
+
+
+
+Keyboard and mouse macros[edit]
+Keyboard macros and mouse macros allow short sequences of keystrokes and mouse actions to be transformed into other, usually more time-consuming, sequences of keystrokes and mouse actions. In this way, frequently used or repetitive sequences of keystrokes and mouse movements can be automated. Separate programs for creating these macros are called macro recorders.
+During the 1980s, macro programs&#160;– originally SmartKey, then SuperKey, KeyWorks, Prokey&#160;– were very popular, first as a means to automatically format screenplays, then for a variety of user input tasks. These programs were based on the TSR (terminate and stay resident) mode of operation and applied to all keyboard input, no matter in which context it occurred. They have to some extent fallen into obsolescence following the advent of mouse-driven user interface and the availability of keyboard and mouse macros in applications such as word processors and spreadsheets, making it possible to create application-sensitive keyboard macros.
+Keyboard macros have in more recent times come to life as a method of exploiting the economy of massively multiplayer online role-playing games (MMORPGs). By tirelessly performing a boring, repetitive, but low risk action, a player running a macro can earn a large amount of the game's currency or resources. This effect is even larger when a macro-using player operates multiple accounts simultaneously, or operates the accounts for a large amount of time each day. As this money is generated without human intervention, it can dramatically upset the economy of the game. For this reason, use of macros is a violation of the TOS or EULA of most MMORPGs, and administrators of MMORPGs fight a continual war to identify and punish macro users.[3]
+Application macros and scripting[edit]
+Keyboard and mouse macros that are created using an application's built-in macro features are sometimes called application macros. They are created by carrying out the sequence once and letting the application record the actions. An underlying macro programming language, most commonly a scripting language, with direct access to the features of the application may also exist.
+The programmers' text editor Emacs (short for "editing macros") follows this idea to a conclusion. In effect, most of the editor is made of macros. Emacs was originally devised as a set of macros in the editing language TECO; it was later ported to dialects of Lisp.
+Another programmers' text editor, Vim (a descendant of vi), also has full implementation of macros. It can record into a register (macro) what a person types on the keyboard and it can be replayed or edited just like VBA macros for Microsoft Office. Vim also has a scripting language called Vimscript[4] to create macros.
+Visual Basic for Applications (VBA) is a programming language included in Microsoft Office. However, its function has evolved from and replaced the macro languages that were originally included in some of these applications.
+Macro virus[edit]
+Main article: Macro virus (computing)
+VBA has access to most Microsoft Windows system calls and executes when documents are opened. This makes it relatively easy to write computer viruses in VBA, commonly known as macro viruses. In the mid-to-late 1990s, this became one of the most common types of computer virus. However, during the late 1990s and to date, Microsoft has been patching and updating their programs. In addition, current anti-virus programs immediately counteract such attacks.
+Text substitution macros[edit]
+Languages such as C and assembly language have rudimentary macro systems, implemented as preprocessors to the compiler or assembler. C preprocessor macros work by simple textual search-and-replace at the token, rather than the character level. A classic use of macros is in the computer typesetting system TeX and its derivatives, where most of the functionality is based on macros. MacroML is an experimental system that seeks to reconcile static typing and macro systems. Nemerle has typed syntax macros, and one productive way to think of these syntax macros is as a multi-stage computation. Other examples:
+
+m4 is a sophisticated stand-alone macro processor.
+TRAC
+Macro Extension TAL, accompanying Template Attribute Language
+SMX: for web pages
+ML/1 (Macro Language One)
+The General Purpose Macroprocessor is a contextual pattern matching macro processor, which could be described as a combination of regular expressions, EBNF and AWK
+SAM76
+minimac, a concatenative macro processor.
+troff and nroff: for typesetting and formatting Unix manpages.
+
+Embeddable languages[edit]
+Some languages, such as PHP, can be embedded in free-format text, or the source code of other languages. The mechanism by which the code fragments are recognised (for instance, being bracketed by &lt;?php and ?&gt;) is similar to a textual macro language, but they are much more powerful, fully featured languages.
+See also: Assembly language § Macros and Algorithm
+Procedural macros[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2014)
+
+
+Macros in the PL/I language are written in a subset of PL/I itself: the compiler executes "preprocessor statements" at compilation time, and the output of this execution forms part of the code that is compiled. The ability to use a familiar procedural language as the macro language gives power much greater than that of text substitution macros, at the expense of a larger and slower compiler.
+Frame technology's frame macros have their own command syntax but can also contain text in any language. Each frame is both a generic component in a hierarchy of nested subassemblies, and a procedure for integrating itself with its subassembly frames (a recursive process that resolves integration conflicts in favor of higher level subassemblies). The outputs are custom documents, typically compilable source modules. Frame technology can avoid the proliferation of similar but subtly different components, an issue that has plagued software development since the invention of macros and subroutines.
+Most assembly languages have less powerful procedural macro facilities, for example allowing a block of code to be repeated N times for loop unrolling; but these have a completely different syntax from the actual assembly language.
+Syntactic macros[edit]
+Macro systems—such as the C preprocessor described earlier—that work at the level of lexical tokens cannot preserve the lexical structure reliably. Syntactic macro systems work instead at the level of abstract syntax trees, and preserve the lexical structure of the original program. The most widely used implementations of syntactic macro systems are found in Lisp-like languages such as Common Lisp, Clojure, Scheme, ISLISP and Racket. These languages are especially suited for this style of macro due to their uniform, parenthesized syntax (known as S-expressions). In particular, uniform syntax makes it easier to determine the invocations of macros. Lisp macros transform the program structure itself, with the full language available to express such transformations. While syntactic macros are often found in Lisp-like languages, they are also available in other languages such as Prolog, Dylan, Scala, Nemerle, Rust, Haxe,[5] and Python.[6]
+Early Lisp macros[edit]
+Before Lisp had macros, it had so-called FEXPRs, function-like operators whose inputs were not the values computed by the arguments but rather the syntactic forms of the arguments, and whose output were values to be used in the computation. In other words, FEXPRs were implemented at the same level as EVAL, and provided a window into the meta-evaluation layer. This was generally found to be a difficult model to reason about effectively.[7]
+In 1963 Timothy Hart proposed adding macros to Lisp 1.5 in AI Memo 57: MACRO Definitions for LISP.[8]
+Hygienic macros[edit]
+Main article: Hygienic macro
+In the mid-eighties, a number of papers[9][10] introduced the notion of hygienic macro expansion (syntax-rules), a pattern-based system where the syntactic environments of the macro definition and the macro use are distinct, allowing macro definers and users not to worry about inadvertent variable capture (cf. referential transparency). Hygienic macros have been standardized for Scheme in both the R5RS and R6RS standards. The upcoming R7RS standard will also include hygienic macros. A number of competing implementations of hygienic macros exist such as syntax-rules, syntax-case, explicit renaming, and syntactic closures. Both syntax-rules and syntax-case have been standardized in the Scheme standards.
+Recently, Racket has combined the notions of hygienic macros with a "tower of evaluators", so that the syntactic expansion time of one macro system is the ordinary runtime of another block of code,[11] and showed how to apply interleaved expansion and parsing in a non-parenthesized language.[12]
+A number of languages other than Scheme either implement hygienic macros or implement partially hygienic systems. Examples include Scala, Julia, Dylan, and Nemerle.
+Applications[edit]
+
+Evaluation order
+Macro systems have a range of uses. Being able to choose the order of evaluation (see lazy evaluation and non-strict functions) enables the creation of new syntactic constructs (e.g. control structures) indistinguishable from those built into the language. For instance, in a Lisp dialect that has cond but lacks if, it is possible to define the latter in terms of the former using macros. For example, Scheme has both continuations and hygienic macros, which enables a programmer to design their own control abstractions, such as looping and early exit constructs, without the need to build them into the language.
+Data sub-languages and domain-specific languages
+Next, macros make it possible to define data languages that are immediately compiled into code, which means that constructs such as state machines can be implemented in a way that is both natural and efficient.[13]
+Binding constructs
+Macros can also be used to introduce new binding constructs. The most well-known example is the transformation of let into the application of a function to a set of arguments.
+
+Felleisen conjectures[14] that these three categories make up the primary legitimate uses of macros in such a system. Others have proposed alternative uses of macros, such as anaphoric macros in macro systems that are unhygienic or allow selective unhygienic transformation.
+The interaction of macros and other language features has been a productive area of research. For example, components and modules are useful for large-scale programming, but the interaction of macros and these other constructs must be defined for their use together. Module and component-systems that can interact with macros have been proposed for Scheme and other languages with macros. For example, the Racket language extends the notion of a macro system to a syntactic tower, where macros can be written in languages including macros, using hygiene to ensure that syntactic layers are distinct and allowing modules to export macros to other modules.
+Macros for machine-independent software[edit]
+Macros are normally used to map a short string (macro invocation) to a longer sequence of instructions. Another, less common, use of macros is to do the reverse: to map a sequence of instructions to a macro string. This was the approach taken by the STAGE2 Mobile Programming System, which used a rudimentary macro compiler (called SIMCMP) to map the specific instruction set of a given computer to counterpart machine-independent macros. Applications (notably compilers) written in these machine-independent macros can then be run without change on any computer equipped with the rudimentary macro compiler. The first application run in such a context is a more sophisticated and powerful macro compiler, written in the machine-independent macro language. This macro compiler is applied to itself, in a bootstrap fashion, to produce a compiled and much more efficient version of itself. The advantage of this approach is that complex applications can be ported from one computer to a very different computer with very little effort (for each target machine architecture, just the writing of the rudimentary macro compiler).[15][16] The advent of modern programming languages, notably C, for which compilers are available on virtually all computers, has rendered such an approach superfluous. This was, however, one of the first instances (if not the first) of compiler bootstrapping.
+See also[edit]
+
+Assembly language: Macros (the origin of the concept of macros)
+Anaphoric macros
+Hygienic macros
+Macro instruction
+Programming by demonstration
+Comparison of macro recorder software
+Source-to-source compilation: automatic translation from one programming language to another
+string interpolation
+Extensible programming
+
+References[edit]
+
+
+^ Greenwald, Irwin D.; Maureen Kane (April 1959). "The Share 709 System: Programming and Modification" (PDF). Journal of the ACM (New York, NY, USA: ACM) 6 (2): 128–133. doi:10.1145/320964.320967. One of the important uses of programmer macros is to save time and clerical-type errors in writing sequence of instructions which are often repeated in the course of a program.&#160;
+^ Strachey, Christopher (October 1965). "A General Purpose Macrogenerator". Computer Journal 8 (3): 225–241. doi:10.1093/comjnl/8.3.225.&#160;
+^ "Runescape: The Massive Online Adventure Game by Jagex Ltd.". Retrieved 2008-04-03.&#160;
+^ http://www.vim.org/scripts/index.php
+^ http://haxe.org/manual/macro.html
+^ https://github.com/lihaoyi/macropy
+^ Marshall, Joe. "untitled email". Retrieved May 3, 2012.&#160;
+^ "AIM-057, MACRO Definitions for LISP, Timothy P. Hart".&#160;
+^ Kohlbecker, Eugene; Friedman, Daniel; Felleisen, Matthias; Duba, Bruce. "Hygienic Macro Expansion". doi:10.1145/319838.319859.&#160;
+^ [1] Clinger, Rees. "Macros that Work"
+^ Flatt, Matthew. "Composable and compilable macros: you want it when?".&#160; External link in |title= (help)
+^ Rafkind, Jon; Flatt, Matthew. "Honu: Syntactic Extension for Algebraic Notation through Enforestation".&#160; External link in |title= (help)
+^ Brown University Paper on Automata Macros
+^ [2], Matthias Felleisen, LL1 mailing list posting
+^ Orgass, Richard J.; William M. Waite (September 1969). "A base for a mobile programming system". Communications of the ACM (New York, NY, USA: ACM) 12 (9): 507–510. doi:10.1145/363219.363226.&#160;
+^ Waite, William M. (July 1970). "The mobile programming system: STAGE2". Communications of the ACM (New York, NY, USA: ACM) 13 (7): 415–421. doi:10.1145/362686.362691.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4125810-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Macro_(computer_science)&amp;oldid=686545149"					
+				Categories: Programming constructsSource codeAutomation softwareHidden categories: CS1 errors: external linksArticles containing Ancient Greek-language textArticles needing additional references from June 2014All articles needing additional referencesWikipedia articles with GND identifiers				
+							
+		
+		
+			

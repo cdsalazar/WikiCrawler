@@ -1,0 +1,287 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			C++ Standard Library
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In the C++ programming language, the C++ Standard Library is a collection of classes and functions, which are written in the core language and part of the C++ ISO Standard itself.[1] The C++ Standard Library provides several generic containers, functions to utilize and manipulate these containers, function objects, generic strings and streams (including interactive and file I/O), support for some language features, and everyday functions for tasks such as finding the square root of a number. The C++ Standard Library also incorporates 18 headers of the ISO C90 C standard library ending with ".h", but their use is deprecated.[2] No other headers in the C++ Standard Library end in ".h". Features of the C++ Standard Library are declared within the std namespace.
+The C++ Standard Library is based upon conventions introduced by the Standard Template Library (STL), and has been influenced by research in generic programming and developers of the STL such as Alexander Stepanov and Meng Lee.[3][4] Although the C++ Standard Library and the STL share many features, neither is a strict superset of the other.
+A noteworthy feature of the C++ Standard Library is that it not only specifies the syntax and semantics of generic algorithms, but also places requirements on their performance.[5] These performance requirements often correspond to a well-known algorithm, which is expected but not required to be used. In most cases this requires linear time O(n) or linearithmic time O(n log n), but in some cases higher bounds are allowed, such as quasilinear time O(n log2 n) for stable sort (to allow in-place merge sort). Previously sorting was only required to take O(n log n) on average, allowing the use of quicksort, which is fast in practice but has poor worst-case performance, but introsort was introduced to allow both fast average performance and optimal worst-case complexity, and as of C++11, sorting is guaranteed to be at worst linearithmic. In other cases requirements remain laxer, such as selection, which is only required to be linear on average (as in quickselect),[6] not requiring worst-case linear as in introselect.
+The C++ Standard Library underwent ISO standardization as part of the C++ ISO Standardization effort, and is undergoing further work[7] regarding standardization of expanded functionality.
+
+
+C++ Standard Library
+
+
+
+
+Input/output
+Strings
+
+
+
+
+Standard Template Library
+
+
+
+
+algorithm
+functional
+Sequence containers
+Associative containers
+Unordered associative containers
+
+
+
+
+C standard library
+
+
+
+
+Data types
+Character classification
+Strings
+Mathematics
+File input/output
+Date/time
+Localization
+Memory allocation
+Process control
+Signals
+Alternative tokens
+
+
+Miscellaneous headers:
+
+
+&lt;assert.h&gt;
+&lt;errno.h&gt;
+&lt;setjmp.h&gt;
+&lt;stdarg.h&gt;
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+Contents
+
+
+1 Standard headers
+
+1.1 Containers
+1.2 General
+1.3 Localization
+1.4 Strings
+1.5 Streams and Input/Output
+1.6 Language support
+1.7 Thread support library
+1.8 Numerics library
+1.9 C standard library
+
+
+2 See also
+3 References
+4 External links
+
+
+
+Standard headers[edit]
+The following files contain the declarations of the C++ Standard Library.
+Containers[edit]
+
+&lt;array&gt;
+New in C++11 and TR1. Provides the container class template std::array, a container for a fixed sized array.
+&lt;bitset&gt;
+Provides the specialized container class std::bitset, a bit array.
+&lt;deque&gt;
+Provides the container class template std::deque, a double-ended queue.
+&lt;forward_list&gt;
+New in C++11 and TR1. Provides the container class template std::forward_list, a singly linked list.
+&lt;list&gt;
+Provides the container class template std::list, a doubly linked list.
+&lt;map&gt;
+Provides the container class templates std::map and std::multimap, sorted associative array and multimap.
+&lt;queue&gt;
+Provides the container adapter class std::queue, a single-ended queue, and std::priority_queue, a priority queue.
+&lt;set&gt;
+Provides the container class templates std::set and std::multiset, sorted associative containers or sets.
+&lt;stack&gt;
+Provides the container adapter class std::stack, a stack.
+&lt;unordered_map&gt;
+New in C++11 and TR1. Provides the container class template std::unordered_map and std::unordered_multimap, hash tables.
+&lt;unordered_set&gt;
+New in C++11 and TR1. Provides the container class template std::unordered_set and std::unordered_multiset.
+&lt;vector&gt;
+Provides the container class template std::vector, a dynamic array.
+
+General[edit]
+
+&lt;algorithm&gt;
+Provides definitions of many container algorithms.
+
+
+&lt;chrono&gt;
+Provides time elements, such as std::chrono::duration, std::chrono::time_point, and clocks.
+
+
+&lt;functional&gt;
+Provides several function objects, designed for use with the standard algorithms.
+&lt;iterator&gt;
+Provides classes and templates for working with iterators.
+
+
+&lt;memory&gt;
+Provides facilities for memory management in C++, including the class template std::unique_ptr.
+&lt;stdexcept&gt;
+Contains standard exception classes such as std::logic_error and std::runtime_error, both derived from std::exception.
+&lt;tuple&gt;
+New in C++11 and TR1. Provides a class template std::tuple, a tuple.
+&lt;utility&gt;
+Provides the template class std::pair, for working with object pairs (two-member tuples), and the namespace std::rel_ops, for easier operator overloading.
+
+Localization[edit]
+
+&lt;locale&gt;
+Defines classes and declares functions that encapsulate and manipulate the information peculiar to a locale.
+&lt;codecvt&gt;
+Provides code conversion facets for various character encodings.
+
+Strings[edit]
+
+&lt;string&gt;
+Provides the C++ standard string classes and templates.
+&lt;regex&gt;
+New in C++11. Provides utilities for pattern matching strings using regular expressions.
+
+Streams and Input/Output[edit]
+
+&lt;fstream&gt;
+Provides facilities for file-based input and output. See fstream.
+&lt;iomanip&gt;
+Provides facilities to manipulate output formatting, such as the base used when formatting integers and the precision of floating point values.
+&lt;ios&gt;
+Provides several types and functions basic to the operation of iostreams.
+&lt;iosfwd&gt;
+Provides forward declarations of several I/O-related class templates.
+&lt;iostream&gt;
+Provides C++ input and output fundamentals. See iostream.
+&lt;istream&gt;
+Provides the template class std::istream and other supporting classes for input.
+&lt;ostream&gt;
+Provides the template class std::ostream and other supporting classes for output.
+&lt;sstream&gt;
+Provides the template class std::stringstream and other supporting classes for string manipulation.
+&lt;streambuf&gt;
+Provides reading and writing functionality to/from certain types of character sequences, such as external files or strings.
+
+Language support[edit]
+
+&lt;exception&gt;
+Provides several types and functions related to exception handling, including std::exception, the base class of all exceptions thrown by the Standard Library.
+&lt;limits&gt;
+Provides the template class std::numeric_limits, used for describing properties of fundamental numeric types.
+&lt;new&gt;
+Provides operators new and delete and other functions and types composing the fundamentals of C++ memory management.
+&lt;typeinfo&gt;
+Provides facilities for working with C++ run-time type information.
+
+Thread support library[edit]
+
+&lt;thread&gt;
+New in C++11. Provide class and namespace for working with threads.
+&lt;mutex&gt;
+New in C++11. 30.4-1 This section provides mechanisms for mutual exclusion: mutexes, locks, and call once.
+&lt;condition_variable&gt;
+New in C++11. 30.5-1 Condition variables provide synchronization primitives used to block a thread until notified by some other thread that some condition is met or until a system time is reached.
+&lt;future&gt;
+New in C++11. 30.6.1-1 Describes components that a C++ program can use to retrieve in one thread the result (value or exception) from a function that has run in the same thread or another thread.
+
+Numerics library[edit]
+Components that C++ programs may use to perform seminumerical operations.
+
+&lt;complex&gt;
+The header &lt;complex&gt; defines a class template, and numerous functions for representing and manipulating complex numbers.
+&lt;random&gt;
+Facility for generating (pseudo-)random numbers
+&lt;valarray&gt;
+Defines five class templates (valarray, slice_array, gslice_array, mask_array, and indirect_array), two classes (slice and gslice), and a series of related function templates for representing and manipulating arrays of values.
+&lt;numeric&gt;
+Generalized numeric operations.
+
+C standard library[edit]
+Main article: C standard library
+Each header from the C Standard Library is included in the C++ Standard Library under a different name, generated by removing the .h, and adding a 'c' at the start; for example, 'time.h' becomes 'ctime'. The only difference between these headers and the traditional C Standard Library headers is that where possible the functions should be placed into the std:: namespace. In ISO C, functions in the standard library are allowed to be implemented by macros, which is not allowed by ISO C++.
+See also[edit]
+
+Apache C++ Standard Library
+Boost (C++ libraries)
+C POSIX library
+C standard library
+Standard library
+C++ Technical Report 1
+
+References[edit]
+
+
+^ ISO/IEC 14882:2003(E) Programming Languages — C++ §17-27
+^ ISO/IEC 14882:2003(E) Programming Languages — C++ §D.5
+^ Bjarne Stroustrup. The Design and Evolution of C++ §8.5. Addison Wesley. ISBN&#160;0-201-54330-3.&#160;
+^ Alexander Stepanov, Meng Lee (1 August 1994). "The Standard Template Library". HP Labs. Retrieved 2 December 2011.&#160;
+^ "Generic Algorithms", David Musser
+^ nth_element
+^ "JTC1/SC22/WG21 - The C++ Standards Committee". ISO/IEC. Retrieved 7 July 2009.&#160;
+
+
+
+Bjarne Stroustrup: The C++ Programming Language, Addison-Wesley, ISBN 0-201-70073-5
+
+External links[edit]
+
+Standard C++ Library reference
+Microsoft MSDN Library - Standard C++ Library Reference
+SourcePro C++ Documentation
+STLport
+The GNU Standard C++ Library
+LLVM/Clang C++ Standard Library
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=C%2B%2B_Standard_Library&amp;oldid=689916960"					
+				Categories: C++ Standard LibraryHidden categories: Use dmy dates from January 2012				
+							
+		
+		
+			

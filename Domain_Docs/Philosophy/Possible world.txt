@@ -1,0 +1,264 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Possible world
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Possible worlds)
+												
+					Jump to:					navigation, 					search
+				
+				"Possible worlds" redirects here. For other uses, see Possible Worlds.
+
+
+
+
+
+This article possibly contains original research. Please improve it by verifying the claims made and adding inline citations. Statements consisting only of original research should be removed. (May 2010)
+
+
+In philosophy and logic, the concept of a possible world is used to express modal claims. The concept of possible worlds is common in contemporary philosophical discourse but has been disputed.
+
+
+
+Contents
+
+
+1 Possibility, necessity, and contingency
+2 Formal semantics of modal logics
+3 From modal logic to philosophical tool
+4 Possible-world theory in literary studies
+5 See also
+6 Notes
+7 Further reading
+8 External links
+
+
+
+Possibility, necessity, and contingency[edit]
+Further information: Modal logic § The ontology of possibility
+Those theorists who use the concept of possible worlds consider the actual world to be one of the many possible worlds. For each distinct way the world could have been, there is said to be a distinct possible world; the actual world is the one we in fact live in. Among such theorists there is disagreement about the nature of possible worlds; their precise ontological status is disputed, and especially the difference, if any, in ontological status between the actual world and all the other possible worlds. One position on these matters is set forth in David Lewis's modal realism (see below). There is a close relation between propositions and possible worlds. We note that every proposition is either true or false at any given possible world; then the modal status of a proposition is understood in terms of the worlds in which it is true and worlds in which it is false. The following are among the assertions we may now usefully make:
+
+True propositions are those that are true in the actual world (for example: "Richard Nixon became president in 1969").
+False propositions are those that are false in the actual world (for example: "Ronald Reagan became president in 1969"). (Reagan did not run for president until 1976, and thus couldn't possibly have been elected.)
+Possible propositions are those that are true in at least one possible world (for example: "Hubert Humphrey became president in 1969"). (Humphrey did run for president in 1968, and thus could have been elected.) This includes propositions which are necessarily true, in the sense below.
+Impossible propositions (or necessarily false propositions) are those that are true in no possible world (for example: "Melissa and Toby are taller than each other at the same time").
+Necessarily true propositions (often simply called necessary propositions) are those that are true in all possible worlds (for example: "2&#160;+&#160;2&#160;=&#160;4"; "all bachelors are unmarried").[1]
+Contingent propositions are those that are true in some possible worlds and false in others (for example: "Richard Nixon became president in 1969" is contingently true and "Hubert Humphrey became president in 1969" is contingently false).
+
+The idea of possible worlds is most commonly attributed to Gottfried Leibniz, who spoke of possible worlds as ideas in the mind of God and used the notion to argue that our actually created world must be "the best of all possible worlds". However, scholars have also found implicit traces of the idea in the works of Rene Descartes,[2] a major influence on Leibniz, Al-Ghazali (The Incoherence of the Philosophers), Averroes (The Incoherence of the Incoherence),[3] Fakhr al-Din al-Razi (Matalib al-'Aliya)[4] and John Duns Scotus.[3] The modern philosophical use of the notion was pioneered by David Lewis and Saul Kripke.
+Formal semantics of modal logics[edit]
+Main article: Modal logic § Semantics
+A semantics for modal logic was first introduced in the late-1950s work of Saul Kripke and his colleagues. A statement in modal logic that is possible is said to be true in at least one possible world; a statement that is necessary is said to be true in all possible worlds.
+From modal logic to philosophical tool[edit]
+From this groundwork, the theory of possible worlds became a central part of many philosophical developments, from the 1960s onwards – including, most famously, the analysis of counterfactual conditionals in terms of "nearby possible worlds" developed by David Lewis and Robert Stalnaker. On this analysis, when we discuss what would happen if some set of conditions were the case, the truth of our claims is determined by what is true at the nearest possible world (or the set of nearest possible worlds) where the conditions obtain. (A possible world W1 is said to be near to another possible world W2 in respect of R to the degree that the same things happen in W1 and W2 in respect of R; the more different something happens in two possible worlds in a certain respect, the "further" they are from one another in that respect.) Consider this conditional sentence: "If George W. Bush hadn't become president of the U.S. in 2001, Al Gore would have." The sentence would be taken to express a claim that could be reformulated as follows: "In all nearest worlds to our actual world (nearest in relevant respects) where George W. Bush didn't become president of the U.S. in 2001, Al Gore became president of the U.S. then instead." And on this interpretation of the sentence, if there is or are some nearest worlds to the actual world (nearest in relevant respects) where George W. Bush didn't become president but Al Gore didn't either, then the claim expressed by this counterfactual would be false.
+Today, possible worlds play a central role in many debates in philosophy, including especially debates over the Zombie Argument, and physicalism and supervenience in the philosophy of mind. Many debates in the philosophy of religion have been reawakened by the use of possible worlds. Intense debate has also emerged over the ontological status of possible worlds, provoked especially by David Lewis's defense of modal realism, the doctrine that talk about "possible worlds" is best explained in terms of innumerable, really existing worlds beyond the one we live in. The fundamental question here is: given that modal logic works, and that some possible-worlds semantics for modal logic is correct, what has to be true of the world, and just what are these possible worlds that we range over in our interpretation of modal statements? Lewis argued that what we range over are real, concrete worlds that exist just as unequivocally as our actual world exists, but that are distinguished from the actual world simply by standing in no spatial, temporal, or causal relations with the actual world. (On Lewis's account, the only "special" property that the actual world has is a relational one: that we are in it. This doctrine is called "the indexicality of actuality": "actual" is a merely indexical term, like "now" and "here".) Others, such as Robert Adams and William Lycan, reject Lewis's picture as metaphysically extravagant, and suggest in its place an interpretation of possible worlds as consistent, maximally complete sets of descriptions of or propositions about the world, so that a "possible world" is conceived of as a complete description of a way the world could be – rather than a world that is that way. (Lewis describes their position, and similar positions such as those advocated by Alvin Plantinga and Peter Forrest, as "ersatz modal realism", arguing that such theories try to get the benefits of possible worlds semantics for modal logic "on the cheap", but that they ultimately fail to provide an adequate explanation.) Saul Kripke, in Naming and Necessity, took explicit issue with Lewis's use of possible worlds semantics, and defended a stipulative account of possible worlds as purely formal (logical) entities rather than either really existent worlds or as some set of propositions or descriptions.
+Possible-world theory in literary studies[edit]
+Possible worlds theory in literary studies uses concepts from possible-world logic and applies them to worlds that are created by fictional texts, fictional universe. In particular, possible-world theory provides a useful vocabulary and conceptual framework with which to describe such worlds. However, a literary world is a specific type of possible world, quite distinct from the possible worlds in logic. This is because a literary text houses its own system of modality, consisting of actual worlds (actual events) and possible worlds (possible events). In fiction, the principle of simultaneity, it extends to cover the dimensional aspect, when it is contemplated that two or more physical objects, realities, perceptions and objects non-physical, can coexist in the same space-time.[vague] Thus, a literary universe is granted autonomy in much the same way as the actual universe.
+Literary critics, such as Marie-Laure Ryan, Lubomír Doležel, and Thomas Pavel, have used possible-worlds theory to address notions of literary truth, the nature of fictionality, and the relationship between fictional worlds and reality. Taxonomies of fictional possibilities have also been proposed where the likelihood of a fictional world is assessed. Rein Raud has extended this approach onto "cultural" worlds, comparing possible worlds to the particular constructions of reality of different cultures.[5] Possible-world theory is also used within narratology to divide a specific text into its constituent worlds, possible and actual. In this approach, the modal structure of the fictional text is analysed in relation to its narrative and thematic concerns.
+See also[edit]
+
+Standard translation, an embedding of modal logics into first-order logic which captures their possible world semantics
+N-universes
+Modal fictionalism
+Fictionalism
+
+Notes[edit]
+
+
+^ See "A Priori and A Posteriori" (author: Jason S. Baehr), at Internet Encyclopedia of Philosophy: "A necessary proposition is one the truth value of which remains constant across all possible worlds. Thus a necessarily true proposition is one that is true in every possible world, and a necessarily false proposition is one that is false in every possible world. By contrast, the truth value of contingent propositions is not fixed across all possible worlds: for any contingent proposition, there is at least one possible world in which it is true and at least one possible world in which it is false." Accessed 7 July 2012.
+^ "Nor could we doubt that, if God had created many worlds, they would not be as true in all of them as in this one. Thus those who could examine sufficiently the consequences of these truths and of our rules, could be able to discover effects by their causes, and, to explain myself in the language of the schools, they could have a priori demonstrations of everything that could be produced in this new world." -The World, Chapter VII
+^ a b Taneli Kukkonen (2000), "Possible Worlds in the Tahâfut al-Falâsifa: Al-Ghazâlî on Creation and Contingency", Journal of the History of Philosophy 38 (4): 479–502, doi:10.1353/hph.2005.0033&#160;
+^ Adi Setia (2004), "Fakhr Al-Din Al-Razi on Physics and the Nature of the Physical World: A Preliminary Survey", Islam &amp; Science 2, retrieved 2010-03-02&#160;
+^ "Identity, Difference and Cultural Worlds", in Lang, V. &amp; Kull, K. (eds) (2014) Estonian Approaches to Culture Theory. Approaches to Culture Theory 4, 164–179. University of Tartu Press, Tartu, https://www.academia.edu/9128313/Identity_Difference_and_Cultural_Worlds
+
+
+Further reading[edit]
+
+D.M. Armstrong, A World of States of Affairs (1997. Cambridge: Cambridge University Press) ISBN 0-521-58948-7
+John Divers, Possible Worlds (2002. London: Routledge) ISBN 0-415-15556-8
+Paul Herrick, The Many Worlds of Logic (1999. Oxford: Oxford University Press) Chapters 23 and 24. ISBN 978-0-19-515503-7
+David Lewis, On the Plurality of Worlds (1986. Oxford &amp; New York: Basil Blackwell) ISBN 0-631-13994-X
+Michael J. Loux [ed.] The Possible and the Actual (1979. Ithaca &amp; London: Cornell University Press) ISBN 0-8014-9178-9
+G.W. Leibniz, Theodicy (2001. Wipf &amp; Stock Publishers) ISBN 978-0-87548-437-2
+Brian Skyrms "Possible Worlds, Physics and Metaphysics" (1976. Philosophical Studies 30)
+
+External links[edit]
+
+"Possible Worlds" - Stanford Encyclopedia of Philosophy
+"Possible worlds: what they are good for and what they are" — Alexander Pruss
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Logic
+
+
+
+
+
+
+
+
+
+Outline
+History
+
+
+
+
+
+
+
+
+Fields
+
+
+
+Argumentation theory
+Axiology
+Critical thinking
+Logic in computer science
+Mathematical logic
+Metalogic
+Metamathematics
+Non-classical logic
+Philosophical logic
+Philosophy of logic
+Set theory
+
+
+
+
+
+
+
+
+Foundations
+
+
+
+Abduction
+Analytic and synthetic propositions
+Antinomy
+A priori and a posteriori
+Deduction
+Definition
+Description
+Induction
+Inference
+Logical form
+Logical consequence
+Logical truth
+Name
+Necessity and sufficiency
+Meaning
+Paradox
+Possible world
+Presupposition
+Probability
+Reason
+Reasoning
+Reference
+Semantics
+Statement
+Strict implication
+Substitution
+Syntax
+Truth
+Validity
+
+
+
+
+
+
+
+
+Lists
+
+
+
+
+topics
+
+
+
+Mathematical logic
+Boolean algebra
+Set theory
+
+
+
+
+
+
+
+
+other
+
+
+
+Logicians
+Rules of inference
+Paradoxes
+Fallacies
+Logic symbols
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portal
+Category
+WikiProject&#160;(talk)
+changes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Possible_world&amp;oldid=674631799"					
+				Categories: PossibilityModal logicConcepts in logicConceptual modelsInterpretation (philosophy)Possible worldsHidden categories: Articles that may contain original research from May 2010All articles that may contain original researchAll Wikipedia articles needing clarificationWikipedia articles needing clarification from April 2015				
+							
+		
+		
+			

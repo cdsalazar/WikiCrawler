@@ -1,0 +1,343 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Virtual address space
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Virtual address" and "virtual addressing" redirect here. For other uses, see Virtual address (disambiguation).
+
+
+
+
+
+It has been suggested that this article be merged into Virtual memory. (Discuss) Proposed since August 2012.
+
+
+
+
+
+
+
+This article relies largely or entirely upon a single source. Relevant discussion may be found on the talk page. Please help improve this article by introducing citations to additional sources. (August 2012)
+
+
+
+
+
+
+
+This article may lend undue weight to certain ideas, incidents, or controversies. Please help to create a more balanced presentation. Discuss and resolve this issue before removing this message. (August 2012)
+
+
+
+
+
+
+
+
+
+In computing, a virtual address space (VAS) or address space is the set of ranges of virtual addresses that an operating system makes available to a process.[1] The range of virtual addresses usually starts at a low address and can extend to the highest address allowed by the computer's instruction set architecture and supported by the operating system's pointer size implementation, which can be 4 bytes for 32-bit or 8 bytes for 64-bit OS versions. This provides several benefits, one of which is, if each process is given a separate address space, security through process isolation.
+
+
+
+Contents
+
+
+1 Example
+2 See also
+3 Notes
+4 References
+
+
+
+Example[edit]
+
+In the following description, the terminology used will be particular to the Windows NT OS, but the concepts are applicable to other virtual memory operating systems.
+
+When a new application on a 32-bit OS is executed, the process has a 4&#160;GiB VAS: each one of the memory addresses (from 0 to 232−1) in that space can have a single byte as value. Initially, none of them have values ('-' represents no value). Using or setting values in such a VAS would cause a memory exception.
+
+           0                                            4GB
+VAS        |----------------------------------------------|
+
+Then the application's executable file is mapped into the VAS. Addresses in the process VAS are mapped to bytes in the exe file. The OS manages the mapping:
+
+           0                                            4GB
+VAS        |---vvvvvvv------------------------------------|
+mapping        |-----|
+file bytes     app.exe
+
+The v's are values from bytes in the mapped file. Then, required DLL files are mapped (this includes custom libraries as well as system ones such as kernel32.dll and user32.dll):
+
+           0                                            4GB
+VAS        |---vvvvvvv----vvvvvv---vvvv-------------------|
+mapping        |||||||    ||||||   ||||
+file bytes     app.exe    kernel   user
+
+The process then starts executing bytes in the exe file. However, the only way the process can use or set '-' values in its VAS is to ask the OS to map them to bytes from a file. A common way to use VAS memory in this way is to map it to the page file. The page file is a single file, but multiple distinct sets of contiguous bytes can be mapped into a VAS:
+
+           0                                            4GB
+VAS        |---vvvvvvv----vvvvvv---vvvv----vv---v----vvv--|
+mapping        |||||||    ||||||   ||||    ||   |    |||
+file bytes     app.exe    kernel   user   system_page_file
+
+And different parts of the page file can map into the VAS of different processes:
+
+           0                                            4GB
+VAS 1      |---vvvv-------vvvvvv---vvvv----vv---v----vvv--|
+mapping        ||||       ||||||   ||||    ||   |    |||
+file bytes     app1 app2  kernel   user   system_page_file
+mapping             ||||  ||||||   ||||       ||   |
+VAS 2      |--------vvvv--vvvvvv---vvvv-------vv---v------|
+
+On a 32-bit Microsoft Windows installation, by default, only 2&#160;GiB are made available to processes for their own use.[2] The other 2GB are used by the operating system. On later 32-bit editions of Microsoft Windows it is possible to extend the user-mode virtual address space to 3&#160;GiB while only 1&#160;GiB is left for kernel-mode virtual address space by marking the programs as IMAGE_FILE_LARGE_ADDRESS_AWARE and enabling the /3GB switch in the boot.ini file.[3][4]
+On 64-bit Microsoft Windows, processes running 32-bit executables that were linked with the /LARGEADDRESSAWARE:YES option have access to 4&#160;GiB of virtual address space;[5][4] without that option they are limited to 2GB. By default, 64-bit processes have 8TB of user-mode virtual address space; Linking with /LARGEADDRESSAWARE:NO artificially limits the user-mode virtual address space to 2 GB.[6][7]
+Allocating memory via system calls such as C's malloc implicitly maps bytes of the page file into the VAS. However, a process can also explicitly map file bytes.
+See also[edit]
+
+Linear address space
+
+Notes[edit]
+
+
+^ IBM Corporation. "What is an address space?". Retrieved August 24, 2013.&#160;
+^ "Virtual Address Space". MSDN. Microsoft.&#160;
+^ "LOADED_IMAGE structure". MSDN. Microsoft.&#160;
+^ a b "4-Gigabyte Tuning: BCDEdit and Boot.ini". MSDN. Microsoft.&#160;
+^ "/LARGEADDRESSAWARE (Handle Large Addresses)". MSDN. Microsoft.&#160;
+^ "/LARGEADDRESSAWARE (Handle Large Addresses)". MSDN. Microsoft.&#160;
+^ "Virtual Address Space". MSDN. Microsoft.&#160;
+
+
+References[edit]
+
+"Advanced Windows" by Jeffrey Richter, Microsoft Press
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Virtual_address_space&amp;oldid=682500392"					
+				Categories: Virtual memoryHidden categories: Articles to be merged from August 2012All articles to be mergedArticles needing additional references from August 2012All articles needing additional referencesNPOV disputes from August 2012All NPOV disputes				
+							
+		
+		
+			

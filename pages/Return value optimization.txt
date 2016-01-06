@@ -1,0 +1,181 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Return value optimization
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+It has been suggested that this article be merged into Copy elision. (Discuss) Proposed since July 2015.
+
+
+Return value optimization, or simply RVO, is a compiler optimization technique that involves eliminating the temporary object created to hold a function's return value.[1] In C++, it is particularly notable for being allowed to change the observable behaviour of the resulting program.[2]
+
+
+
+Contents
+
+
+1 Summary
+2 Background
+3 Compiler support
+4 See also
+5 References
+
+
+
+Summary[edit]
+In general, the C++ standard allows a compiler to perform any optimization, provided the resulting executable exhibits the same observable behaviour as if (i.e. pretending) all the requirements of the standard have been fulfilled. This is commonly referred to as the "as-if rule".[3] The term return value optimization refers to a special clause in the C++ standard that goes even further than the "as-if" rule: an implementation may omit a copy operation resulting from a return statement, even if the copy constructor has side effects.[4]
+The following example demonstrates a scenario where the implementation may eliminate one or both of the copies being made, even if the copy constructor has a visible side effect (printing text).[4] The first copy that may be eliminated is the one where C() is copied into the function f's return value. The second copy that may be eliminated is the copy of the temporary object returned by f to obj.
+
+
+#include &lt;iostream&gt;
+
+struct C {
+  C() {}
+  C(const C&amp;) { std::cout &lt;&lt; "A copy was made.\n"; }
+};
+
+C f() {
+  return C();
+}
+
+int main() {
+  std::cout &lt;&lt; "Hello World!\n";
+  C obj = f();
+  return 0;
+}
+
+Depending upon the compiler, and that compiler's settings, the resulting program may display any of the following outputs:
+
+Hello World!
+A copy was made.
+A copy was made.
+
+
+Hello World!
+A copy was made.
+
+
+Hello World!
+
+Background[edit]
+Returning an object of built-in type from a function usually carries little to no overhead, since the object typically fits in a CPU register. Returning a larger object of class type may require more expensive copying from one memory location to another. To avoid this, an implementation may create a hidden object in the caller's stack frame, and pass the address of this object to the function. The function's return value is then copied into the hidden object.[5] Thus, code such as this:
+
+
+struct Data { 
+  char bytes[16]; 
+};
+
+Data f() {
+  Data result = {};
+  // generate result
+  return result;
+}
+
+int main() {
+  Data d = f();
+}
+
+May generate code equivalent to this:
+
+
+struct Data { 
+  char bytes[16]; 
+};
+
+Data * f(Data * _hiddenAddress) {
+  Data result = {};
+  // copy result into hidden object
+  *_hiddenAddress = result;
+  return _hiddenAddress;
+}
+
+int main() {
+  Data _hidden; // create hidden object
+  Data d = *f(&amp;_hidden); // copy the result into d
+}
+
+which causes the Data object to be copied twice.
+In the early stages of the evolution of C++, the language's inability to efficiently return an object of class type from a function was considered a weakness.[6] Around 1991, Walter Bright invented a technique to minimize copying, effectively replacing the hidden object and the named object inside the function with the object used for holding the result:[7]
+
+
+struct Data { 
+  char bytes[16]; 
+};
+
+void f(Data *p) {
+  // generate result directly in *p
+}
+
+int main() {
+  Data d;
+  f(&amp;d);
+}
+
+Bright implemented this optimization in his Zortech C++ compiler.[6] This particular technique was later coined "Named return value optimization", referring to the fact that the copying of a named object is elided.[7]
+Compiler support[edit]
+Return value optimization is supported on most compilers.[1][8][9] There may be, however, circumstances where the compiler is unable to perform the optimization. One common case is when a function may return different named objects depending on the path of execution:[5][8][10]
+
+
+#include &lt;string&gt;
+std::string f(bool cond = false) {
+  std::string first("first");
+  std::string second("second");
+  // the function may return one of two named objects
+  // depending on its argument. RVO might not be applied
+  return cond ? first : second;
+}
+
+int main() {
+  std::string result = f();
+}
+
+See also[edit]
+
+Copy elision
+
+References[edit]
+
+
+^ a b Meyers, Scott (1996). More Effective C++. Addison Wesley.&#160;
+^ Alexandrescu, Andrei (2003-02-01). "Move Constructors". Dr. Dobbs Journal. Retrieved 2009-03-25.&#160;
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §1.9 Program execution [intro.execution] para. 1
+^ a b ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §12.8 Copying class objects [class.copy] para. 15
+^ a b Bulka, Dov; David Mayhew (2000). Efficient C++. Addison-Wesley. ISBN&#160;0-201-37950-3.&#160;
+^ a b Lippman, Stan. "The Name Return Value Optimization". Stan Lippman. Retrieved 2009-03-23.&#160;
+^ a b "Glossary D Programming Language 2.0". Digital Mars. Retrieved 2009-03-23.&#160;
+^ a b Shoukry, Ayman B. "Named Return Value Optimization in Visual C++ 2005". Microsoft. Retrieved 2009-03-20.&#160;
+^ "Options Controlling C++ Dialect". GCC. 2001-03-17. Retrieved 2009-03-20.&#160;
+^ Hinnant, Howard; et al. (2002-09-10). "N1377: A Proposal to Add Move Semantics Support to the C++ Language". WG21. Retrieved 2009-03-25.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Return_value_optimization&amp;oldid=679034562"					
+				Categories: C++Compiler optimizationsHidden categories: Articles to be merged from July 2015All articles to be mergedArticles with example C++ code				
+							
+		
+		
+			

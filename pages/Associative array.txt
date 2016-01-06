@@ -1,0 +1,527 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Associative array
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Dictionary (data structure)" redirects here. It is not to be confused with data dictionary.
+"Associative container" redirects here. For the implementation of ordered associative arrays in the standard library of the C++ programming language, see Associative containers.
+In computer science, an associative array, map, symbol table, or dictionary is an abstract data type composed of a collection of (key, value) pairs, such that each possible key appears just once in the collection.
+Operations associated with this data type allow:[1][2]
+
+the addition of pairs to the collection
+the removal of pairs from the collection
+the modification of the values of existing pairs
+the lookup of the value associated with a particular key
+
+The dictionary problem is a classic computer science problem: the task of designing a data structure that maintains a set of data during 'search' 'delete' and 'insert' operations.[3] A standard solution to the dictionary problem is a hash table; in some cases it is also possible to solve the problem using directly addressed arrays, binary search trees, or other more specialized structures.[1][2][4]
+Many programming languages include associative arrays as primitive data types, and they are available in software libraries for many others. Content-addressable memory is a form of direct hardware-level support for associative arrays.
+Associative arrays have many applications including such fundamental programming patterns as memoization and the decorator pattern.[5]
+
+
+
+Contents
+
+
+1 Operations
+2 Example
+3 Implementation
+4 Language support
+5 Permanent storage
+6 See also
+7 References
+8 External links
+
+
+
+Operations[edit]
+In an associative array, the association between a key and a value is often known as a "binding", and the same word "binding" may also be used to refer to the process of creating a new association.
+The operations that are usually defined for an associative array are:[1][2]
+
+Add or insert: add a new  pair to the collection, binding the new key to its new value. The arguments to this operation are the key and the value.
+Reassign: replace the value in one of the  pairs that are already in the collection, binding an old key to a new value. As with an insertion, the arguments to this operation are the key and the value.
+Remove or delete: remove a  pair from the collection, unbinding a given key from its value. The argument to this operation is the key.
+Lookup: find the value (if any) that is bound to a given key. The argument to this operation is the key, and the value is returned from the operation. If no value is found, some associative array implementations raise an exception.
+
+In addition, associative arrays may also include other operations such as determining the number of bindings or constructing an iterator to loop over all the bindings. Usually, for such an operation, the order in which the bindings are returned may be arbitrary.
+A multimap generalizes an associative array by allowing multiple values to be associated with a single key.[6] A bidirectional map is a related abstract data type in which the bindings operate in both directions: each value must be associated with a unique key, and a second lookup operation takes a value as argument and looks up the key associated with that value.
+Example[edit]
+Suppose that the set of loans made by a library is to be represented in a data structure. Each book in a library may be checked out only by a single library patron at a time. However, a single patron may be able to check out multiple books. Therefore, the information about which books are checked out to which patrons may be represented by an associative array, in which the books are the keys and the patrons are the values. For instance (using notation from Python, or JSON (JavaScript Object Notation), in which a binding is represented by placing a colon between the key and the value), the current checkouts may be represented by an associative array
+
+
+{
+    "Great Expectations": "John",
+    "Pride and Prejudice": "Alice",
+    "Wuthering Heights": "Alice"
+}
+
+A lookup operation with the key "Great Expectations" in this array would return the name of the person who checked out that book, John. If John returns his book, that would cause a deletion operation in the associative array, and if Pat checks out another book, that would cause an insertion operation, leading to a different state:
+
+
+{
+    "Pride and Prejudice": "Alice",
+    "The Brothers Karamazov": "Pat",
+    "Wuthering Heights": "Alice"
+}
+
+In this new state, the same lookup as before, with the key "Great Expectations", would raise an exception, because this key is no longer present in the array.
+Implementation[edit]
+For dictionaries with very small numbers of bindings, it may make sense to implement the dictionary using an association list, a linked list of bindings. With this implementation, the time to perform the basic dictionary operations is linear in the total number of bindings; however, it is easy to implement and the constant factors in its running time are small.[1][7]
+Another very simple implementation technique, usable when the keys are restricted to a narrow range of integers, is direct addressing into an array: the value for a given key k is stored at the array cell A[k], or if there is no binding for k then the cell stores a special sentinel value that indicates the absence of a binding. As well as being simple, this technique is fast: each dictionary operation takes constant time. However, the space requirement for this structure is the size of the entire keyspace, making it impractical unless the keyspace is small.[4]
+The most frequently used general purpose implementation of an associative array is with a hash table: an array of bindings, together with a hash function that maps each possible key into an array index. The basic idea of a hash table is that the binding for a given key is stored at the position given by applying the hash function to that key, and that lookup operations are performed by looking at that cell of the array and using the binding found there. However, hash table based dictionaries must be prepared to handle collisions that occur when two keys are mapped by the hash function to the same index, and many different collision resolution strategies have been developed for dealing with this situation, often based either on open addressing (looking at a sequence of hash table indices instead of a single index, until finding either the given key or an empty cell) or on hash chaining (storing a small association list instead of a single binding in each hash table cell).[1][2][4][8]
+Another common approach is to implement an associative array with a (self-balancing) red-black tree.[9]
+Dictionaries may also be stored in binary search trees or in data structures specialized to a particular type of keys such as radix trees, tries, Judy arrays, or van Emde Boas trees, but these implementation methods are less efficient than hash tables[citation needed] as well as placing greater restrictions on the types of data that they can handle. The advantages of these alternative structures come from their ability to handle operations beyond the basic ones of an associative array, such as finding the binding whose key is the closest to a queried key, when the query is not itself present in the set of bindings.
+Language support[edit]
+Main article: Comparison of programming languages (mapping)
+Associative arrays can be implemented in any programming language as a package and many language systems provide them as part of their standard library. In some languages, they are not only built into the standard system, but have special syntax, often using array-like subscripting.
+Built-in syntactic support for associative arrays was introduced by SNOBOL4, under the name "table". MUMPS made multi-dimensional associative arrays, optionally persistent, its key data structure. SETL supported them as one possible implementation of sets and maps. Most modern scripting languages, starting with AWK and including Rexx, Perl, Tcl, JavaScript, Python, Ruby, and Lua, support associative arrays as a primary container type. In many more languages, they are available as library functions without special syntax.
+In Smalltalk, Objective-C, .NET,[10] Python, REALbasic, and Swift they are called dictionaries; in Perl, Ruby and Seed7 they are called hashes; in C++, Java, Go, Clojure, Scala, OCaml, Haskell they are called maps (see map (C++), unordered_map (C++), and Map); in Common Lisp and Windows PowerShell, they are called hash tables (since both typically use this implementation). In PHP, all arrays can be associative, except that the keys are limited to integers and strings. In JavaScript (see also JSON), all objects behave as associative arrays. In Lua, they are called tables, and are used as the primitive building block for all data structures. In Visual FoxPro, they are called Collections. The D language also has support for associative arrays [11]
+Permanent storage[edit]
+Main article: Key-value store
+Most programs using associative arrays will at some point need to store that data in a more permanent form, like in a computer file. A common solution to this problem is a generalized concept known as archiving or serialization, which produces a text or binary representation of the original objects that can be written directly to a file. This is most commonly implemented in the underlying object model, like .Net or Cocoa, which include standard functions that convert the internal data into text form. The program can create a complete text representation of any group of objects by calling these methods, which are almost always already implemented in the base associative array class.[12]
+For programs that use very large data sets, this sort of individual file storage is not appropriate, and a database management system (DB) is required. Some DB systems natively store associative arrays by serializing the data and then storing that serialized data and the key. Individual arrays can then be loaded or saved from the database using the key to refer to them. These key-value stores have been used for many years and have a history as long as that as the more common relational database (RDBs), but a lack of standardization, among other reasons, limited their use to certain niche roles. RDBs were used for these roles in most cases, although saving objects to a RDB can be complicated, a problem known as object-relational impedance mismatch.
+After about 2010, the need for high performance databases suitable for cloud computing and more closely matching the internal structure of the programs using them led to a renaissance in the key-value store market. These systems can store and retrieve associative arrays in a native fashion, which can greatly improve performance in common web-related workflows.
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+
+Key-value database
+Tuple
+Function (mathematics)
+Key-value data store
+JSON
+
+References[edit]
+
+
+^ a b c d e Goodrich, Michael T.; Tamassia, Roberto (2006), "9.1 The Map Abstract Data Type", Data Structures &amp; Algorithms in Java (4th ed.), Wiley, pp.&#160;368–371&#160;.
+^ a b c d Mehlhorn, Kurt; Sanders, Peter (2008), "4 Hash Tables and Associative Arrays", Algorithms and Data Structures: The Basic Toolbox, Springer, pp.&#160;81–98&#160;.
+^ Anderson, Arne (1989). "Optimal Bounds on the Dictionary Problem". Proc. Symposium on Optimal Algorithms (Springer Verlag): 106–114.&#160;
+^ a b c Cormen, Thomas H.; Leiserson, Charles E.; Rivest, Ronald L.; Stein, Clifford (2001), "11 Hash Tables", Introduction to Algorithms (2nd ed.), MIT Press and McGraw-Hill, pp.&#160;221–252, ISBN&#160;0-262-03293-7&#160;.
+^ Goodrich &amp; Tamassia (2006), pp. 597–599.
+^ Goodrich &amp; Tamassia (2006), pp. 389–397.
+^ "When should I use a hash table instead of an association list?". lisp-faq/part2. 1996-02-20.&#160;
+^ Klammer, F.; Mazzolini, L. (2006), "Pathfinders for associative maps", Ext. Abstracts GIS-l 2006, GIS-I, pp.&#160;71–74&#160;.
+^ Joel Adams and Larry Nyhoff. "Trees in STL". quote: "The Standard Template library ... some of its containers -- the set&lt;T&gt;, map&lt;T1, T2&gt;, multiset&lt;T&gt;, and multimap&lt;T1, T2&gt; templates -- are generally built using a special kind of self-balancing binary search tree called a red-black tree."
+^ "Dictionary&lt;TKey, TValue&gt; Class". MSDN.&#160;
+^ "Associative Arrays, the D programming language". Digital Mars.&#160;
+^ "Archives and Serializations Programming Guide", Apple Inc., 2012
+
+
+External links[edit]
+
+
+
+Look up associative array in Wiktionary, the free dictionary.
+
+
+
+NIST's Dictionary of Algorithms and Data Structures: Associative Array
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data structures
+
+
+
+
+
+
+Types
+
+
+
+Collection
+Container
+
+
+
+
+
+
+
+
+Abstract
+
+
+
+Associative array
+
+Multimap
+
+
+List
+Stack
+Queue
+
+Double-ended queue
+
+
+Priority queue
+
+Double-ended priority queue
+
+
+Set
+
+Multiset
+Disjoint-set
+
+
+
+
+
+
+
+
+
+
+Arrays
+
+
+
+Bit array
+Circular buffer
+Dynamic array
+Hash table
+Hashed array tree
+Sparse array
+
+
+
+
+
+
+
+
+Linked
+
+
+
+Association list
+Linked list
+Skip list
+Unrolled linked list
+XOR linked list
+
+
+
+
+
+
+
+
+Trees
+
+
+
+B-tree
+Binary search tree
+
+AA tree
+AVL tree
+Red–black tree
+Self-balancing tree
+Splay tree
+
+
+Heap
+
+Binary heap
+Binomial heap
+Fibonacci heap
+
+
+R-tree
+
+R* tree
+R+ tree
+Hilbert R-tree
+
+
+Trie
+
+Hash tree
+
+
+
+
+
+
+
+
+
+
+Graphs
+
+
+
+Binary decision diagram
+Directed acyclic graph
+Directed acyclic word graph
+
+
+
+
+
+
+
+
+
+
+
+List of data structures
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Associative_array&amp;oldid=687815045"					
+				Categories: Associative arraysAbstract data typesComposite data typesData typesHidden categories: All articles with unsourced statementsArticles with unsourced statements from March 2015				
+							
+		
+		
+			

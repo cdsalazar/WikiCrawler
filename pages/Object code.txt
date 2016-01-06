@@ -1,0 +1,165 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Object code
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Program execution
+
+
+General topics
+
+
+
+
+Runtime system
+Runtime library
+Executable
+Compiler
+Interpreter
+Virtual machine
+Source code
+Object code
+Bytecode
+Machine code
+
+
+
+
+Specific runtimes
+
+
+
+
+Android Runtime (ART)
+crt0
+Common Language Runtime (CLR)
+Dalvik
+Java virtual machine (JVM)
+Node.js
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+Object code, or sometimes an object module, is what a computer compiler produces.[1] In a general sense object code is a sequence of statements or instructions in a computer language,[2] usually a machine code language (i.e., binary) or an intermediate language such as RTL.
+Object files can in turn be linked to form an executable file or library file. In order to be used, object code must either be placed in an executable file, a library file, or an object file.
+Object code is a portion of machine code that has not yet been linked into a complete program. It is the machine code for one particular library or module that will make up the completed product. It may also contain placeholders or offsets, not found in the machine code of a completed program, that the linker will use to connect everything together. Whereas machine code is binary code that can be executed directly by the CPU, object code has the jumps partially parameterized so that a linker can fill them in.
+An assembler is used to convert assembly code into machine code (object code). A linker links several object (and library) files to generate an executable.
+References[edit]
+
+
+^ "Compiler". TechTarget. Retrieved 1 September 2011. Traditionally, the output of the compilation has been called object code or sometimes an object module.&#160;
+^ Aho, Alfred V.; Sethi, Ravi; Ullman, Jeffrey D. (1986). "10 Code Optimization". Compilers: principles, techniques, and tools. Computer Science. Mark S. Dalton. p.&#160;704. ISBN&#160;0-201-10194-7.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Object_code&amp;oldid=651739595"					
+				Categories: Machine codeHidden categories: Use dmy dates from July 2012				
+							
+		
+		
+			

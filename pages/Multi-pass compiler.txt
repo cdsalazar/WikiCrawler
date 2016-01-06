@@ -1,0 +1,118 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Multi-pass compiler
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				A multi-pass compiler is a type of compiler that processes the source code or abstract syntax tree of a program several times. This is in contrast to a one-pass compiler, which traverses the program only once. Each pass takes the result of the previous pass as the input, and creates an intermediate output. In this way, the (intermediate) code is improved pass by pass, until the final pass emits the final code.
+Multi-pass compilers are sometimes called wide compilers,[citation needed] referring to the greater scope of the passes: they can "see" the entire program being compiled, instead of just a small portion of it. The wider scope thus available to these compilers allows better code generation (e.g. smaller code size, faster code) compared to the output of one-pass compilers, at the cost of higher compiler time and memory consumption. In addition, some languages cannot be compiled in a single pass, as a result of their design.
+
+
+
+Contents
+
+
+1 Typical multi-pass compiler
+
+1.1 Lexical analysis
+1.2 Syntax analysis
+1.3 Semantic analysis
+1.4 Code generation
+
+
+2 Advantages of Multi-pass compilers
+3 References
+
+
+
+Typical multi-pass compiler[edit]
+
+
+
+
+
+
+
+Lexical analysis[edit]
+This stage of a multi-pass compiler is to remove irrelevant information from the source program that syntax analysis will not be able to use or interpret. Irrelevant information could include things like comments and white space. In addition to removing the irrelevant information, the lexical analysis determines the lexical tokens of the language. This step means that forward declaration is generally not necessary if a multi-pass compiler is used. This phase is about breaking a sequence of character into tokens with attribute such as kind,type,value etc.
+Syntax analysis[edit]
+Syntax analysis is responsible for looking at syntax rules of the language (often as a context-free grammar), and building some intermediate representation of the language. An example of this intermediate representation could be something like an Abstract Syntax Tree or a Directed Acyclic Graph.
+Semantic analysis[edit]
+Semantic analysis takes the representation made from syntax analysis and applies semantic rules to the representation to make sure that the program meets the semantic rules requirements of the language. For example, in the example below at the stage of semantic analysis if the language required that conditions on if statements were boolean expressions the cond would be type-checked to make sure it would be a valid boolean expression.
+
+
+if(cond) {
+ ... 
+} else {
+ ...
+}
+
+In addition to performing semantic analysis at this stage of compilation, often symbol tables are created in order to assist in code generation.
+Code generation[edit]
+This final stage of a typical compiler converts the intermediate representation of program into an executable set of instructions (often assembly). This last stage is the only stage in compilation that is machine dependent. There can also be optimization done at this stage of compilation that make the program more efficient
+Other passes of compiler include intermediate code generation phase which takes place before code generation and code optimization phase which can take place when the source program is written, or after intermediate code generation phase, or after code generation phase.
+Advantages of Multi-pass compilers[edit]
+Machine Independent: Since the multiple passes include a modular structure, and the code generation decoupled from the other steps of the compiler, the passes can be reused for different hardware/machines.
+More Expressive Languages: Many programming languages cannot be represented with a single pass compilers, for example Pascal can be implemented with a single pass compiler since it requires that all definitions come before their use.
+
+
+var x:Integer;
+procedure inc;
+begin
+	x:=x+1;
+end;
+x:=0;
+inc;
+
+This in the single pass compiler when x is referenced, the semantic analysis and code generation can be done since the compiler already knows from the declaration of x:
+
+where the value of x has been stored
+x's type
+
+Languages like Java require a multi-pass compiler since the definition of x would not be required to come before the use.
+
+
+public class Example {	
+	public static void main(String [] args) {
+		assert(x==0);			
+		x++;
+		assert(x==1);
+	}
+	static int x=0;
+}
+
+The multi-pass compiler would allocate the memory location for x during the semantic analysis phase of compilation and would have processed the declaration of x before its use.
+References[edit]
+
+
+Bornat, Richard, Understanding and Writing Compilers: A Do It Yourself Guide, Macmillan Publishing, 1979. ISBN 0-333-21732-2
+Professeur Jean-Pierre FOURNIER, Introduction to compiler design
+Bent Thomsen, Languages and Compilers SProg og Overseattere, Department of Computer Science, Aalborg University
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Multi-pass_compiler&amp;oldid=661945869"					
+				Categories: CompilersHidden categories: All articles with unsourced statementsArticles with unsourced statements from February 2009				
+							
+		
+		
+			

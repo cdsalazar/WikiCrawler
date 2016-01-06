@@ -1,0 +1,239 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Synchronous programming language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2012)
+
+
+
+
+
+
+
+This article's introduction may be too long for the overall article length. Please help by moving some material from it into the body of the article. Please read the layout guide and lead section guidelines to ensure the section will still be inclusive of all essential details. Please discuss this issue on the article's talk page. (April 2012)
+
+
+
+
+
+
+
+
+A synchronous programming language is a computer programming language optimized for programming reactive systems. Computer systems can be sorted in three main classes: (1) transformational systems that take some inputs, process them, deliver their outputs, and terminate their execution; a typical example is a compiler; (2) interactive systems that interact continuously with their environment, at their own speed; a typical example is the web; and (3) reactive systems that interact continuously with their environment, at a speed imposed by the environment; a typical example is the automatic flight control system of modern airplanes. Reactive systems must therefore react to stimuli from the environment within strict time bounds. For this reason they are often also called real-time systems, and are found often in embedded systems.
+Synchronous programming (also synchronous reactive programming or SRP) is a computer programming paradigm supported by synchronous programming languages. The principle of SRP is to make the same abstraction for programming languages as the synchronous abstraction in digital circuits. Synchronous circuits are indeed designed at a high-level of abstraction where the timing characteristics of the electronic transistors are neglected. Each gate of the circuit (or, and, ...) is therefore assumed to compute its result instantaneously, each wire is assumed to transmit its signal instantaneously. A synchronous circuit is clocked and at each tick of its clock, it computes instantaneously its output values and the new values of its memory cells (latches) from its input values and the current values of its memory cells. In other words, the circuit behaves as if the electrons were flowing infinitely fast. The first synchronous programming languages were invented in France in the 1980s: Esterel, Lustre and Signal. Since then, many other synchronous languages have emerged.
+The synchronous abstraction makes reasoning about time in a synchronous program a lot easier, thanks to the notion of logical ticks: a synchronous program reacts to its environment in a sequence of ticks, and computations within a tick are assumed to be instantaneous, i.e., as if the processor executing them were infinitely fast. The statement “a||b” is therefore abstracted as the package “ab” where “a” and “b” are simultaneous. To take a concrete example, the Esterel statement “every 60 second emit minute” specifies that the signal “minute” is exactly synchronous with the 60-th occurrence of the signal “second”. At a more fundamental level, the synchronous abstraction eliminates the non-determinism resulting from the interleaving of concurrent behaviors. This allows deterministic semantics, therefore making synchronous programs amenable to formal analysis, verification and certified code generation, and usable as formal specification formalisms.
+In contrast, in the asynchronous model of computation, on a sequential processor, the statement “a||b” can be either implemented as "a;b" or as "b;a". This is known as the interleaving-based non determinism. The drawback is that it intrinsically forbids deterministic semantics (e.g., race conditions), which makes formal reasoning such as analysis and verification more complex. Nonetheless, asynchronous formalisms are very useful to model, design and verify distributed systems, because they are intrinsically asynchronous.
+Also in contrast are systems with processes that basically interact synchronously. An example would be systems built based on the Communicating sequential processes (CSP) model, which also allows nondeterministic choice.
+
+
+
+Contents
+
+
+1 Synchronous languages
+2 References
+3 External links
+4 See also
+
+
+
+Synchronous languages[edit]
+See also: List of synchronous programming languages
+
+Argos
+Atom (a DSL in Haskell for hard realtime embedded programming)
+Averest
+ChucK (a synchronous reactive programming language for audio)
+Esterel [1]
+LabVIEW
+LEA
+Lustre
+PLEXIL
+SIGNAL (a dataflow-oriented synchronous language enabling multi-clock specifications)
+SOL
+SyncCharts
+
+References[edit]
+
+Nicolas Halbwachs. "Synchronous programming of reactive systems". Kluwer Academic Publishers, 1993. http://www-verimag.imag.fr/~halbwach/newbook.pdf
+
+
+
+^ G. Berry and G. Gonthier. The synchronous programming language ESTEREL: Design, semantics, implementation. Science of Computer Programming, 19(2), 1992.
+
+
+External links[edit]
+
+The Synchronous group at Verimag lab.
+The SIGNAL programming language.
+Unification of Synchronous and Asynchronous Models for Parallel Programming Languages[dead link]—Proposes parallel languages based on C, lets programmers specify and manage parallelism on a broad range of computer architectures.
+
+See also[edit]
+
+Asynchronous programming
+Concurrency (computer science)
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Synchronous_programming_language&amp;oldid=669394676"					
+				Categories: Synchronous programming languagesProgramming language classificationHidden categories: Articles needing additional references from June 2012All articles needing additional referencesWikipedia introduction cleanup from April 2012All pages needing cleanupArticles covered by WikiProject Wikify from April 2012All articles covered by WikiProject WikifyAll articles with dead external linksArticles with dead external links from February 2012				
+							
+		
+		
+			

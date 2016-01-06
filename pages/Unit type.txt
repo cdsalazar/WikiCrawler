@@ -1,0 +1,328 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Unit type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the notion used in computer programming and type theory.  For types of measurement units, see Units of measurement.  For other uses, see Unit (disambiguation).
+In the area of mathematical logic and computer science known as type theory, a unit type is a type that allows only one value (and thus can hold no information). The carrier (underlying set) associated with a unit type can be any singleton set. There is an isomorphism between any two such sets, so it is customary to talk about the unit type and ignore the details of its value. One may also regard the unit type as the type of 0-tuples, i.e. the product of no types.
+The unit type is the terminal object in the category of types and typed functions. It should not be confused with the zero or bottom type, which allows no values and is the initial object in this category.
+The unit type is implemented in most functional programming languages. The void type that is used in some imperative programming languages serves some of its functions, but because its carrier set is empty, it has some limitations (as detailed below).
+
+
+
+Contents
+
+
+1 In programming languages
+
+1.1 Void type as unit type
+
+1.1.1 Difference in calling convention
+1.1.2 Difference in storage
+1.1.3 In Generics
+
+
+
+
+2 References
+
+
+
+In programming languages[edit]
+Several computer programming languages provide a unit type to specify the result type of a function with the sole purpose of causing a side effect, and the argument type of a function that does not require arguments.
+
+In Haskell and Rust, the unit type is called () and its only value is also (), reflecting the 0-tuple interpretation.
+In ML (including OCaml and Standard ML), the type is called unit but the value is written as ().
+In Scala, the unit type is called Unit and its only value is written as ().
+In Common Lisp the type named NULL is a unit type which has one value, namely the symbol NIL. This should not be confused with the NIL type, which is the bottom type.
+In Python, there is a type called NoneType which allows the single value of None.
+In C++11, there is a type called nullptr_t (null pointer type) that can only store the value nullptr.
+In Swift, the unit type is called Void or () and its only value is also (), reflecting the 0-tuple interpretation.
+In Go, the unit type is written struct{} and its value is struct{}{}.
+
+The unit type is useful even in functions without side effects if the programming language supports algebraic data types. Any nullary data constructor is effectively isomorphic with the unit type. One can solve the semipredicate problem (the problem of distinguishing between a "normal" return value of a function and an "error") elegantly in such a language, by encoding the "error" as the unit type. In Haskell, the polymorphic type Maybe is predefined for this purpose. Here Nothing is isomorphic to the unit type:
+
+
+ data Maybe a = Nothing | Just a
+
+The type Maybe is called the option type in type theory.
+Void type as unit type[edit]
+In C, C++, C#, D and Java, void expresses the empty type. The unit type in C would be struct {}, but an empty struct is forbidden by the C language specification. Instead void is used in a manner that simulates some, but not all, of the properties of the unit type, as detailed below. Like most imperative languages, C allows functions that do not return a value; these are specified as having the void return type. Such functions are called procedures in other imperative languages like Pascal, where a syntactic distinction, instead of type-system distinction, is made between functions and procedures.
+Difference in calling convention[edit]
+The first notable difference between a true unit type and the void type is that the unit type may always be the type of the argument to a function, but the void type cannot be the type of an argument in C, despite the fact that it may appear as the sole argument in the list. This problem is best illustrated by the following program, which is a compile-time error in C:
+
+
+void f(void) {}
+void g(void) {}
+
+int main(void)
+{
+  f(g()); // compile-time error here
+  return 0;
+}
+
+This issue does not arise in most programming practice in C, because since the void type carries no information, it is useless to pass it anyway; but it may arise in generic programming, such as C++ templates, where void must be treated differently from other types. In C++ however, empty classes are allowed, so it is possible to implement a real unit type; the above example becomes compilable as:
+
+
+class unit_type {};
+const unit_type the_unit;
+
+unit_type f(unit_type) { return the_unit; }
+unit_type g(unit_type) { return the_unit; }
+
+int main()
+{
+  f(g(the_unit));
+  return 0;
+}
+
+(For brevity, we're not worried in the above example whether the_unit is really a singleton; see singleton pattern for details on that issue.)
+Difference in storage[edit]
+The second notable difference is that the void type, being empty, can never be stored in a record type, i.e. in a struct or a class in C/C++. In contrast, the unit type can be stored in records in functional programming languages, i.e. it can appear as the type of a field; the above implementation of the unit type in C++ can also be stored. While this may seem a useless feature, it does allow one for instance to elegantly implement a set as a map to the unit type; in the absence of a unit type, one can still implement a set this way by storing some dummy value of another type for each key.
+In Generics[edit]
+In Java Generics, type parameters must be reference types. The wrapper type Void is often used when a unit type parameter is needed. Although the Void type can never have any instances, it does have one value, null (like all other reference types), so it acts as a unit type. In practice, any other non-instantiable type, e.g. Math, can also be used for this purpose, since they also have exactly one value, null.
+
+
+public static Void f(Void x) { return null; }
+public static Void g(Void x) { return null; }
+
+public static void main(String[] args)
+{
+  f(g(null));
+}
+
+References[edit]
+
+Pierce, Benjamin C. (2002). Types and Programming Languages. MIT Press. pp.&#160;118–119. ISBN&#160;0-262-16209-1.&#160;
+unit type in nLab
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Unit_type&amp;oldid=691131664"					
+				Categories: Data typesType theoryHidden categories: Articles with example Java code				
+							
+		
+		
+			

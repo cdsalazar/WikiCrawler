@@ -1,0 +1,171 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Static library
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (October 2013)
+
+
+In computer science, a static library or statically-linked library is a set of routines, external functions and variables which are resolved in a caller at compile-time and copied into a target application by a compiler, linker, or binder, producing an object file and a stand-alone executable.[1] This executable and the process of compiling it are both known as a static build of the program. Historically, libraries could only be static. Static libraries are either merged with other static libraries and object files during building/linking to form a single executable, or they may be loaded at run-time into the address space of the loaded executable at a static memory offset determined at compile-time/link-time.
+
+
+
+Contents
+
+
+1 Advantages and disadvantages
+2 Linking and loading
+3 Creating static libraries in C/C++
+4 See also
+5 References
+
+
+
+Advantages and disadvantages[edit]
+There are several advantages to statically linking libraries with an executable instead of dynamically linking them. The most significant is that the application can be certain that all its libraries are present and that they are the correct version. This avoids dependency problems, known colloquially as DLL Hell or more generally dependency hell. Static linking can also allow the application to be contained in a single executable file, simplifying distribution and installation.
+With static linking, it is enough to include those parts of the library that are directly and indirectly referenced by the target executable (or target library). With dynamic libraries, the entire library is loaded, as it is not known in advance which functions will be invoked by applications. Whether this advantage is significant in practice depends on the structure of the library.
+In static linking, the size of the executable becomes greater than in dynamic linking, as the library code is stored within the executable rather than in separate files. But if library files are counted as part of the application then the total size will be similar, or even smaller if the compiler eliminates the unused symbols. On Microsoft Windows it is common to include the library files an application needs with the application.[2] On Unix-like systems this is less common as package management systems can be used to ensure the correct library files are available. This allows the library files to be shared between many applications leading to space savings. It also allows the library to be updated to fix bugs and security flaws without updating the applications that use the library. In practice, many executables (especially those targeting Microsoft Windows) use both static and dynamic libraries.
+Linking and loading[edit]
+Any static library function can call a function or procedure in another static library. The linker and loader handle this the same way as for kinds of other object files. Static library files may be linked at run time by a linking loader (e.g., the X11 module loader). However, whether such a process can be called static linking is controversial.
+Creating static libraries in C/C++[edit]
+Static libraries can be easily created in C or in C++. These two languages provide storage-class specifiers for indicating external or internal linkage, in addition to providing other features. To create such a library, the exported functions/procedures and other objects variables must be specified for external linkage (i.e. by not using the C static keyword). Static library filenames usually have a ".a" extension on Unix-like systems[1] and ".lib" on Microsoft Windows.
+For example, to create an archive from files class1.o, class2.o, class3.o, the following command would be used:[1]
+
+ar rcs libclass.a class1.o class2.o class3.o
+
+to compile a program that depends on class1.o, class2.o, and class3.o one could do:
+
+cc main.c libclass.a
+
+or (if libclass.a is placed in standard library path, like /usr/local/lib)
+
+cc main.c -lclass
+
+or (during linking)
+
+ld ... main.o -lclass ...
+
+instead of:
+
+cc main.c class1.o class2.o class3.o
+
+See also[edit]
+
+Library (computing)
+Linker (computing)
+Loader (computing)
+Shared library
+Dynamic-link library (DLL, .dll)
+External variable
+Object file
+Prebinding
+
+References[edit]
+
+^ a b c "Static Libraries". TLDP. Retrieved 3 October 2013.&#160;
+^ Anderson, Rick (2000-01-11). "The End of DLL Hell". microsoft.com. Archived from the original on 2001-06-05. Retrieved 2013-08-31. Private DLLs are DLLs that are installed with a specific application and used only by that application.&#160;
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Static_library&amp;oldid=678113880"					
+				Categories: Computer librariesHidden categories: Articles needing additional references from October 2013All articles needing additional references				
+							
+		
+		
+			

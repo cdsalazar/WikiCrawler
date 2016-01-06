@@ -1,0 +1,403 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Polymorphism (computer science)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Type polymorphism)
+												
+					Jump to:					navigation, 					search
+				
+				Not to be confused with Polymorphic code.
+In programming languages and type theory, polymorphism (from Greek πολύς, polys, "many, much" and μορφή, morphē, "form, shape") is the provision of a single interface to entities of different types.[1] A polymorphic type is one whose operations can also be applied to values of some other type, or types.[2] There are several fundamentally different kinds of polymorphism:
+
+Ad hoc polymorphism: when a function denotes different and potentially heterogeneous implementations depending on a limited range of individually specified types and combinations. Ad hoc polymorphism is supported in many languages using function overloading.
+Parametric polymorphism: when code is written without mention of any specific type and thus can be used transparently with any number of new types. In the object-oriented programming community, this is often known as generics or generic programming. In the functional programming community, this is often shortened to polymorphism.
+Subtyping (also called subtype polymorphism or inclusion polymorphism): when a name denotes instances of many different classes related by some common superclass.[3] In the object-oriented programming community, this is often simply referred to as polymorphism.
+
+The interaction between parametric polymorphism and subtyping leads to the concepts of variance and bounded quantification.
+
+
+
+Contents
+
+
+1 History
+2 Types of polymorphism
+
+2.1 Ad hoc polymorphism
+2.2 Parametric polymorphism
+2.3 Subtyping
+2.4 Polytypism
+
+
+3 Implementation aspects
+
+3.1 Static and dynamic polymorphism
+
+
+4 See also
+5 References
+6 External links
+
+
+
+History[edit]
+Ad hoc polymorphism and parametric polymorphism were originally described in Fundamental Concepts in Programming Languages, a set of lecture notes written in 1967 by British computer scientist Christopher Strachey.[4] In a 1985 paper, Peter Wegner and Luca Cardelli introduced the term inclusion polymorphism to model subtypes and inheritance.[2] However, implementations of subtyping and inheritance predate the term "inclusion polymorphism", having appeared with Simula in 1967.
+Types of polymorphism[edit]
+Ad hoc polymorphism[edit]
+Main article: Ad hoc polymorphism
+Chris Strachey[4] chose the term ad hoc polymorphism to refer to polymorphic functions which can be applied to arguments of different types, but which behave differently depending on the type of the argument to which they are applied (also known as function overloading or operator overloading). The term "ad hoc" in this context is not intended to be pejorative; it refers simply to the fact that this type of polymorphism is not a fundamental feature of the type system. In the example below, the Add functions seem to work generically over various types when looking at the invocations, but are considered to be two entirely distinct functions by the compiler for all intents and purposes:
+
+
+program Adhoc;
+
+function Add( x, y : Integer ) : Integer;
+begin
+    Add := x + y
+end;
+
+function Add( s, t : String ) : String;
+begin
+    Add := Concat( s, t )
+end;
+
+begin
+    Writeln(Add(1, 2));                   (* Prints "3"             *)
+    Writeln(Add('Hello, ', 'World!'));    (* Prints "Hello, World!" *)
+end.
+
+In dynamically typed languages the situation can be more complex as the correct function that needs to be invoked might only be determinable at run time.
+Implicit type conversion has also been defined as a form of polymorphism, referred to as "coercion polymorphism".[5]
+Parametric polymorphism[edit]
+Main article: Parametric polymorphism
+Parametric polymorphism allows a function or a data type to be written generically, so that it can handle values uniformly without depending on their type.[6] Parametric polymorphism is a way to make a language more expressive, while still maintaining full static type-safety.
+The concept of parametric polymorphism applies to both data types and functions. A function that can evaluate to or be applied to values of different types is known as a polymorphic function. A data type that can appear to be of a generalized type (e.g., a list with elements of arbitrary type) is designated polymorphic data type like the generalized type from which such specializations are made.
+Parametric polymorphism is ubiquitous in functional programming, where it is often simply referred to as "polymorphism". The following example in Haskell shows a parametrized list data type and two parametrically polymorphic functions on them:
+
+
+data List a = Nil | Cons a (List a)
+
+length :: List a -&gt; Integer
+length Nil         = 0
+length (Cons x xs) = 1 + length xs
+
+map :: (a -&gt; b) -&gt; List a -&gt; List b
+map f Nil         = Nil
+map f (Cons x xs) = Cons (f x) (map f xs)
+
+Parametric polymorphism is also available in several object-oriented languages. For instance, Templates in C++ and D, or under the name Generics in Java:
+
+
+class List&lt;T&gt; {
+    class Node&lt;T&gt; {
+        T elem;
+        Node&lt;T&gt; next;
+    }
+    Node&lt;T&gt; head;
+    int length() { ... }
+}
+
+List&lt;B&gt; map(Func&lt;A,B&gt; f, List&lt;A&gt; xs) {
+    ...
+}
+
+John C. Reynolds (and later Jean-Yves Girard) formally developed this notion of polymorphism as an extension to lambda calculus (called the polymorphic lambda calculus, or System F). Any parametrically polymorphic function is necessarily restricted in what it can do, working on the shape of the data instead of its value, leading to the concept of parametricity.
+Subtyping[edit]
+Main article: Subtyping
+Some languages employ the idea of subtyping (also called subtype polymorphism or inclusion polymorphism) to restrict the range of types that can be used in a particular case of polymorphism. In these languages, subtyping allows a function to be written to take an object of a certain type T, but also work correctly if passed an object that belongs to a type S that is a subtype of T (according to the Liskov substitution principle). This type relation is sometimes written S&#160;&lt;:&#160;T. Conversely, T is said to be a supertype of S—written T&#160;:&gt;&#160;S. Subtype polymorphism is usually resolved dynamically (see below).
+In the following example we make cats and dogs subtypes of animals. The procedure letsHear() accepts an animal, but will also work correctly if a subtype is passed to it:
+
+
+abstract class Animal {
+    abstract String talk();
+}
+
+class Cat extends Animal {
+    String talk() {
+        return "Meow!";
+    }
+}
+
+class Dog extends Animal {
+    String talk() {
+        return "Woof!";
+    }
+}
+
+void letsHear(Animal a) {
+    println(a.talk());
+}
+
+int main() {
+    letsHear(new Cat());
+    letsHear(new Dog());
+}
+
+In another example, if Number, Rational, and Integer are types such that Number&#160;:&gt;&#160;Rational and Number&#160;:&gt;&#160;Integer, a function written to take a Number will work equally well when passed an Integer or Rational as when passed a Number. The actual type of the object can be hidden from clients into a black box, and accessed via object identity. In fact, if the Number type is abstract, it may not even be possible to get your hands on an object whose most-derived type is Number (see abstract data type, abstract class). This particular kind of type hierarchy is known—especially in the context of the Scheme programming language—as a numerical tower, and usually contains many more types.
+Object-oriented programming languages offer subtype polymorphism using subclassing (also known as inheritance). In typical implementations, each class contains what is called a virtual table—a table of functions that implement the polymorphic part of the class interface—and each object contains a pointer to the "vtable" of its class, which is then consulted whenever a polymorphic method is called. This mechanism is an example of:
+
+late binding, because virtual function calls are not bound until the time of invocation;
+single dispatch (i.e., single-argument polymorphism), because virtual function calls are bound simply by looking through the vtable provided by the first argument (the this object), so the runtime types of the other arguments are completely irrelevant.
+
+The same goes for most other popular object systems. Some, however, such as Common Lisp Object System, provide multiple dispatch, under which method calls are polymorphic in all arguments.
+Polytypism[edit]
+Main article: Generic programming § Functional languages
+A related concept is polytypism (or data type genericity). A polytypic function is more general than polymorphic, and in such a function, "though one can provide fixed ad hoc cases for specific data types, an ad hoc combinator is absent".[7]
+Implementation aspects[edit]
+Static and dynamic polymorphism[edit]
+Main articles: Static polymorphism, Late binding and Dynamic dispatch
+Polymorphism can be distinguished by when the implementation is selected: statically (at compile time) or dynamically (at run time, typically via a virtual function). This is known respectively as static dispatch and dynamic dispatch, and the corresponding forms of polymorphism are accordingly called static polymorphism and dynamic polymorphism.
+Static polymorphism executes faster, as there is no dynamic dispatch overhead, but requires additional compiler support. Further, static polymorphism allows greater static analysis, by compilers (notably for optimization), source code analysis tools, and human readers (programmers). Dynamic polymorphism is more flexible but slower—for example, dynamic polymorphism allows duck typing, and a dynamically linked library may operate on objects without knowing their full type.
+Static polymorphism typically occurs in ad hoc polymorphism and parametric polymorphism, whereas dynamic polymorphism is usual for subtype polymorphism. However, it is possible to achieve static polymorphism with subtyping through more sophisticated use of template metaprogramming, namely the Curiously recurring template pattern.
+See also[edit]
+
+Type theory
+Duck typing for polymorphism without (static) types
+Polymorphic code (Computer virus terminology)
+System F for a lambda calculus with parametric polymorphism.
+Type class
+Virtual inheritance
+
+References[edit]
+
+
+^ Bjarne Stroustrup (February 19, 2007). "Bjarne Stroustrup's C++ Glossary". polymorphism - providing a single interface to entities of different types.&#160;
+^ a b Cardelli, Luca; Wegner, Peter (December 1985). "On understanding types, data abstraction, and polymorphism" (PDF). ACM Computing Surveys (New York, NY, USA: ACM) 17 (4): 471–523. doi:10.1145/6041.6042. ISSN&#160;0360-0300.&#160;: "Polymorphic types are types whose operations are applicable to values of more than one type."
+^ Booch, et all 2007 Object-Oriented Analysis and Design with Applications. Addison-Wesley.
+^ a b C. Strachey - Fundamental Concepts in Programming Languages http://www.itu.dk/courses/BPRD/E2009/fundamental-1967.pdf
+^ Allen B. Tucker (28 June 2004). Computer Science Handbook, Second Edition. Taylor &amp; Francis. pp.&#160;91–. ISBN&#160;978-1-58488-360-9.&#160;
+^ Pierce, B. C. 2002 Types and Programming Languages. MIT Press.
+^ Ralf Lammel and Joost Visser, "Typed Combinators for Generic Traversal", in Practical Aspects of Declarative Languages: 4th International Symposium (2002), p. 153.
+
+
+External links[edit]
+
+C++ examples of polymorphism
+Objects and Polymorphism (Visual Prolog)
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Polymorphism_(computer_science)&amp;oldid=687768117"					
+				Categories: Polymorphism (computer science)Functional programmingObject-oriented programmingProgramming language conceptsType theoryData types				
+							
+		
+		
+			

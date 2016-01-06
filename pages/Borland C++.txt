@@ -1,0 +1,122 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Borland C++
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article does not cite any references (sources). Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (July 2013)
+
+
+
+Borland C++
+
+Developer(s)
+Borland
+
+
+Operating system
+Microsoft Windows, MS-DOS
+
+
+Type
+IDE
+
+
+License
+Proprietary software
+
+
+Website
+www.borland.com
+
+
+Borland C++ is a C and C++ programming environment (that is, an integrated development environment) for MS-DOS and Microsoft Windows. It was the successor to Turbo C++, and included a better debugger, the Turbo Debugger, which was written in protected mode DOS.
+
+
+
+Contents
+
+
+1 Libraries
+2 Add-ons
+3 Version history
+4 Evolution of Borland C++
+5 See also
+6 External links
+
+
+
+Libraries[edit]
+Object Windows Library (OWL): A set of C++ classes to make it easier to develop professional graphical Windows applications.
+Turbo Vision: A set of C++ classes to create professional applications in DOS. Those classes mimics some of the aspects of a Windows application like: dialog boxes, messages pumps, menus, accelerators, etc.
+Borland Graphics Interface: A library of functions for doing simple, presentation-style 2D graphics. Drivers were included for generic CGA, EGA and VGA capability, with support for a limited number of video-modes, but more advanced, third-party drivers were also available.
+Add-ons[edit]
+Borland Power Pack for DOS: Used to create 16- and 32-bit protected mode DOS applications, which can access a limited scope of the Windows API and call functions in any Windows DLL.
+Borland CodeGuard: Once installed and integrated within the IDE, CodeGuard can insert instrumentalization code in the final executables that can be used to monitor: pointer usage, API calls, how many times some function is called, and other features. If some error is found, a pop-up window appears, the debugger can stop, or a log is written to disk. Delivered for 16- and 32-bit applications.
+Version history[edit]
+
+Borland C++ 2.0 - (1991, MS-DOS)
+Borland C++ 3.0 - (1991) New compiler support to build Microsoft Windows applications.
+Borland C++ 3.1 - (1992) Introduction of Windows-based IDE and application frameworks (OWL 1.0, Turbovision 1.0)
+Borland C++ 4.0 - (1993, Windows 3.x) MS-DOS IDE supported no longer, included OWL 2.0.
+Borland C++ 1.0 - (1992, OS/2)
+Borland C++ 1.5 - (?, OS/2)
+Borland C++ 2.0 - (1993, OS/2) Support for 2.1 and Warp 3. OWL 2.0. Included IBM SMART Toolset for automatic migration of Windows applications to OS/2. Last version.
+Borland C++ 4.01
+Borland C++ 4.02 - (1994)
+Borland C++ 4.5
+Borland C++ 4.51
+Borland C++ 4.52 - (1995) Official support for Windows 95, OWL 2.5
+Borland C++ 4.53
+Borland C++ 5.0 - (1996, Windows 95) Released in March 1996. Works on Windows 95 and Windows NT 3.51. It does not (officially) work on Windows NT 4.0 (which was still in development at that time). 3rd party tests exhibited some problems on NT 4.0. It does not work in Windows 3.x or DOS. Despite that, it can produce either Win32, Win16 or DOS programs.
+Borland C++ 5.01
+Borland C++ 5.02 - (1997) Final independent release of the Borland C++ IDE (subsequently replaced up by the C++Builder series), final release to support compilation to (real-mode) MS-DOS target. Windows NT 4.0 officially supported.
+Borland C++ Builder 4.0 + Borland C++ 5.02 - (1999) Bundle combination to facilitate the migration to C++Builder.
+Borland C++ 5.5 - Command-line compiler only (not with IDE). It was later made available as a free download.
+
+Evolution of Borland C++[edit]
+Borland C++ evolved in a number of steps:
+
+Turbo C++ → Borland C++ → Borland C++Builder → CodeGear C++Builder → Embarcadero C++Builder
+
+See also[edit]
+
+Turbo C
+Turbo C++
+Visual C++
+
+External links[edit]
+
+Borland C++ Compiler (BCC32) Download
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Borland_C%2B%2B&amp;oldid=647907065"					
+				Categories: Borland softwareC++ compilersHidden categories: Articles lacking sources from July 2013All articles lacking sources				
+							
+		
+		
+			

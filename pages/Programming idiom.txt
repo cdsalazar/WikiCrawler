@@ -1,0 +1,150 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Programming idiom
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				A programming idiom is a means of expressing a recurring construct in one or more programming languages. Generally speaking, a programming idiom is an expression of a simple task, algorithm, or data structure that is not a built-in feature in the programming language being used, or, conversely, the use of an unusual or notable feature that is built into a programming language. The term can be used more broadly, however, to refer to complex algorithms or programming design patterns.
+Knowing the idioms associated with a programming language and how to use them is an important part of gaining fluency in that language.
+
+
+
+Contents
+
+
+1 Examples of simple idioms
+
+1.1 Incrementing a counter
+1.2 Swapping values between variables
+1.3 Infinite loop
+1.4 Set as associative array
+1.5 Pimpl idiom
+
+
+2 External links
+
+
+
+Examples of simple idioms[edit]
+Incrementing a counter[edit]
+In virtually all languages that support assignment, a counter can be incremented using code such as this (for example in BASIC):
+
+  i = i + 1
+
+As this is an extremely common operation, many languages provide specialized operators for this, notably the C language, and many others derived from it:
+
+
+  i += 1;  /* i = i + 1;  */
+  ++i;     /* same result */
+  i++;     /* same result */
+
+There is a difference between the first two expressions, which yield the new version of i, and the third, which yields the old version of i. When the expressions are used as isolated statements, as in this example, the yielded value is ignored.
+Pascal instead provides a built-in procedure for the same operation:
+
+
+  i := i + 1;
+  Inc(i); (* same *)
+
+These are the idiomatic ways of "adding one to a counter".
+Swapping values between variables[edit]
+
+Main article: Swap (computer science)
+
+In many languages, code for swapping the values in two variables looks like the following:
+
+  temp = a;
+  a = b;
+  b = temp;
+
+In Perl, the list assignment syntax allows a more succinct expression:
+
+  ($a, $b) = ($b, $a);
+
+Or even more concise in Python,
+
+  a, b = b, a
+
+Infinite loop[edit]
+The code used to write an infinite (nonterminating) loop varies widely between different programming languages, although it often takes the form of a while loop where the test condition is always true. In Pascal, for example:
+
+
+  while true do begin
+    do_something();
+  end;
+
+There are several ways to write an infinite loop in C, including a loop very similar to the Pascal example, but the following idiom uses the unusual appearance of the empty for loop condition to draw attention visually to the loop:
+
+
+  for (;;) {
+    do_something();
+  }
+
+Perl allows the C syntax above, but supports some other syntax as well. For example:
+
+
+  do_something() while (1);  # Succinct one-line infinite loop
+  # same as
+  while (1) { do_something() };
+
+
+
+  # Using a "naked block" and the redo operator
+  {
+    do_something();
+    redo;
+  }
+
+Ada loops forever this readable way:
+
+
+  loop
+    do_something;
+  end loop;
+
+Also readable python syntax:
+
+
+  while True:
+    do_something()
+
+Set as associative array[edit]
+In languages that do not support the set data type, but do support associative arrays, a set can be implemented as an associative array where the value is either irrelevant or is the unit type (or a sentinel value like 1).
+This is useful for example if one needs to perform an operation in which we often need to determine whether some arbitrary value is in a given list or array or not. Set membership in a list or (unsorted) array is an O(n) operation, as one needs to scan the list until the element is found or the end is reached. By contrast, lookup or membership in an associative array is frequently O(1), for example if it is implemented as a hash table.
+The following idiom is commonly used to express this in Perl, which has fast associative arrays (implemented as hash tables), but no sets:
+
+
+  my %elements = map { $_ =&gt; 1 } @elements;
+
+Pimpl idiom[edit]
+In object-oriented programming the implementation details of an API-level class can be hidden in an own implementation class. An opaque pointer (or reference) to that class is stored in the API-level class.
+External links[edit]
+
+programming-idioms.org shows short idioms implementations in most mainstream languages.
+C++ programming idioms from Wikibooks.
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Programming_idiom&amp;oldid=680804207"					
+				Categories: Programming idioms				
+							
+		
+		
+			

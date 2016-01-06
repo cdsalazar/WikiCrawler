@@ -1,0 +1,299 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Physical address
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about computer memory addressing.  For the meaning in networking, see MAC address.
+
+
+
+
+Diagram of relationship between the virtual and physical address spaces.
+
+
+In computing, a physical address (also real address, or binary address), is a memory address that is represented in the form of a binary number on the address bus circuitry in order to enable the data bus to access a particular storage cell of main memory, or a register of memory mapped I/O device.
+
+
+
+Contents
+
+
+1 Use by central processing unit
+
+1.1 Unaligned addressing
+
+
+2 Use by other devices
+3 See also
+4 References
+
+
+
+Use by central processing unit[edit]
+In a computer supporting virtual memory, the term physical address is used mostly to differentiate from a virtual address. In particular, in computers utilizing a memory management unit (MMU) to translate memory addresses, the virtual and physical addresses refer to an address before and after translation performed by the MMU, respectively.[1]
+Unaligned addressing[edit]
+Depending upon its underlying computer architecture, the performance of a computer may be hindered by unaligned access to memory. As an example, a 16&#160;bit computer with a 16&#160;bit memory data bus such as an Intel 8086 generally has less overhead if the access is aligned to an even address. In that case fetching one 16&#160;bit value requires a single memory read operation, a single transfer over a data bus.[2][3]
+Obviously, if the 16&#160;bit data value starts at an odd address, the processor may actually need to perform two memory read cycles to load the value into it, i.e. one for the low address (throwing half of it away) and then a second to load the high address (again throwing half of the retrieved data away). In fact, on some architectures (such as the Motorola 68000 family), unaligned memory accesses will result in an exception being raised (usually resulting in a software exception being raised like POSIX's SIGBUS).[2]
+Use by other devices[edit]
+
+
+
+This section requires expansion. (January 2012)
+
+
+The direct memory access (DMA) feature allows other devices in the mother board but CPU to address the main memory. Such devices, therefore, also need to have a knowledge of physical addresses.
+See also[edit]
+
+Address constant
+Addressing mode
+Address space
+Page address register
+Pointer (computer science)
+Primary storage, also known as main memory
+Virtual memory
+
+Virtual address, also known as logical address
+Page table
+Memory management unit (MMU)
+
+
+
+References[edit]
+
+
+^ Frank  Uyeda (2009). "Lecture  7:  Memory  Management" (PDF). CSE 120:  Principles  of  Operating  Systems. UC San Diego. Retrieved 2013-12-04.&#160;
+^ a b Daniel Drake (2007-12-04). "Memory access and alignment". LWN.net. Retrieved 2013-12-04.&#160;
+^ Daniel Drake; Johannes Berg. "Documentation/unaligned-memory-access.txt". kernel.org. Retrieved 2013-12-04.&#160;
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Physical_address&amp;oldid=617130003"					
+				Categories: Computer memoryVirtual memoryData typesHidden categories: Articles to be expanded from January 2012All articles to be expanded				
+							
+		
+		
+			

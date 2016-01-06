@@ -1,0 +1,100 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Film frame
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (May 2013)
+
+
+In filmmaking, video production, animation, and related fields, a film frame or video frame is one of the many still images which compose the complete moving picture. The term is derived from the fact that, from the beginning of modern filmmaking toward the end of the 20th century, and in many places still up to the present, the single images have been recorded on a strip of photographic film that quickly increased in length, historically; each image on such a strip looks rather like a framed picture when examined individually.
+The term may also be used more generally as a noun or verb to refer to the edges of the image as seen in a camera viewfinder or projected on a screen. Thus, the camera operator can be said to keep a car in frame by panning with it as it speeds past.
+When the moving picture is displayed, each frame is flashed on a screen for a short time (nowadays, usually 1/24, 1/25 or 1/30 of a second) and then immediately replaced by the next one. Persistence of vision blends the frames together, producing the illusion of a moving image.
+The frame is also sometimes used as a unit of time, so that a momentary event might be said to last six frames, the actual duration of which depends on the frame rate of the system, which varies according to the video or film standard in use. In North America and Japan, 30 frames per second (fps) is the broadcast standard, with 24 frames/s now common in production for high-definition video shot to look like film. In much of the rest of the world, 25 frames/s is standard.
+In systems historically based on NTSC standards, for reasons originally related to the Chrominance subcarrier in analog NTSC TV systems, the exact frame rate is actually (3579545 / 227.5) / 525 = 29.97002616 fps.[a] This leads to many synchronization problems which are unknown outside the NTSC world, and also brings about hacks such as drop-frame timecode.
+In film projection, 24 fps is the norm, except in some special venue systems, such as IMAX, Showscan and Iwerks&#160;70, where 30, 48 or even 60 frame/s have been used. Silent films and 8&#160;mm amateur movies used 16 or 18 frame/s.
+
+
+
+Contents
+
+
+1 Physical film frames
+2 Video frames
+3 Showing film frames in animation and movies
+4 See also
+5 Notes
+6 External links
+
+
+
+Physical film frames[edit]
+In a strip of movie film, individual frames are separated by frame lines. Normally, 24 frames are needed for one second of film. In ordinary filming, the frames are photographed automatically, one after the other, in a movie camera. In special effects or animation filming, the frames are often shot one at a time.
+The size of a film frame varies, depending on the still film format or the motion picture film format. In the smallest 8 mm amateur format for motion pictures film, it is only about 4.8 by 3.5&#160;mm, while an IMAX frame is as large as 69.6 by 48.5&#160;mm. The larger the frame size is in relation to the size of the projection screen, the sharper the image will appear.
+The size of the film frame of motion picture film also depends on the location of the holes, the size of the holes, the shape of the holes. and the location and type of sound stripe.
+The most common film format, 35 mm, has a frame size of 36 by 24&#160;mm when used in a still 35&#160;mm camera where the film moves horizontally, but the frame size varies when used for motion picture where the film moves vertically (with the exception of VistaVision and Technirama where the film moves horizontally). Using a 4-perf pulldown, there are exactly 16 frames in one foot of 35&#160;mm film, leading to film frames sometimes being counted in terms of "feet and frames". The maximum frame size is 18 by 24&#160;mm, (silent/full aperture), but this is significantly reduced by the application of sound track(s). A system called KeyKode is often used to identify specific physical film frames in a production.
+Video frames[edit]
+Historically, video frames were represented as analog waveforms in which varying voltages represented the intensity of light in an analog raster scan across the screen. Analog blanking intervals separated video frames in the same way that frame lines did in film. For historical reasons, most systems used an interlaced scan system in which the frame typically consisted of two video fields sampled over two slightly different periods of time. This meant that a single video frame was usually not a good still picture of the scene, unless the scene being shot was completely still.
+With the dominance of digital technology, modern video systems now represent the video frame as a rectangular raster of pixels, either in an RGB color space or a color space such as YCbCr, and the analog waveform is typically found nowhere other than in legacy I/O devices.
+Standards for the digital video frame raster include Rec. 601 for standard-definition television and Rec. 709 for high-definition television.
+Video frames are typically identified using SMPTE time code.
+Showing film frames in animation and movies[edit]
+Some humor in animation is based on the fourth wall aspect of the film frame itself, with some animation showing characters leaving what is assumed to be the edge of the film or the film malfunctioning. This latter one is used often in films as well. This hearkens back to some early cartoons, where characters were aware of the fact they were in a cartoon, specifically the fact they could look at the credits and be aware of something that isn't part of the story as presented. These jokes include -
+
+Split frames - Where the fourth wall is broken by two frames, the lower half of the previous frame and the upper part of the next frame, showing at once, with jokes involving them including a character crossing the frame itself.
+Film Break - A famous form of joke, where the film either snaps or is deliberately broken, with often the fourth wall coming into play during this period when, rightfully, there should be nothing on screen.
+Gate Hair - A famous form of joke where the animator intentionally places fake "gate hairs" within the frame, which one of the animated characters plucks and removes from the frame.
+Editorial marks - Where those marks which an editor would normally employ on a "work print" to indicate the intended presence of a fade or a dissolve or a "wipe" to the SFX department are animated, and the film follows suit, or doesn't, depending upon the intended effect.
+Cue marks - Where those marks, usually circular for non-Technicolor titles and "serrated" for Technicolor titles to indicate a reel changeover are animated for a humorous effect. This could also be employed for the famous "false ending" effect, employed even today in popular songs. For Inglorious Basterds, the cue marks for the reel changes of the Nation's Pride pseudo-documentary employed exceptionally large scribed circles with a large "X" scribed within it ... marks which would never be utilized in actual editorial practice (motor and changover cue marks are supposed to be clearly visible to the projectionist, but not obvious to the audience).
+Exiting the frame - This joke, an extension of the split frames joke, has characters depart from the sides of the frame, sometimes finding themselves falling out of the cartoon entirely.
+
+See also[edit]
+
+Aspect ratio (image)
+Frame rate
+List of film formats
+Motion blindness
+Widescreen
+Shot (film)
+
+Notes[edit]
+
+
+^ In actual practice, the master oscillator is 14.31818 MHz, which is divided by 4 to give the 3.579545 MHz color "burst" frequency, which is further divided by 455 to give the 31468.5275 KHz "equalizing pulse" frequency, this is further divided by 2 to give the 15734.2637 Hz "horizontal drive" frequency (also the horizontal line rate), the "equalizing pulse" frequency is divided by 525 to give the 59.9401 Hz "vertical drive" frequency, and this is further divided by 2 to give the 29.9700 vertical frame rate. "Equalizing pulses" perform two essential functions: 1) their use during the vertical retrace interval allows for the vertical synch to be more effectively separated from the horizontal synch, as these, along with the video itself, are an example of "in band" signaling, and 2) by alternately including or excluding one "equalizing pulse", the required half-line offset necessary for interlaced video may be accommodated.
+
+
+External links[edit]
+
+The image areas on a 35 mm film frame
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Film_frame&amp;oldid=690148309"					
+				Categories: Film formatsHidden categories: Articles needing additional references from May 2013All articles needing additional references				
+							
+		
+		
+			

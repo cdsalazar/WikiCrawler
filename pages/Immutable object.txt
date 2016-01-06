@@ -1,0 +1,423 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Immutable object
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Immutable" and "Immutability" redirect here. For the Christian doctrine, see Immutability (theology).
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (February 2011)
+
+
+In object-oriented and functional programming, an immutable object is an object whose state cannot be modified after it is created.[1] This is in contrast to a mutable object, which can be modified after it is created. In some cases, an object is considered immutable even if some internally used attributes change but the object's state appears to be unchanging from an external point of view. For example, an object that uses memoization to cache the results of expensive computations could still be considered an immutable object.
+Strings and other concrete objects are typically expressed as immutable objects to improve readability and runtime efficiency in object-oriented programming. Immutable objects are also useful because they are inherently thread-safe.[1] Other benefits are that they are simpler to understand and reason about and offer higher security than mutable objects.[1]
+
+
+
+Contents
+
+
+1 Concepts
+
+1.1 Immutable variables
+1.2 Weak vs strong immutability
+1.3 References to objects
+1.4 Copying objects
+1.5 Copy-on-write
+1.6 Interning
+1.7 Thread safety
+1.8 Violating immutability
+
+
+2 Language specific details
+
+2.1 Ada
+2.2 C++
+2.3 Java
+2.4 Perl
+2.5 Python
+2.6 JavaScript
+2.7 Racket
+2.8 Scala
+
+
+3 See also
+4 References
+5 External links
+
+
+
+Concepts[edit]
+Immutable variables[edit]
+In imperative programming, values held in program variables whose content never changes are known as constants to differentiate them from variables that could be altered during execution. Examples might include conversion factors from kilogram weights to pounds or the value of Pi to several decimal places.
+Weak vs strong immutability[edit]
+Sometimes, one talks of certain fields of an object being immutable. This means that there is no way to change those parts of the object state, even though other parts of the object may be changeable (weakly immutable). If all fields are immutable, then the object is immutable. If the whole object cannot be extended by another class, the object is called strongly immutable.[2] This might, for example, help to explicitly enforce certain invariants about certain data in the object staying the same through the lifetime of the object. In some languages, this is done with a keyword (e.g. const in C++, final in Java) that designates the field to be immutable. In some languages, it is reversed: in OCaml, fields of an object or record are by default immutable and need to be explicitly marked with mutable to be so.
+References to objects[edit]
+In most object-oriented languages, objects can be referred to using references. Some examples of such languages are Java, C++, C#, VB.NET, and many scripting languages, such as Python and Ruby. In this case, it matters whether the state of an object can vary when objects are shared via references.
+Copying objects[edit]
+If an object is known to be immutable, it can be copied simply by making a copy of a reference to it instead of copying the entire object. Because a reference (typically only the size of a pointer) is usually much smaller than the object itself, this results in memory savings and a potential boost in execution speed.
+The reference copying technique is much more difficult to use for mutable objects, because if any user of a reference to a mutable object changes it, all other users of that reference will see the change. If this is not the intended effect, it can be difficult to notify the other users to have them respond correctly. In these situations, defensive copying of the entire object rather than the reference is usually an easy but costly solution. The observer pattern is an alternative technique for handling changes to mutable objects.
+Copy-on-write[edit]
+A technique that blends the advantages of mutable and immutable objects, and is supported directly in almost all modern hardware, is copy-on-write (COW). Using this technique, when a user asks the system to copy an object, it will instead merely create a new reference that still points to the same object. As soon as a user modifies the object through a particular reference, the system makes a real copy and sets the reference to refer to the new copy. The other users are unaffected, because they still refer to the original object. Therefore, under COW, all users appear to have a mutable version of their objects, although in the case that users do not modify their objects, the space-saving and speed advantages of immutable objects are preserved. Copy-on-write is popular in virtual memory systems because it allows them to save memory space while still correctly handling anything an application program might do.
+Interning[edit]
+The practice of always using references in place of copies of equal objects is known as interning. If interning is used, two objects are considered equal if and only if their references, typically represented as integers, are equal. Some languages do this automatically: for example, Python automatically interns short strings. If the algorithm that implements interning is guaranteed to do so in every case that it is possible, then comparing objects for equality is reduced to comparing their pointers – a substantial gain in speed in most applications. (Even if the algorithm is not guaranteed to be comprehensive, there still exists the possibility of a fast path case improvement when the objects are equal and use the same reference.) Interning is generally only useful for immutable objects.
+Thread safety[edit]
+Immutable objects can be useful in multi-threaded applications. Multiple threads can act on data represented by immutable objects without concern of the data being changed by other threads. Immutable objects are therefore considered to be more thread-safe than mutable objects.
+Violating immutability[edit]
+Immutability does not imply that the object as stored in the computer's memory is unwriteable. Rather, immutability is a compile-time construct that indicates what a programmer can do through the normal interface of the object, not necessarily what they can absolutely do (for instance, by circumventing the type system or violating const correctness in C or C++).
+Language specific details[edit]
+In Python, Java and the .NET Framework, strings are immutable objects. Both Java and the .NET Framework have mutable versions of string. In Java these are StringBuffer and StringBuilder (mutable versions of Java String) and in .NET this is StringBuilder (mutable version of .Net String). Python 3 has a mutable string (bytes) variant, named bytearray.[1]
+Additionally, all of the primitive wrapper classes in Java are immutable.
+Similar patterns are the Immutable Interface and Immutable Wrapper.
+In pure functional programming languages it is not possible to create mutable objects, so all objects are immutable.
+Ada[edit]
+In Ada, any object is declared either variable (i.e. mutable; typically the implicit default), or constant (i.e. immutable) via the constant keyword.
+
+
+  type Some_type is new Integer; -- could be anything more complicated
+  x: constant Some_type:= 1; -- immutable
+  y: Some_type; -- mutable
+
+Subprogram parameters are immutable in the in mode, and mutable in the in out and out modes.
+
+
+  procedure Do_it(a: in Integer; b: in out Integer; c: out Integer) is
+  begin
+    -- a is immutable
+    b:= b + a;
+    c:= a;
+  end Do_it;
+
+C++[edit]
+In C++, a const-correct implementation of Cart would allow the user to declare new instances of the class as either const (immutable) or mutable, as desired, by providing two different versions of the getItems() method. (Notice that in C++ it is not necessary — and in fact impossible — to provide a specialized constructor for const instances.)
+
+
+template&lt;typename T&gt;
+class Cart {
+  private:
+   std::vector&lt;T&gt; items;
+
+  public:
+   Cart(const std::vector&lt;T&gt;&amp; v): items(v) { }
+
+   std::vector&lt;T&gt;&amp; getItems() { return items; }
+   const std::vector&lt;T&gt;&amp; getItems() const { return items; }
+   int total() const { /* return sum of the prices */ }
+ };
+
+Note that, if there were a field that is a pointer or reference to another object, then it might still be possible to mutate the object pointed to by such a pointer or reference within a const method, without violating const-correctness. It can be argued that in such a case the object is not really immutable.
+C++ also provides abstract (as opposed to bitwise) immutability via the mutable keyword, which allows a member variable to be changed from within a const method.
+
+
+template&lt;typename T&gt;
+class Cart {
+  private:
+   std::vector&lt;T&gt; items;
+   mutable int    costInCents;
+   mutable bool   totaled;
+
+  public:
+   Cart(const std::vector&lt;T&gt;&amp; v): items(v), totaled(false) { }
+
+   const std::vector&lt;T&gt;&amp; getItems() const { return items; }
+   int total() const {
+      if (!totaled) {
+         costInCents = 0;
+         for (std::vector&lt;T&gt;::const_iterator itor = items.begin(); itor != items.end(); ++itor)
+            costInCents += itor-&gt;costInCents();
+
+         totaled = true;
+      }
+      return costInCents;
+   }
+ };
+
+Java[edit]
+A classic example of an immutable object is an instance of the Java String class
+
+
+String s = "ABC";
+s.toLowerCase();
+
+The method toLowerCase() will not change the data "ABC" that s contains. Instead, a new String object is instantiated and given the data "abc" during its construction. A reference to this String object is returned by the toLowerCase() method. To make the String s contain the data "abc", a different approach is needed.
+
+
+s = s.toLowerCase();
+
+Now the String s references a new String object that contains "abc". There is nothing in the syntax of the declaration of the class String that enforces it as immutable; rather, none of the String class's methods ever affect the data that a String object contains, thus making it immutable.
+The keyword final (detailed article) is used in implementing immutable primitive types and object references,[3] but it cannot, by itself, make the objects themselves immutable. See below examples:
+Primitive type variables (int, long, short, etc.) can be reassigned after being defined. We can prevent this using final.
+
+
+int i = 42; //int is of primitive type
+i = 43; // OK
+
+final int j = 42;
+j = 43; // does not compile. j is final so can't be reassigned
+
+Reference types cannot be made immutable just by using the final keyword. final only prevents reassignment.
+
+
+final MyObject m = new MyObject(); //m is of reference type
+m.data = 100; // OK. We can change state of object m (m is mutable and final doesn't change this fact)
+m = new MyObject(); // does not compile. m is final so can't be reassigned
+
+Primitive wrappers (Integer, Long, Short, Double, Float, Character, Byte, Boolean) are also all immutable. Immutable classes can be implemented by following a few simple guidelines.[4]
+Perl[edit]
+In Perl, you can create an immutable class with Moo by simply declaring all the attributes to be read only:
+
+
+package Immutable;
+use Moo;
+
+has value =&gt; (
+    is      =&gt; 'ro',   # read only
+    default =&gt; 'data', # can be overridden by supplying the constructor with
+                       # a value: Immutable-&gt;new(value =&gt; 'something else');
+);
+1;
+
+Creating an immutable class used to require two steps: first, creating accessors (either automatically or manually) that prevent modification of object attributes, and secondly, preventing direct modification of the instance data of instances of that class (this was usually stored in a hash reference, and could be locked with Hash::Util's lock_hash function):
+
+
+package Immutable;
+use strict;
+use warnings;
+use base qw(Class::Accessor);
+# create read-only accessors
+__PACKAGE__-&gt;mk_ro_accessors(qw(value));
+use Hash::Util 'lock_hash';
+
+sub new {
+    my $class = shift;
+    return $class if ref($class);
+    die "Arguments to new must be key =&gt; value pairs\n"
+        unless (@_ % 2 == 0);
+    my %defaults = (
+        value =&gt; 'data',
+    );
+    my $obj = {
+        %defaults,
+        @_,
+    };
+    bless $obj, $class;
+    # prevent modification of the object data
+    lock_hash %$obj;
+}
+1;
+
+Or, with a manually written accessor:
+
+
+package Immutable;
+use strict;
+use warnings;
+use Hash::Util 'lock_hash';
+
+sub new {
+    my $class = shift;
+    return $class if ref($class);
+    die "Arguments to new must be key =&gt; value pairs\n"
+        unless (@_ % 2 == 0);
+    my %defaults = (
+        value =&gt; 'data',
+    );
+    my $obj = {
+        %defaults,
+        @_,
+    };
+    bless $obj, $class;
+    # prevent modification of the object data
+    lock_hash %$obj;
+}
+
+# read-only accessor
+sub value {
+    my $self = shift;
+    if (my $new_value = shift) {
+        # trying to set a new value
+        die "This object cannot be modified\n";
+    } else {
+        return $self-&gt;{value}
+    }
+}
+1;
+
+Python[edit]
+In Python, some built-in types (numbers, booleans, strings, tuples, frozensets) are immutable, but custom classes are generally mutable. To simulate immutability in a class, one should override attribute setting and deletion to raise exceptions:
+
+
+class ImmutablePoint(object):
+    """An immutable class with 2 attributes 'x', 'y'."""
+    def __setattr__(self, *args):
+        raise TypeError("Can not modify immutable instance")
+    __delattr__ = __setattr__
+    def __init__(self, x, y):
+        # We can no longer use self.value = value to store the instance data
+        # so we must explicitly call the superclass
+        super(Immutable, self).__setattr__('x', x)
+        super(Immutable, self).__setattr__('y', y)
+
+The standard library helper namedtuple creates simple immutable classes:
+
+
+Point = collections.namedtuple('Point', ['x', 'y'])
+
+is roughly equivalent to the above, plus some tuple-like features. But you can't easily add custom methods.
+JavaScript[edit]
+In JavaScript, some built-in types (numbers, strings) are immutable, but custom objects are generally mutable. To simulate immutability in an object, one should set immutable properties to prototype of object:
+
+
+/* object Immutable */
+
+var Immutable = function Immutable (properties) {
+    if (!(this instanceof Immutable)) {
+        return new Error (
+            'Error[Immutable.constructor]' +
+            '::constructor' +
+            ' called without "new"'
+        )
+    }
+    if (!(properties instanceof Object)) {
+        return new Error (
+            'Error[Immutable.constructor]' +
+            '::properties object' +
+            ' is not a object (' + properties +
+            '), for ' + this
+        )
+    }
+    var _empty_constructor =
+          Immutable._empty_constructor,
+        hasOwnProperty = this.hasOwnProperty
+    if (typeof _empty_constructor !== 'function') {
+        return new Error (
+            'Error[Immutable.constructor]' +
+            '::cannot find empty constructor' +
+            ' (' + _empty_constructor +
+            ') in ' + Immutable +
+            ', for ' + this
+        )
+    }
+    if (typeof hasOwnProperty !== 'function') {
+        return new Error (
+            'Error[Immutable.constructor]' +
+            '::cannot find method hasOwnProperty' +
+            ' (' + hasOwnProperty + ') in ' + this
+        )
+    }
+    var has_property = false
+    for (var property in properties) {
+        if (hasOwnProperty.call
+              (properties, property) !== true) {
+            continue
+        }
+        if (has_property !== true) {
+            has_property = true
+        }
+        this[property] = properties[property]
+    }
+    if (has_property !== true) {
+        return new Error (
+            'Error[Immutable.constructor]' +
+            '::properties object (' + properties +
+            ') hasn\'t any own enumerable ' +
+            'property, for ' + this
+        )
+    }
+    _empty_constructor.prototype = this
+    var immutable =
+      new _empty_constructor
+    _empty_constructor.prototype = null
+    return immutable
+}
+
+Immutable._empty_constructor =
+    function Immutable () {}
+
+One can also use Object.freeze to make existing objects immutable.
+Racket[edit]
+Racket substantially diverges from other Scheme implementations by making its core pair type ("cons cells") immutable. Instead, it provides a parallel mutable pair type, via mcons, mcar, set-mcar! etc. In addition, many immutable types are supported, for example, immutable strings and vectors, and these are used extensively. New structs are immutable by default, unless a field is specifically declared mutable, or the whole struct:
+
+
+(struct foo1 (x y))             ; all fields immutable
+(struct foo2 (x [y #:mutable])) ; one mutable field
+(struct foo3 (x y) #:mutable)   ; all fields mutable
+
+The language also supports immutable hash tables, implemented functionally, and immutable dictionaries.
+Scala[edit]
+In Scala, any entity (narrowly, a binding) can be defined as mutable or immutable: in the declaration, one can use val (value) for immutable entities and var (variable) for mutable ones. Note that even though an immutable binding can not be reassigned, it may still refer to a mutable object and it is still possible to call mutating methods on that object: the binding is immutable, but the underlying object may be mutable.
+For example, the following code snippet:
+
+
+val maxValue = 100
+var currentValue = 1
+
+defines an immutable entity maxValue (the integer type is inferred at compile-time) and a mutable entity named currentValue.
+By default, collection classes such as List and Map are immutable, so update-methods return a new instance rather than mutating an existing one. While this may sound inefficient, the implementation of these classes and their guarantees of immutability mean that the new instance can re-use existing nodes, which, especially in the case of creating copies, is very efficient.[5]
+See also[edit]
+
+Clojure
+Erlang
+F#
+Haskell
+Prolog
+Tcl
+Scala
+Mutator method
+
+References[edit]
+This article contains some material from the Perl Design Patterns Book
+
+
+^ a b c Goetz et al. Java Concurrency in Practice. Addison Wesley Professional, 2006, Section 3.4. Immutability
+^ David O'Meara (April 2003). "Mutable and Immutable Objects: Make sure methods can't be overridden.". Java Ranch. Retrieved 2012-05-14. The preferred way is to make the class final. This is sometimes referred to as "Strong Immutability". It prevents anyone from extending your class and accidentally or deliberately making it mutable.&#160;
+^ "How to create Immutable Class and Object in Java – Tutorial Example". Javarevisited.blogspot.co.uk. 2013-03-04. Retrieved 2014-04-14.&#160;
+^ "Immutable objects". javapractices.com. Retrieved November 15, 2012.&#160;
+^ "Scala 2.8 Collections API – Concrete Immutable Collection Classes". Scala-lang.org. Retrieved 2014-04-14.&#160;
+
+
+External links[edit]
+
+
+
+Look up mutable in Wiktionary, the free dictionary.
+
+
+
+Article Java theory and practice: To mutate or not to mutate? by Brian Goetz, from IBM DeveloperWorks -- saved copy at Internet Archive
+Immutable objects from JavaPractices.com
+Immutable objects from Portland Pattern Repository
+Objects Should Be Immutable by Yegor Bugayenko
+Immutable.js by Facebook
+Immutable structures in C# opensource project in Codeplex
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Immutable_object&amp;oldid=687517477"					
+				Categories: Object (computer science)Functional programmingArticles with example Racket codeHidden categories: Articles needing additional references from February 2011All articles needing additional referencesArticles with example C++ codeArticles with example Java codeArticles with example Perl codeArticles with example Python code				
+							
+		
+		
+			

@@ -1,0 +1,496 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Compatibility of C and C++
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (August 2013)
+
+
+
+
+Programming language comparisons
+
+
+
+
+General comparison
+Basic syntax
+Basic instructions
+Exception handling
+Anonymous functions
+Conditional expressions
+Functional instructions
+Arrays
+Associative arrays
+String operations
+String functions
+List comprehension
+Object-oriented programming
+Object-oriented constructors
+Database access
+
+
+
+
+
+
+Evaluation strategy
+List of "Hello World" programs
+
+
+
+
+
+
+Web application frameworks
+Comparison of the Java and .NET platforms
+
+
+
+
+
+
+Languages with dependent types
+
+
+
+
+
+
+Comparison of individual programming languages
+
+ALGOL 58's influence on ALGOL 60
+ALGOL 60: Comparisons with other languages
+Comparison of ALGOL 68 and C++
+ALGOL 68: Comparisons with other languages
+Compatibility of C and C++
+Comparison of Pascal and Borland Delphi
+Comparison of Object Pascal and C
+Comparison of Pascal and C
+Comparison of Java and C++
+Comparison of C# and Java
+Comparison of C# and Visual Basic .NET
+Comparison of Visual Basic and Visual Basic .NET
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+The C and C++ programming languages are closely related. C++ grew out of C, as it was designed to be source-and-link compatible with C.[1] Due to this, development tools for the two languages (such as IDEs and compilers) are often integrated into a single product, with the programmer able to specify C or C++ as their source language. However, due to minor semantic differences, most non-trivial C programs will not compile as C++ code without modification&#160;— C++ is not a superset of C.[2]
+Likewise, C++ introduces many features that are not available in C and in practice almost all code written in C++ is not conforming C code. This article, however, focuses on differences that cause conforming C code to be ill-formed C++ code, or to be conforming/well-formed in both languages, but to behave differently in C and C++.
+Bjarne Stroustrup, the creator of C++, has suggested[3] that the incompatibilities between C and C++ should be reduced as much as possible in order to maximize inter-operability between the two languages. Others have argued that since C and C++ are two different languages, compatibility between them is useful but not vital; according to this camp, efforts to reduce incompatibility should not hinder attempts to improve each language in isolation. The official rationale for the 1999 C standard (C99) "endorse[d] the principle of maintaining the largest common subset" between C and C++ "while maintaining a distinction between them and allowing them to evolve separately", and stated that the authors were "content to let C++ be the big and ambitious language."[4]
+Several additions of C99 are or were not supported in C++ or conflicted with C++ features, such as variadic macros, compound literals, designated initializers, variable-length arrays, and native complex number types. The long long int datatype and restrict type qualifier defined in C99 were not included in the C++03 standard, but most mainstream compilers such as the GNU Compiler Collection,[5] Microsoft Visual C++, and Intel C++ Compiler provided them as an extension. The long long datatype along with variadic macros are present in the new C++ standard, C++11. On the other hand, C99 has reduced some other incompatibilities by incorporating C++ features such as // comments and mixed declarations and code.[6]
+
+
+
+Contents
+
+
+1 Constructs valid in C but not in C++
+2 Constructs that behave differently in C and C++
+3 Linking C and C++ code
+4 References
+5 External links
+
+
+
+Constructs valid in C but not in C++[edit]
+
+One commonly encountered difference is C being more weakly-typed regarding pointers. For example, C allows a void* pointer to be assigned to any pointer type without a cast, while C++ doesn't; this idiom appears often in C code using malloc memory allocation.[7] For example, the following is valid in C but not C++:
+
+
+
+void* ptr;
+/* Implicit conversion from void* to int* */
+int *i = ptr;
+
+
+or similarly:
+
+
+
+int *j = malloc(sizeof(int) * 5);     /* Implicit conversion from void* to int* */
+
+
+In order to make the code compile in C++, one must use an explicit cast:
+
+
+
+void* ptr;
+int *i = static_cast&lt;int*&gt;(ptr);
+int *j = static_cast&lt;int*&gt;(malloc(sizeof(int) * 5));
+
+
+C++ adds numerous additional keywords to support its new features. This renders C code using those keywords for identifiers invalid in C++. For example:
+
+
+
+struct template 
+{
+    int new;
+    struct template* class;
+};
+
+
+is valid C code, but is rejected by a C++ compiler, since the keywords "template", "new" and "class" are reserved.
+
+
+C++ compilers prohibit using goto or switch from crossing an initialization, as in the following C99 code:
+
+
+
+void fn(void)
+{
+    goto flack;
+    int i = 1;
+    flack:
+        ;
+}
+
+
+In C, struct, union, and enum types must be indicated as such whenever the type is referenced: in struct foo {}; int bar(foo arg);, the prototype is invalid; correct is int bar(struct foo arg);. This can be prevented with typedef: typedef struct {} foo; would make the prototype valid. In C++, all such constructs carry the typedef implicitly, so that struct foo {}; int bar(foo arg); is valid C++.
+Enumeration constants (enum values) are always of type int in C, whereas they are distinct types in C++ and may have a size different from that of int. C++11 allows the programmer to use custom integer types for the values of an enum.
+C++ changes some C standard library functions to add additional polymorphic functions with const type qualifiers, e.g. strchr returns char* in C, while C++ acts as if there were two polymorphic functions const char *strchr(const char *) and a char *strchr(char *).
+In both C and C++, one can define nested struct types, but the scope is interpreted differently (in C++, a nested struct is defined only within the scope/namespace of the outer struct).
+Non-prototype ("K&amp;R"-style) function declarations are not allowed in C++, although they have also been deprecated in C since 1990. Similarly, implicit function declarations (using functions that have not been declared) are not allowed in C++, but have also been deprecated in C since 1999.
+C allows struct, union, and enum types to be declared in function prototypes, whereas C++ does not.
+In C, a function prototype without parameters, e.g. int foo();, implies that the parameters are unspecified. Therefore, it is legal to call such a function with one or more arguments, e.g. foo(42, "hello world"). In contrast, in C++ a function prototype without arguments means that the function takes no arguments, and calling such a function with arguments is ill-formed. In C, the correct way to declare a function that takes no arguments is by using 'void', as in int foo(void);, which is also valid in C++.
+C++ is more strict than C about pointer assignments that discard a const qualifier (e.g. assigning a const int* value to an int* variable): in C++ this is invalid and generates a compiler error (unless an explicit typecast is used),[8] whereas in C this is allowed (although many compilers emit a warning).
+In C++ a const variable must be initialized; in C this is not necessary.
+C99 and C11 added several features to C that have not been incorporated into standard C++, such as the _Complex type and designated initializers.
+
+Constructs that behave differently in C and C++[edit]
+There are a few syntactical constructs that are valid in both C and C++, but produce different results in the two languages.
+For example, character literals such as 'a' are of type int in C and of type char in C++, which means that sizeof 'a' will generally give different results in the two languages: in C++, it will be 1, while in C it will be sizeof(int) which on architectures with 8&#160;bit wide char will be at least 2. As another consequence of this type difference, in C, 'a' will always be a signed expression, regardless of whether or not char is a signed or unsigned type, whereas for C++ this is compiler implementation specific.
+C++ implicitly treats any const global as file scope unless it is explicitly declared extern, unlike C in which extern is the default. Conversely, inline functions in C are of file scope whereas they have external linkage by default in C++.[7]
+Several of the other differences from the previous section can also be exploited to create code that compiles in both languages but behaves differently. For example, the following function will return different values in C and C++:
+
+
+extern int T;
+
+int size(void)
+{
+    struct T {  int i;  int j;  };
+    
+    return sizeof(T);
+    /* C:   return sizeof(int)
+     * C++: return sizeof(struct T)
+     */
+}
+
+This is due to C requiring struct in front of structure tags (and so sizeof(T) refers to the variable), but C++ allowing it to be omitted (and so sizeof(T) refers to the implicit typedef). Beware that the outcome is different when the extern declaration is placed inside the function: then the presence of an identifier with same name in the function scope inhibits the implicit typedef to take effect for C++, and the outcome for C and C++ would be the same. Observe also that the ambiguity in the example above is due to the use of the parenthesis with the sizeof operator. Using sizeof T would expect T to be an expression and not a type, and thus the example would not compile with C++.
+Both C99 and C++ have a boolean type bool with constants true and false, but they behave differently. In C++, bool is a built-in type and a reserved keyword. In C99, a new keyword, _Bool, is introduced as the new boolean type. In many aspects, it behaves much like an unsigned int, but conversions from other integer types or pointers always constrained to 0 and 1. Other than for other unsigned types, and as one would expect for a boolean type, such a conversion is 0 if and only if the expression in question evaluates to 0 and it is 1 in all other cases. The header stdbool.h provides macros bool, true and false that are defined as _Bool, 1 and 0, respectively.
+Linking C and C++ code[edit]
+While C and C++ maintain a large degree of source compatibility, the object files their respective compilers produce can have important differences that manifest themselves when intermixing C and C++ code. Notably:
+
+C compilers do not name mangle symbols in the way that C++ compilers do.[9]
+Depending on the compiler and architecture, it also may be the case that calling conventions differ between the two languages.
+
+For these reasons, for C++ code to call a C function foo(), the C++ code must prototype foo() with extern "C". Likewise, for C code to call a C++ function bar(), the C++ code for bar() must be declared with extern "C".
+A common practice for header files to maintain both C and C++ compatibility is to make its declaration be extern "C" for the scope of the header:[10]
+
+
+/* Header file foo.h */
+#ifdef __cplusplus /* If this is a C++ compiler, use C linkage */
+extern "C" {
+#endif
+
+/* These functions get C linkage */
+void foo();
+ 
+struct bar { /* ... */ };
+
+#ifdef __cplusplus /* If this is a C++ compiler, end C linkage */
+}
+#endif
+
+Differences between C and C++ linkage and calling conventions can also have subtle implications for code that uses function pointers. Some compilers will produce non-working code if a function pointer declared extern "C" points to a C++ function that is not declared extern "C".[11]
+For example, the following code:
+
+
+void my_function();
+extern "C" void foo(void (*fn_ptr)(void));
+
+void bar()
+{
+   foo(my_function);
+}
+
+Using Sun Microsystems' C++ compiler, this produces the following warning:
+
+$ CC -c test.cc
+"test.cc", line 6: Warning (Anachronism): Formal argument fn_ptr of type
+extern "C" void(*)() in call to foo(extern "C" void(*)()) is being passed
+void(*)().
+
+This is because my_function() is not declared with C linkage and calling conventions, but is being passed to the C function foo().
+References[edit]
+
+
+^ Stroustrup, Bjarne. "An Overview of the C++ Programming Language" (PDF). p.&#160;4. Retrieved 12 August 2009.&#160;
+^ "Bjarne Stroustrup's FAQ&#160;– Is C a subset of C++?". Retrieved 5 March 2014.&#160;
+^ "Bjarne Stroustrup's Homepage" (PDF). Research.att.com. Retrieved 18 August 2013.&#160;
+^ Rationale for International Standard—Programming Languages—C, revision 5.10 (April 2003).
+^ Restricted Pointers from Using the GNU Compiler Collection (GCC)
+^ "C Dialect Options - Using the GNU Compiler Collection (GCC)". gnu.org.&#160;
+^ a b "IBM Knowledge Center". ibm.com.&#160;
+^ "Const correctness, C++ FAQ". Parashift.com. 4 July 2012. Retrieved 18 August 2013.&#160;
+^ "IBM Knowledge Center". ibm.com.&#160;
+^ "IBM Knowledge Center". ibm.com.&#160;
+^ "Oracle Documentation". Docs.sun.com. Retrieved 18 August 2013.&#160;
+
+
+External links[edit]
+
+
+
+The Wikibook C++ Programming has a page on the topic of: Programming Languages/Comparisons/C
+
+
+
+Detailed comparison, sentence by sentence, from a C Standard perspective.
+Incompatibilities Between ISO C and ISO C++, David R. Tribble (August 2001).
+Oracle (Sun Microsystems) C++ Migration Guide, section 3.11, Oracle/Sun compiler docs on linkage scope.
+Oracle: Mixing C and C++ Code in the Same Program, overview by Steve Clamage (ANSI C++ Committee chair).
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+C programming language
+
+
+
+
+
+
+
+
+
+ANSI C
+
+C89 and C90
+
+
+C99
+C11
+Embedded C
+MISRA C
+
+
+
+
+
+
+
+
+C features
+
+
+
+Functions
+Header files
+Libraries
+Operators
+String
+Syntax
+Preprocessor
+Data types
+
+
+
+
+
+
+
+
+C standard library functions
+
+
+
+Char (ctype.h)
+File I/O (stdio.h)
+Math (math.h)
+Dynamic memory (stdlib.h)
+String (string.h)
+Time (time.h)
+Variadic (stdarg.h)
+POSIX
+
+
+
+
+
+
+
+
+C standard libraries
+
+
+
+Bionic
+
+libhybris
+
+
+dietlibc
+EGLIBC
+glibc
+klibc
+Microsoft Run-time Library
+musl
+Newlib
+uClibc
+BSD libc
+
+
+
+
+
+
+
+
+Compilers
+
+
+
+Comparison of C compilers
+ACK
+Borland Turbo C
+Clang
+GCC
+LCC
+Pelles C
+PCC
+TCC
+Microsoft Visual Studio Express C++
+Watcom C/C++
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Comparison of C IDEs
+Anjuta
+Code::Blocks
+CodeLite
+Eclipse
+Geany
+Microsoft Visual Studio
+NetBeans
+
+
+
+
+
+
+
+
+C and other languages
+
+
+
+Compatibility of C and C++
+Comparison of C and Embedded C
+Comparison of C and Pascal
+Comparison of programming languages
+
+
+
+
+
+
+
+
+Descendant languages
+
+
+
+C++
+C#
+D
+Objective-C
+Alef
+Limbo
+Go
+Vala
+
+
+
+
+
+
+
+
+
+
+
+ Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;oldid=685609557"					
+				Categories: Programming language comparisonsC (programming language)C++Hidden categories: Articles needing additional references from August 2013All articles needing additional referencesUse dmy dates from January 2015Articles with example C++ code				
+							
+		
+		
+			

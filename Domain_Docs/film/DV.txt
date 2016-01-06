@@ -1,0 +1,541 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			DV
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For other uses, see DV (disambiguation).
+
+
+
+
+DVC compatibility mark
+
+
+DV is a format for storing digital video. It was launched in 1995 with joint efforts of leading producers of video camera recorders.
+The original DV specification, known as Blue Book, was standardized within the IEC&#160;61834 family of standards. These standards define common features such as physical videocassettes, recording modulation method, magnetization, and basic system data in part 1. Part 2 describes the specifics of 525-60 and 625-50 systems.[1] The IEC standards are copyrighted publications available for purchase from IEC or ANSI.
+In 2005, DV was superseded by the successor format HDV, which used the same tape format with a different video codec. Some cameras at the time had the ability to switch between DV and HDV recording modes.
+
+
+
+Contents
+
+
+1 DV compression
+2 Digital Interface Format
+3 Variants
+
+3.1 DVCPRO
+3.2 DVCAM
+3.3 DVCPRO50
+3.4 DVCPRO Progressive
+3.5 DVCPRO HD
+
+
+4 Progressive recording
+5 Recordings media
+
+5.1 Magnetic tape
+5.2 File-based media
+
+
+6 Connectivity
+7 Usage
+8 Application software support
+9 Mixing tapes from different manufacturers
+10 References
+11 External links
+
+
+
+DV compression[edit]
+DV uses lossy compression of video while audio is stored uncompressed.[2] An intraframe video compression scheme is used to compress video on a frame-by-frame basis with the discrete cosine transform (DCT).
+Closely following ITU-R Rec. 601 standard, DV video employs interlaced scanning with the luminance sampling frequency of 13.5&#160;MHz. This results in 480 scanlines per complete frame for the 60&#160;Hz system, and 576 scanlines per complete frame for the 50&#160;Hz system. In both systems the active area contains 720 pixels per scanline, with 704 pixels used for content and 16 pixels on the sides left for digital blanking. The same frame size is used for 4:3 and 16:9 frame aspect ratios, resulting in different pixel aspect ratios for fullscreen and widescreen video.[3][4]
+Prior to the DCT compression stage, chroma subsampling is applied to the source video in order to reduce the amount of data to be compressed. Baseline DV uses 4:1:1 subsampling in its 60&#160;Hz variant and 4:2:0 subsampling in 50&#160;Hz variant. Low chroma resolution of DV (compared to higher-end digital video formats) is a reason this format is sometimes avoided in chroma keying applications, though advances in chroma keying techniques and software made producing quality keys from DV material possible.[5][6]
+Audio can be stored in either of two forms: 16-bit Linear PCM stereo at 48&#160;kHz sampling rate (768 kbit/s per channel, 1.5 Mbit/s stereo), or four nonlinear 12-bit PCM channels at 32&#160;kHz sampling rate (384 kbit/s per channel, 1.5 MBit/s for four channels). In addition, the DV specification also supports 16-bit audio at 44.1&#160;kHz (706 kbit/s per channel, 1.4 Mbit/s stereo), the same sampling rate used for CD audio.[7] In practice, the 48&#160;kHz stereo mode is used almost exclusively.
+Digital Interface Format[edit]
+The audio, video, and metadata are packaged into 80-byte Digital Interface Format (DIF) blocks which are multiplexed into a 150-block sequence. DIF blocks are the basic units of DV streams and can be stored as computer files in raw form or wrapped in such file formats as Audio Video Interleave (AVI), QuickTime (QT) and Material Exchange Format (MXF).[8][9] One video frame is formed from either 10 or 12 such sequences, depending on scanning rate, which results in a data rate of about 25 Mbit/s for video, and an additional 1.5 Mbit/s for audio. When written to tape, each sequence corresponds to one complete track.[3]
+Baseline DV employs unlocked audio. This means that the sound may be +/- ⅓ frame out of sync with the video. However, this is the maximum drift of the audio/video synchronization; it is not compounded throughout the recording.
+Variants[edit]
+Sony and Panasonic have created their proprietary versions of DV, which use the same compression scheme, but improve on robustness, linear editing capabilities, color rendition and raster size.
+All DV variants except for DVCPRO Progressive are recorded to tape within interlaced video stream. Film-like frame rates are possible by using pulldown. DVCPRO&#160;HD supports native progressive format when recorded to P2 memory cards.
+DVCPRO[edit]
+
+
+
+
+DVCPRO compatibility mark
+
+
+DVCPRO, also known as DVCPRO25, is a variation of DV developed by Panasonic and introduced in 1995 for use in electronic news gathering (ENG) equipment.
+Unlike baseline DV, DVCPRO uses locked audio and 4:1:1 chroma subsampling for both 50&#160;Hz and 60&#160;Hz variants to decrease generation losses.[10] Audio is available in 16-bit/48&#160;kHz precision.
+When recorded to tape, DVCPRO uses wider track pitch - 18 μm vs. 10 μm of baseline DV, which reduces the chance of dropout errors when video is being recorded to tape. Two extra longitudinal tracks provide support for audio cue and for timecode control. Tape is transported 80% faster compared to baseline DV, resulting in shorter recording time. Long Play mode is not available.
+DVCAM[edit]
+
+
+
+
+DVCAM compatibility mark
+
+
+In 1996 Sony responded with its own professional version of DV called DVCAM.[11]
+Like DVCPRO, DVCAM uses locked audio, which prevents audio synchronization drift that may happen on DV if several generations of copies are made.[12]
+When recorded to tape, DVCAM uses 15 μm track pitch, which is 50% wider compared to baseline. Accordingly, tape is transported 50% faster, which reduces recording time by one third compared to DV. Because of the wider track and track pitch, DVCAM has the ability to do a frame accurate insert tape edit, while DV may vary by a few frames on each edit compared to the preview.
+DVCPRO50[edit]
+
+
+
+
+DVCPRO50 compatibility mark
+
+
+DVCPRO50 was introduced by Panasonic in 1997 for high-value electronic news gathering and digital cinema, and is often described as two DV-codecs working in parallel.
+The DVCPRO50 doubles the coded video data rate to 50 Mbit/s. This has the effect of cutting total record time of any given storage medium in half. Chroma resolution is improved by using 4:2:2 chroma subsampling.
+DVCPRO50 is used in many productions where high definition video is not required. For example, BBC used DVCPRO50 to record high-budget TV series, such as Space Race (2005) and Ancient Rome: The Rise and Fall of an Empire (2006).
+A similar format, D-9, offered by JVC, uses videocassettes with the same form-factor as VHS.
+Comparable formats include Sony's Digital Betacam, launched in 1993, and MPEG&#160;IMX, launched in 2001.
+DVCPRO Progressive[edit]
+
+
+
+
+DVCPRO Progressive mark
+
+
+DVCPRO Progressive was introduced by Panasonic for news gathering, sports journalism and digital cinema. It offered 480 or 576 lines of progressive scan recording with 4:2:0 chroma subsampling and four 16-bit 48&#160;kHz PCM audio channels. Like HDV-SD, it was meant as an intermediate format during the transition time from standard definition to high definition video.[13][14]
+The format offered six modes for recording and playback: 16:9 progressive (50 Mbit/s), 4:3 progressive (50 Mbit/s), 16:9 interlaced (50 Mbit/s), 4:3 interlaced (50 Mbit/s), 16:9 interlaced (25 Mbit/s), 4:3 interlaced (25 Mbit/s).[15]
+The format has been superseded with DVCPRO&#160;HD.
+DVCPRO HD[edit]
+
+
+
+
+DVCPRO HD compatibility mark
+
+
+DVCPRO HD, also known as DVCPRO100 is a high-definition video format that can be thought of as four DV codecs that work in parallel. Video data rate depends on frame rate and can be as low as 40 Mbit/s for 24 frame/s mode and as high as 100 Mbit/s for 50/60 frame/s modes. Like DVCPRO50, DVCPRO HD employs 4:2:2 color sampling.
+DVCPRO HD uses smaller raster size than broadcast high definition television: 960x720 pixels for 720p, 1280x1080 for 1080/59.94i and 1440x1080 for 1080/50i. Similar horizontal downsampling is used in many other HD formats. To maintain compatibility with HDSDI, DVCPRO100 equipment upsamples video during playback.
+Variable framerates (from 4 to 60 frame/s) are available on VariCam camcorders. DVCPRO HD equipment offers backward compatibility with older DV/DVCPRO formats.
+When recorded to tape, DVCPRO&#160;HD uses the same 18 μm track pitch as other DVCPRO flavors. A long play variant, DVCPRO&#160;HD-LP, doubles the recording density by using 9 μm track pitch.
+DVCPRO&#160;HD is codified as SMPTE 370M; the DVCPRO&#160;HD tape format is SMPTE 371M, and the MXF Op-Atom format used for DVCPRO&#160;HD on P2 cards is SMPTE 390M.
+While technically DVCPRO HD is a direct descendant of DV, it is used almost exclusively by professionals. Tape-based DVCPRO&#160;HD cameras exist only in shoulder mount variant.
+A similar format, Digital-S (D-9 HD), is offered by JVC and uses videocassettes with the same form-factor as VHS.
+The main competitor to DVCPRO HD is HDCAM, offered by Sony. It uses a similar compression scheme but at higher bitrate.
+Progressive recording[edit]
+Tape-based DV variants, except for DVCPRO Progressive, do not support native progressive recording, therefore progressively acquired video is recorded within interlaced video stream using pulldown. The same technique is used in television industry to broadcast movies. Progressive-scan DV camcorders for 60&#160;Hz market record 24-frame/s video using 2-3 pulldown and 30-frame/s video using 2-2 pulldown. Progressive-scan DV camcorders for 50&#160;Hz market record 25-frame/s video using 2-2 pulldown.
+Progressive video can be recorded with interlaced delivery in mind, in which case high-frequency information between fields is blended to suppress interline twitter. If the goal is progressive-scan distribution like Web videos, progressive-scan DVD-video or filmout, then no filtering is applied. Video recorded with 2-2 pulldown and no vertical filtering is conceptually identical to progressive segmented frame.
+Consumer-grade DV camcorders capable of progressive recording usually offer only 2-2 pulldown scheme because of its simplicity. Such a video can be edited as either interlaced or progressive and does not require additional processing aside of treating every pair of fields as one complete frame. Canon and Panasonic call this format Frame Mode, while Sony calls it Progressive Scan recording. 24 frame/s recording is available only on professional DV camcorders and requires pulldown removal if editing at native frame rate is required.
+DVCPRO HD supports native progressive recording at 50 or 60 frame/s in 720p mode. To record video acquired at 24, 25 or 30 frame/s frame repeating is used. Frame repeating is similar to field repeating used in interlaced video, and is also called pulldown sometimes.
+Recordings media[edit]
+Magnetic tape[edit]
+
+
+
+
+MiniDV mark
+
+
+
+
+
+
+DV cassettes: DVCAM-L, DVCPRO-M, MiniDV
+
+
+DV was originally designed for recording onto magnetic tape. Tape is enclosed into videocassette of four different sizes: small, medium, large and extra-large. All DV cassettes use tape that is ¼ inch (6.35&#160;mm) wide.
+Small cassettes, also known as S-size or MiniDV cassettes, had been intended for amateur use, but have become accepted in professional productions as well. MiniDV cassettes are used for recording baseline DV, DVCAM, and HDV. Each tape holds about 13 GB for one hour of video.[16]
+Medium or M-size cassettes are used in professional Panasonic equipment and are often called DVCPRO tapes. Panasonic video recorders that accept medium cassette can play back from and record to medium cassette in different flavors of DVCPRO format; they will also play small cassettes containing DV or DVCAM recording via an adapter.
+Large or L-size cassettes are accepted by most standalone DV tape recorders and are used in many shoulder-mount camcorders. The L-size cassette can be used in both Sony and Panasonic equipment; nevertheless, they are often called DVCAM tapes. Older Sony decks would not play large cassettes with DVCPRO recordings, but newer models can.
+Extra-large cassettes or XL-size have been designed for use in Panasonic equipment and are sometimes called DVCPRO&#160;XL. These cassettes are not widespread, only two models of standalone Panasonic tape recorders can accept them.
+Technically, any DV cassette can record any variant of DV video. Nevertheless, manufacturers often label cassettes with DV, DVCAM, DVCPRO, DVCPRO50 or DVCPRO HD and indicate recording time with regards to the label posted. Cassettes labeled as DV indicate recording time of baseline DV; another number can indicate recording time of Long Play DV. Cassettes labeled as DVCPRO have a yellow tape-door and indicate recording time when DVCPRO25 is used; with DVCPRO50 the recording time is half, with DVCPRO HD it is a quarter. Cassettes labeled as DVCPRO50 have a blue tape-door and indicate recording time when DVCPRO50 is used. Cassettes labeled as DVCPRO HD have a red tape-door and indicate recording time when DVCPRO HD-LP format is used; a second number may be used for DVCPRO HD recording, which will be half as long.
+Panasonic stipulated use of a particular magnetic tape formulation — Metal Particle (MP) — as an inherent part of its DVCPRO family of formats. Regular DV tape uses Metal Evaporate (ME) formulation, which was pioneered for use in Hi8 camcorders. Early Hi8 ME tape was plagued with excessive dropouts, which forced many shooters to switch to more expensive MP tape.[17] After the technology improved, the dropout rate was greatly reduced, nevertheless Panasonic deemed ME formulation not robust enough for professional use. Tape-based Panasonic camcorders do not use small DV cassettes, effectively preventing use of ME tape.
+DV cassettes can come with a memory-in-cassette (MIC) low capacity EEPROM memory chip. Using the I²C protocol, cameras and recording decks can record any data desired onto this chip like contents list, times and dates of recordings, camera settings or video thumbnails, taken each time the record button on the camcorder is pressed. MIC functionality is optional and is not widely used in consumer equipment. Most tapes available to consumers do not include the MIC chip. Almost every recorder and camcorder includes the hardware to read and write to the MIC, but the firmware does not always have the code to actually perform the task.
+
+
+
+
+A disassembled MiniDV cassette.
+
+
+In 1999 Sony retrofitted its 8-mm camcorders with DV encoding scheme, creating Digital8. This allowed recording 60 minutes of DV video onto two-hour Video8/Hi8 cassette. Digital8 did not get as widespread acceptance as MiniDV and Sony discontinued Digital8 camcorders in 2007.
+Software such as DV Streamer can be used to record any computer data to a DV tape drive.
+File-based media[edit]
+With proliferation of tapeless camcorder video recording, DV video can be recorded on optical discs, solid state flash memory cards and hard disk drives and used as computer files. In particular:
+
+Sony XDCAM family of cameras can record DV onto either Professional Disc or SxS memory cards.
+Panasonic DVCPRO&#160;HD and AVC-Intra camcorders can record DV (as well as DVCPRO) onto P2 cards.
+Some Panasonic AVCHD camcorders (AG-HMC80, AG-AC130, AG-AC160) record DV video onto Secure Digital memory cards.
+JVC GY-HM750 records DV video onto either Secure Digital or SxS memory cards.
+Most DV and HDV camcorders can feed live DV stream over IEEE 1394 interface to an external file-based recorder.
+
+Video is stored either as native DIF bitstream or wrapped into an audio/video container such as AVI, QuickTime and MXF.
+
+DV-DIF is the raw form of DV video. The files usually have extensions *.dv or *.dif.
+DV-AVI is Microsoft's implementation of DV video file, which is wrapped into an AVI container. Two variants of wrapping are available: with Type 1 the multiplexed audio and video is saved into the video section of a single AVI file, with Type 2 video and audio are saved as separate streams in an AVI file (one video stream and one to four audio streams). This container is used primarily on Windows-based computers, though Sony offers two tapeless recorders, the HDD-based HVR-DR60[18] and the CompactFlash-based HVR-MRC1K,[19] for use with DV/HDV camcorders that can record in DV-AVI format either making a file-based copy of the tape or bypassing tape recording altogether. Panasonic AVCHD camcorders use Type 2 DV-AVI for recording DV video onto Secure Digital memory card.[20]
+QuickTime-DV is DV video wrapped into QuickTime container. This container is used primarily on Apple computers.
+MXF-DV wraps DV video into MXF container, which is presently used on P2-based camcorders (Panasonic) and on XDCAM/XDCAM EX camcorders (Sony).
+
+Connectivity[edit]
+Nearly all DV camcorders and decks have IEEE 1394 (FireWire, i.LINK) ports for digital video transfer. When video is captured onto a computer it is stored in a container file, which can be either raw DV stream, AVI, WMV or QuickTime. Whichever container is used, the video itself is not re-encoded and represents a complete digital copy of what has been recorded onto tape. If needed, the video can be recorded back to tape to create a full and lossless copy of the original footage.
+Some camcorders also feature a USB 2.0 port for computer connection. This port is usually used for transferring still images, but not for video transfer. Camcorders that offer video transfer over USB usually do not deliver full DV quality - usually it is 320x240 video, except for the Sony DCR-PC1000 camcorder and some Panasonic camcorders that provide transfer of a full-quality DV stream via USB by using the UVC protocol. Full-quality DV can also be captured via USB by using separate hardware that receives DV data from the camcorder over a FireWire cable and forwards it without any transcoding to the computer via a USB cable[21] - this can be particularly useful for capturing on modern laptop computers which frequently do not have a FireWire port or expansion slot but always have USB ports.
+High end cameras and VTRs may have additional professional outputs such as SDI, SDTI or analog component video. All DV variants have a time code, but some older or consumer computer applications fail to take advantage of it.
+Usage[edit]
+The high quality of DV images, especially when compared to Video8 and Hi8 which were vulnerable to an unacceptable amount of video dropouts and "hits", prompted the acceptance by mainstream broadcasters of material shot on DV. The low costs of DV equipment and their ease of use put such cameras in the hands of a new breed of videojournalists. Programs such as TLC's Trauma: Life in the E.R. and ABC News's Hopkins: 24/7 were shot on DV.[citation needed]
+Professional television reporters such as Anderson Cooper and Katie Couric seem to shoot some of their stories themselves.[22]
+DVCPRO HD has become the preferred high definition standard of the BBC Factual.[23]
+Application software support[edit]
+Most DV players, editors and encoders only support the basic DV format, but not its professional versions. DV Audio/Video data can be stored as raw DV data stream file (data is written to a file as the data is received over FireWire, file extensions are .dv and .dif) or the DV data can be packed into container files (ex: Microsoft AVI, Apple MOV). The DV meta-information is preserved in both file types.
+Most Windows video software only supports DV packed into AVI containers, as they use Microsoft's avifile.dll, which only supports reading avi files. A few notable exceptions exist, while Mac OS X video software support both AVI and MOV containers.
+
+Apple Inc.'s iMovie: iMovie allows importing from HDV cameras since iMovie HD, which import in full quality, and DV cameras since iMovie 1, which decodes to half of the original quality, to preserve processing power.
+Apple Inc.'s Final Cut Pro: Final Cut Pro allows importing from all DV, HDV, and AVCHD (using the Apple Intermediate Codec or Prores) cameras. It supports rewinding, fast-forwarding, pausing, stopping and playing from the computer.
+Apple Inc.'s QuickTime Player: QuickTime by default only decodes DV to half of the resolution to preserve processing power for editing capabilities. However, in the "Pro" version the setting "High Quality" under "Show Movie Properties" enables full resolution playback.
+DVMP Basic &amp; DVMP Pro: full decoding quality. Plays AVI (inc DVCPRO25 and DVCAM) and.dv files. Also displays the DV meta-information (e.g. timecode, date/time, f-stop, shutter speed, gain, white balance etc.)
+The VLC media player (Free software): full decoding quality
+MPlayer (also with GUI under Windows and Mac OS X): full decoding quality
+muvee Technologies autoProducer 4.0: Allows editing using FireWire IEEE 1394
+Quasar DV codec (libdv) - open source DV codec for Linux
+DVswitch - open source linear editor for DV streams, with live streaming capabilities
+LifeFlix MiniDV Importer - easy to use MiniDV capture software for the Mac
+
+Mixing tapes from different manufacturers[edit]
+There is considerable controversy solely based on hearsay over whether or not using tapes from different manufacturers can lead to dropouts.[24][25] Initially this was suggested around the conception of mostly MiniDV tapes in the mid to late 90s) as the only two manufacturers of MiniDV tapes (Sony, who produce their tapes solely under the Sony brand; and Panasonic, who produce their own tapes under their Panasonic brand and outsources for TDK, Canon, etc.) used two different lubrication types for their cameras - Sony used a 'wet' lubricant, while Panasonic used a 'dry' lubricant.
+Though the controversy still remain standard practice for encouraging casual and professional camera operators alike not to mix brands of tapes (as the different lubrication formulations can cause or encourage tape wear if not cleaned by a cleaning cassette) no significant problems have occurred for the last few years - presumably as Sony has changed their formulation to match Panasonic's[speculation?] - meaning that switching tapes is now acceptable to use, though sticking to one brand (and cleaning the heads with a cleaning cassette) are highly recommended before doing so.
+A research undertaken by Sony claimed that there was no hard evidence of the above statement. The only evidence claimed was that using ME tapes in equipment designed for MP tapes can cause tape damage and hence dropouts.[26][unreliable source?] Sony has done a significant amount of internal testing to simulate head clogs as a result of mixing tape lubricants, and has been unable to recreate the problem.[dubious – discuss] Sony recommends using cleaning cassettes once every 50 hours of recording or playback. For those who are still skeptical, Sony recommends cleaning video heads with a cleaning cassette before trying another brand of tape.
+References[edit]
+
+
+^ Recording – Helical-scan digital videocassette recording system using 6,35 mm magnetic tape for consumer use
+^ "DV Q&amp;A Our Expert Answers Your Questions". Videomaker magazine. Videomaker, Inc. October 1999.&#160;
+^ a b [http: //www.sony.ca/dvcam/pdfs/dvcam%20format%20overview.pdf "DVCAM format overview"] Check |url= scheme (help) (PDF).&#160;[dead link]
+^ "Digital Video and Field Order". dvmp.co.uk.&#160;
+^ fxguide.com
+^ "The DV, DVCAM, &amp; DVCPRO Formats -- tech details, FAQ, and links.". adamwilt.com.&#160;
+^ Puhovski, Nenad (April 2000). "DV – A SUCCESS STORY". www.stanford.edu. Retrieved 26 August 2013.&#160;
+^ "DV-DIF (Digital Video Digital Interface Format)". digitalpreservation.gov.&#160;
+^ "DV format". debian.org.&#160;
+^ "The DV, DVCAM, &amp; DVCPRO Formats -- tech details, FAQ, and links.". adamwilt.com.&#160;
+^ https://cvp.com/pdf/sony_dvcam_family.pdf
+^ "BBC Training: DV Tape Formats". Archived from the original on 11 June 2011.&#160;
+^ "Caporale Studios Shoots Feature Films with Panasonic 480p DVCPRO50 Camcorder". dvformat.com.&#160;
+^ 480p production systems
+^ AJ-PD900WP Operating instructions
+^ The Filmmaker's Handbook: a Comprehensive Guide for the Digital Age - 4th Edition Appendix B: Data Rates and Storage Needs for Various Digital Formats
+^ "Digital Video Recording". trinity-bris.ac.uk. Archived from the original on 7 April 2008.&#160;
+^ "HVR-DR60 HDV hard disk recorder".&#160;
+^ "HVR-MRC1K Memory Recording Unit".&#160;
+^ "Panasonic AG-HMC80 operating instructions" (PDF).&#160;
+^ "How to Capture DV video via USB". dvmp.co.uk.&#160;
+^ Katie Couric: anchor, reporter ... shooter?!? Archived 22 February 2012 at the Wayback Machine
+^ HD at BBC Archived 1 March 2012 at the Wayback Machine
+^ "DV Tape FAQ". zenera.com.&#160;
+^ Adam J. Wilt. "Adam Wilt's Video Tidbits". adamwilt.com.&#160;
+^ The Truth About Tape Lubricant
+
+
+External links[edit]
+
+Adam Wilt's DV page with in-depth technical information
+Technical Documentation on the storage of DV data in AVI files: [1]
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Video storage formats
+
+
+
+
+
+
+Videotape
+
+
+
+
+
+Analog
+
+
+
+
+Quadruplex (1956)
+VERA (1958)
+Ampex 2 inch helical VTR (1961)
+Sony 2 inch helical VTR (1961)
+Type A (1965)
+CV-2000 (1965)
+Akai (1967)
+U-matic (1969)
+EIAJ-1 (1969)
+Cartrivision (1972)
+Philips VCR (1972)
+V-Cord (1974)
+VX (1974)
+Betamax (1975)
+IVC (1975)
+Type B (1976)
+Type C (1976)
+VHS (1976)
+VK (1977)
+SVR (1979)
+Video 2000 (1980)
+CVC (1980)
+VHS-C (1982)
+M (1982)
+Betacam (1982)
+Video8 (1985)
+MII (1986)
+S-VHS (1987)
+S-VHS-C (1987)
+Hi8 (1989)
+Ruvi (1998)
+
+
+
+
+
+
+
+
+
+Digital
+
+
+
+
+D1 (1986)
+D2 (1988)
+D3 (1991)
+DCT (1992)
+Digital Betacam (1993)
+D5 (1994)
+Digital-S (D9) (1995)
+Betacam SX (1996)
+Digital8 (1999)
+MicroMV (2001)
+
+
+
+
+
+
+
+
+
+High Definition
+
+
+
+
+Sony HDVS (1984)
+UniHi (1984)
+W-VHS (1994)
+HDCAM (1997)
+D-VHS (1998)
+D6 HDTV VTR (2000)
+HDV (2003)
+HDCAM SR (2003)
+
+
+
+
+
+
+
+
+
+
+
+Videodisc
+
+
+
+
+
+Analog
+
+
+
+
+Phonovision (1927)
+Ampex-HS (1967)
+TeD (1975)
+LaserDisc (1978)
+CED (1981)
+VHD (1983)
+Laserfilm (1984)
+CD Video (1987)
+
+
+
+
+
+
+
+
+
+Digital
+
+
+
+
+VCD (1993)
+MovieCD (c. 1995)
+DVD (1996)
+MiniDVD (c. 1996)
+DVD-Video (1997)
+CVD (1998)
+SVCD (1998)
+EVD (2003)
+HVD (High-Definition Versatile Disc) (2004)
+FVD (2005)
+UMD (2004)
+
+
+
+
+
+
+
+
+
+High Definition
+
+
+
+
+MUSE Hi-Vision LD (1994)
+VMD (2006)
+HD DVD (2006)
+Blu-ray (2006)
+HVD (Holographic Versatile Disc) (2007)
+CBHD (China Blue High-definition Disc) (2008)
+
+
+
+
+
+
+
+
+
+
+
+Virtual
+
+
+
+
+
+Media agnostic
+
+
+
+
+DV (1995)
+DVCPRO (1995)
+DVCAM (1996)
+DVCPRO50 (1997)
+DVCPRO HD (2000)
+
+
+
+
+
+
+
+
+
+Tapeless
+
+
+
+
+Editcam (1995)
+XDCAM (2003)
+MOD (2005)
+AVCHD (2006)
+AVC-Intra (2006)
+TOD (2007)
+iFrame (2009)
+XAVC (2012)
+
+
+
+
+
+
+
+
+
+Solid state
+
+
+
+
+P2 (2004)
+SxS (2007)
+MicroP2 (2012)
+
+
+
+
+
+
+
+
+
+
+
+Video recorded to film
+
+
+
+Kinescope (1947)
+Electronicam kinescope (1950s)
+Electronic Video Recording (1967)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=DV&amp;oldid=683851303"					
+				Categories: Video storageHistory of televisionTelevision terminologyHidden categories: Pages with URL errorsAll articles with dead external linksArticles with dead external links from August 2013All articles with unsourced statementsArticles with unsourced statements from October 2012Articles containing predictions or speculationAll articles lacking reliable referencesArticles lacking reliable references from June 2011All accuracy disputesArticles with disputed statements from October 2013Use dmy dates from June 2011				
+							
+		
+		
+			

@@ -1,0 +1,232 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			JSR 250
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				JSR 250 is a Java Specification Request with the objective to develop annotations (that is, information about a software program that is not part of the program itself) for common semantic concepts in the Java SE and Java EE platforms that apply across a variety of individual technologies. It was envisioned that various JSRs would use annotations to enable a declarative style of programming. It would be especially valuable to have consistency within the Java EE component JSRs, but it is also valuable to allow consistency between Java EE and Java SE.
+
+
+
+Contents
+
+
+1 Description and purpose
+2 Dependencies to other JSRs
+3 The annotations
+4 Implementation
+5 References
+
+
+
+Description and purpose[edit]
+JSR 250, as a Java Specification Request, has the objective to define a set of annotations that address common semantic concepts and therefore can be used by many Java EE and Java SE components. This is to avoid redundant annotations across those components. JSR 250 was released on 11 May 2006. As Declarative annotation-driven configuration is more and more used in Java frameworks and applications, e.g. Spring makes more components of its framework configurable via annotations, the importance of JSR 250 is likely to increase in the future.
+Dependencies to other JSRs[edit]
+JSR 250 depends on JSR 175 and therefore also on Java SE 5.0
+The annotations[edit]
+
+
+Annotation name
+description
+
+
+Generated
+Marks sources that have been generated
+
+
+Resource
+Declares a reference to a resource, e.g. a database
+
+
+Resources
+Container for multiple Resource annotations
+
+
+PostConstruct
+Is used on methods that need to get executed after dependency injection is done to perform any initialization.
+
+
+PreDestroy
+Is used on methods that are called before the instance is removed from the container
+
+
+Priority
+Is used to indicate in what order the classes should be used. For, e.g., the Interceptors specification defines the use of priorities on interceptors to control the order in which interceptors are called.
+
+
+RunAs
+Defines the role of the application during execution in a Java EE container
+
+
+RolesAllowed
+Specifies the security roles permitted to access method(s) in an application.
+
+
+PermitAll
+Specifies that all security roles are permitted to access the annotated method, or all methods in the annotated class.
+
+
+DenyAll
+Specifies that no security roles are allowed to invoke the specified method(s).
+
+
+DeclareRoles
+Used to specify the security roles by the application.
+
+
+DataSourceDefinition
+Is used to define a container DataSource and be registered with JNDI. The DataSource may be configured by setting the annotation elements for commonly used DataSource properties.
+
+
+ManagedBean
+Is used to declare a Managed Bean which are container managed objects that support a small set of basic services such as resource injection, lifecycle callbacks and interceptors.
+
+
+Implementation[edit]
+All non-Java EE JSR 250 annotations were added to the Java SE with version 6 (Generated, PostConstruct, PreDestroy, Resource, Resources). They are located in the package javax.annotation.
+References[edit]
+
+JSR 250: Common Annotations for the Java Platform
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Java EE 7 specifications
+
+
+
+
+
+
+Web Application
+
+
+
+Servlet
+JavaServer Pages
+Expression Language
+JSTL
+JavaServer Faces
+WebSocket
+JSON Processing
+
+
+
+
+
+
+
+
+Enterprise Application
+
+
+
+CDI
+Dependency Injection
+Bean Validation
+Enterprise JavaBeans
+JPA
+JMS
+JTA
+JavaMail
+Interceptors
+JCA
+Common Annotations
+Batch Applications
+Concurrency Utilities
+
+
+
+
+
+
+
+
+Web Services
+
+
+
+JAX-RS
+Enterprise Web Services
+JAX-WS
+Web Services Metadata
+Java API for XML Messaging
+JAXR
+
+
+
+
+
+
+
+
+Management and Security
+
+
+
+Java Authentication SPI
+Java Authorization SPI
+J2EE Management
+Debugging for Other Languages
+
+
+
+
+
+
+
+
+Related Specs in Java SE
+
+
+
+JAXB
+JAXP
+JDBC
+JMX
+JavaBeans Activation Framework
+Streaming API for XML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=JSR_250&amp;oldid=690572730"					
+				Categories: Java specification requestsJava enterprise platformHidden categories: Use dmy dates from May 2015				
+							
+		
+		
+			

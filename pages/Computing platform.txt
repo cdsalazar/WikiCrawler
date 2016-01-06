@@ -1,0 +1,208 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Computing platform
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Platform (computing))
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (August 2010)
+
+
+A computing platform is, in the most general sense, whatever pre-existing environment a piece of computer software or code object is designed to run within, obeying its constraints, and making use of its facilities. The term computing platform can refer to different abstraction levels, including a certain hardware architecture, an operating system (OS), and runtime libraries.[1] In total it can be said as stage on which computer programs can run.
+Binary executables have to be compiled for a specific hardware platform, since different central processor units have different machine codes. In addition, operating systems and runtime libraries allow re-use of code and provide abstraction layers which allow the same high-level source code to run on differently configured hardware. For example, there are many kinds of data storage device, and any individual computer can have a different configuration of storage devices; but the application is able to call a generic save or write function provided by the OS and runtime libraries, which then handle the details themselves. A platform can be seen both as a constraint on the application development process – the application is written for such-and-such a platform – and an assistance to the development process, in that they provide low-level functionality ready-made.
+
+
+
+Contents
+
+
+1 Components
+2 Operating system examples
+
+2.1 Mobile
+
+
+3 Software frameworks
+4 Hardware examples
+5 See also
+6 References
+7 External links
+
+
+
+Components[edit]
+Platforms may also include:
+
+Hardware alone, in the case of small embedded systems. Embedded systems can access hardware directly, without an OS.
+A browser in the case of web-based software. The browser itself runs on a hardware+OS platform, but this is not relevant to software running within the browser.[2]
+An application, such as a spreadsheet or word processor, which hosts software written in an application-specific scripting language, such as an Excel macro. This can be extended to writing fully-fledged applications with the Microsoft Office suite as a platform.[3]
+Software frameworks that provide ready-made functionality.
+Cloud computing and Platform as a Service. Extending the idea of a software framework, these allow application developers to build software out of components that are hosted not by the developer, but by the provider, with internet communication linking them together.[4] The social networking sites Twitter and facebook are also considered development platforms.[5][6]
+A virtual machine (VM) such as the Java virtual machine.[7] Applications are compiled into a format similar to machine code, known as bytecode, which is then executed by the VM.
+A virtualized version of a complete system, including virtualized hardware, OS, software and storage. These allow, for instance, a typical Windows program to run on what is physically a Mac.
+
+Some architectures have multiple layers, with each layer acting as a platform to the one above it. In general, a component only has to be adapted to the layer immediately beneath it. For instance, a java program has to be written to use the java virtual machine (JVM) and associated libraries as a platform, but does not have to be adapted to run for the Windows, Linux or Macintosh OS platforms. However, the JVM, the layer beneath the application, does have to be built separately for each OS.[8]
+Operating system examples[edit]
+For more details on this topic, see List of operating systems.
+
+AmigaOS, AmigaOS 4
+FreeBSD, NetBSD, OpenBSD
+Linux
+Microsoft Windows
+OpenVMS
+OS X (Mac OS)
+OS/2
+Solaris
+Tru64 UNIX
+VM
+
+Mobile[edit]
+
+
+
+
+Android, a popular mobile operating system
+
+
+
+Android
+Bada
+BlackBerry OS
+Firefox OS
+iOS
+Embedded Linux
+Palm OS
+Symbian
+Tizen
+WebOS
+Windows Mobile
+Windows Phone
+
+Software frameworks[edit]
+For more details on this topic, see Software framework.
+
+Adobe AIR
+Adobe Flash
+Adobe Shockwave
+Binary Runtime Environment for Wireless (BREW)
+Cocoa (API)
+Cocoa Touch
+Java platform
+
+Java Platform, Micro Edition
+Java Platform, Standard Edition
+Java Platform, Enterprise Edition
+JavaFX
+JavaFX Mobile
+
+
+Microsoft XNA
+Mono
+Mozilla Prism, XUL and XULRunner
+.NET Framework
+Silverlight
+Open Web Platform
+Oracle Database
+Qt
+SAP NetWeaver
+Smartface
+Vexi
+Windows Runtime
+
+Hardware examples[edit]
+For more details on this topic, see Lists of computers.
+Ordered roughly, from more common types to less common types:
+
+Commodity computing platforms
+
+Wintel, that is, Intel x86 or compatible personal computer hardware with Windows operating system
+Macintosh, custom Apple Computer hardware and Mac OS operating system, now migrated to x86
+
+Newton devices running the Newton OS, also from Apple
+
+
+ARM architecture used in mobile devices
+
+Gumstix or Raspberry Pi full function miniature computers with Linux
+
+
+x86 with Unix-like systems such as BSD variants
+CP/M computers based on the S-100 bus, maybe the earliest microcomputer platform
+
+
+Video game consoles, any variety
+
+3DO Interactive Multiplayer, that was licensed to manufacturers
+Apple Pippin, a Multimedia player platform for video game console development
+
+
+RISC processor based machines running Unix variants
+
+SPARC architecture computers running Solaris or illumos operating systems
+DEC Alpha cluster running OpenVMS or Tru64 UNIX
+
+
+Midrange computers with their custom operating systems, such as IBM OS/400
+Mainframe computers with their custom operating systems, such as IBM z/OS
+Supercomputer architectures
+
+See also[edit]
+
+Platform technology
+Cross-platform
+Platform virtualization
+Third platform
+
+References[edit]
+
+
+^ Free Online Dictionary of Computing
+^ Information Week
+^ Microsoft
+^ Interoute
+^ Twitter
+^ Facebook
+^ Oracle
+^ Stack Overflow
+
+
+External links[edit]
+
+
+
+Wikidata has a property, P400, for platform (see uses)
+
+
+
+Ryan Sarver: What is a platform?
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Computing_platform&amp;oldid=691193689"					
+				Categories: Computing platformsHidden categories: Articles needing additional references from August 2010All articles needing additional references				
+							
+		
+		
+			

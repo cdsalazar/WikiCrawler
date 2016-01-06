@@ -1,0 +1,437 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Watcom C/C++ compiler
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+Open Watcom C/C++
+
+
+
+
+Original author(s)
+Watcom, Sybase,
+SciTech Software
+
+
+Developer(s)
+Open community
+
+
+Initial release
+January&#160;8, 2003;
+12 years ago&#160;(2003-01-08)
+
+
+Stable release
+1.9 / June&#160;2, 2010;
+5 years ago&#160;(2010-06-02)
+
+
+Development status
+Active
+
+
+Written in
+C, C++
+
+
+Operating system
+Cross-platform
+
+
+Size
+66 to 84 Mb
+
+
+Type
+Integrated development environment
+
+
+License
+Sybase Open Watcom Public License version 1.0
+
+
+Website
+openwatcom.org
+
+
+The Watcom C/C++, currently Open Watcom C/C++, is an open-source compiler for the computer programming languages C, C++, Fortran that produces executable programs for several platforms and operating systems.
+
+
+
+Contents
+
+
+1 Overview
+
+1.1 License
+1.2 Operating systems
+1.3 Uses
+1.4 Variants
+
+
+2 Compatibility
+
+2.1 Other compilers
+2.2 C90
+2.3 C99
+2.4 C11
+
+
+3 Release history
+4 See also
+5 References
+6 External links
+
+
+
+Overview[edit]
+License[edit]
+Though no longer sold commercially by Sybase, the Watcom C/C++ compiler and the Watcom Fortran compiler have been made available free of charge as the Open Watcom package with the assistance of SciTech Software.
+The Open Source Initiative has approved the license as open source, but Debian, Fedora and the Free Software Foundation have rejected it because "It requires you to publish the source code publicly whenever you “Deploy” the covered software, and “Deploy” is defined to include many kinds of private use."[1]
+Operating systems[edit]
+The compiler can be operated from, and generate executable code for, the DOS (MS-DOS, FreeDOS), OS/2, Windows, Linux operating systems. It also supports NLM targets for Novell NetWare. There is ongoing work to extend the targeting to Linux[2] and modern BSD (e.g., FreeBSD) operating systems, running on x86, PowerPC, and other processors.
+The code is portable and, like many other open source compiler projects such as GCC or LCC the compiler backend (code generator) is retargetable.
+The Open Watcom C/C++ version 1.4 release on December 2005 introduced Linux x86 as an experimental target, supported from NT or OS/2 host platforms. There is code for an abandoned QNX version, but libraries necessary for it to be compiled could not be released as open source.[citation needed]
+Stable version 1.9 was released in June 2010.[3]
+Uses[edit]
+In the mid-1990s some of the most technically ambitious MS-DOS computer games such as Doom,[4] Descent,[4] Duke Nukem 3D,[4] and Rise of the Triad[5] were built using Watcom C/C++, some such as ROTT using the DOS/4GW protected mode extender with the Watcom compiler.
+Variants[edit]
+There is an unofficial fork[6] of Open Watcom V2 on GitHub.[7] A variant of the 16bit DOS CRT library startup was created with WASM.[8]
+Compatibility[edit]
+Other compilers[edit]
+Open Watcom's syntax supports many conventions introduced by other compilers, such as Microsoft's and Borland's, including differing conventions regarding (for instance) the number of leading underscores on the "asm" tag. Code written specifically for another compiler rather than standard-compliant C or C++ will often compile with the Watcom compiler.
+C90[edit]
+The compiler supports C89/C90 standards by default.
+C99[edit]
+Open Watcom supports partial compatibility with the C99 standard. It implements the most commonly used parts of the standard. However, they are enabled only through the undocumented command-line switch "-za99". Three C99 features have been bundled as C90 Extension since pre-v1.0: C++ style comments (//), flexible array members, trailing comma allowed in enum declaration.[9]
+C11[edit]
+The compiler currently doesn't support any new major C11 features, though the C library does include "Safe C" functions. It is specified in ISO/IEC TR 24731-1[10][11] and known as "Bounds-checking interfaces (Annex K)" in C11. Some function name examples are strcpy_s(), memcpy_s(), printf_s().[12] This library was released along with Open Watcom 1.5 in April 2006.
+Release history[edit]
+The Open Watcom Wiki has a comprehensive history.[4]
+
+
+Date
+Product
+Notes
+
+
+1984
+Waterloo C for S/370
+
+
+
+1985
+
+Work on current code generator codebase started
+
+
+1988
+Watcom C 6.0
+
+
+DOS host and target only
+Included a debugger and full set of runtime libraries
+Generated better code than other compilers at the time
+Watcom C Version 6.5 contained Graphics Library similar to Microsoft Graphics Library
+
+
+
+
+1989
+Watcom C 7.0
+
+
+
+1989
+Watcom C 7.0/386
+
+
+First 32-bit version, DOS host and target only
+Supported Phar Lap DOS extender
+Did not come with a linker or debugger
+
+
+
+
+1990
+Watcom C 8.0
+
+
+
+1990
+Watcom C 8.0/386
+
+
+Added linker, librarian, debugger, and profiler
+
+
+
+
+1991
+Watcom C 8.5
+
+
+
+1991
+Watcom C 8.5/386
+
+
+Shipped with DOS/4GW
+Windows 3.0 supported (Win386 extender)
+Unicode support
+OS/2 hosted executables added
+
+
+
+
+1992
+Watcom C 9.0
+
+
+
+1992
+Watcom C 9.0/386
+
+
+OS/2 2.0 host and target support
+486 optimizations
+Based pointer support
+
+
+
+
+
+Watcom C 9.01/386
+
+
+Windows 3.1 support
+
+
+
+
+1993
+Watcom C/C++ 9.5
+
+
+
+1993
+Watcom C/C++ 9.5/386
+
+
+C++ compiler added
+Pentium optimizations
+Windows NT host and target support
+
+
+
+
+1994
+Watcom C/C++ 10.0
+
+
+MFC included
+Precompiled header support
+16-bit and 32-bit tools merged into single package
+Redesigned debugger
+C++ class browser added
+Windows resource editors added
+Graphical IDE for Windows and OS/2
+
+
+
+
+1995
+Watcom C/C++ 10.5
+
+
+Native C++ exception handling on OS/2 and Win32
+Windows 95 and NT 3.5 support
+TCP/IP remote debugging
+
+
+
+
+1996
+Watcom C/C++ 10.6
+
+
+Structured exception handling in C
+Improved compatibility with Microsoft compilers
+
+
+
+
+1997
+Watcom C/C++ 11.0
+
+
+Namespace, RTTI, and new style cast support in C++ compiler
+64-bit integer support
+Multi-byte character support in libraries
+Incremental linking support
+COFF and ELF object file support in linker and librarian
+Microsoft clone tools added
+DLL based tools for better IDE integration
+
+
+
+
+1998
+Watcom C/C++ 11.0B
+
+
+
+1999
+
+Sybase issues end-of-life notice for Watcom C/C++ 11.0
+
+
+2000
+
+Sybase announces open sourcing of Watcom tools
+
+
+2001-09-27
+Watcom C/C++ 11.0c Beta
+
+
+
+2002-12-21
+Watcom C/C++ 11.0c
+
+
+
+2003-01-28
+Open Watcom 1.0
+
+
+
+2003-08-12
+Open Watcom 1.1
+
+
+
+2004-01-07
+Open Watcom 1.2
+
+
+
+2004-08-03
+Open Watcom 1.3
+
+
+
+2005-12-14
+Open Watcom 1.4
+
+
+
+2006-04-26
+Open Watcom 1.5
+
+
+
+2006-12-15
+Open Watcom 1.6
+
+
+
+2007-08-18
+Open Watcom 1.7
+
+
+
+2007-10-23
+Open Watcom 1.7a
+
+
+
+2009-02-21
+Open Watcom 1.8
+
+
+
+2010-06-02
+Open Watcom 1.9
+Current Official Version
+
+
+2015-04-02
+Open Watcom 2.0 Beta
+GitHub V2 Fork. Open Watcom ported to 64-bit hosts (Window and Linux), Resource compiler and Resource editor support WIN64 executables, built-in text editor, 2-phase build system, DOS version of tools support long files names (LFN), numerous fixes.[13]
+
+
+See also[edit]
+
+Open Watcom Assembler
+
+References[edit]
+
+
+^ Free Software Foundation. "Various Licenses and Comments about Them". GNU Operating System. Retrieved Dec 23, 2014.&#160;
+^ Installing Open Watcom on Linux - Open Watcom. OpenWatcom.org wiki.
+^ "Latest Release (June 2010) - Open Watcom". OpenWatcom.org wiki.&#160;
+^ a b c d History - Open Watcom. OpenWatcom.com wiki.
+^ [1] "RotT was written in Watcom C++ v10.0 with the Rational Systems DOS/4GW extender."
+^ "Open Watcom V2 Fork".&#160;
+^ "Open Watcom V2 Fork Project on GitHub".&#160;
+^ "pcdosasm.zip archive". 2010-07-27. Retrieved 2014-02-10. Modified Open Watcom C/C++ DOS 16-bit ..\STARTUP\DOS\CSTRT086.ASM code&#160;
+^ "C99 compliance in Open Watcom". Retrieved 25 September 2015.&#160;
+^ ISO/IEC TR 24731-1; Extension to the C Library, Part 1: Bounds-checking interfaces.
+^ WG14 N1969 — "Updated Field Experience With Annex K — Bounds Checking Interfaces", Carlos O'Donell, Martin Sebor
+^ Open Watcom Safer C Library
+^ List of main differences of v1.9 to v2.0 Beta.
+
+
+External links[edit]
+
+V1.9 official
+
+
+Open Watcom, official website, (archive of website)
+Open Watcom V1.9 binary downloads
+OpenWatcom Reference Manuals
+
+
+V2.0 unofficial
+
+
+Open Watcom V2 Fork, GitHub
+Open Watcom V2 binary downloads
+
+
+Articles
+
+
+Paul Hsieh. (May 8, 2005). "The WATCOM C/C++ Programmer’s FAQ". Retrieved Oct 7, 2008.&#160;
+Rick Grehan (October 1994). "Watcom C/C++ Gets a New Face". BYTE 19 (10): 111. Archived from the original on 1997-07-12. Retrieved 2011-05-14.&#160;
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Watcom_C/C%2B%2B_compiler&amp;oldid=684192762"					
+				Categories: C compilersC++ compilersFree compilers and interpretersFormerly proprietary softwareHidden categories: All articles with unsourced statementsArticles with unsourced statements from February 2007Official website different in Wikidata and Wikipedia				
+							
+		
+		
+			

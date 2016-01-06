@@ -1,0 +1,1293 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Visual Basic .NET
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+Visual Basic .NET
+
+
+
+
+
+
+
+Paradigm
+Multi-paradigm: structured, imperative, object-oriented, declarative, generic, reflective and event-driven
+
+
+Designed&#160;by
+Microsoft
+
+
+Developer
+Microsoft
+
+
+First&#160;appeared
+2001; 14&#160;years ago&#160;(2001)
+
+
+Stable release
+2015 (14.0) / 5&#160;June 2015; 5 months ago&#160;(2015-06-05)
+
+
+Typing discipline
+Static, both strong and weak,[1] both safe and unsafe,[1] nominative
+
+
+Platform
+.NET Framework, Mono
+
+
+OS
+Chiefly Windows
+Also on Android, BSD, iOS, Linux, Mac OS X, Solaris and Unix
+
+
+Filename extensions
+.vb
+
+
+Website
+msdn.microsoft.com/en-us/vstudio/hh388573
+
+
+Major implementations
+
+
+Microsoft Visual Studio, Microsoft Visual Studio Express, SharpDevelop, MonoDevelop, .NET Framework SDK and Mono
+
+
+Dialects
+
+
+Microsoft Visual Basic
+
+
+Influenced
+
+
+Small Basic
+
+
+Visual Basic .NET (VB.NET) is a multi-paradigm, high level programming language, implemented on the .NET Framework. Microsoft launched VB.NET in 2002 as the successor to its original Visual Basic language. Although the ".NET" portion was dropped in 2005, this article uses "Visual Basic .NET" to refer to all Visual Basic languages releases since 2002, in order to distinguish between them and the classic Visual Basic. Along with Visual C#, it is one of the two main languages targeting the .NET framework.
+Microsoft's integrated development environment (IDE) for developing in Visual Basic .NET language is Visual Studio. Most of Visual Studio editions are commercial; the only exceptions are Visual Studio Express and Visual Studio Community which are freeware. In addition, .NET Framework SDK includes a freeware command-line compiler called vbc.exe. Mono also includes a command-line VB.NET compiler.
+
+
+
+Contents
+
+
+1 Syntax
+
+1.1 Simple example
+1.2 Complex example
+1.3 Comparison with the classic Visual Basic
+
+1.3.1 Comparative examples
+
+
+1.4 Comparison with C Sharp/C#
+
+
+2 Version history
+
+2.1 2002 (VB 7.0)
+2.2 2003 (VB 7.1)
+2.3 2005 (VB 8.0)
+2.4 2008 (VB 9.0)
+2.5 2010 (VB 10.0)
+2.6 2012 (VB 11.0)
+2.7 2015 (VB 14.0)
+
+
+3 Cross-platform and open-source development
+4 See also
+5 References
+6 Further reading
+7 External links
+
+
+
+Syntax[edit]
+
+
+
+This section requires expansion. (April 2014)
+
+
+VB.NET uses statements to specify actions. The most common statement is an expression statement, consisting of an expression to be evaluated, on a single line. As part of that evaluation, functions or subroutines may be called and variables may be assigned new values. To modify the normal sequential execution of statements, VB.NET provides several control-flow statements identified by reserved keywords. Structured programming is supported by several constructs including one conditional execution construct (If … Then … Else … End If) and three iterative execution (loop) constructs (Do Until … Loop, For … To, and For Each) .
+The For … To statement has separate initialization and testing sections, both of which must be present. (See examples below.) The For Each statement steps through each value in a list.
+In addition, in Visual Basic .NET:
+
+There is no unified way of defining blocks of statements. Instead, certain keywords, such as "If … Then" or "Sub" are interpreted as starters of sub-blocks of code and have matching termination keywords such as "End If" or "End Sub".
+Statements are terminated either with a colon (":") or with the end of line. Multiple line statements in Visual Basic .NET are enabled with " _" at the end of each such line. The need for the underscore continuation character was largely removed in version 10 and later versions.[2]
+The equals sign ("=") is used in both assigning values to variable and in comparison.
+Round brackets (parentheses) are used with arrays, both to declare them and to get a value at a given index in one of them. Visual Basic .NET uses round brackets to define the parameters of subroutines or functions.
+A single quotation mark ('), placed at the beginning of a line or after any number of space or tab characters at the beginning of a line, or after other code on a line, indicates that the (remainder of the) line is a comment.
+
+Simple example[edit]
+The following is a very simple VB.NET program, a version of the classic "Hello world" example created as a console application:
+
+
+Module Module1
+
+    Sub Main()
+        ' The classic "Hello World" demonstration program
+        Console.WriteLine("Hello World")
+    End Sub
+
+End Module
+
+It prints "Hello, world!" on a command-line window. Each line serves a specific purpose, as follows:
+
+
+Module Module1
+
+This is a module definition, a division of code similar to a class, although modules can contain classes. Modules serve as containers of code that can be referenced from other parts of a program.[3]
+It is common practice for a module and the code file, which contains it, to have the same name; however, this is not required, as a single code file may contain more than one module and/or class definition.
+
+
+Sub Main()
+
+It defines a subroutine called "Main". "Main" is the entry point, where the program begins execution.[4]
+
+
+Console.WriteLine("Hello, world!")
+
+This line performs the actual task of writing the output. Console is a system object, representing a command-line interface (also known as "console") and granting programmatic access to the operating system's standard streams. The program calls the Console method WriteLine, which causes the string passed to it to be displayed on the console.
+Instead of Console.WriteLine, one could use MsgBox, which prints the message in a dialog box instead of a command-line window.[5]
+Complex example[edit]
+This piece of code is a solution to Floyd's Triangle:
+
+
+Imports System.Console
+
+Module Program
+
+    Sub Main()
+        Dim rows As Integer
+
+        ' Input validation.
+        Do Until Integer.TryParse(ReadLine("Enter a value for how many rows to be displayed: "),
+rows) AndAlso rows &gt;= 1
+            WriteLine("Allowed range is 1 and {0}", Integer.MaxValue)
+        Loop
+
+        ' Output of Floyd's Triangle
+        Dim current = 1
+
+        For row = 1 To rows
+            For column = 1 To row
+                Write("{0,-2} ", current)
+                current += 1
+            Next
+
+            WriteLine()
+        Next
+    End Sub
+
+    ''' &lt;summary&gt;
+    ''' Shadows Console.ReadLine with a version which takes a prompt string.
+    ''' &lt;/summary&gt;
+    Function ReadLine(Optional prompt As String = Nothing) As String
+        If prompt IsNot Nothing Then
+            Write(prompt)
+        End If
+
+        Return Console.ReadLine()
+    End Function
+
+End Module
+
+Comparison with the classic Visual Basic[edit]
+Main article: Comparison of Visual Basic and Visual Basic .NET
+Whether Visual Basic .NET should be considered as just another version of Visual Basic or a completely different language is a topic of debate. There are new additions to support new features, such as structured exception handling and short-circuited expressions. Also, two important data-type changes occurred with the move to VB.NET: compared to Visual Basic 6, the Integer data type has been doubled in length from 16 bits to 32 bits, and the Long data type has been doubled in length from 32 bits to 64 bits. This is true for all versions of VB.NET. A 16-bit integer in all versions of VB.NET is now known as a Short. Similarly, the Windows Forms editor is very similar in style and function to the Visual Basic form editor.
+The things that have changed significantly are the semantics—from those of an object-based programming language running on a deterministic, reference-counted engine based on COM to a fully object-oriented language backed by the .NET Framework, which consists of a combination of the Common Language Runtime (a virtual machine using generational garbage collection and a just-in-time compilation engine) and a far larger class library. The increased breadth of the latter is also a problem that VB developers have to deal with when coming to the language, although this is somewhat addressed by the My feature in Visual Studio 2005.
+The changes have altered many underlying assumptions about the "right" thing to do with respect to performance and maintainability. Some functions and libraries no longer exist; others are available, but not as efficient as the "native" .NET alternatives. Even if they compile, most converted Visual Basic 6 applications will require some level of refactoring to take full advantage of the new language. Documentation is available to cover changes in the syntax, debugging applications, deployment and terminology.[6]
+Comparative examples[edit]
+The following simple examples compare VB and VB.NET syntax. They assume that the developer has created a form, placed a button on it and has associated the subroutines demonstrated in each example with the click event handler of the mentioned button. Each example creates a "Hello, World" message box after the button on the form is clicked.
+Visual Basic 6:
+
+
+Private Sub Command1_Click()
+    MsgBox "Hello, World"
+End Sub
+
+VB.NET (MsgBox or MessageBox class can be used):
+
+
+Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    MessageBox.Show("Hello, World")
+End Sub
+
+
+Both Visual Basic 6 and Visual Basic .NET automatically generate the Sub and End Sub statements when the corresponding button is double-clicked in design view. Visual Basic .NET will also generate the necessary Class and End Class statements. The developer need only add the statement to display the "Hello, World" message box.
+All procedure calls must be made with parentheses in VB.NET, whereas in Visual Basic 6 there were different conventions for functions (parentheses required) and subs (no parentheses allowed, unless called using the keyword Call).
+The names Command1 and Button1 are not obligatory. However, these are default names for a command button in Visual Basic 6 and VB.NET respectively.
+In VB.NET, the Handles keyword is used to make the sub Button1_Click a handler for the Click event of the object Button1. In Visual Basic 6, event handler subs must have a specific name consisting of the object's name ("Command1"), an underscore ("_"), and the event's name ("Click", hence "Command1_Click").
+There is a function called MsgBox in the Microsoft.VisualBasic namespace which can be used (instead of MessageBox.Show) similarly to the corresponding function in Visual Basic 6. There is a controversy[citation needed] about which function to use as a best practice (not only restricted to showing message boxes but also regarding other features of the Microsoft.VisualBasic namespace). Some programmers prefer to do things "the .NET way", since the Framework classes have more features and are less language-specific. Others argue that using language-specific features makes code more readable (for example, using int (C#) or Integer (VB.NET) instead of System.Int32).
+In Visual Basic 2008, the inclusion of ByVal sender as Object, ByVal e as EventArgs has become optional.
+
+The following example demonstrates a difference between Visual Basic 6 and VB.NET. Both examples close the active window.
+Visual Basic 6:
+
+
+Sub cmdClose_Click()
+    Unload Me
+End Sub
+
+VB.NET:
+
+
+Sub btnClose_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnClose.Click
+    Me.Close()
+End Sub
+
+The 'cmd' prefix is replaced by the 'btn' prefix, conforming to the new convention previously mentioned.[which?]
+Visual Basic 6 did not provide common operator shortcuts. The following are equivalent:
+Visual Basic 6:
+
+
+Sub Timer1_Timer()
+    Me.Height = Me.Height - 1
+End Sub
+
+VB.NET:
+
+
+Sub Timer1_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer1.Tick
+    Me.Height -= 1
+End Sub
+
+Comparison with C Sharp/C#[edit]
+Main article: Comparison of C Sharp and Visual Basic .NET
+C# and Visual Basic .NET are the two primary languages used to program on the .NET Framework. Though C# and VB.NET are syntactically different, that is where the differences mostly end. Microsoft developed both of these languages to be part of the same .NET Framework development platform. They are both developed, managed, and supported by the same language development team at Microsoft.[7] They compile to the same intermediate language (IL), which runs against the same .NET Framework runtime libraries.[8] Although there are some differences in the programming constructs, their differences are primarily syntactic and, assuming one avoids the Visual Basic "Compatibility" libraries provided by Microsoft to aid conversion from Visual Basic 6, almost every command in VB has an equivalent command in C# and vice versa. Lastly, both languages reference the same Base Classes of the .NET Framework to extend their functionality. As a result, with few exceptions, a program written in either language can be run through a simple syntax converter to translate to the other. There are many open source and commercially available products for this task.
+Version history[edit]
+Succeeding the classic Visual Basic version 6.0, the first version of Visual Basic .NET debuted in 2002. As of 2014[update], seven versions of Visual Basic .NET are released.
+2002 (VB 7.0)[edit]
+The first version, Visual Basic .NET, relies on .NET Framework 1.0. The most important feature is managed code, which contrasts with the classic Visual Basic.
+2003 (VB 7.1)[edit]
+Visual Basic .NET 2003 was released with .NET Framework 1.1. New features included support for the .NET Compact Framework and a better VB upgrade wizard. Improvements were also made to the performance and reliability of .NET IDE (particularly the background compiler) and runtime. In addition, Visual Basic .NET 2003 was available in the Visual Studio.NET Academic Edition, distributed to a certain number of scholars[weasel&#160;words] from each country without cost.
+2005 (VB 8.0)[edit]
+After Visual Basic .NET 2003, Microsoft dropped ".NET" from the name of the product, calling the next version Visual Basic 2005.
+For this release, Microsoft added many features intended to reinforce Visual Basic .NET's focus as a rapid application development platform and further differentiate it from C#., including:
+
+Edit and Continue feature[further explanation needed]
+Design-time expression evaluation[further explanation needed]
+A pseudo-namespace called "My", which provides:[9][10]
+
+Easy access to certain areas of the .NET Framework that otherwise require significant code to access[example needed]
+Dynamically generated classes (e.g. My.Forms)[further explanation needed]
+
+
+Improved VB-to-VB.NET converter[11]
+A "using" keyword, simplifying the use of objects that require the Dispose pattern to free resources
+Just My Code feature, which hides (steps over) boilerplate code written by the Visual Studio .NET IDE and system library code during debugging
+Data Source binding, easing database client/server development
+
+To bridge the gaps between itself and other .NET languages, this version added:
+
+Generics[12]
+Partial classes, a method of defining some parts of a class in one file and then adding more definitions later; particularly useful for integrating user code with auto-generated code
+Operator overloading and nullable types[13]
+Support for unsigned integer data types commonly used in other languages
+
+Visual Basic 2005 introduced the IsNot operator that makes 'If X IsNot Y' equivalent to 'If Not X Is Y'. It gained notoriety[14] when it was found to be the subject of a Microsoft patent application.[15][16]
+2008 (VB 9.0)[edit]
+Visual Basic 9.0 was released along with .NET Framework 3.5 on 19 November 2007.
+For this release, Microsoft added many features, including:
+
+A true conditional operator, "If(condition as boolean, truepart, falsepart)", to replace the "IIf" function.
+Anonymous types
+Support for LINQ
+Lambda expressions
+XML Literals
+Type Inference
+Extension methods
+
+2010 (VB 10.0)[edit]
+In April 2010, Microsoft released Visual Basic 2010. Microsoft had planned to use Dynamic Language Runtime (DLR) for that release[17] but shifted to a co-evolution strategy between Visual Basic and sister language C# to bring both languages into closer parity with one another. Visual Basic's innate ability to interact dynamically with CLR and COM objects has been enhanced to work with dynamic languages built on the DLR such as IronPython and IronRuby.[18] The Visual Basic compiler was improved to infer line continuation in a set of common contexts, in many cases removing the need for the "_" line continuation character. Also, existing support of inline Functions was complemented with support for inline Subs as well as multi-line versions of both Sub and Function lambdas.[19]
+2012 (VB 11.0)[edit]
+Visual Basic 2012 was released along .NET Framework 4.5. Major features introduced in this version include:[further explanation needed]
+
+Asynchronous programming with "async" and "await" statements
+Iterators
+Call hierarchy
+Caller information
+"Global" keyword in "namespace" statements
+
+2015 (VB 14.0)[edit]
+Visual Basic 2015 (code named VB "14.0") has been released with Visual Studio 2015.[20] Language features include a new "?." operator to perform inline null checks, and a new string interpolation feature is included to format strings inline.[21]
+Cross-platform and open-source development[edit]
+The creation of open-source tools for VB.NET development has been slow compared to C#, although the Mono development platform provides an implementation of VB.NET-specific libraries and a VB.NET 8.0 compatible compiler written in VB.NET,[22] as well as standard framework libraries such as Windows Forms GUI library.
+SharpDevelop and MonoDevelop are open-source alternative IDEs.
+See also[edit]
+
+Microsoft Visual Studio Express
+Comparison of C# and Visual Basic .NET
+Visual Basic for Applications
+Microsoft Small Basic
+Comparison of programming languages
+
+References[edit]
+
+
+^ a b "Option Explicit and Option Strict in Visual Basic .NET and in Visual Basic". Support. Microsoft. 19 March 2008. Retrieved 22 August 2013.&#160;
+^ https://msdn.microsoft.com/en-us/library/ff637436.aspx.&#160; Missing or empty |title= (help)
+^ "Module Statement". MSDN – Developer Center. Retrieved 20 January 2010.&#160;
+^ "Main Procedure in Visual Basic". MSDN – Developer Center. Retrieved 20 January 2010.&#160;
+^ "Visual Basic Version of Hello, World". MSDN – Developer Center. Retrieved 20 January 2010.&#160;
+^ "Microsoft Visual Basic 6.0 Migration Resource Center". MSDN. Microsoft. Retrieved 9 November 2014.&#160;
+^ Krill, Paul (2009-02-27). "Microsoft converging programming languages | Developer World". InfoWorld. Retrieved 2013-08-18.&#160;
+^ "Microsoft Intermediate Language". Dotnet-guide.com. Retrieved 2013-08-18.&#160;
+^ Mackenzie, Duncan (2006). "Navigate The .NET Framework And Your Projects With The My Namespace". MSDN Magazine Visual Studio 2005 Guided Tour 2006. Microsoft.&#160;
+^ Whitney, Tyler (November 2005). "My.Internals: Examining the Visual Basic My Feature". MSDN. Microsoft.&#160;
+^ What's New with the Visual Basic Upgrade Wizard in Visual Basic 2005
+^ Defining and Using Generics in Visual Basic 2005
+^ Operator Overloading in Visual Basic 2005
+^ Sherriff, Lucy (22 February 2005). "Real Software slams MS IsNot patent application". The Register. Retrieved 6 April 2009.&#160;
+^ Taft, Darryl K. (21 February 2005). "Real Software Slams Microsofts Patent Effort". eWeek. Retrieved 6 April 2009.&#160;
+^ Vick, Paul A. Jr.; Barsan, Costica Corneliu; Silver, Amanda K. (14 May 2003). "United States Patent Application: 20040230959". Patent Application Full Text and Image Database. US Patent &amp; Trademark Office. Retrieved 6 April 2009.&#160;
+^ "What the heck is "VBx"?". 1 May 2007. Retrieved 12 August 2009. With the new DLR, we have support for IronPython, IronRuby, Javascript, and the new dynamic VBx compile&#160;
+^ "What is New in Visual Basic 2010". Microsoft. 2009. Retrieved 12 August 2009. Visual Basic binds to objects from dynamic languages such as IronPython and IronRuby&#160;
+^ "What's New in Visual Basic 2010". Microsoft. 2010. Retrieved 1 August 2010.&#160;
+^ http://blogs.msdn.com/b/visualstudio/archive/2015/07/20/visual-studio-2015-and-visual-studio-2013-update-5-released.aspx
+^ http://blogs.msdn.com/b/vbteam/archive/2014/12/09/new-language-features-in-visual-basic-14.aspx
+^ Mono Project: VisualBasic.NET support
+
+
+Further reading[edit]
+
+
+"Visual Basic Language Specification 8.0". Microsoft Corporation. 15 November 2005. Retrieved 10 December 2010.&#160;
+"Visual Basic Language Specification 9.0". Microsoft Corporation. 19 December 2007. Retrieved 28 September 2011.&#160;
+"Visual Basic Language Specification 11.0". Microsoft Corporation. 7 June 2013. Retrieved 22 September 2013.&#160;
+
+
+External links[edit]
+
+
+
+Wikibooks has a book on the topic of: Visual Basic .NET
+
+
+
+
+
+Wikiversity has learning materials about VB.NET
+
+
+
+Visual Basic Developer Center
+Microsoft Visual Basic Express
+The Visual Basic Team Blog
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Dialects of the BASIC programming language (list)
+
+
+
+
+
+
+Classic
+
+
+
+Altair BASIC
+Applesoft BASIC
+Atari BASIC
+Atari Microsoft BASIC
+Atari ST BASIC
+BASIC A+
+BASIC Programming
+BASIC XE
+BASIC XL
+Color BASIC
+Commodore BASIC
+Dartmouth BASIC
+Family BASIC
+GFA BASIC
+GW-BASIC
+HP BASIC for OpenVMS
+IBM BASIC
+Integer BASIC
+Locomotive BASIC
+Mallard BASIC
+Microsoft BASIC
+MSX BASIC
+ScriptBasic
+Sinclair BASIC
+Southampton BASIC System
+STOS BASIC
+TI BASIC (TI 99/4A)
+TI-BASIC (calculators)
+Tiny BASIC
+Turbo-Basic XL
+UBASIC
+Vilnius BASIC
+
+
+
+
+
+
+
+
+Procedure-oriented
+
+
+
+AmigaBASIC
+AMOS BASIC
+ASIC
+BBC BASIC
+Beta BASIC
+DarkBASIC
+FreeBASIC
+FutureBASIC
+GFA BASIC
+GLBasic
+Liberty BASIC
+Microsoft Small Basic
+PowerBASIC
+PureBasic
+QBasic
+QB64
+QuickBASIC
+SmallBASIC
+SuperBASIC
+ThinBasic
+True BASIC
+Turbo Basic
+XBasic
+Xblite
+Basic4ppc
+Visual Test
+
+
+
+
+
+
+
+
+With object extensions
+
+
+
+AutoIt
+Basic For Qt
+BlitzMax
+Chipmunk Basic
+FreeBASIC
+Gambas
+GLBasic
+Monkey X
+OpenOffice Basic
+PowerBASIC
+ProvideX
+RapidQ
+REALbasic
+Run BASIC
+Tibbo BASIC
+Visual Basic
+Visual Basic .NET
+
+
+
+
+
+
+
+
+For mobile devices
+
+
+
+Basic4ppc
+GLBasic
+NS Basic
+
+
+
+
+
+
+
+
+Microsoft
+
+
+
+Microsoft BASIC
+
+MBASIC
+IBM BASIC/BASICA
+GW-BASIC
+QuickBASIC
+QBasic
+
+
+VBScript
+Visual Basic
+
+VBA
+
+
+Visual Basic .NET
+
+VSTO
+VSTA
+
+
+Microsoft Small Basic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+.NET Framework
+
+
+
+
+
+
+Architecture
+
+
+
+Common Language Runtime (CLR)
+COM Interop
+Framework Class Library (FCL)
+Version history
+
+
+
+
+
+
+
+
+Components
+
+
+
+ADO.NET
+
+Entity Framework
+
+
+ASP.NET
+
+AJAX
+Dynamic Data
+MVC Framework
+Razor view engine
+
+
+ClickOnce
+Dynamic Language Runtime
+Extensible Application Markup Language (XAML)
+Language Integrated Query (LINQ)
+Managed Extensibility Framework
+Microsoft Silverlight
+Microsoft XNA
+Parallel Extensions
+Windows Communication Foundation (WCF)
+
+WCF Data Services
+
+
+Windows Forms (WinForms)
+Windows Identity Foundation (WIF)
+Windows Presentation Foundation (WPF)
+Windows Workflow Foundation (WF)
+.NET Remoting
+
+
+
+
+
+
+
+
+Tools
+
+
+
+CLR Profiler
+ILAsm
+.NET Compiler Platform
+Native Image Generator (NGen)
+XAMLPad
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Visual Studio
+
+Blend
+Express
+
+
+MonoDevelop
+SharpDevelop
+
+
+
+
+
+
+
+
+Organizations
+
+
+
+.NET Foundation
+Microsoft
+Xamarin
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ List
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Common Language Infrastructure
+
+
+
+
+
+
+Architecture
+
+
+
+Application domain
+Code Access Security
+Common Intermediate Language (CIL)
+
+CIL instructions
+
+
+Common Type System (CTS)
+Platform Invocation Services (P/Invoke)
+Virtual Execution System (VES)
+
+
+
+
+
+
+
+
+Components
+
+
+
+Assembly
+Delegate
+Manifest
+Metadata
+
+
+
+
+
+
+
+
+Standard Libraries
+
+
+
+
+Kernel Profile
+
+
+
+Base Class Library (BCL)
+Runtime Infrastructure Library
+
+
+
+
+
+
+
+
+Compact Profile
+
+
+
+Network Library
+Reflection Library
+XML Library
+
+
+
+
+
+
+
+
+
+
+
+Extended Array Library
+Extended Numerics Library
+Parallel Library
+Vararg Library
+
+
+
+
+
+
+
+
+
+
+
+Implementations
+
+
+
+
+Microsoft
+
+
+
+.NET Framework
+.NET Compact Framework
+.NET Micro Framework
+Shared Source Common Language Infrastructure
+
+
+
+
+
+
+
+
+Other
+
+
+
+Mono
+Portable.NET
+
+
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+Microsoft
+
+
+
+C#
+
+Visual C#
+
+
+Visual Basic .NET
+C++/CLI
+
+Managed
+
+
+F#
+J#
+JScript .NET
+Windows PowerShell
+
+
+
+
+
+
+
+
+Other
+
+
+
+Axum
+A#
+Boo
+Cobra
+IronScheme
+
+IronLisp
+
+
+IronPython
+IronRuby
+Nemerle
+Oxygene
+Phalanger
+P#
+Scala
+
+
+
+
+
+
+
+
+Comparison
+
+
+
+C# and Java
+C# and Visual Basic .NET
+Java and .NET platforms
+Visual Basic and Visual Basic .NET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Microsoft development tools
+
+
+
+
+
+
+Development
+environments
+
+
+
+
+
+Visual Studio
+
+
+
+
+Visual Studio Code
+Express
+Visual Studio Lab Management
+Visual Studio Test Professional
+Tools for Applications
+Tools for Office
+VSTS Profiler
+
+
+
+
+
+
+
+
+
+Others
+
+
+
+
+App Studio
+Blend
+Expression Web
+GW-BASIC
+MSBuild
+Robotics Developer Studio
+SharePoint Designer
+
+FrontPage
+
+
+PowerShell ISE
+QuickBASIC
+
+QBasic
+
+
+Small Basic
+WebMatrix
+Windows SDK
+
+
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+Microsoft Basic
+Visual Basic
+Visual Basic .NET
+Visual C++
+
+C++/CLI
+Managed C++
+
+
+C#
+
+Visual C#
+
+
+F#
+J#
+Visual FoxPro
+IronPython
+IronRuby
+JScript
+PowerShell
+TypeScript
+XAML
+VBScript
+
+
+
+
+
+
+
+
+Major APIs and
+frameworks
+(See all)
+
+
+
+
+
+
+
+Windows API
+Silverlight
+XNA
+DirectX
+
+Managed DirectX
+
+
+Xbox Development Kit
+Windows CardSpace
+Windows Installer
+
+
+
+
+
+
+
+
+
+.NET Framework
+
+
+
+
+ASP.NET
+ASP.NET AJAX
+ADO.NET
+Communication Foundation
+Identity Foundation
+LINQ
+Presentation Foundation
+Workflow Foundation
+
+
+
+
+
+
+
+
+
+Windows Driver Frameworks
+
+
+
+
+Windows Driver Model
+KMDF
+UMDF
+Windows Driver Kit
+Windows Hardware Certification Kit
+
+
+
+
+
+
+
+
+
+
+
+Database
+
+
+
+
+
+SQL Server
+
+
+
+
+Express
+Compact
+Management Studio
+Business Intelligence Development Studio
+MSDE
+
+
+
+
+
+
+
+
+
+SQL services
+
+
+
+
+Analysis
+Reporting
+Integration
+Notification
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+Visual FoxPro
+Microsoft Access
+Jet Engine
+Extensible Storage Engine
+Azure DocumentDB
+
+
+
+
+
+
+
+
+
+
+
+Source control
+
+
+
+Team Foundation Server
+Visual SourceSafe
+
+
+
+
+
+
+
+
+Delivery
+
+
+
+
+
+End-user
+
+
+
+
+ClickOnce
+Windows Installer
+
+WiX
+
+
+Windows Store
+
+
+
+
+
+
+
+
+
+Developers
+
+
+
+
+NuGet
+Web Platform
+
+
+
+
+
+
+
+
+
+
+
+Performance Analysis
+
+
+
+CLR Profiler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Visual_Basic_.NET&amp;oldid=689443725"					
+				Categories: BASIC programming language family.NET programming languagesMicrosoft Visual StudioMicrosoft BASIC2001 introductionsObject-oriented programming languagesHidden categories: Pages with citations lacking titlesPages with citations having bare URLsUse dmy dates from December 2010Articles to be expanded from April 2014All articles to be expandedAll articles with unsourced statementsArticles with unsourced statements from November 2014All articles with specifically marked weasel-worded phrasesArticles with specifically marked weasel-worded phrases from November 2014Articles containing potentially dated statements from 2014All articles containing potentially dated statementsArticles with specifically marked weasel-worded phrases from February 2014Wikipedia articles needing clarification from February 2014Articles with example BASIC code				
+							
+		
+		
+			

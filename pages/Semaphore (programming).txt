@@ -1,0 +1,404 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Semaphore (programming)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For other uses, see Semaphore (disambiguation).
+
+
+
+
+A semaphore (Dutch: seinpaal, the term used in Dijkstra's original description[1]).
+
+
+In computer science, a semaphore is a variable or abstract data type that is used for controlling access, by multiple processes, to a common resource in a concurrent system such as a multiprogramming operating system.
+A trivial semaphore is a plain variable that is changed (for example, incremented or decremented, or toggled) depending on programmer-defined conditions. The variable is then used as a condition to control access to some system resource.
+A useful way to think of a semaphore as used in the real-world systems is as a record of how many units of a particular resource are available, coupled with operations to safely (i.e., without race conditions) adjust that record as units are required or become free, and, if necessary, wait until a unit of the resource becomes available. Semaphores are a useful tool in the prevention of race conditions; however, their use is by no means a guarantee that a program is free from these problems. Semaphores which allow an arbitrary resource count are called counting semaphores, while semaphores which are restricted to the values 0 and 1 (or locked/unlocked, unavailable/available) are called binary semaphores.
+The semaphore concept was invented by Dutch computer scientist Edsger Dijkstra in 1962 or 1963,[2] and has found widespread use in a variety of operating systems. It has also been used as the control mechanism for I/O controllers, for example in the Electrologica X8 computer.
+
+
+
+Contents
+
+
+1 Library analogy
+
+1.1 Important observations
+
+
+2 Semantics and implementation
+3 Examples
+
+3.1 Trivial example
+3.2 Login queue
+3.3 Producer–consumer problem
+
+
+4 Operation names
+5 Semaphores vs. mutexes
+6 See also
+7 Notes
+8 References
+9 External links
+
+
+
+Library analogy[edit]
+Suppose a library has 10 identical study rooms, to be used by one student at a time. To prevent disputes, students must request a room from the front desk if they wish to make use of a study room. If no rooms are free, students wait at the desk until someone relinquishes a room. When a student has finished using a room, the student must return to the desk and indicate that one room has become free.
+In the simplest implementation, the clerk at the front desk does not need to keep track of which rooms are occupied or who is using them, nor does she know if any given room is actually being used, only the number of free rooms available, which she only knows correctly if all of the students actually use their room while they've signed up for them and return them when they're done. When a student requests a room, the clerk decreases this number. When a student releases a room, the clerk increases this number. Once access to a room is granted, the room can be used for as long as desired, and so it is not possible to book rooms ahead of time.
+In this scenario the front desk count-holder represents a counting semaphore, the rooms are the resources, and the students represent processes. The value of the semaphore in this scenario is initially 10. When a student requests a room she is granted access and the value of the semaphore is changed to 9. After the next student comes, it drops to 8, then 7 and so on. If someone requests a room and the resulting value of the semaphore would be negative,[3] they are forced to wait until a room is freed (when the count is increased from 0).
+Important observations[edit]
+When used to control access to a pool of resources, a semaphore tracks only how many resources are free; it does not keep track of which of the resources are free. Some other mechanism (possibly involving more semaphores) may be required to select a particular free resource.
+The paradigm is especially powerful because the semaphore count may serve as a useful trigger for a number of different actions. The librarian above may turn the lights off in the study hall when there are no students remaining, or may place a sign that says the rooms are very busy when most of the rooms are occupied.
+The success of the protocol requires applications follow it correctly. Fairness and safety are likely to be compromised (which practically means a program may behave slowly, act erratically, hang or crash) if even a single process acts incorrectly. This includes:
+
+requesting a resource and forgetting to release it;
+releasing a resource that was never requested;
+holding a resource for a long time without needing it;
+using a resource without requesting it first (or after releasing it).
+
+Even if all processes follow these rules, multi-resource deadlock may still occur when there are different resources managed by different semaphores and when processes need to use more than one resource at a time, as illustrated by the dining philosophers problem.
+Semantics and implementation[edit]
+Counting semaphores are equipped with two operations, historically denoted as P and V (see § Operation names for alternative names). Operation V increments the semaphore S, and operation P decrements it.
+The value of the semaphore S is the number of units of the resource that are currently available. The P operation wastes time or sleeps until a resource protected by the semaphore becomes available, at which time the resource is immediately claimed. The V operation is the inverse: it makes a resource available again after the process has finished using it. One important property of semaphore S is that its value cannot be changed except by using the V and P operations.
+A simple way to understand wait (P) and signal (V) operations is:
+
+wait: If the value of semaphore variable is not negative, decrements it by 1. If the semaphore variable is now negative, the process executing wait is blocked (i.e., added to the semaphore's queue) until the value is greater or equal to 1. Otherwise, the process continues execution, having used a unit of the resource.
+signal: Increments the value of semaphore variable by 1. After the increment, if the pre-increment value was negative (meaning there are processes waiting for a resource), it transfers a blocked process from the semaphore's waiting queue to the ready queue.
+
+Many operating systems provide efficient semaphore primitives that unblock a waiting process when the semaphore is incremented. This means that processes do not waste time checking the semaphore value unnecessarily.
+The counting semaphore concept can be extended with the ability to claim or return more than one "unit" from the semaphore, a technique implemented in Unix. The modified V and P operations are as follows, using square brackets to indicate atomic operations, i.e., operations which appear indivisible from the perspective of other processes:
+
+function V(semaphore S, integer I):
+    [S ← S + I]
+
+function P(semaphore S, integer I):
+    repeat:
+        [if S ≥ I:
+        S ← S − I
+        break]
+
+To avoid starvation, a semaphore has an associated queue of processes (usually with FIFO semantics). If a process performs a P operation on a semaphore that has the value zero, the process is added to the semaphore's queue and its execution is suspended. When another process increments the semaphore by performing a V operation, and there are processes on the queue, one of them is removed from the queue and resumes execution. When processes have different priorities the queue may be ordered by priority, so that the highest priority process is taken from the queue first.
+If the implementation does not ensure atomicity of the increment, decrement and comparison operations, then there is a risk of increments or decrements being forgotten, or of the semaphore value becoming negative. Atomicity may be achieved by using a machine instruction that is able to read, modify and write the semaphore in a single operation. In the absence of such a hardware instruction, an atomic operation may be synthesized through the use of a software mutual exclusion algorithm. On uniprocessor systems, atomic operations can be ensured by temporarily suspending preemption or disabling hardware interrupts. This approach does not work on multiprocessor systems where it is possible for two programs sharing a semaphore to run on different processors at the same time. To solve this problem in a multiprocessor system a locking variable can be used to control access to the semaphore. The locking variable is manipulated using a test-and-set-lock command.
+Examples[edit]
+Trivial example[edit]
+Consider a variable A and a boolean variable S. A is only accessed when S is marked true. Thus, S is a semaphore for A.
+One can imagine a stoplight signal (S) just before a train station (A). In this case, if the signal is green, then one can enter the train station. If it is yellow or red (or any other color), the train station cannot be accessed.
+Login queue[edit]
+Consider a system that can only support ten users (S=10). Whenever a user logs in, P is called, decrementing the semaphore S by 1. Whenever a user logs out, V is called, incrementing S by 1 representing a login slot that has become available. When S is 0, any users wishing to log in must wait until S &gt; 0 and the login request is enqueued onto a FIFO queue; mutual exclusion is used to ensure that requests are enqueued in order. Whenever S becomes greater than 0 (login slots available), a login request is dequeued, and the user owning the request is allowed to login.
+Producer–consumer problem[edit]
+In the producer–consumer problem, one process (the producer) generates data items and another process (the consumer) receives and uses them. They communicate using a queue of maximum size N and are subject to the following conditions:
+
+the consumer must wait for the producer to produce something if the queue is empty;
+the producer must wait for the consumer to consume something if the queue is full.
+
+The semaphore solution to the producer–consumer problem tracks the state of the queue with two semaphores: emptyCount, the number of empty places in the queue, and fullCount, the number of elements in the queue. To maintain integrity, emptyCount may be lower (but never higher) than the actual number of empty places in the queue, and fullCount may be lower (but never higher) than the actual number of items in the queue. Empty places and items represent two kinds of resources, empty boxes and full boxes, and the semaphores emptyCount and fullCount maintain control over these resources.
+The binary semaphore useQueue ensures that the integrity of the state of the queue itself is not compromised, for example by two producers attempting to add items to an empty queue simultaneously, thereby corrupting its internal state. Alternatively a mutex could be used in place of the binary semaphore.
+The emptyCount is initially N, fullCount is initially 0, and useQueue is initially 1.
+The producer does the following repeatedly:
+
+produce:
+    P(emptyCount)
+    P(useQueue)
+    putItemIntoQueue(item)
+    V(useQueue)
+    V(fullCount)
+
+The consumer does the following repeatedly
+
+consume:
+    P(fullCount)
+    P(useQueue)
+    item ← getItemFromQueue()
+    V(useQueue)
+    V(emptyCount)
+
+Below is a substantive example:
+
+A single consumer enters its critical section. Since fullCount is 0, the consumer blocks.
+Several producers enter the producer critical section. No more than N producers may enter their critical section due to emptyCount constraining their entry.
+The producers, one at a time, gain access to the queue through useQueue and deposit items in the queue.
+Once the first producer exits its critical section, fullCount is incremented, allowing one consumer to enter its critical section.
+
+Note that emptyCount may be much lower than the actual number of empty places in the queue, for example in the case where many producers have decremented it but are waiting their turn on useQueue before filling empty places. Note that emptyCount + fullCount ≤ N always holds, with equality if and only if no producers or consumers are executing their critical sections.
+Operation names[edit]
+The canonical names V and P come from the initials of Dutch words. V is generally explained as verhogen ("increase"). Several explanations have been offered for P, including proberen for "to test" or "to try,"[4] passeren for "pass," and pakken for "grab." Dijkstra's earliest paper on the subject[2] gives passering (passing) as the meaning for P, and vrijgave (release) as the meaning for V. It also mentions that the terminology is taken from that used in railroad signals. Dijkstra subsequently wrote that he intended P to stand for the portmanteau prolaag,[5] short for probeer te verlagen, literally "try to reduce," or to parallel the terms used in the other case, "try to decrease."[6][7][8] This confusion stems from the fact that the words for increase and decrease both begin with the letter V in Dutch, and the words spelled out in full would be impossibly confusing for those not familiar with the Dutch language.
+In ALGOL 68, the Linux kernel,[9] and in some English textbooks, the V and P operations are called, respectively, up and down. In software engineering practice, they are often called signal and wait,[10] release and acquire[10] (which the standard Java library[11] uses), or post and pend. Some texts[which?] call them vacate and procure to match the original Dutch initials.
+Semaphores vs. mutexes[edit]
+A mutex is essentially the same thing as a binary semaphore and sometimes uses the same basic implementation. The differences between them are in how they are used. While a binary semaphore may be used as a mutex, a mutex is a more specific use-case, which allows extra guarantees:
+
+Since only the process that locked the mutex is supposed to unlock it, a mutex may store the id of process that locked it and verify the same process unlocks it.
+Mutexes may provide priority inversion safety. If the mutex knows who locked it and is supposed to unlock it, it is possible to promote the priority of that process whenever a higher-priority task starts waiting on the mutex.
+Mutexes may also provide deletion safety, where the process holding the mutex cannot be accidentally deleted.
+A mutex may be recursive, in that it allows it the process that locked it, to lock it multiple times without causing a deadlock.
+
+See also[edit]
+
+Cigarette smokers problem
+Dining philosophers problem
+Readers-writers problem
+Sleeping barber problem
+Producers-consumers problem
+Mutex
+Reentrant mutex, which can "count" but in a different manner to a counting semaphore.
+Asynchronous semaphore
+Monitor
+
+Notes[edit]
+
+References[edit]
+
+
+^ Dijkstra, Edsger W. Over seinpalen (EWD-74). E.W. Dijkstra Archive. Center for American History, University of Texas at Austin.&#160; (original; transcription)
+^ a b Dijkstra, Edsger W. Over de sequentialiteit van procesbeschrijvingen (EWD-35). E.W. Dijkstra Archive. Center for American History, University of Texas at Austin.&#160; (original; transcription) (undated, 1962 or 1963)
+^ The Little Book of Semaphores Allen B. Downey
+^ Silberschatz, Galvin &amp; Gagne 2008, p.&#160;234
+^ Dijkstra, Edsger W. EWD-74. E.W. Dijkstra Archive. Center for American History, University of Texas at Austin.&#160; (original; transcription)
+^ Dijkstra, Edsger W. MULTIPROGAMMERING EN DE X8 (EWD-51). E.W. Dijkstra Archive. Center for American History, University of Texas at Austin.&#160; (original; transcription) (in Dutch)
+^ Dijkstra's own translation reads "try-and-decrease", although that phrase might be confusing for those unaware of the colloquial "try-and..."
+^ (PATCH 1/19) MUTEX: Introduce simple mutex implementation Linux Kernel Mailing List, 19 December 2005
+^ Linux Kernel hacking HOWTO LinuxGrill.com
+^ a b Mullender, Sape; Cox, Russ (2008). Semaphores in Plan 9 (PDF). 3rd International Workshop on Plan 9.&#160;
+^ java.util.concurrent.Semaphore
+
+
+
+Silberschatz, Abraham; Galvin, Peter Baer; Gagne, Greg (2008), Operating System Concepts (8th ed.), John Wiley &amp; Sons. Inc, ISBN&#160;978-0-470-12872-5&#160;
+
+External links[edit]
+
+Dijkstra, Edsger W. Cooperating sequential processes (EWD-123). E.W. Dijkstra Archive. Center for American History, University of Texas at Austin.&#160; (original; transcription) (September 1965)
+semaphore.h programming interface - The Open Group Base Specifications Issue 6, IEEE Std 1003.1
+The Little Book of Semaphores Allen B. Downey
+A pragmatic, historically oriented survey on the universality of synchronization primitives, Jouni Leppäjärvi
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Semaphore_(programming)&amp;oldid=690491472"					
+				Categories: Concurrency controlDutch inventionsHidden categories: Articles containing Dutch-language textAll articles with specifically marked weasel-worded phrasesArticles with specifically marked weasel-worded phrases from June 2015				
+							
+		
+		
+			

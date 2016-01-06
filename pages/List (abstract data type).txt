@@ -1,0 +1,522 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			List (abstract data type)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about sequential data structures.  For random-access data structures, see Array data type.
+In computer science, a list or sequence is an abstract data type that represents an ordered sequence of values, where the same value may occur more than once. An instance of a list is a computer representation of the mathematical concept of a finite sequence; the (potentially) infinite analog of a list is a stream.[1]:§3.5 Lists are a basic example of containers, as they contain other values. If the same value occurs multiple times, each occurrence is considered a distinct item.
+
+
+
+
+A singly linked list structure, implementing a list with 3 integer elements.
+
+
+The name list is also used for several concrete data structures that can be used to implement abstract lists, especially linked lists.
+Many programming languages provide support for list data types, and have special syntax and semantics for lists and list operations. A list can often be constructed by writing the items in sequence, separated by commas, semicolons, or spaces, within a pair of delimiters such as parentheses '()', brackets '[]', braces '{}', or angle brackets '&lt;&gt;'. Some languages may allow list types to be indexed or sliced like array types, in which case the data type is more accurately described as an array. In object-oriented programming languages, lists are usually provided as instances of subclasses of a generic "list" class, and traversed via separate iterators. List data types are often implemented using array data structures or linked lists of some sort, but other data structures may be more appropriate for some applications. In some contexts, such as in Lisp programming, the term list may refer specifically to a linked list rather than an array.
+In type theory and functional programming, abstract lists are usually defined inductively by two operations: nil that yields the empty list, and cons, which adds an item at the beginning of a list.[2]
+
+
+
+Contents
+
+
+1 Operations
+2 Implementations
+3 Programming language support
+4 Applications
+5 Abstract definition
+
+5.1 The list monad
+
+
+6 References
+7 See also
+
+
+
+Operations[edit]
+Implementation of the list data structure may provide some of the following operations:
+
+a constructor for creating an empty list;
+an operation for testing whether or not a list is empty;
+an operation for prepending an entity to a list
+an operation for appending an entity to a list
+an operation for determining the first component (or the "head") of a list
+an operation for referring to the list consisting of all the components of a list except for its first (this is called the "tail" of the list.)
+
+Implementations[edit]
+Lists are typically implemented either as linked lists (either singly or doubly linked) or as arrays, usually variable length or dynamic arrays.
+The standard way of implementing lists, originating with the programming language Lisp, is to have each element of the list contain both its value and a pointer indicating the location of the next element in the list. This results in either a linked list or a tree, depending on whether the list has nested sublists. Some older Lisp implementations (such as the Lisp implementation of the Symbolics 3600) also supported "compressed lists" (using CDR coding) which had a special internal representation (invisible to the user). Lists can be manipulated using iteration or recursion. The former is often preferred in imperative programming languages, while the latter is the norm in functional languages.
+Lists can be implemented as self-balancing binary search trees holding index-value pairs, providing equal-time access to any element (e.g. all residing in the fringe, and internal nodes storing the right-most child's index, used to guide the search), taking the time logarithmic in the list's size, but as long as it doesn't change much will provide the illusion of random access and enable swap, prefix and append operations in logarithmic time as well.[3]
+Programming language support[edit]
+Some languages do not offer a list data structure, but offer the use of associative arrays or some kind of table to emulate lists. For example, Lua provides tables. Although Lua stores lists that have numerical indices as arrays internally, they still appear as hash tables.[4]
+In Lisp, lists are the fundamental data type and can represent both program code and data. In most dialects, the list of the first three prime numbers could be written as (list 2 3 5). In several dialects of Lisp, including Scheme, a list is a collection of pairs, consisting of a value and a pointer to the next pair (or null value), making a singly linked list.[5]
+Applications[edit]
+As the name implies, lists can be used to store a list of records.
+Because in computing, lists are easier to realize than sets, a finite set in mathematical sense can be realized as a list with additional restrictions, that is, duplicate elements are disallowed and such that order is irrelevant. If the list is sorted, it speeds up determining if a given item is already in the set, but, in order to ensure the order, it requires more time to add new entry to the list. In efficient implementations, however, sets are implemented using self-balancing binary search trees or hash tables, rather than a list.
+Abstract definition[edit]
+The abstract list type L with elements of some type E (a monomorphic list) is defined by the following functions:
+
+nil: () → L
+cons: E × L → L
+first: L → E
+rest: L → L
+
+with the axioms
+
+first (cons (e, l)) = e
+rest (cons (e, l)) = l
+
+for any element e and any list l. It is implicit that
+
+cons (e, l) ≠ l
+cons (e, l) ≠ e
+cons (e1, l1) = cons (e2, l2) if e1 = e2 and l1 = l2
+
+Note that first (nil ()) and rest (nil ()) are not defined.
+These axioms are equivalent to those of the abstract stack data type.
+In type theory, the above definition is more simply regarded as an inductive type defined in terms of constructors: nil and cons. In algebraic terms, this can be represented as the transformation 1 + E × L → L. first and rest are then obtained by pattern matching on the cons constructor and separately handling the nil case.
+The list monad[edit]
+The list type forms a monad with the following functions (using E* rather than L to represent monomorphic lists with elements of type E):
+
+
+
+
+where append is defined as:
+
+
+
+Alternatively, the monad may be defined in terms of operations return, fmap and join, with:
+
+
+
+
+Note that fmap, join, append and bind are well-defined, since they're applied to progressively deeper arguments at each recursive call.
+The list type is an additive monad, with nil as the monadic zero and append as monadic sum.
+Lists form a monoid under the append operation. The identity element of the monoid is the empty list, nil. In fact, this is the free monoid over the set of list elements.
+References[edit]
+
+
+^ Abelson, Harold; Sussman, Gerald Jay (1996). Structure and Interpretation of Computer Programs. MIT Press.&#160;
+^ Reingold, Edward; Nievergelt, Jurg; Narsingh, Deo (1977). Combinatorial Algorithms: Theory and Practice. Englewood Cliffs, New Jersey: Prentice Hall. pp.&#160;38–41. ISBN&#160;0-13-152447-X.&#160;
+^ Barnett, Granville; Del tonga, Luca (2008). "Data Structures and Algorithms" (PDF). mta.ca. Retrieved 12 November 2014.&#160;
+^ Lerusalimschy, Roberto (December 2003). Programming in Lua (first edition) (First ed.). Lua.org. ISBN&#160;8590379817. Retrieved 12 November 2014.&#160;
+^ Steele, Guy (1990). Common Lisp (Second ed.). Digital Press. pp.&#160;29–31. ISBN&#160;1-55558-041-6.&#160;
+
+
+See also[edit]
+
+
+
+Look up list in Wiktionary, the free dictionary.
+
+
+
+Array
+Queue
+Set
+Stream
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data structures
+
+
+
+
+
+
+Types
+
+
+
+Collection
+Container
+
+
+
+
+
+
+
+
+Abstract
+
+
+
+Associative array
+
+Multimap
+
+
+List
+Stack
+Queue
+
+Double-ended queue
+
+
+Priority queue
+
+Double-ended priority queue
+
+
+Set
+
+Multiset
+Disjoint-set
+
+
+
+
+
+
+
+
+
+
+Arrays
+
+
+
+Bit array
+Circular buffer
+Dynamic array
+Hash table
+Hashed array tree
+Sparse array
+
+
+
+
+
+
+
+
+Linked
+
+
+
+Association list
+Linked list
+Skip list
+Unrolled linked list
+XOR linked list
+
+
+
+
+
+
+
+
+Trees
+
+
+
+B-tree
+Binary search tree
+
+AA tree
+AVL tree
+Red–black tree
+Self-balancing tree
+Splay tree
+
+
+Heap
+
+Binary heap
+Binomial heap
+Fibonacci heap
+
+
+R-tree
+
+R* tree
+R+ tree
+Hilbert R-tree
+
+
+Trie
+
+Hash tree
+
+
+
+
+
+
+
+
+
+
+Graphs
+
+
+
+Binary decision diagram
+Directed acyclic graph
+Directed acyclic word graph
+
+
+
+
+
+
+
+
+
+
+
+List of data structures
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=List_(abstract_data_type)&amp;oldid=676857211"					
+				Categories: Data typesComposite data typesAbstract data types				
+							
+		
+		
+			

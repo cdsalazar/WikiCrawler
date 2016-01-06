@@ -1,0 +1,236 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Source code
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For the 2011 film, see Source Code.
+Not to be confused with source coding.
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (August 2010)
+
+
+
+
+Program execution
+
+
+General topics
+
+
+
+
+Runtime system
+Runtime library
+Executable
+Compiler
+Interpreter
+Virtual machine
+Source code
+Object code
+Bytecode
+Machine code
+
+
+
+
+Specific runtimes
+
+
+
+
+Android Runtime (ART)
+crt0
+Common Language Runtime (CLR)
+Dalvik
+Java virtual machine (JVM)
+Node.js
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+An illustration of Java source code with prologue comments indicated in red, inline comments indicated in green, and program statements indicated in blue
+
+
+In computing, source code is any collection of computer instructions (possibly with comments) written using some human-readable computer language, usually as text. The source code of a program is specially designed to facilitate the work of computer programmers, who specify the actions to be performed by a computer mostly by writing source code. The source code is often transformed by a compiler program into low-level machine code understood by the computer. The machine code might then be stored for execution at a later time. Alternatively, an interpreter can be used to analyze and perform the outcomes of the source code program directly on the fly.
+Most computer applications are distributed in a form that includes executable files, but not their source code. If the source code were included, it would be useful to a user, programmer, or system administrator, who may wish to modify the program or to understand how it works.
+Aside from its machine-readable forms, source code also appears in books and other media; often in the form of small code snippets, but occasionally complete code bases; a well-known case is the source code of PGP.
+
+
+
+Contents
+
+
+1 Definitions
+2 History
+3 Organization
+4 Purposes
+5 Licensing
+6 Legal issues in the United States
+7 Quality
+8 See also
+9 References
+10 External links
+
+
+
+Definitions[edit]
+The Linux Information Project defines source code as:[1]
+
+Source code (also referred to as source or code) is the version of software as it is originally written (i.e., typed into a computer) by a human in plain text (i.e., human readable alphanumeric characters).
+
+The notion of source code may also be taken more broadly, to include machine code and notations in graphical languages, neither of which are textual in nature. An example from an article presented on the annual IEEE conference and on Source Code Analysis and Manipulation:[2]
+
+For the purpose of clarity ‘source code’ is taken to mean any fully executable description of a software system. It is therefore so construed as to include machine code, very high level languages and executable graphical representations of systems.[3]
+
+Often there are several steps of program translation or minification between the original source code typed by a human and an executable program. While some argue that an intermediate file "is not real source code and does not count as source code",[4] others find it convenient to refer to each intermediate file as the source code for the next step.
+History[edit]
+The earliest programs for stored-program computers were entered in binary through the front panel switches of the computer. This first-generation programming language had no distinction between source code and machine code.
+When IBM first offered software to work with its machine, the source code was provided at no additional charge. At that time, the cost of developing and supporting software was included in the price of the hardware. For decades, IBM distributed source code with its software product licenses, until 1983.[5]
+Most early computer magazines published source code as type-in programs.
+Occasionally the entire source code to a large program is published as a hardback book, such as "Computers &amp; Typesetting, Volume B: TeX: The Program", "PGP Source Code and Internals", "PC SpeedScript", and "uC/OS: The Real-Time Kernel".
+Organization[edit]
+The source code which constitutes a program is usually held in one or more text files stored on a computer's hard disk&#160;; usually these files are carefully arranged into a directory tree, known as a source tree. Source code can also be stored in a database (as is common for stored procedures) or elsewhere.
+The source code for a particular piece of software may be contained in a single file or many files. Though the practice is uncommon, a program's source code can be written in different programming languages.[6] For example, a program written primarily in the C programming language, might have portions written in assembly language for optimization purposes. It is also possible for some components of a piece of software to be written and compiled separately, in an arbitrary programming language, and later integrated into the software using a technique called library linking. This is the case in some languages, such as Java: each class is compiled separately into a file and linked by the interpreter at runtime.
+Yet another method is to make the main program an interpreter for a programming language[citation needed], either designed specifically for the application in question or general-purpose, and then write the bulk of the actual user functionality as macros or other forms of add-ins in this language, an approach taken for example by the GNU Emacs text editor.
+The code base of a computer programming project is the larger collection of all the source code of all the computer programs which make up the project. It has become common practice to maintain code bases in version control systems. Moderately complex software customarily requires the compilation or assembly of several, sometimes dozens or even hundreds, of different source code files. In these cases, instructions for compilations, such as a Makefile, are included with the source code. These describe the relationships among the source code files, and contain information about how they are to be compiled.
+The revision control system is another tool frequently used by developers for source code maintenance.
+Purposes[edit]
+Source code is primarily used as input to the process that produces an executable program (i.e., it is compiled or interpreted). It is also used as a method of communicating algorithms between people (e.g., code snippets in books).[7]
+Computer Programmers often find it helpful to review existing source code to learn about programming techniques.[7] The sharing of source code between developers is frequently cited as a contributing factor to the maturation of their programming skills.[7] Some people consider source code an expressive artistic medium.[8]
+Porting software to other computer platforms is usually prohibitively difficult without source code. Without the source code for a particular piece of software, portability is generally computationally expensive.[citation needed] Possible porting options include binary translation and emulation of the original platform.
+Decompilation of an executable program can be used to generate source code, either in assembly code or in a high-level language.
+Programmers frequently adapt source code from one piece of software to use in other projects, a concept known as software reusability.
+Licensing[edit]
+Main article: Software license
+Software, and its accompanying source code, typically falls within one of two licensing paradigms: open source and proprietary software.
+Generally speaking, software is open source if the source code is free to use, distribute, modify and study, and proprietary if the source code is kept secret, or is privately owned and restricted. The first software license to be published and to explicitly grant these freedoms was the GNU General Public License in 1989. The GNU GPL was originally intended to be used with the GNU operating system.
+For proprietary software, the provisions of the various copyright laws, trade secrecy and patents are used to keep the source code closed. Additionally, many pieces of retail software come with an end-user license agreement (EULA) which typically prohibits decompilation, reverse engineering, analysis, modification, or circumventing of copy protection. Types of source code protection – beyond traditional compilation to object code – include code encryption, code obfuscation or code morphing.
+Legal issues in the United States[edit]
+
+
+
+
+
+This article is outdated. Please update this article to reflect recent events or newly available information. (November 2010)
+
+
+In a 2003 court case in the United States, it was ruled that source code should be considered a constitutionally protected form of free speech. Proponents of free speech argued that because source code conveys information to programmers, is written in a language, and can be used to share humor and other artistic pursuits, it is a protected form of communication.
+One of the first court cases regarding the nature of source code as free speech involved University of California mathematics professor Dan Bernstein, who had published on the Internet the source code for an encryption program that he created. At the time, encryption algorithms were classified as munitions by the United States government; exporting encryption to other countries was considered an issue of national security, and had to be approved by the State Department. The Electronic Frontier Foundation sued the U.S. government on Bernstein's behalf; the court ruled that source code was free speech, protected by the First Amendment.
+Quality[edit]
+Main article: Software quality
+The way a program is written can have important consequences for its maintainers. Coding conventions, which stress readability and some language-specific conventions, are aimed at the maintenance of the software source code, which involves debugging and updating. Other priorities, such as the speed of the program's execution, or the ability to compile the program for multiple architectures, often make code readability a less important consideration, since code quality generally depends on its purpose.
+See also[edit]
+
+Bytecode
+Coding conventions
+Legacy code
+Machine code
+Obfuscated code
+Object code
+Open-source software
+Package (package management system)
+Programming language
+Source code repository
+Syntax highlighting
+Visual programming language
+
+References[edit]
+
+
+^ The Linux Information Project. "Source Code Definition".
+^ SCAM Working Conference, 2001–2010.
+^ Why Source Code Analysis and Manipulation Will Always Be Important by Mark Harman, 10th IEEE International Working Conference on Source Code Analysis and Manipulation (SCAM 2010). Timişoara, Romania, 12–13 September 2010.
+^ http://www.gnu.org/philosophy/free-sw.en.html
+^ Martin Goetz, Peter Schneider. "Object-code only: Is IBM playing fair?". p.
+^ Extending and Embedding the Python Interpreter — Python v2.6 Documentation [1]
+^ a b c Spinellis, D: Code Reading: The Open Source Perspective. Addison-Wesley Professional, 2003. ISBN 0-201-79940-5
+^ "Art and Computer Programming" ONLamp.com, (2005)
+
+
+
+(VEW04) "Using a Decompiler for Real-World Source Recovery", M. Van Emmerik and T. Waddington, the Working Conference on Reverse Engineering, Delft, Netherlands, 9–12 November 2004. Extended version of the paper.
+
+External links[edit]
+
+
+
+Look up code&#160;or source code in Wiktionary, the free dictionary.
+
+
+
+
+
+Wikimedia Commons has media related to Source code.
+
+
+
+Source Code Definition by The Linux Information Project (LINFO)
+"Obligatory accreditation system for IT security products (2008-09-22), may start from May 2009, reported by Yomiuri on 2009-04-24.". MetaFilter.com. Retrieved 2009-04-24.&#160;
+Same program written in multiple languages
+
+
+
+
+
+
+Authority control
+
+
+
+LCCN: sh90003519
+GND: 4488209-9
+BNF: cb15918046v (data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Source_code&amp;oldid=691606781"					
+				Categories: Source codeHidden categories: Articles needing additional references from August 2010All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from May 2008Articles with unsourced statements from October 2008Wikipedia articles in need of updating from November 2010All Wikipedia articles in need of updatingCommons category with page title same as on WikidataUse dmy dates from October 2010Wikipedia articles with LCCN identifiersWikipedia articles with GND identifiersWikipedia articles with BNF identifiers				
+							
+		
+		
+			

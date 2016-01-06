@@ -1,0 +1,893 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Analog signal
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Analog (signal))
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (September 2015)
+
+
+Main article: Signal (electronics)
+An analog or analogue signal is any continuous signal for which the time varying feature (variable) of the signal is a representation of some other time varying quantity, i.e., analogous to another time varying signal. For example, in an analog audio signal, the instantaneous voltage of the signal varies continuously with the pressure of the sound waves. It differs from a digital signal, in which the continuous quantity is a representation of a sequence of discrete values which can only take on one of a finite number of values.[1][2] The term analog signal usually refers to electrical signals; however, mechanical, pneumatic, hydraulic, human speech, and other systems may also convey or be considered analog signals.
+An analog signal uses some property of the medium to convey the signal's information. For example, an aneroid barometer uses rotary position as the signal to convey pressure information. In an electrical signal, the voltage, current, or frequency of the signal may be varied to represent the information.
+Any information may be conveyed by an analog signal; often such a signal is a measured response to changes in physical phenomena, such as sound, light, temperature, position, or pressure. The physical variable is converted to an analog signal by a transducer. For example, in sound recording, fluctuations in air pressure (that is to say, sound) strike the diaphragm of a microphone which induces corresponding fluctuations in the current produced by a coil in an electromagnetic microphone, or the voltage produced by a condensor microphone. The voltage or the current is said to be an "analog" of the sound.
+An analog signal has a theoretically infinite resolution. In practice an analog signal is subject to electronic noise and distortion introduced by communication channels and signal processing operations, which can progressively degrade the signal-to-noise ratio (SNR). In contrast, digital signals have a finite resolution. Converting an analog signal to digital form introduces a constant low-level noise called quantization noise into the signal which determines the noise floor, but once in digital form the signal can in general be processed or transmitted without introducing additional noise or distortion. Therefore, as analog signal processing systems become more complex, they may ultimately degrade signal resolution to such an extent that their performance is surpassed by digital systems. This explains the widespread use of digital signals in preference to analog in modern technology. In analog systems, it is difficult to detect when such degradation occurs. However, in digital systems, degradation can not only be detected but corrected as well.
+
+
+
+Contents
+
+
+1 Advantages and disadvantages
+2 Modulation
+3 See also
+4 References
+
+
+
+Advantages and disadvantages[edit]
+The primary disadvantage of analog signals is that any system has noise – i.e., random unwanted variation. As the signal is copied and re-copied, or transmitted over long distances, or electronically processed, the unavoidable noise introduced by each step in the signal path is additive, progressively degrading the signal-to-noise ratio, until in extreme cases the signal can be overwhelmed. This is called generation loss. Noise can show up as "hiss" and intermodulation distortion in audio signals, or "snow" in video signals. This degradation is impossible to recover, since there is no sure way to distinguish the noise from the signal; amplifying the signal to recover attenuated parts of the signal amplifies the noise (distortion/interference) as well. Digital signals can be transmitted, stored and processed without introducing noise. Even if the resolution of an analog signal is higher than a comparable digital signal, after enough processing the analog signal to noise ratio will be lower.[citation needed]
+However, unlimited processing capacity to refine a digital signal and the resources required should not be taken for granted. In other words, processing capacity available for a digital signal is itself an analog signal - it reflects non-discrete factors "in the real world" such as quantity and quality of computers, connections between them, sufficient electric power, shutdowns, hacker attacks, running costs and everything else that can affect performance and availability. In comparison, analog signals are normally affected by a limited range of factors, whose degrading effect is, for the most part, already represented by the noise. So while an aircraft's altimeter may be thrown off if the plane suddenly enters an air zone with different pressure (an emergency scenario), it will give correct altitude most of the time. Subtle pressure changes are already covered by the small random vacillations (noise) an altimeter can be configured to ignore - in the simplest case, the trembling of the gauge arrow. Because a digital signal by definition does not vary with another continuous quantity that could be compensated for, all digital interference that does occur is to some extent unpredictable. Electrically, analog noise can be diminished by shielding, good connections and several cable types such as coaxial or twisted pair.
+Modulation[edit]
+Another method of conveying an analog signal is to use modulation. In this, some base signal (e.g., a sinusoidal carrier signal) has one of its properties modulated: amplitude modulation involves altering the amplitude of a sinusoidal voltage waveform by the source information, frequency modulation changes the frequency. Other techniques, such as changing the phase of the base signal also work.
+Analog circuits do not involve quantisation of information into digital format. The concept being measured over the circuit, whether sound, light, pressure, temperature, or an exceeded limit, remains from end to end.
+Sources: Parts of an earlier version of this article were originally taken from Federal Standard 1037C in support of MIL-STD-188.
+See also[edit]
+
+Ampex
+Analog audio
+Analog device
+Analog signal processing
+Analog sound vs. digital sound
+Analog video
+Analog-to-digital converter
+Digital audio
+Digital video
+Magnetic tape
+Magnetic recording
+Video tape
+
+References[edit]
+
+
+^ [1]
+^ [2]
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications
+
+
+
+
+
+
+History
+
+
+
+
+Beacon
+Broadcasting
+Communications satellite
+Computer network
+Drums
+Electrical telegraph
+Fax
+Heliographs
+Hydraulic telegraph
+Internet
+Mass media
+Mobile phone
+Optical telecommunication
+Optical telegraphy
+Photophone
+Prepaid mobile phone
+Radio
+Radiotelephone
+Satellite communications
+Smoke signals
+Telecommunications history
+Telegraphy
+Telephone
+The Telephone Cases
+Television
+Timeline of communication technology
+Undersea telegraph line
+Videoconferencing
+Videophone
+Videotelephony
+
+
+
+
+
+
+
+
+Pioneers
+
+
+
+Edwin Howard Armstrong
+John Logie Baird
+Alexander Graham Bell
+Tim Berners-Lee
+Jagadish Chandra Bose
+Vint Cerf
+Claude Chappe
+Lee de Forest
+Philo Farnsworth
+Reginald Fessenden
+Elisha Gray
+Innocenzo Manzetti
+Guglielmo Marconi
+Antonio Meucci
+Alexander Stepanovich Popov
+Johann Philipp Reis
+Nikola Tesla
+Camille Papin Tissot
+Alfred Vail
+Charles Wheatstone
+Vladimir K. Zworykin
+
+
+
+
+
+
+
+
+Transmission
+media
+
+
+
+Coaxial cable
+Free-space optical
+Molecules (nanoscale networking)
+Optical fiber
+Radio waves
+Telephone lines
+Terrestrial microwave
+
+
+
+
+
+
+
+
+Network topology
+and switching
+
+
+
+Links
+Nodes
+Terminal node
+Network switching&#160;(circuit
+packet)
+Telephone exchange
+
+
+
+
+
+
+
+
+Multiplexing
+
+
+
+Space-division
+Frequency-division
+Time-division
+Polarization-division
+Orbital angular-momentum
+Code-division
+
+
+
+
+
+
+
+
+Networks
+
+
+
+ARPANET
+BITNET
+Cellular network
+Computer
+Ethernet
+FidoNet
+Internet
+ISDN
+LAN
+Mobile
+NGN
+Public Switched Telephone
+Radio
+Telecommunications equipment
+Television
+Telex
+WAN
+Wireless
+World Wide Web
+
+
+
+
+
+
+
+
+By continent
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Africa
+
+
+
+
+
+
+Sovereign states
+
+
+
+Algeria
+Angola
+Benin
+Botswana
+Burkina Faso
+Burundi
+Cameroon
+Cape Verde
+Central African Republic
+Chad
+Comoros
+Democratic Republic of the Congo
+Republic of the Congo
+Djibouti
+Egypt
+Equatorial Guinea
+Eritrea
+Ethiopia
+Gabon
+The Gambia
+Ghana
+Guinea
+Guinea-Bissau
+Ivory Coast (Côte d'Ivoire)
+Kenya
+Lesotho
+Liberia
+Libya
+Madagascar
+Malawi
+Mali
+Mauritania
+Mauritius
+Morocco
+Mozambique
+Namibia
+Niger
+Nigeria
+Rwanda
+São Tomé and Príncipe
+Senegal
+Seychelles
+Sierra Leone
+Somalia
+South Africa
+South Sudan
+Sudan
+Swaziland
+Tanzania
+Togo
+Tunisia
+Uganda
+Zambia
+Zimbabwe
+
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+
+Sahrawi Arab Democratic Republic
+Somaliland
+
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+
+
+Mayotte&#160;/ Réunion&#160;(France)
+Saint Helena&#160;/ Ascension Island&#160;/ Tristan da Cunha&#160;(United Kingdom)
+Western Sahara
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Asia
+
+
+
+
+
+
+Sovereign states
+
+
+
+Afghanistan
+Armenia
+Azerbaijan
+Bahrain
+Bangladesh
+Bhutan
+Brunei
+Cambodia
+China
+Cyprus
+East Timor (Timor-Leste)
+Egypt
+Georgia
+India
+Indonesia
+Iran
+Iraq
+Israel
+Japan
+Jordan
+Kazakhstan
+North Korea
+South Korea
+Kuwait
+Kyrgyzstan
+Laos
+Lebanon
+Malaysia
+Maldives
+Mongolia
+Myanmar
+Nepal
+Oman
+Pakistan
+Philippines
+Qatar
+Russia
+Saudi Arabia
+Singapore
+Sri Lanka
+Syria
+Tajikistan
+Thailand
+Turkey
+Turkmenistan
+United Arab Emirates
+Uzbekistan
+Vietnam
+Yemen
+
+
+
+
+
+
+
+
+States with
+limited recognition
+
+
+
+Abkhazia
+Nagorno-Karabakh
+Northern Cyprus
+Palestine
+South Ossetia
+Taiwan
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+British Indian Ocean Territory
+Christmas Island
+Cocos (Keeling) Islands
+Hong Kong
+Macau
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Europe
+
+
+
+
+
+
+Sovereign states
+
+
+
+Albania
+Andorra
+Armenia
+Austria
+Azerbaijan
+Belarus
+Belgium
+Bosnia and Herzegovina
+Bulgaria
+Croatia
+Cyprus
+Czech Republic
+Denmark
+Estonia
+Finland
+France
+Georgia
+Germany
+Greece
+Hungary
+Iceland
+Ireland
+
+Italy
+Kazakhstan
+Latvia
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Malta
+Moldova
+Monaco
+Montenegro
+Netherlands
+Norway
+Poland
+Portugal
+Romania
+Russia
+San Marino
+Serbia
+Slovakia
+Slovenia
+Spain
+Sweden
+Switzerland
+Turkey
+Ukraine
+United Kingdom
+
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+Abkhazia
+Kosovo
+Nagorno-Karabakh
+Northern Cyprus
+South Ossetia
+Transnistria
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+Åland
+Faroe Islands
+Gibraltar
+Guernsey
+Jersey
+Isle of Man
+Svalbard
+
+
+
+
+
+
+
+
+Other entities
+
+
+
+European Union
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in North America
+
+
+
+
+
+
+Sovereign states
+
+
+
+Antigua and Barbuda
+Bahamas
+Barbados
+Belize
+Canada
+Costa Rica
+Cuba
+Dominica
+Dominican Republic
+El Salvador
+Grenada
+Guatemala
+Haiti
+Honduras
+Jamaica
+Mexico
+Nicaragua
+Panama
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Trinidad and Tobago
+United States
+
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+
+Anguilla
+Aruba
+Bermuda
+Bonaire
+British Virgin Islands
+Cayman Islands
+Curaçao
+Greenland
+Guadeloupe
+Martinique
+Montserrat
+Navassa Island
+Puerto Rico
+Saint Barthélemy
+Saint Martin
+Saint Pierre and Miquelon
+Saba
+Sint Eustatius
+Sint Maarten
+Turks and Caicos Islands
+United States Virgin Islands
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Oceania
+
+
+
+
+
+
+Sovereign states
+
+
+
+Australia
+Federated States of Micronesia
+Fiji
+Kiribati
+Marshall Islands
+Nauru
+New Zealand
+Palau
+Papua New Guinea
+Samoa
+Solomon Islands
+Tonga
+Tuvalu
+Vanuatu
+
+
+
+
+
+
+
+
+Associated states
+of New Zealand
+
+
+
+Cook Islands
+Niue
+
+
+
+
+
+
+
+
+Dependencies
+and other territories
+
+
+
+American Samoa
+Christmas Island
+Cocos (Keeling) Islands
+Easter Island
+French Polynesia
+Guam
+Hawaii
+New Caledonia
+Norfolk Island
+Northern Mariana Islands
+Pitcairn Islands
+Tokelau
+Wallis and Futuna
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in South America
+
+
+
+
+
+
+Sovereign states
+
+
+
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Guyana
+Paraguay
+Peru
+Suriname
+Uruguay
+Venezuela
+
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+
+Falkland Islands
+French Guiana
+South Georgia and the South Sandwich Islands
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Telecommunications
+ Telecommunication
+ Telecommunication
+ Mass surveillance
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4142338-0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Analog_signal&amp;oldid=689684511"					
+				Categories: Analog circuitsElectronic designTelevision terminologyVideo signalHidden categories: Wikipedia indefinitely move-protected pagesUse dmy dates from June 2013Articles needing additional references from September 2015All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from July 2014Wikipedia articles with GND identifiers				
+							
+		
+		
+			

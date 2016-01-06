@@ -1,0 +1,503 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Definition
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				To get the definition of another word, try using Wiktionary
+For other uses of the word "definition" itself, see Definition (disambiguation).
+
+
+
+
+A definition states the meaning of a word using other words. This is sometimes challenging. Common dictionaries contain lexical, descriptive definitions, but there are various types of definition - all with different purposes and focuses.
+
+
+A definition is a statement of the meaning of a term (a word, phrase, or other set of symbols).[1] [a] Definitions can be classified into two large categories, intensional definitions (which try to give the essence of a term) and extensional definitions (which list every single object that a term describes).[2] A term may have many different senses and multiple meanings, and thus require multiple definitions.[3][b]
+In mathematics, a definition is used to give a precise meaning to a new term, instead of describing a pre-existing term. Definitions and axioms are the basis on which all of mathematics is constructed.[4]
+
+
+
+Contents
+
+
+1 Intensional definitions vs extensional definitions
+
+1.1 Classes of intensional definitions
+1.2 Classes of extensional definitions
+1.3 Divisio and partitio
+1.4 Nominal definitions vs real definitions
+
+
+2 Terms with multiple definitions
+
+2.1 Homonyms
+2.2 Polysemes
+
+
+3 In logic and mathematics
+
+3.1 Classification of mathematical definitions
+3.2 Recursive definitions
+
+
+4 In medicine
+5 Issues with definitions
+
+5.1 Fallacies of definition
+5.2 Limitations of definition
+
+
+6 See also
+7 Notes
+8 References
+9 External links
+
+
+
+Intensional definitions vs extensional definitions[edit]
+Main articles: Intension and Extension (semantics)
+An intensional definition, also called a connotative definition, specifies the necessary and sufficient conditions for a thing being a member of a specific set.[2] Any definition that attempts to set out the essence of something, such as that by genus and differentia, is an intensional definition.
+An extensional definition, also called a denotative definition, of a concept or term specifies its extension. It is a list naming every object that is a member of a specific set. [2]
+Thus, the "seven deadly sins" can be defined intensionally as those singled out by Pope Gregory I as particularly destructive of the life of grace and charity within a person, thus creating the threat of eternal damnation. An extensional definition would be the list of wrath, greed, sloth, pride, lust, envy, and gluttony. In contrast, while an intensional definition of "Prime Minister" might be "the most senior minister of a cabinet in the executive branch of government in a parliamentary system", an extensional definition is not possible since it is not known who future prime ministers will be.
+Classes of intensional definitions[edit]
+Main article: Genus–differentia definition
+A genus–differentia definition is a type of intensional definition that takes a large category (the genus) and narrows it down to a smaller category by a distinguishing characteristic (i.e. the differentia).[5]
+More formally, a genus-differentia definition consists of:
+
+a genus (or family): An existing definition that serves as a portion of the new definition; all definitions with the same genus are considered members of that genus.
+the differentia: The portion of the new definition that is not provided by the genus.
+
+For example, consider the following genus-differentia definitions:
+
+a triangle: A plane figure that has three straight bounding sides.
+a quadrilateral: A plane figure that has four straight bounding sides.
+
+Those definitions can be expressed as a genus ("a plane figure" and two differentiae ("that has three straight bounding sides" and "that has four straight bounding sides", respectively).
+It is possible to have two different genus-differentia definitions that describe the same term, especially when the term describes the overlap of two large categories. For instance, both of these genus-differentia definitions of "square" are equally acceptable:
+
+a square: a rectangle that is a rhombus.
+a square: a rhombus that is a rectangle.
+
+Thus, a "square" is a member of both the genus "rectangle" and the genus "rhombus".
+Classes of extensional definitions[edit]
+One important form of the extensional definition is ostensive definition. This gives the meaning of a term by pointing, in the case of an individual, to the thing itself, or in the case of a class, to examples of the right kind. So one can explain who Alice (an individual) is by pointing her out to another; or what a rabbit (a class) is by pointing at several and expecting another to understand. The process of ostensive definition itself was critically appraised by Ludwig Wittgenstein.[6]
+An enumerative definition of a concept or term is an extensional definition that gives an explicit and exhaustive listing of all the objects that fall under the concept or term in question. Enumerative definitions are only possible for finite sets and only practical for relatively small sets.
+Divisio and partitio[edit]
+Divisio and partitio are classical terms for definitions. A partitio is simply an intensional definition. A divisio is not an extensional definition, but an exhaustive list of subsets of a set, in the sense that every member of the "divided" set is a member of one of the subsets. An extreme form of divisio lists all sets whose only member is a member of the "divided" set. The difference between this and an extensional definition is that extensional definitions list members, and not subsets.[7]
+Nominal definitions vs real definitions[edit]
+Main article: Essence
+In classical thought, a definition was taken to be a statement of the essence of a thing. Aristotle had it that an object's essential attributes form its "essential nature", and that a definition of the object must include these essential attributes.[8]
+The idea that a definition should state the essence of a thing led to the distinction between nominal and real essence, originating with Aristotle. In a passage from the Posterior Analytics,[9] he says that the meaning of a made-up name can be known (he gives the example "goat stag"), without knowing what he calls the "essential nature" of the thing that the name would denote, if there were such a thing. This led medieval logicians to distinguish between what they called the quid nominis or "whatness of the name", and the underlying nature common to all the things it names, which they called the quid rei or "whatness of the thing". (Early modern philosophers like Locke used the corresponding English terms "nominal essence" and "real essence"). The name "hobbit", for example, is perfectly meaningful. It has a quid nominis. But one could not know the real nature of hobbits, even if there were such things, and so the real nature or quid rei of hobbits cannot be known. By contrast, the name "man" denotes real things (men) that have a certain quid rei. The meaning of a name is distinct from the nature that thing must have in order that the name apply to it.
+This leads to a corresponding distinction between nominal and real definitions. A nominal definition is the definition explaining what a word means, i.e. which says what the "nominal essence" is, and is definition in the classical sense as given above. A real definition, by contrast, is one expressing the real nature or quid rei of the thing.
+This preoccupation with essence dissipated in much of modern philosophy. Analytic philosophy in particular is critical of attempts to elucidate the essence of a thing. Russell described it as "a hopelessly muddle-headed notion".[10]
+More recently Kripke's formalisation of possible world semantics in modal logic led to a new approach to essentialism. Insofar as the essential properties of a thing are necessary to it, they are those things it possesses in all possible worlds. Kripke refers to names used in this way as rigid designators.
+Terms with multiple definitions[edit]
+Homonyms[edit]
+Main article: Homonym
+A homonym is, in the strict sense, one of a group of words that share the same spelling and pronunciation but have different meanings.[11] Thus homonyms are simultaneously homographs (words that share the same spelling, regardless of their pronunciation) and homophones (words that share the same pronunciation, regardless of their spelling). The state of being a homonym is called homonymy. Examples of homonyms are the pair stalk (part of a plant) and stalk (follow/harass a person) and the pair left (past tense of leave) and left (opposite of right). A distinction is sometimes made between "true" homonyms, which are unrelated in origin, such as skate (glide on ice) and skate (the fish), and polysemous homonyms, or polysemes, which have a shared origin, such as mouth (of a river) and mouth (of an animal).[12][13]
+Polysemes[edit]
+Main article: Polysemy
+Polysemy is the capacity for a sign (such as a word, phrase, or symbol) to have multiple meanings (that is, multiple semes or sememes and thus multiple senses), usually related by contiguity of meaning within a semantic field. It is thus usually regarded as distinct from homonymy, in which the multiple meanings of a word may be unconnected or unrelated.
+In logic and mathematics[edit]
+In mathematics, definitions are generally not used to describe existing terms, but to give meaning to a new term.[14] The meaning of a mathematical statement changes if definitions change. The precise meaning of a term given by a mathematical definition is often different than the English definition of the word used,[15] which can lead to confusion for students who do not pay close attention to the definitions given.
+Classification of mathematical definitions[edit]
+Authors have used different terms to classify definitions used in formal languages like mathematics. Norman Swartz classifies a definition as "stipulative" if it is intended to guide a specific discussion. A stipulative definition might be considered a temporary, working definition, and can only be disproved by showing a logical contradiction.[16] In contrast, a "descriptive" definition can be shown to be "right" or "wrong" with reference to general usage.
+Swartz defines a precising definition as one that extends the descriptive dictionary definition (lexical definition) for a specific purpose by including additional criteria. A precising definition narrows the set of things that meet the definition.
+C.L. Stevenson has identified persuasive definition as a form of stipulative definition which purports to state the "true" or "commonly accepted" meaning of a term, while in reality stipulating an altered use (perhaps as an argument for some specific belief). Stevenson has also noted that some definitions are "legal" or "coercive"&#160;– their object is to create or alter rights, duties, or crimes.[17]
+Recursive definitions[edit]
+A recursive definition, sometimes also called an inductive definition, is one that defines a word in terms of itself, so to speak, albeit in a useful way. Normally this consists of three steps:
+
+At least one thing is stated to be a member of the set being defined; this is sometimes called a "base set".
+All things bearing a certain relation to other members of the set are also to count as members of the set. It is this step that makes the definition recursive.
+All other things are excluded from the set
+
+For instance, we could define a natural number as follows (after Peano):
+
+"0" is a natural number.
+Each natural number has a unique successor, such that:
+
+the successor of a natural number is also a natural number;
+distinct natural numbers have distinct successors;
+no natural number is succeeded by "0".
+
+
+Nothing else is a natural number.
+
+So "0" will have exactly one successor, which for convenience can be called "1". In turn, "1" will have exactly one successor, which could be called "2", and so on. Notice that the second condition in the definition itself refers to natural numbers, and hence involves self-reference. Although this sort of definition involves a form of circularity, it is not vicious, and the definition has been quite successful.
+In the same way, we can define ancestor as follows:
+
+A parent is an ancestor.
+A parent of an ancestor is an ancestor.
+Nothing else is an ancestor.
+
+Or simply: an ancestor is a parent or a parent of an ancestor.
+In medicine[edit]
+In medical dictionaries, definitions should to the greatest extent possible be:
+
+simple and easy to understand,[18] preferably even by the general public;[19]
+useful clinically[19] or in related areas where the definition will be used;[18]
+specific,[18] that is, by reading the definition only, it should ideally not be possible to refer to any other entity than the definiendum;
+measurable;[18]
+reflecting current scientific knowledge.[18][19]
+
+Issues with definitions[edit]
+Fallacies of definition[edit]
+Main article: Fallacies of definition
+Certain rules have traditionally been given for definitions (in particular, genus-differentia definitions).[20][21][22][23]
+
+A definition must set out the essential attributes of the thing defined.
+Definitions should avoid circularity. To define a horse as "a member of the species equus" would convey no information whatsoever. For this reason, Locking[specify] adds that a definition of a term must not consist of terms which are synonymous with it. This would be a circular definition, a circulus in definiendo. Note, however, that it is acceptable to define two relative terms in respect of each other. Clearly, we cannot define "antecedent" without using the term "consequent", nor conversely.
+The definition must not be too wide or too narrow. It must be applicable to everything to which the defined term applies (i.e. not miss anything out), and to nothing else (i.e. not include any things to which the defined term would not truly apply).
+The definition must not be obscure. The purpose of a definition is to explain the meaning of a term which may be obscure or difficult, by the use of terms that are commonly understood and whose meaning is clear. The violation of this rule is known by the Latin term obscurum per obscurius. However, sometimes scientific and philosophical terms are difficult to define without obscurity. (See the definition of Free will in Wikipedia, for instance).
+A definition should not be negative where it can be positive. We should not define "wisdom" as the absence of folly, or a healthy thing as whatever is not sick. Sometimes this is unavoidable, however. One cannot define a point except as "something with no parts", nor blindness except as "the absence of sight in a creature that is normally sighted".
+
+Limitations of definition[edit]
+Given that a natural language such as English contains, at any given time, a finite number of words, any comprehensive list of definitions must either be circular or rely upon primitive notions. If every term of every definiens must itself be defined, "where at last should we stop?"[24][25] A dictionary, for instance, insofar as it is a comprehensive list of lexical definitions, must resort to circularity.[26][27][28]
+Many philosophers have chosen instead to leave some terms undefined. The scholastic philosophers claimed that the highest genera (the so-called ten generalissima) cannot be defined, since a higher genus cannot be assigned under which they may fall. Thus being, unity and similar concepts cannot be defined.[21] Locke supposes in An Essay Concerning Human Understanding[29] that the names of simple concepts do not admit of any definition. More recently Bertrand Russell sought to develop a formal language based on logical atoms. Other philosophers, notably Wittgenstein, rejected the need for any undefined simples. Wittgenstein pointed out in his Philosophical Investigations that what counts as a "simple" in one circumstance might not do so in another.[30] He rejected the very idea that every explanation of the meaning of a term needed itself to be explained: "As though an explanation hung in the air unless supported by another one",[31] claiming instead that explanation of a term is only needed to avoid misunderstanding.
+Locke and Mill also argued that individuals cannot be defined. Names are learned by connecting an idea with a sound, so that speaker and hearer have the same idea when the same word is used.[32] This is not possible when no one else is acquainted with the particular thing that has "fallen under our notice".[33] Russell offered his theory of descriptions in part as a way of defining a proper name, the definition being given by a definite description that "picks out" exactly one individual. Saul Kripke pointed to difficulties with this approach, especially in relation to modality, in his book Naming and Necessity.
+There is a presumption in the classic example of a definition that the definiens can be stated. Wittgenstein argued that for some terms this is not the case.[34] The examples he used include game, number and family. In such cases, he argued, there is no fixed boundary that can be used to provide a definition. Rather, the items are grouped together because of a family resemblance. For terms such as these it is not possible and indeed not necessary to state a definition; rather, one simply comes to understand the use of the term.[c]
+See also[edit]
+
+Analytic proposition
+Circular definition
+Definable set
+Definitionism
+Extensional definition
+Fallacies of definition
+Indeterminacy
+Intensional definition
+Lexical definition
+Ostensive definition
+Ramsey–Lewis method
+Semantic
+Synthetic proposition
+Theoretical definition
+
+Notes[edit]
+
+
+^ The term to be defined is the definiendum.
+^ Terms with the same pronunciation and spelling but unrelated meanings are called homonyms, while terms with the same spelling and pronunciation and related meanings are called polysemes.
+^ Note that one learns inductively, from ostensive definition, in the same way, as in the Ramsey–Lewis method.
+
+
+References[edit]
+
+
+^ Bickenbach, Jerome E., and Jacqueline M. Davies. Good reasons for better arguments: An introduction to the skills and values of critical thinking. Broadview Press, 1996. p. 49
+^ a b c Lyons, John. "Semantics, vol. I." Cambridge: Cambridge (1977). p.158 and on.
+^ Dooly, Melinda. Semantics and Pragmatics of English: Teaching English as a Foreign Language. Univ. Autònoma de Barcelona, 2006. p.48 and on
+^ Richard J. Rossi (2011) Theorems, Corollaries, Lemmas, and Methods of Proof. John Wiley &amp; Sons p.4
+^ Bussler, Christoph, and Dieter Fensel, eds. Artificial Intelligence: Methodology, Systems and Applications: 11th International Conference, AIMSA 2004: Proceedings. Springer-Verlag, 2004. p.6
+^ Philosophical investigations, Part 1 §27–34
+^ Katerina Ierodiakonou, "The Stoic Division of Philosophy", in Phronesis: A Journal for Ancient Philosophy, Volume 38, Number 1, 1993 , pp. 57–74.
+^ Posterior Analytics, Bk 1 c. 4
+^ Posterior Analytics Bk 2 c. 7
+^ A history of Western Philosophy, p. 210
+^ homonym, Random House Unabridged Dictionary at dictionary.com
+^ "Linguistics 201: Study Sheet for Semantics". Pandora.cii.wwu.edu. Retrieved 2013-04-23.&#160;
+^ Semantics: a coursebook, p. 123, James R. Hurford and Brendan Heasley, Cambridge University Press, 1983
+^ David Hunter (2010) Essentials of Discrete Mathematics. Jones &amp; Bartlett Publishers, Section 14.1
+^ Kevin Houston (2009) How to Think Like a Mathematician: A Companion to Undergraduate Mathematics. Cambridge University Press, p. 104
+^ "Norman Swartz - Biography". sfu.ca.&#160;
+^ Stevenson, C.L., Ethics and Language, Connecticut 1944
+^ a b c d e McPherson, M.; Arango, P.; Fox, H.; Lauver, C.; McManus, M.; Newacheck, P. W.; Perrin, J. M.; Shonkoff, J. P.; Strickland, B. (1998). "A new definition of children with special health care needs". Pediatrics 102 (1 Pt 1): 137–140. doi:10.1542/peds.102.1.137. PMID&#160;9714637.&#160;
+^ a b c Morse, R. M.; Flavin, D. K. (1992). "The Definition of Alcoholism". JAMA 268 (8): 1012–1014. doi:10.1001/jama.1992.03490080086030. PMID&#160;1501306.&#160;
+^ Copi 1982 pp 165–169
+^ a b Joyce, Ch. X
+^ Joseph, Ch. V
+^ Macagno &amp; Walton 2014, Ch. III
+^ Locke, Essay, Bk. III, Ch. iv, 5
+^ This problem parallels the diallelus, but leads to scepticism about meaning rather than knowledge.
+^ Generally lexicographers seek to avoid circularity wherever possible, but the definitions of words such as "the" and "a" use those words and are therefore circular. [1] [2] Lexicographer Sidney I. Landau's essay "Sexual Intercourse in American College Dictionaries" provides other examples of circularity in dictionary definitions. (McKean, p. 73–77)
+^ An exercise suggested by J. L. Austin involved taking up a dictionary and finding a selection of terms relating to the key concept, then looking up each of the words in the explanation of their meaning. Then, iterating this process until the list of words begins to repeat, closing in a "family circle" of words relating to the key concept.
+(A plea for excuses in Philosophical Papers. Ed. J. O. Urmson and G. J. Warnock. Oxford: Oxford UP, 1961. 1979.)
+^ In the game of Vish, players compete to find circularity in a dictionary.
+^ Locke, Essay, Bk. III, Ch. iv
+^ See especially Philosophical Investigations Part 1 §48
+^ He continues: "Whereas an explanation may indeed rest on another one that has been given, but none stands in need of another&#160;– unless we require it to prevent a misunderstanding. One might say: an explanation serves to remove or to avert a misunderstanding&#160;– one, that is, that would occur but for the explanation; not every one I can imagine." Philosophical Investigations, Part 1 §87, italics in original
+^ This theory of meaning is one of the targets of the private language argument
+^ Locke, Essay, Bk. III, Ch. iii, 3
+^ Philosophical Investigations
+
+
+
+
+Copi, Irving (1982). Introduction to Logic. New York: Macmillan. ISBN&#160;0-02-977520-5.&#160;
+Joseph, Horace William Brindley (1916). An Introduction to Logic, 2nd edition. Clarendon Press repr. Paper Tiger. ISBN&#160;1-889439-17-7.&#160; (full text of 1st ed. (1906))
+Joyce, George Hayward (1926). Principles of logic, 3d ed., new impression. London, New York: Longmans, Green and co.&#160; (worldcat) (full text of 2nd ed. (1916))
+Locke, John (1690). An Essay Concerning Human Understanding. ISBN&#160;0-14-043482-8.&#160; (full text: vol 1, vol 2)
+McKean, Erin (2001). Verbatim: From the bawdy to the sublime, the best writing on language for word lovers, grammar mavens, and armchair linguists. Harvest Books. ISBN&#160;0-15-601209-X.&#160;
+Macagno, Fabrizio; Walton, Douglas (2014). Emotive Language in Argumentation. New York: Cambridge University Press.&#160;
+Robinson, Richard (1954). Definition. Oxford: At The Clarendon Press. ISBN&#160;978-0-19-824160-7.&#160;
+Simpson, John; Edmund Weiner (1989). Oxford English Dictionary, second edition (20 volumes). Oxford University Press. ISBN&#160;0-19-861186-2.&#160;
+Wittgenstein, Ludwig (1953). Philosophical Investigations. Blackwell Publishing. ISBN&#160;0-631-23127-7.&#160;
+
+
+External links[edit]
+
+
+
+Look up definition in Wiktionary, the free dictionary.
+
+
+
+
+
+Wikiquote has quotations related to: Definition
+
+
+
+Definitions, Stanford Encyclopedia of Philosophy Gupta, Anil (2008)
+Definitions, Dictionaries, and Meanings, Norman Swartz 1997
+Guy Longworth (ca. 2008) "Definitions: Uses and Varieties of". = in: K. Brown (ed.): Elsevier Encyclopedia of Language and Linguistics, Elsevier.
+Definition and Meaning, a very short introduction by Garth Kemerling (2001).
+Definitions and Meanings of the Words
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Definition
+
+
+
+
+
+
+
+
+
+Circular
+Concept
+Coordinative
+Enumerative
+Extensional
+Fallacies of
+Intensional
+
+Genus–differentia
+
+
+Lexical
+Operational
+Ostensive
+Persuasive
+Precising
+Recursive
+Stipulative
+Theoretical
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Logic
+
+
+
+
+
+
+
+
+
+Outline
+History
+
+
+
+
+
+
+
+
+Fields
+
+
+
+Argumentation theory
+Axiology
+Critical thinking
+Logic in computer science
+Mathematical logic
+Metalogic
+Metamathematics
+Non-classical logic
+Philosophical logic
+Philosophy of logic
+Set theory
+
+
+
+
+
+
+
+
+Foundations
+
+
+
+Abduction
+Analytic and synthetic propositions
+Antinomy
+A priori and a posteriori
+Deduction
+Definition
+Description
+Induction
+Inference
+Logical form
+Logical consequence
+Logical truth
+Name
+Necessity and sufficiency
+Meaning
+Paradox
+Possible world
+Presupposition
+Probability
+Reason
+Reasoning
+Reference
+Semantics
+Statement
+Strict implication
+Substitution
+Syntax
+Truth
+Validity
+
+
+
+
+
+
+
+
+Lists
+
+
+
+
+topics
+
+
+
+Mathematical logic
+Boolean algebra
+Set theory
+
+
+
+
+
+
+
+
+other
+
+
+
+Logicians
+Rules of inference
+Paradoxes
+Fallacies
+Logic symbols
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portal
+Category
+WikiProject&#160;(talk)
+changes
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4148989-5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Definition&amp;oldid=691014376"					
+				Categories: Philosophical logicDefinitionPhilosophy of languageSemanticsMathematical terminologyConcepts in logicLexicographyMeaning (philosophy of language)Hidden categories: Articles needing more detailed referencesWikipedia articles with GND identifiers				
+							
+		
+		
+			

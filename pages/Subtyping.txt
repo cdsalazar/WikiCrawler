@@ -1,0 +1,378 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Subtyping
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Polymorphism
+
+
+
+
+Ad hoc polymorphism
+Function overloading
+Operator overloading
+Parametric polymorphism
+Double dispatch
+Multiple dispatch
+Single &amp; dynamic dispatch
+Subtyping
+Virtual function
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In programming language theory, subtyping (also subtype polymorphism or inclusion polymorphism) is a form of type polymorphism in which a subtype is a datatype that is related to another datatype (the supertype) by some notion of substitutability, meaning that program elements, typically subroutines or functions, written to operate on elements of the supertype can also operate on elements of the subtype. If S is a subtype of T, the subtyping relation is often written S &lt;: T, to mean that any term of type S can be safely used in a context where a term of type T is expected. The precise semantics of subtyping crucially depends on the particulars of what "safely used in a context where" means in a given programming language. The type system of a programming language essentially defines its own subtyping relation, which may well be trivial.
+Due to the subtyping relation, a term may belong to more than one type. Subtyping is therefore a form of type polymorphism. In object-oriented programming the term 'polymorphism' is commonly used to refer solely to this subtype polymorphism, while the techniques of parametric polymorphism would be considered generic programming.
+Functional programming languages often allow the subtyping of records. Consequently, simply typed lambda calculus extended with record types is perhaps the simplest theoretical setting in which a useful notion of subtyping may be defined and studied. Because the resulting calculus allows terms to have more than one type, it is no longer a "simple" type theory. Since functional programming languages, by definition, support function literals, which can also be stored in records, records types with subtyping provide some of the features of object-oriented programming. Typically, functional programming languages also provide some, usually restricted, form of parametric polymorphism. In a theoretical setting, it is desirable to study the interaction of the two features; a common theoretical setting is system F&lt;:. Various calculi that attempt to capture the theoretical properties of object-oriented programming may be derived from system F&lt;:.
+The concept of subtyping is related to the linguistic notions of hyponymy and holonymy. It is also related to the concept of bounded quantification in mathematical logic. Subtyping should not be confused with the notion of (class or object) inheritance from object-oriented languages;[1] subtyping is a relation between types (interfaces in object-oriented parlance) whereas inheritance is a relation between implementations stemming from a language feature that allows new objects to be created from existing ones. In a number of object-oriented languages, subtyping is called interface inheritance, with inheritance referred to as implementation inheritance.
+
+
+
+Contents
+
+
+1 Origins
+2 Examples
+3 Subtyping schemes
+4 Record types
+5 Function types
+6 Coercions
+7 See also
+8 Notes
+9 References
+10 Further reading
+
+
+
+Origins[edit]
+The notion of subtyping in programming languages dates back to the 1960s; it was introduced in Simula derivatives. The first formal treatments of subtyping were given by John C. Reynolds in 1980 who used category theory to formalize implicit conversions, and Luca Cardelli (1985).[2]
+The concept of subtyping has gained visibility (and synonymy with polymorphism in some circles) with the mainstream adoption of object-oriented programming. In this context, the principle of safe substitution is often called the Liskov substitution principle, after Barbara Liskov who popularized it in a keynote address at a conference on object-oriented programming in 1987. Because it must consider mutable objects, the ideal notion of subtyping defined by Liskov and Jeannette Wing, called behavioral subtyping is considerably stronger than what can be implemented in a type checker. (See Function types below for details.)
+Examples[edit]
+
+
+
+
+Example of Subtypes: where bird is the supertype and all others are subtypes as denoted by the arrow in UML notation.
+
+
+A simple practical example of subtypes is shown in the diagram, right. The type "bird" has three subtypes "duck", "cuckoo" and "ostrich". Conceptually, each of these is a variety of the basic "bird" that inherits many "bird" characteristics but has some specific differences. The UML notation is used in this diagram, with open-headed arrows showing the direction and type of the relationship between the supertype and its subtypes.
+As a more practical example, a language might allow integer values to be used wherever floating point values are expected (Integer &lt;: Float), or it might define a generic type Number as a common supertype of integers and the reals. In this second case, we only have Integer &lt;: Number and Float &lt;: Number, but Integer and Float are not subtypes of each other.
+Programmers may take advantage of subtyping to write code in a more abstract manner than would be possible without it. Consider the following example:
+
+function max (x as Number, y as Number) is
+  if x &lt; y then
+    return y
+  else
+    return x
+end
+
+If integer and real are both subtypes of Number, and an operator of comparison with an arbitrary Number is defined for both types, then values of either type can be passed to this function. However, the very possibility of implementing such an operator highly constrains the Number type (for example, one can't compare an integer with a complex number), and actually only comparing integers with integers and reals with reals makes sense. Rewriting this function so that it would only accept 'x' and 'y' of the same type requires bounded polymorphism.
+Subtyping in type theory is characterized by the fact that any expression of type A may also be given type B if A&lt;:B; the formal typing rule that codifies this is known as the subsumption rule.
+Subtyping schemes[edit]
+Type theorists make a distinction between nominal subtyping, in which only types declared in a certain way may be subtypes of each other, and structural subtyping, in which the structure of two types determines whether or not one is a subtype of the other. The class-based object-oriented subtyping described above is nominal; a structural subtyping rule for an object-oriented language might say that if objects of type A can handle all of the messages that objects of type B can handle (that is, if they define all the same methods), then A is a subtype of B regardless of whether either inherits from the other. This so-called duck typing is common in dynamically typed object-oriented languages. Sound structural subtyping rules for types other than object types are also well known.[citation needed]
+Implementations of programming languages with subtyping fall into two general classes: inclusive implementations, in which the representation of any value of type A also represents the same value at type B if A&lt;:B, and coercive implementations, in which a value of type A can be automatically converted into one of type B. The subtyping induced by subclassing in an object-oriented language is usually inclusive; subtyping relations that relate integers and floating-point numbers, which are represented differently, are usually coercive.
+In almost all type systems that define a subtyping relation, it is reflexive (meaning A&lt;:A for any type A) and transitive (meaning that if A&lt;:B and B&lt;:C then A&lt;:C). This makes it a preorder on types.
+Record types[edit]
+Types of records give rise to the concepts of width and depth subtyping. These express two different ways of obtaining a new type of record that allows the same operations as the original record type.
+Recall that a record is a collection of (named) fields. Since a subtype is a type which allows all operations allowed on the original type, a record subtype should support the same operations on the fields as the original type supported.
+One kind of way to achieve such support, called width subtyping, adds more fields to the record. More formally, every (named) field appearing in the width supertype will appear in the width subtype. Thus, any operation feasible on the supertype will be supported by the subtype.
+The second method, called depth subtyping, replaces the various fields with their subtypes. That is, the fields of the subtype are subtypes of the fields of the supertype. Since any operation supported for a field in the supertype is supported for its subtype, any operation feasible on the record supertype is supported by the record subtype. Depth subtyping only makes sense for immutable records: for example, you can assign 1.5 to the 'x' field of a real point (a record with two real fields), but you can't do the same to the 'x' field of an integer point (which, however, is a deep subtype of the real point type) because 1.5 is not an integer (see Variance).
+Subtyping of records can be defined in System F&lt;:, which combines parametric polymorphism with subtyping of record types and is a theoretical basis for many functional programming languages that support both features.
+Some systems also support subtyping of labeled disjoint union types (such as algebraic data types). The rule for width subtyping is reversed: every tag appearing in the width subtype must appear in the width supertype.
+Function types[edit]
+If T1 → T2 is a function type then a subtype of it is any function S1 → S2 with the property that T1 &lt;: S1 and S2 &lt;: T2. The argument type of S1 → S2 is said to be contravariant because the subtyping relation is reversed for it, whereas the return type is covariant. Informally, this reversal occurs because the refined type is "more liberal" in the types it accepts and "more conservative" in the type it returns.
+In languages that allow side effects, like most object-oriented languages, subtyping is generally not sufficient to guarantee that a function can be safely used in the context of another. Liskov's work in this area focused on behavioral subtyping, which besides the type system safety discussed in this article also requires that subtypes preserve all invariants guaranteed by the supertypes in some contract.[3] This definition of subtyping is generally undecidable, so it cannot be verified by a type checker.
+The subtyping of mutable references is similar to the treatment of function arguments and return values. Write-only references (or sinks) are contravariant, like function arguments; read-only references (or sources) are covariant, like return values. Mutable references which act as both sources and sinks are invariant.
+Coercions[edit]
+In coercive subtyping systems, subtypes are defined by implicit type conversion functions from subtype to supertype. For each subtyping relationship (S &lt;: T), a coercion function coerce: S → T is provided, and any object s of type S is regarded as the object coerceS → T(s) of type T. A coercion function may be defined by composition: if S &lt;: T and T &lt;: U then s may be regarded as an object of type u under the compound coercion (coerceT → U ∘ coerceS → T). The type coercion from a type to itself coerceT → T is the identity function idT
+Coercion functions for records and disjoint union subtypes may be defined componentwise; in the case of width-extended records, type coercion simply discards any components which are not defined in the supertype. The type coercion for function types may be given by f'(s) = coerceS2 → T2(f(coerceT1 → S1(t))), reflecting the contravariance of function arguments and covariance of return values.
+The coercion function is uniquely determined given the subtype and supertype. Thus, when multiple subtyping relationships are defined, one must be careful to guarantee that all type coercions are coherent. For instance, if an integer such as 2&#160;: int can be coerced to a floating point number (say, 2.0&#160;: float), then it is not admissible to coerce 2.1&#160;: float to 2&#160;: int, because the compound coercion coercefloat → float given by coerceint → float ∘ coercefloat → int would then be distinct from the identity coercion idfloat.
+See also[edit]
+
+
+
+The Wikibook Ada Programming has a page on the topic of: Subtypes
+
+
+
+Covariance and contravariance
+The circle-ellipse problem (for the perils of subtyping variable-types on the same basis as value-types)
+Class-based programming
+Top type
+Refinement type
+Behavioral subtyping
+
+Notes[edit]
+
+
+^ Cook, Hill &amp; Canning 1990.
+^ Pierce, ch. 15 notes
+^ Barbara Liskov, Jeannette Wing, A behavioral notion of subtyping, ACM Transactions on Programming Languages and Systems (TOPLAS), Volume 16, Issue 6 (November 1994), pp. 1811 - 1841. An updated version appeared as CMU technical report: Liskov, Barbara; Wing, Jeannette (July 1999). "Behavioral Subtyping Using Invariants and Constraints" (PS). Retrieved 2006-10-05.&#160;
+
+
+References[edit]
+Textbooks
+
+
+Benjamin C. Pierce, Types and programming languages, MIT Press, 2002, ISBN 0-262-16209-1, chapter 15 (subtyping of record types), 19.3 (nominal vs. structural types and subtyping), and 23.2 (varieties of polymorphism)
+C. Szyperski, D. Gruntz, S. Murer, Component software: beyond object-oriented programming, 2nd ed., Pearson Education, 2002, ISBN 0-201-74572-0, pp.&#160;93–95 (a high-level presentation aimed at programming language users)
+
+
+Papers
+
+
+Cardelli, Luca. A semantics of multiple inheritance. In G. Kahn, D. MacQueen, and G. Plotkin, editors, Semantics of Data Types, volume 173 of Lecture Notes in Computer Science, pages 51–67. Springer-Verlag, 1984. Full version in Information and Computation, 76(2/3):138–164, 1988.
+Cook, William R.; Hill, Walter; Canning, Peter S. (1990). Inheritance is not subtyping. Proc. 17th ACM SIGPLAN-SIGACT Symp. on Principles of Programming Languages (POPL). pp.&#160;125–135. doi:10.1145/96709.96721. ISBN&#160;0-89791-343-4. CiteSeerX: 10.1.1.102.8635.&#160;
+Reynolds, John C. Using category theory to design implicit conversions and generic operators. In N. D. Jones, editor, Proceedings of the Aarhus Workshop on Semantics-Directed Compiler Generation, number 94 in Lecture Notes in Computer Science. Springer-Verlag, January 1980. Also in Carl A. Gunter and John C. Mitchell, editors, Theoretical Aspects of Object-Oriented Programming: Types, Semantics, and Language Design (MIT Press, 1994).
+
+
+Further reading[edit]
+
+
+John C. Reynolds, Theories of programming languages, Cambridge University Press, 1998, ISBN 0-521-59414-6, chapter 16.
+Martín Abadi, Luca Cardelli, A theory of objects, Springer, 1996, ISBN 0-387-94775-2. Section 8.6 contrast the subtyping of records and objects.
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Subtyping&amp;oldid=689816212"					
+				Categories: Data typesPolymorphism (computer science)Type theoryObject-oriented programmingHidden categories: All articles with unsourced statementsArticles with unsourced statements from June 2012				
+							
+		
+		
+			

@@ -1,0 +1,452 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Template (C++)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Template (programming))
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2009)
+
+
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (May 2009)
+
+
+
+
+
+
+
+This article may require cleanup to meet Wikipedia's quality standards. No cleanup reason has been specified. Please help improve this article if you can. (May 2009)
+
+
+
+
+
+
+
+
+Templates are a feature of the C++ programming language that allows functions and classes to operate with generic types. This allows a function or class to work on many different data types without being rewritten for each one.
+Templates are of great utility to programmers in C++, especially when combined with multiple inheritance and operator overloading. The C++ Standard Library provides many useful functions within a framework of connected templates.
+Major inspirations for C++ templates were the parametrized modules provided by CLU and the generics provided by Ada.[1]
+
+
+
+Contents
+
+
+1 Technical overview
+
+1.1 Function templates
+1.2 Class templates
+1.3 Variable templates
+1.4 Template specialization
+1.5 Explicit template specialization
+1.6 Variadic templates
+
+
+2 Advantages and disadvantages of templates over macros
+3 Generic programming features in other languages
+4 See also
+5 References
+6 External links
+
+
+
+Technical overview[edit]
+There are three kinds of templates: function templates, class templates and, since C++14, variable templates. Since C++11, templates may be either variadic or non-variadic; in earlier versions of C++ they are always non-variadic.
+Function templates[edit]
+A function template behaves like a function except that the template can have arguments of many different types (see example). In other words, a function template represents a family of functions. The format for declaring function templates with type parameters is
+
+
+template &lt;class    identifier&gt; function_declaration;
+template &lt;typename identifier&gt; function_declaration;
+
+Both expressions have the same meaning and behave in exactly the same way. The latter form was introduced to avoid confusion,[2] since a type parameter need not be a class. (it can also be a basic type such as int or double.)
+For example, the C++ Standard Library contains the function template max(x, y) which returns the larger of x and y. That function template could be defined like this:
+
+
+template &lt;typename Type&gt;
+Type max(Type a, Type b) {
+    return a &gt; b ? a : b;
+}
+
+This single function definition works with many data types. The usage of a function template saves space in the source code file in addition to limiting changes to one function description and making the code easier to read.
+A template does not produce smaller object code, though, compared to writing separate functions for all the different data types used in a specific program. For example, if a program uses both an int and a double version of the max() function template shown above, the compiler will create an object code version of max() that operates on int arguments and another object code version that operates on double arguments. The compiler output will be identical to what would have been produced if the source code had contained two separate non-templated versions of max(), one written to handle int and one written to handle double.
+Here is how the function template could be used:
+
+
+#include &lt;iostream&gt;
+
+int main()
+{
+    // This will call max&lt;int&gt; by implicit argument deduction.
+    std::cout &lt;&lt; max(3, 7) &lt;&lt; std::endl;
+
+    // This will call max&lt;double&gt; by implicit argument deduction.
+    std::cout &lt;&lt; max(3.0, 7.0) &lt;&lt; std::endl;
+
+    // This depends on the compiler. Some compilers handle this by defining a template
+    // function like double max &lt;double&gt; ( double a, double b);, while in some compilers 
+    // we need to explicitly cast it, like std::cout &lt;&lt; max&lt;double&gt;(3,7.0);
+    std::cout &lt;&lt; max(3, 7.0) &lt;&lt; std::endl; 
+    std::cout &lt;&lt; max&lt;double&gt;(3, 7.0) &lt;&lt; std::endl;
+    return 0;
+}
+
+In the first two cases, the template argument Type is automatically deduced by the compiler to be int and double, respectively. In the third case automatic deduction of max(3, 7.0) would fail because the type of the parameters must in general match the template arguments exactly. Therefore we explicitly instantiate the double version with max&lt;double&gt;().
+This function template can be instantiated with any copy-constructible type for which the expression y&#160;&gt;&#160;x is valid. For user-defined types, this implies that the greater-than operator (&gt;) must be overloaded in the type.
+Class templates[edit]
+A class template provides a specification for generating classes based on parameters. Class templates are generally used to implement containers. A class template is instantiated by passing a given set of types to it as template arguments.[3] The C++ Standard Library contains many class templates, in particular the containers adapted from the Standard Template Library, such as vector.
+Variable templates[edit]
+Main article: C++14 § Variable templates
+In C++14, templates can be also used for variables, as in the following example.
+
+
+template&lt;typename T&gt; constexpr T pi = T(3.141592653589793238462643L);
+
+Template specialization[edit]
+When a function or class is instantiated from a template, a specialization of that template is created by the compiler for the set of arguments used, and the specialization is referred to as being a generated specialization.
+Explicit template specialization[edit]
+Sometimes, the programmer may decide to implement a special version of a function (or class) for a given set of template type arguments which is called an explicit specialization. In this way certain template types can have a specialized implementation that is optimized for the type or more meaningful implementation than the generic implementation.
+
+If a class template is specialized by a subset of its parameters it is called partial template specialization (function templates cannot be partially specialized).
+If all of the parameters are specialized it is a full specialization.
+
+Explicit specialization is used when the behavior of a function or class for particular choices of the template parameters must deviate from the generic behavior: that is, from the code generated by the main template, or templates. For example, the template definition below defines a specific implementation of max() for arguments of type bool:
+
+
+template &lt;&gt;
+bool max&lt;bool&gt;(bool a, bool b) {
+    return a || b;
+}
+
+Variadic templates[edit]
+C++11 introduced variadic templates, which can take a variable number of arguments in a manner somewhat similar to variadic functions such as std::printf. Both function templates and class templates can be variadic.
+Advantages and disadvantages of templates over macros[edit]
+Some uses of templates, such as the max() function mentioned above, were previously fulfilled by function-like preprocessor macros. For example, the following is a C++ max() macro that evaluates to the maximum of its two arguments as defined by the &lt; operator:
+
+
+  #define max(a,b) ((a) &lt; (b) ? (b) : (a))
+
+Both macros and templates are expanded at compile time. Macros are always expanded inline, while templates are only expanded inline when the compiler deems it appropriate. When expanded inline, macro functions and function templates have no extraneous runtime overhead. Template functions with many lines of code will incur runtime overhead when they are not expanded inline, but the reduction in code size may help the code to load from disk more quickly or fit within RAM caches.
+Macro arguments are not evaluated prior to expansion. The expression using a macro defined above
+
+
+  max(0, std::rand() - 100)
+
+may evaluate to a negative number, while the call to template function
+
+
+  std::max(0, std::rand() - 100)
+
+will always evaluate to a non-negative number.
+As opposed to macros, templates are considered type-safe; that is, they require type-checking at compile time. Hence, the compiler can determine at compile time whether the type associated with a template definition can perform all of the functions required by that template definition.
+By design, templates can be utilized in very complex problem spaces, whereas macros are substantially more limited.
+There are fundamental drawbacks to the use of templates:
+
+Historically, some compilers exhibited poor support for templates. So, the use of templates could decrease code portability.
+Many compilers lack clear instructions when they detect a template definition error. This can increase the effort of developing templates, and has prompted the development of Concepts for possible inclusion in a future C++ standard.
+Since the compiler generates additional code for each template type, indiscriminate use of templates can lead to code bloat, resulting in larger executables.
+Because a template by its nature exposes its implementation, injudicious use in large systems can lead to longer build times.
+It can be difficult to debug code that is developed using templates. Since the compiler replaces the templates, it becomes difficult for the debugger to locate the code at runtime.
+Templates of templates (nested templates) are not supported by all compilers, or might have a limit on the nesting level.
+Templates are in the headers, which require a complete rebuild of all project pieces when changes are made.
+No information hiding. All code is exposed in the header file. No one library can solely contain the code.
+
+Additionally, the use of the "less than" and "greater than" signs as delimiters is problematic for tools (such as text editors) which analyze source code syntactically. It is difficult for such tools to determine whether a use of these tokens is as comparison operators or template delimiters. For example, this line of code:
+
+
+  foo (a &lt; b, c &gt; d) ;
+
+may be a function call with two parameters, each the result of a comparison expression. Alternatively, it could be a declaration of a constructor for class foo taking a parameter d whose type is the parameterized a &lt; b, c &gt;.
+Generic programming features in other languages[edit]
+Initially, the concept of templates was not included in some languages, such as Java and C# 1.0. Java's adoption of generics mimics the behaviour of templates, but is technically different. C# added generics (parameterized types) in .NET 2.0. The generics in Ada predate C++ templates.
+Although C++ templates, Java generics, and .NET generics are often considered similar, generics only mimic the basic behavior of C++ templates.[4] Some of the advanced template features utilized by libraries such as Boost and STLSoft, and implementations of the STL itself, for template metaprogramming (explicit or partial specialization, default template arguments, template non-type arguments, template template arguments, ...) are not available with generics.
+In C++ templates, the compile-time cases are performed by pattern matching over the template arguments, so the Factorial template's base case is implemented by matching 0 rather than with an inequality test, which is unavailable:
+
+
+// Induction
+
+template &lt;int N&gt; 
+struct Factorial {
+  static const int value = N * Factorial&lt;N - 1&gt;::value;
+};
+
+// Base case via template specialization:
+
+template &lt;&gt;
+struct Factorial&lt;0&gt; {
+  static const int value = 1;
+};
+
+With these definitions, one can compute, say 6! at compile time using the expression Factorial&lt;6&gt;::value. Alternatively, constexpr in C++11 can be used to calculate such values directly using a function at compile-time.
+See also[edit]
+
+Template metaprogramming
+Metaprogramming
+Generic programming
+Substitution failure is not an error
+
+References[edit]
+
+
+^ Stroustrup, Bjarne (2004-09-08). "The C++ Programming Language (Third Edition and Special Edition)". Bjarne Stroustrup's homepage.&#160;
+^ Lippman, Stan. "Why C++ Supports both Class and Typename for Type Parameters". MSDN.&#160;
+^ Vandevoorde, Daveed; Josuttis, Nicolai (2002). C++ Templates: The Complete Guide. Addison Wesley. ISBN&#160;0-201-73484-2.&#160;
+^ Differences Between C++ Templates and C# Generics (C# Programming Guide)
+
+
+External links[edit]
+
+Demonstration of the Turing-completeness of C++ templates (Lambda calculus implementation)
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Template_(C%2B%2B)&amp;oldid=691143468"					
+				Categories: Generic programmingMetaprogrammingC++Hidden categories: Articles needing additional references from January 2009All articles needing additional referencesArticles lacking in-text citations from May 2009All articles lacking in-text citationsArticles needing cleanup from May 2009All articles needing cleanupCleanup tagged articles without a reason field from May 2009Wikipedia pages needing cleanup from May 2009				
+							
+		
+		
+			

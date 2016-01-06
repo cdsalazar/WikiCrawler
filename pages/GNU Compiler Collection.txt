@@ -1,0 +1,757 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			GNU Compiler Collection
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Cc1" redirects here. For other uses, see CC1 (disambiguation).
+
+GNU Compiler Collection
+
+
+
+
+Developer(s)
+GNU Project
+
+
+Initial release
+May&#160;23, 1987; 28 years ago&#160;(1987-05-23)[1]
+
+
+Stable release
+5.2[2] / July&#160;16, 2015; 4 months ago&#160;(2015-07-16)
+
+
+Written in
+C++;[3] originally C
+
+
+Operating system
+Cross-platform
+
+
+Platform
+GNU
+
+
+Type
+Compiler
+
+
+License
+GNU GPL 3+ with GCC Runtime Library Exception[4]
+
+
+Website
+gcc.gnu.org
+
+
+The GNU Compiler Collection (GCC) is a compiler system produced by the GNU Project supporting various programming languages. GCC is a key component of the GNU toolchain. The Free Software Foundation (FSF) distributes GCC under the GNU General Public License (GNU GPL). GCC has played an important role in the growth of free software, as both a tool and an example.
+Originally named the GNU C Compiler, when it only handled the C programming language, GCC 1.0 was released in 1987.[1] It was extended to compile C++ in December of that year. Front ends were later developed for Objective-C, Objective-C++, Fortran, Java, Ada, and Go among others.[5]
+GCC has been ported to a wide variety of processor architectures, and is widely deployed as a tool in the development of both free and proprietary software. GCC is also available for most embedded platforms[citation needed], including Symbian (called gcce),[6] AMCC, and Freescale Power Architecture-based chips.[7] The compiler can target a wide variety of platforms, including video game consoles such as the PlayStation 2[8] and Dreamcast.[9]
+As well as being the official compiler of the GNU operating system, GCC has been adopted as the standard compiler by many other modern Unix-like computer operating systems, including Linux and the BSD family, although FreeBSD is moving to the LLVM system and OS X has moved to the LLVM system.[10] Versions are also available for Microsoft Windows and other operating systems; GCC can compile code for Android and iOS.
+
+
+
+Contents
+
+
+1 History
+2 Design
+
+2.1 Front ends
+2.2 GENERIC and GIMPLE
+2.3 Optimization
+2.4 Back end
+2.5 Features
+
+
+3 Languages
+4 Architectures
+5 Development
+6 License
+7 Uses
+8 See also
+9 References
+10 Further reading
+11 External links
+
+
+
+History[edit]
+In an effort to bootstrap the GNU operating system, Richard Stallman asked Andrew S. Tanenbaum, the author of the Amsterdam Compiler Kit (also known as the Free University Compiler Kit) if he could use that software for GNU. When Tanenbaum told him that while the Free University was free, the compiler was not, Stallman decided to write his own.[11] Stallman's initial plan[12] was to rewrite an existing compiler from Lawrence Livermore Laboratory from Pastel to C with some help from Len Tower and others.[13] Stallman wrote a new C front end for the Livermore compiler, but then realized that it required megabytes of stack space, an impossibility on a 68000 Unix system with only 64&#160;KB, and concluded he would have to write a new compiler from scratch.[12] None of the Pastel compiler code ended up in GCC, though Stallman did use the C front end he had written.[12]
+GCC was first released March 22, 1987, available by FTP from MIT.[14] Stallman was listed as the author but cited others for their contributions, including Jack Davidson and Christopher Fraser for the idea of using RTL as an intermediate language, Paul Rubin for writing most of the preprocessor and Leonard Tower for "parts of the parser, RTL generator, RTL definitions, and of the Vax machine description."[15] Described as the "first free software hit" by Salus, the GNU compiler arrived just at the time when Sun Microsystems was unbundling its development tools from its operating system, selling them separately at a higher combined price than the previous bundle, which led many of Sun's users to buy or download GCC instead of the vendor's tools.[16] By 1990, GCC supported thirteen computer architectures, was outperforming several vendor compilers, was shipped by Data General and NeXT with their workstations and was used by Lotus Development Corporation.[17]
+By 1991, GCC 1.x had reached a point of stability, but architectural limitations prevented many desired improvements, so the FSF started work on GCC 2.x.[citation needed]
+As GCC was licensed under the GPL, programmers wanting to work in other directions&#160;— particularly those writing interfaces for languages other than C&#160;— were free to develop their own fork of the compiler, provided they meet the GPL's terms, including its requirements to distribute source code. Multiple forks proved inefficient and unwieldy, however, and the difficulty in getting work accepted by the official GCC project was greatly frustrating for many.[18] The FSF kept such close control on what was added to the official version of GCC 2.x that GCC was used as one example of the "cathedral" development model&#160;– in Eric S. Raymond's essay The Cathedral and the Bazaar.
+With the release of 4.4BSD in 1994, GCC became the default compiler for most BSD systems.[citation needed]
+In 1997, a group of developers formed EGCS&#160;– Experimental/Enhanced GNU Compiler System[18][19]&#160;– to merge several experimental forks into a single project. The basis of the merger was a GCC development snapshot taken between the 2.7 and 2.81 releases. Projects merged included g77 (Fortran), PGCC (P5 Pentium-optimized GCC), many C++ improvements, and many new architectures and operating system variants.[20][21] EGCS development proved considerably more vigorous than GCC development, so much so that the FSF officially halted development on their GCC 2.x compiler, blessed EGCS as the official version of GCC and appointed the EGCS project as the GCC maintainers in April 1999. With the release of GCC 2.95 in July 1999 the two projects were once again united.
+GCC has since been maintained by a varied group of programmers from around the world under the direction of a steering committee.[22] It has been ported to more kinds of processors and operating systems than any other compiler.[23][unreliable source?]
+Design[edit]
+
+
+
+
+To obtain a stable ABI, like e.g. the Linux Standard Base aims to procure, the Compiler version is important.
+
+
+GCC's external interface follows Unix conventions. Users invoke a language-specific driver program (gcc for C, g++ for C++, etc.), which interprets command arguments, calls the actual compiler, runs the assembler on the output, and then optionally runs the linker to produce a complete executable binary.
+Each of the language compilers is a separate program that reads source code and outputs machine code. All have a common internal structure. A per-language front end parses the source code in that language and produces an abstract syntax tree ("tree" for short).
+These are, if necessary, converted to the middle end's input representation, called GENERIC form; the middle end then gradually transforms the program towards its final form. Compiler optimizations and static code analysis techniques (such as FORTIFY_SOURCE,[24] a compiler directive that attempts to discover some buffer overflows) are applied to the code. These work on multiple representations, mostly the architecture-independent GIMPLE representation and the architecture-dependent RTL representation. Finally, machine code is produced using architecture-specific pattern matching originally based on an algorithm of Jack Davidson and Chris Fraser.
+GCC was written primarily in C except for parts of the Ada front end. The distribution includes the standard libraries for Ada, C++, and Java whose code is mostly written in those languages.[25] On some platforms, the distribution also includes a low-level runtime library, libgcc, written in a combination of machine-independent C and processor-specific machine code, designed primarily to handle arithmetic operations that the target processor cannot perform directly.[26]
+In May 2010, the GCC steering committee decided to allow use of a C++ compiler to compile GCC.[3] The compiler was intended to be written in C plus a subset of features from C++. In particular, this was decided so that GCC's developers could use the destructors and generics features of C++.[27]
+In August 2012, the GCC steering committee announced that GCC now uses C++ as its implementation language.[28] This means that to build GCC from sources, a C++ compiler is required that understands ISO/IEC C++03 standard.
+Front ends[edit]
+Each front end uses a parser to produce the syntax tree abstraction of a given source file. Due to the syntax tree abstraction, source files of any of the different supported languages can be processed by the same back end. GCC started out using LALR parsers generated with Bison, but gradually switched to hand-written recursive-descent parsers; for C++ in 2004,[29] and for C and Objective-C in 2006.[30] Currently all front ends use hand-written recursive-descent parsers.
+Until recently, the tree representation of the program was not fully independent of the processor being targeted.
+The meaning of a tree was somewhat different for different language front ends, and front ends could provide their own tree codes. This was simplified with the introduction of GENERIC and GIMPLE, two new forms of language-independent trees that were introduced with the advent of GCC 4.0. GENERIC is more complex, based on the GCC 3.x Java front end's intermediate representation. GIMPLE is a simplified GENERIC, in which various constructs are lowered to multiple GIMPLE instructions. The C, C++ and Java front ends produce GENERIC directly in the front end. Other front ends instead have different intermediate representations after parsing and convert these to GENERIC.
+In either case, the so-called "gimplifier" then converts this more complex form into the simpler SSA-based GIMPLE form that is the common language for a large number of powerful language- and architecture-independent global (function scope) optimizations.
+GENERIC and GIMPLE[edit]
+GENERIC is an intermediate representation language used as a "middle end" while compiling source code into executable binaries. A subset, called GIMPLE, is targeted by all the front ends of GCC.
+The middle stage of GCC does all of the code analysis and optimization, working independently of both the compiled language and the target architecture, starting from the GENERIC[31] representation and expanding it to register transfer language (RTL). The GENERIC representation contains only the subset of the imperative programming constructs optimized by the middle end.
+In transforming the source code to GIMPLE,[32] complex expressions are split into a three-address code using temporary variables. This representation was inspired by the SIMPLE representation proposed in the McCAT compiler[33] by Laurie J. Hendren[34] for simplifying the analysis and optimization of imperative programs.
+Optimization[edit]
+Optimization can occur during any phase of compilation; however, the bulk of optimizations are performed after the syntax and semantic analysis of the front end and before the code generation of the back end; thus a common, even though somewhat contradictory, name for this part of the compiler is the "middle end."
+The exact set of GCC optimizations varies from release to release as it develops, but includes the standard algorithms, such as loop optimization, jump threading, common subexpression elimination, instruction scheduling, and so forth. The RTL optimizations are of less importance with the addition of global SSA-based optimizations on GIMPLE trees,[35] as RTL optimizations have a much more limited scope, and have less high-level information.
+Some of these optimizations performed at this level include dead code elimination, partial redundancy elimination, global value numbering, sparse conditional constant propagation, and scalar replacement of aggregates. Array dependence based optimizations such as automatic vectorization and automatic parallelization are also performed. Profile-guided optimization is also possible.[36]
+Back end[edit]
+The behavior of GCC's back end is partly specified by preprocessor macros and functions specific to a target architecture, for instance to define its endianness, word size, and calling conventions. The front part of the back end uses these to help decide RTL generation, so although GCC's RTL is nominally processor-independent, the initial sequence of abstract instructions is already adapted to the target. At any moment, the actual RTL instructions forming the program representation have to comply with the machine description of the target architecture.
+The machine description file contains RTL patterns, along with operand constraints, and code snippets to output the final assembly. The constraints indicate that a particular RTL pattern might only apply (for example) to certain hardware registers, or (for example) allow immediate operand offsets of only a limited size (e.g. 12, 16, 24, … bit offsets, etc.). During RTL generation, the constraints for the given target architecture are checked. In order to issue a given snippet of RTL, it must match one (or more) of the RTL patterns in the machine description file, and satisfy the constraints for that pattern; otherwise, it would be impossible to convert the final RTL into machine code.
+Towards the end of compilation, valid RTL is reduced to a strict form in which each instruction refers to real machine registers and a pattern from the target's machine description file. Forming strict RTL is a complicated task; an important step is register allocation, where real hardware registers are chosen to replace the initially assigned pseudo-registers. This is followed by a "reloading" phase; any pseudo-registers that were not assigned a real hardware register are 'spilled' to the stack, and RTL to perform this spilling is generated. Likewise, offsets that are too large to fit into an actual instruction must be broken up and replaced by RTL sequences that will obey the offset constraints.
+In the final phase, the machine code is built by calling a small snippet of code, associated with each pattern, to generate the real instructions from the target's instruction set, using the final registers, offsets, and addresses chosen during the reload phase. The assembly-generation snippet may be just a string, in which case a simple string substitution of the registers, offsets, and/or addresses into the string is performed. The assembly-generation snippet may also be a short block of C code, performing some additional work, but ultimately returning a string containing the valid assembly code.
+Features[edit]
+Some features of GCC include:
+
+Link-time optimization optimizes across object file boundaries to directly improve the linked binary. Link-time optimization relies on an intermediate file containing the serialization of some -Gimple- representation included in the object file.[37] The file is generated alongside the object file during source compilation. Each source compilation generates a separate object file and link-time helper file. When the object files are linked, the compiler is executed again and uses the helper files to optimize code across the separately compiled object files.
+Plugins can extend the GCC compiler directly.[38] Plugins allow a stock compiler to be tailored to specific needs by external code loaded as plugins. For example, plugins can add, replace, or even remove middle-end passes operating on Gimple representations.[39] Several GCC plugins have already been published, notably the GCC Python Plugin, which links against libpython, and allows one to invoke arbitrary Python scripts from inside the compiler. The aim is to allow GCC plugins to be written in Python. The MELT plugin provides a high-level Lisp-like language to extend GCC.[40]
+
+Languages[edit]
+The standard compiler releases since 4.6 include front ends for C (gcc), C++ (g++), Objective-C, Objective-C++, Fortran (gfortran), Java (gcj), Ada (GNAT), and Go (gccgo).[41] A popular parallel language extension, OpenMP, is also supported. Version 5.0 added support for Cilk Plus, and since version 5.1, there is preliminary support for OpenACC.[42]
+The Fortran front end was g77 before version 4.0, which only supports FORTRAN 77. In newer versions, g77 is dropped in favor of the new GNU Fortran front end (retaining most of g77's language extensions) that supports Fortran 95 and large parts of Fortran 2003 and Fortran 2008 as well.[43][44][45] A front-end for CHILL was dropped due to a lack of maintenance.[46]
+A few experimental branches exist to support additional languages, such as the GCC UPC compiler[47] for Unified Parallel C. Third-party front-ends exist for Pascal (gpc), Mercury, Modula-2, Modula-3, PL/I, D (gdc),[48] and VHDL (ghdl).
+Architectures[edit]
+GCC target processor families as of version 4.3 include:
+
+
+Alpha
+ARM
+AVR
+Blackfin
+Epiphany (GCC 4.8)
+H8/300
+HC12
+IA-32 (x86)
+IA-64 (Intel Itanium)
+MIPS
+Motorola 68000
+PA-RISC
+PDP-11
+PowerPC
+R8C / M16C / M32C
+SPARC
+SPU
+SuperH
+System/390 / zSeries
+VAX
+x86-64
+
+
+Lesser-known target processors supported in the standard release have included:
+
+
+68HC11
+A29K
+CR16
+C6x
+D30V
+DSP16xx
+ETRAX CRIS
+FR-30
+FR-V
+Intel i960
+IP2000
+M32R
+MCORE
+MIL-STD-1750A
+MMIX
+MN10200
+MN10300
+Motorola 88000
+NS32K
+ROMP
+RL78
+Stormy16
+V850
+Xtensa
+
+
+Additional processors have been supported by GCC versions maintained separately from the FSF version:
+
+
+Cortus APS3
+ARC
+AVR32
+C166 and C167
+D10V
+EISC
+eSi-RISC
+Hexagon[49]
+LatticeMico32
+LatticeMico8
+MeP
+MicroBlaze
+Motorola 6809
+MSP430
+NEC SX architecture[50]
+Nios II and Nios
+OpenRISC
+PDP-10
+PIC24/dsPIC
+PIC32
+Propeller
+RISC-V
+Saturn (HP48XGCC)
+System/370
+TIGCC (m68k variant)
+TriCore
+Z8000
+ZPU
+
+
+The gcj Java compiler can target either a native machine language architecture or the Java Virtual Machine's Java bytecode.[51] When retargeting GCC to a new platform, bootstrapping is often used.
+Development[edit]
+The current stable version of GCC is 5.2, which was released on July 16, 2015.[52] The release includes the new experimental libgccjit shared library for just-in-time compilation.
+As of version 4.8, GCC uses C++ as its implementation language.[53]
+GCC 4.6 supports many new Objective-C features, such as declared and synthesized properties, dot syntax, fast enumeration, optional protocol methods, method/protocol/class attributes, class extensions and a new GNU Objective-C runtime API. It also supports the Go programming language and includes the libquadmath library, which provides quadruple-precision mathematical functions on targets supporting the __float128 datatype. The library is used to provide the REAL(16) type in GNU Fortran on such targets.
+GCC uses many standard tools in its build, including Perl, Flex, Bison, and other common tools. In addition it currently requires three additional libraries to be present in order to build: GMP, MPC, and MPFR.
+The trunk concentrates the major part of the development efforts, where new features are implemented and tested. Eventually, the code from the trunk will become the next major release of GCC.
+License[edit]
+The GCC runtime exception[54] permits compilation of proprietary (and free software) programs with GCC and usage of free software plugins.
+Uses[edit]
+Several companies[55] make a business out of supplying and supporting GCC ports to various platforms.
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+Computer programming portal
+
+
+
+
+MinGW
+List of compilers
+
+References[edit]
+
+
+^ a b "GCC Releases". GNU Project. Retrieved 2006-12-27.&#160;
+^ "GCC Releases – GNU Project – Free Software Foundation (FSF)".&#160;
+^ a b "GCC allows C++&#160;– to some degree". The H. June 1, 2010.&#160;
+^ "GCC Runtime Library Exception". Retrieved 2013-02-28.&#160;
+^ "Programming Languages Supported by GCC". GNU Project. Retrieved 2014-06-23.&#160;
+^ "Symbian GCC Improvement Project". Retrieved 2007-11-08.&#160;
+^ "Linux Board Support Packages". Retrieved 2008-08-07.&#160;
+^ "setting up gcc as a cross-compiler". ps2stuff. 2002-06-08. Archived from the original on 11 December 2008. Retrieved 2008-12-12.&#160;
+^ "sh4 g++ guide". Archived from the original on 2002-12-20. Retrieved 2008-12-12.&#160;
+^ http://llvm.org/Users.html
+^ von Hagen, William (2006). The Definitive Guide to GCC. Definitive Guides (2nd ed.). Apress. p.&#160;XXVII. ISBN&#160;978-1-4302-0219-6. So he wrote to VUCK's author asking if GNU could use it. Evidently, VUCK's developer was uncooperative, responding that the university was free but that the compiler was not.&#160;
+^ a b c Stallman, Richard (September 20, 2011). "About the GNU Project". The GNU Project. Retrieved October 9, 2011.&#160;
+^ Puzo, Jerome E., ed. (February 1986). "Gnu's Zoo". GNU'S Bulletin (Free Software Foundation) 1 (1). Retrieved 2007-08-11.&#160;
+^ Richard M. Stallman (forwarded by Leonard H. Tower, Jr.) (March 22, 1987). "GNU C compiler beta test release". Newsgroup:&#160;comp.lang.c. Retrieved October 9, 2011.&#160;
+^ Stallman, Richard M. (June 22, 2001) [First published 1988], "Contributors to GNU CC", Using and Porting the GNU Compiler Collection (GCC), Free Software Foundation, Inc., p.&#160;7, retrieved June 18, 2015.&#160;
+^ Salus, Peter H. (2005). "Chapter 10. SUN and gcc". The Daemon, the Gnu and the Penguin. Groklaw.&#160;
+^ Garfinkel, Simson L. (6 August 1990). "Get ready for GNU software". Computerworld.&#160;
+^ a b Henkel-Wallace, David (August 15, 1997), A new compiler project to merge the existing GCC forks, retrieved May 25, 2012.&#160;
+^ "Pentium Compiler FAQ".&#160;
+^ "A Brief History of GCC".&#160;
+^ "The Short History of GCC development".&#160;
+^ "GCC Steering Committee".&#160;
+^ "Linux Information Project". LINFO. Retrieved 2010-04-27. The GCC has been ported to (i.e., modified to run on) more than 60 platforms, which is more than for any other compiler.&#160;
+^ "Security Features: Compile Time Buffer Checks (FORTIFY_SOURCE)". fedoraproject.org. Retrieved 2009-03-11.&#160;
+^ "languages used to make GCC".&#160;
+^ "GCC Internals". GCC.org. Retrieved March 1, 2010.&#160;
+^ "An email by Richard Stallman on emacs-devel".&#160;
+^ "GCC 4.8 Release Series: Changes, New Features, and Fixes". Retrieved October 4, 2013.&#160;
+^ "GCC 3.4 Release Series Changes, New Features, and Fixes".&#160;
+^ "GCC 4.1 Release Series Changes, New Features, and Fixes".&#160;
+^ "GENERIC in GNU Compiler Collection Internals".&#160;
+^ "GIMPLE in GNU Compiler Collection Internals".&#160;
+^ McCAT at the Wayback Machine (archived August 12, 2004)
+^ "Laurie J. Hendren".&#160;
+^ Novillo, Diego (December 2004). "From Source to Binary: The Inner Workings of GCC". Red Hat Magazine.&#160;
+^ "Profile-guided optimization is demonstrated here".&#160;
+^ "Link Time Optimization". GCC wiki. October 3, 2009. Retrieved July 8, 2013.&#160;
+^ "Plugins". GCC online documentation. Retrieved July 8, 2013.&#160;
+^ Starynkevitch, Basile. "GCC plugins thru the MELT example" (PDF). Retrieved 2014-04-10.&#160;
+^ "About GCC MELT". Retrieved July 8, 2013.&#160;
+^ "GCC Front Ends". gnu.org. Retrieved November 25, 2011.&#160;
+^ "GCC 5 Release Series".&#160;
+^ "Chart of Fortran 2003 Features supported by GNU Fortran". GNU. Retrieved 2009-06-25.&#160;
+^ "Chart of Fortran 2008 Features supported by GNU Fortran". GNU. Retrieved 2009-06-25.&#160;
+^ "Fortran 2003 Features in GNU Fortran".&#160;
+^ "PATCH] Remove chill". gcc.gnu.org. Retrieved July 29, 2010.&#160;
+^ "GCC UPC (GCC Unified Parallel C)". www.gccupc.org. 2006-02-20. Retrieved 2009-03-11.&#160;
+^ "gdc project on bitbucket". Retrieved July 3, 2010.&#160;
+^ "Hexagon Project Wiki".&#160;
+^ "sx-gcc: port gcc to nec sx vector cpu".&#160;
+^ "The GNU Compiler for the Java Programming Language". Retrieved 2010-04-22.&#160;
+^ "GCC 5.2 Released".&#160;
+^ "GCC 4.8 Release Series: Changes, New Features, and Fixes".&#160;
+^ "GCC runtime exception". FSF. Retrieved 2014-04-10.&#160;
+^ "FSF Service Directory".&#160;
+
+
+Further reading[edit]
+
+Using the GNU Compiler Collection (GCC), Free Software Foundation, 2008.
+GNU Compiler Collection (GCC) Internals, Free Software Foundation, 2008.
+An Introduction to GCC, Network Theory Ltd., 2004 (Revised August 2005). ISBN 0-9541617-9-3.
+Arthur Griffith, GCC: The Complete Reference. McGrawHill / Osborne, 2002. ISBN 0-07-222405-3.
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to GCC.
+
+
+
+
+
+Wikibooks has a book on the topic of: GNU C Compiler Internals
+
+
+
+Official
+
+
+Official website
+GCC Release Timeline
+GCC Development Plan
+
+
+Other
+
+
+GCC optimisations
+Collection of GCC 4.0.2 architecture and internals documents at I.I.T. Bombay
+Kerner, Sean Michael (March 2, 2006). "New GCC Heavy on Optimization". internetnews.com&#160;
+Kerner, Sean Michael (April 22, 2005). "Open Source GCC 4.0: Older, Faster". internetnews.com&#160;
+From Source to Binary: The Inner Workings of GCC, by Diego Novillo, Red Hat Magazine, December 2004
+A 2003 paper on GENERIC and GIMPLE
+Marketing Cygnus Support, an essay covering GCC development for the 1990s, with 30 monthly reports for in the "Inside Cygnus Engineering" section near the end
+EGCS 1.0 announcement
+EGCS 1.0 features list
+Fear of Forking, an essay by Rick Moen recording seven well-known forks, including the GCC/EGCS one
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+GNU Project
+
+
+
+
+
+
+History
+
+
+
+GNU Manifesto
+Free Software Foundation
+
+Europe
+India
+Latin America
+
+
+History of free software
+
+
+
+
+
+
+
+
+
+
+
+Licenses
+
+
+
+GNU General Public License
+GNU Lesser General Public License
+Affero General Public License
+GNU Free Documentation License
+GPL linking exception
+
+
+
+
+
+
+
+
+Software
+
+
+
+GNU (variants)
+Hurd
+Linux-libre
+glibc
+Bash
+coreutils
+findutils
+Build system
+GCC
+binutils
+GDB
+GRUB
+GNOME
+GNUstep
+GIMP
+GNU Emacs
+GNU TeXmacs
+GNU Octave
+GNU R
+GSL
+GMP
+GNU Electric
+GNU Archimedes
+GNUnet
+GNU Privacy Guard
+Gnuzilla (IceCat)
+GNU Health
+GNUmed
+GNU LilyPond
+GNU Go
+GNU Chess
+Gnash
+more...
+
+
+
+
+
+
+
+
+Public
+speakers
+
+
+
+Alexandre Oliva
+Benjamin Mako Hill
+Bradley M. Kuhn
+Eben Moglen
+Federico Heinz
+Georg C. F. Greve
+John Sullivan
+Loïc Dachary
+Nagarjuna G.
+Ricardo Galli
+Richard Stallman
+Robert J. Chassell
+
+
+
+
+
+
+
+
+Other topics
+
+
+
+GNU/Linux naming controversy
+Revolution OS
+Free Software Foundation anti-Windows campaigns
+Defective by Design
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Free and open-source software
+
+
+
+
+
+
+General
+
+
+
+Alternative terms for free software
+Comparison of open source and closed source
+Comparison of source code hosting facilities
+Free software
+Free software project directories
+Gratis versus libre
+Long-term support
+Open-source software
+Open-source software development
+Outline
+SPDX
+
+
+
+
+
+
+
+
+Software packages
+
+
+
+Audio
+Bioinformatics
+Codecs
+Collaboration
+Configuration management
+Geophysics
+Health
+Mathematics
+Operating systems
+Programming languages
+Routing
+Statistics
+Television
+Video games
+Web applications
+
+Content management systems
+E-commerce
+
+
+Wireless drivers
+Word processors
+Android apps
+iOS apps
+Commercial
+Trademarked
+Formerly proprietary
+
+
+
+
+
+
+
+
+History
+
+
+
+BSD
+GNU
+Haiku
+Linux
+Mozilla
+
+Application Suite
+Firefox
+Thunderbird
+
+
+
+
+
+
+
+
+
+
+Community
+
+
+
+Free software movement
+Open-source movement
+Organizations
+Events
+
+
+
+
+
+
+
+
+Licenses
+
+
+
+Apache
+APSL
+Artistic
+Beerware
+Boost
+BSD
+CC0
+CDDL
+EPL
+GNU GPL
+GNU LGPL
+ISC
+MIT
+MPL
+Ms-PL/RL
+WTFPL
+zlib
+
+
+
+
+
+
+
+
+License types
+and standards
+
+
+
+Comparison of free and open-source software licenses
+Contributor License Agreement
+Copyfree
+Copyleft
+Debian Free Software Guidelines
+Definition of Free Cultural Works
+Free license
+The Free Software Definition
+The Open Source Definition
+Open-source license
+Permissive free software licence
+Public domain
+Viral license
+
+
+
+
+
+
+
+
+Challenges
+
+
+
+Binary blob
+Digital rights management
+Free and open-source graphics device driver
+Lack of wireless driver support
+Hardware restrictions
+License proliferation
+Mozilla software rebranding
+Proprietary software
+SCO–Linux controversies
+Secure boot
+Software patents
+Software security
+Trusted Computing
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+The Cathedral and the Bazaar
+Forking
+Linux distribution
+Microsoft Open Specification Promise
+Revolution OS
+
+
+
+
+
+
+
+
+
+
+
+ Book
+ Category
+ Commons
+ Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=GNU_Compiler_Collection&amp;oldid=691610191"					
+				Categories: 1987 softwareC compilersC++ compilersCompilersCross-platform free softwareFortran compilersFree compilers and interpretersGNU Project softwareJava development toolsPascal compilersSoftware using the GPL licenseUnix programming toolsHidden categories: Use mdy dates from March 2015All articles with unsourced statementsArticles with unsourced statements from October 2015Articles with unsourced statements from August 2011All articles lacking reliable referencesArticles lacking reliable references from April 2013				
+							
+		
+		
+			

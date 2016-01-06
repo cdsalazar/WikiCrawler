@@ -1,0 +1,84 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Value (computer science)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (August 2009)
+
+
+In computer science, a value is an expression which cannot be evaluated any further (a normal form).[1] The members of a type are the values of that type.[2] For example, the expression 1 + 2 is not a value as it can be reduced to the expression 3. This expression cannot be reduced any further (and is a member of the type Nat) and therefore is a value.
+The "value of a variable" is given by the corresponding mapping in the environment.[citation needed] In languages with assignable variables it becomes necessary to distinguish between the r-value (or contents) and the l-value (or location) of a variable.[3]
+In declarative (high-level) languages, values have to be referentially transparent. This means that the resulting value is independent of the location in which a (sub-)expression needed to compute the value is stored. Only the contents of the location (the bits, whether they are 1 or 0) and their interpretation are significant.[citation needed]
+
+
+
+Contents
+
+
+1 Assignment: l-values and r-values
+2 In assembly language
+3 Notes
+4 References
+5 External links
+
+
+
+Assignment: l-values and r-values[edit]
+Some languages use the idea of l-values and r-values. L-values have storage addresses that are programmatically accessible to the running program (e.g., via some address-of operator like "&amp;" in C/C++), meaning that they are variables or dereferenced references to a certain memory location. R-values can be l-values (see below) or non-l-values—a term only used to distinguish from l-values. Consider the C expression 4 + 9. When executed, the computer generates an integer value of 13, but because the program has not explicitly designated where in the computer this 13 is stored, the expression is an r-value. On the other hand, if a C program declares a variable x and assigns the value of 13 to x, then the expression x has a value of 13 and is an l-value.
+In C, the term l-value originally meant something that could be assigned to (hence the name, indicating it is on the left side of the assignment operator), but since the reserved word const (constant) was added to the language, the term is now 'modifiable l-value'. In C++11 a special semantic-glyph &amp;&amp; exists, to denote the use/access of the expression's address for the compiler only; i.e., the address cannot be retrieved using the address-of, &amp;, operator during the run-time of the program (see the use of move semantics).
+This type of reference can be applied to all r-values including non-l-values as well as l-values. Some processors provide one or more instructions which take an immediate value, sometimes referred to as "immediate" for short. An immediate value is stored as part of the instruction which employs it, usually to load into, add to, or subtract from, a register. The other parts of the instruction are the opcode, and destination. The latter may be implicit. (A non-immediate value may reside in a register, or be stored elsewhere in memory, requiring the instruction to contain a direct or indirect address [e.g., index register address] to the value.)
+The l-value expression designates (refers to) an object. A non-modifiable l-value is addressable, but not assignable. A modifiable l-value allows the designated object to be changed as well as examined. An r-value is any expression, a non-l-value is any expression that is not an l-value. One example is an "immediate value" (look below) and consequently not addressable.
+The notion of l-values and r-values was introduced by CPL. The notions in an expression of r-value, l-value, and r-value/l-value are analogous to the parameter modes of input parameter (has a value), output parameter (can be assigned), and input/output parameter (has a value and can be assigned), though the technical details differ between contexts and languages.
+In assembly language[edit]
+A value can be virtually any kind of data by a given data type, for instance a string, a digit, a single letter.
+Processors often support more than one size of immediate data, e.g. 8 or 16 bit, employing a unique opcode and mnemonic for each instruction variant. If a programmer supplies a data value that will not fit, the assembler issues an "Out of range" error message. Most assemblers allow an immediate value to be expressed as ASCII, decimal, hexadecimal, octal, or binary data. Thus, the ASCII character 'A' is the same as 65 or 0x41. The byte order of strings may differ between processors, depending on the assembler and computer architecture.
+Notes[edit]
+
+
+^ Mitchell 1996, p.&#160;92.
+^ Mitchell 1996, p.&#160;9.
+^ Mitchell 1996, pp.&#160;389–390.
+
+
+References[edit]
+
+Mitchell, John C. (1996). Foundations for Programming Languages. The MIT Press. ISBN&#160;0-262-13321-0.&#160;
+Strachey, Christopher (2000). "Fundamental Concepts in Programming Languages". Higher-Order and Symbolic Computation 13: 11–49. doi:10.1023/A:1010000313106.&#160;
+
+External links[edit]
+
+Value Object
+Transfer Object Pattern
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Value_(computer_science)&amp;oldid=646068693"					
+				Categories: Computer dataProgramming language conceptsType theoryHidden categories: Articles needing additional references from August 2009All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from March 2011				
+							
+		
+		
+			

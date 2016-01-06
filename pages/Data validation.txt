@@ -1,0 +1,147 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Data validation
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer science, data validation is the process of ensuring that a program operates on clean, correct and useful data. It uses routines, often called "validation rules" "validation constraints" or "check routines", that check for correctness, meaningfulness, and security of data that are input to the system. The rules may be implemented through the automated facilities of a data dictionary, or by the inclusion of explicit application program validation logic.
+
+
+
+Contents
+
+
+1 Overview
+2 Different kinds of validation
+
+2.1 Data type validation
+2.2 Simple range and constraint validation
+2.3 Code and cross-reference validation
+2.4 Structured validation
+
+
+3 Validation methods
+
+3.1 Post-validation actions
+
+
+4 Validation and security
+5 References
+
+
+
+Overview[edit]
+Data validation is intended to provide certain well-defined guarantees for fitness, accuracy, and consistency for any of various kinds of user input into an application or automated system. Data validation rules can be defined and designed using any of various methodologies, and be deployed in any of various contexts.
+Data validation rules may be defined, designed and deployed, for example:
+Definition and design contexts:
+
+as a part of requirements-gathering phase in a software engineering or designing a software specification
+as part of an operations modeling phase in business process modeling
+
+Deployment contexts:
+
+as part of a user-interface
+as a set of programs or business-logic routines in a programming language
+as a set of stored-procedures in a database management system
+
+For business applications, data validation can be defined through declarative data integrity rules, or procedure-based business rules.[1] Data that does not conform to these rules will negatively affect business process execution. Therefore, data validation should start with business process definition and set of business rules within this process. Rules can be collected through the requirements capture exercise.[2]
+Different kinds of validation[edit]
+In evaluating the basics of data validation, generalizations can be made regarding the different types of validation, according to the scope, complexity, and purpose of the various validation operations to be carried out.
+For example:
+
+Data type validation;
+Range and constraint validation;
+Code and Cross-reference validation; and
+Structured validation
+
+Data type validation[edit]
+Data type validation is customarily carried out on one or more simple data fields.
+The simplest kind of data type validation verifies that the individual characters provided through user input are consistent with the expected characters of one or more known primitive data types; as defined in a programming language or data storage and retrieval mechanism.
+For example, many database systems allow the specification of the following primitive data types: 1) integer; 2) float (decimal); or 3) string.
+Similarly, telephone numbers are routinely expected to include the digits and possibly the characters +, -, (, and ) (plus, minus, and parentheses). A more sophisticated data validation routine would check to see the user had entered a valid country code, i.e., that the number of digits entered matched the convention for the country or area specified.
+A validation process involves two distinct steps: (a) Validation Check and (b) Post-Check action. The check step uses one or more computational rules (see section below) to determine if the data is valid. The Post-validation action sends feedback to help enforce validation.
+Simple range and constraint validation[edit]
+Simple range and constraint validation may examine user input for consistency with a minimum/maximum range, or consistency with a test for evaluating a sequence of characters, such as one or more tests against regular expressions.
+Code and cross-reference validation[edit]
+Code and cross-reference validation includes tests for data type validation, combined with one or more operations to verify that the user-supplied data is consistent with one or more external rules, requirements, or validity constraints relevant to a particular organization, context or set of underlying assumptions. These additional validity constraints may involve cross-referencing supplied data with a known look-up table or directory information service such as LDAP.
+For example, a user may enter a well-formed string that matches the specification for a valid e-mail address, as defined in RFC 5322 [3][4][5] but that well-formed string might not actually correspond to a resolvable domain connected to an active e-mail account.
+Structured validation[edit]
+Structured validation allows for the combination of any of various basic data type validation steps, along with more complex processing. Such complex processing may include the testing of conditional constraints for an entire complex data object or set of process operations within a system.
+
+Validation methods[edit]
+Allowed character checks Checks that ascertain that only expected characters are present in a field. For example a numeric field may only allow the digits 0-9, the decimal point and perhaps a minus sign or commas. A text field such as a personal name might disallow characters such as &lt; and &gt;, as they could be evidence of a markup-based security attack. An e-mail address might require at least one @ sign and various other structural details. Regular expressions are effective ways of implementing such checks. (See also data type checks below)
+Batch totals Checks for missing records. Numerical fields may be added together for all records in a batch. The batch total is entered and the computer checks that the total is correct, e.g., add the 'Total Cost' field of a number of transactions together.
+Cardinality check Checks that record has a valid number of related records. For example if Contact record classified as a Customer it must have at least one associated Order (Cardinality &gt; 0). If order does not exist for a "customer" record then it must be either changed to "seed" or the order must be created. This type of rule can be complicated by additional conditions. For example if contact record in Payroll database is marked as "former employee", then this record must not have any associated salary payments after the date on which employee left organization (Cardinality = 0).
+Check digits Used for numerical data. An extra digit is added to a number which is calculated from the digits. The computer checks this calculation when data are entered. For example the last digit of an ISBN for a book is a check digit calculated modulus 10.[3]
+Consistency checks Checks fields to ensure data in these fields corresponds, e.g., If Title = "Mr.", then Gender = "M".
+Control totals This is a total done on one or more numeric fields which appears in every record. This is a meaningful total, e.g., add the total payment for a number of Customers.
+Cross-system consistency checks Compares data in different systems to ensure it is consistent, e.g., The address for the customer with the same id is the same in both systems. The data may be represented differently in different systems and may need to be transformed to a common format to be compared, e.g., one system may store customer name in a single Name field as 'Doe, John Q', while another in three different fields: First_Name (John), Last_Name (Doe) and Middle_Name (Quality); to compare the two, the validation engine would have to transform data from the second system to match the data from the first, for example, using SQL: Last_Name || ', ' || First_Name || substr(Middle_Name, 1, 1) would convert the data from the second system to look like the data from the first 'Doe, John Q'
+Data type checks Checks the data type of the input and give an error message if the input data does not match with the chosen data type, e.g., In an input box accepting numeric data, if the letter 'O' was typed instead of the number zero, an error message would appear.
+File existence check Checks that a file with a specified name exists. This check is essential for programs that use file handling.
+Format or picture check Checks that the data is in a specified format (template), e.g., dates have to be in the format DD/MM/YYYY. Regular expressions should be considered for this type of validation.
+Hash totals This is just a batch total done on one or more numeric fields which appears in every record. This is a meaningless total, e.g., add the Telephone Numbers together for a number of Customers.
+Limit check Unlike range checks, data are checked for one limit only, upper OR lower, e.g., data should not be greater than 2 (&lt;=2).
+Logic check Checks that an input does not yield a logical error, e.g., an input value should not be 0 when it will divide some other number somewhere in a program.
+Presence check Checks that important data is actually present and have not been missed out, e.g., customers may be required to have their telephone numbers listed.
+Range check Checks that the data is within a specified range of values, e.g., the month of a person's date of birth should lie between 1 and 12.
+Referential integrity In modern Relational database values in two tables can be linked through foreign key and primary key. If values in the primary key field are not constrained by database internal mechanism,[4] then they should be validated. Validation of the foreign key field checks that referencing table must always refer to a valid row in the referenced table.[5]
+Spelling and grammar check Looks for spelling and grammatical errors.
+Uniqueness check Checks that each value is unique. This can be applied to several fields (i.e. Address, First Name, Last Name).
+Table look up check A table look up check takes the entered data item and compares it to a valid list of entries that are stored in a database table.
+Post-validation actions[edit]
+
+
+
+
+
+This section needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (July 2012)
+
+
+
+Enforcement Action
+
+Enforcement action typically rejects the data entry request and requires the input actor to make a change that brings the data into compliance. This is most suitable for interactive use, where a real person is sitting on the computer and making entry. It also works well for batch upload, where a file input may be rejected and a set of messages sent back to the input source for why the data is rejected. Another form of enforcement action involves automatically changing the data and saving a conformant version instead of the original version. This is most suitable for cosmetic change. For example, converting an [all-caps] entry to a [Pascal case] entry does not need user input. An inappropriate use of automatic enforcement would be in situations where the enforcement leads to loss of business information. For example, saving a truncated comment if the length is longer than expected. This is not typically a good thing since it may result in loss of significant data.
+
+Advisory Action
+
+Advisory actions typically allow data to be entered unchanged but sends a message to the source actor indicating those validation issues that were encountered. This is most suitable for non-interactive system, for systems where the change is not business critical, for cleansing steps of existing data and for verification steps of an entry process.
+
+Verification Action
+
+Verification actions are special cases of advisory actions. In this case, the source actor is asked to verify that this data is what they would really want to enter, in the light of a suggestion to the contrary. Here, the check step suggests an alternative (e.g.: a check of your mailing address returns a different way of formatting that address or suggests a different address altogether). You would want in this case, to give the user the option of accepting the recommendation or keeping their version. This is not a strict validation process, by design and is useful for capturing addresses to a new location or to a location that is not yet supported by the validation databases.
+Validation and security[edit]
+Failures or omissions in data validation can lead to data corruption or a security vulnerability. Data validation checks that data are valid, sensible, reasonable, and secure before they are processed.
+References[edit]
+
+^ Data Validation, Data Integrity, Designing Distributed Applications with Visual Studio .NET
+^ Arkady Maydanchik (2007), "Data Quality Assessment", Technics Publications, LLC
+^ (sections 3.2.3 and 3.4.1) and RFC 5321 – with a more readable form given in the informational RFC 3696
+^ Written by J. Klensin, the author of RFC 5321
+^ and the associated errata
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Data_validation&amp;oldid=686807525"					
+				Categories: Data securityData qualityHidden categories: Articles needing additional references from July 2012All articles needing additional references				
+							
+		
+		
+			

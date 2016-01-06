@@ -1,0 +1,122 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Name binding
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For bound variables in mathematics, see free variables and bound variables.
+
+
+
+
+
+It has been suggested that this article be merged with Name resolution (programming languages). (Discuss) Proposed since April 2014.
+
+
+In programming languages, name binding is the association of entities (data and/or code) with identifiers.[1] An identifier bound to an object is said to reference that object. Machine languages have no built-in notion of identifiers, but name-object bindings as a service and notation for the programmer is implemented by programming languages. Binding is intimately connected with scoping, as scope determines which names bind to which objects – at which locations in the program code (lexically) and in which one of the possible execution paths (temporally).
+Use of an identifier id in a context that establishes a binding for id is called a binding (or defining) occurrence. In all other occurrences (e.g., in expressions, assignments, and subprogram calls), an identifier stands for what it is bound to; such occurrences are called applied occurrences.
+
+
+
+Contents
+
+
+1 Binding time
+2 Rebinding and mutation
+3 Late static
+4 See also
+5 References
+
+
+
+Binding time[edit]
+The binding of names before the program is run is called static (also "early"); bindings performed as the program runs are dynamic (also "late" or "virtual").
+An example of a static binding is a direct C function call: the function referenced by the identifier cannot change at runtime.
+But an example of dynamic binding is dynamic dispatch, as in a C++ virtual method call. Since the specific type of a polymorphic object is not known before runtime (in general), the executed function is dynamically bound. Take, for example, the following Java code:
+
+
+ public void foo(java.util.List&lt;String&gt; list) {
+     list.add("bar");
+ }
+
+List is an interface, so list must refer to a subtype of it. Is it a reference to a LinkedList, an ArrayList, or some other subtype of List? The actual method referenced by add is not known until runtime. In a language like C, the actual function is known.
+Rebinding and mutation[edit]
+Rebinding should not be confused with mutation – "rebinding" is a change to the referencing identifier; "mutation" is a change to the referenced value. Consider the following Java code:
+
+
+ LinkedList&lt;String&gt; list;
+ list = new LinkedList&lt;String&gt;();
+ list.add("foo");
+ list = null;
+
+The identifier list initially references nothing (it is uninitialized); it is then rebound to reference an object (a linked list of strings). The linked list referenced by list is then mutated, adding a string to the list. Lastly, list is rebound to null.
+Late static[edit]
+Late static binding is a variant of binding somewhere between static and dynamic binding. Consider the following PHP example:
+
+
+class A {
+    static $word = "hello";
+    static function hello() {print self::$word;}
+}
+
+class B extends A {
+    static $word = "bye";
+}
+
+B::hello();
+
+In this example, the PHP interpreter binds the function hello() to class A, and so the call to B::hello() produces the string "hello". If the semantics of self::$word had been based on late static binding, then the result would have been "bye".
+Beginning with PHP version 5.3, late static binding is supported.[2] Specifically, if self::$word in the above were changed to static::$word as shown in the following block, then the result of the call to B::hello() would be "bye":
+
+
+class A {
+    static $word = "hello";
+    static function hello() {print static::$word;}
+}
+
+class B extends A {
+    static $word = "bye";
+}
+
+B::hello();
+
+See also[edit]
+
+Late binding
+Branch table method of applying name binding via branch table or function pointers
+Dynamic dispatch
+Higher-order abstract syntax (HOAS)
+
+References[edit]
+
+
+^ Microsoft (May 11, 2007), Using early binding and late binding in Automation, Microsoft, retrieved May 11, 2009&#160;
+^ "Late Static Bindings". Retrieved July 3, 2013.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Name_binding&amp;oldid=680214168"					
+				Categories: Programming language conceptsHidden categories: Articles to be merged from April 2014All articles to be mergedArticles with example Java code				
+							
+		
+		
+			

@@ -1,0 +1,150 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Interface (Java)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				An interface in Java programming language is an abstract type that is used to specify an interface (in the generic sense of the term) that classes must implement. Interfaces are declared using the interface keyword, and may only contain method signature and constant declarations (variable declarations that are declared to be both static and final). All methods of an Interface do not contain implementation (method bodies) as of all versions below Java 8. Starting with Java 8, default and static methods may have implementation in the interface definition.[1]
+Interfaces cannot be instantiated, but rather are implemented. A class that implements an interface must implement all of the methods described in the interface, or be an abstract class. Object references in Java may be specified to be of an interface type; in each case, they must either be null, or be bound to an object that implements the interface.
+One benefit of using interfaces is that they simulate multiple inheritance. All classes in Java must have exactly one base class, the only exception being java.lang.Object (the root class of the Java type system); multiple inheritance of classes is not allowed.
+A Java class may implement, and an interface may extend, any number of interfaces; however an interface may not implement an interface.
+
+
+
+Contents
+
+
+1 Overview
+2 Usage
+
+2.1 Defining an interface
+2.2 Implementing interfaces in a class
+2.3 Subinterfaces
+
+
+3 Examples
+4 See also
+5 References
+6 External links
+
+
+
+Overview[edit]
+Interfaces are used to encode similarities which the classes of various types share, but do not necessarily constitute a class relationship. For instance, a human and a parrot can both whistle; however, it would not make sense to represent Humans and Parrots as subclasses of a Whistler class. Rather they would most likely be subclasses of an Animal class (likely with intermediate classes), but both would implement the Whistler interface.
+Another use of interfaces is being able to use an object without knowing its type of class, but rather only that it implements a certain interface. For instance, if one were annoyed by a whistling noise, one may not know whether it is a human or a parrot, because all that could be determined is that a whistler is whistling. The call whistler.whistle() will call the implemented method whistle of object whistler no matter what class it has, provided it implements Whistler. In a more practical example, a sorting algorithm may expect an object of type Comparable. Thus, without knowing the specific type, it knows that objects of that type can somehow be sorted.
+For example:
+
+
+  interface Bounceable {
+      void setBounce();  // Note the semicolon
+                         // Interface methods are public, abstract and never final.
+                         // Think of them as prototypes only; no implementations are allowed.
+  }
+
+Usage[edit]
+Defining an interface[edit]
+Interfaces are defined with the following syntax (compare to Java's class definition):
+
+[visibility] interface InterfaceName [extends other interfaces] {
+        constant declarations
+        abstract method declarations
+}
+
+Example: public interface I1 extends I2;
+The body of the interface contains abstract methods, but since all methods in an interface are, by definition, abstract, the abstract keyword is not required. Since the interface specifies a set of exposed behaviors, all methods are implicitly public.
+Thus, a simple interface may be
+
+
+public interface Predator {
+       boolean chasePrey(Prey p);
+       void eatPrey(Prey p);
+}
+
+The member type declarations in an interface are implicitly static, final and public, but otherwise they can be any type of class or interface.[2]
+
+Implementing interfaces in a class[edit]
+The syntax for implementing an interface uses this formula:
+
+... implements InterfaceName[, another interface, another, ...] ...
+
+Classes may implement an interface. For example,
+
+
+public class Lion implements Predator {
+
+        @Override
+        public boolean chasePrey(Prey p) {
+               // programming to  chase prey p (specifically for a lion)
+        }
+
+        @Override
+        public void eatPrey(Prey p) {
+               // programming to eat prey p (specifically for a lion)
+        }
+}
+
+If a class implements an interface and does not implement all its methods, it must be marked as abstract. If a class is abstract, one of its subclasses is expected to implement its unimplemented methods. Although if any of the abstract class' subclasses does not implement all interface methods, the subclass itself must be marked again as abstract.
+Classes can implement multiple interfaces
+
+
+ public class Frog implements Predator, Prey { ... }
+
+Interfaces are commonly used in the Java language for callbacks.[3] Java does not allow the passing of methods (procedures) as arguments. Therefore, the practice is to define an interface and use it as the argument and use the method signature knowing that the signature will be later implemented.
+Subinterfaces[edit]
+Interfaces can extend several other interfaces, using the same formula as described below. For example
+
+
+ public interface VenomousPredator extends Predator, Venomous {
+         //interface body
+ }
+
+is legal and defines a subinterface. Note how it allows multiple inheritance, unlike classes. Note also that Predator and Venomous may possibly define or inherit methods with the same signature, say kill(Prey p). When a class implements VenomousPredator it will implement both methods simultaneously.
+Examples[edit]
+Some common Java interfaces are:
+
+Comparable has the method compareTo, which is used to describe two objects as equal, or to indicate one is greater than the other. Generics allow implementing classes to specify which class instances can be compared to them.
+Serializable is a marker interface with no methods or fields - it has an empty body. It is used to indicate that a class can be serialized. Its Javadoc describes how it should function, although nothing is programmatically enforced
+
+See also[edit]
+
+Mixin
+Trait (computer programming)
+
+References[edit]
+
+
+^ "Default Methods".&#160;
+^ "The Java Language Specification".&#160;
+^ "Java World".&#160;
+
+
+External links[edit]
+
+What Is an Interface?
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Interface_(Java)&amp;oldid=680636163"					
+				Categories: Java (programming language)InterfacesHidden categories: Articles with example Java code				
+							
+		
+		
+			

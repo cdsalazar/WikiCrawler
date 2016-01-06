@@ -1,0 +1,1064 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Software design pattern
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Design pattern (computer science))
+												
+					Jump to:					navigation, 					search
+				
+				In software engineering, a design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. A design pattern is not a finished design that can be transformed directly into source or machine code. It is a description or template for how to solve a problem that can be used in many different situations. Patterns are formalized best practices that the programmer can use to solve common problems when designing an application or system. Object-oriented design patterns typically show relationships and interactions between classes or objects, without specifying the final application classes or objects that are involved. Patterns that imply mutable state may be unsuited for functional programming languages, some patterns can be rendered unnecessary in languages that have built-in support for solving the problem they are trying to solve, and object-oriented patterns are not necessarily suitable for non-object-oriented languages.
+Design patterns may be viewed as a structured approach to computer programming intermediate between the levels of a programming paradigm and a concrete algorithm.
+
+
+
+Contents
+
+
+1 Types
+2 History
+3 Practice
+4 Structure
+
+4.1 Domain-specific patterns
+
+
+5 Classification and list
+
+5.1 Creational patterns
+5.2 Structural patterns
+5.3 Behavioral patterns
+5.4 Concurrency patterns
+
+
+6 Documentation
+7 Criticism
+8 See also
+9 References
+10 Further reading
+
+
+
+Types[edit]
+Design patterns reside in the domain of modules and interconnections. At a higher level there are architectural patterns which are larger in scope, usually describing an overall pattern followed by an entire system.[1]
+There are many types of design patterns, for instance[citation needed] [2]
+
+Algorithm strategy patterns addressing concerns related to high-level strategies describing how to exploit application characteristics on a computing platform.[clarification needed]
+Computational design patterns addressing concerns related to key computation identification.[clarification needed]
+Execution patterns which address issues related to lower-level support of application execution, including strategies for executing streams of tasks and for the definition of building blocks to support task synchronization.
+Implementation strategy patterns addressing concerns related to implementing source code to support
+
+program organization, and
+the common data structures specific to parallel programming.
+
+
+Structural design patterns addressing concerns related to global structures of applications being developed.
+
+History[edit]
+Patterns originated as an architectural concept by Christopher Alexander (1977/79). In 1987, Kent Beck and Ward Cunningham began experimenting with the idea of applying patterns to programming – specifically pattern languages – and presented their results at the OOPSLA conference that year.[3][4] In the following years, Beck, Cunningham and others followed up on this work.
+Design patterns gained popularity in computer science after the book Design Patterns: Elements of Reusable Object-Oriented Software was published in 1994 by the so-called "Gang of Four" (Gamma et al.), which is frequently abbreviated as "GoF". That same year, the first Pattern Languages of Programming Conference was held and the following year, the Portland Pattern Repository was set up for documentation of design patterns. The scope of the term remains a matter of dispute. Notable books in the design pattern genre include:
+
+Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John (1995). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley. ISBN&#160;0-201-63361-2.&#160;
+Buschmann, Frank; Meunier, Regine; Rohnert, Hans; Sommerlad, Peter (1996). Pattern-Oriented Software Architecture, Volume 1: A System of Patterns. John Wiley &amp; Sons. ISBN&#160;0-471-95869-7.&#160;
+Schmidt, Douglas C.; Stal, Michael; Rohnert, Hans; Buschmann, Frank (2000). Pattern-Oriented Software Architecture, Volume 2: Patterns for Concurrent and Networked Objects. John Wiley &amp; Sons. ISBN&#160;0-471-60695-2.&#160;
+Fowler, Martin (2002). Patterns of Enterprise Application Architecture. Addison-Wesley. ISBN&#160;978-0-321-12742-6.&#160;
+Hohpe, Gregor; Woolf, Bobby (2003). Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions. Addison-Wesley. ISBN&#160;0-321-20068-3.&#160;
+Freeman, Eric T; Robson, Elisabeth; Bates, Bert; Sierra, Kathy (2004). Head First Design Patterns. O'Reilly Media. ISBN&#160;0-596-00712-4.&#160;
+
+Although design patterns have been applied practically for a long time, formalization of the concept of design patterns languished for several years.[5]
+Practice[edit]
+Design patterns can speed up the development process by providing tested, proven development paradigms.[6] Effective software design requires considering issues that may not become visible until later in the implementation. Reusing design patterns helps to prevent subtle issues that can cause major problems[citation needed], and it also improves code readability for coders and architects who are familiar with the patterns.
+In order to achieve flexibility, design patterns usually introduce additional levels of indirection, which in some cases may complicate the resulting designs and hurt application performance.
+By definition, a pattern must be programmed anew into each application that uses it. Since some authors see this as a step backward from software reuse as provided by components, researchers have worked to turn patterns into components. Meyer and Arnout were able to provide full or partial componentization of two-thirds of the patterns they attempted.[7]
+Software design techniques are difficult to apply to a broader range of problems.[citation needed] Design patterns provide general solutions, documented in a format that does not require specifics tied to a particular problem.
+Structure[edit]
+Design patterns are composed of several sections (see Documentation below). Of particular interest are the Structure, Participants, and Collaboration sections. These sections describe a design motif: a prototypical micro-architecture that developers copy and adapt to their particular designs to solve the recurrent problem described by the design pattern. A micro-architecture is a set of program constituents (e.g., classes, methods...) and their relationships. Developers use the design pattern by introducing in their designs this prototypical micro-architecture, which means that micro-architectures in their designs will have structure and organization similar to the chosen design motif.
+Domain-specific patterns[edit]
+Efforts have also been made to codify design patterns in particular domains, including use of existing design patterns as well as domain specific design patterns. Examples include user interface design patterns,[8] information visualization,[9] secure design,[10] "secure usability",[11] Web design [12] and business model design.[13]
+The annual Pattern Languages of Programming Conference proceedings [14] include many examples of domain-specific patterns.
+Classification and list[edit]
+Design patterns were originally grouped into the categories: creational patterns, structural patterns, and behavioral patterns, and described using the concepts of delegation, aggregation, and consultation. For further background on object-oriented design, see coupling and cohesion, inheritance, interface, and polymorphism. Another classification has also introduced the notion of architectural design pattern that may be applied at the architecture level of the software such as the Model–View–Controller pattern.
+Creational patterns[edit]
+
+
+Name
+Description
+In Design Patterns
+In Code Complete[15]
+Other
+
+
+Abstract factory
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+Yes
+Yes
+N/A
+
+
+Builder
+Separate the construction of a complex object from its representation, allowing the same construction process to create various representations.
+Yes
+No
+N/A
+
+
+Factory method
+Define an interface for creating a single object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses (dependency injection[16]).
+Yes
+Yes
+N/A
+
+
+Lazy initialization
+Tactic of delaying the creation of an object, the calculation of a value, or some other expensive process until the first time it is needed. This pattern appears in the GoF catalog as "virtual proxy", an implementation strategy for the Proxy pattern.
+Yes
+No
+PoEAA[17]
+
+
+Multiton
+Ensure a class has only named instances, and provide a global point of access to them.
+No
+No
+N/A
+
+
+Object pool
+Avoid expensive acquisition and release of resources by recycling objects that are no longer in use. Can be considered a generalisation of connection pool and thread pool patterns.
+No
+No
+N/A
+
+
+Prototype
+Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
+Yes
+No
+N/A
+
+
+Resource acquisition is initialization
+Ensure that resources are properly released by tying them to the lifespan of suitable objects.
+No
+No
+N/A
+
+
+Singleton
+Ensure a class has only one instance, and provide a global point of access to it.
+Yes
+Yes
+N/A
+
+
+Design pattern object library
+Encapsulate object management including factory interface with live and dead lists.
+No
+No
+N/A
+
+
+Structural patterns[edit]
+
+
+Name
+Description
+In Design Patterns
+In Code Complete[15]
+Other
+
+
+Adapter or Wrapper or Translator
+Convert the interface of a class into another interface clients expect. An adapter lets classes work together that could not otherwise because of incompatible interfaces. The enterprise integration pattern equivalent is the translator.
+Yes
+Yes
+N/A
+
+
+Bridge
+Decouple an abstraction from its implementation allowing the two to vary independently.
+Yes
+Yes
+N/A
+
+
+Composite
+Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+Yes
+Yes
+N/A
+
+
+Decorator
+Attach additional responsibilities to an object dynamically keeping the same interface. Decorators provide a flexible alternative to subclassing for extending functionality.
+Yes
+Yes
+N/A
+
+
+Facade
+Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+Yes
+Yes
+N/A
+
+
+Flyweight
+Use sharing to support large numbers of similar objects efficiently.
+Yes
+No
+N/A
+
+
+Front Controller
+The pattern relates to the design of Web applications. It provides a centralized entry point for handling requests.
+No
+Yes
+N/A
+
+
+Marker
+Empty interface to associate metadata with a class.
+No
+No
+Effective Java[18]
+
+
+Module
+Group several related elements, such as classes, singletons, methods, globally used, into a single conceptual entity.
+No
+No
+N/A
+
+
+Proxy
+Provide a surrogate or placeholder for another object to control access to it.
+Yes
+No
+N/A
+
+
+Twin [19]
+Twin allows modeling of multiple inheritance in programming languages that do not support this feature.
+No
+No
+N/A
+
+
+Behavioral patterns[edit]
+
+
+Name
+Description
+In Design Patterns
+In Code Complete[15]
+Other
+
+
+Blackboard
+Artificial intelligence pattern for combining disparate sources of data (see blackboard system)
+No
+No
+N/A
+
+
+Chain of responsibility
+Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.
+Yes
+No
+N/A
+
+
+Command
+Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
+Yes
+No
+N/A
+
+
+Interpreter
+Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
+Yes
+No
+N/A
+
+
+Iterator
+Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+Yes
+Yes
+N/A
+
+
+Mediator
+Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
+Yes
+No
+N/A
+
+
+Memento
+Without violating encapsulation, capture and externalize an object's internal state allowing the object to be restored to this state later.
+Yes
+No
+N/A
+
+
+Null object
+Avoid null references by providing a default object.
+No
+No
+N/A
+
+
+Observer or Publish/subscribe
+Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.
+Yes
+Yes
+N/A
+
+
+Servant
+Define common functionality for a group of classes.
+No
+No
+N/A
+
+
+Specification
+Recombinable business logic in a Boolean fashion.
+No
+No
+N/A
+
+
+State
+Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
+Yes
+No
+N/A
+
+
+Strategy
+Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+Yes
+Yes
+N/A
+
+
+Template method
+Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
+Yes
+Yes
+N/A
+
+
+Visitor
+Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+Yes
+No
+N/A
+
+
+Concurrency patterns[edit]
+
+
+Name
+Description
+In POSA2[20]
+Other
+
+
+Active Object
+Decouples method execution from method invocation that reside in their own thread of control. The goal is to introduce concurrency, by using asynchronous method invocation and a scheduler for handling requests.
+Yes
+N/A
+
+
+Balking
+Only execute an action on an object when the object is in a particular state.
+No
+N/A
+
+
+Binding properties
+Combining multiple observers to force properties in different objects to be synchronized or coordinated in some way.[21]
+No
+N/A
+
+
+Block chain
+Decentralized way to store data and agree on ways of processing it in a Merkle tree, optionally using Digital signature for any individual contributions.
+No
+N/A
+
+
+Double-checked locking
+Reduce the overhead of acquiring a lock by first testing the locking criterion (the 'lock hint') in an unsafe manner; only if that succeeds does the actual locking logic proceed.
+Can be unsafe when implemented in some language/hardware combinations. It can therefore sometimes be considered an anti-pattern.
+
+Yes
+N/A
+
+
+Event-based asynchronous
+Addresses problems with the asynchronous pattern that occur in multithreaded programs.[22]
+No
+N/A
+
+
+Guarded suspension
+Manages operations that require both a lock to be acquired and a precondition to be satisfied before the operation can be executed.
+No
+N/A
+
+
+Join
+Join-pattern provides a way to write concurrent, parallel and distributed programs by message passing. Compared to the use of threads and locks, this is a high-level programming model.
+No
+N/A
+
+
+Lock
+One thread puts a "lock" on a resource, preventing other threads from accessing or modifying it.[23]
+No
+PoEAA[17]
+
+
+Messaging design pattern (MDP)
+Allows the interchange of information (i.e. messages) between components and applications.
+No
+N/A
+
+
+Monitor object
+An object whose methods are subject to mutual exclusion, thus preventing multiple objects from erroneously trying to use it at the same time.
+Yes
+N/A
+
+
+Reactor
+A reactor object provides an asynchronous interface to resources that must be handled synchronously.
+Yes
+N/A
+
+
+Read-write lock
+Allows concurrent read access to an object, but requires exclusive access for write operations.
+No
+N/A
+
+
+Scheduler
+Explicitly control when threads may execute single-threaded code.
+No
+N/A
+
+
+Thread pool
+A number of threads are created to perform a number of tasks, which are usually organized in a queue. Typically, there are many more tasks than threads. Can be considered a special case of the object pool pattern.
+No
+N/A
+
+
+Thread-specific storage
+Static or "global" memory local to a thread.
+Yes
+N/A
+
+
+Documentation[edit]
+The documentation for a design pattern describes the context in which the pattern is used, the forces within the context that the pattern seeks to resolve, and the suggested solution.[24] There is no single, standard format for documenting design patterns. Rather, a variety of different formats have been used by different pattern authors. However, according to Martin Fowler, certain pattern forms have become more well-known than others, and consequently become common starting points for new pattern-writing efforts.[25] One example of a commonly used documentation format is the one used by Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides (collectively known as the "Gang of Four", or GoF for short) in their book Design Patterns. It contains the following sections:
+
+Pattern Name and Classification: A descriptive and unique name that helps in identifying and referring to the pattern.
+Intent: A description of the goal behind the pattern and the reason for using it.
+Also Known As: Other names for the pattern.
+Motivation (Forces): A scenario consisting of a problem and a context in which this pattern can be used.
+Applicability: Situations in which this pattern is usable; the context for the pattern.
+Structure: A graphical representation of the pattern. Class diagrams and Interaction diagrams may be used for this purpose.
+Participants: A listing of the classes and objects used in the pattern and their roles in the design.
+Collaboration: A description of how classes and objects used in the pattern interact with each other.
+Consequences: A description of the results, side effects, and trade offs caused by using the pattern.
+Implementation: A description of an implementation of the pattern; the solution part of the pattern.
+Sample Code: An illustration of how the pattern can be used in a programming language.
+Known Uses: Examples of real usages of the pattern.
+Related Patterns: Other patterns that have some relationship with the pattern; discussion of the differences between the pattern and similar patterns.
+
+Criticism[edit]
+The concept of design patterns has been criticized in several ways.
+The design patterns may just be a sign of some missing features of a given programming language (Java or C++ for instance). Peter Norvig demonstrates that 16 out of the 23 patterns in the Design Patterns book (which is primarily focused on C++) are simplified or eliminated (via direct language support) in Lisp or Dylan.[26] Related observations were made by Hannemann and Kiczales who implemented several of the 23 design patterns using an aspect-oriented programming language (AspectJ) and showed that code-level dependencies were removed from the implementations of 17 of the 23 design patterns and that aspect-oriented programming could simplify the implementations of design patterns.[27] See also Paul Graham's essay "Revenge of the Nerds".[28]
+Moreover, inappropriate use of patterns may unnecessarily increase complexity.[29]
+See also[edit]
+
+
+Abstraction principle
+Algorithmic skeleton
+Anti-pattern
+Architectural pattern
+Debugging patterns
+Distributed design patterns
+Double-chance function
+Enterprise Architecture framework
+GRASP (object-oriented design)
+Helper class
+Interaction design pattern
+List of software development philosophies
+List of software engineering topics
+Pattern language
+Pattern theory
+Pedagogical patterns
+Portland Pattern Repository
+Refactoring
+Software development methodology
+
+
+References[edit]
+
+
+^ Martin, Robert C. (2000). "Design Principles and Design Patterns" (PDF).&#160;
+^ https://pmsware.wordpress.com/tag/computational-design-patterns/
+^ Smith, Reid (October 1987). Panel on design methodology. OOPSLA '87 Addendum to the Proceedings. doi:10.1145/62138.62151.&#160;, "Ward cautioned against requiring too much programming at, what he termed, 'the high level of wizards.' He pointed out that a written 'pattern language' can significantly improve the selection and application of abstractions. He proposed a 'radical shift in the burden of design and implementation' basing the new methodology on an adaptation of Christopher Alexander's work in pattern languages and that programming-oriented pattern languages developed at Tektronix has significantly aided their software development efforts."
+^ Beck, Kent; Cunningham, Ward (September 1987). Using Pattern Languages for Object-Oriented Program. OOPSLA '87 workshop on Specification and Design for Object-Oriented Programming. Retrieved 2006-05-26.&#160;
+^ Baroni, Aline Lúcia; Guéhéneuc, Yann-Gaël; Albin-Amiot, Hervé (June 2003). "Design Patterns Formalization". Nantes: École Nationale Supérieure des Techniques Industrielles et des Mines de Nantes. CiteSeerX: 10.1.1.62.6466.&#160;
+^ Bishop, Judith. "C# 3.0 Design Patterns: Use the Power of C# 3.0 to Solve Real-World Problems". C# Books from O'Reilly Media. Retrieved 2012-05-15. If you want to speed up the development of your .NET applications, you're ready for C# design patterns -- elegant, accepted and proven ways to tackle common programming problems.&#160;
+^ Meyer, Bertrand; Arnout, Karine (July 2006). "Componentization: The Visitor Example" (PDF). IEEE Computer (IEEE) 39 (7): 23–30. doi:10.1109/MC.2006.227.&#160;
+^ Laakso, Sari A. (2003-09-16). "Collection of User Interface Design Patterns". University of Helsinki, Dept. of Computer Science. Retrieved 2008-01-31.&#160;
+^ Heer, J.; Agrawala, M. (2006). "Software Design Patterns for Information Visualization". IEEE Transactions on Visualization and Computer Graphics 12 (5): 853–60. doi:10.1109/TVCG.2006.178. PMID&#160;17080809.&#160;
+^ Dougherty, Chad; Sayre, Kirk; Seacord, Robert C.; Svoboda, David; Togashi, Kazuya (2009). Secure Design Patterns (PDF). Software Engineering Institute.&#160;
+^ Garfinkel, Simson L. (2005). Design Principles and Patterns for Computer Systems That Are Simultaneously Secure and Usable (Ph.D. thesis).&#160;
+^ "Yahoo! Design Pattern Library". Retrieved 2008-01-31.&#160;
+^ "How to design your Business Model as a Lean Startup?". Retrieved 2010-01-06.&#160;
+^ Pattern Languages of Programming, Conference proceedings (annual, 1994—) [1]
+^ a b c McConnell, Steve (June 2004). "Design in Construction". Code Complete (2nd ed.). Microsoft Press. p.&#160;104. ISBN&#160;978-0-7356-1967-8. Table 5.1 Popular Design Patterns&#160;
+^ "Design Patterns: Dependency injection". Retrieved 2011-04-13. The use of a factory class is one common way to implement DI.&#160;
+^ a b Fowler, Martin (2002). Patterns of Enterprise Application Architecture. Addison-Wesley. ISBN&#160;978-0-321-12742-6.&#160;
+^ Bloch, Joshua (2008). "Item 37: Use marker interfaces to define types". Effective Java (Second edition). Addison-Wesley. p.&#160;179. ISBN&#160;978-0-321-35668-0.&#160;
+^ "Twin – A Design Pattern for Modeling Multiple Inheritance" (PDF).&#160;
+^ Schmidt, Douglas C.; Stal, Michael; Rohnert, Hans; Buschmann, Frank (2000). Pattern-Oriented Software Architecture, Volume 2: Patterns for Concurrent and Networked Objects. John Wiley &amp; Sons. ISBN&#160;0-471-60695-2.&#160;
+^ Binding Properties
+^ Nagel, Christian; Evjen, Bill; Glynn, Jay; Watson, Karli; Skinner, Morgan (2008). "Event-based Asynchronous Pattern". Professional C# 2008. Wiley. pp.&#160;570–571. ISBN&#160;0-470-19137-6.&#160;
+^ Lock Pattern
+^ Gabriel, Dick. "A Pattern Definition". Archived from the original on 2007-02-09. Retrieved 2007-03-06.&#160;
+^ Fowler, Martin (2006-08-01). "Writing Software Patterns". Retrieved 2007-03-06.&#160;
+^ Norvig, Peter (1998). Design Patterns in Dynamic Languages.&#160;
+^ Hannemann, Jan (2002). Design pattern implementation in Java and AspectJ.&#160;
+^ Graham, Paul (2002). Revenge of the Nerds. Retrieved 2012-08-11.&#160;
+^ McConnell, Steve (2004). Code Complete: A Practical Handbook of Software Construction, 2nd Edition. p.&#160;105.&#160;
+
+
+Further reading[edit]
+
+
+Alexander, Christopher; Ishikawa, Sara; Silverstein, Murray; Jacobson, Max; Fiksdahl-King, Ingrid; Angel, Shlomo (1977). A Pattern Language: Towns, Buildings, Construction. New York: Oxford University Press. ISBN&#160;978-0-19-501919-3.&#160;
+Alur, Deepak; Crupi, John; Malks, Dan (May 2003). Core J2EE Patterns: Best Practices and Design Strategies (2nd Edition). Prentice Hall. ISBN&#160;0-13-142246-4.&#160;
+Beck, Kent (October 2007). Implementation Patterns. Addison-Wesley. ISBN&#160;978-0-321-41309-3.&#160;
+Beck, Kent; Crocker, R.; Meszaros, G.; Coplien, J. O.; Dominick, L.; Paulisch, F.; Vlissides, J. (March 1996). Proceedings of the 18th International Conference on Software Engineering. pp.&#160;25–30.&#160;
+Borchers, Jan (2001). A Pattern Approach to Interaction Design. John Wiley &amp; Sons. ISBN&#160;0-471-49828-9.&#160;
+Coplien, James O.; Schmidt, Douglas C. (1995). Pattern Languages of Program Design. Addison-Wesley. ISBN&#160;0-201-60734-4.&#160;
+Coplien, James O.; Vlissides, John M.; Kerth, Norman L. (1996). Pattern Languages of Program Design 2. Addison-Wesley. ISBN&#160;0-201-89527-7.&#160;
+Fowler, Martin (1997). Analysis Patterns: Reusable Object Models. Addison-Wesley. ISBN&#160;0-201-89542-0.&#160;
+Fowler, Martin (2003). Patterns of Enterprise Application Architecture. Addison-Wesley. ISBN&#160;978-0-321-12742-6.&#160;
+Freeman, Eric; Freeman, Elisabeth; Sierra, Kathy; Bates, Bert (2004). Head First Design Patterns. O'Reilly Media. ISBN&#160;0-596-00712-4.&#160;
+Hohmann, Luke; Fowler, Martin; Kawasaki, Guy (2003). Beyond Software Architecture. Addison-Wesley. ISBN&#160;0-201-77594-8.&#160;
+Gabriel, Richard (1996). Patterns of Software: Tales From The Software Community (PDF). Oxford University Press. p.&#160;235. ISBN&#160;0-19-512123-6. Archived from the original (PDF) on 2003-08-01.&#160;
+Gamma, Erich; Helm, Richard; Johnson, Ralph; Vlissides, John (1995). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley. ISBN&#160;0-201-63361-2.&#160;
+Hohpe, Gregor; Woolf, Bobby (2003). Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions. Addison-Wesley. ISBN&#160;0-321-20068-3.&#160;
+Holub, Allen (2004). Holub on Patterns. Apress. ISBN&#160;1-59059-388-X.&#160;
+Kircher, Michael; Völter, Markus; Zdun, Uwe (2005). Remoting Patterns: Foundations of Enterprise, Internet and Realtime Distributed Object Middleware. John Wiley &amp; Sons. ISBN&#160;0-470-85662-9.&#160;
+Larman, Craig (2005). Applying UML and Patterns. Prentice Hall. ISBN&#160;0-13-148906-2.&#160;
+Liskov, Barbara; Guttag, John (2000). Program Development in Java: Abstraction, Specification, and Object-Oriented Design. Addison-Wesley. ISBN&#160;0-201-65768-6.&#160;
+Manolescu, Dragos; Voelter, Markus; Noble, James (2006). Pattern Languages of Program Design 5. Addison-Wesley. ISBN&#160;0-321-32194-4.&#160;
+Marinescu, Floyd (2002). EJB Design Patterns: Advanced Patterns, Processes and Idioms. John Wiley &amp; Sons. ISBN&#160;0-471-20831-0.&#160;
+Martin, Robert Cecil; Riehle, Dirk; Buschmann, Frank (1997). Pattern Languages of Program Design 3. Addison-Wesley. ISBN&#160;0-201-31011-2.&#160;
+Mattson, Timothy G; Sanders, Beverly A.; Massingill, Berna L. (2005). Patterns for Parallel Programming. Addison-Wesley. ISBN&#160;0-321-22811-1.&#160;
+Shalloway, Alan; Trott, James R. (2001). Design Patterns Explained, Second Edition: A New Perspective on Object-Oriented Design. Addison-Wesley. ISBN&#160;0-321-24714-0.&#160;
+Vlissides, John M. (1998). Pattern Hatching: Design Patterns Applied. Addison-Wesley. ISBN&#160;0-201-43293-5.&#160;
+Weir, Charles; Noble, James (2000). Small Memory Software: Patterns for systems with limited memory. Addison-Wesley. ISBN&#160;0-201-59607-5. Archived from the original on 2007-06-17.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software design patterns
+
+
+
+
+
+
+Gang of Four patterns
+
+
+
+
+
+Creational
+
+
+
+
+Abstract factory
+Builder
+Factory method
+Prototype
+Singleton
+
+
+
+
+
+
+
+
+
+Structural
+
+
+
+
+Adapter
+Bridge
+Composite
+Decorator
+Facade
+Flyweight
+Proxy
+
+
+
+
+
+
+
+
+
+Behavioral
+
+
+
+
+Chain of responsibility
+Command
+Interpreter
+Iterator
+Mediator
+Memento
+Observer
+State
+Strategy
+Template method
+Visitor
+
+
+
+
+
+
+
+
+
+
+
+Concurrency patterns
+
+
+
+Active object
+Balking
+Double-checked locking
+Event-based asynchronous
+Guarded suspension
+Join
+Lock
+Monitor
+Proactor
+Reactor
+Read write lock
+Scheduler
+Thread pool
+Thread-local storage
+
+
+
+
+
+
+
+
+Architectural patterns
+
+
+
+Front controller
+Interceptor
+MVC
+n-tier
+Specification
+Publish-subscribe
+Naked objects
+Service Locator
+Active record pattern
+Identity map
+Data access object
+Data transfer object
+
+
+
+
+
+
+
+
+Other patterns
+
+
+
+Dependency injection
+Lazy loading
+Mock object
+Null object
+Object pool
+Servant
+Type tunnel
+
+
+
+
+
+
+
+
+Books
+
+
+
+Design Patterns
+Enterprise Integration Patterns
+
+
+
+
+
+
+
+
+People
+
+
+
+Christopher Alexander
+Erich Gamma
+Ralph Johnson
+John Vlissides
+Grady Booch
+Kent Beck
+Ward Cunningham
+Martin Fowler
+Robert Martin
+Jim Coplien
+Douglas Schmidt
+Linda Rising
+
+
+
+
+
+
+
+
+Communities
+
+
+
+The Hillside Group
+The Portland Pattern Repository
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sub-disciplines of computing
+
+
+
+
+
+
+
+
+
+Hardware
+Software
+Firmware
+
+
+
+
+
+
+
+
+Information system
+
+
+
+Information security
+Multimedia database
+Intelligent database
+Big data
+Knowledge-based systems
+Recommender System
+Geographic information systems
+Decision support system
+Data engineering
+Knowledge engineering
+Fuzzy logic
+Data analysis
+System analysis and design
+Project management
+Knowledge management
+Data integration
+High-performance computing
+Semantic web
+
+
+
+
+
+
+
+
+Computer science
+
+
+
+Database management system
+Communications system
+Computational geometry
+Machine learning
+Data mining
+Parallel programming
+Coding theory
+Theory of computation
+Constraint programming
+Computational biology (Bioinformatics)
+Design and analysis of algorithms
+Information retrieval
+Computational science
+Symbolic computation
+Distributed computing
+Evolutionary computation
+Natural computation
+Combinatorial optimization
+Parallel processing
+
+
+
+
+
+
+
+
+Computer engineering
+
+
+
+Multimedia
+Satellite navigation (GNSS)
+Embedded systems
+Real-time computing
+Computer architecture
+Pair programming
+System programming
+Neural networks
+Speech recognition
+Signal analysis
+Computer vision (Visual computing)
+IC Design
+Voice over IP
+Speech synthesis
+Human-Computer Interaction
+Microprocessor
+Image processing
+Natural language processing
+Speech processing
+Digital signal processing
+
+
+
+
+
+
+
+
+Software engineering
+
+
+
+Software maintenance
+Formal methods
+Software quality
+Software quality assurance
+Measurement Software
+Fault-tolerant software
+Software testing
+Enterprise architecture
+Software architecture
+Software engineering economics
+Agile software development
+Software design pattern
+Software modelling
+Systems analyst
+Object-oriented analysis and design (UML)
+Requirements analysis
+Software development
+Software configuration management
+Software project management
+Software engineering management
+Software development process (Software release life cycle)
+Software design
+Software deployment
+Software enhancement
+
+
+
+
+
+
+
+
+Computer network
+
+
+
+Network security
+Secure electronic transaction
+Network Performance Evaluation (QoS)
+Cloud computing
+Routing
+Distributed systems (Distributed database)
+Information theory
+Wireless network
+Next-generation network
+Cellular network
+Optical transport network (Optical networking)
+Cryptography
+Network simulation
+Pattern recognition
+Network administrators
+Network equipment
+Network design
+Ubiquitous and Mobile computing
+Data center
+Mobile communications
+Digital communication
+Communications satellite
+Telecommunication (Telecommunications network)
+
+
+
+
+
+
+
+
+Business informatics
+
+
+
+ITIL
+ITSM
+Enterprise resource planning
+Electronic business
+Business intelligence
+Human Resources Development
+Security management
+Configuration management
+Technology management
+Power management
+Service management
+Project management
+Systems management
+Network management
+Content management
+Customer relationship management
+Incident management
+Asset management
+Integrated management
+Communications management
+System administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4546895-3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Software_design_pattern&amp;oldid=690811344"					
+				Categories: Software design patternsSoftware developmentHidden categories: All articles with unsourced statementsArticles with unsourced statements from July 2015Wikipedia articles needing clarification from March 2015Articles with unsourced statements from August 2014Wikipedia articles with GND identifiers				
+							
+		
+		
+			

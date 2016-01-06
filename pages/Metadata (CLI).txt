@@ -1,0 +1,324 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Metadata (CLI)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Metadata, in the Common Language Infrastructure (CLI), refers to certain data structures embedded within the Common Intermediate Language (CIL) code that describes the high-level structure of the code. Metadata describes all classes and class members that are defined in the assembly, and the classes and class members that the current assembly will call from another assembly. The metadata for a method contains the complete description of the method, including the class (and the assembly that contains the class), the return type and all of the method parameters.
+A CLI language compiler will generate the metadata and store this in the assembly containing the CIL. When the run-time executes CIL it will check to make sure that the metadata of the called method is the same as the metadata that is stored in the calling method. This ensures that a method can only be called with exactly the right number of parameters and exactly the right parameter types.
+The Windows Runtime application platform, present in Windows 8 and Windows Phone 8, makes use of the CLI metadata format to describe component interfaces for code written in any of the supported programming languages. A difference in use within the Common Language Runtime is that an assembly typically does not contain any CIL instructions.
+
+
+
+Contents
+
+
+1 Attributes
+2 Metadata storage
+3 Reflection
+4 Other metadata tools
+5 See also
+
+
+
+Attributes[edit]
+Developers can add metadata to their code through attributes. There are two types of attributes, custom and pseudo custom attributes, and to the developer these have the same syntax. Attributes in code are messages to the compiler to generate metadata. In CIL, metadata such as inheritance modifiers, scope modifiers, and almost anything that isn't either opcodes or streams, are also referred to as attributes.
+A custom attribute is a regular class that inherits from the Attribute class. A custom attribute can be used on any method, property, class or entire assembly with the syntax: [AttributeName(optional parameter, optional name=value pairs)] as in:
+
+ [Custom]
+ [Custom(1)]
+ [Custom(1, Comment="yes")]
+
+Custom attributes are used by CLI extensively. Windows Communication Framework uses attributes to define service contracts, ASP.NET uses these to expose methods as web services, LINQ to SQL uses them to define the mapping of classes to the underlying relational schema, Visual Studio uses them to group together properties of an object, the class developer indicates the category for the object's class by applying the [Category] custom attribute. Custom attributes are interpreted by application code and not the CLR. When the compiler sees a custom attribute it will generate custom metadata that is not recognised by the CLR. The developer has to provide code to read the metadata and act on it. As an example, the attribute shown in the example can be handled by the code:
+
+
+class CustomAttribute : Attribute
+{
+   private int paramNumber = 0;
+   private string comment = "";
+
+   public CustomAttribute() { }
+   public CustomAttribute(int num) { paramNumber = num; }
+
+   public String Comment
+   {
+      set { comment = value; }
+   }
+}
+
+The name of the class is mapped to the attribute name. The Visual C# compiler automatically adds the string "Attribute" at the end of any attribute name. Consequently, every attribute class name should end with this string, but it is legal to define an attribute without the Attribute-suffix. When affixing an attribute to an item, the compiler will look for both the literal name and the name with Attribute added to the end, i.&#160;e. if you were to write [Custom] the compiler would look for both Custom and CustomAttribute. If both exist, the compiler fails. The attribute can be prefixed with "@" if you don't want to risk ambiguity, so writing [@Custom] will not match CustomAttribute. Using the attribute invokes the constructor of the class. Overloaded constructors are supported. Name-Value pairs are mapped to properties, the name denotes the name of the property and the value supplied is set by the property.
+Sometimes there is ambiguity concerning to what you are affixing the attribute. Consider the following code:
+
+
+[Orange]
+public int ExampleMethod(string input)
+{
+    //method body goes here
+}
+
+What has been marked as orange? Is it the ExampleMethod, its return value, or perhaps the entire assembly? In this case, the compiler will default, and treat the attribute as being affixed to the method. If this is not what was intended, or if the author wishes to clarify their code, an attribute target may be specified. Writing [return: Orange] will mark the return value as orange, [assembly: Orange] will mark the entire assembly. The valid targets are assembly, field, event, method, module, param, property, return and type.
+A pseudo-custom attribute is used just like regular custom attributes but they do not have a custom handler; rather the compiler has intrinsic awareness of the attributes and handles the code marked with such attributes differently. Attributes such as Serializable and Obsolete are implemented as pseudo-custom attributes. Pseudo-custom attributes should never be used by ILASM, as it has adequate syntax to describe the metadata.[clarification needed]
+Metadata storage[edit]
+Assemblies contain tables of metadata. These tables are described by the CIL specification. The metadata tables will have zero or more entries and the position of an entry determines its index. When CIL code uses metadata it does so through a metadata token. This is a 32-bit value where the top 8 bits identify the appropriate metadata table, and the remaining 24 bits give the index of the metadata in the table. The Framework SDK contains a sample called metainfo that will list the metadata tables in an assembly, however, this information is rarely of use to a developer. Metadata in an assembly may be viewed using the ILDASM tool provided by the .NET Framework SDK.
+Reflection[edit]
+Main articles: Reflection in C# and Reflection (computer programming)
+Reflection is the API used to read CLI metadata. The reflection API provides a logical view of metadata rather than the literal view provided by tools like metainfo. Reflection in version 1.1 of the .NET framework can be used to inspect the descriptions of classes and their members, and invoke methods. However, it does not allow runtime access to the CIL for a method. Version 2.0 of the framework allows the CIL for a method to be obtained.
+Other metadata tools[edit]
+Besides the System.Reflection namespace, other tools are also available that can be used to handle metadata. The Microsoft .NET Framework ships a CLR metadata manipulation library that is implemented in native code. Third-party tools to retrieve and manipulate metadata include PostSharp and Mono Cecil can also be used.
+See also[edit]
+
+Java annotation
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Common Language Infrastructure
+
+
+
+
+
+
+Architecture
+
+
+
+Application domain
+Code Access Security
+Common Intermediate Language (CIL)
+
+CIL instructions
+
+
+Common Type System (CTS)
+Platform Invocation Services (P/Invoke)
+Virtual Execution System (VES)
+
+
+
+
+
+
+
+
+Components
+
+
+
+Assembly
+Delegate
+Manifest
+Metadata
+
+
+
+
+
+
+
+
+Standard Libraries
+
+
+
+
+Kernel Profile
+
+
+
+Base Class Library (BCL)
+Runtime Infrastructure Library
+
+
+
+
+
+
+
+
+Compact Profile
+
+
+
+Network Library
+Reflection Library
+XML Library
+
+
+
+
+
+
+
+
+
+
+
+Extended Array Library
+Extended Numerics Library
+Parallel Library
+Vararg Library
+
+
+
+
+
+
+
+
+
+
+
+Implementations
+
+
+
+
+Microsoft
+
+
+
+.NET Framework
+.NET Compact Framework
+.NET Micro Framework
+Shared Source Common Language Infrastructure
+
+
+
+
+
+
+
+
+Other
+
+
+
+Mono
+Portable.NET
+
+
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+Microsoft
+
+
+
+C#
+
+Visual C#
+
+
+Visual Basic .NET
+C++/CLI
+
+Managed
+
+
+F#
+J#
+JScript .NET
+Windows PowerShell
+
+
+
+
+
+
+
+
+Other
+
+
+
+Axum
+A#
+Boo
+Cobra
+IronScheme
+
+IronLisp
+
+
+IronPython
+IronRuby
+Nemerle
+Oxygene
+Phalanger
+P#
+Scala
+
+
+
+
+
+
+
+
+Comparison
+
+
+
+C# and Java
+C# and Visual Basic .NET
+Java and .NET platforms
+Visual Basic and Visual Basic .NET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Metadata_(CLI)&amp;oldid=674397826"					
+				Categories: Common Language InfrastructureHidden categories: Wikipedia articles needing clarification from March 2008				
+							
+		
+		
+			

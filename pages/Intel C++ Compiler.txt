@@ -1,0 +1,510 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Intel C++ Compiler
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+Intel C++ Compiler
+
+Developer(s)
+Intel
+
+
+Stable release
+16.0 (XE 2016) / August&#160;25, 2015; 2 months ago&#160;(2015-08-25)[1]
+
+
+Operating system
+Windows, OS X, Linux
+
+
+Type
+Compiler
+
+
+License
+Proprietary, Freeware[2]
+
+
+Website
+software.intel.com/en-us/intel-compilers
+
+
+
+Intel C++ Compiler for Android
+
+Developer(s)
+Intel
+
+
+Stable release
+14.0.1 / November&#160;12, 2013; 2 years ago&#160;(2013-11-12)[3]
+
+
+Operating system
+Windows, OS X
+
+
+Type
+Compiler
+
+
+License
+Trialware
+
+
+Website
+software.intel.com/c-compiler-android
+
+
+Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel available for Windows, OS X, Linux and Intel-based Android devices.
+
+
+
+Contents
+
+
+1 Overview
+2 Optimizations
+3 Architectures
+4 Description of packaging
+5 History Since 2003
+6 Flags and manuals
+7 Debugging
+8 Criticism
+9 See also
+10 References
+11 External links
+
+
+
+Overview[edit]
+The compilers generate optimized code for IA-32 and Intel 64 architectures, and non-optimized code for non-Intel but compatible processors, such as certain AMD processors. A specific release of the compiler (11.1) is available for development of Linux-based applications for IA-64 (Itanium 2) processors.
+The 14.0 compiler added support for Intel-based Android devices and optimized vectorization and SSE Family instructions for performance. The 13.0 release added support for the Intel Xeon Phi coprocessor. It continues support for automatic vectorization, which can generate SSE, SSE2, SSE3, SSSE3, SSE4, AVX and AVX2 SIMD instructions, and the embedded variant for Intel MMX and MMX 2.[4] Use of such instruction through the compiler can lead to improved application performance in some applications as run on IA-32 and Intel 64 architectures, compared to applications built with compilers that do not support these instructions.
+Intel compilers support Cilk Plus, which is a capability for writing vectorized and parallel code that can be used on IA-32 and Intel 64 processors or which can be offloaded to Xeon Phi coprocessors. They also continue support for OpenMP 4.0, symmetric multiprocessing, automatic parallelization, and Guided Auto-Parallization (GAP). With the add-on Cluster OpenMP capability, the compilers can also automatically generate Message Passing Interface calls for distributed memory multiprocessing from OpenMP directives.
+Intel C++ is compatible with Microsoft Visual C++ on Windows and integrates into Microsoft Visual Studio. On Linux and OS X, it is compatible with GNU Compiler Collection (GCC) and the GNU toolchain. Intel C++ Compiler for Android is hosted on Windows, OS X or Linux and is compatible with the Android NDK, including gcc and the Eclipse IDE. Intel compilers are known for the application performance they can enable as measured by benchmarks, such as the SPEC CPU benchmarks.
+Optimizations[edit]
+Intel compilers are optimized to computer systems using processors that support Intel architectures. They are designed to minimize stalls and to produce code that executes in the fewest possible number of cycles. The Intel C++ Compiler supports three separate high-level techniques for optimizing the compiled program: interprocedural optimization (IPO), profile-guided optimization (PGO), and high-level optimizations (HLO). The Intel C++ compiler in the Parallel Studio XE 2016 products also supports tools, techniques and language extensions, such as Cilk Plus, for adding and maintaining application parallelism on IA-32 and Intel 64 processors, and also enables application offloading to Intel coprocessors, such as the Intel Xeon Phi coprocessor.
+Cilk Plus adds language extensions to C++ to express data and task-parallelism. _Cilk_spawn and _Cilk_sync are keywords to enable task parallelism and the _Cilk_for keyword enables parallelization of for loops. It also provides vector notation with array notations and elemental function capabilities.
+Profile-guided optimization refers to a mode of optimization where the compiler is able to access data from a sample run of the program across a representative input set. The data would indicate which areas of the program are executed more frequently, and which areas are executed less frequently. All optimizations benefit from profile-guided feedback because they are less reliant on heuristics when making compilation decisions.
+High-level optimizations are optimizations performed on a version of the program that more closely represents the source code. This includes loop interchange, loop fusion, loop unrolling, loop distribution, data prefetch, and more.[5]
+Interprocedural optimization applies typical compiler optimizations (such as constant propagation) but using a broader scope that may include multiple procedures, multiple files, or the entire program.[6]
+Intel's compiler has been criticized for applying, by default, floating-point optimizations not allowed by the C standard and that require special flags with other compilers such as gcc.[7]
+Architectures[edit]
+
+IA-32
+x86-64 (Intel 64 and AMD64)
+Intel Xeon Phi coprocessor
+IA-64 (Itanium 2)
+
+Description of packaging[edit]
+Except for the Intel Bi-Endian C++ Compiler, Intel C++ compilers are not available in standalone form. They are available in suites:
+
+Intel Parallel Studio XE for development of technical, enterprise, and high-performance computing applications on Windows, Linux and OS X
+Intel System Studio for development of system and app software for embedded systems or devices running Windows, Linux or Android
+
+The suites include other build tools, such as libraries, and tools for threading and performance analysis.
+
+History Since 2003[edit]
+
+
+Compiler version
+Release date
+Major new features
+
+
+Intel C++ Compiler 8.0
+December 15, 2003
+Precompiled headers, code-coverage tools.
+
+
+Intel C++ Compiler 8.1
+September, 2004
+AMD64 architecture (for Linux).
+
+
+Intel C++ Compiler 9.0
+June 14, 2005
+AMD64 architecture (for Windows), software-based speculative pre-computation (SSP) optimization, improved loop optimization reports.
+
+
+Intel C++ Compiler 10.0
+June 5, 2007
+Improved parallelizer and vectorizer, Streaming SIMD Extensions 4 (SSE4), new and enhanced optimization reports for advanced loop transformations, new optimized exception handling implementation.
+
+
+Intel C++ Compiler 10.1
+November 7, 2007
+New OpenMP* compatibility runtime library: if you use the new OpenMP RTL, you can mix and match with libraries and objects built by Visual C++. To use the new libraries, you need to use the new option "-Qopenmp /Qopenmp-lib:compat" on Windows, and "-openmp -openmp-lib:compat" on Linux. This version of the Intel compiler supports more intrinsics from Visual Studio 2005.
+VS2008 support - command line only in this release. The IDE integration was not supported yet.
+
+
+
+Intel C++ Compiler 11.0
+November 2008
+Initial C++11 support. VS2008 IDE integration on Windows. OpenMP 3.0. Source Checker for static memory/parallel diagnostics.
+
+
+Intel C++ Compiler 11.1
+June 23, 2009
+Support for latest Intel SSE SSE4.2, AVX and AES instructions. Parallel Debugger Extension. Improved integration into Microsoft Visual Studio, Eclipse CDT 5.0 and Mac Xcode IDE.
+
+
+Intel C++ Composer XE 2011 up to Update 5 (compiler 12.0)
+November 7, 2010
+Cilk Plus language extensions, Guided Auto-Parallelism, Improved C++11 support.[8]
+
+
+Intel C++ Composer XE 2011 Update 6 and above (compiler 12.1)
+September 8, 2011
+Cilk Plus language extensions updated to support specification version 1.1 and available on Mac OS X in addition to Windows and Linux, Threading Building Blocks updated to support version 4.0, Apple blocks supported on Mac OS X, improved C++11 support including support for Variadic templates, OpenMP 3.1 support.
+
+
+Intel C++ Composer XE 2013 (compiler 13.0)
+September 5, 2012
+Linux-based support for Intel Xeon Phi coprocessors, support for Microsoft Visual Studio 12 (Desktop), support for gcc 4.7, support for Intel AVX 2 instructions, updates to existing functionality focused on improved application performance.[9]
+
+
+Intel C++ Composer XE 2013 (compiler 13.0)
+September 5, 2012
+Linux-based support for Intel Xeon Phi coprocessors, support for Microsoft Visual Studio 12 (Desktop), support for gcc 4.7, support for Intel AVX 2 instructions, updates to existing functionality focused on improved application performance.[10]
+
+
+Intel C++ Composer XE 2013 SP1 (compiler 14.0)
+September 4, 2013
+Online installer; support for Intel Xeon Phi coprocessors; preview Win32 only support for Intel graphics; improved C++11 support
+
+
+Intel C++ Composer XE 2013 SP1 Update 1 (compiler 14.0.1)
+October 18, 2013
+Japanese localization of 14.0; Windows 8.1 and Xcode 5.0 support
+
+
+Intel C++ Compiler for Android (compiler 14.0.1)
+November 12, 2013
+Hosted on Windows, Linux, or OS X, compatible with Android NDK tools including the gcc compiler and Eclipse
+
+
+Intel C++ Composer XE 2015 (compiler 15.0)
+July 25, 2014
+Full C++11 language support; Additional OpenMP 4.0 and Cilk Plus enhancements
+
+
+Intel C++ Composer XE 2015 Update 1 (compiler 15.0.1)
+October 30, 2014
+AVX-512 support; Japanese localization
+
+
+Intel C++ 16.0
+August 25, 2015
+Suite-based availability (Intel Parallel Studio XE, Intel System Studio)
+
+
+Flags and manuals[edit]
+Documentation can be found at the Intel Software Technical Documentation site.
+
+
+Windows
+Linux &amp; Mac OS X
+Comment
+
+
+/Od
+-O0
+No optimization
+
+
+/O1
+-O1
+Optimize for size
+
+
+/O2
+-O2
+Optimize for speed and enable some optimization
+
+
+/O3
+-O3
+Enable all optimizations as O2, and intensive loop optimizations
+
+
+/arch:SSE3
+/-msse3
+Enables SSE3, SSE2 and SSE instruction sets optimizations for non-Intel CPUs[11]
+
+
+/fast
+-fast
+Shorthand. On Windows this equates to "/O3 /Qipo /QxHost /Opred-div-"&#160;; on Linux "-O3 -ipo -static -xHOST -no-prec-div". Note that the processor specific optimization flag (-xHOST) will optimize for the processor compiled on—it is the only flag of -fast that may be overridden
+
+
+/Qprof-gen
+-prof_gen
+Compile the program and instrument it for a profile generating run
+
+
+/Qprof-use
+-prof_use
+May only be used after running a program that was previously compiled using prof_gen. Uses profile information during each step of the compilation process
+
+
+Debugging[edit]
+The Intel compiler provides debugging information that is standard for the common debuggers (DWARF 2 on Linux, similar to gdb, and COFF for Windows). The flags to compile with debugging information are /Zi on Windows and -g on Linux. Debugging is done on Windows using the Visual Studio debugger and, on Linux, using gdb.
+While the Intel compiler can generate a gprof compatible profiling output, Intel also provides a kernel level, system-wide statistical profiler called Intel VTune Amplifier. VTune can be used from a command line or thru an included GUI on Linux or Windows. It can also be integrated into Visual Studio on Windows, or Eclipseon Linux).
+Intel also offers a tool for memory and threading error detection called Intel Inspector XE. Regarding memory errors, it helps detect memory leaks, memory corruption, allocation/de-allocation of API mismatches and inconsistent memory API usage. Regarding threading errors, it helps detect data races (both heap and stack), deadlocks and thread and synch API errors.
+Criticism[edit]
+Intel and third parties have published benchmark results to substantiate performance leadership claims over other commercial, open source and AMD compilers and libraries on Intel and non-Intel processors. Intel and AMD have documented flags to use on the Intel compilers to get optimal performance on Intel and AMD processors.[12][13] Nevertheless, the Intel compilers have been known to produce sub-optimal code for processors from other vendors than Intel. For example, Steve Westfield wrote in a 2005 article at the AMD website:[14]
+
+
+“
+Intel 8.1 C/C++ compiler uses the flag -xN (for Linux) or -QxN (for Windows) to take advantage of the SSE2 extensions. For SSE3, the compiler switch is -xP (for Linux) and -QxP (for Windows). [...] With the -xN/-QxN and -xP/-QxP flags set, it checks the processor vendor string—and if it's not "GenuineIntel," it stops execution without even checking the feature flags. Ouch!
+”
+
+
+The Danish developer and scholar Agner Fog wrote in 2009:[15]
+
+
+“
+The Intel compiler and several different Intel function libraries have suboptimal performance on AMD and VIA processors. The reason is that the compiler or library can make multiple versions of a piece of code, each optimized for a certain processor and instruction set, for example SSE2, SSE3, etc. The system includes a function that detects which type of CPU it is running on and chooses the optimal code path for that CPU. This is called a CPU dispatcher. However, the Intel CPU dispatcher does not only check which instruction set is supported by the CPU, it also checks the vendor ID string. If the vendor string is "GenuineIntel" then it uses the optimal code path. If the CPU is not from Intel then, in most cases, it will run the slowest possible version of the code, even if the CPU is fully compatible with a better version.
+”
+
+
+This vendor-specific CPU dispatching decreases the performance on non-Intel processors of software built with an Intel compiler or an Intel function library - possibly without the knowledge of the programmer. This has allegedly led to misleading benchmarks.[15] A legal battle between AMD and Intel over this and other issues has been settled in November 2009.[16] In late 2010, AMD settled a US Federal Trade Commission antitrust investigation against Intel.[17]
+The FTC settlement included a disclosure provision where Intel must:[18]
+
+
+“
+...publish clearly that its compiler discriminates against non-Intel processors (such as AMD's designs), not fully utilizing their features and producing inferior code.
+”
+
+
+In compliance with this rule, Intel added an "optimization notice" to its compiler descriptions stating that they "may or may not optimize to the same degree for non-Intel microprocessors" and that "certain optimizations not specific to Intel microarchitecture are reserved for Intel microprocessors." It says that:[19]
+
+
+“
+Intel's compilers may or may not optimize to the same degree for non-Intel microprocessors for optimizations that are not unique to Intel microprocessors. These optimizations include SSE2, SSE3, and SSSE3 instruction sets and other optimizations. Intel does not guarantee the availability, functionality, or effectiveness of any optimization on microprocessors not manufactured by Intel. Microprocessor-dependent optimizations in this product are intended for use with Intel microprocessors. Certain optimizations not specific to Intel microarchitecture are reserved for Intel microprocessors. Please refer to the applicable product User and Reference Guides for more information regarding the specific instruction sets covered by this notice.
+”
+
+
+As reported by The Register[20] in July, 2013, Intel was suspected of "benchmarksmanship", when it was shown that the object code produced by the Intel compiler for the AnTuTu Mobile Benchmark omitted portions of the benchmark which showed increased performance compared to ARM platforms.
+See also[edit]
+
+Intel Parallel Studio XE
+Intel Integrated Performance Primitives (IPP)
+Intel Data Analytics Acceleration Library (DAAL)
+Intel Math Kernel Library (MKL)
+Intel Threading Building Blocks (TBB)
+Cilk Plus
+VTune Amplifier
+Intel Fortran Compiler
+Intel Developer Zone (Intel DZ; support and discussion)
+
+References[edit]
+
+
+^ "Intel C++ Composer XE 2015 Release Notes".&#160;
+^ "No Cost Options for Intel Parallel Studio XE, Support yourself, Royalty-Free".&#160;
+^ "Intel C++ Compiler for Android documentation".&#160;
+^ A. J. C. Bik, The Software Vectorization Handbook (Intel Press, Hillsboro, OR, 2004), ISBN 0-9743649-2-4.
+^ The Software Optimization Cookbook, High-Performance Recipes for IA-32 Platforms, Richard Gerber, Aart J.C. Bik, Kevin B. Smith, and Xinmin Tian, Intel Press, 2006
+^ Intel C++ Compiler XE 13.0 User and Reference Guides
+^ The pitfalls of verifying floating-point computations, by David Monniaux, also printed in ACM Transactions on programming languages and systems (TOPLAS), May 2008; section 4.3.2 discusses nonstandard optimizations.
+^ This note is attached to the release in which Cilk Plus was introduced. This ULR points to current documentation: http://software.intel.com/en-us/intel-composer-xe/
+^ Intel C++ Composer XE 2013 Release Notes[1] http://software.intel.com/en-us/articles/intel-c-composer-xe-2013-release-notes/
+^ Intel C++ Composer XE 2013 Release Notes[2] http://software.intel.com/en-us/articles/intel-c-composer-xe-2013-release-notes/
+^ "Intel® Compilers | Intel® Developer Zone". Intel.com. 1999-02-22. Retrieved 2012-10-13.&#160;
+^ [3][dead link]
+^ http://developer.amd.com/Assets/CompilerOptQuickRef-61004100.pdf
+^ Your Processor, Your Compiler, and You: The Case of the Secret CPUID String
+^ a b Intel's "cripple AMD" function
+^ http://download.intel.com/pressroom/legal/AMD_settlement_agreement.pdf
+^ "Intel and U.S. Federal Trade Commission Reach Tentative Settlement". Newsroom.intel.com. 2010-08-04. Retrieved 2012-10-13.&#160;
+^ FTC, Intel Reach Settlement; Intel Banned From Anticompetitive Practices
+^ "Optimization Notice". Intel Corporation. Retrieved 11 December 2013.&#160;
+^ http://www.theregister.co.uk/2013/07/12/intel_atom_didnt_beat_arm
+
+
+External links[edit]
+
+Intel C++ Compiler for Android
+Compilers in Parallel Studio XE 2013
+Cilk Plus Open Source Site
+TBB Open Source Site
+Free download of Intel compilers for non-commercial use
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Intel software
+
+
+
+
+
+
+
+Items in italics are no longer maintained or have planned end-of-life dates.
+
+
+
+
+
+
+Development
+
+
+
+Parallel Studio
+C++ Compiler
+Fortran Compiler
+Debugger
+Parallel Advisor
+Parallel Inspector
+VTune
+Array Visualizer
+Cilk Plus
+
+
+
+
+
+
+
+
+Components
+
+
+
+Integrated Performance Primitives (IPP)
+Math Kernel Library (MKL)
+Threading Building Blocks (TBB)
+Concurrent Collections for C++ (CnC)
+Parallel Building Blocks (PBB)
+
+Intel Array Building Blocks (ArBB)
+Ct
+
+
+Indeo
+
+
+
+
+
+
+
+
+Open source
+
+
+
+Threading Building Blocks (TBB)
+Cilk Plus
+Concurrent Collections for C++ (CnC)
+Moblin
+MeeGo
+Tizen
+
+
+
+
+
+
+
+
+Software programs
+
+
+
+Telekinesys Research1
+
+Havok1
+Vision1
+
+
+Intel Security Group
+
+SiteAdvisor
+Stinger
+VirusScan
+Validate
+
+
+Wind River Systems
+
+Simics
+VxWorks
+
+
+
+
+
+
+
+
+
+
+Organizations
+
+
+
+Developer Zone
+AppUp
+
+
+
+
+
+
+
+
+
+
+
+1Sold&#160;&#160;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Intel_C%2B%2B_Compiler&amp;oldid=690997241"					
+				Categories: C++ compilersC compilersIntel productsHidden categories: All articles with dead external linksArticles with dead external links from October 2012				
+							
+		
+		
+			

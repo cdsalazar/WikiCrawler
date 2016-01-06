@@ -1,0 +1,1113 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Agile software development
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Software development process
+
+
+Core activities
+
+
+
+
+Requirements
+Design
+Construction
+Testing
+Debugging
+Deployment
+Maintenance
+
+
+
+
+Paradigms and models
+
+
+
+
+Software engineering
+Waterfall
+Prototyping
+Incremental
+V-Model
+Dual Vee Model
+Spiral
+IID
+Agile
+Lean
+DevOps
+
+
+
+
+Methodologies and frameworks
+
+
+
+
+Cleanroom
+TSP
+PSP
+RAD
+DSDM
+MSF
+Scrum
+Kanban
+UP
+XP
+TDD
+ATDD
+BDD
+FDD
+DDD
+MDD
+
+
+
+
+Supporting disciplines
+
+
+
+
+Configuration management
+Documentation
+Software Quality assurance (SQA)
+Project management
+User experience
+
+
+
+
+Tools
+
+
+
+
+Compiler
+Debugger
+Profiler
+GUI designer
+Modeling
+IDE
+Build automation
+Testing
+
+
+
+
+Standards and BOKs
+
+
+
+
+CMMI
+IEEE standards
+ISO 9001
+ISO/IEC standards
+SWEBOK
+PMBOK
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+Agile software development is a group of software development methods in which requirements and solutions evolve through collaboration between self-organizing,[1] cross-functional teams. It promotes adaptive planning, evolutionary development, early delivery, continuous improvement, and encourages rapid and flexible response to change.[2]
+The Manifesto for Agile Software Development,[3] also known as the Agile Manifesto, was first proclaimed in 2001, six years after "Agile Methodology" was originally introduced by the preeminent software engineers of the late 1980s and early 1990s. The Manifesto came out of the DSDM Consortium in 1994, although its roots go back to the mid 1980s at DuPont and works by James Martin[4] and James Kerr et al.[5]
+
+
+
+Contents
+
+
+1 History
+
+1.1 The Agile Manifesto
+
+1.1.1 Agile principles
+
+
+1.2 Evolutions
+
+
+2 Overview
+
+2.1 Iterative, incremental and evolutionary
+2.2 Efficient and face-to-face communication
+2.3 Very short feedback loop and adaptation cycle
+2.4 Quality focus
+
+
+3 Philosophy
+
+3.1 Adaptive vs. predictive
+3.2 Iterative vs. waterfall
+3.3 Code vs. documentation
+
+
+4 Agile methods
+
+4.1 Agile practices
+4.2 Method tailoring
+4.3 Comparison with other methods
+
+4.3.1 RAD
+4.3.2 CMMI
+
+
+4.4 Large-scale, offshore and distributed
+4.5 Regulated domains
+
+
+5 Experience and adoption
+
+5.1 Common agile pitfalls
+
+5.1.1 Lack of overall project design
+5.1.2 Adding stories to a sprint in progress
+5.1.3 Lack of sponsor support
+5.1.4 Insufficient training
+5.1.5 Product owner role is not properly filled
+5.1.6 Teams are not focused
+5.1.7 Excessive preparation/planning
+5.1.8 Problem-solving in the daily standup
+5.1.9 Assigning tasks
+5.1.10 Scrum master as a contributor
+5.1.11 Lacking test automation
+5.1.12 Allowing technical debt to build up
+5.1.13 Attempting to take on too much in a sprint
+5.1.14 Fixed time, resources, scope, and quality
+
+
+5.2 Measuring agility
+
+5.2.1 Surveys
+
+
+
+
+6 Criticism
+7 Applications outside software development
+8 References
+9 Further reading
+10 External links
+
+
+
+History[edit]
+Incremental software development methods trace back to 1957.[6] In 1974, E. A. Edmonds wrote a paper that introduced an adaptive software development process.[7][8] Concurrently and independently, the same methods were developed and deployed by the New York Telephone Company's Systems Development Center under the direction of Dan Gielan. In the early 1970s, Tom Gilb started publishing the concepts of evolutionary project management (EVO), which has evolved into competitive engineering.[9] During the mid- to late 1970s, Gielan lectured extensively throughout the U.S. on this methodology, its practices, and its benefits.
+A collection of lightweight software development methods evolved in the mid-1990s in reaction to the perceived heavyweight waterfall-oriented methods, which critics called heavily regulated, regimented, and micro-managed; although some proponents of these lightweight methods contended that they were simply returning to earlier software practices.[6] These lightweight methods included: from 1994, unified process and dynamic systems development method (DSDM); from 1995, scrum; from 1996, crystal clear and extreme programming (aka "XP"); and from 1997, adaptive software development and feature-driven development. Although these originated before the publication of the Agile Manifesto in 2001, they are now collectively referred to as agile methods;[10] and often abbreviated loosely as Agile, with a capital A, although this is progressively becoming deprecated.[11]
+The Agile Manifesto[edit]
+In February 2001, seventeen software developers[12] met at the Snowbird resort in Utah to discuss lightweight development methods. They published the Manifesto for Agile Software Development,[3] in which they said that by "uncovering better ways of developing software by doing it and helping others do it," they have come to value Individuals and interactions over Processes and tools, Working software over Comprehensive documentation, Customer collaboration over Contract negotiation, and Responding to change over Following a plan.
+
+Individuals and interactions: self-organization and motivation are important, as are interactions like co-location and pair programming.
+Working software: working software is more useful and welcome than just presenting documents to clients in meetings.
+Customer collaboration: requirements cannot be fully collected at the beginning of the software development cycle, therefore continuous customer or stakeholder involvement is very important.
+Responding to change: agile methods are focused on quick responses to change and continuous development.[13]
+
+Some of the authors formed the Agile Alliance, a non-profit organization that promotes software development according to the manifesto's values and principles. Introducing the manifesto on behalf of the Agile Alliance, Jim Highsmith said,
+
+The Agile movement is not anti-methodology, in fact many of us want to restore credibility to the word methodology. We want to restore a balance. We embrace modeling, but not in order to file some diagram in a dusty corporate repository. We embrace documentation, but not hundreds of pages of never-maintained and rarely-used tomes. We plan, but recognize the limits of planning in a turbulent environment. Those who would brand proponents of XP or SCRUM or any of the other Agile Methodologies as "hackers" are ignorant of both the methodologies and the original definition of the term hacker.
+— Jim Highsmith, History: The Agile Manifesto[14]
+
+Agile principles[edit]
+The Agile Manifesto is based on twelve principles:[15]
+
+Customer satisfaction by early and continuous delivery of valuable software
+Welcome changing requirements, even in late development
+Working software is delivered frequently (weeks rather than months)
+Close, daily cooperation between business people and developers
+Projects are built around motivated individuals, who should be trusted
+Face-to-face conversation is the best form of communication (co-location)
+Working software is the principal measure of progress
+Sustainable development, able to maintain a constant pace
+Continuous attention to technical excellence and good design
+Simplicity—the art of maximizing the amount of work not done—is essential
+Self-organizing teams
+Regular adaptation to changing circumstance
+
+Evolutions[edit]
+Later, Ken Schwaber with others founded the Scrum Alliance and created the Certified Scrum Master programs and its derivatives. Schwaber left the Scrum Alliance in the fall of 2009, and founded Scrum.org.
+In 2005, a group headed by Alistair Cockburn and Jim Highsmith wrote an addendum of project management principles, the Declaration of Interdependence,[16] to guide software project management according to agile software development methods.
+In 2009, a movement spearheaded by Robert C Martin wrote an extension of software development principles, the Software Craftsmanship Manifesto, to guide agile software development according to professional conduct and mastery.
+In 2011 the original Agile Alliance[17] created the Guide to Agile Practices, an evolving open-source compendium of the working definitions of agile practices, terms, and elements, along with interpretations and experience guidelines from the world-wide community of agile practitioners.
+The PRINCE2 project management methodology, used on many British Government projects, is being enhanced to manage projects that use Agile techniques.[18]
+Overview[edit]
+
+
+
+
+Pair programming, an agile development technique used by XP. Note information radiators in the background.
+
+
+There are many specific agile development methods. Most promote development, teamwork, collaboration, and process adaptability throughout the life-cycle of the project.
+Iterative, incremental and evolutionary[edit]
+Most agile development methods break the tasks into small increments with minimal planning and do not directly involve long-term planning. Iterations are short time frames (timeboxes) that typically last from one to four weeks. Each iteration involves a cross-functional team working in all functions: planning, requirements analysis, design, coding, unit testing, and acceptance testing. At the end of the iteration a working product is demonstrated to stakeholders. This minimizes overall risk and allows the project to adapt to changes quickly. An iteration might not add enough functionality to warrant a market release, but the goal is to have an available release (with minimal bugs) at the end of each iteration.[19] Multiple iterations might be required to release a product or new features.
+Working software is the primary measure of progress.
+Efficient and face-to-face communication[edit]
+No matter what development disciplines are required, each agile team should include a customer representative (product owner in scrum). This person is appointed by stakeholders to act on their behalf[20] and makes a personal commitment to being available for developers to answer mid-iteration questions. At the end of each iteration, stakeholders and the customer representative review progress and re-evaluate priorities with a view to optimizing the return on investment (ROI) and ensuring alignment with customer needs and company goals.
+In agile software development, an information radiator is a (normally large) physical display located prominently in an office, where passers-by can see it. It presents an up-to-date summary of the status of a software project or other product.[21][22] The name was coined by Alistair Cockburn, and described in his 2002 book Agile Software Development.[22] A build light indicator may be used to inform a team about the current status of their project.
+Very short feedback loop and adaptation cycle[edit]
+A common characteristic in agile is the daily "stand-up", also known as the daily scrum. In a brief session, team members report to each other what they did the previous day toward their team's sprint goal, what they intend to do today toward their team's sprint goal, and any roadblocks or impediments they can see to their team's sprint goal.[23]
+Quality focus[edit]
+Specific tools and techniques, such as continuous integration, automated unit testing, pair programming, test-driven development, design patterns, domain-driven design, code refactoring and other techniques are often used to improve quality and enhance project agility.[24]
+Philosophy[edit]
+Compared to traditional software engineering, agile software development mainly targets complex systems and projects with dynamic, non-deterministic and non-linear characteristics, where accurate estimates, stable plans, and predictions are often hard to get in early stages—and big up-front designs and arrangements would probably cause a lot of waste, i.e., are not economically sound. These basic arguments and previous industry experiences, learned from years of successes and failures, have helped shape agile development's favor of adaptive, iterative and evolutionary development.[25]
+Adaptive vs. predictive[edit]
+Development methods exist on a continuum from adaptive to predictive.[26] Agile methods lie on the adaptive side of this continuum. One key of adaptive development methods is a "Rolling Wave" approach to schedule planning, which identifies milestones but leaves flexibility in the path to reach them, and also allows for the milestones themselves to change.[27] Adaptive methods focus on adapting quickly to changing realities. When the needs of a project change, an adaptive team changes as well. An adaptive team has difficulty describing exactly what will happen in the future. The further away a date is, the more vague an adaptive method is about what will happen on that date. An adaptive team cannot report exactly what tasks they will do next week, but only which features they plan for next month. When asked about a release six months from now, an adaptive team might be able to report only the mission statement for the release, or a statement of expected value vs. cost.
+Predictive method, in contrast, focus on analysing and planning the future in detail and cater for known risks. In the extremes, a predictive team can report exactly what features and tasks are planned for the entire length of the development process. Predictive methods rely on effective early phase analysis and if this goes very wrong, the project may have difficulty changing direction. Predictive teams often institute a change control board to ensure they consider only the most valuable changes.
+Risk analysis can be used to choose between adaptive (agile or value-driven) and predictive (plan-driven) methods.[28] Barry Boehm and Richard Turner suggest that each side of the continuum has its own home ground, as follows:[29]
+
+Home grounds of different development methods
+
+Agile methods
+Plan-driven methods
+Formal methods
+
+
+Low criticality
+High criticality
+Extreme criticality
+
+
+Senior developers
+Junior developers(?)
+Senior developers
+
+
+Requirements change often
+Requirements do not change often
+Limited requirements, limited features see Wirth's law
+
+
+Small number of developers
+Large number of developers
+Requirements that can be modeled
+
+
+Culture that responds to change
+Culture that demands order
+Extreme quality
+
+
+Iterative vs. waterfall[edit]
+One of the differences between agile and waterfall is the approach to quality and testing. In the waterfall model, there is always a separate testing phase after a build phase; however, in agile development testing is usually done concurrently with, or at least in the same iteration as, programming.
+Because testing is done in every iteration—which develops a small piece of the software—users can frequently use those new pieces of software and validate the value.
+After the users know the real value of the updated piece of software, they can make better decisions about the software's future. Having a value retrospective and software re-planning session in each iteration—scrum typically has iterations of just two weeks—helps the team continuously adapt its plans so as to maximize the value it delivers.
+This iterative practice also introduces a product mindset rather than the waterfall model's project mindset. Software can be seen as a living organism, which actively changes due to environmental change. As long as the software is being used, especially when it has competition, iterations in agile software development drive the change.
+Because of the short iteration style of agile software development, it also has strong connections with the lean startup concept.
+Code vs. documentation[edit]
+In a letter to IEEE Computer, Steven Rakitin expressed cynicism about agile development, calling it "yet another attempt to undermine the discipline of software engineering" and translating "Working software over comprehensive documentation" as "We want to spend all our time coding. Remember, real programmers don't write documentation."[30]
+This is disputed by proponents of agile software development, who state that developers should write documentation if that's the best way to achieve the relevant goals, but that there are often better ways to achieve those goals than writing static documentation.[31] Scott Ambler states that documentation should be "Just Barely Good Enough" (JBGE),[32] that too much or comprehensive documentation would usually cause waste, and developers rarely trust detailed documentation because it's usually out of sync with code,[31] while too little documentation may also cause problems for maintenance, communication, learning and knowledge sharing. Alistair Cockburn wrote of the Crystal Clear method:
+
+Crystal considers development a series of co-operative games, and intends that the documentation is enough to help the next win at the next game. The work products for Crystal include use cases, risk list, iteration plan, core domain models, and design notes to inform on choices...however there are no templates for these documents and descriptions are necessarily vague, but the objective is clear, just enough documentation for the next game. I always tend to characterize this to my team as: what would you want to know if you joined the team tomorrow.
+— Alistair Cockburn.[33]
+
+Agile methods[edit]
+Popular agile software development methods and/or process frameworks include (but are not limited to):
+
+Adaptive software development (ASD)
+Agile modeling
+Agile Unified Process (AUP)
+Business analyst designer method (BADM)[34]
+Crystal Clear Methods
+Disciplined agile delivery
+Dynamic systems development method (DSDM)
+Extreme programming (XP)
+Feature-driven development (FDD)
+Lean software development
+Kanban (development)
+Scrum
+Scrumban
+
+
+
+
+
+Software development life-cycle support[35]
+
+
+Agile methods are focused on different aspects of the software development life cycle. Some focus on the practices (e.g. XP, pragmatic programming, agile modeling), while others focus on managing the software projects (e.g. scrum). Yet, there are approaches providing full coverage over the development life cycle (e.g. DSDM, RUP), while most of them are suitable from the requirements specification phase on (FDD, for example). Thus, there is a clear difference between the various agile methods in this regard.[35]
+Agile practices[edit]
+Agile development is supported by a bundle of concrete practices, covering areas like requirements, design, modelling, coding, testing, project management, process, quality, etc. Some notable agile practices include:
+
+Acceptance test-driven development (ATDD)
+Agile modeling
+Backlogs (Product and Sprint)
+Behavior-driven development (BDD)
+Cross-functional team
+Continuous integration (CI)
+Domain-driven design (DDD)
+Information radiators (scrum board, task board, visual management board, burndown chart)
+Iterative and incremental development (IID)
+Pair programming
+Planning poker
+Refactoring
+Scrum events (sprint planning, daily scrum, sprint review and retrospective)
+Test-driven development (TDD)
+Agile testing
+Timeboxing
+Use case
+User story
+Story-driven modeling
+Retrospective
+Velocity tracking
+User Story Mapping
+
+The Agile Alliance has provided a comprehensive online collection with a map guide to the applying agile practices.[36]
+Method tailoring[edit]
+In the literature, different terms refer to the notion of method adaptation, including 'method tailoring', 'method fragment adaptation' and 'situational method engineering'. Method tailoring is defined as:
+
+A process or capability in which human agents determine a system development approach for a specific project situation through responsive changes in, and dynamic interplays between contexts, intentions, and method fragments.[37]
+
+Potentially, almost all agile methods are suitable for method tailoring. Even the DSDM method is being used for this purpose and has been successfully tailored in a CMM context.[38] Situation-appropriateness can be considered as a distinguishing characteristic between agile methods and traditional software development methods, with the latter being relatively much more rigid and prescriptive. The practical implication is that agile methods allow project teams to adapt working practices according to the needs of individual projects. Practices are concrete activities and products that are part of a method framework. At a more extreme level, the philosophy behind the method, consisting of a number of principles, could be adapted (Aydin, 2004).[37]
+Some approaches, such as Extreme programming (XP) make the need for method adaptation explicit. With these less-prescriptive frameworks, one of the fundamental ideas is that no one process fits every project, but rather that practices should be tailored to the needs of individual projects (partial adoption of XP practices, as suggested by Beck, has been reported on several occasions [35]). Mehdi Mirakhorli proposes a tailoring practice that provides a sufficient road-map and guidelines for adapting all the practices. RDP Practice is designed for customizing XP. This practice, first proposed as a long research paper in the APSO workshop at the ICSE 2008 conference, is currently the only proposed and applicable method for customizing XP. Although it is specifically a solution for XP, this practice has the capability of extending to other methodologies. At first glance, this practice seems to be in the category of static method adaptation but experiences with RDP Practice says that it can be treated like dynamic method adaptation. The distinction between static method adaptation and dynamic method adaptation is subtle.[39]
+Comparison with other methods[edit]
+RAD[edit]
+Agile methods have much in common with the Rapid Application Development techniques from the 1980/90s as espoused by James Martin and others. In addition to technology-focused methods, customer-and-design-centered methods, such as Visualization-Driven Rapid Prototyping developed by Brian Willison, work to engage customers and end users to facilitate agile software development.[40]
+Further, James M. Kerr and Richard Hunter wrote a book on the subject that presented a day-by-day diary of an actual RAD project, It covered the project from inception to production and contains many of the techniques that forge the backbone of, and are very much present in, today's Agile approaches [41]
+CMMI[edit]
+In 2008 the Software Engineering Institute (SEI) published the technical report "CMMI or Agile: Why Not Embrace Both"[42] to make clear that the Capability Maturity Model Integration and Agile can co-exist. Modern CMMI-compatible development processes are also iterative. The CMMI Version 1.3 includes tips for implementing CMMI and agile process improvement together.[43]
+Large-scale, offshore and distributed[edit]
+Agile development has been widely seen as highly suited to certain types of environments, including small teams of experts working on greenfield projects,[29][44]:157 and the challenges and limitations encountered in the adoption of agile methods in a large organization with legacy infrastructure are well-documented and understood.[45]
+In response, a range of strategies and patterns has evolved for overcoming challenges with large-scale development efforts (&gt;20 developers)[46][47] or distributed (non-colocated) development teams,[48][49] amongst other challenges; and there are now several recognised frameworks that seek to mitigate or avoid these challenges, including:
+
+Scaled agile framework (SAFe),[50] Dean Leffingwell inter alia
+Disciplined agile delivery (DAD), Scott Ambler inter alia
+Large-scale scrum (LeSS), Craig Larman and Bas Vodde
+Nexus (scaled professional Scrum),[51] Ken Schwaber
+Scrum at Scale [52] Jeff Sutherland, Alex Brown
+Enterprise Scrum,[53] Mike Beedle
+Setchu (Scrum-based lightweight framework) [54] Michael Ebbage
+
+There are many conflicting viewpoints on whether all of these are effective or indeed fit the definition of agile development, and this remains an active and ongoing area of research.[46][55]
+When agile software development is applied in a distributed setting (with teams dispersed across multiple business locations), it is commonly referred to as Distributed Agile Development. The goal is to leverage the unique benefits offered by each approach. Distributed development allow organizations to build software by strategically setting up teams in different parts of the globe, virtually building software round-the-clock (more commonly referred to as follow-the-sun model). On the other hand, agile development provides increased transparency, continuous feedback and more flexibility when responding to changes.
+Regulated domains[edit]
+Agile methods were initially seen as best suitable for non-critical software projects, thereby excluded from use in regulated domains such as medical devices, pharmaceutical, financial, nuclear systems, automotive, and avionics sectors, etc. However, in the last several years, there have been several initiatives for the adaptation of agile methods for these domains.[56][57][58]
+There are numerous standards that may apply in regulated domains, including ISO 26262, ISO 9000, ISO 9001, and ISO/IEC 15504. A number of key concerns are of particular importance in regulated domains which may conflict with the use of agile methods:[56]
+
+Quality Assurance (QA): Systematic and inherent quality management underpinning a controlled professional process and reliability and correctness of product.
+Safety and Security: Formal planning and risk management to mitigate safety risks for users and securely protecting users from unintentional and malicious misuse.
+Traceability: Documentation providing auditable evidence of regulatory compliance and facilitating traceability and investigation of problems.
+Verification and Validation (V&amp;V): Embedded throughout the software development process (e.g. user requirements specification, functional specification, design specification, code review, unit tests, integration tests, system tests).
+
+The Scrum framework in particular has received considerable attention. Two derived methods have been defined: R-Scrum (Regulated Scrum) [56] and SafeScrum.[59][60]
+Experience and adoption[edit]
+Agile methods were first used by technology early adopters such as Tektronix. Although Agile can be used with any programming paradigm or language in practice Agile has usually been closely associated with object-oriented environments such as Smalltalk and Lisp and later Java. The initial adopters of Agile methods were usually small to medium-sized teams working on unprecedented systems with requirements that were difficult to finalize and likely to change as the system was being developed. One of the first successful large scale uses of Agile was the Brooklyn Union Gas Smalltalk project.[61] This section describes some common problems organizations encounter when they try to adopt Agile methods as well as various techniques to measure the quality and performance of Agile teams.[62]
+Common agile pitfalls[edit]
+Organizations and teams implementing agile development often face difficulties transitioning from more traditional methods such as waterfall development, such as teams having an agile process forced on them.[63] These are often termed agile anti-patterns or more commonly agile smells. Below are some common examples:
+Lack of overall project design[edit]
+A main goal of Agile is to reduce the amount of documentation created during a project and focus on the actual code. This is in contrast to waterfall models where the process is often highly controlled and minor changes to the system require significant revision of supporting documentation. However, this does not justify completely doing without any analysis or design at all. Failure to pay attention to design can cause a team to proceed rapidly at first but then to have significant rework required as they attempt to scale up the system. One of the key features of Agile is that it is an iterative process. When done correctly design emerges as the system is developed and commonalities and opportunities for re-use are discovered.[64]
+Adding stories to a sprint in progress[edit]
+In Agile methods requirements are typically defined by stories. Stories are similar to use case descriptions in object-oriented development. In Agile a sprint is a short period of time during which the team has committed to specific goals.[65] Adding stories to a sprint in progress is detrimental to the flow established by Agile. From Ilan Goldstein's Sprint issues – when sprints turn into crawls, "'Isn't the ability to change course on the fly what Scrum is all about?' Well not quite. Scrum certainly provides provision to change product backlog priorities mid-project however this needs to occur between sprints and not during them."[66]
+If an issue arises that requires additions to a sprint, Ilan recommends an abnormal sprint termination.[66] This does not mean that a user story cannot expand. Teams must deal with new information, which may produce additional tasks for a user story. If the new information prevents the user story from being production-ready during the sprint, then it should carry over to the next sprint. However, during the next sprint planning, the user story should be prioritized over all remaining user stories. The information that requires new tasks may have altered the user story priority.
+Lack of sponsor support[edit]
+Agile is often implemented as a grassroots effort in organizations by software development teams trying to optimize their development processes and ensure consistency in the software development life cycle. By not having sponsor support, teams may face difficulties and resistance from business partners, other development teams and management. "Carrying on without an effective sponsor raises the probability of project failure..."[67]
+Additionally, the project sponsor is responsible for ensuring the team has appropriate funding and resources.[68]
+Insufficient training[edit]
+A survey performed by Version One found respondents cited insufficient training as the most significant cause for failed agile projects[69] Teams have fallen into the trap of assuming the reduced processes of agile development compared to other methodologies such as waterfall means that there are no actual rules for agile development. Agile development is a set of prescribed methodologies, and training/practice is a requirement.
+Product owner role is not properly filled[edit]
+The product owner is responsible for representing the business in the development activity. In The Elements of Scrum the product owner "... is usually the most demanding role on a scrum team."[70]
+A common mistake is to have the product owner role filled by someone from the development team. According to Johanna Rothman this is a mistake, "When the business is unaccountable, the agile ecosystem breaks down."[71] Having the development team fill this role results in the team making its own decisions on prioritization without real feedback from the business. Additionally, the team either tries to solve business issues internally or delay as they reach outside the core group for input. This can cause finger-pointing and divert from the collaborative process directed.
+Teams are not focused[edit]
+The agile process requires teams who focus on the project to meet project commitments. During a sprint, a resource who has the capacity is expected to take up tasks potentially outside their area of greatest expertise or comfort.
+If team members have multiple projects, it is difficult to make spare capacity available to help complete the sprint. "While having information developers working on multiple scrum teams is not ideal, it can be done with some proper planning and judicious evaluation of which meetings you should attend."[72]
+Excessive preparation/planning[edit]
+Teams may fall into the trap of spending too much time preparing or planning. This is a common trap for teams less familiar with the agile process where the teams feel obligated to have a complete understanding of all user stories or a detailed design. Teams should leverage the ability for Sprints to act as a method discovery and moving forward with the information they do know. As more information is gained it should be applied to the next Sprint.
+Problem-solving in the daily standup[edit]
+A daily standup should be a focused, timely meeting where all team members disseminate information. If problem-solving occurs, it often can only involve certain team members and potentially is not the best use of the entire team's time. If during the daily standup the team starts diving into problem-solving, it should be tabled until a sub-team can discuss, usually immediately after the daily scrum completes.[73]
+Assigning tasks[edit]
+One of the intended benefits of agile development is to empower the team to make choices, as they are closest to the problem. Additionally, they should make choices as close to implementation as possible—compared to a waterfall approach—to use more timely information in the decision. If team members are assigned tasks by others or too early in the process, the benefits of localized and timely decision making can be lost.[74]
+Another tendency is for assigners to box team members into certain roles (for example, team member A must always do the database work), which hinders cross-training.[74] Team members themselves can choose to take on tasks that stretch their abilities and provide cross-training opportunities.
+Scrum master as a contributor[edit]
+Another common pitfall is for a scrum master to act as a contributor. While not prohibited by the Scrum methodology, the scrum master needs to ensure they have the capacity to act in the role of scrum master first and not working on tasks for the project. A scrum master's role is to facilitate the Scrum process. "Facilitating meetings such as a daily scrum, sprint planning, sprint reviews and sprint retrospectives is part of this. A technical contributor's role is to work with the other team members to figure out how to get the work done and to do it."[75]
+Having the scrum master also multitasking may result in too many context switches to be productive. Additionally, as a scrum master is responsible for ensuring roadblocks are removed so that the team can make forward progress, the benefit gained by individual tasks moving forward may not outweigh roadblocks that are deferred due to lack of capacity.[75]
+Lacking test automation[edit]
+Due to the iterative nature of agile development, multiple rounds of testing for a project are often needed. "Having an automated testing framework, which takes care of both system and integration tests, adds a lot of firepower to such a team. It not only acts as a safety net against regressions caused by new development, but more importantly frees up a lot of precious developer and tester time - allowing them to focus on the things they do best."[76]
+Test automation also supports continued refactoring required by iterative software development. Allowing a developer to quickly run tests to confirm refactoring has not modified the functionality of the application may reduce the workload and increase confidence that cleanup efforts have not introduced new defects.
+Allowing technical debt to build up[edit]
+Focusing on delivering new functionality may result in increased technical debt. The team must allow themselves time for defect remediation and refactoring. Technical debt hinders planning abilities by increasing the amount of unscheduled work as production defects distract the team from further project progress.[77]
+As the system evolves it is important to refactor as entropy of the system naturally increases.[78] Over time the lack of constant maintenance causes increasing defects and development costs.[77]
+Attempting to take on too much in a sprint[edit]
+A common misconception is that agile development allows continuous change, however a sprint backlog is an agreement of what work can be completed during the sprint.[79] Additionally having too much work-in-progress(WIP) can result in inefficiencies due "to avoid the penalties of wasted time, effort and resources."[80]
+A possible issue is the team being pressured into taking on additional work. "An important point to reiterate here is that it's the team that selects how much work they can do in the coming sprint. The product owner does not get to say, 'We have four sprints left so you need to do one-fourth of everything I need.' We can hope the team does that much (or more), but it's up to the team to determine how much they can do in the sprint."[81]
+Fixed time, resources, scope, and quality[edit]
+Agile development fixes time (sprint duration), quality, and ideally resources in advance (though maintaining fixed resources may be difficult if developers are often pulled away from tasks to handle production incidents), while the scope remains variable. The customer or product owner often pushes for a fixed scope for a sprint. However, teams should be reluctant to commit to locked time, resources and scope (commonly known as the project management triangle). Efforts to add scope to the fixed time and resources of agile development may result in decreased quality.[82]
+Measuring agility[edit]
+The best Agile practitioners have always emphasized sound engineering principles. As a result, there are a number of Agile best practices and tools for measuring the performance of projects and teams.
+The Agility Index Measurements (AIM)[83] scores projects against a number of agility factors to achieve a total. The similarly named Agility Measurement Index,[84] scores developments against five dimensions of a software project (duration, risk, novelty, effort, and interaction). Other techniques are based on measurable goals.[85] Another study using fuzzy mathematics[86] has suggested that project velocity can be used as a metric of agility. There are agile self-assessments to determine whether a team is using agile practices (Nokia test,[87] Karlskrona test,[88] 42 points test[89]).
+While such approaches have been proposed to measure agility, the practical application of such metrics is still debated. There is agile software development ROI data available from the CSIAC ROI Dashboard.[90]
+Surveys[edit]
+One of the early studies reporting gains in quality, productivity, and business satisfaction by using Agile methods was a survey conducted by Shine Technologies from November 2002 to January 2003.[91] A similar survey, the State of Agile, is conducted every year starting in 2006 with thousands of participants from around the software development community. The State of Agile survey tracks trends on the benefits of agile, trends, lessons learned, preferred practices and agile methodologies. From the 2013 results released in January 2014, the survey concludes that 73% of respondents say agile software helps them complete software projects faster; 92% say agile improves their ability to manage changing customer priorities; and 87% say agile improves their development team's productivity.[92] In 2014 the survey "Status Quo Agile" showed better results of agile methods regarding all success criteria examined compared to classical project management [93] Yet another survey conducted in 2006 by Scott Ambler, the Practice Leader for Agile Development with IBM Rational's Methods Group reported similar benefits.[94] Others claim that agile development methods are still too young to require extensive academic proof of their success.[95]
+Criticism[edit]
+Agile methodologies can be very difficult for large organizations such as governments and multinational banks to faithfully adopt, for reasons ranging from lack of sponsor buy-in to agile, to refusal to heed agile consultants' advice on co-located teams - and particularly in the case of governments, outdated procurement and project management policies that assume non-agile methodologies.[citation needed]
+Agile methodologies can be inefficient in large organizations and certain types of projects.[96] Agile methods seem best for developmental and non-sequential projects. Many organizations believe that agile methodologies are too extreme and adopt a hybrid approach that mixes elements of agile and plan-driven approaches.[97] However, DSDM is an agile methodology that in fact mixes elements of agile and plan-driven approaches in a disciplined way, without sacrificing the fundamental principles that make agile work.
+The term "agile" has also been criticized as being a management fad that simply describes existing good practices under new jargon, promotes a "one size fits all" mindset towards development strategies, and wrongly emphasizes method over results.[98]
+Alistair Cockburn organized a celebration of the 10th anniversary of the Agile Manifesto in Snowbird, Utah on February 12, 2011, gathering some 30+ people who had been involved at the original meeting and since. A list of about 20 elephants in the room ("undiscussable" agile topics/issues) were collected, including aspects: the alliances, failures and limitations of agile practices and context (possible causes: commercial interests, decontextualization, no obvious way to make progress based on failure, limited objective evidence, cognitive biases and reasoning fallacies), politics and culture.[99] As Philippe Kruchten wrote:
+
+The agile movement is in some ways a bit like a teenager: very self-conscious, checking constantly its appearance in a mirror, accepting few criticisms, only interested in being with its peers, rejecting en bloc all wisdom from the past, just because it is from the past, adopting fads and new jargon, at times cocky and arrogant. But I have no doubts that it will mature further, become more open to the outside world, more reflective, and also therefore more effective.
+
+Applications outside software development[edit]
+
+
+
+
+Agile Brazil 2014 conference
+
+
+Agile methods have been extensively used for development of software products and some of them use certain characteristics of software, such as object technologies.[100] However, these techniques can be applied to the development of non-software products, such as computers, motor vehicles,[101] medical devices, food, clothing, and music;[102] see Flexible product development. Some of the wider principles of agile have also found application in general management[103] (e.g., strategy, governance, risk, finance) under the terms business agility or Agile Business Management.
+Under an Agile Business Management model, agile techniques, practices, principles and values are expressed across four domains.[104]
+
+Integrated customer engagement - to embed customers within any delivery process to share accountability for product/service delivery.
+Facilitation-based management - adopting agile management models, like the role of Scrum Master, to facilitate the day-to-day operation of teams.
+Agile work practices - adopting specific iterative and incremental work practices such as Scrum, Kanban, Test-Driven Development or Feature-Driven Development across all business functions (from Sales, Human Resources, Finance[105] and Marketing).
+An enabling organisational structure - with a focus on staff engagement, personal autonomy and outcomes based governance.
+
+Agile development paradigms can be used in other areas of life such as raising children. Its success in child development might be founded on some basic management principles; communication, adaptation and awareness. Bruce Feiler has claimed that the basic Agile Development paradigms can be applied to household management and raising children. In his TED Talk, "Agile programming -- for your family", these paradigms brought significant changes to his household environment, such as the kids doing dishes, taking out the trash, and decreasing his children's emotional outbreaks, which inadvertently increased their emotional stability.
+References[edit]
+
+
+^ Collier, Ken W. (2011). Agile Analytics: A Value-Driven Approach to Business Intelligence and Data Warehousing. Pearson Education. pp.&#160;121 ff. ISBN&#160;9780321669544. What is a self-organizing team?&#160;
+^ "What is Agile Software Development?". Agile Alliance. 8 June 2013. Retrieved 4 April 2015.&#160;
+^ a b Beck, Kent; et al. (2001). "Manifesto for Agile Software Development". Agile Alliance. Retrieved 14 June 2010.&#160;
+^ Martin, James (1991). Rapid Application Development. Macmillan. ISBN 0-02-376775-8.
+^ Kerr, James M.; Hunter, Richard (1993). Inside RAD: How to Build a Fully Functional System in 90 Days or Less. McGraw-Hill. ISBN 0-07-034223-7 p.3
+^ a b Gerald M. Weinberg, as quoted in Larman, Craig; Basili, Victor R. (June 2003). "Iterative and Incremental Development: A Brief History". Computer 36 (6): 47–56. doi:10.1109/MC.2003.1204375. ISSN&#160;0018-9162. We were doing incremental development as early as 1957, in Los Angeles, under the direction of Bernie Dimsdale at IBM's Service Bureau Corporation. He was a colleague of John von Neumann, so perhaps he learned it there, or assumed it as totally natural. I do remember Herb Jacobs (primarily, though we all participated) developing a large simulation for Motorola, where the technique used was, as far as I can tell&#160;... All of us, as far as I can remember, thought waterfalling of a huge project was rather stupid, or at least ignorant of the realities. I think what the waterfall description did for us was make us realize that we were doing something else, something unnamed except for 'software development.'&#160;
+^ Edmonds, E. A. (1974). "A Process for the Development of Software for Nontechnical Users as an Adaptive System". General Systems 19: 215–18.&#160;
+^ Note by Edmonds: I presented these ideas in London in 1970 and first submitted the paper to the Journal Computer Aided Design. It was rejected with the comment "If you don't know what you are going to do before you start you shouldn't start"! Only then did I submit it to General Systems.
+^ "Evolutionary Project Management". Gilb.&#160;
+^ Larman, Craig (2004). Agile and Iterative Development: A Manager's Guide. Addison-Wesley. p.&#160;27. ISBN&#160;978-0-13-111155-4.&#160;
+^ "Agile With a Capital "A" Vs. agile With a Lowercase "a"". Rally. 2010. Retrieved 9 September 2015.&#160;
+^ Kent Beck, James Grenning, Robert C. Martin, Mike Beedle, Jim Highsmith, ||Steve Mellor, Arie van Bennekum, Andrew Hunt, Ken Schwaber, Alistair Cockburn, Ron Jeffries, Jeff Sutherland, Ward Cunningham, Jon Kern, Dave Thomas, Martin Fowler, Brian Marick
+^ Ambler, S.W. "Examining the Agile Manifesto". Retrieved 6 April 2011.
+^ Jim Highsmith (2001). "History: The Agile Manifesto". agilemanifesto.org.&#160;
+^ Beck, Kent; et al. (2001). "Principles behind the Agile Manifesto". Agile Alliance. Archived from the original on 14 June 2010. Retrieved 6 June 2010.&#160;
+^ Anderson, David (2005). "Declaration of Interdependence".&#160;
+^ http://guide.agilealliance.org/
+^ "PRINCE2® Agile". www.axelos.com. Axelos Ltd. Retrieved 6 March 2015.&#160;
+^ Beck, Kent (1999). "Embracing Change with Extreme Programming". Computer 32 (10): 70–77. doi:10.1109/2.796139.&#160;
+^ Gauthier, Alexandre (17 August 2011). "What is scrum". Planbox.&#160;
+^ Cockburn, Alistair. "Information radiator".&#160;
+^ a b Ambler, Scott (12 April 2002). Agile Modeling: Effective Practices for EXtreme Programming and the Unified Process. John Wiley &amp; Sons. pp.&#160;12, 164, 363. ISBN&#160;978-0-471-20282-0.&#160;
+^ Vasiliauskas, Vidas (2014). "Developing agile project task and team management practices". Eylean.&#160;
+^ Jeffries, Ron; Anderson, Ann; Hendrickson, Chet (2001). Extreme Programming installed. Addison-Weslsy. pp.&#160;72–147. ISBN&#160;0201-70842-6.&#160;
+^ Larman, Craig (2004). Agile and Iterative Development: A Manager's Guide. Addison-Wesley. p.&#160;27. ISBN&#160;978-0-13-111155-4.&#160;
+^ Boehm, B.; R. Turner (2004). Balancing Agility and Discipline: A Guide for the Perplexed. Boston, MA: Addison-Wesley. ISBN&#160;0-321-18612-5.&#160; Appendix A, pages&#160;165–194
+^ Larman, Craig (2004). "Chapter 11: Practice Tips". Agile and Iterative Development: A Manager's Guide. p.&#160;253. ISBN&#160;9780131111554. Retrieved October 14, 2013.&#160;
+^ Sliger, Michele; Broderick, Stacia (2008). The Software Project Manager's Bridge to Agility. Addison-Wesley. p.&#160;46. ISBN&#160;0-321-50275-2.&#160;
+^ a b Boehm, B.; R. Turner (2004). Balancing Agility and Discipline: A Guide for the Perplexed. Boston, MA: Addison-Wesley. pp.&#160;55–57. ISBN&#160;0-321-18612-5.&#160;
+^ Rakitin, Steven R. (2001). "Manifesto Elicits Cynicism: Reader's letter to the editor by Steven R. Rakitin". IEEE Computer 34: 4. The article titled 'Agile Software Development: The Business of Innovation' . . . is yet another attempt to undermine the discipline of software engineering . . . We want to spend all our time coding. Remember, real programmers don’t write documentation.&#160;
+^ a b Scott Ambler. "Agile/Lean Documentation: Strategies for Agile Software Development".&#160;
+^ Scott Ambler. "Just Barely Good Enough Models and Documents: An Agile Best Practice".&#160;
+^ Geoffrey Wiseman (July 18, 2007). "Do Agile Methods Require Documentation?". InfoQ.&#160; quoting Cooper, Ian (6 July 2007). "Staccato Signals:Agile and Documentation". WordPress.com.&#160;
+^ Heap, Tony. "Business Analyst Designer Method". http://www.its-all-design.com/. Retrieved 2015-08-08.&#160;
+^ a b c Abrahamson P, Salo O, Ronkainen J, Warsta J (2002). Agile software development methods: Review and analysis (PDF) (Technical report). VTT. 478.&#160;
+^ "Guide to Agile Practices". the Agile Alliance.&#160;
+^ a b Aydin, M.N., Harmsen, F., Slooten, K. v., &amp; Stagwee, R. A. (2004). An Agile Information Systems Development Method in use. Turk J Elec Engin, 12(2), 127-138
+^ Abrahamsson, P., Warsta, J., Siponen, M.T., &amp; Ronkainen, J. (2003). New Directions on Agile Methods: A Comparative Analysis. Proceedings of ICSE'03, 244-254
+^ Aydin, M.N., Harmsen, F., Slooten van K., &amp; Stegwee, R.A. (2005). On the Adaptation of An Agile Information(Suren) Systems Development Method. Journal of Database Management Special issue on Agile Analysis, Design, and Implementation, 16(4), 20-24
+^ Lankhorst, Mark (2012). Agile Service Development. Springer-Verglag. pp.&#160;17–19. ISBN&#160;978-3-642-28187-7.&#160;
+^ Kerr, James M.; Hunter, Richard (1993). Inside RAD: How to Build a Fully Functional System in 90 Days or Less. McGraw-Hill. ISBN 0-07-034223-7.
+^ "TECHNICAL NOTE CMU/SEI-2008-TN-003 CMMI or Agile: Why Not Embrace Both".&#160;
+^ CMMI Product Team,&#160;; CMMI for Development, Version 1.3 (CMU/SEI-2010-TR-033). Software Engineering Institute, Carnegie Mellon University, 2010. http://www.sei.cmu.edu/library/abstracts/reports/10tr033.cfm
+^ Beck, K. (1999). Extreme Programming Explained: Embrace Change. Boston, MA: Addison-Wesley. ISBN&#160;0-321-27865-8.&#160;
+^ Evans, Ian. "Agile Delivery at British Telecom". Retrieved 21 February 2011.&#160;
+^ a b W. Scott Ambler (2006) Supersize Me in Dr. Dobb's Journal, 15 February 2006.
+^ Schaaf, R.J. (2007). Agility XL Systems and Software Technology Conference 2007, Tampa, FL
+^ "Bridging the Distance". Sdmagazine.com. Retrieved 1 February 2011.&#160;
+^ Martin Fowler. "Using an Agile Software Process with Offshore Development". Martinfowler.com. Retrieved 6 June 2010.&#160;
+^ leffingwell, dean. "scaled agile framework". scaled agile framework.&#160;
+^ Schwaber, Ken. scrum.org (PDF) https://www.scrum.org/Portals/0/NexusGuide%20v1.1.pdf. Retrieved 14 September 2015.&#160; Missing or empty |title= (help)
+^ Sutherland, Jeff; Brown, Alex. "Scrum At Scale: Part 1". Retrieved 14 September 2015.&#160;
+^ Beedle, Mike. "Enterprise Scrum". Retrieved 25 September 2015.&#160;
+^ Ebbage, Michael. "Setchu – Agile at Scale". Retrieved 30 September 2015.&#160;
+^ Agile Processes Workshop II Managing Multiple Concurrent Agile Projects. Washington: OOPSLA 2002
+^ a b c Fitzgerald, B.; Stol, K.-J.; O'Sullivan, R.; O'Brien, D. (May 2013). "Scaling agile methods to regulated environments: An industry case study". 2013 35th International Conference on Software Engineering (ICSE): 863–872. doi:10.1109/ICSE.2013.6606635.&#160;
+^ Cawley, Oisín; Wang, Xiaofeng; Richardson, Ita (2010). Abrahamsson, Pekka; Oza, Nilay, eds. "Lean/Agile Software Development Methodologies in Regulated Environments – State of the Art". Lean Enterprise Software and Systems. Lecture Notes in Business Information Processing (Springer Berlin Heidelberg) 65: 31–36. ISBN&#160;978-3-642-16415-6.&#160;
+^ McHugh, Martin; McCaffery, Fergal; Coady, Garret (2014-11-04). Mitasiunas, Antanas; Rout, Terry; O’Connor, Rory V.; et al., eds. "An Agile Implementation within a Medical Device Software Organisation". Software Process Improvement and Capability Determination. Communications in Computer and Information Science (Springer International Publishing) 477: 190–201. ISBN&#160;978-3-319-13035-4.&#160;
+^ http://www.sintef.no/safescrum
+^ Thor Myklebust, Tor Stålhane, Geir Kjetil Hanssen, Tormod Wien and Børge Haugset: Scrum, documentation and the IEC 61508-3:2010 software standard, http://www.sintef.no/globalassets/ec-61508-documentation-and-safescrum-psam12.pdf
+^ Davis, John; Morgan, Tom (January 1993). "Object-Oriented Development at Brooklyn Union Gas". IEEE Software 10 (1): 67–74. Retrieved 2 October 2015.&#160;
+^ Beck, Kent (2000). Extreme Programming Explained. Addison-Wesley. pp.&#160;1–24. ISBN&#160;0201616416.&#160;
+^ Shore, James; Warden, Shane. Art of Agile Development. p.&#160;47.&#160;
+^ Beck, Kent (2000). Extreme Programming Explained. Addison-Wesley. pp.&#160;48–49. ISBN&#160;0201616416.&#160;
+^ Rouse, Margaret. "Sprint (software development) definition". http://searchsoftwarequality.techtarget.com. Retrieved 2 October 2015.&#160;
+^ a b Goldstein, Ilan. "Sprint issues – when sprints turn into crawls". http://www.axisagile.com.au/. Retrieved 2014-06-08.&#160;
+^ Bourne, Lynda. "What Does a Project Sponsor Really Do?". blogs.pmi.org. Retrieved 2014-06-08.&#160;
+^ "Project Roles and Responsibility Distribution". agile-only.com. Retrieved 2014-06-15.&#160;
+^ "State of Agile Development Survey Results". http://www.versionone.com/. Version One. Retrieved 2014-06-08.&#160;
+^ Sims, Chris; Johnson, Hillary Louise (2011-02-15). The Elements of Scrum (Kindle ed.). Dymaxicon. p.&#160;73.&#160;
+^ Rothman, Johanna Rothman. "When You Have No Product Owner At All". http://www.jrothman.com/. Retrieved 2014-06-08.&#160;
+^ Fox, Alyssa. "Working on Multiple Agile Teams". techwhirl.com/. Retrieved 2014-06-14.&#160;
+^ "Daily Scrum Meeting". http://www.mountaingoatsoftware.com/. Retrieved 2014-06-14.&#160;
+^ a b May, Robert. "Effective Sprint Planning". http://www.agileexecutives.org/. Retrieved 2014-06-14.&#160;
+^ a b Berczuk, Steve. "Mission Possible: ScrumMaster and Technical Contributor". http://www.agileconnection.com/. Retrieved 2014-06-14.&#160;
+^ Namta, Rajneesh. "Thoughts on Test Automation in Agile". http://www.infoq.com/. Retrieved 2014-06-14.&#160;
+^ a b Band, Zvi. "Technical Debt + Red October". Retrieved 8 June 2014.&#160;
+^ Shore, James. "The Art of Agile Development: Refactoring". www.jamesshore.com. Retrieved 2014-06-14.&#160;
+^ "Step 4: Sprint Planning (Tasks)". www.allaboutagile.com. Retrieved 2014-06-14.&#160;
+^ George, Claire. "Why Limiting Your Work-in-Progress Matters". leankit.com. Retrieved 2014-06-14.&#160;
+^ "Sprint Planning Meeting". www.mountaingoatsoftware.com. Retrieved 2014-06-14.&#160;
+^ McMillan, Keith. "Time, Resources, Scope… and Quality.". http://www.adeptechllc.com/. Retrieved 2014-06-15.&#160;
+^ "David Bock's Weblog&#160;: Weblog". Jroller.com. Retrieved 2 April 2010.&#160;
+^ "Agility measurement index". Doi.acm.org. Retrieved 2 April 2010.&#160;
+^ Peter Lappo; Henry C.T. Andrew. "Assessing Agility" (PDF). Retrieved 6 June 2010.&#160;
+^ Kurian, Tisni (2006). Agility Metrics: A Quantitative Fuzzy Based Approach for Measuring Agility of a Software Process, ISAM-Proceedings of International Conference on Agile Manufacturing'06(ICAM-2006), Norfolk, U.S.
+^ Joe Little (2 December 2007). "Nokia test, A scrum-specific test". Agileconsortium.blogspot.com. Retrieved 6 June 2010.&#160;
+^ Mark Seuffert, Mayberg, Sweden. "Karlskrona test, A generic agile adoption test". Mayberg.se. Retrieved 5 Apr 2014.&#160;
+^ "How Agile Are You? (Take This 42 Point Test)". allaboutagile.com/. Retrieved 3 April 2014.&#160;
+^ CSIAC ROI Dashboard Retrieved 11 November 2011.
+^ "Agile Methodologies Survey Results" (PDF). Shine Technologies. January 2003. Retrieved 3 June 2010. 95% stated that there was either no effect or a cost reduction&#160;... 93% stated that productivity was better or significantly better&#160;... 88% stated that quality was better or significantly better&#160;... 83% stated that business satisfaction was better or significantly better&#160;
+^ "2013 State of Agile report: Why Agile?". stateofagile.com. 27 January 2014. Retrieved 13 August 2014.&#160;
+^ Status Quo Agile, Second study on success and forms of usage of agile methods. Retrieved 1 July 2015
+^ Ambler, Scott (3 August 2006). "Survey Says: Agile Works in Practice". Dr. Dobb's. Retrieved 3 June 2010. Only 6% indicated that their productivity was lowered&#160;... No change in productivity was reported by 34% of respondents and 60% reported increased productivity&#160;... 66% [responded] that the quality is higher&#160;... 58% of organizations report improved satisfaction, whereas only 3% report reduced satisfaction.&#160;
+^ "Answering the "Where is the Proof That Agile Methods Work" Question". Agilemodeling.com. 19 January 2007. Retrieved 2 April 2010.&#160;
+^ Larman, Craig; Bas Vodde (2009-08-13). "Top Ten Organizational Impediments to Large-Scale Agile Adoption". InformIT.&#160;
+^ Barlow, Jordan B.; Justin Scott Giboney; Mark Jeffery Keith; David W. Wilson; Ryan M. Schuetzler; Paul Benjamin Lowry; Anthony Vance (2011). "Overview and Guidance on Agile Development in Large Organizations". Communications of the Association for Information Systems 29 (1): 25–44.&#160;
+^ Kupersmith, Kupe. "Agile is a Fad".&#160;
+^ Kruchten, Philippe (2011-06-20). "Agile's Teenage Crisis?". InfoQ.&#160;
+^ Smith, Preston G (2007). Flexible Product Development. Jossey-Bass. p.&#160;25. ISBN&#160;978-0-7879-9584-3.&#160;
+^ "WIKISPEED – Applying Agile software principles and practices for fast automotive development". Agile Business Management Consortium. 2013-12-03. Retrieved 2015-09-11.&#160;
+^ Newton Lee (2014). "Getting on the Billboard Charts: Music Production as Agile Software Development," Digital Da Vinci: Computers in Music. Springer Science+Business Media. ISBN&#160;978-1-4939-0535-5.&#160;
+^ Moran, Alan (2015). Managing Agile: Strategy, Implementation, Organisation and People. Springer Verlag. ISBN&#160;978-3-319-16262-1.&#160;
+^ Leybourn, Evan (2013). Directing the Agile Organisation: A Lean Approach to Business Management. IT Governance Publishing. ISBN&#160;978-1-849-28491-2.&#160;
+^ "Pair Trading: Collaboration in Finance". The Agile Director. 2015-03-11. Retrieved 2015-09-11.&#160;
+
+
+Further reading[edit]
+
+Abrahamsson, P., Salo, O., Ronkainen, J., &amp; Warsta, J. (2002). Agile Software Development Methods: Review and Analysis. VTT Publications 478.
+Cohen, D., Lindvall, M., &amp; Costa, P. (2004). An introduction to agile methods. In Advances in Computers (pp.&#160;1–66). New York: Elsevier Science.
+Dingsøyr, Torgeir, Dybå, Tore and Moe, Nils Brede (ed.): Agile Software Development: Current Research and Future Directions, Springer, Berlin Heidelberg, 2010.
+Moran, Alan. Managing Agile: Strategy, Implementation, Organisation and People. Springer, Berlin Heidelberg, 2015. (ISBN 978-3-319-16262-1)
+Fowler, Martin. Is Design Dead?. Appeared in Extreme Programming Explained, G. Succi and M. Marchesi, ed., Addison-Wesley, Boston. 2001.
+Larman, Craig and Basili, Victor R. Iterative and Incremental Development: A Brief History IEEE Computer, June 2003
+Riehle, Dirk. A Comparison of the Value Systems of Adaptive Software Development and Extreme Programming: How Methodologies May Learn From Each Other. Appeared in Extreme Programming Explained, G. Succi and M. Marchesi, ed., Addison-Wesley, Boston. 2001.
+M. Stephens, D. Rosenberg. Extreme Programming Refactored: The Case Against XP. Apress L.P., Berkeley, California. 2003. (ISBN 1-59059-096-1)
+Shore, J., &amp; Warden S. (2008). The Art of Agile Development. O'Reilly Media, Inc.
+Willison, Brian (2008). Iterative Milestone Engineering Model. New York, NY.
+Willison, Brian (2008). Visualization Driven Rapid Prototyping. Parsons Institute for Information Mapping.
+
+External links[edit]
+
+Agile at DMOZ
+
+
+The New Methodology Martin Fowler's description of the background to agile methods
+Ten Authors of The Agile Manifesto Celebrate its Tenth Anniversary
+agilepatterns.org
+Agile Manifesto
+Agile Continuous Delivery in the Cloud by Tariq Khurshid
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software engineering
+
+
+
+
+
+
+Fields
+
+
+
+Computer programming
+Requirements engineering
+Software deployment
+Software design
+Software maintenance
+Software testing
+Systems analysis
+Formal methods
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Data modeling
+Enterprise architecture
+Functional specification
+Modeling language
+Orthogonality
+Programming paradigm
+Software
+Software archaeology
+Software architecture
+Software configuration management
+Software development methodology
+Software development process
+Software quality
+Software quality assurance
+Software verification and validation
+Structured analysis
+
+
+
+
+
+
+
+
+Orientations
+
+
+
+Agile
+Aspect-oriented
+Object orientation
+Ontology
+Service orientation
+SDLC
+
+
+
+
+
+
+
+
+Models
+
+
+
+
+
+Developmental
+
+
+
+
+Agile
+EUP
+Executable UML
+Incremental model
+Iterative model
+Prototype model
+RAD
+UP
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+SPICE
+CMMI
+Data model
+ER model
+Function model
+Information model
+Metamodeling
+Object model
+Systems model
+View model
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+IDEF
+UML
+SysML
+
+
+
+
+
+
+
+
+
+
+
+
+Software
+engineers
+
+
+
+
+Kent Beck
+Grady Booch
+Fred Brooks
+Barry Boehm
+Ward Cunningham
+Tom DeMarco
+Edsger W. Dijkstra
+Martin Fowler
+C. A. R. Hoare
+Watts Humphrey
+Michael A. Jackson
+Ivar Jacobson
+Stephen J. Mellor
+Bertrand Meyer
+David Parnas
+Winston W. Royce
+James Rumbaugh
+Niklaus Wirth
+Edward Yourdon
+Victor Basili
+
+
+
+
+
+
+
+
+Related fields
+
+
+
+Computer science
+Computer engineering
+Project management
+Risk management
+Systems engineering
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sub-disciplines of computing
+
+
+
+
+
+
+
+
+
+Hardware
+Software
+Firmware
+
+
+
+
+
+
+
+
+Information system
+
+
+
+Information security
+Multimedia database
+Intelligent database
+Big data
+Knowledge-based systems
+Recommender System
+Geographic information systems
+Decision support system
+Data engineering
+Knowledge engineering
+Fuzzy logic
+Data analysis
+System analysis and design
+Project management
+Knowledge management
+Data integration
+High-performance computing
+Semantic web
+
+
+
+
+
+
+
+
+Computer science
+
+
+
+Database management system
+Communications system
+Computational geometry
+Machine learning
+Data mining
+Parallel programming
+Coding theory
+Theory of computation
+Constraint programming
+Computational biology (Bioinformatics)
+Design and analysis of algorithms
+Information retrieval
+Computational science
+Symbolic computation
+Distributed computing
+Evolutionary computation
+Natural computation
+Combinatorial optimization
+Parallel processing
+
+
+
+
+
+
+
+
+Computer engineering
+
+
+
+Multimedia
+Satellite navigation (GNSS)
+Embedded systems
+Real-time computing
+Computer architecture
+Pair programming
+System programming
+Neural networks
+Speech recognition
+Signal analysis
+Computer vision (Visual computing)
+IC Design
+Voice over IP
+Speech synthesis
+Human-Computer Interaction
+Microprocessor
+Image processing
+Natural language processing
+Speech processing
+Digital signal processing
+
+
+
+
+
+
+
+
+Software engineering
+
+
+
+Software maintenance
+Formal methods
+Software quality
+Software quality assurance
+Measurement Software
+Fault-tolerant software
+Software testing
+Enterprise architecture
+Software architecture
+Software engineering economics
+Agile software development
+Software design pattern
+Software modelling
+Systems analyst
+Object-oriented analysis and design (UML)
+Requirements analysis
+Software development
+Software configuration management
+Software project management
+Software engineering management
+Software development process (Software release life cycle)
+Software design
+Software deployment
+Software enhancement
+
+
+
+
+
+
+
+
+Computer network
+
+
+
+Network security
+Secure electronic transaction
+Network Performance Evaluation (QoS)
+Cloud computing
+Routing
+Distributed systems (Distributed database)
+Information theory
+Wireless network
+Next-generation network
+Cellular network
+Optical transport network (Optical networking)
+Cryptography
+Network simulation
+Pattern recognition
+Network administrators
+Network equipment
+Network design
+Ubiquitous and Mobile computing
+Data center
+Mobile communications
+Digital communication
+Communications satellite
+Telecommunication (Telecommunications network)
+
+
+
+
+
+
+
+
+Business informatics
+
+
+
+ITIL
+ITSM
+Enterprise resource planning
+Electronic business
+Business intelligence
+Human Resources Development
+Security management
+Configuration management
+Technology management
+Power management
+Service management
+Project management
+Systems management
+Network management
+Content management
+Customer relationship management
+Incident management
+Asset management
+Integrated management
+Communications management
+System administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4806620-5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Agile_software_development&amp;oldid=691243680"					
+				Categories: Software project managementSoftware development philosophiesAgile software developmentHidden categories: Pages with citations lacking titlesPages with citations having bare URLsUse mdy dates from September 2014All articles with unsourced statementsArticles with unsourced statements from May 2015Articles with DMOZ linksUse dmy dates from January 2012Wikipedia articles with GND identifiers				
+							
+		
+		
+			

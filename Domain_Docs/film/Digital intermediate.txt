@@ -1,0 +1,177 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Digital intermediate
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs attention from an expert in Film. The specific problem is: this article needs to be rewritten to be up to date. The DI industry is now focused largely on the digital-to-digital mastering process.. WikiProject Film (or its Portal) may be able to help recruit an expert. (October 2013)
+
+
+Digital intermediate (typically abbreviated to DI) is a motion picture finishing process which classically involves digitizing a motion picture and manipulating the color and other image characteristics. It often replaces or augments the photochemical timing process and is usually the final creative adjustment to a movie before distribution in theaters. It is distinguished from the telecine process in which film is scanned and color is manipulated early in the process to facilitate editing. However the lines between telecine and DI are continually blurred and are often executed on the same hardware by colorists of the same background. These two steps are typically part of the overall color management process in a motion picture at different points in time. A digital intermediate is also customarily done at higher resolution and with greater color fidelity than telecine transfers.
+Although originally used to describe a process that started with film scanning and ended with film recording, digital intermediate is also used to describe color correction and color grading and even final mastering when a digital camera is used as the image source and/or when the final movie is not output to film. This is due to recent advances in digital cinematography and digital projection technologies that strive to match film origination and film projection.
+In traditional photochemical film finishing, an intermediate is produced by exposing film to the original camera negative. The intermediate is then used to mass-produce the films that get distributed to theaters. Color grading is done by varying the amount of red, green, and blue light used to expose the intermediate. This seeks to be able to replace or augment the photochemical approach to creating this intermediate.
+The digital intermediate process uses digital tools to color grade, which allows for much finer control of individual colors and areas of the image, and allows for the adjustment of image structure (grain, sharpness, etc.). The intermediate for film reproduction can then be produced by means of a film recorder. The physical intermediate film that is a result of the recording process is sometimes also called a digital intermediate, and is usually recorded to internegative (IN) stock, which is inherently finer-grain than camera negative (OCN).
+One of the key technical achievements that made the transition to DI possible was the use of the 3D look-up tables (aka "3D LUTs"), which could be used to mimic how the digital image would look once it was printed onto release print stock. This removed a large amount of skilled guesswork from the film-making process, and allowed greater freedom in the colour grading process while reducing risk.
+The digital master is often used as a source for a DCI-compliant distribution of the motion picture for digital projection. For archival purposes, the digital master created during the Digital Intermediate process can still be recorded to very stable high dynamic range yellow-cyan-magenta (YCM) separations on black-and-white film with an expected 100-year or longer life. This archival format, long used in the industry prior to the invention of DI, still provides an archival medium that is independent of changes in digital data recording technologies and file formats that might otherwise render digitally archived material unreadable in the long term.
+
+
+
+Contents
+
+
+1 History
+2 Milestones
+3 See also
+4 References
+5 External links
+
+
+
+History[edit]
+Telecine tools to electronically capture film images are nearly as old as broadcast television, but the resulting images were widely considered unsuitable for exposing back onto film for theatrical distribution. Film scanners and recorders with quality sufficient to produce images that could be inter-cut with regular film began appearing in the 1970s, with significant improvements in the late 1980s and early 1990s. During this time, digitally processing an entire feature-length film was impractical because the scanners and recorders were extremely slow and the image files were too large compared to computing power available. Instead, individual shots or short sequences were processed for special visual effects. In 1992, Visual Effects Supervisor/Producer Chris F. Woods broke through several "techno-barriers" in creating a digital studio to produce the visual effects for the 1993 release Super Mario Bros. It was the first feature film project to digitally scan a large number of VFX plates (over 700) at 2K resolution. It was also the first film scanned and recorded at Kodak's just launched Cinesite facility in Hollywood. This project based studio was the first feature film to use Discreet Logic's (now Autodesk) Flame and Inferno systems, which enjoyed early dominance as high resolution / high performance digital compositing systems. Digital film compositing for visual effects was immediately embraced, while optical printer use for VFX declined just as quickly. Chris Watts further revolutionized the process on the 1998 feature film Pleasantville, becoming the first visual effects supervisor for New Line Cinema to scan, process, and record the majority of a feature length, live-action, Hollywood film digitally. The first Hollywood film to utilize a digital intermediate process from beginning to end was O Brother, Where Art Thou? in 2000 and in Europe it was Chicken Run released that same year.
+The process rapidly caught on in the mid-2000s. Around 50% of Hollywood films went through a digital intermediate in 2005, increasing to around 70% by mid-2007.[1] This is due not only to the extra creative options the process affords film makers but also the need for high-quality scanning and color adjustments to produce movies for digital cinema.
+Milestones[edit]
+
+1990: The Rescuers Down Under – First feature-length film to be entirely recorded to film from digital files; in this case animation assembled on computers using Walt Disney Feature Animation and Pixar's CAPS system.
+1993: Snow White and the Seven Dwarfs – First film to be entirely scanned to digital files, manipulated, and recorded back to film at 4K resolution. The restoration project was done entirely at 4K resolution and 10-bit color depth using the new Cineon system to digitally remove dirt and scratches and restore faded colors.[2]
+1998: Pleasantville – The first time the majority of a new feature film was scanned, processed, and recorded digitally. The black-and-white meets color world portrayed in the movie was filmed entirely in color and selectively desaturated and contrast adjusted digitally. The work was done in Los Angeles by Cinesite utilizing a Spirit DataCine for scanning at 2K resolution[3] and a MegaDef color correction system from UK Company Pandora International
+1999: Pacific Ocean Post Film, A Team led by John McCunn and Greg Kimble used Kodak film scanners &amp; laser film printer, Cineon software as well as proprietary tools to rebuild and repair the first two reels of the 1968 Beatles' film "Yellow Submarine" for re-release.
+2000: Sorted - The first feature length, color 35mm motion picture to fully utilize the digital intermediate process in its entirety from inception to completion. The Alex Jovy film was produced at Wave Pictures' digital intermediate film facility in London, England. It was scanned at 2K resolution with 8 bits color depth per color / per pixel using a pin registered, liquid gate Oxberry 6400 Motion Picture Film Scanner and recorded onto Kodak 5242 color intermediate stock using MGI Celco Cine V Film Recorders. Digital visual effects and color correction were done using a Discreet Logic Inferno. Sorted premiered at the Cannes Film Festival in May 2000.
+2000: O Brother, Where Art Thou? – The first time a digital intermediate was used on the entirety of a first-run Hollywood film which otherwise had very few visual effects. The work was done in Los Angeles by Cinesite utilizing a Spirit DataCine for scanning at 2K resolution, a Pandora International MegaDef system to adjust the color and a Kodak Lightning II recorder to output to film.[4]
+2000: Chicken Run was the first feature film in Europe to use the Digital Intermediate process, digitally storing and manipulating every frame of the film before recording back to film.
+2004: Spider-Man 2 – The first digital intermediate on a new Hollywood film to be done entirely at 4K resolution. Although scanning, recording, and color-correction was done at 4K by EFILM, most of the visual effects were created at 2K and were upscaled to 4K.
+2008: Baraka – The first 8K resolution digital intermediate by FotoKem of a 65&#160;mm negative source for the October 2008 remastered DVD and Blu-ray Disc release. The scan produced 30 terabytes of data and took 12–13 seconds to scan each frame, for a total scan time of over 3 weeks.[5]
+
+See also[edit]
+
+Color grading
+Telecine
+
+References[edit]
+
+
+^ Belton, John (Spring 2008). "Painting by the Numbers: The Digital Intermediate". Film Quarterly 61 (3): 58–65. doi:10.1525/fq.2008.61.3.58.&#160;
+^ Holusha, John (June 30, 1993). "'Snow White' is made over frame by frame and byte by byte". New York Times. p.&#160;5.&#160;
+^ Bob Fisher (November 1998). "Black &amp; white in color". American Cinematographer.&#160;
+^ Bob Fisher (October 2000). "Escaping from chains". American Cinematographer.&#160;
+^ Andrew Oran (2008). Baraka: "Restoration" feature documentary (DVD/Blu-ray). Magidson Films, Inc.&#160;
+
+
+External links[edit]
+
+The Digital Intermediate Guides – DI Guide, &amp; Scene-to-Screen – Light Illusion, DI Consultancy.
+DI Guide – The Digital Intermediate Guide – By Phil Green, DI Specialist &amp; Colourist.
+What is Digital Intermediary? - A brief description of the motives of DI
+"Data or Video" article about data vs video for color grading
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Video processing
+
+
+
+
+
+
+Post-processing
+
+
+
+Deblocking
+Resizing
+Deinterlacing
+Denoising
+Deflicking
+
+
+
+
+
+
+
+
+Special processing
+
+
+
+Film colorization&#160;(tinting)
+Color grading
+Filmizing
+Super-resolution
+Uncompressed
+
+
+
+
+
+
+
+
+24 to 30&#160;fps conversion
+
+
+
+Telecine&#160;(3:2 pulldown)
+
+
+
+
+
+
+
+
+30 to 24&#160;fps conversion
+
+
+
+Inverse telecine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Digital_intermediate&amp;oldid=682268676"					
+				Categories: Special effectsFilm and video technologyDigital mediaFilm and video terminologyHidden categories: Articles needing expert attention from October 2013All articles needing expert attentionFilm articles needing expert attention				
+							
+		
+		
+			

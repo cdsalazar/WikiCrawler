@@ -1,0 +1,2198 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Microsoft Visual Studio
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+Microsoft Visual Studio
+
+
+
+
+
+Screenshot of Visual Studio 2013, editing a program's source code in C++
+
+
+
+Developer(s)
+Microsoft
+
+
+Stable release
+2015 RTM (July&#160;20, 2015; 4 months ago&#160;(2015-07-20)) [±][1]
+
+
+Written in
+C++ and C#[2]
+
+
+Operating system
+Windows 7, Windows Server 2008 R2, Windows 8, Windows Server 2012, Windows 8.1, Windows Server 2012 R2[3]
+
+
+Available in
+Chinese, English, French, Portuguese, German, Italian, Japanese, Korean, Spanish and Russian
+
+
+Type
+Integrated development environment
+
+
+License
+Proprietary software
+Express edition: Registerware
+Community edition: Freeware
+Other editions: Trialware[4]
+
+
+Website
+visualstudio.com
+
+
+Microsoft Visual Studio is an integrated development environment (IDE) from Microsoft. It is used to develop computer programs for Microsoft Windows, as well as web sites, web applications and web services. Visual Studio uses Microsoft software development platforms such as Windows API, Windows Forms, Windows Presentation Foundation, Windows Store and Microsoft Silverlight. It can produce both native code and managed code.
+Visual Studio includes a code editor supporting IntelliSense (the code completion component) as well as code refactoring. The integrated debugger works both as a source-level debugger and a machine-level debugger. Other built-in tools include a forms designer for building GUI applications, web designer, class designer, and database schema designer. It accepts plug-ins that enhance the functionality at almost every level—including adding support for source-control systems (like Subversion) and adding new toolsets like editors and visual designers for domain-specific languages or toolsets for other aspects of the software development lifecycle (like the Team Foundation Server client: Team Explorer).
+Visual Studio supports different programming languages and allows the code editor and debugger to support (to varying degrees) nearly any programming language, provided a language-specific service exists. Built-in languages include C,[5] C++ and C++/CLI (via Visual C++), VB.NET (via Visual Basic .NET), C# (via Visual C#), and F# (as of Visual Studio 2010[6]). Support for other languages such as M, Python, and Ruby among others is available via language services installed separately. It also supports XML/XSLT, HTML/XHTML, JavaScript and CSS. Java (and J#) were supported in the past.
+Microsoft provides "Community" editions of its Visual Studio at no cost. Commercial versions of Visual Studio along with select past versions are available for free to students via Microsoft's DreamSpark program.[7]
+
+
+
+Contents
+
+
+1 Architecture
+2 Features
+
+2.1 Code editor
+2.2 Debugger
+2.3 Designer
+2.4 Other tools
+2.5 Extensibility
+
+
+3 Supported products
+
+3.1 Previous products
+
+
+4 Editions
+
+4.1 Visual Studio Community
+4.2 Visual Studio Professional
+4.3 Visual Studio Enterprise
+4.4 Visual Studio Test Professional
+4.5 Visual Studio Express
+4.6 Editions feature grid
+
+
+5 History
+
+5.1 Visual Studio 97
+5.2 Visual Studio 6.0 (1998)
+5.3 Visual Studio .NET (2002)
+5.4 Visual Studio .NET 2003
+5.5 Visual Studio 2005
+5.6 Visual Studio 2008
+5.7 Visual Studio 2010
+5.8 Visual Studio 2012
+
+5.8.1 Interface backlash
+
+
+5.9 Visual Studio 2013
+5.10 Visual Studio 2015
+
+
+6 Related products
+
+6.1 Team Services
+6.2 Application Lifecycle Management
+6.3 Visual Studio LightSwitch
+6.4 Visual Studio Code
+
+
+7 See also
+8 References
+9 External links
+
+
+
+Architecture[edit]
+Visual Studio does not support any programming language, solution or tool intrinsically; instead, it allows the plugging of functionality coded as a VSPackage. When installed, the functionality is available as a Service. The IDE provides three services: SVsSolution, which provides the ability to enumerate projects and solutions; SVsUIShell, which provides windowing and UI functionality (including tabs, toolbars and tool windows); and SVsShell, which deals with registration of VSPackages. In addition, the IDE is also responsible for coordinating and enabling communication between services.[8] All editors, designers, project types and other tools are implemented as VSPackages. Visual Studio uses COM to access the VSPackages. The Visual Studio SDK also includes the Managed Package Framework (MPF), which is a set of managed wrappers around the COM-interfaces that allow the Packages to be written in any CLI compliant language.[9] However, MPF does not provide all the functionality exposed by the Visual Studio COM interfaces.[10] The services can then be consumed for creation of other packages, which add functionality to the Visual Studio IDE.
+Support for programming languages is added by using a specific VSPackage called a Language Service. A language service defines various interfaces which the VSPackage implementation can implement to add support for various functionalities.[11] Functionalities that can be added this way include syntax coloring, statement completion, brace matching, parameter information tooltips, member lists and error markers for background compilation.[11] If the interface is implemented, the functionality will be available for the language. Language services are to be implemented on a per-language basis. The implementations can reuse code from the parser or the compiler for the language.[11] Language services can be implemented either in native code or managed code. For native code, either the native COM interfaces or the Babel Framework (part of Visual Studio SDK) can be used.[12] For managed code, the MPF includes wrappers for writing managed language services.[13]
+Visual Studio does not include any source control support built in but it defines two alternative ways for source control systems to integrate with the IDE.[14] A Source Control VSPackage can provide its own customised user interface. In contrast, a source control plugin using the MSSCCI (Microsoft Source Code Control Interface) provides a set of functions that are used to implement various source control functionality, with a standard Visual Studio user interface.[15][16] MSSCCI was first used to integrate Visual SourceSafe with Visual Studio 6.0 but was later opened up via the Visual Studio SDK. Visual Studio .NET 2002 used MSSCCI 1.1, and Visual Studio .NET 2003 used MSSCCI 1.2. Visual Studio 2005, 2008 and 2010 use MSSCCI Version 1.3, which adds support for rename and delete propagation as well as asynchronous opening.[16]
+Visual Studio supports running multiple instances of the environment (each with its own set of VSPackages). The instances use different registry hives (see MSDN's definition of the term "registry hive" in the sense used here) to store their configuration state and are differentiated by their AppId (Application ID). The instances are launched by an AppId-specific .exe that selects the AppId, sets the root hive and launches the IDE. VSPackages registered for one AppId are integrated with other VSPackages for that AppId. The various product editions of Visual Studio are created using the different AppIds. The Visual Studio Express edition products are installed with their own AppIds, but the Standard, Professional and Team Suite products share the same AppId. Consequently, one can install the Express editions side-by-side with other editions, unlike the other editions which update the same installation. The professional edition includes a superset of the VSPackages in the standard edition and the team suite includes a superset of the VSPackages in both other editions. The AppId system is leveraged by the Visual Studio Shell in Visual Studio 2008.[17]
+Features[edit]
+Code editor[edit]
+Like any other IDE, it includes a code editor that supports syntax highlighting and code completion using IntelliSense for variables, functions, methods, loops and LINQ queries.[18] IntelliSense is supported for the included languages, as well as for XML and for Cascading Style Sheets and JavaScript when developing web sites and web applications.[19][20] Autocomplete suggestions appear in a modeless list box over the code editor window, in proximity of the editing cursor. In Visual Studio 2008 onwards, it can be made temporarily semi-transparent to see the code obstructed by it.[18] The code editor is used for all supported languages.
+The Visual Studio code editor also supports setting bookmarks in code for quick navigation. Other navigational aids include collapsing code blocks and incremental search, in addition to normal text search and regex search.[21] The code editor also includes a multi-item clipboard and a task list.[21] The code editor supports code snippets, which are saved templates for repetitive code and can be inserted into code and customized for the project being worked on. A management tool for code snippets is built in as well. These tools are surfaced as floating windows which can be set to automatically hide when unused or docked to the side of the screen. The Visual Studio code editor also supports code refactoring including parameter reordering, variable and method renaming, interface extraction and encapsulation of class members inside properties, among others.
+Visual Studio features background compilation (also called incremental compilation).[22][23] As code is being written, Visual Studio compiles it in the background in order to provide feedback about syntax and compilation errors, which are flagged with a red wavy underline. Warnings are marked with a green underline. Background compilation does not generate executable code, since it requires a different compiler than the one used to generate executable code.[24] Background compilation was initially introduced with Microsoft Visual Basic but has now been expanded for all included languages.[23]
+Debugger[edit]
+Main article: Microsoft Visual Studio Debugger
+Visual Studio includes a debugger that works both as a source-level debugger and as a machine-level debugger. It works with both managed code as well as native code and can be used for debugging applications written in any language supported by Visual Studio. In addition, it can also attach to running processes and monitor and debug those processes.[25] If source code for the running process is available, it displays the code as it is being run. If source code is not available, it can show the disassembly. The Visual Studio debugger can also create memory dumps as well as load them later for debugging.[26] Multi-threaded programs are also supported. The debugger can be configured to be launched when an application running outside the Visual Studio environment crashes.
+The debugger allows setting breakpoints (which allow execution to be stopped temporarily at a certain position) and watches (which monitor the values of variables as the execution progresses).[27] Breakpoints can be conditional, meaning they get triggered when the condition is met. Code can be stepped over, i.e., run one line (of source code) at a time.[28] It can either step into functions to debug inside it, or step over it, i.e., the execution of the function body isn't available for manual inspection.[28] The debugger supports Edit and Continue, i.e., it allows code to be edited as it is being debugged. When debugging, if the mouse pointer hovers over any variable, its current value is displayed in a tooltip ("data tooltips"), where it can also be modified if desired. During coding, the Visual Studio debugger lets certain functions be invoked manually from the Immediate tool window. The parameters to the method are supplied at the Immediate window.[29]
+Designer[edit]
+Visual Studio includes a host of visual designers to aid in the development of applications. These tools include:
+
+Windows Forms Designer
+The Windows Forms designer is used to build GUI applications using Windows Forms. Layout can be controlled by housing the controls inside other containers or locking them to the side of the form. Controls that display data (like textbox, list box, grid view, etc.) can be bound to data sources like databases or queries. Data-bound controls can be created by dragging items from the Data Sources window onto a design surface.[30] The UI is linked with code using an event-driven programming model. The designer generates either C# or VB.NET code for the application.
+WPF Designer
+The WPF designer, codenamed Cider,[31] was introduced with Visual Studio 2008. Like the Windows Forms designer it supports the drag and drop metaphor. It is used to author user interfaces targeting Windows Presentation Foundation. It supports all WPF functionality including data binding and automatic layout management. It generates XAML code for the UI. The generated XAML file is compatible with Microsoft Expression Design, the designer-oriented product. The XAML code is linked with code using a code-behind model.
+Web designer/development
+Visual Studio also includes a web-site editor and designer that allows web pages to be authored by dragging and dropping widgets. It is used for developing ASP.NET applications and supports HTML, CSS and JavaScript. It uses a code-behind model to link with ASP.NET code. From Visual Studio 2008 onwards, the layout engine used by the web designer is shared with Microsoft Expression Web. There is also ASP.NET MVC support for MVC technology as a separate download[32] and ASP.NET Dynamic Data project available from Microsoft.[33]
+Class designer
+The Class Designer is used to author and edit the classes (including its members and their access) using UML modeling. The Class Designer can generate C# and VB.NET code outlines for the classes and methods. It can also generate class diagrams from hand-written classes.
+Data designer
+The data designer can be used to graphically edit database schemas, including typed tables, primary and foreign keys and constraints. It can also be used to design queries from the graphical view.
+Mapping designer
+From Visual Studio 2008 onwards, the mapping designer is used by LINQ to SQL to design the mapping between database schemas and the classes that encapsulate the data. The new solution from ORM approach, ADO.NET Entity Framework, replaces and improves the old technology.
+
+Other tools[edit]
+
+Open Tabs Browser
+The open tabs browser is used to list all open tabs and to switch between them. It is invoked using CTRL+TAB.
+Properties Editor
+The Properties Editor tool is used to edit properties in a GUI pane inside Visual Studio. It lists all available properties (both read-only and those which can be set) for all objects including classes, forms, web pages and other items.
+Object Browser
+The Object Browser is a namespace and class library browser for Microsoft .NET. It can be used to browse the namespaces (which are arranged hierarchically) in managed assemblies. The hierarchy may or may not reflect the organization in the file system.
+Solution Explorer
+In Visual Studio parlance, a solution is a set of code files and other resources that are used to build an application. The files in a solution are arranged hierarchically, which might or might not reflect the organization in the file system. The Solution Explorer is used to manage and browse the files in a solution.
+Team Explorer
+Team Explorer is used to integrate the capabilities of Team Foundation Server, the Revision Control System into the IDE (and the basis for Microsoft's CodePlex hosting environment for open source projects). In addition to source control it provides the ability to view and manage individual work items (including bugs, tasks and other documents) and to browse TFS statistics. It is included as part of a TFS install and is also available as a download for Visual Studio separately.[34][35] Team Explorer is also available as a stand-alone environment solely to access TFS services.
+Data Explorer
+Data Explorer is used to manage databases on Microsoft SQL Server instances. It allows creation and alteration of database tables (either by issuing T-SQL commands or by using the Data designer). It can also be used to create queries and stored procedures, with the latter in either T-SQL or in managed code via SQL CLR. Debugging and IntelliSense support is available as well.
+Server Explorer
+The Server Explorer tool is used to manage database connections on an accessible computer. It is also used to browse running Windows Services, performance counters, Windows Event Log and message queues and use them as a datasource.[36]
+Dotfuscator Software Services Community Edition
+Visual Studio includes a free 'light' version of Dotfuscator by PreEmptive Solutions which performs code obfuscation and application size reduction.[37] Starting with Visual Studio 2010, this version of Dotfuscator includes runtime intelligence capabilities that allow authors to gather end-user usage, performance, and stability information from their applications running in production.[38]
+Text Generation Framework
+Visual Studio includes a full text generation framework called T4 which enables Visual Studio to generate text files from templates either in the IDE or via code.
+ASP.NET Web Site Administration Tool
+The ASP.NET Web Site Administration Tool allows for the configuration of ASP.NET websites.
+Visual Studio Tools for Office
+Visual Studio Tools for Office is a SDK and an add-in for Visual Studio that includes tools for developing for the Microsoft Office suite. Previously (for Visual Studio .NET 2003 and Visual Studio 2005) it was a separate SKU that supported only Visual C# and Visual Basic languages or was included in the Team Suite. With Visual Studio 2008, it is no longer a separate SKU but is included with Professional and higher editions. A separate runtime is required when deploying VSTO solutions.
+
+Extensibility[edit]
+See also: List of Microsoft Visual Studio Add-ins and Visual Studio Extensibility
+Visual Studio allows developers to write extensions for Visual Studio to extend its capabilities. These extensions "plug into" Visual Studio and extend its functionality. Extensions come in the form of macros, add-ins, and packages. Macros represent repeatable tasks and actions that developers can record programmatically for saving, replaying, and distributing. Macros, however, cannot implement new commands or create tool windows. They are written using Visual Basic and are not compiled.[10] Add-Ins provide access to the Visual Studio object model and can interact with the IDE tools. Add-Ins can be used to implement new functionality and can add new tool windows. Add-Ins are plugged into the IDE via COM and can be created in any COM-compliant languages.[10] Packages are created using the Visual Studio SDK and provide the highest level of extensibility. They can create designers and other tools, as well as integrate other programming languages. The Visual Studio SDK provides unmanaged APIs as well as a managed API to accomplish these tasks. However, the managed API isn't as comprehensive as the unmanaged one.[10] Extensions are supported in the Standard (and higher) versions of Visual Studio 2005. Express Editions do not support hosting extensions.
+Visual Studio 2008 introduced the Visual Studio Shell that allows for development of a customized version of the IDE. The Visual Studio Shell defines a set of VSPackages that provide the functionality required in any IDE. On top of that, other packages can be added to customize the installation. The Isolated mode of the shell creates a new AppId where the packages are installed. These are to be started with a different executable. It is aimed for development of custom development environments, either for a specific language or a specific scenario. The Integrated mode installs the packages into the AppId of the Professional/Standard/Team System editions, so that the tools integrate into these editions.[17] The Visual Studio Shell is available as a free download.
+After the release of Visual Studio 2008, Microsoft created the Visual Studio Gallery. It serves as the central location for posting information about extensions to Visual Studio. Community developers as well as commercial developers can upload information about their extensions to Visual Studio .NET 2002 through Visual Studio 2010. Users of the site can rate and review the extensions to help assess the quality of extensions being posted. RSS feeds to notify users on updates to the site and tagging features are also planned.[39]
+Supported products[edit]
+
+Microsoft Visual C++
+Microsoft Visual C++ is Microsoft's implementation of the C and C++ compiler and associated languages-services and specific tools for integration with the Visual Studio IDE. It can compile either in C mode or C++ mode. For C, it follows the ISO C standard with parts of C99 specification along with MS-specific additions in the form of libraries.[40] For C++, it follows the ANSI C++ specification along with a few C++11 features.[41] It also supports the C++/CLI specification to write managed code, as well as mixed-mode code (a mix of native and managed code). Microsoft positions Visual C++ for development in native code or in code that contains both native as well as managed components. Visual C++ supports COM as well as the MFC library. For MFC development, it provides a set of wizards for creating and customizing MFC boilerplate code, and creating GUI applications using MFC. Visual C++ can also use the Visual Studio forms designer to design UI graphically. Visual C++ can also be used with the Windows API. It also supports the use of intrinsic functions,[42] which are functions recognized by the compiler itself and not implemented as a library. Intrinsic functions are used to expose the SSE instruction set of modern CPUs. Visual C++ also includes the OpenMP (version 2.0) specification.[43]
+Microsoft Visual C#
+Microsoft Visual C#, Microsoft's implementation of the C# language, targets the .NET Framework, along with the language services that lets the Visual Studio IDE support C# projects. While the language services are a part of Visual Studio, the compiler is available separately as a part of the .NET Framework. The Visual C# 2008, 2010 and 2012 compilers support versions 3.0, 4.0 and 5.0 of the C# language specifications, respectively. Visual C# supports the Visual Studio Class designer, Forms designer, and Data designer among others.[44]
+Microsoft Visual Basic
+Microsoft Visual Basic is Microsoft's implementation of the VB.NET language and associated tools and language services. It was introduced with Visual Studio .NET (2002). Microsoft has positioned Visual Basic for Rapid Application Development.[45][46] Visual Basic can be used to author both console applications as well as GUI applications. Like Visual C#, Visual Basic also supports the Visual Studio Class designer, Forms designer, and Data designer among others. Like C#, the VB.NET compiler is also available as a part of .NET Framework, but the language services that let VB.NET projects be developed with Visual Studio, are available as a part of the latter.
+Microsoft Visual Web Developer
+Microsoft Visual Web Developer is used to create web sites, web applications and web services using ASP.NET. Either C# or VB.NET languages can be used. Visual Web Developer can use the Visual Studio Web Designer to graphically design web page layouts.
+Team Foundation Server
+Team Foundation Server is intended for collaborative software development projects and acts as the server-side backend providing source control, data collection, reporting, and project-tracking functionality. It also includes the Team Explorer, the client tool for TFS services, which is integrated inside Visual Studio Team System.
+
+Previous products[edit]
+
+Visual FoxPro
+Visual FoxPro is a data-centric object-oriented and procedural programming language produced by Microsoft. It derives from FoxPro (originally known as FoxBASE) which was developed by Fox Software beginning in 1984. Visual FoxPro is tightly integrated with its own relational database engine, which extends FoxPro's xBase capabilities to support SQL queries and data manipulation. Visual FoxPro is a full-featured,[47] dynamic programming language that does not require the use of an additional general-purpose programming environment. In 2007, Visual FoxPro was discontinued after version 9 Service Pack 2. It was supported until 2015.[48]
+
+
+Visual SourceSafe
+Microsoft Visual SourceSafe is a source control software package oriented towards small software-development projects. The SourceSafe database is a multi-user, multi-process file-system database, using the Windows file system database primitives to provide locking and sharing support. All versions are multi-user, using SMB (file server) networking.[49][50][51] However, with Visual SourceSafe 2005, other client–server modes were added, Lan Booster and VSS Internet (which used HTTP/HTTPS). Visual SourceSafe 6.0 was available as a stand-alone product[52] and was included with Visual Studio 6.0, and other products such as Office Developer Edition. Visual SourceSafe 2005 was available as a stand-alone product and included with the 2005 Team Suite. Team Foundation Server has superseded VSS as Microsoft's recommended platform for source control.
+
+
+Microsoft Visual J++/Microsoft Visual J#
+Microsoft Visual J++ was Microsoft's implementation of the Java language (with Microsoft-specific extensions) and associated language services. It was discontinued as a result of litigation from Sun Microsystems, and the technology was recycled into Visual J#, Microsoft's Java compiler for .NET Framework. J# was available with Visual Studio 2005 (supported until 2015) but was discontinued in Visual Studio 2008.
+
+
+Visual InterDev
+Visual InterDev was used to create web applications using Microsoft Active Server Pages (ASP) technologies. It supports code completion and includes database server management tools. It has been replaced with Microsoft Visual Web Developer.
+
+Editions[edit]
+Microsoft Visual Studio is available in the following editions or SKUs:[53]
+Visual Studio Community[edit]
+On 12 November 2014, Microsoft announced Visual Studio Community, a new free version similar in functionality to Visual Studio Professional. Unlike Express, Visual Studio Community supports multiple languages, and provides support for extensions. Visual Studio Community is oriented towards individual developers and small teams.[54][55]
+Visual Studio Professional[edit]
+Visual Studio Professional Edition provides an IDE for all supported development languages. As of Visual Studio 2010, the Standard edition was dropped.[56] MSDN support is available as MSDN Essentials or the full MSDN library depending on licensing. It supports XML and XSLT editing, and can create deployment packages that only use ClickOnce and MSI. It includes tools like Server Explorer and integration with Microsoft SQL Server also. Windows Mobile development support was included in Visual Studio 2005 Standard, however, with Visual Studio 2008, it is only available in Professional and higher editions. Windows Phone 7 development support was added to all editions in Visual Studio 2010. Development for Windows Mobile is no longer supported in Visual Studio 2010; it is superseded by Windows Phone 7.
+Visual Studio Enterprise[edit]
+Visual Studio Enterprise provides a set of software and database development, collaboration, metrics, architecture, testing and reporting tools in addition to the features provided by Visual Studio Professional.
+Visual Studio Test Professional[edit]
+Visual Studio Test Professional is an edition which was introduced with Visual Studio 2010. Its focus is aimed at the dedicated tester role and includes support for the management of test environments, the ability to start and report on tests and to connect to Team Foundation Server. It does not include support for development or authoring of tests.[53]
+Visual Studio Express[edit]
+Visual Studio Express Editions are a set of free lightweight individual IDEs which are provided as stripped-down versions of the Visual Studio IDE on a per-platform basis or per-language basis, i.e., it installs the development tools for the supported platforms (web, Windows, phone) or supported development languages (VB, C#) onto individual Visual Studio Shell AppIds. It includes only a small set of tools as compared to the other systems. Versions prior to 2013 Update 2 do not include support for plug-ins. x64 compilers are not included in the Visual Studio Express edition IDEs, but are available as part of a Windows Software Development Kit that can be installed separately.[57] After an initial announcement[58] that the Express 2012 release would be restricted to creating Windows 8 Metro-style applications, Microsoft responded to negative developer feedback by reversing that decision and announcing that desktop application development would also be supported.[59] Microsoft targets the Express IDEs at students and hobbyists. Express editions do not use the full MSDN Library but use the MSDN Essentials Library. The languages available as part of the Express IDEs are:[60]
+
+Visual Basic Express
+Visual C++ Express
+Visual C# Express
+Visual Web Developer Express
+Express for Windows Phone
+
+Editions feature grid[edit]
+
+Editions feature grid[53][61]
+
+Edition
+Debugging and diagnostics
+Testing tools
+IDE
+Development platform support
+Architecture and modeling
+Lab management
+Team Foundation Server
+Team Services
+Collaboration tools
+Support usage scenarios
+MSDN subscription
+
+
+Software and services for production use
+Software for development and testing
+Other benefits
+
+
+Community
+3/4
+1/4
+2/4
+Yes
+1/4
+No
+No
+2/4
+Yes
+3/4
+No
+No
+No
+
+
+Professional
+3/4
+1/4
+3/4
+Yes
+1/4
+No
+3/4
+2/4
+Yes
+Yes
+3/4
+2/4
+3/4
+
+
+Enterprise
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+
+
+Test Professional
+No
+2/4
+No
+No
+No
+Yes
+Yes
+3/4
+3/4
+Yes
+3/4
+2/4
+3/4
+
+
+MSDN Platforms
+No
+2/4
+No
+No
+No
+Yes
+Yes
+3/4
+3/4
+Yes
+3/4
+2/4
+3/4
+
+
+Fractions refer to partial feature inclusion.
+History[edit]
+Prior to Visual Studio Version 4.0, there were Visual Basic 3, Visual C++, Visual FoxPro and Visual SourceSafe as separate products.
+
+
+Product name
+Codename
+Version number
+cl.exe
+version
+Supported .NET
+Framework versions
+Release date
+
+
+Visual Studio 4.0
+N/A
+4.0
+N/A
+N/A
+000000001995-04-01-0000April 1995
+
+
+Visual Studio 97
+Boston
+5.0
+N/A
+N/A
+000000001997-02-01-0000February 1997
+
+
+Visual Studio 6.0
+Aspen
+6.0
+12.00
+N/A
+000000001998-06-01-0000June 1998
+
+
+Visual Studio .NET (2002)
+Rainier
+7.0
+13.00
+1.0
+000000002002-02-13-0000February 13, 2002
+
+
+Visual Studio .NET 2003
+Everett
+7.1
+13.10
+1.1
+000000002003-04-24-0000April 24, 2003
+
+
+Visual Studio 2005
+Whidbey
+8.0
+14.00
+2.0, 3.0
+000000002005-11-07-0000November 7, 2005
+
+
+Visual Studio 2008
+Orcas
+9.0
+15.00
+2.0, 3.0, 3.5
+000000002007-11-19-0000November 19, 2007
+
+
+Visual Studio 2010
+Dev10/Rosario
+10.0
+16.00
+2.0 – 4.0
+000000002010-04-12-0000April 12, 2010
+
+
+Visual Studio 2012
+Dev11
+11.0
+17.00
+2.0 – 4.5.2
+000000002012-09-12-0000September 12, 2012
+
+
+Visual Studio 2013
+Dev12
+12.0
+18.00
+2.0 – 4.5.2
+000000002013-10-17-0000October 17, 2013
+
+
+Visual Studio 2015
+Dev14
+14.0
+19.00
+2.0 – 4.6
+000000002015-07-20-0000July 20, 2015
+
+
+
+cl.exe is the C/C++ compiler shipped with Visual Studio, and it can be checked via the _MSC_VER predefined preprocessor macro.
+Visual Studio 97[edit]
+Microsoft first released Visual Studio (codenamed Boston,[62] for the city of the same name, thus beginning the VS codenames related to places)[62] in 1997, bundling many of its programming tools together for the first time. Visual Studio 97 came in two editions: Visual Studio Professional and Visual Studio Enterprise, the professional edition has three CDs, and the enterprise on four CDs. It included Visual J++ 1.1 for Java programming and introduced Visual InterDev for creating dynamically generated web sites using Active Server Pages.[citation needed] There was a single companion CD that contained the Microsoft Developer Network library.
+Visual Studio 97 was Microsoft's first attempt at using the same development environment for multiple languages. Visual J++, InterDev, and the MSDN Library had all been using the same 'environment', called Developer Studio.[63]
+Visual Studio was also sold as a bundle with the separate IDEs used for Visual C++, Visual Basic and Visual FoxPro.[17]
+Visual Studio 6.0 (1998)[edit]
+The next version, version 6.0 (codenamed Aspen, after the ski resort in Colorado),[citation needed] was released in June 1998 and is the last version to run on the Windows 9x platform.[64] Each version of each language in part also settled to v6.0, including Visual J++ which was prior v1.1, and Visual InterDev at the 1st release. The v6 edition of Microsoft was the core environment for the next four releases to provide programmers with an integrated look-alike platform. This led Microsoft to transition the development on the platform independent .NET Framework.
+Visual Studio 6.0 was the last version to include Visual J++,[65][66] which Microsoft removed as part of a settlement with Sun Microsystems that required Microsoft Internet Explorer not to provide support for the Java virtual machine.
+Visual Studio 6.0 came in two editions: Professional and Enterprise.[67] The Enterprise edition contained extra features not found in Professional edition, including:
+
+Application Performance Explorer
+Automation Manager
+Microsoft Visual Modeler
+RemAuto Connection Manager[citation needed]
+Visual Studio Analyzer
+
+Visual Studio .NET (2002)[edit]
+Microsoft released Visual Studio .NET (VS.NET), codenamed Rainier (for Washington's Mount Rainier), in February 2002 (the beta version was released via Microsoft Developer Network in 2001). The biggest change was the introduction of a managed code development environment using the .NET Framework. Programs developed using .NET are not compiled to machine language (like C++ is, for example) but instead to a format called Microsoft Intermediate Language (MSIL) or Common Intermediate Language (CIL). When a CIL application executes, it is compiled while being executed into the appropriate machine language for the platform it is being executed on, thereby making code portable across several platforms. Programs compiled into CIL can be executed only on platforms which have an implementation of Common Language Infrastructure. It is possible to run CIL programs in Linux or Mac OS X using non-Microsoft .NET implementations like Mono and DotGNU.
+This was the first version of Visual Studio to require an NT-based Windows platform.[68] The installer enforces this requirement.
+Visual Studio .NET 2002 shipped in four editions: Academic, Professional, Enterprise Developer, and Enterprise Architect. Microsoft introduced C# (C-sharp), a new programming language, that targets .NET. It also introduced the successor to Visual J++ called Visual J#. Visual J# programs use Java's language-syntax. However, unlike Visual J++ programs, Visual J# programs can only target the .NET Framework, not the Java Virtual Machine that all other Java tools target.
+Visual Basic changed drastically to fit the new framework, and the new version was called Visual Basic .NET. Microsoft also added extensions to C++, called Managed Extensions for C++, so .NET programs could be created in C++.
+Visual Studio .NET can produce applications targeting Windows (using the Windows Forms part of the .NET Framework), the Web (using ASP.NET and Web Services) and, with an add-in, portable devices (using the .NET Compact Framework).
+The Visual Studio .NET environment was rewritten to partially use .NET. All languages are versions of Visual Studio, it has a cleaner interface and greater cohesiveness.[citation needed] It is also more customizable with tool windows that automatically hide when not in use. While Visual FoxPro 7 started out as part of Visual Studio .NET 2002, and early VS betas allowed debugging inside VFP-based DLLs, it was removed before release to follow its own development track.[citation needed]
+The internal version number of Visual Studio .NET 2002 is version 7.0. Microsoft released Service Pack 1 for Visual Studio .NET 2002 in March 2005.[69]
+Visual Studio .NET 2003[edit]
+In April 2003, Microsoft introduced a minor upgrade to Visual Studio .NET called Visual Studio .NET 2003, codenamed Everett (for the city of the same name). It includes an upgrade to the .NET Framework, version 1.1, and is the first release to support developing programs for mobile devices, using ASP.NET or the .NET Compact Framework. The Visual C++ compiler's standards-compliance improved, especially in the area of partial template specialization. Visual C++ Toolkit 2003 is a version of the same C++ compiler shipped with Visual Studio .NET 2003 without the IDE that Microsoft made freely available. As of 2010[update] it is no longer available and the Express Editions have superseded it. The internal version number of Visual Studio .NET 2003 is version 7.1 while the file format version is 8.0.[70]
+Visual Studio .NET 2003 shipped in four editions: Academic, Professional, Enterprise Developer, and Enterprise Architect. The Visual Studio .NET 2003 Enterprise Architect edition includes an implementation of Microsoft Visio 2002's modeling technologies, including tools for creating Unified Modeling Language-based visual representations of an application's architecture, and an object-role modeling (ORM) and logical database-modeling solution. "Enterprise Templates" were also introduced, to help larger development teams standardize coding styles and enforce policies around component usage and property settings.
+Service Pack 1 was released 13 September 2006.[71]
+Visual Studio 2005[edit]
+Visual Studio 2005, codenamed Whidbey (a reference to Whidbey Island in Puget Sound), was released online in October 2005 and to retail stores a few weeks later. Microsoft removed the ".NET" moniker from Visual Studio 2005 (as well as every other product with .NET in its name), but it still primarily targets the .NET Framework, which was upgraded to version 2.0. It is the last version available for Windows 2000 and also the last version to be able to target Windows 98, Windows Me and Windows NT 4.0 for C++ applications.[72][73]
+Visual Studio 2005's internal version number is 8.0 while the file format version is 9.0.[70] Microsoft released Service Pack 1 for Visual Studio 2005 on 14 December 2006.[74] An additional update for Service Pack 1 that offers Windows Vista compatibility was made available on 3 June 2007.[75]
+Visual Studio 2005 was upgraded to support all the new features introduced in .NET Framework 2.0, including generics and ASP.NET 2.0. The IntelliSense feature in Visual Studio was upgraded for generics and new project types were added to support ASP.NET web services. Visual Studio 2005 also includes a local web server, separate from IIS, that can host ASP.NET applications during development and testing. It also supports all SQL Server 2005 databases. Database designers were upgraded to support the ADO.NET 2.0, which is included with .NET Framework 2.0. C++ also got a similar upgrade with the addition of C++/CLI which is slated to replace the use of Managed C++.[76] Other new features of Visual Studio 2005 include the "Deployment Designer" which allows application designs to be validated before deployments, an improved environment for web publishing when combined with ASP.NET 2.0 and load testing to see application performance under various sorts of user loads. Starting with the 2005 edition, Visual Studio also added extensive 64-bit support. While the host development environment itself is only available as a 32-bit application, Visual C++ 2005 supports compiling for x86-64 (AMD64 and Intel 64) as well as IA-64 (Itanium).[77] The Platform SDK included 64-bit compilers and 64-bit versions of the libraries.
+Microsoft also announced Visual Studio Tools for Applications as the successor to Visual Basic for Applications (VBA) and VSA (Visual Studio for Applications). VSTA 1.0 was released to manufacturing along with Office 2007. It is included with Office 2007 and is also part of the Visual Studio 2005 SDK. VSTA consists of a customized IDE, based on the Visual Studio 2005 IDE, and a runtime that can be embedded in applications to expose its features via the .NET object model. Office 2007 applications continue to integrate with VBA, except for InfoPath 2007 which integrates with VSTA. Version 2.0 of VSTA (based on Visual Studio 2008) was released in April 2008.[78] It is significantly different from the first version, including features such as dynamic programming and support for WPF, WCF, WF, LINQ, and .NET 3.5 Framework.
+Visual Studio 2008[edit]
+Visual Studio 2008,[79] and Visual Studio Team System 2008[80][81] codenamed Orcas (a reference to Orcas Island, also an island in Puget Sound, like Whidbey for the previous 2005 release), were released to MSDN subscribers on 19 November 2007 alongside .NET Framework 3.5. The source code for the Visual Studio 2008 IDE is available under a shared source license to some of Microsoft's partners and ISVs.[82] Microsoft released Service Pack 1 for Visual Studio 2008 on 11 August 2008.[83] The internal version number of Visual Studio 2008 is version 9.0 while the file format version is 10.0. Visual Studio 2008 is the last version to support targeting Windows 2000 for C++ applications.[84]
+Visual Studio 2008 is focused on development of Windows Vista, 2007 Office system, and Web applications. For visual design, a new Windows Presentation Foundation visual designer and a new HTML/CSS editor influenced by Microsoft Expression Web are included. J# is not included. Visual Studio 2008 requires .NET 3.5 Framework and by default configures compiled assemblies to run on .NET Framework 3.5, but it also supports multi-targeting which lets the developers choose which version of the .NET Framework (out of 2.0, 3.0, 3.5, Silverlight CoreCLR or .NET Compact Framework) the assembly runs on. Visual Studio 2008 also includes new code analysis tools, including the new Code Metrics tool (only in Team Edition and Team Suite Edition).[85] For Visual C++, Visual Studio adds a new version of Microsoft Foundation Classes (MFC 9.0) that adds support for the visual styles and UI controls introduced with Windows Vista.[86] For native and managed code interoperability, Visual C++ introduces the STL/CLR, which is a port of the C++ Standard Template Library (STL) containers and algorithms to managed code. STL/CLR defines STL-like containers, iterators and algorithms that work on C++/CLI managed objects.[87][88]
+Visual Studio 2008 features include an XAML-based designer (codenamed Cider), workflow designer, LINQ to SQL designer (for defining the type mappings and object encapsulation for SQL Server data), XSLT debugger, JavaScript Intellisense support, JavaScript Debugging support, support for UAC manifests, a concurrent build system, among others.[89] It ships with an enhanced set of UI widgets, both for Windows Forms and WPF. It also includes a multithreaded build engine (MSBuild) to compile multiple source files (and build the executable file) in a project across multiple threads simultaneously. It also includes support for compiling icon resources in PNG format, introduced in Windows Vista. An updated XML Schema designer was released separately some time after the release of Visual Studio 2008.[90]
+Visual Studio Debugger includes features targeting easier debugging of multi-threaded applications. In debugging mode, in the Threads window, which lists all the threads, hovering over a thread displays the stack trace of that thread in tooltips.[91] The threads can directly be named and flagged for easier identification from that window itself.[92] In addition, in the code window, along with indicating the location of the currently executing instruction in the current thread, the currently executing instructions in other threads are also pointed out.[92][93] The Visual Studio debugger supports integrated debugging of the .NET 3.5 Framework Base Class Library (BCL) which can dynamically download the BCL source code and debug symbols and allow stepping into the BCL source during debugging.[94] As of 2010[update] a limited subset of the BCL source is available, with more library support planned for later.
+Visual Studio 2010[edit]
+On 12 April 2010, Microsoft released Visual Studio 2010, codenamed Dev10,[95] and .NET Framework 4.[96][97]
+The Visual Studio 2010 IDE was redesigned which, according to Microsoft, clears the UI organization and "reduces clutter and complexity."[98] The new IDE better supports multiple document windows and floating tool windows,[98] while offering better multi-monitor support. The IDE shell has been rewritten using the Windows Presentation Foundation (WPF),[99] whereas the internals have been redesigned using Managed Extensibility Framework (MEF) that offers more extensibility points than previous versions of the IDE that enabled add-ins to modify the behavior of the IDE.[100]
+The new multi-paradigm ML-variant F# forms part of Visual Studio 2010.[101]
+Visual Studio 2010 comes with .NET Framework 4 and supports developing applications targeting Windows 7.[98] It supports IBM DB2 and Oracle databases, in addition to Microsoft SQL Server.[98] It has integrated support for developing Microsoft Silverlight applications, including an interactive designer.[98] Visual Studio 2010 offers several tools to make parallel programming simpler: in addition to the Parallel Extensions for the .NET Framework and the Parallel Patterns Library for native code, Visual Studio 2010 includes tools for debugging parallel applications. The new tools allow the visualization of parallel Tasks and their runtime stacks.[102] Tools for profiling parallel applications can be used for visualization of thread wait-times and thread migrations across processor cores.[103] Intel and Microsoft have jointly pledged support for a new Concurrency Runtime in Visual Studio 2010[104] and Intel has launched parallelism support in Parallel Studio as an add-on for Visual Studio.[105]
+The Visual Studio 2010 code editor now highlights references; whenever a symbol is selected, all other usages of the symbol are highlighted.[106] It also offers a Quick Search feature to incrementally search across all symbols in C++, C# and VB.NET projects. Quick Search supports substring matches and camelCase searches.[106] The Call Hierarchy feature allows the developer to see all the methods that are called from a current method as well as the methods that call the current one.[106] IntelliSense in Visual Studio supports a consume-first mode which developers can opt into. In this mode, IntelliSense does not auto-complete identifiers; this allows the developer to use undefined identifiers (like variable or method names) and define those later. Visual Studio 2010 can also help in this by automatically defining them, if it can infer their types from usage.[106] Current versions of Visual Studio have a known bug which makes IntelliSense unusable for projects using pure C (not C++).[107]
+Visual Studio 2010 features a new Help System replacing the MSDN Library viewer. The Help System is no longer based on Microsoft Help 2 and does not use Microsoft Document Explorer. Dynamic help containing links to related help topics based on where the developer was in the IDE has been removed in the shipping product,[108] but can be added back using a download from Microsoft.[109]
+Visual Studio 2010 no longer supports development for Windows Mobile prior to Windows Phone 7. Visual Studio 2010 Service Pack 1 was released in March 2011.[110]
+
+Visual Studio Ultimate 2010
+
+Visual Studio Ultimate 2010 replaces Visual Studio 2008 Team Suite.[111] It includes new modeling tools,[112] such as the Architecture Explorer, which graphically displays projects and classes and the relationships between them.[113][114] It supports UML activity diagram, component diagram, (logical) class diagram, sequence diagram, and use case diagram.[114] Visual Studio Ultimate 2010 also includes Test Impact Analysis which provides hints on which test cases are impacted by modifications to the source code, without actually running the test cases.[115] This speeds up testing by avoiding running unnecessary test cases.
+Visual Studio Ultimate 2010 also includes a historical debugger for managed code called IntelliTrace. Unlike a traditional debugger that records only the currently active stack, IntelliTrace records all events, such as prior function calls, method parameters, events and exceptions. This allows the code execution to be rewound in case a breakpoint was not set where the error occurred.[116] Debugging with IntelliTrace causes the application to run more slowly than debugging without it, and uses more memory as additional data needs to be recorded. Microsoft allows configuration of how much data should be recorded, in effect, allowing developers to balance the speed of execution and resource usage. The Lab Management component of Visual Studio Ultimate 2010 uses virtualization to create a similar execution environment for testers and developers. The virtual machines are tagged with checkpoints which can later be investigated for issues, as well as to reproduce the issue.[117] Visual Studio Ultimate 2010 also includes the capability to record test runs that capture the specific state of the operating environment as well as the precise steps used to run the test. These steps can then be played back to reproduce issues.[118]
+Visual Studio 2012[edit]
+
+
+
+
+Microsoft Visual Studio 2012 logo
+
+
+Final build of Visual Studio 2012 was announced on 1 August 2012 and the official launch event was held on 12 September 2012.[119]
+Unlike prior versions, Visual Studio 2012 cannot record and play macros and the macro editor has been removed.[120]
+New feature include support for WinRT and C++/CX (Component Extensions) and C++ AMP (GPGPU programming)Semantic Colorization.[121]
+On 16 September 2011, a complete 'Developer Preview' of Visual Studio 11 was published on Microsoft's website. Visual Studio 11 Developer Preview requires Windows 7, Windows Server 2008 R2, Windows 8, or later operating systems.[122] Versions of Microsoft Foundation Class Library (MFC) and C runtime (CRT) included with this release cannot produce software that is compatible with Windows XP or Windows Server 2003 except by using native multi-targeting and foregoing the newest libraries, compilers, and headers.[123] However, on 15 June 2012, a blog post on the VC++ Team blog announced that based on customer feedback, Microsoft would re-introduce native support for Windows XP targets (though not for XP as a development platform) in a version of Visual C++ to be released later in the fall of 2012.[124] "Visual Studio 2012 Update 1" (Visual Studio 2012.1) was released in November 2012. This update added support for Windows XP targets and also added other new tools and features (e.g. improved diagnostics and testing support for Windows Store apps).[125]
+On 24 August 2011, a blog post by Sumit Kumar, a Program Manager on the Visual C++ team, listed some of the features of the upcoming version of the Visual Studio C++ IDE:[126]
+
+Semantic colorization: Improved syntax coloring, various user-defined or default colors for C++ syntax such as macros, enumerations, typenames, functions etc.[126]
+Reference highlighting: Selection of a symbol highlights all of the references to that symbol within scope.[126]
+New Solution Explorer: The new Solution Explorer allows for visualization of class and file hierarchies within a solution/project. It can search for calls to functions and uses of classes.[126]
+Automatic display of IntelliSense list: IntelliSense is automatically displayed whilst typing code, as opposed to previous versions where it had to be explicitly invoked through use of certain operators (i.e. the scope operator (::)) or shortcut keys (Ctrl-Space or Ctrl-J).[126]
+Member list filtering: IntelliSense uses fuzzy logic to determine which functions/variables/types to display in the list.[126]
+Code snippets: Code snippets are included in IntelliSense to automatically generate relevant code based on the user's parameters, custom code snippets can be created.[126]
+
+The source code of Visual Studio 2012 consists of approximately 50 million lines of code.[127]
+Interface backlash[edit]
+During Visual Studio 11 beta, Microsoft eliminated the use of color within tools except in cases where color is used for notification or status change purposes. However, the use of color was returned after feedback demanding more contrast, differentiation, clarity and "energy" in the user interface.[128][129]
+In Visual Studio 2012 RC, a major change to the interface is the use of all-caps menu bar, as part of the campaign to keep Visual Studio consistent with the direction of other Microsoft user interfaces, and to provide added structure to the top menu bar area.[130] The redesign was criticized for being hard to read, and going against the trends started by developers to use CamelCase to make words stand out better.[131] Some speculated that the root cause of the redesign was to incorporate the simplistic look and feel of Metro apps.[132] However, there exists a Windows Registry option to allow users to disable the all-caps interface.[133]
+Visual Studio 2013[edit]
+The preview for Visual Studio 2013 was announced at the Build 2013 conference and made available on 26 June 2013.[134] The Visual Studio 2013 RC (Release Candidate) was made available to developers on MSDN on 9 September 2013.[135]
+The final release of Visual Studio 2013 became available for download on 17 October 2013 along with .NET 4.5.1.[136] Visual Studio 2013 officially launched on 13 November 2013 at a virtual launch event keynoted by S. Somasegar and hosted on events.visualstudio.com.[137] "Visual Studio 2013 Update 1" (Visual Studio 2013.1) was released on 20 January 2014.[138] Visual Studio 2013.1 is a targeted update that addresses some key areas of customer feedback.[139] "Visual Studio 2013 Update 2" (Visual Studio 2013.2) was released on 12 May 2014.[140] Visual Studio 2013 Update 3 was released on 4 August 2014. With this update, Visual Studio provides an option to disable the all-caps menus, which was introduced in VS2012.[141] "Visual Studio 2013 Update 4" (Visual Studio 2013.4) was released on 12 November 2014.[142] "Visual Studio 2013 Update 5" (Visual Studio 2013.5) was released on 20 July 2015.[143]
+Visual Studio 2015[edit]
+Initially referred to as Visual Studio "14", the first Community Technology Preview (CTP) was released on 3 June 2014[144] and the Release Candidate was released on 29 April 2015; Visual Studio 2015 was officially announced as the final name on 12 November 2014.[145]
+Visual Studio 2015 RTM was released on 20 July 2015.[146]. Latest Unstable version of Visual Studio 2015 is Visual Studio Update 1 Release Candidate, which was released on 29 October 2015, [147].
+Related products[edit]
+
+
+
+
+
+This article is missing information about Visual Studio Lab Management, VSTS Profiler. Please expand the article to include this information. Further details may exist on the talk page. (November 2015)
+
+
+Team Services[edit]
+ On 13 November 2013, Microsoft announced the release of a software as a service offering of Visual Studio on Microsoft Azure platform; at the time, Microsoft called it Visual Studio Online. Previously announced as Team Foundation Services, it expands over Team Foundation Server by making it available on the Internet and implementing a rolling release model.[148][149] Customers could use Azure portal to subscribe to Visual Studio Online. Subscribers receive a hosted Git-compatible version control system, a load-testing service, a telemetry service and an in-browser code editor codenamed "Monaco".[150] During the Connect(); 2015 developer event on 18 November 2015, Microsoft announced that the service name is changed to Visual Studio Team Services.[151]
+Microsoft offers Basic, Professional, and Advanced subscription plans for Team Services. The Basic plan is free of charge for up to five users. Users with an MSDN subscription of Visual Studio can be added to a plan with no additional charge.[152]
+Application Lifecycle Management[edit]
+Visual Studio Application Lifecycle Management (VSALM) is a collection of integrated software development tools developed by Microsoft. These tools include IDEs, source control, work items, collaboration, metrics, and reporting tools. VSALM consists of Visual Studio, Team Foundation Server, Visual Studio Test Professional and Visual Studio Lab Management.[153]
+In Visual Studio 2005 and Visual Studio 2008 the brand was known as Microsoft Visual Studio Team System (VSTS); however, in October 2009, as part of the Visual Studio 2010 release (codenamed Rosario[154][155]), the Team System brand was renamed to Microsoft Visual Studio ALM.[156]
+Visual Studio LightSwitch[edit]
+Microsoft Visual Studio LightSwitch is an extension and framework specifically tailored for creating line-of-business applications built on existing .NET technologies and Microsoft platforms. The applications produced are architecturally 3-tier: the user interface runs on either Microsoft Silverlight, HTML 5 client[157] or as a SharePoint 2013 app;[158] the logic and data-access tier is built on WCF Data Services and exposed as an OData feed hosted[159] in ASP.NET; and the primary data storage supports Microsoft SQL Server Express, Microsoft SQL Server and Microsoft SQL Azure. LightSwitch also supports other data sources including Microsoft SharePoint, OData and WCF RIA Services.
+LightSwitch includes graphical designers for designing entities and entity relationships, entity queries, and UI screens. Business logic may be written in either Visual Basic or Visual C#. LightSwitch is included with Visual Studio 2012 Professional and higher.
+The user interface layer is now an optional component when deploying a LightSwitch solution, allowing a service only deployment.[160]
+The first version of Visual Studio LightSwitch, released 26 July 2011,[161] had many differences from the current[when?] release of LightSwitch. Notably the tool was purchased and installed as a stand-alone product. If Visual Studio 2010 Professional or higher was already installed on the machine, LightSwitch would integrate into that.[162] The second major difference was the middle tier was built and exposed using WCF RIA Services.
+Visual Studio Code[edit]
+Main article: Visual Studio Code
+Visual Studio Code is a source code editor, along with other features, for Linux, OS X, and Windows.[163] It also includes support for debugging and embedded Git Control. It is a freeware and As of November 2015[update], it is still in preview stage.[164]
+See also[edit]
+
+Microsoft Visual Studio Express
+Microsoft Small Basic
+
+References[edit]
+
+
+^ "Visual Studio 2015 RTM".&#160;
+^ Lextrait, Vincent (January 2010). "The Programming Languages Beacon, v10.0". Retrieved 5 January 2010.&#160;
+^ "Visual Studio Ultimate with MSDN". visualstudio.com. Microsoft. System Requirements. Retrieved 10 November 2014.&#160;
+^ Take Visual Studio 2010 For a Test Drive
+^ Brenner, Pat (19 July 2013). "C99 library support in Visual Studio 2013". Visual C++ Team Blog. Microsoft. Retrieved 3 August 2014.&#160;
+^ http://research.microsoft.com/en-us/um/cambridge/projects/fsharp/
+^ Microsoft DreamSpark - Software Catalog. Dreamspark.com (2013-05-31). Retrieved on 2013-10-23.
+^ "Visual Studio Development Environment Model". MSDN. Microsoft. Retrieved 2008-01-01.&#160;
+^ "VSPackages and Managed Package Framework (MPF)". MSDN. Microsoft. Retrieved 2008-01-01.&#160;
+^ a b c d Mehta, Vijay. "Extending Visual Studio 2005". CodeGuru. Retrieved 2008-01-01.&#160;
+^ a b c "Language Service Essentials". MSDN. Microsoft. Retrieved 2008-01-01.&#160;
+^ "Babel Package Overview". MSDN. Microsoft. Retrieved 2008-01-01.&#160;
+^ "Managed Language Services overview". MSDN. Microsoft. Retrieved 2008-01-01.&#160;
+^ "Source Control Integration Essentials". MSDN. Retrieved 2010-09-19.&#160;
+^ "Source Control Plug-ins". MSDN. Retrieved 2010-09-19.&#160;
+^ a b Constantin, Alin. "Microsoft Source Code Control Interface". Retrieved 2008-01-03.&#160;
+^ a b c "Visual Studio Extensibility". CoDe Magazine. Retrieved 2008-01-01.&#160;
+^ a b Guthrie, Scott. "Nice VS 2008 Code Editing Improvements". Retrieved 2007-12-31.&#160;
+^ Guthrie, Scott. "VS 2008 JavaScript IntelliSense". Retrieved 2007-12-31.&#160;
+^ Guthrie, Scott. "VS 2008 Web Designer and CSS Support". Retrieved 2007-12-31.&#160;
+^ a b "Visual Studio .NET - Top 10 Code Editor Tips and Tricks". MSDN TV. Retrieved 2007-12-31.&#160;
+^ "Background compilation, part 1". Retrieved 2007-12-31.&#160;
+^ a b Gertz, Matthew. "Scaling Up: The Very Busy Background Compiler". MSDN Magazine. Microsoft. Retrieved 2007-12-31.&#160;
+^ Abraham, Thomas F. "Background Compilation in Visual Studio 2002, 2003 and 2005". Retrieved 2015-11-10.&#160;
+^ "Attaching to Running Processes". MSDN. Retrieved 2007-12-31.&#160;
+^ "Dumps". MSDN. Retrieved 2007-12-31.&#160;
+^ "Breakpoint Overview". MSDN. Retrieved 2007-12-31.&#160;
+^ a b "Code Stepping Overview". MSDN. Retrieved 2007-12-31.&#160;
+^ "Debugging at Design Time". MSDN. Retrieved 2007-12-31.&#160;
+^ "Binding Controls to Data in Visual Studio". Msdn.microsoft.com. Retrieved 2013-06-15.&#160;
+^ "MSDN TV: Introducing "Cider" - The Visual Studio Designer for WPF ("Avalon")". MSDN TV. Retrieved 2008-01-01.&#160;
+^ "MVC&#160;: The Official Microsoft ASP.NET Site". Asp.net. 2013-05-10. Retrieved 2013-06-15.&#160;
+^ "Dynamic Data Content Map". Asp.net. Retrieved 2013-06-15.&#160;
+^ "Team Explorer 2005 (.img file)". Microsoft. Retrieved 2007-03-05.&#160;
+^ "Visual Studio Team System 2008 Team Explorer". Microsoft. Retrieved 2007-03-05.&#160;
+^ "How to use the Server Explorer in Visual Studio .NET and Visual Studio 2005". Microsoft. Retrieved 2008-01-01.&#160;
+^ "Dotfuscator Community Edition 4.0". Msdn.microsoft.com. Retrieved 2009-09-06.&#160;
+^ "Microsoft and PreEmptive Solutions to Provide Application Feature Monitoring, Usage Expiry and Tamper Defense in Visual Studio 2010: Post-build utility utilizes software plus services and instrumentation to improve application security, portfolio management and usability". Microsoft.com. 2008-10-27. Retrieved 2009-09-06.&#160;
+^ Cangialosi, Anthony (6 June 2008). "The Visual Studio Gallery gets a little more community friendly". Anthony @ MS. Microsoft. Retrieved 3 August 2014.&#160;
+^ "ISO C Standard Update". Visual C++ Team Blog. Microsoft. Retrieved 2008-01-02.&#160;
+^ "Update On The C++-0x Language Standard". Visual C++ Team Blog. Microsoft.&#160;
+^ "Compiler Intrinsics". MSDN. Retrieved 2008-01-02.&#160;
+^ "OpenMP in Visual C++ (Visual Studio 2005)". MSDN. Microsoft. 2005. Retrieved 27 April 2013.&#160;
+^ "Visual C# (MSDN)". MSDN. Retrieved 2009-06-01.&#160;
+^ "Make Your Components Really RAD with Visual Studio .NET Property Browser". October 2010.&#160;
+^ "What's New in Visual Basic and Visual C#". October 2010.&#160;
+^ "Visual FoxPro Home, under Visual FoxPro 9.0 Overview". MSDN. Retrieved 2014-03-08.&#160;
+^ "A Message to the Community". MSDN. Retrieved 2008-01-02.&#160;
+^ De, Alan. "Visual SourceSafe: Microsoft's Source Destruction System". Highprogrammer.com. Retrieved 2009-09-06.&#160;
+^ "INFO: Required Network Rights for the SourceSafe Directories". Support.microsoft.com. 2005-02-24. Retrieved 2009-09-06.&#160;
+^ "Microsoft Visual SourceSafe Best Practices". Msdn.microsoft.com. Retrieved 2009-09-06.&#160;
+^ "Buy Microsoft Visual SourceSafe 6 (324-00269)&#160;:: eCostSoftware.com - UK Software Supplier". eCostSoftware.com. Retrieved 2009-09-06.&#160;
+^ a b c "Visual Studio Editions". Microsoft. Retrieved 2010-06-22.&#160;
+^ "Microsoft debuts Visual Studio 2015 and .NET 2015 previews, free Visual Studio Community 2013". VentureBeat. Retrieved 12 November 2014.&#160;
+^ "Microsoft Launches Free, Unrestricted Version Of Visual Studio For Small Teams". TechCrunch. Retrieved 2014-11-12.&#160;
+^ "VS 2010 Licensing Changes". Microsoft. Retrieved 2010-06-22.&#160;
+^ "How to: Configure Visual C++ Projects to Target 64-Bit Platforms". Microsoft. Retrieved 2010-08-19.&#160;
+^ "No-cost desktop software development is dead on Windows 8". Ars Technica.&#160;
+^ "Microsoft adds Windows 8 Desktop support to Visual Studio 2012 Express". ZDNet.&#160;
+^ "Visual Studio Express". Microsoft. Retrieved 2010-06-22.&#160;
+^ "Compare Visual Studio 2015 Offerings". visualstudio.com. Microsoft. Retrieved 22 November 2015.&#160;
+^ a b "website on windows CE programming". Paul Thurrott. Retrieved 2010-05-19.&#160;
+^ update &amp; help from Microsoft website
+^ "System Requirements (Visual Studio 6.0)". Microsoft Co. Retrieved 2008-01-02.&#160;
+^ "Visual J++ Solution Center". Support. Microsoft. Retrieved 25 May 2013.&#160;
+^ "Visual J++ 6.0". MSDN. Microsoft. Retrieved 25 May 2013.&#160;
+^ "Features by Edition". Microsoft. Archived from the original on 2004-02-15.&#160;
+^ "System Requirements (Visual Studio .NET)". MSDN. Retrieved 2008-01-02.&#160;
+^ "Visual Studio .NET 2002 SP1". Microsoft. Retrieved 2008-01-02.&#160;
+^ a b "Hacking Visual Studio". Retrieved 2008-01-01.&#160;
+^ "Microsoft Visual Studio .NET 2003 Service Pack 1". Microsoft. Retrieved 2008-01-02.&#160;
+^ How to: Modify WINVER and _WIN32_WINNT
+^ Breaking Changes
+^ "Visual Studio 2005 Service Pack 1". Microsoft. Retrieved 2008-01-01.&#160;
+^ "Visual Studio Service Pack 1 Update". Retrieved 2008-01-01.&#160;
+^ "New Language Features in Visual C++". Visual Studio 2005 Visual C++ Language Reference. MSDN. Retrieved 2006-12-28.&#160;
+^ "64-bit and Visual Studio 2005". 11 April 2006. Retrieved 2006-12-28.&#160;
+^ VSTA vs VSTO in Software Development Kits. In the latest MSDN Flash email I just received, it announces the release of Visual Studio Tools for Applications 2.0 (VSTA).
+^ "Microsoft Details Dynamic IT Strategy at Tech-Ed 2007". Retrieved 2007-06-04.&#160;
+^ Beehler, Jeff (2007-11-19). "Visual Studio Team System 2008 ships!". Jeff Beehler's Blog. MSDN Blogs. Retrieved 2010-06-25.&#160;
+^ "Microsoft Windows Visual Studio Team System 2008". MSDN Search. MSDN Social. 2010. Retrieved 2010-06-25.&#160;
+^ "Microsoft to Give Partners More Access to Orcas IDE Code". Retrieved 2007-11-06.&#160;
+^ "Download Details: Microsoft Visual Studio 2008 Service Pack 1 (exe)". Retrieved 2008-08-11.&#160;
+^ Windows Platforms (CRT)
+^ Taft, Darryl K. "Microsoft Pushes Secure, Quality Code". eWeek. Retrieved 2007-10-06.&#160;
+^ "Whats New in MFC 9.0 (Orcas)". CodeGuru. Retrieved 2008-01-02.&#160;
+^ Dudla, Nikola. "What Is STL/CLR?". Developing Windows Applications by Mykola Dudar. Microsoft. Retrieved 2008-01-02.&#160;
+^ "Libraries Work In Orcas". Visual C++ Team Blog. Microsoft. Retrieved 2008-01-02.&#160;
+^ "Download Visual Studio 03/07 CTP". Retrieved 2007-06-14.&#160;
+^ "XSD Designer in Visual Studio". Retrieved 2008-01-01.&#160;
+^ Somasegar, S.. "Debugging and Profiling Features in VS 2008". Microsoft. Retrieved 2007-07-24.&#160;
+^ a b Robbin, John. "Neat New Multithreaded Debugging Features in VS 2008". Retrieved 2007-09-24.&#160;
+^ Hanselman, Scott. "Multi-threaded Debugging in Visual Studio 2008". Retrieved 2007-09-24.&#160;
+^ Guthrie, Scott. "Releasing the Source Code for the .NET Framework Libraries". Retrieved 2007-10-04.&#160;
+^ Visual Studio 2010 aka. Dev10 Beta available for download
+^ Microsoft Releases Visual Studio 2010, .NET Framework 4
+^ Microsoft launches Visual Studio 2010 and .NET Framework 4
+^ a b c d e "Visual Studio 2010 Team System First Look". Microsoft. Retrieved 2009-04-18.&#160;
+^ "Writing Visual Studio 2010 shell in WPF Reflects Confidence". One .NET Way (via Archive.org). Retrieved 2009-04-18.&#160;
+^ Quintero, Carlos. "Visual Studio 2010 Extensibility moving beyond add-ins and packages". Retrieved 2009-04-18.&#160;
+^ "F# to ship as part of Visual Studio 2010". Retrieved 2008-12-10.&#160;
+^ Moth, Daniel. "Debugging Parallel applications with VS2010". Retrieved 2008-04-18.&#160;
+^ "More support for parallelism in the next version of Visual Studio". MSDN. Retrieved 2009-04-23.&#160;
+^ Worthington, David. "SD Times: Intel, Microsoft converge on parallel computing". Retrieved 2008-08-20.&#160;
+^ Worthington, David. "Intel addresses development life cycle with Parallel Studio". Retrieved 2009-05-26.&#160;
+^ a b c d Somasegar, S.. "Code Focused Development in VS 2010". Retrieved 2008-04-18.&#160;
+^ "Bug: Intellisense believes itself in C++ while working on a C file.". Retrieved 2011-08-28.&#160;
+^ Dynamic Help Removed From Visual Studio 2010
+^ "Help Viewer Power Tool". Retrieved 2010-07-13.&#160;
+^ Microsoft Visual Studio 2010 Service Pack 1 (Installer)
+^ "Visual Studio 2010 transition benefits: "the ultimate offer" – What you need to know". Microsoft MSDN Blogs. Retrieved 2014-09-14.&#160;
+^ "Microsoft Unveils Next Version of Visual Studio and .NET Framework". Microsoft PressPass. Retrieved 2009-08-14.&#160;
+^ "Doing Architecture with Team System Rosario". Retrieved 2009-04-18.&#160;
+^ a b "Visual Studio 2010 Architecture Edition". Retrieved 2009-04-18.&#160;
+^ "Historical Debugger and Test Impact Analysis in Visual Studio Team System 2010". Channel 9. Retrieved 2009-04-18.&#160;
+^ Heydarian, Habib. "What's new in Visual Studio Team System 2010: Episode 2". Retrieved 2008-04-18.&#160;
+^ "Visual Studio 2010 Lab Management". Retrieved 2009-04-18.&#160;
+^ Fried, Ina. "Visual Studio 2010 to come with 'black box'". CNET. CBS Interactive. Retrieved 2009-04-18.&#160;
+^ "Visual Studio 2012 and .NET 4.5 Complete! - Somasegar's blog - Site Home - MSDN Blogs". Blogs.msdn.com. 2012-08-01. Retrieved 2013-06-15.&#160;
+^ "Can I record/play Macros in Visual Studio 2012/2013?". stackoverflow.com. 2013-12-31. Retrieved 2013-12-31.&#160;
+^ "What's New for Visual C++ in Visual Studio 2012". Msdn.microsoft.com. 2012-08-15. Retrieved 2013-06-15.&#160;
+^ "Visual Studio® 11 Developer Preview Download". Microsoft Download Center. Microsoft Corporation. 16 September 2011. Retrieved 14 October 2011.&#160;
+^ "Bug: apps created with CRT and MFC vNext (11) cannot be used on Windows XP SP3". Microsoft Connect. Microsoft Corporation. 24 September 2011. Retrieved 14 October 2011. This behavior is by design in MFC and CRT for Visual Studio vNext. The minimum supported operating systems are Windows Server 2008 SP2 and Windows Vista.&#160;
+^ "Targeting Windows XP with C++ in Visual Studio 2012". Visual C++ Team blog. Microsoft Corporation. 15 June 2012. Retrieved 26 June 2012.&#160;
+^ "Visual Studio 2012 Update 1 is now available!". Somasegar's blog. Microsoft Corporation. 26 November 2012. Retrieved 29 December 2012.&#160;
+^ a b c d e f g Kumar, Sumit (24 August 2011). "First Look at the New C++ IDE Productivity Features in the Next Version of Visual Studio". VC++ Team Blog (Microsoft Corporation). MSDN Blogs. Retrieved 14 October 2011.&#160;
+^ "The Visual Studio 2012 Feedback Tool: A better way to submit bugs - The Visual Studio Blog - Site Home - MSDN Blogs". Blogs.msdn.com. 2013-01-28. Retrieved 2013-06-15.&#160;
+^ Color Returns to Visual Studio 11 User Interface
+^ Visual Studio 11 User Interface Updates Coming in RC
+^ A DESIGN WITH ALL-CAPS
+^ Microsoft Ignores Usability and Users - VS 2012 Keeps ALL-CAPS Menus
+^ On Visual Studio 11's redesign awkwardness
+^ How To Prevent Visual Studio 2012 ALL CAPS Menus!
+^ Visual Studio 2013 Preview Available Now! Microsoft Visual Studio Blog, 26 June 2013
+^ Visual Studio 2013 RC available now! Microsoft Visual Studio Blog, 9 September 2013
+^ Visual Studio 2013 released to web! Microsoft Visual Studio Blog, 17 October 2013
+^ Somasegar, S.. "Visual Studio 2013 Launch: Announcing Visual Studio Online". MSDN Blogs. Retrieved 2014-01-23.&#160;
+^ "Visual Studio 2013 Update 1". Visual Studio site. Microsoft Corporation. 20 January 2014. Retrieved 23 January 2014.&#160;
+^ "Visual Studio 2013 Update 1". Somasegar's blog. Microsoft Corporation. 20 January 2014. Retrieved 23 January 2014.&#160;
+^ "Visual Studio 2013 Update 2 RTM". Visual Studio site. Microsoft Corporation. 12 May 2014. Retrieved 12 July 2014.&#160;
+^ "Description of Visual Studio 2013 Update 3". Microsoft Corporation. 15 August 2014. Retrieved 18 August 2014.&#160;
+^ "Visual Studio 2013 Update 4 RTM". Visual Studio site. Microsoft Corporation. 12 November 2014. Retrieved 16 November 2014.&#160;
+^ https://www.visualstudio.com/news/vs2013-update5-vs
+^ Montgomery, John (3 June 2014). "Visual Studio "14" CTP now available". The Visual Studio Blog. Retrieved 18 August 2014.&#160;
+^ Montgomery, John (12 November 2014). "Visual Studio 2015 Preview, Visual Studio Community 2013, Visual Studio 2013 Update 4, and More". Visual Studio Blog. Microsoft. Retrieved 2015-01-15.&#160;
+^ https://www.visualstudio.com/news/vs2015-vs
+^ https://www.visualstudio.com/en-us/news/vs2015-update1-vs.aspx
+^ Blankenship, Ed (January 2014). "Introducing Visual Studio Online". MSDN Magazine. Microsoft.&#160;
+^ "Features Timeline". VisualStudio.com. Microsoft.&#160;
+^ Yegulalp, Serdar (14 November 2013). "Microsoft reinvents Visual Studio as an Azure cloud service". InfoWorld. IDG.&#160;
+^ Harry, Brian (18 November 2015). "News from Connect(); 2015". Brian Harry's blog. Microsoft.&#160;
+^ "Visual Studio Online Pricing Details". Microsoft Azure. Microsoft. Retrieved 29 November 2014.&#160;
+^ "Visual Studio Application Lifecycle Management". MSDN. Microsoft. Retrieved 2013-06-15.&#160;
+^ "Microsoft Unveils Next Version of Visual Studio and .NET Framework". Microsoft. Retrieved 2011-06-17.&#160;
+^ "Visual Studio Team System Rosario". Retrieved 2008-04-05.&#160;
+^ van Haaften, Octavie (25 November 2009). "Visual Studio 2010 Team System session". Retrieved 2011-12-08.&#160;
+^ "LightSwitch HTML Client". Msdn.microsoft.com. Retrieved 2013-06-15.&#160;
+^ "Get Started Building SharePoint Apps in Minutes with LightSwitch - Beth Massi - Sharing the goodness - Site Home - MSDN Blogs". Blogs.msdn.com. Retrieved 2013-06-15.&#160;
+^ "LightSwitch Architecture: OData (John Rivard) - Visual Studio LightSwitch Team Blog - Site Home - MSDN Blogs". Blogs.msdn.com. Retrieved 2013-06-15.&#160;
+^ "How to: Deploy a LightSwitch OData Service". Msdn.microsoft.com. Retrieved 2013-06-15.&#160;
+^ "Visual Studio LightSwitch 2011 is Launching July 26th! - Visual Studio LightSwitch Team Blog - Site Home - MSDN Blogs". Blogs.msdn.com. Retrieved 2013-06-15.&#160;
+^ Massi, Beth. "Rapid Business Application Development with Visual Studio LightSwitch". Microsoft. Retrieved 2010-08-04.&#160;
+^ Lardinois, Frederic (April 29, 2015). "Microsoft Launches Visual Studio Code, A Free Cross-Platform Code Editor For OS X, Linux And Windows". TechCrunch.&#160;
+^ Montgomery, John (April 29, 2015). "BUILD 2015 News: Visual Studio Code, Visual Studio 2015 RC, Team Foundation Server 2015 RC, Visual Studio 2013 Update 5".&#160;
+
+
+External links[edit]
+
+Official website
+Visual Studio Developers Center on MSDN
+Developing extension packages for Visual Studio using C#
+Microsoft Visual Studio at DMOZ
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Microsoft development tools
+
+
+
+
+
+
+Development
+environments
+
+
+
+
+
+Visual Studio
+
+
+
+
+Visual Studio Code
+Express
+Visual Studio Lab Management
+Visual Studio Test Professional
+Tools for Applications
+Tools for Office
+VSTS Profiler
+
+
+
+
+
+
+
+
+
+Others
+
+
+
+
+App Studio
+Blend
+Expression Web
+GW-BASIC
+MSBuild
+Robotics Developer Studio
+SharePoint Designer
+
+FrontPage
+
+
+PowerShell ISE
+QuickBASIC
+
+QBasic
+
+
+Small Basic
+WebMatrix
+Windows SDK
+
+
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+Microsoft Basic
+Visual Basic
+Visual Basic .NET
+Visual C++
+
+C++/CLI
+Managed C++
+
+
+C#
+
+Visual C#
+
+
+F#
+J#
+Visual FoxPro
+IronPython
+IronRuby
+JScript
+PowerShell
+TypeScript
+XAML
+VBScript
+
+
+
+
+
+
+
+
+Major APIs and
+frameworks
+(See all)
+
+
+
+
+
+
+
+Windows API
+Silverlight
+XNA
+DirectX
+
+Managed DirectX
+
+
+Xbox Development Kit
+Windows CardSpace
+Windows Installer
+
+
+
+
+
+
+
+
+
+.NET Framework
+
+
+
+
+ASP.NET
+ASP.NET AJAX
+ADO.NET
+Communication Foundation
+Identity Foundation
+LINQ
+Presentation Foundation
+Workflow Foundation
+
+
+
+
+
+
+
+
+
+Windows Driver Frameworks
+
+
+
+
+Windows Driver Model
+KMDF
+UMDF
+Windows Driver Kit
+Windows Hardware Certification Kit
+
+
+
+
+
+
+
+
+
+
+
+Database
+
+
+
+
+
+SQL Server
+
+
+
+
+Express
+Compact
+Management Studio
+Business Intelligence Development Studio
+MSDE
+
+
+
+
+
+
+
+
+
+SQL services
+
+
+
+
+Analysis
+Reporting
+Integration
+Notification
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+Visual FoxPro
+Microsoft Access
+Jet Engine
+Extensible Storage Engine
+Azure DocumentDB
+
+
+
+
+
+
+
+
+
+
+
+Source control
+
+
+
+Team Foundation Server
+Visual SourceSafe
+
+
+
+
+
+
+
+
+Delivery
+
+
+
+
+
+End-user
+
+
+
+
+ClickOnce
+Windows Installer
+
+WiX
+
+
+Windows Store
+
+
+
+
+
+
+
+
+
+Developers
+
+
+
+
+NuGet
+Web Platform
+
+
+
+
+
+
+
+
+
+
+
+Performance Analysis
+
+
+
+CLR Profiler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for C and C++
+
+
+
+
+
+
+Open source
+
+
+
+Anjuta
+Code::Blocks
+CodeLite
+Dev-C++
+Eclipse
+Geany
+GNAT Programming Studio
+KDevelop
+Kuzya
+MonoDevelop
+NetBeans
+QDevelop
+Qt Creator
+Ultimate++
+wxDev-C++
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Pelles C
+Oracle Solaris Studio (previously called Sun Studio)
+Visual Studio Express
+Xcode
+
+
+
+
+
+
+
+
+Retail
+
+
+
+C++Builder
+CodeWarrior
+IBM VisualAge
+Visual Studio
+SlickEdit
+
+
+
+
+
+
+
+
+
+
+
+&#160;Category
+ Comparison
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+.NET Framework
+
+
+
+
+
+
+Architecture
+
+
+
+Common Language Runtime (CLR)
+COM Interop
+Framework Class Library (FCL)
+Version history
+
+
+
+
+
+
+
+
+Components
+
+
+
+ADO.NET
+
+Entity Framework
+
+
+ASP.NET
+
+AJAX
+Dynamic Data
+MVC Framework
+Razor view engine
+
+
+ClickOnce
+Dynamic Language Runtime
+Extensible Application Markup Language (XAML)
+Language Integrated Query (LINQ)
+Managed Extensibility Framework
+Microsoft Silverlight
+Microsoft XNA
+Parallel Extensions
+Windows Communication Foundation (WCF)
+
+WCF Data Services
+
+
+Windows Forms (WinForms)
+Windows Identity Foundation (WIF)
+Windows Presentation Foundation (WPF)
+Windows Workflow Foundation (WF)
+.NET Remoting
+
+
+
+
+
+
+
+
+Tools
+
+
+
+CLR Profiler
+ILAsm
+.NET Compiler Platform
+Native Image Generator (NGen)
+XAMLPad
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Visual Studio
+
+Blend
+Express
+
+
+MonoDevelop
+SharpDevelop
+
+
+
+
+
+
+
+
+Organizations
+
+
+
+.NET Foundation
+Microsoft
+Xamarin
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ List
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+HTML editors
+
+
+
+
+
+
+
+
+
+Web design
+Web design program
+
+
+
+
+
+
+
+
+Open source
+
+
+
+Amaya
+Aptana
+Arachnophilia
+Atom
+Bluefish
+Brackets
+Eclipse
+gwrite
+Komodo Edit
+NetBeans
+Quanta Plus
+TextMate
+Visual Studio Code
+
+
+
+
+
+Mozilla Composer-based
+
+
+
+
+BlueGriffon
+KompoZer
+SeaMonkey Composer
+
+
+
+
+
+
+
+
+
+Scintilla-based
+
+
+
+
+FlashDevelop
+Geany
+Notepad++
+Notepad2
+Programmer's Notepad
+gPHPedit
+SciTE
+
+
+
+
+
+
+
+
+
+Web-based
+
+
+
+
+Aloha Editor
+CKEditor
+Froala Editor
+Maqetta
+TinyMCE
+WYMeditor
+YUI Rich Text Editor
+
+
+
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Codelobster
+TED Notepad
+FirstPage
+Google Web Designer
+HTML-Kit
+openElement
+PSPad
+SharePoint Designer
+TextWrangler
+Visual Studio Community
+Visual Studio Express
+WebMatrix
+
+
+
+
+
+
+
+
+Commercial
+software
+
+
+
+
+
+Cross-platform
+
+
+
+
+Adobe Contribute
+Adobe Dreamweaver
+Komodo IDE
+Macaw Web Editor
+PhpStorm
+Sublime Text
+UltraEdit
+
+
+
+
+
+
+
+
+
+OS X only
+
+
+
+
+Coda
+BBEdit
+Freeway
+PageSpinner
+Sandvox
+Site Studio
+skEdit
+Smultron
+
+
+
+
+
+
+
+
+
+Windows only
+
+
+
+
+CoffeeCup HTML Editor
+EditPlus
+EmEditor
+EZGenerator
+NetObjects Fusion
+NoteTab
+PHPEdit
+TextPad
+TopStyle
+Visual Studio
+Web Architect
+Xara Web Designer
+
+
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+Adobe GoLive
+Adobe PageMill
+Alleycode HTML Editor
+AOLpress
+Arena
+Claris Home Page
+ConTEXT
+Frame-IT!
+iWeb
+HomeSite
+HotDog
+HoTMetaL
+Microsoft Expression Web
+Microsoft FrontPage
+Netscape Composer
+Nvu
+Nexus (WorldWideWeb)
+tkWWW
+
+
+
+
+
+
+
+
+Helper tools
+
+
+
+CSE HTML Validator
+CSSTidy
+HTML Tidy
+FrameGang
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Comparison
+ List
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+JavaScript
+
+
+
+
+
+
+Code analysis
+
+
+
+JSHint
+JSLint
+
+
+
+
+
+
+
+
+Compilers
+
+
+
+CoffeeScript
+Emscripten
+Google Closure Compiler
+Google Web Toolkit
+Morfik
+TypeScript
+AtScript
+Opa
+Haxe
+ClojureScript
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Ajax
+Client-side
+Dynamic HTML
+JavaScript library
+JavaScript syntax
+Unobtrusive JavaScript
+
+
+
+
+
+
+
+
+Debuggers
+
+
+
+Firebug
+Komodo IDE
+Microsoft Script Debugger
+Microsoft Script Editor
+Opera Dragonfly
+Venkman
+Visual Studio
+
+Visual Studio Express
+
+
+Visual Studio Code
+Web Inspector
+
+
+
+
+
+
+
+
+Doc generators
+
+
+
+JSDoc
+
+
+
+
+
+
+
+
+Editors (comparison)
+
+
+
+Ace
+Atom
+Cloud9 IDE
+CodeMirror
+Codenvy
+Koding
+Orion
+Visual Studio
+
+Visual Studio Express
+
+
+Visual Studio Code
+Visual Studio Online
+
+
+
+
+
+
+
+
+Engines
+
+
+
+Comparison of layout engines
+List of ECMAScript engines
+List of JavaScript engines
+
+
+
+
+
+
+
+
+Frameworks
+
+
+
+Comparison of JavaScript frameworks
+List of JavaScript libraries
+
+
+
+
+
+
+
+
+Related technologies
+
+
+
+Cascading Style Sheets
+Document Object Model
+HTML
+JSON
+
+
+
+
+
+
+
+
+Package managers
+
+
+
+npm
+NuGet
+
+
+
+
+
+
+
+
+Server-side
+
+
+
+Active Server Pages
+CommonJS
+JSGI
+Node.js
+Wakanda
+
+
+
+
+
+
+
+
+Unit testing
+
+
+
+Jasmine
+Mocha
+JSUnit
+QUnit
+List of JavaScript unit testing frameworks
+
+
+
+
+
+
+
+
+People
+
+
+
+Douglas Crockford
+Brendan Eich
+John Resig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Microsoft
+
+
+
+
+
+
+
+
+
+History
+All topics
+
+
+
+
+
+
+
+
+People
+(list)
+
+
+
+
+
+Founders
+
+
+
+
+Bill Gates
+Paul Allen
+
+
+
+
+
+
+
+
+
+Board of directors
+
+
+
+
+John W. Thompson (Chairman)
+Satya Nadella (CEO)
+Dina Dublon
+Maria Klawe
+David Marquardt
+Charles Noski
+Helmut Panke
+Mason Morfit
+John W. Stanton
+
+
+
+
+
+
+
+
+
+Senior Leadership Team
+
+
+
+
+Satya Nadella (CEO)
+Chris Caposella (CMO)
+Kurt DelBene
+Scott Guthrie
+Amy Hood (CFO)
+Kathleen Hogan
+Qi Lu
+Terry Myerson
+Harry Shum
+Brad Smith
+Kevin Turner (COO)
+
+
+
+
+
+
+
+
+
+Corporate VPs
+
+
+
+
+Joe Belfiore
+Panos Panay
+Richard Rashid (SVP)
+S. Somasegar (SVP)
+
+
+
+
+
+
+
+
+
+
+
+Divisions
+
+
+
+Engineering groups
+
+Hardware
+Mobile
+
+
+Digital Crimes Unit
+Garage
+Press
+Research
+Studios
+.NET Foundation
+Outercurve Foundation
+
+
+
+
+
+
+
+
+Regional branches
+
+
+
+Microsoft Algeria
+Egypt
+India
+Japan
+Pakistan
+
+
+
+
+
+
+
+
+Product families
+
+
+
+Operating systems
+
+Windows
+
+
+Software
+
+Office
+Servers
+Visual Studio
+
+
+Hardware
+
+Band
+HoloLens
+Lumia
+Surface
+Xbox
+
+
+
+
+
+
+
+
+
+
+Web properties
+
+
+
+Bing
+Channel 9
+CodePlex
+Developer Network
+MSN
+Office.com
+OneDrive
+Outlook.com
+TechNet
+Windows Store
+
+
+
+
+
+
+
+
+Conferences
+
+
+
+Build
+MIX
+PDC
+TechEd
+WinHEC
+WPC
+
+
+
+
+
+
+
+
+Criticism
+
+
+
+Bundling of Microsoft Windows
+iLoo
+Internet Explorer
+_NSAKEY
+Windows
+
+2000
+ME
+XP
+Vista
+
+
+Xbox 360
+
+
+
+
+
+
+
+
+Litigation
+
+
+
+Alcatel-Lucent v. Microsoft
+Apple v. Microsoft
+European Union Microsoft competition case
+Microsoft v. Lindows
+Microsoft vs. MikeRoweSoft
+Microsoft v. Shah
+United States v. Microsoft
+
+
+
+
+
+
+
+
+Acquisitions
+
+
+
+6Wunderkinder
+Altamira Software
+aQuantive
+Azyxxi
+The Blue Ribbon SoundWorks
+Bungie
+Calista Technologies
+Colloquis
+Connectix
+Consumers Software
+Danger
+Farecast/Bing/MSN Travel
+FASA Studio
+Fast Search &amp; Transfer
+Firefly
+Forethought
+GIANT Company Software
+GreenButton
+Groove Networks
+Hotmail/Outlook.com
+Jellyfish.com
+LinkExchange
+Lionhead Studios
+Massive Incorporated
+Mobile Data Labs
+Mojang
+Nokia Devices and Services
+Onfolio
+Pando Networks
+PlaceWare
+Powerset
+ProClarity
+Rare
+Revolution Analytics
+ScreenTonic
+Secure Islands
+Skype
+Sunrise Atelier
+Winternals Software
+Teleo
+Telekinesys Research
+Tellme Networks
+Twisted Pixel Games
+Vermeer Technologies
+Visio Corporation
+Vivaty (defunct)
+VoloMetrix
+VXtreme
+WebTV Networks
+Yammer
+Yupi
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+ Microsoft portal
+ WikiProject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Microsoft_Visual_Studio&amp;oldid=692039719"					
+				Categories: Microsoft Visual StudioUser interface buildersHidden categories: Use dmy dates from March 2015All articles with unsourced statementsArticles with unsourced statements from March 2013Articles with unsourced statements from March 2011Articles with unsourced statements from May 2010Articles with unsourced statements from October 2010Articles containing potentially dated statements from 2010All articles containing potentially dated statementsArticles to be expanded from November 2015Vague or ambiguous time from November 2014Articles containing potentially dated statements from November 2015Articles with DMOZ links				
+							
+		
+		
+			

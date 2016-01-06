@@ -1,0 +1,249 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Product type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In programming languages and type theory, a product of types is another, compounded, type in a structure. The "operands" of the product are types, and the structure of a product type is determined by the fixed order of the operands in the product. An instance of a product type retains the fixed order, but otherwise may contain all possible instances of its primitive data types. The expression of an instance of a product type will be a tuple, and is called a "tuple type" of expression. A product of types is a direct product of two or more types.
+If there are only two component types, it can be called a "pair type". For example, if two component types A and B are the set of all possible values that type, the product type written A × B contains elements that are pairs (a,b), where "a" and "b" are instances of A and B respectively. The pair type is a special case of the dependent pair type, where the type B may depend on the instance picked from A.
+In many languages, product types take the form of a record type, for which the components of a tuple can be accessed by label. In languages that have algebraic data types, as in most functional programming languages, algebraic data types with one constructor are isomorphic to a product type.
+In the Curry-Howard correspondence, product types are associated with logical conjunction (AND) in logic.
+The notion directly extends to the product of an arbitrary finite number of types (a n-ary product type), and in this case, it characterizes the expressions which behave as tuples of expressions of the corresponding types. A degenerated form of product type is the unit type: it is the product of no types.
+In call-by-value programming languages, a product type can be interpreted as a set of pairs whose first component is a value in the first type and whose second component is a value in the second type. In short, it is a cartesian product and it corresponds to a product in the category of types.
+Most functional programming languages have a primitive notion of product type. For instance, the product of type1, ..., typen is written type1 * ... * typen in ML and (type1,...,typen) in Haskell. In both these languages, tuples are written (v1,...,vn) and the components of a tuple are extracted by pattern-matching. Additionally, many functional programming languages provide more general algebraic data types, which extend both product and sum types. Product types are the dual of sum types.
+Outside of computing[edit]
+The brochure for the International System of Units starts out in section 1.1 saying "The value of a quantity is generally expressed as the product of a number and a unit", and also presents the unit product of a Newton and a meter with the product notation of mathematics: Newton meter (N m or N · m). This is properly indicative of the vector space nature of SI units over the abelian group of dimensions under multiplication, and the field of real numbers.
+References[edit]
+
+product type in nLab
+Homotopy Type Theory: Univalent Foundations of Mathematics, The Univalent Foundations Program, Institute for Advanced Study. See section 1.5.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Product_type&amp;oldid=650472943"					
+				Categories: Data typesType theoryComposite data types				
+							
+		
+		
+			

@@ -1,0 +1,65 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Run time (program lifecycle phase)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about execution phase in a programming language.  For the infrastructure required to run programs, see Runtime system.
+
+
+
+
+
+This article does not cite any references (sources). Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (May 2012)
+
+
+In computer science, run time, runtime or execution time is the time during which a program is running (executing), in contrast to other program lifecycle phases such as compile time, link time and load time.
+A run-time error is detected after or during the execution (running state) of a program, whereas a compile-time error is detected by the compiler before the program is ever executed. Type checking, register allocation, code generation, and code optimization are typically done at compile time, but may be done at run time depending on the particular language and compiler.
+Implementation details[edit]
+When a program is to be executed, a loader first performs the necessary memory setup and links the program with any dynamically linked libraries it needs, and then the execution begins starting from the program's entry point. In some cases, a language or implementation will have these tasks done by the language runtime instead, though this is unusual in mainstream languages on common consumer operating systems.
+Some program debugging can only be performed (or is more efficient or accurate when performed) at runtime. Logic errors and array bounds checking are examples. For this reason, some programming bugs are not discovered until the program is tested in a production environment with real data, despite sophisticated compile-time checking and pre-release testing. In this case, the end user may encounter a runtime error message.
+Application errors (exceptions)[edit]
+Exception handling is one language feature designed to handle runtime errors, providing a structured way to catch completely unexpected situations as well as predictable errors or unusual results without the amount of inline error checking required of languages without it. More recent advancements in runtime engines enable automated exception handling which provides 'root-cause' debug information for every exception of interest and is implemented independent of the source code, by attaching a special software product to the runtime engine.
+See also[edit]
+
+
+
+Look up run time, run-time, or runtime in Wiktionary, the free dictionary.
+
+
+
+
+Name binding
+Compile time and compiling
+Interpreter (computing)
+Runtime Type Information
+Run-time system
+Runtime library
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Run_time_(program_lifecycle_phase)&amp;oldid=691231345"					
+				Categories: Computer librariesComputing platformsComputing terminologyHidden categories: Articles lacking sources from May 2012All articles lacking sources				
+							
+		
+		
+			

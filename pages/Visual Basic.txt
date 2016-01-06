@@ -1,0 +1,850 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Visual Basic
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the Visual Basic language shipping with Microsoft Visual Studio 6.0 or earlier.  For the Visual Basic language shipping with Microsoft Visual Studio .NET or later, see Visual Basic .NET.
+
+
+
+
+
+Some or all of this article's listed sources may not be reliable. Please help this article by looking for better, more reliable sources, or by checking whether the references meet the criteria for reliable sources. Unreliable citations may be challenged or deleted. (April 2014)
+
+
+
+Visual Basic
+
+
+
+
+
+
+
+Paradigm
+Object-based and Event-driven
+
+
+Developer
+Microsoft
+
+
+First&#160;appeared
+1991; 24&#160;years ago&#160;(1991)
+
+
+Stable release
+6.0 / 1998; 17&#160;years ago&#160;(1998)
+
+
+Typing discipline
+Static, strong
+
+
+OS
+Microsoft Windows and MS-DOS
+
+
+Website
+msdn.microsoft.com/en-us/vstudio/ms788229.aspx
+
+
+Major implementations
+
+
+Microsoft Visual Studio
+
+
+Influenced by
+
+
+BASIC
+
+
+Influenced
+
+
+Visual Basic .NET, Gambas, Xojo and Basic4ppc
+
+
+Visual Basic is a third-generation event-driven programming language and integrated development environment (IDE) from Microsoft for its COM programming model first released in 1991 and declared legacy in 2008. Microsoft intended Visual Basic to be relatively easy to learn and use.[1][2] Visual Basic was derived from BASIC and enables the rapid application development (RAD) of graphical user interface (GUI) applications, access to databases using Data Access Objects, Remote Data Objects, or ActiveX Data Objects, and creation of ActiveX controls and objects.
+A programmer can create an application using the components provided by the Visual Basic program itself. Over time the community of programmers developed third party components.[3][4][5][6][7] Programs written in Visual Basic can also use the Windows API, which requires external function declarations.
+The final release was version 6 in 1998 (now known simply as Visual Basic). On April 8, 2008 Microsoft stopped supporting Visual Basic 6.0 IDE. The Microsoft Visual Basic team still maintains compatibility for Visual Basic 6.0 applications on Windows Vista, Windows Server 2008 including R2, Windows 7, Windows 8, Windows 8.1, Windows Server 2012 and Windows 10 through its "It Just Works" program.[8] In 2014 there were tens of thousands of developers who still prefer Visual Basic 6.0 over Visual Basic .NET.[3][9] In 2014 some developers lobbied for a new version of Visual Basic 6.0.[10][11][12] [13] A dialect of Visual Basic, Visual Basic for Applications (VBA), is used as a macro or scripting language within several Microsoft applications, including Microsoft Office.[14]
+
+
+
+Contents
+
+
+1 Language features
+2 Characteristics
+3 History
+
+3.1 Timeline description
+
+
+4 Derivative languages
+5 Performance and other issues
+6 Legacy development and support
+7 Example code
+8 See also
+9 References
+10 External links
+
+
+
+Language features[edit]
+Like the BASIC programming language, Visual Basic was designed to accommodate a steep learning curve. Programmers can create both simple and complex GUI applications. Programming in VB is a combination of visually arranging components or controls on a form, specifying attributes and actions for those components, and writing additional lines of code for more functionality. Since VB defines default attributes and actions for the components, a programmer can develop a simple program without writing much code. Programs built with earlier versions suffered performance problems, but faster computers and native code compilation has made this less of an issue.[citation needed]
+Though VB programs can be compiled into native code executables from version 5 on, they still require the presence of around 1 MB of runtime libraries. Core runtime libraries are included by default in Windows 2000 and later, but extended runtime components still have to be installed. Earlier versions of Windows (95/98/NT), require that the runtime libraries be distributed with the executable.
+
+
+
+
+An empty form in Visual Basic 6.
+
+
+Forms are created using drag-and-drop techniques. A tool is used to place controls (e.g., text boxes, buttons, etc.) on the form (window). Controls have attributes and event handlers associated with them. Default values are provided when the control is created, but may be changed by the programmer. Many attribute values can be modified during run time based on user actions or changes in the environment, providing a dynamic application. For example, code can be inserted into the form resize event handler to reposition a control so that it remains centered on the form, expands to fill up the form, etc. By inserting code into the event handler for a keypress in a text box, the program can automatically translate the case of the text being entered, or even prevent certain characters from being inserted.
+Visual Basic can create executables (EXE files), ActiveX controls, or DLL files, but is primarily used to develop Windows applications and to interface database systems. Dialog boxes with less functionality can be used to provide pop-up capabilities. Controls provide the basic functionality of the application, while programmers can insert additional logic within the appropriate event handlers.
+For example, a drop-down combination box automatically displays a list. When the user selects an element, an event handler is called that executes code that the programmer created to perform the action for that list item.
+Alternatively, a Visual Basic component can have no user interface, and instead provide ActiveX objects to other programs via Component Object Model (COM). This allows for server-side processing or an add-in module.
+The runtime recovers unused memory using reference counting, which depends on variables passing out of scope or being set to Nothing, avoiding the problem of memory leaks common to other languages. There is a large library of utility objects, and the language provides basic object oriented support. Unlike many other programming languages, Visual Basic is generally not case sensitive—though it transforms keywords into a standard case configuration and forces the case of variable names to conform to the case of the entry in the symbol table. String comparisons are case sensitive by default.
+The Visual Basic compiler is shared with other Visual Studio languages (C, C++). Nevertheless, by default the restrictions in the IDE do not allow creation of some targets (Windows model DLLs) and threading models, but over the years, developers have bypassed these restrictions.
+Characteristics[edit]
+
+
+
+
+The code windows in Visual Basic, showing a Function using the If, Then, Else and Dim statements.
+
+
+The following Visual Basic traits differ from C-derived languages:
+
+Statements tend to terminate with keywords, such as "End If", instead of using "{}"s to group statements.
+Multiple variable assignment is not possible. A = B = C does not imply that the values of A, B and C are equal. The boolean result of "Is B = C?" is stored in A. The result stored in A would therefore be either false or true.
+Boolean constant True has numeric value −1.[15] This is because the Boolean data type is stored as a 16-bit signed integer. In this construct −1 evaluates to 16 binary 1s (the Boolean value True), and 0 as 16 0s (the Boolean value False). This is apparent when performing a Not operation on a 16 bit signed integer value 0, which returns the integer value −1, in other words True = Not False. This inherent functionality becomes especially useful when performing logical operations on the individual bits of an integer such as And, Or, Xor and Not.[16] This definition of True is also consistent with BASIC since the early 1970s Microsoft BASIC implementation and is also related to the characteristics of CPU instructions at the time.
+Logical and bitwise operators are unified. This is unlike some C-derived languages (such as Perl), which have separate logical and bitwise operators. This again is a traditional feature of BASIC.
+Variable array base. Arrays are declared by specifying the upper and lower bounds in a way similar to Pascal and Fortran. It is also possible to use the Option Base statement to set the default lower bound. Use of the Option Base statement can lead to confusion when reading Visual Basic code and is best avoided by always explicitly specifying the lower bound of the array. This lower bound is not limited to 0 or 1, because it can also be set by declaration. In this way, both the lower and upper bounds are programmable. In more subscript-limited languages, the lower bound of the array is not variable. This uncommon trait does exist in Visual Basic .NET but not in VBScript.
+
+
+OPTION BASE was introduced by ANSI, with the standard for ANSI Minimal BASIC in the late 1970s.
+
+
+Relatively strong integration with the Windows operating system and the Component Object Model. The native types for strings and arrays are the dedicated COM types, BSTR and SAFEARRAY.
+Banker's rounding as the default behavior when converting real numbers to integers with the Round function.[17] ? Round(2.5, 0) gives 2, ? Round(3.5, 0) gives 4.
+Integers are automatically promoted to reals in expressions that involve the normal division operator (/) so that division of one integer by another produces the intuitively correct result. VB provides a specific integer divide operator (\) that does truncate.
+By default, if a variable has not been declared or if no type declaration character is specified, the variable is of type Variant. However this can be changed with Deftype statements such as DefInt, DefBool, DefVar, DefObj, DefStr. There are 12 Deftype statements in total offered by Visual Basic 6.0. The default type may be overridden for a specific declaration by using a special suffix character on the variable name (# for Double, ! for Single, &amp; for Long, % for Integer, $ for String, and @ for Currency) or using the key phrase As (type). VB can also be set in a mode that only explicitly declared variables can be used with the command Option Explicit.
+
+History[edit]
+
+
+
+
+Alan Cooper created the drag and drop design for the user interface of Visual Basic.
+
+
+VB 1.0 was introduced in 1991. The drag and drop design for creating the user interface is derived from a prototype form generator developed by Alan Cooper and his company called Tripod.[citation needed][discuss] Microsoft contracted with Cooper and his associates to develop Tripod into a programmable form system for Windows 3.0, under the code name Ruby (no relation to the later Ruby programming language).
+Tripod did not include a programming language at all. Microsoft decided to combine Ruby with the Basic language to create Visual Basic.
+The Ruby interface generator provided the "visual" part of Visual Basic and this was combined with the "EB" Embedded BASIC engine designed for Microsoft's abandoned "Omega" database system. Ruby also provided the ability to load dynamic link libraries containing additional controls (then called "gizmos"), which later became the VBX interface.[18]
+
+Timeline description[edit]
+
+
+
+
+Basic for MS-DOS
+
+
+
+
+
+
+VB DOS icon
+
+
+
+Project 'basic Thunder' was initiated in 1990.[19] Thunder persisted through to the last release of Visual Basic in the name of the primary internal function, "ThunderRTMain".
+Visual Basic 1.0 (May 1991) was released for Windows at the Comdex/Windows World trade show in Atlanta, Georgia.
+
+
+Visual Basic 1.0 for DOS was released in September 1992. The language itself was not quite compatible with Visual Basic for Windows, as it was actually the next version of Microsoft's DOS-based BASIC compilers, QuickBASIC and BASIC Professional Development System. The interface used a Text user interface, using extended ASCII characters to simulate the appearance of a GUI.
+
+
+Visual Basic 2.0 was released in November 1992. The programming environment was easier to use, and its speed was improved. Notably, forms became instantiable objects, thus laying the foundational concepts of class modules as were later offered in VB4.
+Visual Basic 3.0 was released in the summer of 1993 and came in Standard and Professional versions. VB3 included version 1.1 of the Microsoft Jet Database Engine that could read and write Jet (or Access) 1.x databases.
+Visual Basic 4.0 (August 1995) was the first version that could create 32-bit as well as 16-bit Windows programs. It has three editions; Standard, Professional, and Enterprise. It also introduced the ability to write non-GUI classes in Visual Basic. Incompatibilities between different releases of VB4 caused installation and operation problems. While previous versions of Visual Basic had used VBX controls, Visual Basic now used OLE controls (with files names ending in .OCX) instead. These were later to be named ActiveX controls.
+With version 5.0 (February 1997), Microsoft released Visual Basic exclusively for 32-bit versions of Windows. Programmers who preferred to write 16-bit programs were able to import programs written in Visual Basic 4.0 to Visual Basic 5.0, and Visual Basic 5.0 programs can easily be converted with Visual Basic 4.0. Visual Basic 5.0 also introduced the ability to create custom user controls, as well as the ability to compile to native Windows executable code, speeding up calculation-intensive code execution. A free, downloadable Control Creation Edition was also released for creation of ActiveX controls. It was also used as an introductory form of Visual Basic: a regular .exe project could be created and run in the IDE, but not compiled.
+Visual Basic 6.0 (Mid-1998) improved in a number of areas[20] including the ability to create web-based applications. Visual Basic 6.0 extended support ended in March 2008; however, primary components of the Visual Basic 6 development environment run in all 32-bit versions of Windows up to and including 8.1.[citation needed]
+Mainstream Support for Microsoft Visual Basic 6.0 ended on March 31, 2005. Extended support ended in March 2008.[21] In response, the Visual Basic user community expressed its concern and lobbied users to sign a petition to keep the product alive, to no avail.[22]
+
+Derivative languages[edit]
+Microsoft has developed derivatives of Visual Basic for use in scripting. Visual Basic itself is derived heavily from BASIC, and subsequently has been replaced with a .NET platform version.
+Some of the derived languages are:
+
+Visual Basic for Applications (VBA) is included in many Microsoft applications (Microsoft Office), and also in many third-party products like SolidWorks, AutoCAD, WordPerfect Office 2002, ArcGIS, Sage 300 ERP, and Business Objects Desktop Intelligence. There are small inconsistencies in the way VBA is implemented in different applications, but it is largely the same language as Visual Basic 6.0 and uses the same runtime library. Visual Basic development ended with 6.0, but in 2010 Microsoft introduced VBA 7 to provide extended features and add 64-bit support.[23]
+VBScript is the default language for Active Server Pages. It can be used in Windows scripting and client-side web page scripting. It resembles VB in syntax, but is a separate language—executed by vbscript.dll instead of the VB runtime. ASP and VBScript should not be confused with ASP.NET, which uses the .NET Framework for compiled web pages.
+Visual Basic .NET is Microsoft's designated successor to Visual Basic 6.0, and is part of Microsoft's .NET platform. Visual Basic .NET compiles and runs using the .NET Framework. It is not backwards compatible with Visual Basic 6.0. An automated conversion tool exists, but fully automated conversion for most projects is impossible.[24]
+OpenOffice Basic is a Visual Basic compatible interpreter that originated in StarOffice office suite.
+Gambas is a Visual Basic inspired free software programming language for the Linux operating system. It is not a clone of Visual Basic, but it does have the ability to convert Visual Basic programs to Gambas.
+WinWrap Basic is a third-party VBA variant used with various software, and available for programmers to use to build a macro facility into their programmes.
+LotusScript is a VBA variant available in Lotus SmartSuite and Lotus Notes.
+Later versions of Corel WordPerfect Office implement access to VBA as one of the macro/scripting languages, the other major ones being CorelScript and PerfectScript
+Earlier versions of Microsoft Word use a variant of Visual Basic called WordBasic
+
+Performance and other issues[edit]
+Earlier versions of Visual Basic (prior to version 5) compiled the code to P-Code only. The P-Code is interpreted by the language runtime. The benefits of P-Code include portability and smaller binary file sizes, but it usually slows down the execution, since having a runtime adds an additional layer of interpretation.
+Visual Basic applications require Microsoft Visual Basic runtime MSVBVMxx.DLL, where xx is the relevant version number, either 50 or 60. MSVBVM60.dll comes as standard with Windows in all editions after Windows 98. A Windows 95 machine would however require inclusion with the installer of whichever dll was needed by the program.
+Visual Basic 5 and 6 can compile code to either native or P-Code but in either case the runtime is still required for built in functions and forms management.
+Criticisms levelled at Visual Basic editions prior to VB.NET include:[25]
+
+Versioning problems associated with various runtime DLLs, known as DLL hell
+Poor support for object-oriented programming[26]
+can only create multi-threaded applications, using ActiveX.exe
+Variant types have a greater performance and storage overhead than strongly typed programming languages
+Dependency on complex and fragile COM Registry entries[27]
+
+Legacy development and support[edit]
+All versions of the Visual Basic development environment from 1.0 to 6.0 were retired by Microsoft by 2008, and are therefore no longer supported. The associated runtime environments are also unsupported, except for the Visual Basic 6 core runtime environment, which Microsoft officially supports for the lifetime of Windows 8[28] and Windows 10.[29] Third party components that shipped with Visual Studio 6.0 are not included in this support statement. Some legacy Visual Basic components may still work on newer platforms, despite being unsupported by Microsoft and other vendors.
+Documentation for Visual Basic 6.0, its application programming interface and tools is best covered in the last MSDN release before Visual Studio.NET 2002. Later releases of MSDN focused on .NET development and had significant parts of the Visual Basic 6.0 programming documentation removed as the language evolved, and support for older code ended.
+Although vendor support for Visual Basic 6 has ended, and the product has never been supported on the latest versions of Windows, key parts of the environment appear to still work on newer platforms. It is possible to get a subset of the development environment working on 32-bit versions of Windows Vista, Windows 7 and Windows 8; the primary limiting factor on 64-bit editions of Windows is the 16-bit setup program.
+Example code[edit]
+The following code snippet displays a message box saying "Hello, World!" as the window loads:
+
+
+Private Sub Form_Load()
+    ' Execute a simple message box that says "Hello, World!"
+    MsgBox "Hello, World!"
+End Sub
+
+This snippet makes a counter that moves up 1 every second (a label and a timer control need to be added to the form for this to work) until the form is closed or an integer overflow occurs:
+
+
+Option Explicit
+Dim Count As Integer
+Private Sub Form_Load()
+    Count = 0
+    Timer1.Interval = 1000 ' units of milliseconds
+End Sub
+Private Sub Timer1_Timer()
+    Count = Count + 1
+    Label1.Caption = Count
+End Sub
+
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+
+IIf – a function in several editions of Visual Basic roughly equivalent to the ?: conditional operator of C and related languages.
+
+Related programming languages:
+
+Comparison of programming languages
+DarkBASIC – harness DirectX from BASIC applications
+Delphi (programming language) – competitor to Visual Basic
+FreeBASIC – a programming language rooting from QBasic.
+Microsoft Small Basic – educational tool for learning BASIC language concepts.
+PowerBasic – A language based on the BASIC- dialect
+PowerBuilder – Competitor to Visual Basic
+PureBasic – A language based on the BASIC- dialect
+Xojo – Competitor to Visual Basic
+
+
+References[edit]
+
+
+^ Root, Randal; Romero Sweeney, Mary (2006). A tester's guide to .NET programming. Apress. p.&#160;3. ISBN&#160;978-1-59059-600-5. You can choose a language based on how easy it is to learn. For beginners, Visual Basic is a good choice. [~snip] A big advantage of Visual Basic is that it is a popular language because it is easy to learn.&#160;
+^ Plant, Robert T.; Murrell, Stephen (2007). An executive's guide to information technology. Cambridge University Press. p.&#160;343. ISBN&#160;978-0-521-85336-1. Summary of positive issues: Visual Basic is easy to learn and widely available.&#160;
+^ a b ISpliter. "Visual Basic 6.0: A giant more powerful than ever". CodeProject.com. Retrieved 3 April 2014.&#160;
+^ violent, ken. "vkControls&#160;: 16 GRAPHICALS usercontrols&#160;! NEVER SEEN before&#160;!". PSC. Retrieved 5 April 2014.&#160;
+^ Krool. "CommonControls (Replacement of the MS common controls)". VBForums. Retrieved 5 April 2014.&#160;
+^ PSC. "Visual Basic 6.0 third party components for modern standards (a review)". Planet Source Code. Retrieved 4 April 2014.&#160;
+^ Jeff, Martin. "Visual Basic 6 Renewed to Run on Windows 8". INFOQ. Retrieved 5 April 2014.&#160;
+^ "Support Statement for Visual Basic 6.0 on Windows Vista, Windows Server 2008, Windows 7, Windows 8 and Windows 8.1, Windows Server 2012, and Windows 10". Microsoft. Retrieved 2015-10-15.&#160;
+^ Richard, Grigonis. "Where Is the Successor to Visual Basic?". Thursday, 27 Mar 2014 03:20 PM. INFOQ. Retrieved 8 April 2014.&#160;
+^ classicvb. "A PETITION FOR THE DEVELOPMENT OF UNMANAGED VISUAL BASIC AND VISUAL BASIC FOR APPLICATIONS". classicvb.org. Retrieved 5 April 2014.&#160;
+^ J, Roxe. "An Open Letter to the Community". MSDN WebLog. Retrieved 5 April 2014.&#160;
+^ Dan, Mabbutt. "Should Microsoft be sued for dropping support for VB 6?". about.com. Retrieved 5 April 2014.&#160;
+^ http://www.computerweekly.com/news/2240224504/Developers-call-for-Microsoft-to-bring-back-Visual-Basic
+^ "VBA for Office Developers". Microsoft.&#160;
+^ In most languages, True is mapped to a non zero numeric value, often 1 or -1.
+^ "Microsoft Basic Logical Expression Evaluation". Vb.mvps.org. Retrieved 2009-06-16.&#160;
+^ "PRB: Round Function different in VBA 6 and Excel Spreadsheet". Microsoft Support. Retrieved 2014-01-25.&#160;
+^ "The Birth of Visual Basic".&#160; Rian " Petot " Danao I &lt;3 19
+^ George, Mack. "History of Visual Basic". June 2002. George Mack, 3rd edition, Copyright June 2002. Retrieved 10 April 2014.&#160;
+^ www.insteptech.com (2005-07-22). "What's new in VB6?". www.insteptech.com.&#160;
+^ "Product Family Life Cycle Guidelines for Visual Basic 6.0". Msdn2.microsoft.com. 2005-03-31. Retrieved 2009-06-16.&#160;
+^ "Petition to Microsoft". Classicvb.org. 2005-03-08. Retrieved 2009-06-16.&#160;
+^ "Compatibility Between the 32-bit and 64-bit Versions of Office 2010". Microsoft Corporation. Retrieved 16 July 2012.&#160;
+^ Piquet, Lori (2002-02-20). "Abandoning the Fantasy of VB Migration Wizardry". DevX.com. Jupitermedia. Retrieved 2007-05-17.&#160;
+^ Alex Homer, Dave Sussman, Rob Howard, Brian Francis, Karli Watson, Richard Anderson (2004). Professional ASP.NET 1.1. Wiley. p.&#160;71. ISBN&#160;0-7645-5890-0. Retrieved 2008-10-08.&#160;
+^ Marc D'Aoust (December 2000). "Avoid Writing Tedious, Boring Code". Microsoft. Retrieved 2008-11-10.&#160;
+^ Andrew Troelsen (2008). Pro VB 2008 and the .NET 3.5 Platform: The expert's voice in .NET. Apress. p.&#160;5. ISBN&#160;1-59059-822-9.&#160;
+^ Platt, David (2012-06-01). "Don't Get Me Started – The Silent Majority: Why Visual Basic 6 Still Thrives". MSDN Magazine. Retrieved 2012-06-09.&#160;
+^ Denning, Adam (2015-06-22). "Getting ready for Windows 10 – SDKs, compatibility, bridges". Building Apps for Windows blog. Retrieved 2015-08-02.&#160;
+
+
+External links[edit]
+
+
+
+Wikiversity has learning materials about Visual Basic
+
+
+
+
+
+Wikibooks has a book on the topic of: Programming:Visual Basic Classic
+
+
+
+
+
+Wikimedia Commons has media related to Visual Basic.
+
+
+
+Visual Basic 6.0 Resource Center
+Secure your Visual Basic 6.0 investment with Microsoft .NET: Migrating from Visual Basic 6.0 to Visual Basic 2008
+Visual Basic 6 Renewed to Run on Windows 8
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Dialects of the BASIC programming language (list)
+
+
+
+
+
+
+Classic
+
+
+
+Altair BASIC
+Applesoft BASIC
+Atari BASIC
+Atari Microsoft BASIC
+Atari ST BASIC
+BASIC A+
+BASIC Programming
+BASIC XE
+BASIC XL
+Color BASIC
+Commodore BASIC
+Dartmouth BASIC
+Family BASIC
+GFA BASIC
+GW-BASIC
+HP BASIC for OpenVMS
+IBM BASIC
+Integer BASIC
+Locomotive BASIC
+Mallard BASIC
+Microsoft BASIC
+MSX BASIC
+ScriptBasic
+Sinclair BASIC
+Southampton BASIC System
+STOS BASIC
+TI BASIC (TI 99/4A)
+TI-BASIC (calculators)
+Tiny BASIC
+Turbo-Basic XL
+UBASIC
+Vilnius BASIC
+
+
+
+
+
+
+
+
+Procedure-oriented
+
+
+
+AmigaBASIC
+AMOS BASIC
+ASIC
+BBC BASIC
+Beta BASIC
+DarkBASIC
+FreeBASIC
+FutureBASIC
+GFA BASIC
+GLBasic
+Liberty BASIC
+Microsoft Small Basic
+PowerBASIC
+PureBasic
+QBasic
+QB64
+QuickBASIC
+SmallBASIC
+SuperBASIC
+ThinBasic
+True BASIC
+Turbo Basic
+XBasic
+Xblite
+Basic4ppc
+Visual Test
+
+
+
+
+
+
+
+
+With object extensions
+
+
+
+AutoIt
+Basic For Qt
+BlitzMax
+Chipmunk Basic
+FreeBASIC
+Gambas
+GLBasic
+Monkey X
+OpenOffice Basic
+PowerBASIC
+ProvideX
+RapidQ
+REALbasic
+Run BASIC
+Tibbo BASIC
+Visual Basic
+Visual Basic .NET
+
+
+
+
+
+
+
+
+For mobile devices
+
+
+
+Basic4ppc
+GLBasic
+NS Basic
+
+
+
+
+
+
+
+
+Microsoft
+
+
+
+Microsoft BASIC
+
+MBASIC
+IBM BASIC/BASICA
+GW-BASIC
+QuickBASIC
+QBasic
+
+
+VBScript
+Visual Basic
+
+VBA
+
+
+Visual Basic .NET
+
+VSTO
+VSTA
+
+
+Microsoft Small Basic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Microsoft development tools
+
+
+
+
+
+
+Development
+environments
+
+
+
+
+
+Visual Studio
+
+
+
+
+Visual Studio Code
+Express
+Visual Studio Lab Management
+Visual Studio Test Professional
+Tools for Applications
+Tools for Office
+VSTS Profiler
+
+
+
+
+
+
+
+
+
+Others
+
+
+
+
+App Studio
+Blend
+Expression Web
+GW-BASIC
+MSBuild
+Robotics Developer Studio
+SharePoint Designer
+
+FrontPage
+
+
+PowerShell ISE
+QuickBASIC
+
+QBasic
+
+
+Small Basic
+WebMatrix
+Windows SDK
+
+
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+Microsoft Basic
+Visual Basic
+Visual Basic .NET
+Visual C++
+
+C++/CLI
+Managed C++
+
+
+C#
+
+Visual C#
+
+
+F#
+J#
+Visual FoxPro
+IronPython
+IronRuby
+JScript
+PowerShell
+TypeScript
+XAML
+VBScript
+
+
+
+
+
+
+
+
+Major APIs and
+frameworks
+(See all)
+
+
+
+
+
+
+
+Windows API
+Silverlight
+XNA
+DirectX
+
+Managed DirectX
+
+
+Xbox Development Kit
+Windows CardSpace
+Windows Installer
+
+
+
+
+
+
+
+
+
+.NET Framework
+
+
+
+
+ASP.NET
+ASP.NET AJAX
+ADO.NET
+Communication Foundation
+Identity Foundation
+LINQ
+Presentation Foundation
+Workflow Foundation
+
+
+
+
+
+
+
+
+
+Windows Driver Frameworks
+
+
+
+
+Windows Driver Model
+KMDF
+UMDF
+Windows Driver Kit
+Windows Hardware Certification Kit
+
+
+
+
+
+
+
+
+
+
+
+Database
+
+
+
+
+
+SQL Server
+
+
+
+
+Express
+Compact
+Management Studio
+Business Intelligence Development Studio
+MSDE
+
+
+
+
+
+
+
+
+
+SQL services
+
+
+
+
+Analysis
+Reporting
+Integration
+Notification
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+Visual FoxPro
+Microsoft Access
+Jet Engine
+Extensible Storage Engine
+Azure DocumentDB
+
+
+
+
+
+
+
+
+
+
+
+Source control
+
+
+
+Team Foundation Server
+Visual SourceSafe
+
+
+
+
+
+
+
+
+Delivery
+
+
+
+
+
+End-user
+
+
+
+
+ClickOnce
+Windows Installer
+
+WiX
+
+
+Windows Store
+
+
+
+
+
+
+
+
+
+Developers
+
+
+
+
+NuGet
+Web Platform
+
+
+
+
+
+
+
+
+
+
+
+Performance Analysis
+
+
+
+CLR Profiler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Visual_Basic&amp;oldid=691644621"					
+				Categories: BASIC programming language familyBASIC compilersBASIC interpretersProcedural programming languagesMicrosoft BASICMicrosoft Visual StudioMicrosoft development toolsObject-based programming languagesObject-oriented programming languagesProgramming languages created in 1991Integrated development environmentsHidden categories: Articles lacking reliable references from April 2014All articles lacking reliable referencesAll articles with unsourced statementsArticles with unsourced statements from May 2015Articles with unsourced statements from June 2014Commons category with page title same as on WikidataArticles prone to spam from August 2014Articles with example BASIC code				
+							
+		
+		
+			

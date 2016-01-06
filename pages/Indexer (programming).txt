@@ -1,0 +1,106 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Indexer (programming)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article may be confusing or unclear to readers. In particular, is this a C# or a general OO concept? Surely the interesting thing is the use of the keyword 'this', not what is emphasised here? Why is this whole article only sourced to one C# forum post (the other forum post is a dead link). Maybe an example of use of the example class would demonstrate the purpose of the construct. Wikipedia is not a manual, guidebook or textbook WP:NOTHOWTO.. Please help us clarify the article; suggestions may be found on the talk page. (April 2015)
+
+
+In object-oriented programming, an indexer allows instances of a particular class or struct to be indexed just like arrays.[1][dead link]
+
+
+
+Contents
+
+
+1 Implementation
+2 Example
+3 See also
+4 References
+
+
+
+Implementation[edit]
+Indexers are implemented through the get and set accessors for the operator[]. They are similar to properties, but differ by not being static, and the fact that indexers' accessors take parameters. The get and set accessors are called as methods using the parameter list of the indexer declaration, but the set accessor still has the implicit value parameter.
+Example[edit]
+Here is a C# example of the usage of an indexer in a class: [2]
+
+
+class OurFamily
+{
+private long[] familyMember = new long[7];
+  public long this [int index]
+  {
+    // The get accessor
+    get
+    {
+      return familyMember[index];
+    }
+
+    // The set accessor with 
+    set
+    {
+      familyMember[index] = value;
+    }
+  }
+}
+
+See also[edit]
+
+Property (programming)
+Mutator method
+
+References[edit]
+
+
+^ jagadish980 (2008-01-29). "C# - What is an indexer in C#". http://forums.sureshkumar.net/forum.php: Bulletin: SURESHKUMAR.NET FORUMS. Retrieved 2011-08-01.&#160;
+^ "C# Interview Questions". http://www.dotnetfunda.com/: .net Funda. Retrieved 2011-08-01.&#160;
+
+
+
+
+
+
+This computer-programming-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Indexer_(programming)&amp;oldid=658250662"					
+				Categories: Programming language topicsObject-oriented programmingComputer programming stubsHidden categories: Wikipedia articles needing clarification from April 2015All Wikipedia articles needing clarificationAll articles with dead external linksArticles with dead external links from April 2015All stub articles				
+							
+		
+		
+			

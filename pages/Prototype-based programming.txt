@@ -1,0 +1,469 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Prototype-based programming
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For other uses, see Prototype (computer science).
+Not to be confused with prototype pattern.
+
+
+Programming paradigms
+
+
+
+
+Action
+Agent-oriented
+Array-oriented
+Automata-based
+Concurrent computing
+
+Relativistic programming
+
+
+Data-driven
+Declarative (contrast: Imperative)
+
+Constraint
+
+Constraint logic
+
+Concurrent constraint logic
+
+
+
+
+Dataflow
+
+Flow-based
+Cell-oriented (spreadsheets)
+Reactive
+
+
+Functional
+
+Functional logic
+Purely functional
+
+
+Logic
+
+Abductive logic
+Answer set
+Concurrent logic
+Functional logic
+Inductive logic
+
+
+
+
+End-user programming
+Event-driven
+
+Service-oriented
+Time-driven
+
+
+Expression-oriented
+Feature-oriented
+Function-level (contrast: Value-level)
+Generic
+Imperative (contrast: Declarative)
+
+Literate
+Procedural
+
+
+Inductive programming
+Language-oriented
+
+Natural language programming
+Discipline-specific
+Domain-specific
+Grammar-oriented
+
+Dialecting
+
+
+Intentional
+
+
+Metaprogramming
+
+Automatic
+Reflective
+
+Attribute-oriented
+
+
+Homoiconic
+Template
+
+Policy-based
+
+
+
+
+Non-structured (contrast: Structured)
+
+Array
+
+
+Nondeterministic
+Parallel computing
+
+Process-oriented
+
+
+Point-free style
+
+Concatenative
+
+
+Semantic
+Structured (contrast: Non-structured)
+
+Block-structured
+Modular (contrast: Monolithic)
+Object-oriented (OOP)
+
+Class-based
+Concurrent
+Prototype-based
+By separation of concerns:
+
+Aspect-oriented
+Role-oriented
+Subject-oriented
+
+
+
+
+Recursive
+
+
+Value-level (contrast: Function-level)
+Probabilistic
+Concept
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+Prototype-based programming is a style of object-oriented programming in which behaviour reuse (known as inheritance) is performed via a process of cloning existing objects that serve as prototypes. This model can also be known as prototypal, prototype-oriented, classless, or instance-based programming. Delegation is the language feature that supports prototype-based programming.
+A fruit bowl serves as one example. A "fruit" object would represent the properties and functionality of fruit in general. A "banana" object would be cloned from the "fruit" object, and would also be extended to include general properties specific to bananas. Each individual "banana" object would be cloned from the generic "banana" object.
+The first prototype-oriented programming language was Self, developed by David Ungar and Randall Smith in the mid-1980s to research topics in object-oriented language design. Since the late 1990s, the classless paradigm has grown increasingly popular. Some current prototype-oriented languages are JavaScript (and other ECMAScript implementations, JScript and Flash's ActionScript 1.0), Lua, Cecil and Diesel, NewtonScript, Io, MOO, REBOL, Lisaac and AHk.
+
+
+
+Contents
+
+
+1 Design and implementation
+2 Object construction
+3 Delegation
+4 Concatenation
+5 Criticism
+6 Languages supporting prototype-based programming
+7 References
+8 Further reading
+9 See also
+
+
+
+Design and implementation[edit]
+Prototypal inheritance in JavaScript is described by Douglas Crockford as: you make prototype objects, and then … make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects… Objects inherit from objects. What could be more object oriented than that?.[1]
+Advocates of prototype-based programming argue that it encourages the programmer to focus on the behavior of some set of examples and only later worry about classifying these objects into archetypal objects that are later used in a fashion similar to classes.[2] Many prototype-based systems encourage the alteration of prototypes during run-time, whereas only very few class-based object-oriented systems (such as the dynamic object-oriented system, Common Lisp, Dylan, Objective-C, Perl, Python, Ruby, or Smalltalk) allow classes to be altered during the execution of a program.
+Almost all prototype-based systems are based on interpreted and dynamically typed languages. Systems based on statically typed languages are technically feasible, however. The Omega language discussed in Prototype-Based Programming[3] is an example of such a system, though according to Omega's website even Omega is not exclusively static, but rather its "compiler may choose to use static binding where this is possible and may improve the efficiency of a program."
+Object construction[edit]
+In prototype-based languages there are no explicit classes and objects inherit directly from other objects with which they are linked through a property, often called prototype as in the case of JavaScript. There are two methods of constructing new objects: ex nihilo ("from nothing") object creation or through cloning an existing object. The former is supported through some form of object literal, declarations where objects can be defined at runtime through special syntax such as {...} and passed directly to a variable. While most systems support a variety of cloning, ex nihilo object creation is not as prominent.[4]
+In class-based languages, a new instance is constructed through a class's constructor function, a special function that reserves a block of memory for the object's members (properties and methods) and returns a reference to that block. An optional set of constructor arguments can be passed to the function and are usually held in properties. The resulting instance will inherit all the methods and properties that were defined in the class, which acts as a kind of template from which similar typed objects can be constructed.
+Systems that support ex nihilo object creation allow new objects to be created from scratch without cloning from an existing prototype. Such systems provide a special syntax for specifying the properties and behaviors of new objects without referencing existing objects. In many prototype languages there exists a root object, often called Object, which is set as the default prototype for all other objects created in run-time and which carries commonly needed methods such as a toString() function to return a description of the object as a string. One useful aspect of ex nihilo object creation is to ensure that a new object's slot (properties and methods) names do not have namespace conflicts with the top-level Object object. (In the JavaScript language, one can do this by using a null prototype, i.e. Object.create(null).)
+Cloning refers to a process whereby a new object is constructed by copying the behavior of an existing object (its prototype). The new object then carries all the qualities of the original. From this point on, the new object can be modified. In some systems the resulting child object maintains an explicit link (via delegation or resemblance) to its prototype, and changes in the prototype cause corresponding changes to be apparent in its clone. Other systems, such as the Forth-like programming language Kevo, do not propagate change from the prototype in this fashion, and instead follow a more concatenative model where changes in cloned objects do not automatically propagate across descendants.[2]
+
+
+// Example of true prototypical inheritance style 
+// in JavaScript.
+
+// "ex nihilo" object creation using the literal 
+// object notation {}.
+var foo = {name: "foo", one: 1, two: 2};
+
+// Another "ex nihilo" object.
+var bar = {two: "two", three: 3};
+
+// Object.setPrototypeOf() is a method introduced in ECMAScript 2015.
+// For the sake of simplicity, let us pretend 
+// that the following line works regardless of the 
+// engine used:
+Object.setPrototypeOf(bar, foo); // foo is now the prototype of bar.
+
+// If we try to access foo's properties from bar 
+// from now on, we'll succeed. 
+bar.one // Resolves to 1.
+
+// The child object's properties are also accessible.
+bar.three // Resolves to 3.
+
+// Own properties shadow prototype properties
+bar.two; // Resolves to "two"
+bar.name; // unaffected, resolves to "foo"
+foo.name; // Resolves to "foo"
+
+This example in JS 1.8.5 + ( see http://kangax.github.com/es5-compat-table/ )
+
+
+var foo = {one: 1, two: 2};
+
+// bar.[[prototype]] = foo
+var bar = Object.create( foo );
+
+bar.three = 3;
+
+bar.one; // 1
+bar.two; // 2
+bar.three; // 3
+
+Delegation[edit]
+In prototype-based languages that use delegation, the language runtime is capable of dispatching the correct method or finding the right piece of data simply by following a series of delegation pointers (from object to its prototype) until a match is found. All that is required to establish this behavior-sharing between objects is the delegation pointer. Unlike the relationship between class and instance in class-based object-oriented languages, the relationship between the prototype and its offshoots does not require that the child object have a memory or structural similarity to the prototype beyond this link. As such, the child object can continue to be modified and amended over time without rearranging the structure of its associated prototype as in class-based systems. It is also important to note that not only data, but also methods can be added or changed. For this reason, some prototype-based languages refer to both data and methods as "slots" or "members".[citation needed]
+Concatenation[edit]
+Under pure prototyping, which is also referred to as concatenative prototyping, and is exemplified in the Kevo language, there are no visible pointers or links to the original prototype from which an object is cloned. The prototype (parent) object is copied rather than linked to. As a result, changes to the prototype will not be reflected in cloned objects.[5]
+The main conceptual difference under this arrangement is that changes made to a prototype object are not automatically propagated to clones. This may be seen as an advantage or disadvantage. (However, Kevo does provide additional primitives for publishing changes across sets of objects based on their similarity — so-called family resemblances or clone family mechanism[5] — rather than through taxonomic origin, as is typical in the delegation model.) It is also sometimes claimed that delegation-based prototyping has an additional disadvantage in that changes to a child object may affect the later operation of the parent. However, this problem is not inherent to the delegation-based model and does not exist in delegation-based languages such as JavaScript, which ensure that changes to a child object are always recorded in the child object itself and never in parents (i.e. the child's value shadows the parent's value rather than changing the parent's value).
+In simplistic implementations, concatenative prototyping will have faster member lookup than delegation-based prototyping (because there is no need to follow the chain of parent objects), but will conversely use more memory (because all slots are copied, rather than there being a single slot pointing to the parent object). More sophisticated implementations can avoid these problems, however, although trade-offs between speed and memory are required. For example, systems with concatenative prototyping can use a copy-on-write implementation to allow for behind-the-scenes data sharing — and such an approach is indeed followed by Kevo.[6] Conversely, systems with delegation-based prototyping can use caching to speed up data lookup.
+Criticism[edit]
+Advocates of class-based object models who criticize prototype-based systems often have concerns similar to the concerns that proponents of static type systems for programming languages have of dynamic type systems (see datatype). Usually, such concerns involve: correctness, safety, predictability, efficiency and programmer unfamiliarity.
+On the first three points, classes are often seen as analogous to types (in most statically typed object-oriented languages they serve that role) and are proposed to provide contractual guarantees to their instances, and to users of their instances, that they will behave in some given fashion.
+Regarding efficiency, declaring classes simplifies many compiler optimizations that allow developing efficient method and instance-variable lookup. For the Self language, much development time was spent on developing, compiling, and interpreting techniques to improve the performance of prototype-based systems versus class-based systems.
+A common criticism made against prototype-based languages is that the community of software developers is unfamiliar with them, despite the popularity and market permeation of JavaScript. This knowledge level of prototype-based systems seems to be increasing with the proliferation of JavaScript frameworks and the complex use of JavaScript as the Web matures.[citation needed]
+Languages supporting prototype-based programming[edit]
+
+Actor-Based Concurrent Language (ABCL): ABCL/1, ABCL/R, ABCL/R2, ABCL/c+
+Agora
+AHk
+Cecil and Diesel of Craig Chambers
+Cel
+ColdC
+COLA
+ECMAScript
+
+ActionScript 1.0, used by Adobe Flash and Adobe Flex
+E4X
+JavaScript
+JScript
+
+
+Falcon
+Io
+Ioke
+Lisaac
+Logtalk
+LPC
+Lua
+Maple
+MOO
+Neko
+NewtonScript
+Object Lisp
+Obliq
+Omega
+OpenLaszlo
+Perl, with the Class::Prototyped module
+Python with prototype.py.
+R, with the proto package
+REBOL
+Self
+Seph
+SmartFrog
+TADS
+Tcl with snit extension
+Umajin[7]
+
+References[edit]
+
+
+^ Crockford, Douglas. "Prototypal Inheritance in JavaScript". Retrieved 20 August 2013.&#160;
+^ a b Taivalsaari, Antero. "Section 1.1". Classes vs. Prototypes: Some Philosophical and Historical Observations. p.&#160;14. CiteSeerX: 10.1.1.56.4713.&#160;
+^ Blaschek, Günther. "Section 2.8". Omega: Statically Typed Prototypes. p.&#160;177.&#160;
+^ Dony, Chistophe; Malenfan, Jacques; Bardou, Daniel. "Section 1.2" (PDF). Classifying Prototype-based Programming Languages. p.&#160;17.&#160;
+^ a b Antero Taivalsaar (2009). "Simplifying JavaScript with Concatenation-Based Prototype Inheritance" (PDF). Tampere University of Technology. Archived from the original (HTML) on 2009. Retrieved 2015-03-11. Kevo implemented a pure concatenation-based object model in which new objects were created by copying and the namespaces of all the objects were always fully self-contained. … Furthermore, Kevo had an internal clone family mechanism that made it possible to track the “genealogy” of changes among groups of objects, so that changes to individual objects could be propagated to other objects when necessary.&#160;
+^ Taivalsaari, Antero (1992). "Kevo, a prototype-based object-oriented programming language based on concatenation and module operations". Technical Report Report LACIR 92-02 (University of Victoria).&#160;
+^ Proprietary scripting language. http://www.davidbrebner.com/?p=4 has some basic examples of use.
+
+
+Further reading[edit]
+
+
+
+The Wikibook Computer programming has a page on the topic of: Object oriented programming
+
+
+
+Abadi, Martin; Luca Cardelli (1996). A Theory of Objects. Springer-Verlag. ISBN&#160;978-1-4612-6445-3.&#160;
+Class Warfare: Classes vs. Prototypes, by Brian Foote.
+Essential Object Oriented JavaScript, by Brian O'Dell.
+Noble, James; Taivalsaari, Antero; Moore, Ivan, eds. (1999). Prototype-Based Programming: Concepts, Languages and Applications. Springer-Verlag. ISBN&#160;981-4021-25-3.&#160;
+Prometheus Object System for Scheme.
+Using Prototypical Objects to Implement Shared Behavior in Object Oriented Systems, by Henry Lieberman, 1986.
+
+See also[edit]
+
+Class-based programming (contrast)
+Differential inheritance
+Programming paradigms
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Prototype-based_programming&amp;oldid=690127171"					
+				Categories: Prototype-based programmingObject-oriented programmingProgramming paradigmsType theoryHidden categories: All articles with unsourced statementsArticles with unsourced statements from January 2012Articles with unsourced statements from March 2013				
+							
+		
+		
+			

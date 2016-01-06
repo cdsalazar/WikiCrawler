@@ -1,0 +1,92 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Thread pool pattern
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Thread pool)
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article has an unclear citation style. The references used may be made clearer with a different or consistent style of citation, footnoting, or external linking. (June 2013)
+
+
+
+
+
+
+A sample thread pool (green boxes) with waiting tasks (blue) and completed tasks (yellow)
+
+
+In computer programming, the thread pool pattern (also replicated workers or worker-crew model)[1] is where a number of threads are created to perform a number of tasks, which are usually organized in a queue. The results from the tasks being executed might also be placed in a queue, or the tasks might return no result (for example, if the task is for animation). Typically, there are many more tasks than threads. As soon as a thread completes its task, it will request the next task from the queue until all tasks have been completed. The thread can then terminate, or sleep until there are new tasks available.
+The number of threads used is a parameter that can be tuned to provide the best performance. Additionally, the number of threads can be dynamic based on the number of waiting tasks. For example, a web server can add threads if numerous web page requests come in and can remove threads when those requests taper down. The cost of having a larger thread pool is increased resource usage. The algorithm used to determine when to create or destroy threads will have an impact on the overall performance:
+
+create too many threads, and resources are wasted and time also wasted creating any unused threads
+destroy too many threads and more time will be spent later creating them again
+creating threads too slowly might result in poor client performance (long wait times)
+destroying threads too slowly may starve other processes of resources
+
+The algorithm chosen will depend on the problem and the expected usage patterns.
+If the number of tasks is very large, then creating a thread for each one may be impractical.
+Another advantage of using a thread pool over creating a new thread for each task is thread creation and destruction overhead is negated, which may result in better performance and better system stability. Creating and destroying a thread and its associated resources is an expensive process in terms of time. An excessive number of threads will also waste memory, and context-switching between the runnable threads also damages performance. For example, a socket connection to another machine—which might take thousands (or even millions) of cycles to drop and re-establish—can be avoided by associating it with a thread which lives over the course of more than one transaction.
+When implementing this pattern, the programmer should ensure thread-safety of the queue. In Java, you can synchronize the relevant method using the synchronized keyword. This will bind the block modified with synchronized into one atomic structure, therefore forcing any threads using the associated resource to wait until there are no threads using the resource. As a drawback to this method, synchronization is rather expensive. You can also create an object that holds a list of all the jobs in a queue, which could be a singleton.
+Typically, a thread pool executes on a single computer. However, thread pools are conceptually related to server farms in which a master process, which might be a thread pool itself, distributes tasks to worker processes on different computers, in order to increase the overall throughput. Embarrassingly parallel problems are highly amenable to this approach.
+See also[edit]
+
+Object pool pattern
+Concurrency pattern
+Grand Central Dispatch
+Parallel Extensions for the .NET Framework
+Parallelization
+Server farm
+Staged event-driven architecture
+
+References[edit]
+
+^ Garg, Rajat P. &amp; Sharapov, Ilya Techniques for Optimizing Applications - High Performance Computing Prentice-Hall 2002, p. 394
+
+External links[edit]
+
+Paper "Analysis of optimal thread pool size" by Yibei Ling, Tracy Mullen and Xiaola Lin
+Article "Query by Slice, Parallel Execute, and Join: A Thread Pool Pattern in Java" by Binildas C. A.
+Article "Thread pools and work queues" by Brian Goetz
+Article "A Method of Worker Thread Pooling" by Pradeep Kumar Sahu
+Article "Work Queue" by Uri Twig
+Article "Windows Thread Pooling and Execution Chaining"
+Article "Smart Thread Pool" by Ami Bar
+Article "Programming the Thread Pool in the .NET Framework" by David Carmona
+Article "The Thread Pool and Asynchronous Methods" by Jon Skeet
+Article "Creating a Notifying Blocking Thread Pool in Java" by Amir Kirsh
+Article "Practical Threaded Programming with Python: Thread Pools and Queues" by Noah Gift
+Paper "Optimizing Thread-Pool Strategies for Real-Time CORBA" by Irfan Pyarali, Marina Spivak, Douglas C. Schmidt and Ron Cytron
+Conference Paper "Deferred cancellation. A behavioral pattern" by Philipp Bachmann
+A C++ 11 Implementation: "threadpool11", and C++ Thread Pool Library
+Thread Pool example in Java
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Thread_pool_pattern&amp;oldid=671365384"					
+				Categories: Threads (computing)Software design patternsHidden categories: Wikipedia references cleanup from June 2013All articles needing references cleanupArticles covered by WikiProject Wikify from June 2013All articles covered by WikiProject Wikify				
+							
+		
+		
+			

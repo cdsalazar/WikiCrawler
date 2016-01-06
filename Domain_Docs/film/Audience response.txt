@@ -1,0 +1,329 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Audience response
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article contains content that is written like an advertisement. Please help improve it by removing promotional content and inappropriate external links, and by adding encyclopedic content written from a neutral point of view. (September 2015)
+
+
+
+
+
+
+QuizzBox audience response system
+
+
+
+
+
+
+PowerVote Wireless Radio Frequency Audience Response System
+
+
+
+
+
+
+PowerVote USB Audience Response System receiver
+
+
+
+
+
+
+The Perception Analyzer dial-based audience response system allows for continuous feedback and is a standard tool for testing media, advertising and messaging.
+
+
+
+
+
+
+Popular credit-card sized audience response clicker voting keypad, known as the CLiKAPAD Prioritizer.
+
+
+
+
+
+
+Wireless RF keypad with OLED display and advanced functions
+
+
+
+
+
+
+Powercom RF1 - small lightweight and easy to use
+
+
+
+
+
+
+Powercom PC3 ARS keypad
+
+
+
+
+
+
+Wireless RF keypad with LCD display
+
+
+
+
+
+
+Radio Frequency Keypad with 7 Segment Display and Advanced communication
+
+
+
+
+
+
+Infrared audience response control
+
+
+
+
+
+
+Web based audience response system
+
+
+Audience response is a type of interaction associated with the use of audience response systems, to create interactivity between a presenter and his/her audience. Systems for co-located audiences combine wireless hardware with presentation software, and systems for remote audiences may use telephones or web polls for audiences watching through television or the Internet. Various names are used for this technology, including real time response,[1] the worm,[2] dial testing, and audience response meters. In educational settings, such systems are often called "student response systems" or "personal response systems." The hand-held remote control that students use to convey their responses to questions is often called a "clicker." More recent entrants into the market do not require specialized hardware, however. There are commercial and open-source, cloud-based tools that allow responses from the audience using a range of personal computing devices such as cell phones, smartphones, and laptops. These types of systems have added new types of functionality as well, such as free text responses that are aggregated into sortable word clouds, such as AnswerGarden, as well as the more traditional true/false and multiple choice style questions. This type of system also mitigates some of the concerns articulated below in the "Challenges of audience response" section.
+
+
+
+Contents
+
+
+1 Co-located audiences
+2 Distributed, virtual, or hybrid
+3 Benefits
+4 Challenges
+5 Applications
+6 Audience response systems
+
+6.1 History
+6.2 Hardware
+
+6.2.1 Infrared (IR)
+
+
+
+
+7 Classroom use
+
+7.1 Radio frequency (RF)
+7.2 Internet
+7.3 Cell phone
+7.4 Smartphone / HTTP voting
+7.5 Software
+
+
+8 See also
+9 References
+10 Bibliography
+
+
+
+Co-located audiences[edit]
+Hardware Based Audience Response: The presenter uses a computer and a video projector to project a presentation for the audience to see. In the most common use of such audience response systems, presentation slides built with the audience response software display questions with several possible answers, more commonly referred to as multiple choice questions. The audience participates by selecting the answer they believe to be correct and pushing the corresponding key on their individual wireless keypad. Their answer is then sent to a base station – or receiver – that is also attached to the presenter's computer. The audience response software collects the results, and the aggregate data is graphically displayed within the presentation for all to see. Some clickers also have additional keys, allowing the presenter to ask (and audience members to answer) True/False questions or even questions calling for particular numerical answers.
+Depending on the presenter's requirements, the data can either be collected anonymously (e.g., in the case of voting) or it can be traced to individual participants in circumstances where tracking is required (e.g., classroom quizzes, homework, or questions that ultimately count towards a student's course grade). Incoming data may also be stored in a database that resides on the host computer, and data reports can be created after the presentation for further analysis.
+Software/Cloud Based Audience Response: The presenter uses a computer to create the questions, sometimes called polls. In this case however, those questions can be open ended, dial testing, and votable open ended as well as multiple choice. Those questions are then downloaded into the presenter's presentation program of choice. During the presentation, the questions automatically display within the presentation program, or from a web browser, and can in some cases even be displayed only on the participant's tablet computer or smartphone. Results are instantly tabulated via the internet, and presented on screen in real time, including grading the "correct" answer if desired. Some services offer presenters real time moderation for open ended responses or questions prior to displaying them on screen.
+Depending on the presenter's requirements, the data can be collected anonymously, or it can be traced to individual participants who have created accounts in advance of the poll. This method is commonly used on corporate training where attendance must be verified, and in classrooms, where grades must be assigned. Data from both methods can be saved and analyzed by the presenter and loaded manually or via API into learning management systems.
+Distributed, virtual, or hybrid[edit]
+Only software or cloud based audience response systems can accommodate distributed audiences, due to the inconveniences and costs of hardware devices.
+Benefits[edit]
+There are many reasons for the use of audience response systems (ARS). The tendency to answer based on crowd psychology is reduced because, unlike hand raising, it is difficult to see which selection others are making. The ARS also allows for faster tabulation of answers for large groups than manual methods. Additionally, many college professors use ARS systems to take attendance or grade answers in large lecture halls, which would be highly time-consuming without the system.
+Audience response offers many potential benefits to those who use it in group settings.
+
+Improve attentiveness: In a study done at four University of Wisconsin campuses (University of Wisconsin–Milwaukee, University of Wisconsin–Eau Claire, University of Wisconsin–Oshkosh, and University of Wisconsin–Whitewater), faculty members and students in courses using clickers were given a survey that assessed their attitudes about clicker use in Fall 2005 and its effect on teaching and learning. Of the 27 faculty members who responded to the survey, 94 percent either agreed or strongly agreed with the claim "Clickers increased student engagement in the classroom," with the remaining six percent responding that they were neutral about that claim. (None of the faculty respondents disagreed or strongly disagreed with the claim.) Similarly, 69 percent of the 2,684 student respondents agreed or strongly agreed with the claim "Clickers led me to become engaged in class," with only 13 percent disagreeing or strongly disagreeing with that claim.[3]
+
+
+Increase knowledge retention: In the same University of Wisconsin study, 74 percent of the faculty respondents agreed or strongly agreed with the claim "Clickers have been beneficial to my students' learning," with the remaining 26 percent choosing a "neutral" response. (No faculty respondent disagreed or strongly disagreed with the claim.) Similarly, 53 percent of the student respondents agreed or strongly agreed with the claim "Clickers have been beneficial to my learning," with only 19 percent disagreeing or strongly disagreeing with that claim.[4] In a different but related study, Catherine Crouch and Eric Mazur more directly measured the results of Peer Instruction and "ConcepTests" on student learning and retention of information at the end of a semester. Faculty members using this "Peer Instruction" pedagogical technique present information to students, then ask the students a question that tests their understanding of a key concept. Students indicate their answer to the instructor using an audience response system, and then they discuss with their fellow students why they chose a particular answer, trying to explain to one another their underlying thinking. The instructor then asks the question again to see the new student results.[5] The study authors used scanned forms and hand-raising for audience response in the initial year of the study, and then they switched to a computer-based audience response system in the following years. The "clicker" use was only part of a multi-pronged attempt to introduce peer instruction, but overall they found that "the students taught with P[eer] I[instruction] (Spring 2000, N&#160;=&#160;155) significantly outperformed the students taught traditionally (Spring 1999, N&#160;=&#160;178)" on two standard tests – the "Force Concept Inventory and the Mechanics Baseline Test" – and on traditional course exams as well.[6] A Johns Hopkins study on the use of audience response systems in Continuing Medical Education (CME) for physicians and other health personnel found no significant difference in knowledge scores between ARS and non-ARS participants in a clinical round table trial involving 42 programs across the United States.[7]
+
+
+Poll anonymously: Unlike a show of hands or a raising of cards with letters on them, sending responses by hand-held remotes is much more anonymous. Except perhaps for a student (our audience member) who watches what the person next to him/her submits, the other students (or audience members) can't really see what response his/her fellow audience members are giving, and the software that summarizes the results aggregates the responses, listing what percent of respondents chose a particular answer, but not what individual respondents said. With some audience response systems, the software allows you to ask questions in truly anonymous mode, so that the database (or "gradebook") is not even associating answers with individual respondents.
+
+
+Track individual responses: The "clickers" that audience members use to send their responses to the receiver (and thus to the presenter's computer) are often registered to a particular user, with some kind of identifying number. When a user sends his/her response, the information is stored in a database (sometimes called the "Gradebook" in academic models of audience response systems) associated with each particular number, and presenters have access to that information after the end of the interactive session. Audience response systems can often be linked to a Learning management system, which increases the ability to keep track of individual student performance in an academic setting.
+
+
+Display polling results immediately: The audience response system includes software that runs on the presenter's computer that records and tabulates the responses by audience members. Generally, once a question has ended (polling from the audience has ceased), the software displays a bar chart indicating what percent of audience members chose the various possible responses. For questions with right/wrong answers, audience members can get immediate feedback about whether they chose the correct answer, since it can be indicated on the bar chart. For survey-type polling questions, audience members can see from the summary how many other audience members chose the same response, along with how many audience members (or what percent of the audience) chose different responses.
+
+
+Create an interactive and fun learning environment: Clickers are in many ways novel devices, so the novelty itself can add interest to the learning environment. More important, though, is the interactive nature of audience response systems. Having been asked a particular question about a concept or opinion, students are genuinely interested in seeing the results. They want to learn if they answered the question correctly, and they want to see how their response compares to the responses of their fellow audience members.[8] The increased student engagement cited in the University of Wisconsin study (see footnote 1 below) attests to the ability of audience response systems to improve the learning environment.
+
+
+Confirm audience understanding of key points immediately: In the University of Wisconsin study previously cited, faculty members were unanimous in their recognition of this key advantage of audience response systems. In other words, 100% of the faculty respondents either agreed or strongly agreed with the claim "Clickers allowed me to assess student knowledge on a particular concept.". Students also recognized this benefit for their own self-assessment. 75% of student respondents agreed or strongly agreed with the claim, "Clickers helped me get instant feedback on what I knew and didn't know."[4] In a published article, a member of the University of Massachusetts Amherst Physics Education Research Group (UMPERG)articulated this advantage in more detail, using the term "Classroom Communication System (CCS)" for what we have been calling an audience response system:
+
+
+
+
+By providing feedback to an instructor about students' background knowledge and preconceptions, CCS-based pedagogy can help the instructor design learning and experiences appropriate to student's state of knowledge and explicitly confront and resolve misconceptions. By providing frequent feedback about students' ongoing learning and confusions, it can help an instructor dynamically adjust her teaching to students' real, immediate, changing needs.[8]
+
+
+
+
+Gather data for reporting and analysis: Unlike other forms of audience participation (such as a show of hands or holding up of response cards), audience response systems use software to record audience responses, and those responses are stored in a database. Database entries are linked to a particular user, based on some ID number entered into the handheld remote device or based on a registration between the user and the company that manufactures the handheld device. Answers can be analyzed over time, and the data can be used for educational research or other forms of analysis.
+
+Challenges[edit]
+Audience response systems may present some difficulties in both their deployment and use.
+
+The per-unit purchase price of ARS devices, typically 10 times the cost of a software only solution
+The maintenance and repair of devices when owned by a central unit or organization
+The configuration, troubleshooting and support of the related presentation software (which may or may not work well with ARS devices)
+The reliability and performance of the devices under non-optimal conditions of the room in which the devices are used
+For hardware only applications: a Lack of open ended questions, dial testing capabilities, and other non standard question formats.
+
+Applications[edit]
+Audience response is utilized across a broad range of industries and organizations. A few examples include:
+
+Political Campaigns
+Political news events
+Corporate training
+Control self-assessment
+Delegate voting
+Public participation in municipal or environmental planning
+Market research
+Decision support
+Game shows e.g. Ask the audience on Who Wants to be a Millionaire?
+Conferences and events
+Executive decision making
+Continuing medical education
+ROI measurement and assessment
+Sales Effectiveness Training
+Hospital patient exit surveys
+
+Audience response systems[edit]
+An audience response system (ARS), or personal response system (PRS), allows large groups of people to vote on a topic or answer a question. Depending on the solution chosen, each person has a device with which selections can be made, or a mobile device that they can use to respond. In a hardware solution, each remote communicates with a computer via receivers located around the room or via a single receiver connected to the presenter's computer using a USB connector. In a software solution, each device communicates with the question via SMS or the internet. After a set time – or after all participants have answered – the system ends the polling for that particular question and tabulates the results. Typically, the results are instantly made available to the participants via a bar graph displayed on the projector but can also be viewed in a web browser for some systems.
+In situations where tracking is required, the serial number of each remote control or the students identity number is entered beforehand in the control computer's database. In this way the answer of each individual can later be identified.
+In addition to the presenter's computer and projector, the typical audience response system has the following components:
+
+base station (receiver)--for hardware based solutions only
+wireless keypads (one for each participant)--or mobile devices for software/cloud based solutions
+audience response system software
+
+History[edit]
+Since the 1960s, a number of companies have offered Response Systems, several of whom are now defunct or changed their business model.
+Circa 1966, Audience Studies Institute of Hollywood, California developed a proprietary analog ARS system for evaluating the response of a theater audience to unreleased motion pictures, television shows and commercials.[citation needed] This early ARS was used by ASI's clients – major motion picture and television studios and advertising agencies – to evaluate the effectiveness of whatever it was they wanted to accomplish: for example, selling more products, increasing movie ticket sales, and achieving a higher fee per commercial slot. Often, a client would show different versions to different audiences, e.g. different movie endings, to gauge their relative effectiveness. ASI would give out free tickets on the street to bring people into the theater, called the "Preview House," for particular showings where each attendee would fill out a questionnaire and then be placed in a seat with a "dial" handset outfitted with a single knob that each attendee would turn to a position to indicate his or her level of interest. Turning the knob all the way left for "dull" to turning all the way to the right for "great." In 1976, ASI upgraded their system to become fully digital, have Yes/No buttons and, in some cases, numeric keys for entering in numbers, choices and monetary amounts.
+Another of the industry’s very earliest systems was the Consensor. In the late 1960s and early 1970s, William W. (Bill) Simmons, an IBM executive, reflected on how unproductive most meetings were. Simmons had become essentially a nonacademic futurist in building up IBM's long-range planning operations.[9] He was one of the pioneers of applied future studies in the private sector, that is, future studies applied to corporate planning. Through this work he had met Theodore J. (Ted) Gordon of The Futures Group.[10] Gordon had conceived and partially developed[10] what would today be called an audience response system, and Simmons immediately saw practical applications for it in large corporate meetings, to allow people to air their true opinions in anonymous fashion, so that each individual's Likert scale answer value for a question would remain secret, but the group's average, weighted with weighting factors, would be instantly displayed. Thus (something approximating) the group's true consensus would be known, even though individual middle managers or aspiring junior executives would not have to jeopardize their conformity to effect this result. (IBM's organizational culture was famous for its valuing of conformity; and this was common at other firms, too.[11]) Simmons retired from IBM in January 1972,[12] and soon after he formed a startup company with Gordon, called Applied Futures, Inc.,[13] to develop and market the system, which they called the Consensor [connoting consensus + sensor]. Applied Futures was one of the first audience response companies. In 1972, while Gordon and his assistant Harold S. (Hal) Becker were still working on development, Applied Futures filed for a patent (U.S. Patent 3,766,541), which was granted in 1973 with Gordon and Becker as inventors. Another patent, filed for in 1974 and granted in 1976 (U.S. Patent 3,947,669), lists Simmons and James A. Marquis. Sales began in 1974.[14]
+The Consensor was a system of dials, wires, and three lights; red, yellow, and green. A question was asked verbally and people would turn their dials anywhere from 0 to 10. If the majority agreed, the green lamp would light. If not, either the yellow or red lamp would light, depending on the level of disagreement.
+Although business was strong for this fledgling company,[15] the command-and-control management style of the day proved a formidable opponent to this new tool, which promoted consensus building.[16] In his memoir Simmons describes how junior-executive sales prospects tended to like the idea, imagining themselves heroically speaking truth to power (but not paying any price for being a maverick), while their senior-executive bosses tended to see the Consensor as "a blatant attempt to impose democratic procedures into a corporate hierarchy that is anything but democratic."[16] Simmons observed that "A majority of corporations are run as fiefdoms, with the CEO playing the role of Supreme Power; he may be a benevolent dictator, but nonetheless still a dictator."[16] He described this type of senior executives, with ironic tone, as "secure in the knowledge of their own infallibility."[16] Nonetheless, Applied Futures sold plenty of units to business firms and government agencies.[15] In October 1984, it became a subsidiary of Brooks International Corporation, a management consulting firm.[17]
+One of the early educational uses of an audience response system occurred at Rice University.[18] Students in a computer-equipped classroom were able to rate how well they understood portions of a lecture, answer multiple choice questions, and answer short essay questions. Results could be tallied and displayed to the class.
+Audience response technology has evolved over time, moving away from hardware that required extensive wiring towards hand held wireless devices and small, portable receivers. In the 1980s, the Consensor product line evolved toward peripherals that could be plugged into a PC, and a software application to run thereon.[17] Wireless LANs allow today's peripherals to be cordless. Another example of this is Microsoft's Mouse Mischief, a PowerPoint add-in, which has made it easier for teachers, professors, and office professionals to integrate audience response into their presentations.
+The advent of smartphones has made possible systems in which audience members download an app (or run it as SaaS in their web browser) which then communicates with the audience response system (which is itself just software running on someone's device, whether desktop, laptop, tablet, or phone) via the local wireless network, the cellular telephone network, or both. In this model, the entire audience response system is a software product; all of the hardware is what the users brought with them.[19]
+Hardware[edit]
+
+
+
+
+Infrared audience response receiver
+
+
+The majority of current audience response systems use wireless hardware. Two primary technologies exist to transmit data from the keypads to the base stations: infrared (IR) and radio frequency (RF). A few companies also offer Web-based software that routes the data over the Internet (sometimes in a unified system with IR and RF equipment). Cell phone-based systems are also becoming available.
+Infrared (IR)[edit]
+The oldest of these technologies, IR audience response systems are better suited for smaller groups. IR uses the same technology as a TV remote, and is therefore the only one of the four technologies that requires line-of-sight between the keypad and receiver. This works well for a single keypad but can fail due to interference when signals from multiple keypads arrive simultaneously at the receiver. IR systems are typically more affordable than RF systems, but do not provide information back to the keypad.
+Classroom use[edit]
+In schools, clickers can be used as a way of taking attendance, quizzing students, taking a quick survey, etc. They can be used effectively by 4th grade students and maybe younger, depending on their maturity level. A teacher is able to generate worksheets and let students enter their answer choices at their own pace. This setting is called "student directed". Another way for students to enter answers is "teacher directed". After each question, the teacher is able to instantly show a histogram of how many votes each question received.
+Clickers in the classroom can be used as a tool to support active learning approach.[20] Also, the fact that students can send responses anonymously means that sensitive topics can be included more readily than would otherwise be the case. An example of this is in helping students to learn about plagiarism.[21]
+Radio frequency (RF)[edit]
+Ideal for large group environments, RF systems can accommodate hundreds of voters on a single base station. Using some systems, multiple base stations can be linked together in order to handle audiences that number in thousands. Other systems allow over a thousand on just one base. Because the data travels via radio frequency, the participant merely needs to be within range of the base station (300 – 500&#160;feet). Some advanced models can accommodate additional features, such as short word answers, user log-in capabilities, and even multi-site polling.
+Internet[edit]
+Web-based audience response systems work with the participants' existing computing devices. These include notebook computers, smartphones and PDAs, which are typically connected to the Internet via Wi-Fi, as well as classroom desktop computers. If the facilitator's computer is also Wi-Fi-enabled, they can even create their own IP network, allowing a closed system that doesn't depend on a separate base station. The web server resides on or is accessible to the facilitator's computer, letting them control a set of web pages presenting questions. Participants log into the server using web browsers and see the questions with forms to input their responses. The summarized responses are available on a different set of pages, which can be displayed through the projector and also on each participant's device.
+Internet has also made it possible to gather audience responses in massive scale. Various implementations of the concept exist. For example, Microsoft featured Bing Pulse[22] during the 2013 State of The Union (US) address by president Barack Obama. The system allowed registered users to input their responses (positive, negative, neutral) to the address and visualized the results as a trending graph in real time. Bing Pulse has since been used to cast over 35 million votes during national news broadcasts and other live meetings.[23] Over 10,000 viewers powered the iPowow Viewer Vote [24] which tracked live viewer emotional response for Channel 7 during the 2013 Australian Federal Election debates and displayed as a live "worm" graph on the broadcast screen. For advertising and media research, online "dial testing" using an onscreen scale slider that is controlled by a mouse (or finger swipe on a touchscreen) is being used in conjunction with surveys and online communities to gather continuous feedback on video or audio files. The evolution of networking technology has also inspired a new line of startups, among others Vuact Inc,[25] that is bringing their technology for gathering and visualizing audience reactions to the consumer market.
+Cell phone[edit]
+The familiarity and widespread use of cell phones and text messaging has now given rise to systems that collect SMS responses and display them through a web page.[26] These solutions don't require specialized voting hardware, but they do require telecom hardware (such as a mobile phone) and software, along with a web server, and therefore tend to be operated by dedicated vendors selling usage. They are typically favored by traveling speaking professionals and large conference halls that don't want to distribute, rent, or purchase proprietary ARS hardware. Computing devices with web browsers can also use these serviceLLs through SMS gateways, if a separate web interface isn't provided.
+Cell Phone enabled response systems, such as SMS Response System, are able to take text inputs from the audience and receive multiple responses to questions per SMS. This allows a new pedagogical approach to teaching and learning, such as the work by Derek Bruff and an initiative on SMSRS.
+The advantage of using such SMS type of response system is not limited to the logistical advantage of the presenter keeping no device inventory, it comes with an associated range of pedagogical advantages, such as agile learning, peer instruction (as possible with all types of response systems), it affords additional educational features like MCQ-Reasoning – a feature developed in a SMSRS system in Singapore that allows respondents to tag a reason to their choice of options in an MCQ, thus eliminating potential case of "guessing-the-correct-answer" syndrome, and text mining of SMS responses (to provide the gist of the messages collectively in a visual map).
+Interactive SMS Forum is another feature that is proprietary to SMS-type response systems where audiences not only post their questions, but can also answer the questions posted by others via SMS.
+Smartphone / HTTP voting[edit]
+With increasing penetration of smartphones with permanent internet connections, live audience response/voting can be achieved over the HTTP protocol. SMS is still a solid solution because of its penetration and stability, but won't easily allow multi-voting support and might cause problem with multi-country audiences. The issue with SMS not supporting multi-country audiences is projected to be solved with SMS hubbing.
+
+
+
+
+snapshot of an ARS app
+
+
+In classrooms and conferences with Wi-Fi support or anywhere with GPRS coverage, software systems can be used for live audience feedback, mood measurement or live polling. These systems frequently support voting with both mobile apps as well as mobile browsers. There apps invoke available local area networks (LAN) and provide a charge-free and cuts the needs to devoted hardware.[27]
+With mobile apps and browser enabled voting, there aren't any setup costs for hardware since the audience uses their own phones as voting devices and the result is often presented in any browser controlled by the lecturer.
+With a standard mobile browser solution these are click and go solutions without additional installations. Therefore live audiences can be reached, and smartphone voting can be used - as with SMS - in any number of different locations. With the GPRS solution the audience does not necessary need to be in the same area as the lecturer as with radio frequency, infrared or Bluetooth-based response systems.
+Software[edit]
+Audience response software enables the presenter to collect participant data, display graphical polling results, and export the data to be used in reporting and analysis. Usually the presenter can create and deliver her entire presentation with the ARS software, either as a stand-alone presentation platform or as a plug-in to PowerPoint or Keynote.
+See also[edit]
+
+Interactive whiteboard
+Presentation software
+Learning management system
+
+References[edit]
+
+
+^ http://edition.cnn.com/2007/POLITICS/12/13/debate.dial.testing/
+^ http://www.wisegeek.com/what-is-a-worm-poll.htm
+^ Kaleta, Robert, and Joosten, Tanya. "Student Response Systems: A University of Wisconsin System Study of Clickers," Educause Center for Applied Research Research Bulletin. Vol. 2007, Issue 10, May 8, 2007, pp. 4–6. A public version of the information, in the form of a PowerPoint presentation about the findings, is available at: http://www.educause.edu/ir/library/pdf/EDU06283.pdf.
+^ a b Kaleta, Robert, and Joosten, Tanya. "Student Response Systems: A University of Wisconsin System Study of Clickers," Educause Center for Applied Research Research Bulletin. Vol. 2007, Issue 10, May 8, 2007, pp. 6–7. A public version of the information, in the form of a PowerPoint presentation about the findings, is available at: http://www.educause.edu/ir/library/pdf/EDU06283.pdf.
+^ Crouch, Catherine H., and Mazur, Eric. "Peer Instruction: Ten years of experience and results." Am. J. Phys. Vol. 69, No. 9, September 2001. p. 970. Available at http://www4.uwm.edu/ltc/srs/faculty/docs/Mazur_Harvard_SRS2.pdf.
+^ Crouch, Catherine H., and Mazur, Eric. "Peer Instruction: Ten years of experience and results." Am. J. Phys. Vol. 69, No. 9, September 2001. pp. 971–72. Available at http://www4.uwm.edu/ltc/srs/faculty/docs/Mazur_Harvard_SRS2.pdf.
+^ Miller, Redonda G., Ashar, Bimal H. and Getz, Kelly J. "Evaluation of an audience response system for the continuing education of health professionals." Journal of Continuing Education in the Health Professions. Vol. 23, No. 2, 2003. pp.109–115. Abstract at http://www3.interscience.wiley.com/journal/110478084/abstract
+^ a b Beatty, Ian. "Transforming Student Learning with Classroom Communication Systems," Educause Center for Applied Research Research Bulletin. Volume 2004, Issue 3 (February 3, 2004), p. 5. Available online at http://www.educause.edu/ir/library/pdf/ERB0403.pdf.
+^ Simmons &amp; Elsberry 1988, pp.&#160;138–187.
+^ a b Simmons &amp; Elsberry 1988, p.&#160;188.
+^ Simmons &amp; Elsberry 1988, pp.&#160;188–189.
+^ Simmons &amp; Elsberry 1988, p.&#160;187.
+^ Simmons &amp; Elsberry 1988, pp.&#160;188–193.
+^ Simmons &amp; Elsberry 1988, p.&#160;190.
+^ a b Simmons &amp; Elsberry 1988, pp.&#160;191–193.
+^ a b c d Simmons &amp; Elsberry 1988, pp.&#160;190–191.
+^ a b Simmons &amp; Elsberry 1988, p.&#160;193.
+^ Lane, David, and Atlas, Robert. "The Networked Classroom," Paper presented at the 1996 meeting of Computers and Psychology, York, UK, March 1996. Abstract available at: "http://scholarship.rice.edu/bitstream/handle/1911/78034/networked_classroom_%28Audience_Response_System%29-1.pdf?sequence=1"
+^ Devaney 2011.
+^ Martyn, Margie (2007). "Clickers in the Classroom: An Active Learning Approach". EDUCAUSE Quarterly (EQ) 30 (2).&#160;
+^ http://eprints.hud.ac.uk/12132/1/Using_technology_to_prevent_plagiarism_Draft_submission.pdf
+^ State of the Union - Bing Politics, Retrieved on 27 April 2013
+^ http://pulse.bing.com
+^ http://www.businessspectator.com.au/article/2013/8/12/technology/crowdsourcing-worm-aussie-start-tracking-election-debate
+^ About Vuact Inc., Retrieved on 27 April 2013
+^ Tremblay, Eric. "(2010) Educating the Mobile Generation – using personal cell phones as audience response systems in post-secondary science teaching. Journal of Computers in Mathematics and Science Teaching, 29(2), 217-227. Chesapeake, VA: AACE.". Archived from the original on 31 October 2010. Retrieved 2010-11-05.&#160;
+^ "Audience response system". youconnect.ir. Retrieved 2015-10-30.&#160;
+
+
+Bibliography[edit]
+
+Devaney, Laura (2011-04-29), "'Bring your own device' catching on in schools (Ed-tech access is an issue, but students' personal devices are an attractive option to a growing number of districts)", eSchool News (Technology News for Today's K-20 Educator) (Bethesda, Maryland, USA: eSchool Media).&#160;
+Simmons, William W.; Elsberry, Richard B. (1988), Inside IBM: the Watson years (a personal memoir), Pennsylvania, USA: Dorrance, ISBN&#160;978-0805931167. The memoir of a senior IBM executive, giving his recollections of his and IBM's experience from World War II into the 1970s.&#160;
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Audience_response&amp;oldid=690442506"					
+				Categories: Polling termsLearning methodsHidden categories: Pages using duplicate arguments in template callsArticles with a promotional tone from September 2015All articles with a promotional toneAll articles with unsourced statementsArticles with unsourced statements from February 2014				
+							
+		
+		
+			

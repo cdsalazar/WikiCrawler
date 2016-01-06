@@ -1,0 +1,612 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Digital video
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For other uses, see Digital video (disambiguation).
+This article is about digital techniques applied to video.  For the specific format, see DV.
+
+
+
+
+
+This article's lead section may not adequately summarize key points of its contents. Please consider expanding the lead to provide an accessible overview of all important aspects of the article. Please discuss this issue on the article's talk page. (June 2015)
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2010)
+
+
+Digital video is a representation of moving visual images in the form of encoded digital data. This is in contrast to analog video, which represents moving visual images with analog signals.
+The terms camera, video camera, and camcorder are used interchangeably in this article.
+
+
+
+Contents
+
+
+1 History
+2 Overview of basic properties
+
+2.1 Regarding Interlacing
+2.2 Properties of compressed video
+2.3 More on bit rate and BPP
+
+2.3.1 Constant bit rate versus variable bit rate
+
+
+
+
+3 Technical overview
+4 Interfaces and cables
+5 Storage formats
+
+5.1 Encoding
+5.2 Tapes
+5.3 Discs
+
+
+6 See also
+7 References
+8 External links
+
+
+
+History[edit]
+Starting in the late 1970s to the early 1980s, several types of video production equipment that were digital in their internal workings were introduced, such as time base correctors (TBC) and digital video effects (DVE) units (one of the former being the Thomson-CSF 9100 Digital Video Processor, an internally all-digital full-frame TBC introduced in 1980, and two of the latter being the Ampex ADO, and the Nippon Electric Corporation (NEC) DVE). They operated by taking a standard analog composite video input and digitizing it internally. This made it easier to either correct or enhance the video signal, as in the case of a TBC, or to manipulate and add effects to the video, in the case of a DVE unit. The digitized and processed video information that was output from these units would then be converted back to standard analog video.
+Later on in the 1970s, manufacturers of professional video broadcast equipment, such as Bosch (through their Fernseh division), RCA, and Ampex developed prototype digital videotape recorders (VTR) in their research and development labs. Bosch's machine used a modified 1" Type B transport, and recorded an early form of CCIR 601 digital video. Ampex's prototype digital video recorder used a modified 2" Quadruplex VTR (an Ampex AVR-3), but fitted with custom digital video electronics, and a special "octaplex" 8-head headwheel (regular analog 2" Quad machines only used 4 heads). The audio on Ampex's prototype digital machine, nicknamed by its developers as "Annie", still recorded the audio in analog as linear tracks on the tape, like 2" Quad. None of these machines from these manufacturers were ever marketed commercially, however.
+Digital video was first introduced commercially in 1986 with the Sony D1 format, which recorded an uncompressed standard definition component video signal in digital form instead of the high-band analog forms that had been commonplace until then. Due to its expense, and the requirement of component video connections using 3 cables (such as YPbPr or RGB component video) to and from a D1 VTR that most television facilities were not wired for (composite NTSC or PAL video using one cable was the norm for most of them at that time), D1 was used primarily by large television networks and other component-video capable video studios.
+In 1988, Sony and Ampex co-developed and released the D2 digital videocassette format, which recorded video digitally without compression in ITU-601 format, much like D1. But D2 had the major difference of encoding the video in composite form to the NTSC standard, thereby only requiring single-cable composite video connections to and from a D2 VCR, making it a perfect fit for the majority of television facilities at the time. This made D2 quite a successful format in the television broadcast industry throughout the late '80s and the '90s. D2 was also widely used in that era as the master tape format for mastering laserdiscs (prior to D2, most laserdiscs were mastered using analog 1" Type C videotape).
+D1 &amp; D2 would eventually be replaced by cheaper systems using video compression, most notably Sony's Digital Betacam (still heavily used as an electronic field production (EFP) recording format by professional television producers) that were introduced into the network's television studios. Other examples of digital video formats utilizing compression were Ampex's DCT (the first to employ such when introduced in 1992), the industry-standard DV and MiniDV (and its professional variations, Sony's DVCAM and Panasonic's DVCPRO), and Betacam SX, a lower-cost variant of Digital Betacam using MPEG-2 compression.
+One of the first digital video products to run on personal computers was PACo: The PICS Animation Compiler from The Company of Science &amp; Art in Providence, RI, which was developed starting in 1990 and first shipped in May 1991.[1] PACo could stream unlimited-length video with synchronized sound from a single file (with the ".CAV" file extension) on CD-ROM. Creation required a Mac; playback was possible on Macs, PCs, and Sun Sparcstations. In 1992, Bernard Luskin, Philips Interactive Media, and Eric Doctorow, Paramount Worldwide Video, successfully put the first fifty videos in digital MPEG 1 on CD, developed the packaging and launched movies on CD, leading to advancing versions of MPEG, and to DVD.
+QuickTime, Apple Computer's architecture for time-based and streaming data formats appeared in June, 1991. Initial consumer-level content creation tools were crude, requiring an analog video source to be digitized to a computer-readable format. While low-quality at first, consumer digital video increased rapidly in quality, first with the introduction of playback standards such as MPEG-1 and MPEG-2 (adopted for use in television transmission and DVD media), and then the introduction of the DV tape format allowing recordings in the format to be transferred direct to digital video files (containing the same video data recorded on the transferred DV tape) on an editing computer and simplifying the editing process, allowing non-linear editing systems (NLE) to be deployed cheaply and widely on desktop computers with no external playback/recording equipment needed, save for the computer simply requiring a FireWire port to interface to the DV-format camera or VCR. The widespread adoption of digital video has also drastically reduced the bandwidth needed for a high-definition video signal (with HDV and AVCHD, as well as several commercial variants such as DVCPRO-HD, all using less bandwidth than a standard definition analog signal) and tapeless camcorders based on flash memory and often a variant of MPEG-4.
+Overview of basic properties[edit]
+Digital video comprises a series of orthogonal bitmap digital images displayed in rapid succession at a constant rate. In the context of video these images are called frames.[2] We measure the rate at which frames are displayed in frames per second (FPS).
+Since every frame is an orthogonal bitmap digital image it comprises a raster of pixels. If it has a width of W pixels and a height of H pixels we say that the frame size is WxH.
+Pixels have only one property, their color. The color of a pixel is represented by a fixed number of bits. The more bits the more subtle variations of colors can be reproduced. This is called the color depth (CD) of the video.
+An example video can have a duration (T) of 1 hour (3600sec), a frame size of 640x480 (WxH) at a color depth of 24bits and a frame rate of 25fps. This example video has the following properties:
+
+pixels per frame = 640 * 480 = 307,200
+bits per frame = 307,200 * 24 = 7,372,800 = 7.37Mbits
+bit rate (BR) = 7.37 * 25 = 184.25Mbits/sec
+video size (VS)[3] = 184Mbits/sec * 3600sec = 662,400Mbits = 82,800Mbytes = 82.8Gbytes
+
+The most important properties are bit rate and video size. The formulas relating those two with all other properties are:
+
+BR = W * H * CD * FPS
+VS = BR * T = W * H * CD * FPS * T
+(units are: BR in bit/s, W and H in pixels, CD in bits, VS in bits, T in seconds)
+
+while some secondary formulas are:
+
+pixels_per_frame = W * H
+pixels_per_second = W * H * FPS
+bits_per_frame = W * H * CD
+
+Regarding Interlacing[edit]
+In interlaced video each frame is composed of two halves of an image. The first half contains only the odd-numbered lines of a full frame. The second half contains only the even-numbered lines. Those halves are referred to individually as fields. Two consecutive fields compose a full frame. If an interlaced video has a frame rate of 15 frames per second the field rate is 30 fields per second. All the properties and formulas discussed here apply equally to interlaced video but one should be careful not to confuse the fields per second rate with the frames per second rate.
+Properties of compressed video[edit]
+The above are accurate for uncompressed video. Because of the relatively high bit rate of uncompressed video, video compression is extensively used. In the case of compressed video each frame requires a small percentage of the original bits. Assuming a compression algorithm that shrinks the input data by a factor of CF, the bit rate and video size would equal to:
+
+BR = W * H * CD * FPS / CF
+VS = BR * T / CF
+
+Please note that it is not necessary that all frames are equally compressed by a factor of CF. In practice they are not, so CF is the average factor of compression for all the frames taken together.
+The above equation for the bit rate can be rewritten by combining the compression factor and the color depth like this:
+
+BR = W * H * ( CD / CF ) * FPS
+
+The value (CD / CF) represents the average bits per pixel (BPP). As an example, if we have a color depth of 12bits/pixel and an algorithm that compresses at 40x, then BPP equals 0.3 (12/40). So in the case of compressed video the formula for bit rate is:
+
+BR = W * H * BPP * FPS
+
+In fact the same formula is valid for uncompressed video because in that case one can assume that the "compression" factor is 1 and that the average bits per pixel equal the color depth.
+More on bit rate and BPP[edit]
+As is obvious by its definition bit rate is a measure of the rate of information content of the digital video stream. In the case of uncompressed video, bit rate corresponds directly to the quality of the video (remember that bit rate is proportional to every property that affects the video quality). Bit rate is an important property when transmitting video because the transmission link must be capable of supporting that bit rate.[4] Bit rate is also important when dealing with the storage of video because, as shown above, the video size is proportional to the bit rate and the duration. Bit rate of uncompressed video is too high for most practical applications. Video compression is used to greatly reduce the bit rate.
+BPP is a measure of the efficiency of compression. A true-color video with no compression at all may have a BPP of 24 bits/pixel. Chroma subsampling can reduce the BPP to 16 or 12 bits/pixel. Applying jpeg compression on every frame can reduce the BPP to 8 or even 1 bits/pixel. Applying video compression algorithms like MPEG1, MPEG2 or MPEG4 allows for fractional BPP values.
+Constant bit rate versus variable bit rate[edit]
+As noted above BPP represents the average bits per pixel. There are compression algorithms that keep the BPP almost constant throughout the entire duration of the video. In this case we also get video output with a constant bit rate (CBR). This CBR video is suitable for real-time, non-buffered, fixed bandwidth video streaming (e.g. in videoconferencing).
+Noting that not all frames can be compressed at the same level because quality is more severely impacted for scenes of high complexity some algorithms try to constantly adjust the BPP. They keep it high while compressing complex scenes and low for less demanding scenes. This way one gets the best quality at the smallest average bit rate (and the smallest file size accordingly). Of course when using this method the bit rate is variable because it tracks the variations of the BPP.
+Technical overview[edit]
+Standard film stocks such as 16 mm and 35 mm record at 24 frames per second. For video, there are two frame rate standards: NTSC, which shoot at 30/1.001 (about 29.97) frames per second or 59.94 fields per second, and PAL, 25 frames per second or 50 fields per second.
+Digital video cameras come in two different image capture formats: interlaced and deinterlaced / progressive scan.
+Interlaced cameras record the image in alternating sets of lines: the odd-numbered lines are scanned, and then the even-numbered lines are scanned, then the odd-numbered lines are scanned again, and so on. One set of odd or even lines is referred to as a "field", and a consecutive pairing of two fields of opposite parity is called a frame. Deinterlaced cameras records each frame as distinct, with all scan lines being captured at the same moment in time. Thus, interlaced video captures samples the scene motion twice as often as progressive video does, for the same number of frames per second. Progressive-scan camcorders generally produce a slightly sharper image. However, motion may not be as smooth as interlaced video which uses 50 or 59.94 fields per second, particularly if they employ the 24 frames per second standard of film.
+Digital video can be copied with no degradation in quality. No matter how many generations of a digital source is copied, it will still be as clear as the original first generation of digital footage. However a change in parameters like frame size as well as a change of the digital format can decrease the quality of the video due to new calculations that have to be made. Digital video can be manipulated and edited to follow an order or sequence on an NLE, or non-linear editing workstation, a computer-based device intended to edit video and audio. More and more, videos are edited on readily available, increasingly affordable consumer-grade computer hardware and software. However, such editing systems require ample disk space for video footage. The many video formats and parameters to be set make it quite impossible to come up with a specific number for how many minutes need how much time.
+Digital video has a significantly lower cost than 35&#160;mm film. The film stock itself is very inexpensive. Digital video also allows footage to be viewed on location without the expensive chemical processing required by film. Also physical deliveries of tapes and broadcasts do not apply anymore. Digital television (including higher quality HDTV) started to spread in most developed countries in early 2000s. Digital video is also used in modern mobile phones and video conferencing systems. Digital video is also used for Internet distribution of media, including streaming video and peer-to-peer movie distribution. However even within Europe are lots of TV-Stations not broadcasting in HD, due to restricted budgets for new equipment for processing HD.
+Many types of video compression exist for serving digital video over the internet and on optical disks. The file sizes of digital video used for professional editing are generally not practical for these purposes, and the video requires further compression with codecs such as Sorenson, H.264 and more recently Apple ProRes especially for HD. Probably the most widely used formats for delivering video over the internet are MPEG4, Quicktime, Flash and Windows Media, while MPEG2 is used almost exclusively for DVDs, providing an exceptional image in minimal size but resulting in a high level of CPU consumption to decompress.
+As of 2011[update], the highest resolution demonstrated for digital video generation is 35 megapixels (8192 x 4320). The highest speed is attained in industrial and scientific high speed cameras that are capable of filming 1024x1024 video at up to 1 million frames per second for brief periods of recording.
+Interfaces and cables[edit]
+Many interfaces have been designed specifically to handle the requirements of uncompressed digital video (from roughly 400 Mbit/s to 10 Gbit/s):
+
+High-Definition Multimedia Interface
+Digital Visual Interface
+Serial Digital Interface
+DisplayPort
+Digital component video
+Unified Display Interface
+FireWire
+USB
+
+The following interface has been designed for carrying MPEG-Transport compressed video:
+
+DVB-ASI
+
+Compressed video is also carried using UDP-IP over Ethernet. Two approaches exist for this:
+
+Using RTP as a wrapper for video packets
+1-7 MPEG Transport Packets are placed directly in the UDP packet
+
+Storage formats[edit]
+Encoding[edit]
+All current formats, which are listed below, are PCM based.
+
+CCIR 601 used for broadcast stations
+MPEG-4 good for online distribution of large videos and video recorded to flash memory
+MPEG-2 used for DVDs, Super-VCDs, and many broadcast television formats
+MPEG-1 used for video CDs
+H.261
+H.263
+H.264 also known as MPEG-4 Part 10, or as AVC, used for Blu-ray Discs and some broadcast television formats
+Theora used for video on Wikipedia
+
+Tapes[edit]
+Main article: Video tape
+
+Betacam SX, Betacam IMX, Digital Betacam, or DigiBeta — Commercial video systems by Sony, based on original Betamax technology
+D-VHS — MPEG-2 format data recorded on a tape similar to S-VHS
+D1, D2, D3, D5, D9 (also known as Digital-S) — various SMPTE commercial digital video standards
+Digital8 — DV-format data recorded on Hi8-compatible cassettes; largely a consumer format
+DV, MiniDV — used in most of today's videotape-based consumer camcorders; designed for high quality and easy editing; can also record high-definition data (HDV) in MPEG-2 format
+DVCAM, DVCPRO — used in professional broadcast operations; similar to DV but generally considered more robust; though DV-compatible, these formats have better audio handling.
+DVCPRO50, DVCPROHD support higher bandwidths as compared to Panasonic's DVCPRO.
+HDCAM was introduced by Sony as a high-definition alternative to DigiBeta.
+MicroMV — MPEG-2-format data recorded on a very small, matchbook-sized cassette; obsolete
+ProHD — name used by JVC for its MPEG-2-based professional camcorders
+
+Discs[edit]
+Main article: Optical disc
+
+Blu-ray Disc
+DVD
+VCD
+
+See also[edit]
+
+
+Digital audio
+Digital cinematography
+List of video topics
+Video coding
+Video editing software
+Video hosting service
+Webcam
+
+
+References[edit]
+
+
+^ CoSA Lives: The Story of the Company Behind After Effects, http://www.motionworks.com.au/2009/11/cosa-lives/, retrieved 11/15/2009.
+^ In fact the still images correspond to frames only in the case of progressive scan video. In interlaced video they correspond to fields. See section about interlacing for clarification
+^ we use the term video size instead of just size in order to avoid confusion with the frame size
+^ http://animationants.com/explainer-videos-the-perfect-marketing-tool-for-all-businesses/
+
+
+External links[edit]
+
+The DV, DVCAM, &amp; DVCPRO Formats -- tech details, FAQ, and links
+Standard digital TV and video formats.
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Digital electronics
+
+
+
+
+
+
+Components
+
+
+
+Combinational logic
+Integrated circuit (IC)
+Logic gate
+Sequential logic
+
+
+
+
+
+
+
+
+Theory
+
+
+
+Digital signal (electronics)
+Boolean algebra
+Logic synthesis
+
+
+Logic in computer science
+Computer architecture
+Digital signal (signal processing)
+Digital signal processing
+Circuit minimization
+
+
+
+
+
+
+
+
+Design
+
+
+
+Logic synthesis
+Register-transfer level
+Formal equivalence checking
+Synchronous logic
+Asynchronous logic
+Finite-state machine
+
+
+
+
+
+
+
+
+Applications
+
+
+
+Computer hardware
+Digital audio
+Digital photography
+Digital video
+Electronic literature
+Telecommunication
+
+
+
+
+
+
+
+
+Design issues
+
+
+
+Metastability
+Runt pulse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Video storage formats
+
+
+
+
+
+
+Videotape
+
+
+
+
+
+Analog
+
+
+
+
+Quadruplex (1956)
+VERA (1958)
+Ampex 2 inch helical VTR (1961)
+Sony 2 inch helical VTR (1961)
+Type A (1965)
+CV-2000 (1965)
+Akai (1967)
+U-matic (1969)
+EIAJ-1 (1969)
+Cartrivision (1972)
+Philips VCR (1972)
+V-Cord (1974)
+VX (1974)
+Betamax (1975)
+IVC (1975)
+Type B (1976)
+Type C (1976)
+VHS (1976)
+VK (1977)
+SVR (1979)
+Video 2000 (1980)
+CVC (1980)
+VHS-C (1982)
+M (1982)
+Betacam (1982)
+Video8 (1985)
+MII (1986)
+S-VHS (1987)
+S-VHS-C (1987)
+Hi8 (1989)
+Ruvi (1998)
+
+
+
+
+
+
+
+
+
+Digital
+
+
+
+
+D1 (1986)
+D2 (1988)
+D3 (1991)
+DCT (1992)
+Digital Betacam (1993)
+D5 (1994)
+Digital-S (D9) (1995)
+Betacam SX (1996)
+Digital8 (1999)
+MicroMV (2001)
+
+
+
+
+
+
+
+
+
+High Definition
+
+
+
+
+Sony HDVS (1984)
+UniHi (1984)
+W-VHS (1994)
+HDCAM (1997)
+D-VHS (1998)
+D6 HDTV VTR (2000)
+HDV (2003)
+HDCAM SR (2003)
+
+
+
+
+
+
+
+
+
+
+
+Videodisc
+
+
+
+
+
+Analog
+
+
+
+
+Phonovision (1927)
+Ampex-HS (1967)
+TeD (1975)
+LaserDisc (1978)
+CED (1981)
+VHD (1983)
+Laserfilm (1984)
+CD Video (1987)
+
+
+
+
+
+
+
+
+
+Digital
+
+
+
+
+VCD (1993)
+MovieCD (c. 1995)
+DVD (1996)
+MiniDVD (c. 1996)
+DVD-Video (1997)
+CVD (1998)
+SVCD (1998)
+EVD (2003)
+HVD (High-Definition Versatile Disc) (2004)
+FVD (2005)
+UMD (2004)
+
+
+
+
+
+
+
+
+
+High Definition
+
+
+
+
+MUSE Hi-Vision LD (1994)
+VMD (2006)
+HD DVD (2006)
+Blu-ray (2006)
+HVD (Holographic Versatile Disc) (2007)
+CBHD (China Blue High-definition Disc) (2008)
+
+
+
+
+
+
+
+
+
+
+
+Virtual
+
+
+
+
+
+Media agnostic
+
+
+
+
+DV (1995)
+DVCPRO (1995)
+DVCAM (1996)
+DVCPRO50 (1997)
+DVCPRO HD (2000)
+
+
+
+
+
+
+
+
+
+Tapeless
+
+
+
+
+Editcam (1995)
+XDCAM (2003)
+MOD (2005)
+AVCHD (2006)
+AVC-Intra (2006)
+TOD (2007)
+iFrame (2009)
+XAVC (2012)
+
+
+
+
+
+
+
+
+
+Solid state
+
+
+
+
+P2 (2004)
+SxS (2007)
+MicroP2 (2012)
+
+
+
+
+
+
+
+
+
+
+
+Video recorded to film
+
+
+
+Kinescope (1947)
+Electronicam kinescope (1950s)
+Electronic Video Recording (1967)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Digital_video&amp;oldid=676215632"					
+				Categories: Film and video technologyVideo signalTelevision terminology1986 introductionsFilm and video terminologyHidden categories: Wikipedia introduction cleanup from June 2015All pages needing cleanupArticles covered by WikiProject Wikify from June 2015All articles covered by WikiProject WikifyArticles needing additional references from January 2010All articles needing additional referencesArticles containing potentially dated statements from 2011All articles containing potentially dated statements				
+							
+		
+		
+			

@@ -1,0 +1,300 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Extensible programming
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Extensible programming is a term used in computer science to describe a style of computer programming that focuses on mechanisms to extend the programming language, compiler and runtime environment. Extensible programming languages, supporting this style of programming, were an active area of work in the 1960s, but the movement was marginalized in the 1970s.[1] Extensible programming has become a topic of renewed interest in the 21st century.[2]
+
+
+
+Contents
+
+
+1 Historical movement
+
+1.1 Character of the historical movement
+1.2 Death of the historical movement
+
+
+2 Modern movement
+
+2.1 Extensible syntax
+2.2 Extensible compiler
+2.3 Extensible runtime
+2.4 Content separated from form
+2.5 Source language debugging support
+
+
+3 Examples
+4 See also
+5 References
+6 External links
+
+6.1 General
+6.2 Tools
+6.3 Programming languages
+
+
+
+
+
+Historical movement[edit]
+The first paper usually[1][3] associated with the extensible programming language movement is M. Douglas McIlroy's 1960 paper on macros for higher-level programming languages.[4] Another early description of the principle of extensibility occurs in Brooker and Morris's 1960 paper on the Compiler-Compiler.[5] The peak of the movement was marked by two academic symposia, in 1969 and 1971.[6][7] By 1975, a survey article on the movement by Thomas A. Standish[1] was essentially a post mortem. The Forth programming language was an exception, but it went essentially unnoticed.
+Character of the historical movement[edit]
+As typically envisioned, an extensible programming language consisted of a base language providing elementary computing facilities, and a meta-language capable of modifying the base language. A program then consisted of meta-language modifications and code in the modified base language.
+The most prominent language-extension technique used in the movement was macro definition. Grammar modification was also closely associated with the movement, resulting in the eventual development of adaptive grammar formalisms. The Lisp language community remained separate from the extensible language community, apparently because, as one researcher observed,
+
+any programming language in which programs and data are essentially interchangeable can be regarded as an extendible [sic] language. ... this can be seen very easily from the fact that Lisp has been used as an extendible language for years.[8]
+
+At the 1969 conference, Simula was presented as an extensible programming language.
+Standish described three classes of language extension, which he called paraphrase, orthophrase, and metaphrase (otherwise paraphrase and metaphrase being translation terms).
+
+Paraphrase defines a facility by showing how to exchange it for something previously defined (or to be defined). As examples, he mentions macro definitions, ordinary procedure definitions, grammatical extensions, data definitions, operator definitions, and control structure extensions.
+
+
+Orthophrase adds features to a language that could not be achieved using the base language, such as adding an i/o system to a base language that previously had no i/o primitives. Extensions must be understood as orthophrase relative to some given base language, since a feature not defined in terms of the base language must be defined in terms of some other language. Orthophrase corresponds to the modern notion of plug-ins.
+
+
+Metaphrase modifies the interpretation rules used for pre-existing expressions. It corresponds to the modern notion of reflection.
+
+Death of the historical movement[edit]
+Standish attributed the failure of the extensibility movement to the difficulty of programming successive extensions. An ordinary programmer might build a single shell of macros around a base language, but if a second shell of macros was to be built around that, the programmer would have to be intimately familiar with both the base language and the first shell; a third shell would require familiarity with the base and both the first and second shells; and so on. (Note that shielding the programmer from lower-level details is the intent of the abstraction movement that supplanted the extensibility movement.)
+Despite the earlier presentation of Simula as extensible, by 1975, Standish's survey does not seem in practice to have included the newer abstraction-based technologies (though he used a very general definition of extensibility that technically could have included them). A 1978 history of programming abstraction from the invention of the computer to the (then) present day made no mention of macros, and gave no hint that the extensible languages movement had ever occurred.[9] Macros were tentatively admitted into the abstraction movement by the late 1980s (perhaps due to the advent of hygienic macros), by being granted the pseudonym syntactic abstractions.[10]
+Modern movement[edit]
+In the modern sense, a system that supports extensible programming will provide all of the features described below.
+Extensible syntax[edit]
+See also: Category:Extensible syntax programming languages.
+This simply means that the source language(s) to be compiled must not be closed, fixed, or static. It must be possible to add new keywords, concepts, and structures to the source language(s). Languages which allow the addition of constructs with user defined syntax include Camlp4, OpenC++, Seed7,[11] Red, Rebol, and Felix. While it is acceptable for some fundamental and intrinsic language features to be immutable, the system must not rely solely on those language features. It must be possible to add new ones.
+Extensible compiler[edit]
+In extensible programming, a compiler is not a monolithic program that converts source code input into binary executable output. The compiler itself must be extensible to the point that it is really a collection of plugins that assist with the translation of source language input into anything. For example, an extensible compiler will support the generation of object code, code documentation, re-formatted source code, or any other desired output. The architecture of the compiler must permit its users to "get inside" the compilation process and provide alternative processing tasks at every reasonable step in the compilation process.
+For just the task of translating source code into something that can be executed on a computer, an extensible compiler should:
+
+use a plug-in or component architecture for nearly every aspect of its function
+determine which language or language variant is being compiled and locate the appropriate plug-in to recognize and validate that language
+use formal language specifications to syntactically and structurally validate arbitrary source languages
+assist with the semantic validation of arbitrary source languages by invoking an appropriate validation plug-in
+allow users to select from different kinds of code generators so that the resulting executable can be targeted for different processors, operating systems, virtual machines, or other execution environment.
+provide facilities for error generation and extensions to it
+allow new kinds of nodes in the abstract syntax tree (AST),
+allow new values in nodes of the AST,
+allow new kinds of edges between nodes,
+support the transformation of the input AST, or portions thereof, by some external "pass"
+support the translation of the input AST, or portions thereof, into another form by some external "pass"
+assist with the flow of information between internal and external passes as they both transform and translate the AST into new ASTs or other representations
+
+Extensible runtime[edit]
+At runtime, extensible programming systems must permit languages to extend the set of operations that it permits. For example, if the system uses a byte-code interpreter, it must allow new byte-code values to be defined. As with extensible syntax, it is acceptable for there to be some (smallish) set of fundamental or intrinsic operations that are immutable. However, it must be possible to overload or augment those intrinsic operations so that new or additional behavior can be supported.
+Content separated from form[edit]
+Extensible programming systems should regard programs as data to be processed. Those programs should be completely devoid of any kind of formatting information. The visual display and editing of programs to users should be a translation function, supported by the extensible compiler, that translates the program data into forms more suitable for viewing or editing. Naturally, this should be a two-way translation. This is important because it must be possible to easily process extensible programs in a variety of ways. It is unacceptable for the only uses of source language input to be editing, viewing and translation to machine code. The arbitrary processing of programs is facilitated by de-coupling the source input from specifications of how it should be processed (formatted, stored, displayed, edited, etc.).
+Source language debugging support[edit]
+Extensible programming systems must support the debugging of programs using the constructs of the original source language regardless of the extensions or transformation the program has undergone in order to make it executable. Most notably, it cannot be assumed that the only way to display runtime data is in structures or arrays. The debugger, or more correctly 'program inspector', must permit the display of runtime data in forms suitable to the source language. For example, if the language supports a data structure for a business process or work flow, it must be possible for the debugger to display that data structure as a fishbone chart or other form provided by a plugin.
+Examples[edit]
+
+Camlp4
+Felix
+Seed7
+Red (programming language)
+Rebol
+Ruby (programming language) (Metaprogramming)
+IMP (programming language)
+OpenC++
+XL (programming language)
+Forth (programming language)
+Scheme (programming language)
+Lisp (programming language)
+Lua
+Racket (programming language)
+PL/I
+
+See also[edit]
+
+Category:Extensible syntax programming languages
+Adaptive grammar
+Concept programming
+Dialecting
+Grammar-oriented programming
+
+References[edit]
+
+
+^ a b c Standish, Thomas A., "Extensibility in Programming Language Design", SIGPLAN Notices 10 no. 7 (July 1975), pp. 18–21.
+^ Gregory V. Wilson, "Extensible Programming for the 21st Century", ACM Queue 2 no. 9 (Dec/Jan 2004–2005).
+^ Sammet, Jean E., Programming Languages: History and Fundamentals, Prentice-Hall, 1969, section III.7.2
+^ McIlroy, M.D., "Macro Instruction Extensions of Compiler Languages", Communications of the ACM 3 no. 4 (April 1960), pp. 214–220.
+^ Brooker, R.A. and Morris, D., "A General Translation Program for Phrase Structure Languages", Journal of the ACM 9 no. 1 (January 1962), pp. 1–10. The paper was received in 1960.
+^ Christensen, C. and Shaw, C.J., eds., Proceedings of the Extensible Languages Symposium, SIGPLAN Notices 4 no. 8 (August 1969).
+^ Schuman, S.A., ed., Proceedings of the International Symposium on Extensible Languages, SIGPLAN Notices 6 no. 12 (December 1971).
+^ Harrison, M.C., in "Panel on the Concept of Extensibility", pp. 53–54 of the 1969 symposium.
+^ Guarino, L.R., "The Evolution of Abstraction in Programming Languages", CMU-CS-78-120, Department of Computer Science, Carnegie-Mellon University, Pennsylvania, 22 May 1978.
+^ Gabriel, Richard P., ed., "Draft Report on Requirements for a Common Prototyping System", SIGPLAN Notices 24 no. 3 (March 1989), pp. 93ff.
+^ Zingaro, Daniel, "Modern Extensible Languages", SQRL Report 47 McMaster University (October 2007), page 16.
+
+
+External links[edit]
+General[edit]
+
+Greg Wilson's Article in ACM Queue
+Slashdot Discussion
+Modern Extensible Languages - A paper from Daniel Zingaro
+
+Tools[edit]
+
+MetaL — an extensible programming compiler engine implementation
+XPS — eXtensible Programming System (in development)
+MPS — JetBrains Metaprogramming system
+
+Programming languages[edit]
+
+xtc — eXTensible C
+Nemerle Macros[dead link]
+Boo Syntactic Macros
+Stanford University Intermediate Format compiler[dead link]
+Seed7 - The extensible programming language
+Katahdin - a programming language with syntax and semantics that are mutable at runtime
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Extensible_programming&amp;oldid=682266054"					
+				Categories: Programming paradigmsHidden categories: All articles with dead external linksArticles with dead external links from February 2014				
+							
+		
+		
+			

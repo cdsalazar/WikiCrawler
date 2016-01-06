@@ -1,0 +1,605 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Visual C++
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For technical reasons, "Visual C#" redirects here. For that software product, see Microsoft Visual C Sharp.
+
+Visual C++
+
+
+
+
+Developer(s)
+Microsoft
+
+
+Initial release
+February&#160;1993; 22&#160;years ago&#160;(1993-02)[1]
+
+
+Stable release
+2015 / July&#160;20, 2015; 4 months ago&#160;(2015-07-20)
+
+
+Written in
+C++[2]
+
+
+Operating system
+Windows
+
+
+Platform
+IA-32, x86-64 and Itanium 2
+
+
+Available in
+English, Chinese, French, Japanese, Korean, German, and likely others
+
+
+Type
+IDE
+
+
+License
+Trialware
+
+
+Website
+msdn.microsoft.com/en-us/vstudio/hh386302.aspx
+
+
+Microsoft Visual C++ (often abbreviated as MSVC or VC++) is a commercial (free version available), integrated development environment (IDE) product from Microsoft for the C, C++, and C++/CLI programming languages. It features tools for developing and debugging C++ code, especially code written for the Microsoft Windows API, the DirectX API, and the Microsoft .NET Framework.
+Many applications require redistributable Visual C++ packages to function correctly. These packages are often installed independently of applications, allowing multiple applications to make use of the package while only having to install it once. These Visual C++ redistributable and runtime packages are mostly installed for standard libraries that many applications use.[3]
+
+
+
+Contents
+
+
+1 History
+
+1.1 16-bit versions
+1.2 32-bit versions
+1.3 32-bit and 64-bit versions
+
+
+2 Compatibility
+
+2.1 ABI
+2.2 C runtime libraries
+2.3 C99
+
+
+3 See also
+4 References
+5 External links
+
+
+
+History[edit]
+The predecessor to Visual C++ was called Microsoft C/C++. There was also a Microsoft QuickC 2.5 and a Microsoft QuickC for Windows 1.0. The Visual C++ compiler is still known as Microsoft C/C++ and as of the release of Visual C++ 2013, is on version 18.0.21005.1.
+16-bit versions[edit]
+
+Microsoft C 1.0, based on Lattice C, was Microsoft's first C product in 1983. It was not K&amp;R C.
+C 2.0 added large model support.
+C 3.0 was the first version developed inside Microsoft. This version intended compatibility with K&amp;R and the later ANSI standard. It was being used inside Microsoft (for Windows and Xenix development) in early 1984. It shipped as a product in 1985.
+C 4.0 added optimizations and CodeView, a source level debugger.
+C 5.0 added loop optimizations and Huge Model (arrays bigger than 64k) support. Microsoft Fortran and the first 32 bit compiler for 80386 were also part of this project.
+C 5.1 released in 1988 allowed compiling programs for OS/2 1.x.
+C 6.0 released in 1989. It added global flow analysis, a source browser, and a new debugger, and included an optional C++ front end.[4]
+C/C++ 7.0 was released in 1992. Added built-in support for C++ and MFC 1.0.[5]
+Visual C++ 1.0, which included MFC 2.0, was the first version of Visual C++, released in February 1993. It was Cfront 2.1 compliant[6] and available in two editions:[1]
+
+Standard – replaced QuickC for Windows.
+Professional – replaced C/C++ 7.0. Included the ability to build both DOS and Windows applications, an optimizing compiler, a source profiler, and the Windows 3.1 SDK.[6] The Phar Lap 286 DOS Extender Lite was also included.[7]
+
+
+Visual C++ 1.5 was released in December 1993, included MFC 2.5, and added OLE 2.0 and ODBC support to MFC.[8] It was the first version of Visual C++ that came only on CD-ROM.
+
+Visual C++ 1.51 and 1.52 were available as part of a subscription service.
+Visual C++ 1.52b is similar to 1.52, but does not include the Control Development Kit.
+Visual C++ 1.52c was a patched version of 1.5. It is the last, and arguably most popular, development platform for Microsoft Windows 3.x. It is available through Microsoft Developer Network.
+
+
+
+32-bit versions[edit]
+
+Visual C++ 1.0 (original name: Visual C++ 32-bit Edition) was the first version for 32-bit development.[9] Although released when 16-bit 1.5 was available, it did not include support for OLE2 and ODBC. It was also available in a bundle called Visual C++ 16/32-bit Suite, which included Visual C++ 1.5.[10]
+Visual C++ 2.0, which included MFC 3.0, was the first version to be 32-bit only. In many ways, this version was ahead of its time, since Windows 95, then codenamed "Chicago", was not yet released, and Windows NT had only a small market share. As a result, this release was almost a "lost generation". Microsoft included and updated Visual C++ 1.5 as part of the 2.x releases up to 2.1, which included Visual C++ 1.52, and both 16-bit and 32-bit version of the Control Development Kit (CDK) were included. Visual C++ 2.x also supported Win32s development. It is available through Microsoft Developer Network. There was a Visual C++ 2.0 RISC Edition for MIPS and Alpha processors, as well as a cross-platform edition for the Macintosh (68000 instruction set).[11]
+
+Visual C++ 2.1 and 2.2 were updates for 2.0 available through subscription.
+
+
+Visual C++ 4.0, released on 1995-12-11[12] introduced the Developer Studio IDE. Its then-novel tiled layout of non-overlapping panels — navigation panel, combination editor/source level debugger panel, and console output panel[13]— continues through the Visual Studio product line (as of 2013). Visual C++ 4.0 included MFC 4.0, was designed for Windows 95 and Windows NT. To allow support of legacy (Windows 3.x/DOS) projects, 4.0 came bundled with the Visual C++ 1.52 installation CD. Updates available through subscription included Visual C++ 4.1, which came with the Microsoft Game SDK (later released separately as the DirectX SDK), and Visual C++ 4.2. Version number 3.0 was skipped to achieve version number parity between Visual C++ 4.0 and MFC 4.0.[14]
+Visual C++ 4.2 did not support Windows 3.x (Win32s) development.[15] This was the final version with a cross-platform edition for the Macintosh available and it differed from the 2.x version in that it also allowed compilation for the PowerPC instruction set.
+Visual C++ 5.0, which included MFC 4.21 and was released 1997-04-28,[12] was a major upgrade from 4.2.[16] Available in four editions:
+
+Learning[17]
+Professional[18]
+Enterprise[19]
+RISC[20]
+
+
+Visual C++ 6.0 (commonly known as VC6), which included MFC 6.0, was released in 1998.[21] The release was somewhat controversial since it did not include an expected update to MFC. Visual C++ 6.0 is still quite popular and often used to maintain legacy projects. There are, however, issues with this version under Windows XP, especially under the debugging mode (for example, the values of static variables do not display). The debugging issues can be solved with a patch called the "Visual C++ 6.0 Processor Pack".[22] Version number: 12.00.8804
+Visual C++ .NET 2002 (known also as Visual C++ 7.0), which included MFC 7.0, was released in 2002 with support for link time code generation and debugging runtime checks, .NET 1.0, and Visual C# and Managed C++. The new user interface used many of the hot keys and conventions of Visual Basic, which accounted for some of its unpopularity among C++ developers.[citation needed] Version number: 13.00.9466
+Visual C++ .NET 2003 (known also as Visual C++ 7.1), which included MFC 7.1, was released in 2003 along with .NET 1.1 and was a major upgrade to Visual C++ .NET 2002. It was considered a patch to Visual C++ .NET 2002. Accordingly, the English language upgrade version of Visual Studio .NET 2003 shipped for minimal cost to owners of the English-language version of Visual Studio .NET 2002. This was the last version to support Windows 95 and NT 4.0 as a target.[citation needed] Version number: 13.10.3077
+eMbedded Visual C++[23] in various versions was used to develop for some versions of the Windows CE operating system. Initially it replaced a development environment consisting of tools added onto Visual C++ 6.0. eMbedded Visual C++ was replaced as a separate development environment by Microsoft Visual Studio 2005.
+
+32-bit and 64-bit versions[edit]
+
+Visual C++ 2005 (known also as Visual C++ 8.0), which included MFC 8.0, was released in November 2005. This version supports .NET 2.0 and includes a new version of C++ targeted to the .NET framework (C++/CLI) with the purpose of replacing the previous version (Managed C++). Managed C++ for CLI is still available via compiler options, though. It also introduced OpenMP. With Visual C++ 2005, Microsoft also introduced Team Foundation Server. Visual C++ 8.0 has problems compiling MFC AppWizard projects that were created using Visual Studio 6.0, so maintenance of legacy projects can be continued with the original IDE if rewriting is not feasible. Visual C++ 2005 is the last version able to target Windows 98 and Windows Me.[24][25]
+
+SP1 version also available in Microsoft Windows SDK Update for Windows Vista. Version number: 14.00.50727.762
+
+
+Visual C++ 2008 (known also as Visual C++ 9.0) was released in November 2007. This version supports .NET 3.5. Managed C++ for CLI is still available via compiler options. By default, all applications compiled against the Visual C++ 2008 Runtimes (static and dynamic linking) will only work under Windows 2000 and later.[26][27] A feature pack released for VC9, later included in SP1, added support for C++ TR1 library extensions.
+
+RTM version number: 15.00.21022.08
+SP1 version also available in Microsoft Windows SDK for Windows 7. Version number: 15.00.30729.01
+
+
+Visual C++ 2010 (known also as Visual C++ 10.0) was released on April 12, 2010. It uses a SQL Server Compact database to store information about the source code, including IntelliSense information, for better IntelliSense and code-completion support.[28] (However, Visual C++ 2010 does not support Intellisense for C++/CLI.[29]) This version adds a modern C++ parallel computing library called the Parallel Patterns Library, partial support for C++11, significantly improved IntelliSense based on the Edison Design Group front end,[30] and performance improvements to both the compiler and generated code.[31] This version is built around .NET 4.0, but supports compiling to machine code. The partial C++11 support mainly consists of six compiler features[32] (lambdas, rvalue references, auto, decltype, static_assert, nullptr), and some library features (e.g., moving the TR1 components from std::tr1 namespace directly to std namespace). Variadic templates were also considered, but delayed until some future version due to having a lower priority, which stemmed from the fact that — unlike other costly-to-implement features (lambda, rvalue references) — variadic templates would benefit only a minority of library writers (rather than the majority of compiler end users).[33] By default, all applications compiled against the Visual C++ 2010 Runtimes will only work under Windows XP SP2 and later.
+
+RTM version, also available in Windows SDK for Windows 7 and .NET Framework 4 (WinSDK v7.1).[34] Version number: 16.00.30319
+SP1 version, available as part of Visual Studio 2010 Service Pack 1 or through the Microsoft Visual C++ 2010 Service Pack 1 Compiler Update for the Windows SDK 7.1.[35] Version number: 16.00.40219
+
+
+Visual C++ 2012 (known also as Visual C++ 11.0) was released on August 15, 2012. Among other things, it features improved C++11 support, and support for Windows Runtime development.[36]
+
+RTM version number: 17.00.50727
+Update 1 version number: 17.00.51106
+Update 2 version number: 17.00.60315
+Update 3 version number: 17.00.60610
+Update 4 version number: 17.00.61030 (Last as Redistributable Package)[37]
+Update 5 version number: 17.00.61219[38]
+
+
+Visual C++ 2013 (known also as Visual C++ 12.0) was released on October 17, 2013. It features further C++11 and C99 support, and introduces a REST SDK.[39]
+
+RTM version number: 18.0.21005
+Update 2 version number: 18.00.30501 (Last as Redistributable Package)
+Update 3 version number: 18.00.30723
+Update 4 version number: 18.00.31101
+Update 5 version number: 18.00.40629[40]
+
+
+
+
+Visual C++ 2015 (known also as Visual C++ 14.0) was released on July 20, 2015 and it is currently the latest stable release.[41] It features improved C++11/14 support.[42]
+
+RTM version number: 19.00.23026
+
+
+
+Compatibility[edit]
+ABI[edit]
+The Visual C++ compiler ABI have historically changed between major compiler releases.[43] This is especially the case for STL containers, where container sizes have varied a lot between compiler releases.[44] Microsoft therefore recommends against using C++ interfaces at module boundaries when one wants to enable client code compiled using a different compiler version. Instead of C++, Microsoft recommends using C[45] or COM[46] interfaces, which are designed to have a stable ABI between compiler releases.
+C runtime libraries[edit]
+Visual C++ ships with different versions of C runtime libraries.[47] This means users can compile their code with any of the available libraries. However, this can cause some problems when using different components (DLLs, EXEs) in the same program. A typical example is a program using different libraries. The user should use the same C Run-Time for all the program's components unless the implications are understood. Microsoft recommends using the multithreaded, dynamic link library (/MD or /MDd compiler option) to avoid possible problems.[47]
+C99[edit]
+Although the product originated as an IDE for the C programming language, for many years the compiler's support for that language conformed only to the original edition of the C standard, dating from 1989. The later revisions of the standard, C99 and C11, were not supported at all[48] until Visual C++ 2012, which added support for various C99 features in its C mode (including designated initializers, compound literals, and the _Bool type). Visual C++ 2013 significantly improved the C99 support, though it is still not complete.[49] Visual C++ 2015 further improves the C99 support, with full support of the C99 Standard Library, except for features that require C99 language features not yet supported by the compiler.[50]
+See also[edit]
+
+Microsoft Visual Studio
+
+References[edit]
+
+
+^ a b "Visual C++ adds Windows support". InfoWorld. February 22, 1993. p.&#160;17.&#160;
+^ Lextrait, Vincent (January 2010). "The Programming Languages Beacon, v10.0". Retrieved 14 March 2010.&#160;
+^ "Do I need these Microsoft Visual C++ redistributables?". Ask Leo!. Retrieved 2012-11-18.
+^ Ladd, Scott Robert (August 1, 1990). "Optimizing With Microsoft C 6.0".&#160;
+^ Retrieved from http://support.microsoft.com/kb/196831.
+^ a b "Visual C++ is a strong development tool". InfoWorld. June 21, 1993. p.&#160;94.&#160;
+^ "Rival DOS Extenders debut at show". InfoWorld. March 1, 1993. p.&#160;18.&#160;
+^ "Visual C++ 1.5 integrates OLE, ODBC". InfoWorld. November 8, 1993. p.&#160;5.&#160;
+^ "Microsoft set to prerelease 32-bit Visual C++". InfoWorld. July 19, 1993. p.&#160;12.&#160;
+^ "C++ IDEs evolve". InfoWorld. April 4, 1994. p.&#160;79.&#160;
+^ "Microsoft Visual C++ Strategy".&#160;
+^ a b "Obsolete Products".&#160;
+^ Toth, Viktor (1996). "1". Visual C++ 4.0 unleashed. Indianapolis: SAMS Publishing. ISBN&#160;9780672308741. Retrieved 26 July 2013.&#160;
+^ "History of Visual Studio (Part 3)".&#160;
+^ "Major Changes from Visual C++ 4.0 to 4.2".&#160;
+^ "Major Changes from Visual C++ 4.2 to 5.0".&#160;
+^ "Microsoft Visual C++ 5.0 Learning Edition". Archived from the original on April 27, 1999.&#160;
+^ "Microsoft Visual C++ 5.0 Professional Edition". Archived from the original on April 27, 1999.&#160;
+^ "Microsoft Visual C++ 5.0 Enterprise Edition". Archived from the original on April 17, 1999.&#160;
+^ "Microsoft Visual C++ 5.0 RISC Edition". Archived from the original on April 29, 1999.&#160;
+^ "Major Changes from Visual C++ 5.0 to 6.0".&#160;
+^ This page stresses that Users must also be running Windows 98, Windows NT 4.0, or Windows 2000. Retrieved from http://msdn2.microsoft.com/en-us/vstudio/aa718349.aspx.
+^ Douglas Boling&#160;:Programming Microsoft Windows CE .NET, Third Edition Microsoft Press; 3rd edition (June 25, 2003) Paperback: 1264 pages ISBN 978-0735618848 - Companion CD with Microsoft eMbedded Visual C++ 4.0 Service Pack 2
+^ How to: Modify WINVER and _WIN32_WINNT
+^ Breaking Changes
+^ Windows Platforms (CRT)
+^ "Visual C++ 2008 Breaking Changes".&#160;
+^ Visual C++ Team Blog. "IntelliSense, part 2: The Future". Retrieved March 12, 2008.&#160;
+^ "Why IntelliSense is not supported for C++/CLI in Visual Studio 2010". Retrieved March 13, 2011.&#160;
+^ Visual C++ Team Blog. "Rebuilding Intellisense".&#160;
+^ Visual C++ Team Blog. "Visual C++ Code Generation in Visual Studio 2010".&#160;
+^ "C++0x Core Language Features In VC10: The Table".&#160;
+^ "Stephan T. Lavavej: Everything you ever wanted to know about nullptr".&#160;
+^ Microsoft Windows SDK Blog. "Released: Windows SDK for Windows 7 and .NET Framework 4".&#160;
+^ FIX: Visual C++ compilers are removed when you upgrade Visual Studio 2010 Professional or Visual Studio 2010 Express to Visual Studio 2010 SP1 if Windows SDK v7.1 is installed
+^ "What's New for Visual C++ in Visual Studio 2012". Microsoft Developer Network. Microsoft. Retrieved September 20, 2015.&#160;
+^ "The latest supported Visual C++ downloads". support.microsoft.com. Retrieved 7 September 2015.&#160;
+^ http://www.microsoft.com/en-US/download/details.aspx?id=48708
+^ "What's New for Visual C++ in Visual Studio 2013". Microsoft Developer Network. Miicrosoft. Retrieved September 20, 2015.&#160;
+^ http://www.microsoft.com/en-us/download/details.aspx?id=48129
+^ Eric Battalio (July 20, 2015). "Visual Studio 2015 RTM Now Available". Visual C++ Team Blog. Microsoft.&#160;
+^ Stephan T. Lavavej (June 19, 2015). "C++11/14/17 Features In VS 2015 RTM". Visual C++ Team Blog. Microsoft.&#160;
+^ Microsoft MSDN: Breaking Changes in Visual C++
+^ Microsoft MSDN: Containers (Modern C++)
+^ Microsoft MSDN: Portability At ABI Boundaries (Modern C++)
+^ Microsoft forum: Binary compatibility across Visual C++ versions
+^ a b C Run-Time Libraries
+^ "C99 support". Microsoft Connect.&#160;
+^ Pat Brenner (July 19, 2013). "C99 library support in Visual Studio 2013". Visual C++ Team Blog. Microsoft.&#160;
+^ "What's New for Visual C++ in Visual Studio 2015". Microsoft Developer Network. Microsoft.&#160;
+
+
+External links[edit]
+
+Microsoft's Visual C++ Developer Center
+Building Win32 Applications Using Visual C++ 2005 Express
+Visual C++ Tools and Templates in Visual Studio Editions
+Microsoft's 'Going Native' Channel Nine show
+Rejuvenating the Microsoft C/C++ Compiler, September 2015
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Microsoft development tools
+
+
+
+
+
+
+Development
+environments
+
+
+
+
+
+Visual Studio
+
+
+
+
+Visual Studio Code
+Express
+Visual Studio Lab Management
+Visual Studio Test Professional
+Tools for Applications
+Tools for Office
+VSTS Profiler
+
+
+
+
+
+
+
+
+
+Others
+
+
+
+
+App Studio
+Blend
+Expression Web
+GW-BASIC
+MSBuild
+Robotics Developer Studio
+SharePoint Designer
+
+FrontPage
+
+
+PowerShell ISE
+QuickBASIC
+
+QBasic
+
+
+Small Basic
+WebMatrix
+Windows SDK
+
+
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+Microsoft Basic
+Visual Basic
+Visual Basic .NET
+Visual C++
+
+C++/CLI
+Managed C++
+
+
+C#
+
+Visual C#
+
+
+F#
+J#
+Visual FoxPro
+IronPython
+IronRuby
+JScript
+PowerShell
+TypeScript
+XAML
+VBScript
+
+
+
+
+
+
+
+
+Major APIs and
+frameworks
+(See all)
+
+
+
+
+
+
+
+Windows API
+Silverlight
+XNA
+DirectX
+
+Managed DirectX
+
+
+Xbox Development Kit
+Windows CardSpace
+Windows Installer
+
+
+
+
+
+
+
+
+
+.NET Framework
+
+
+
+
+ASP.NET
+ASP.NET AJAX
+ADO.NET
+Communication Foundation
+Identity Foundation
+LINQ
+Presentation Foundation
+Workflow Foundation
+
+
+
+
+
+
+
+
+
+Windows Driver Frameworks
+
+
+
+
+Windows Driver Model
+KMDF
+UMDF
+Windows Driver Kit
+Windows Hardware Certification Kit
+
+
+
+
+
+
+
+
+
+
+
+Database
+
+
+
+
+
+SQL Server
+
+
+
+
+Express
+Compact
+Management Studio
+Business Intelligence Development Studio
+MSDE
+
+
+
+
+
+
+
+
+
+SQL services
+
+
+
+
+Analysis
+Reporting
+Integration
+Notification
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+Visual FoxPro
+Microsoft Access
+Jet Engine
+Extensible Storage Engine
+Azure DocumentDB
+
+
+
+
+
+
+
+
+
+
+
+Source control
+
+
+
+Team Foundation Server
+Visual SourceSafe
+
+
+
+
+
+
+
+
+Delivery
+
+
+
+
+
+End-user
+
+
+
+
+ClickOnce
+Windows Installer
+
+WiX
+
+
+Windows Store
+
+
+
+
+
+
+
+
+
+Developers
+
+
+
+
+NuGet
+Web Platform
+
+
+
+
+
+
+
+
+
+
+
+Performance Analysis
+
+
+
+CLR Profiler
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Visual_C%2B%2B&amp;oldid=691212912"					
+				Categories: Integrated development environmentsC compilersC++ compilersMicrosoft Visual StudioMicrosoft development toolsHidden categories: All articles with unsourced statementsArticles with unsourced statements from May 2010				
+							
+		
+		
+			

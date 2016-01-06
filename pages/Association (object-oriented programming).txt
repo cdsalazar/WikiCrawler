@@ -1,0 +1,75 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Association (object-oriented programming)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In object-oriented programming, association defines a relationship between classes of objects that allows one object instance to cause another to perform an action on its behalf. This relationship is structural, because it specifies that objects of one kind are connected to objects of another and does not represent behaviour.
+
+
+
+
+A bidirectional association
+
+
+
+
+
+
+Unless otherwise specified, navigation across an association is bidirectional, although it may be limited to just one direction by adorning some end with an arrowhead pointing to the direction of traversal.
+
+
+In generic terms, the causation is usually called "sending a message", "invoking a method" or "calling a member function" to the controlled object. Concrete implementation usually requires the requesting object to invoke a method or member function using a reference or pointer to the memory location of the controlled object.
+The objects that are related via the association are considered to act in a role with respect to the association, if object's current state in the active situation allows the other associated objects to use the object in the manner specified by the role. A role can be used to distinguish two objects of the same class when describing its use in the context of the association. A role describes the public aspects of an object with respect to an association.[1]
+See also[edit]
+
+Aggregation
+Object composition
+
+References[edit]
+
+
+^ Rumbaugh, JR; et al. (1991). Object-oriented modeling and design. Prentice Hall. ISBN&#160;0-13-630054-5.&#160;
+
+
+
+
+
+
+This computer-programming-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Association_(object-oriented_programming)&amp;oldid=659798100"					
+				Categories: Object-oriented programmingComputer programming stubsHidden categories: All stub articles				
+							
+		
+		
+			

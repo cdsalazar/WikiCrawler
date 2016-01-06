@@ -1,0 +1,304 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Scripting language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				A scripting language or script language is a programming language that supports scripts, programs written for a special run-time environment that can interpret (rather than compile) and automate the execution of tasks that could alternatively be executed one-by-one by a human operator. Environments that can be automated through scripting include software applications, web pages within a web browser, the shells of operating systems (OS), embedded systems, as well as numerous games. A scripting language can be viewed as a domain-specific language for a particular environment; in the case of scripting an application, this is also known as an extension language. Scripting languages are also sometimes referred to as very high-level programming languages, as they operate at a high level of abstraction, or as control languages, particularly for job control languages on mainframes.
+The term "scripting language" is also used loosely to refer to dynamic high-level general-purpose language, such as Perl,[1] Tcl, and Python,[2] with the term "script" often used for small programs (up to a few thousand lines of code) in such languages, or in domain-specific languages such as the text-processing languages sed and AWK. Some of these languages were originally developed for use within a particular environment, and later developed into portable domain-specific or general-purpose languages. Conversely, many general-purpose languages have dialects that are used as scripting languages. This article discusses scripting languages in the narrow sense of languages for a specific environment;
+The spectrum of scripting languages ranges from very small and highly domain-specific languages to general-purpose programming languages used for scripting. Standard examples of scripting languages for specific environments include: Bash, for the Unix or Unix-like operating systems; ECMAScript (JavaScript), for web browsers; and Visual Basic for Applications, for Microsoft Office applications. Lua is a language designed and widely used as an extension language. Python is a general-purpose language that is also commonly used as an extension language, while ECMAScript is still primarily a scripting language for web browsers, but is also used as a general-purpose language. The Emacs Lisp dialect of Lisp (for the Emacs editor) and the Visual Basic for Applications dialect of Visual Basic are examples of scripting language dialects of general-purpose languages. Some game systems, notably the Second Life virtual world and the Trainz franchise of Railroad simulators have been extensively extended in functionality by scripting extensions. In other games like Wesnoth, the variety of actual games played by players are scripts written by other users.
+
+
+
+Contents
+
+
+1 Characteristics
+2 History
+3 Types of scripting languages
+
+3.1 Glue languages
+3.2 Job control languages and shells
+3.3 GUI scripting
+3.4 Application-specific languages
+3.5 Extension/embeddable languages
+
+
+4 See also
+5 References
+6 Further reading
+7 External links
+
+
+
+Characteristics[edit]
+In principle any language can be used as a scripting language, given libraries or bindings for a specific environment. Formally speaking, "scripting" is a property of the primary implementations and uses of a language, hence the ambiguity about whether a language "is" a scripting language for languages with multiple implementations. However, many languages are not very suited for use as scripting languages and are rarely if ever used as such.
+Typically scripting languages are intended to be very fast to learn and write in, either as short source code files or interactively in a read–eval–print loop (REPL, language shell).[3] This generally implies relatively simple syntax and semantics; typically a "script" (code written in the scripting language) is executed from start to finish, as a "script", with no explicit entry point.
+For example, it is uncommon to use Java as a scripting language because of its lengthy syntax and rules about which classes exist in which files, and it is not directly possible to execute Java interactively, because source files can only contain definitions that must be invoked externally by a host application or application launcher. In contrast, in Python it is possible to define some functions in a single file, or to avoid functions altogether and write in an imperative programming style, or even to use it interactively.
+A scripting language is usually interpreted from source code or bytecode.[4] By contrast, the software environment the scripts are written for is typically written in a compiled language and distributed in machine code form.
+Scripting languages may be designed for use by end users of a program – end-user development – or may be only for internal use by developers, so they can write portions of the program in the scripting language. Scripting languages typically use abstraction, a form of information hiding, to spare users the details of internal variable types, data storage, and memory management.
+Scripts are often created or modified by the person executing them,[5] but they are also often distributed, such as when large portions of games are written in a scripting language.
+History[edit]
+Early mainframe computers (in the 1950s) were non-interactive, instead using batch processing. IBM's Job Control Language (JCL) is the archetype of languages used to control batch processing.[6]
+The first interactive shells were developed in the 1960s to enable remote operation of the first time-sharing systems, and these used shell scripts, which controlled running computer programs within a computer program, the shell. Calvin Mooers in his TRAC language is generally credited with inventing command substitution, the ability to embed commands in scripts that when interpreted insert a character string into the script.[7] Multics calls these active functions.[8] Louis Pouzin wrote an early processor for command scripts called RUNCOM for CTSS around 1964. Stuart Madnick at MIT wrote a scripting language for IBM's CP/CMS in 1966. He originally called this processor COMMAND, later named EXEC.[9] Multics included an offshoot of CTSS RUNCOM, also called RUNCOM.[10] EXEC was eventually replaced by EXEC 2 and REXX.
+Languages such as Tcl and Lua were specifically designed as general purpose scripting languages that could be embedded in any application. Other languages such as Visual Basic for Applications (VBA) provided strong integration with the automation facilities of an underlying system. Embedding of such general purpose scripting languages instead of developing a new language for each application also had obvious benefits, relieving the application developer of the need to code a language translator from scratch and allowing the user to apply skills learned elsewhere.
+Some software incorporates several different scripting languages. Modern web browsers typically provide a language for writing extensions to the browser itself, and several standard embedded languages for controlling the browser, including JavaScript (a dialect of ECMAScript) or XUL.
+Types of scripting languages[edit]
+Glue languages[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (March 2007)
+
+
+Scripting is often contrasted with system programming, as in Ousterhout's dichotomy or "programming in the large and programming in the small". In this view, scripting is particularly glue code, connecting system components, and a language specialized for this purpose is a glue language. Pipelines and shell scripting are archetypal examples of glue languages, and Perl was initially developed to fill this same role. Web development can be considered a use of glue languages, interfacing between a database and web server. But if a substantial amount of logic is written in script, it is better characterized as simply another software component, not "glue".
+A glue language is a programming language (usually an interpreted scripting language) that is designed or suited for writing glue code – code to connect software components. They are especially useful for writing and maintaining:
+
+Custom commands for a command shell
+Smaller programs than those that are better implemented in a compiled language
+"Wrapper" programs for executables, like a batch file that moves or manipulates files and does other things with the operating system before or after running an application like a word processor, spreadsheet, data base, assembler, compiler, etc.
+Scripts that may change
+Rapid prototypes of a solution eventually implemented in another, usually compiled, language.
+
+Glue language examples:
+
+
+
+
+AppleScript
+ColdFusion
+DCL
+Embeddable Common Lisp
+ecl
+Erlang
+JCL
+JScript and JavaScript
+Lua
+
+
+
+
+
+m4
+Perl
+PHP
+Pure
+Python
+Rebol
+Rexx
+Ruby
+
+
+
+
+
+Scheme
+Tcl
+Unix Shell scripts (ksh, csh, bash, sh and others)
+VBScript
+Windows PowerShell
+XSLT
+
+
+
+
+Macro languages exposed to operating system or application components can serve as glue languages. These include Visual Basic for Applications, WordBasic, LotusScript, CorelScript, PerfectScript, Hummingbird Basic, QuickScript, SaxBasic, and WinWrap Basic. Other tools like awk can also be considered glue languages, as can any language implemented by an Windows Script Host engine (VBScript, JScript and VBA by default in Windows and third-party engines including implementations of Rexx, Perl, Tcl, Python, XSLT, Ruby, Delphi, &amp;c). A majority of applications can access and use operating system components via the object models or its own functions.
+Other devices like programmable calculators may also have glue languages; the operating systems of PDAs such as Windows CE may have available native or third-party macro tools that glue applications together, in addition to implementations of common glue languages—including Windows NT, MS-DOS and some Unix shells, Rexx, PHP, and Perl. Depending upon the OS version, WSH and the default script engines (VBScript and JScript) are available.
+Programmable calculators can be programmed in glue languages in three ways. For example, the Texas Instruments TI-92, by factory default can be programmed with a command script language. Inclusion of the scripting and glue language Lua in the TI-NSpire series of calculators could be seen as a successor to this. The primary on-board high-level programming languages of most graphing calculators (most often Basic variants, sometimes Lisp derivatives, and more uncommonly, C derivatives) in many cases can glue together calculator functions—such as graphs, lists, matrices, etc. Third-party implementations of more comprehensive Basic version that may be closer to variants listed as glue languages in this article are available—and attempts to implement Perl, Rexx, or various operating system shells on the TI and HP graphing calculators are also mentioned. PC-based C cross-compilers for some of the TI and HP machines used in conjunction with tools that convert between C and Perl, Rexx, awk, as well as shell scripts to Perl, VBScript to and from Perl make it possible to write a program in a glue language for eventual implementation (as a compiled program) on the calculator.
+Job control languages and shells[edit]
+Main article: Shell script
+A major class of scripting languages has grown out of the automation of job control, which relates to starting and controlling the behavior of system programs. (In this sense, one might think of shells as being descendants of IBM's JCL, or Job Control Language, which was used for exactly this purpose.) Many of these languages' interpreters double as command-line interpreters such as the Unix shell or the MS-DOS COMMAND.COM. Others, such as AppleScript offer the use of English-like commands to build scripts.
+GUI scripting[edit]
+With the advent of graphical user interfaces, a specialized kind of scripting language emerged for controlling a computer. These languages interact with the same graphic windows, menus, buttons, and so on that a human user would. They do this by simulating the actions of a user. These languages are typically used to automate user actions. Such languages are also called "macros" when control is through simulated key presses or mouse clicks, as well as tapping or pressing on a touch-activated screen.
+These languages could in principle be used to control any GUI application; but, in practice their use is limited because their use needs support from the application and from the operating system. There are a few exceptions to this limitation. Some GUI scripting languages are based on recognizing graphical objects from their display screen pixels. These GUI scripting languages do not depend on support from the operating system or application.
+Application-specific languages[edit]
+Many large application programs include an idiomatic scripting language tailored to the needs of the application user. Likewise, many computer game systems use a custom scripting language to express the programmed actions of non-player characters and the game environment. Languages of this sort are designed for a single application; and, while they may superficially resemble a specific general-purpose language (e.g. QuakeC, modeled after C), they have custom features that distinguish them. Emacs Lisp, while a fully formed and capable dialect of Lisp, contains many special features that make it most useful for extending the editing functions of Emacs. An application-specific scripting language can be viewed as a domain-specific programming language specialized to a single application.
+Extension/embeddable languages[edit]
+A number of languages have been designed for the purpose of replacing application-specific scripting languages by being embeddable in application programs. The application programmer (working in C or another systems language) includes "hooks" where the scripting language can control the application. These languages may be technically equivalent to an application-specific extension language but when an application embeds a "common" language, the user gets the advantage of being able to transfer skills from application to application. A more generic alternative is simply to provide a library (often a C library) that a general-purpose language can use to control the application, without modifying the language for the specific domain.
+JavaScript began as and primarily still is a language for scripting inside web browsers; however, the standardization of the language as ECMAScript has made it popular as a general purpose embeddable language. In particular, the Mozilla implementation SpiderMonkey is embedded in several environments such as the Yahoo! Widget Engine. Other applications embedding ECMAScript implementations include the Adobe products Adobe Flash (ActionScript) and Adobe Acrobat (for scripting PDF files).
+Tcl was created as an extension language but has come to be used more frequently as a general purpose language in roles similar to Python, Perl, and Ruby. On the other hand, Rexx was originally created as a job control language, but is widely used as an extension language as well as a general purpose language. Perl is a general-purpose language, but had the Oraperl (1990) dialect, consisting of a Perl 4 binary with Oracle Call Interface compiled in. This has however since been replaced by a library (Perl Module), DBD::Oracle.[11][12]
+Other complex and task-oriented applications may incorporate and expose an embedded programming language to allow their users more control and give them more functionality than can be available through a user interface, no matter how sophisticated. For example, Autodesk Maya 3D authoring tools embed the MEL scripting language, or Blender which uses Python to fill this role.
+Some other types of applications that need faster feature addition or tweak-and-run cycles (e.g. game engines) also use an embedded language. During the development, this allows them to prototype features faster and tweak more freely, without the need for the user to have intimate knowledge of the inner workings of the application or to rebuild it after each tweak (which can take a significant amount of time). The scripting languages used for this purpose range from the more common and more famous Lua and Python to lesser-known ones such as AngelScript and Squirrel.
+Ch is another C compatible scripting option for the industry to embed into C/C++ application programs.
+See also[edit]
+
+List of scripting languages
+Architecture description language
+Authoring language
+Build automation
+Configuration file
+Interpreter directive / Shebang (Unix)
+Templating language
+
+References[edit]
+
+
+^ Sheppard, Doug (2000-10-16). "Beginner's Introduction to Perl". dev.perl.org. Retrieved 2011-01-08.&#160;
+^ Programming is Hard, Let's Go Scripting..., Larry Wall, December 6, 2007
+^ Hey, Tony; Pápay, Gyuri (2014). The Computing Universe: A Journey through a Revolution. Cambridge University Press. p.&#160;76. ISBN&#160;978-1-31612322-5, "A major characteristic of modern scripting languages is their interactivity, sometimes referred to as a REPL programming environment. ... The characteristics of ease of use and immediate execution with a REPL environment are sometimes taken as the definition of a scripting language."&#160;
+^ Brown, Vicki. "Scripting Languages". Retrieved 2009-07-22.&#160;
+^ Loui, Ronald (2008). "In praise of scripting". IEEE Computer.&#160;
+^ IBM Corporation (1967). IBM System/360 Operating System Job Control Language (C28-6529-4) (PDF).&#160;
+^ Mooers, Calvin. "TRAC, A Procedure-Describing Language for the Reactive Typewriter". Archived from the original on 2001-04-25. Retrieved Mar 9, 1012.&#160; Check date values in: |access-date= (help)
+^ Van Vleck(ed.), Thomas. "Multics Glossary -A- (active function)". Retrieved Mar 9, 2012.&#160;
+^ Varian, Melinda. "VM AND THE VM COMMUNITY: Past, Present, and Future" (PDF). Retrieved Mar 9, 2012.&#160;
+^ Van Vleck, Thomas(ed.). "Multics Glossary -R- (RUNCOM)". Retrieved Mar 9, 2012.&#160;
+^ Oraperl, CPAN]
+^ Perl, Underground Oracle FAQ
+
+
+Further reading[edit]
+
+Barron, David William (2000). The World of Scripting Languages. ISBN&#160;0-471-99886-9.&#160;
+
+External links[edit]
+
+Patterns for Scripted Applications at the Wayback Machine (archived October 10, 2004)
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Scripting_language&amp;oldid=690606950"					
+				Categories: Scripting languagesProgramming paradigmsHidden categories: CS1 errors: datesArticles needing additional references from March 2007All articles needing additional referencesPages using columns with the default column width				
+							
+		
+		
+			

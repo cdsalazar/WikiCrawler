@@ -1,0 +1,288 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Common Lisp Object System
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For other uses, see Clos (disambiguation).
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (August 2012)
+
+
+The Common Lisp Object System (CLOS) is the facility for object-oriented programming which is part of ANSI Common Lisp. CLOS is a powerful dynamic object system which differs radically from the OOP facilities found in more static languages such as C++ or Java. CLOS was inspired by earlier Lisp object systems such as MIT Flavors and CommonLOOPS, although it is more general than either. Originally proposed as an add-on, CLOS was adopted as part of the ANSI standard for Common Lisp and has been adapted into other Lisp dialects like EuLisp or Emacs Lisp.[1]
+
+
+
+Contents
+
+
+1 Features
+2 Metaobject Protocol
+3 Influences from older Lisp-based object systems
+4 References
+5 Literature
+
+
+
+Features[edit]
+The basic building blocks of CLOS are classes, instances of classes, generic functions and their methods. CLOS provides macros to define those: defclass, defgeneric and defmethod. Instances are created with the function make-instance.
+Classes can have multiple superclasses, a list of slots (member variables in C++/Java parlance) and a special meta class. Slots can be allocated by class (all instances of a class share the slot) or by instance. Each slot has a name and the value of a slot can be accessed by that name using the function slot-value. Additionally special generic functions can be defined to write or read values of slots. Each slot in a CLOS class must have a unique name.
+CLOS is a multiple dispatch system. This means that methods can be specialized upon any or all of their required arguments. Most OO languages are single-dispatch, meaning that methods are only specialized on the first argument. Another unusual feature is that methods do not "belong" to classes; classes do not provide a namespace for generic functions or methods. Methods are defined separately from classes, and they have no special access (e.g. "this", "self", or "protected") to class slots.
+Methods in CLOS are grouped into generic functions. A generic function is an object which is callable like a function and which associates a collection of methods with a shared name and argument structure, each specialized for different arguments. Since Common Lisp provides non-CLOS classes for structures and built-in data types (numbers, strings, characters, symbols, ...), CLOS dispatch works also with these non-CLOS classes. CLOS also supports dispatch over individual objects (eql specializers). CLOS does not by default support dispatch over all Common Lisp data types (for example dispatch does not work for fully specialized array types or for types introduced by deftype). However, most Common Lisp implementations provide a metaobject protocol which allows generic functions to provide application specific specialization and dispatch rules.
+Dispatch in CLOS is also different from most OO languages:
+
+Given a list of arguments, a list of applicable methods is determined.
+This list is sorted according to the specificity of their parameter specializers.
+Selected methods from this list are then combined into an effective method using the method combination used by the generic function.
+The effective method is then called with the original arguments.
+
+This dispatch mechanism works at runtime. Adding or removing methods thus may lead to changed effective methods (even when the generic function is called with the same arguments) at runtime. Changing the method combination also may lead to different effective methods.
+For example,
+
+
+; declare the common argument structure prototype
+(defgeneric f (x y)) 
+
+; define an implementation for (f integer t), where t matches all types
+(defmethod f ((x integer) y) 1) 
+
+(f 1 2.0) =&gt; 1
+
+; define an implementation for (f integer real)
+(defmethod f ((x integer) (y real)) 2) 
+
+(f 1 2.0) =&gt; 2 ; dispatch changed at runtime
+
+Like the OO systems in most dynamic languages, CLOS does not enforce encapsulation. Any slot can be accessed using the slot-value function or via (optionally auto-generated) accessor methods. To access it via slot-value you have to know the name of the slot. CL programmers use the language's package facility to declare which functions or data structures are intended for export.
+Apart from normal ("primary") methods, there also are :before, :after, and :around "auxiliary" methods. The former two are invoked prior to, or after the primary method, in a particular order based on the class hierarchy. An :around method can control whether the primary method is executed at all. Additionally, the programmer can specify whether all possible primary methods along the class hierarchy should be called or just the one providing the closest match.
+The Standard Method-Combination provides above primary, before, after and around methods. There are other Method-Combinations with other method types. New (both simple and complex) Method-Combinations and method types can be defined.
+CLOS allows multiple inheritance. When the default order in which methods are executed in multiple inheritance is not correct, the programmer may resolve the diamond inheritance problems by specifying the order of method combinations.
+CLOS is dynamic, meaning that not only the contents, but also the structure of its objects can be modified at runtime. CLOS supports changing class definitions on-the-fly (even when instances of the class in question already exist) as well as changing the class membership of a given instance through the change-class operator. CLOS also allows one to add, redefine and remove methods at runtime. The Circle-Ellipse Problem is readily solved in CLOS, and most OOP design patterns either disappear or are qualitatively simpler.[2]
+CLOS is not a prototype language: Classes must be defined before objects can be instantiated as members of that class.
+Metaobject Protocol[edit]
+Outside of the ANSI Common Lisp standard, there is a widely implemented extension to CLOS called the Metaobject Protocol (MOP). The MOP defines a standard interface to the underpinnings of the CLOS implementation, treating classes, slot-descriptions, generic-functions and methods themselves as instances of metaclasses, and allows the definition of new metaclasses and the modification of all CLOS behavior. The flexibility of the CLOS MOP prefigures aspect-oriented programming, which was later developed by some of the same engineers, such as Gregor Kiczales. The MOP defines the behavior of the whole object system by a set of protocols. These are defined in terms of CLOS. Thus it is possible to create new object-systems by extending or changing the provided CLOS functionality. The Book The Art of the Metaobject Protocol describes the use and implementation of the CLOS MOP.
+The various Common Lisp implementations have slightly different support for the Meta-Object Protocol. The Closer[3] project aims to provide the missing features.
+Influences from older Lisp-based object systems[edit]
+Flavors (and its successor New Flavors) was the object system on the MIT Lisp Machine. Large parts of the Lisp Machine operating systems and many applications for it use Flavors or New Flavors. Flavors introduced multiple inheritance and mixins, amongst other features. Flavors is mostly obsolete, though implementations for Common Lisp do exist. Flavors was using the message passing paradigm. New Flavors introduced generic functions.
+CommonLoops was the successor of LOOPS (from Xerox Interlisp-D). CommonLoops was implemented for Common Lisp. A portable implementation called Portable CommonLoops (PCL) was the first implementation of CLOS. PCL is widely ported and still provides the base for the CLOS implementation of several Common Lisp implementations. PCL is implemented mostly in portable Common Lisp with only a few system dependent parts.
+References[edit]
+
+
+^ "CLOS is a standard. Multiple vendors supply CLOS. CLOS (or parts of it) is being used to add object-orientation to other Lisp dialects such as EuLisp or Emacs Lisp." pg 110 of Veitch 1998
+^ In the Design Patterns in Dynamic Languages slides, Peter Norvig presents his findings that 16 out of 23 design patterns taken from various textbooks are either "invisible or simpler" in Dylan or Common Lisp than in C++.
+^ Closer Project: Closer to MOP
+
+
+
+
+"CommonLoops: merging Lisp and object-oriented programming", by Daniel G. Bobrow, Kenneth Kahn, Gregor Kiczales, Larry Masinter, Mark Stefik, Frank Zdybel. 1986, Portland, Oregon, United States. Pages 17 - 29 of the Conference on Object-oriented Programming Systems Languages and Applications, ISSN 0362-1340.
+"A History and Description of CLOS", by Jim Veitch. Pages 107-158 of Handbook of Programming Languages, Volume IV: Functional and Logic Programming Languages, ed. Peter H. Salus. 1998 (1st edition), Macmillan Technical Publishing; ISBN 1-57870-011-6
+
+
+Literature[edit]
+
+Sonya Keene, Object-Oriented Programming in Common Lisp: A Programmer's Guide to CLOS, 1988, Addison-Wesley. ISBN 0-201-17589-4
+Gregor Kiczales, Jim des Rivieres, and Daniel G. Bobrow, The Art of the Metaobject Protocol, 1991, MIT Press. ISBN 0-262-61074-4
+Jo A. Lawless and Molly M. Miller, Understanding CLOS: the Common Lisp Object System, 1991, Digital Press, ISBN 1-55558-064-5
+Andreas Paepcke, Object-Oriented Programming: the CLOS Perspective, 1993, The MIT Press. ISBN 0-262-16136-2
+The Common Lisp Object System: An Overview by Richard P. Gabriel and Linda DeMichiel provides a good introduction to the motivation for defining classes by means of generic functions.
+Fundamentals of CLOS by Nick Levine provides a step-by-step exposure to the implementation of OO concepts in CLOS, and how to utilize them. It is intended for anybody with a basic knowledge of Lisp or Scheme.
+Common Lisp HyperSpec, Chapter 7: Objects
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Common Lisp
+
+
+
+
+
+
+Implementations
+
+
+
+Allegro CL
+ABCL
+CLforJava
+CLISP
+Clozure CL
+CMUCL
+Corman Common Lisp
+ECL
+GCL
+LispWorks
+Macintosh Common Lisp
+MKCL
+Mocl
+Movitz
+Poplog
+Scieneer CL
+SBCL
+Symbolics Common Lisp
+
+
+
+
+
+
+
+
+Software
+
+
+
+
+Libraries
+
+
+
+AllegroCache
+AllegroServe
+ASDF
+Caveman2
+CLiki
+CLIM
+CLSQL
+CL-HTTP
+CLX
+Ironclad
+SymbolicWeb
+UnCommon Web
+Weblocks
+
+
+
+
+
+
+
+
+Applications
+
+
+
+Common Lisp Music
+Common Music Notation
+ICAD
+Mirai
+Maxima
+OpenMusic
+Stumpwm
+SiteGrinder
+
+
+
+
+
+
+
+
+Development
+environments
+
+
+
+Climacs
+Hemlock
+SLIME
+
+
+
+
+
+
+
+
+
+
+
+Publications
+
+
+
+Common Lisp the Language
+Paradigms of AI Programming
+The Art of the Metaobject Protocol
+On Lisp
+Practical Common Lisp
+Object-Oriented Programming in Common Lisp
+
+
+
+
+
+
+
+
+Design committee
+
+
+
+X3J13
+Guy L. Steele, Jr.
+
+
+
+
+
+
+
+
+Other
+
+
+
+CLOS
+Common Lisp HyperSpec
+CommonLoops
+Greenspun's tenth rule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Common_Lisp_Object_System&amp;oldid=680562851"					
+				Categories: Common LispObject-oriented programmingLisp (programming language)Hidden categories: Articles lacking in-text citations from August 2012All articles lacking in-text citations				
+							
+		
+		
+			

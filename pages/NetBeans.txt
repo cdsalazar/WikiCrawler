@@ -1,0 +1,1337 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			NetBeans
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article relies too much on references to primary sources. Please improve this article by adding secondary or tertiary sources. (March 2015)
+
+
+
+
+
+
+
+This article's lead section may not adequately summarize key points of its contents. Please consider expanding the lead to provide an accessible overview of all important aspects of the article. Please discuss this issue on the article's talk page. (March 2015)
+
+
+
+
+
+
+
+
+
+NetBeans IDE
+
+
+
+
+
+NetBeans IDE 7.4 in Mac OS X
+
+
+
+Developer(s)
+Oracle Corporation
+
+
+Stable release
+8.1 / November&#160;4, 2015; 18 days ago&#160;(2015-11-04)[1]
+
+
+Written in
+Java
+
+
+Operating system
+Windows, Mac OS X, Linux, Solaris; feature-limited OS independent version available
+
+
+Platform
+Java SE
+
+
+Available in
+24 languages; see § Localization
+
+
+Type
+Java IDE
+
+
+License
+CDDL or GPL2; "certain source files" allow classpath exception[2]
+
+
+Website
+netbeans.org
+
+
+NetBeans is a software development platform written in Java. The NetBeans Platform allows applications to be developed from a set of modular software components called modules. Applications based on the NetBeans Platform, including the NetBeans integrated development environment (IDE), can be extended by third party developers.[3]
+The NetBeans IDE is primarily intended for development in Java, but also supports other languages, in particular PHP, C/C++ and HTML5.[4]
+NetBeans is cross-platform and runs on Microsoft Windows, Mac OS X, Linux, Solaris and other platforms supporting a compatible JVM.
+The NetBeans Team actively support the product and seek feature suggestions from the wider community. Every release is preceded by a time for Community testing and feedback[5]
+
+
+
+Contents
+
+
+1 History
+
+1.1 Current versions
+
+
+2 NetBeans Platform
+3 NetBeans IDE
+4 Integrated modules
+
+4.1 NetBeans Profiler
+4.2 GUI design tool
+4.3 NetBeans JavaScript editor
+
+
+5 NetBeans IDE Download Bundles
+
+5.1 NetBeans IDE Bundle for Web and Java EE
+5.2 NetBeans IDE Bundle for Java ME
+5.3 NetBeans IDE Bundle for PHP
+5.4 NetBeans IDE Complete Bundle
+5.5 Other NetBeans IDE Bundles
+
+
+6 Localization
+7 Related software
+8 See also
+9 References
+10 Further reading
+11 External links
+
+
+
+History[edit]
+
+
+NetBeans IDE Releases[6]
+
+
+Version
+Released
+
+
+3.5
+June 2003
+
+
+3.6
+April 2004
+
+
+4.0
+December 2004
+
+
+4.1
+May 2005
+
+
+5.0
+January 2006
+
+
+5.5
+October 30, 2006
+
+
+5.5.1
+May 24, 2007
+
+
+6.0
+December 3, 2007
+
+
+6.1
+April 28, 2008
+
+
+6.5
+November 20, 2008
+
+
+6.5.1
+March 16, 2009
+
+
+6.7
+June 29, 2009
+
+
+6.7.1
+July 27, 2009
+
+
+6.8
+December 10, 2009
+
+
+6.9
+June 15, 2010
+
+
+6.9.1
+August 4, 2010
+
+
+7.0
+April 19, 2011
+
+
+7.0.1
+August 1, 2011
+
+
+7.1
+January 5, 2012
+
+
+7.1.1
+February 29, 2012
+
+
+7.1.2
+April 24, 2012
+
+
+7.2
+July 17, 2012
+
+
+7.3
+February 21, 2013
+
+
+7.3.1
+June 12, 2013
+
+
+7.4
+October 15, 2013
+
+
+8.0
+March 18, 2014
+
+
+8.0.1
+September 9, 2014
+
+
+8.0.2
+November 28, 2014
+
+
+8.1
+November 4, 2015
+
+
+
+NetBeans began in 1996 as Xelfi (word play on Delphi),[7][8] a Java IDE student project under the guidance of the Faculty of Mathematics and Physics at Charles University in Prague. In 1997 Roman Staněk formed a company around the project and produced commercial versions of the NetBeans IDE until it was bought by Sun Microsystems in 1999. Sun open-sourced the NetBeans IDE in June of the following year. Since then, the NetBeans community has continued to grow.[9] In 2010, Sun (and thus NetBeans) was acquired by Oracle.
+Current versions[edit]
+NetBeans IDE 6.0 introduced support for developing IDE modules and rich client applications based on the NetBeans platform, a Java Swing GUI builder (formerly known as "Project Matisse"), improved CVS support, WebLogic 9 and JBoss 4 support, and many editor enhancements. NetBeans 6 is available in official repositories of major Linux distributions.
+NetBeans IDE 6.5, released in November 2008, extended the existing Java EE features (including Java Persistence support, EJB 3 and JAX-WS). Additionally, the NetBeans Enterprise Pack supports development of Java EE 5 enterprise applications, including SOA visual design tools, XML schema tools, web services orchestration (for BPEL), and UML modeling. The NetBeans IDE Bundle for C/C++ supports C/C++ and FORTRAN development.
+NetBeans IDE 6.8 is the first IDE to provide complete support of Java EE 6 and the GlassFish Enterprise Server v3. Developers hosting their open-source projects on kenai.com additionally benefit from instant messaging and issue tracking integration and navigation right in the IDE, support for web application development with PHP 5.3 and the Symfony framework, and improved code completion, layouting, hints and navigation in JavaFX projects.
+NetBeans IDE 6.9, released in June 2010, added support for OSGi, Spring Framework 3.0, Java EE dependency injection (JSR-299), Zend Framework for PHP, and easier code navigation (such as "Is Overridden/Implemented" annotations), formatting, hints, and refactoring across several languages.
+NetBeans IDE 7.0 was released in April 2011. On August 1, 2011, the NetBeans Team released NetBeans IDE 7.0.1, which has full support for the official release of the Java SE 7 platform.[10]
+NetBeans IDE 7.3 was released in February 2013 which added support for HTML5 and web technologies.[11]
+NetBeans IDE 7.4 was released on October 15, 2013.
+NetBeans IDE 8.0 was released on March 18, 2014.
+NetBeans has a roadmap document for release plans.[12]
+NetBeans Platform[edit]
+
+
+
+
+NetBeans screenshot
+
+
+The NetBeans Platform is a framework for simplifying the development of Java Swing desktop applications. The NetBeans IDE bundle for Java SE contains what is needed to start developing NetBeans plugins and NetBeans Platform based applications; no additional SDK is required.
+Applications can install modules dynamically. Any application can include the Update Center module to allow users of the application to download digitally signed upgrades and new features directly into the running application. Reinstalling an upgrade or a new release does not force users to download the entire application again.
+The platform offers reusable services common to desktop applications, allowing developers to focus on the logic specific to their application. Among the features of the platform are:
+
+User interface management (e.g. menus and toolbars)
+User settings management
+Storage management (saving and loading any kind of data)
+Window management
+Wizard framework (supports step-by-step dialogs)
+NetBeans Visual Library
+Integrated development tools
+
+NetBeans IDE is a free, open-source, cross-platform IDE with built-in-support for Java Programming Language.
+NetBeans IDE[edit]
+NetBeans IDE is an open-source integrated development environment. NetBeans IDE supports development of all Java application types (Java SE (including JavaFX), Java ME, web, EJB and mobile applications) out of the box. Among other features are an Ant-based project system, Maven support, refactorings, version control (supporting CVS, Subversion, Git, Mercurial and Clearcase).
+Modularity: All the functions of the IDE are provided by modules. Each module provides a well defined function, such as support for the Java language, editing, or support for the CVS versioning system, and SVN. NetBeans contains all the modules needed for Java development in a single download, allowing the user to start working immediately. Modules also allow NetBeans to be extended. New features, such as support for other programming languages, can be added by installing additional modules. For instance, Sun Studio, Sun Java Studio Enterprise, and Sun Java Studio Creator from Sun Microsystems are all based on the NetBeans IDE.
+License: From July 2006 through 2007, NetBeans IDE was licensed under Sun's Common Development and Distribution License (CDDL), a license based on the Mozilla Public License (MPL). In October 2007, Sun announced that NetBeans would henceforth be offered under a dual license of the CDDL and the GPL version 2 licenses, with the GPL linking exception for GNU Classpath[13]
+Integrated modules[edit]
+These modules are part of the NetBeans IDE.
+NetBeans Profiler[edit]
+The NetBeans Profiler[14] is a tool for the monitoring of Java applications: It helps developers find memory leaks and optimize speed. Formerly downloaded separately, it is integrated into the core IDE since version 6.0.
+The Profiler is based on a Sun Laboratories research project that was named JFluid. That research uncovered specific techniques that can be used to lower the overhead of profiling a Java application. One of those techniques is dynamic bytecode instrumentation, which is particularly useful for profiling large Java applications. Using dynamic bytecode instrumentation and additional algorithms, the NetBeans Profiler is able to obtain runtime information on applications that are too large or complex for other profilers. NetBeans also support Profiling Points that let you profile precise points of execution and measure execution time.
+
+
+
+
+NetBeans GUI Builder
+
+
+GUI design tool[edit]
+Formerly known as project Matisse, the GUI design-tool enables developers to prototype and design Swing GUIs by dragging and positioning GUI components.[15]
+The GUI builder has built-in support for JSR 295 (Beans Binding technology), but the support for JSR 296 (Swing Application Framework) was removed in 7.1.
+NetBeans JavaScript editor[edit]
+The NetBeans JavaScript editor provides extended support for JavaScript, Ajax, and CSS.[16][17]
+JavaScript editor features comprise syntax highlighting, refactoring, code completion for native objects and functions, generation of JavaScript class skeletons, generation of Ajax callbacks from a template; and automatic browser compatibility checks.
+CSS editor features comprise code completion for styles names, quick navigation through the navigator panel, displaying the CSS rule declaration in a List View and file structure in a Tree View, sorting the outline view by name, type or declaration order (List &amp; Tree), creating rule declarations (Tree only), refactoring a part of a rule name (Tree only).
+The NetBeans 7.4 and later uses the new [Nashorn] JavaScript engine developed by Oracle.
+NetBeans IDE Download Bundles[edit]
+Users can choose to download NetBeans IDE bundles tailored to specific development needs. Users can also download and install all other features at a later date directly through the NetBeans IDE.
+NetBeans IDE Bundle for Web and Java EE[edit]
+The NetBeans IDE Bundle for Web &amp; Java EE[18] provides complete tools for all the latest Java EE 6 standards, including the new Java EE 6 Web Profile, Enterprise Java Beans (EJBs), servlets, Java Persistence API, web services, and annotations. NetBeans also supports the JSF 2.0 (Facelets), JavaServer Pages (JSP), Hibernate, Spring, and Struts frameworks, and the Java EE 5 and J2EE 1.4 platforms. It includes GlassFish and Apache Tomcat. Some of its features with javaEE includes
+
+Improved support for CDI, REST services and Java Persistence
+New support for Bean Validation
+Support for JSF component libraries, including bundled PrimeFaces library
+Improved editing for Expression Language in JSF, including code completion, refactoring and hints
+
+NetBeans IDE Bundle for Java ME[edit]
+The NetBeans IDE Bundle for Java ME is a tool for developing applications that run on mobile devices; generally mobile phones, but this also includes entry-level PDAs, and Java Card, among others.
+The NetBeans IDE comes bundled with the latest Java ME SDK 3.0 which supports both CLDC and CDC development. One can easily integrate third-party emulators for a robust testing environment. You can download other Java platforms, including the Java Card Platform 3.0, and register them in the IDE.
+NetBeans IDE Bundle for PHP[edit]
+NetBeans supports PHP since version 6.5. The bundle for PHP includes:
+
+syntax highlighting, code completion, occurrence highlighting, error highlighting, CVS version control
+semantic analysis with highlighting of parameters and unused local variables
+PHP code debugging with xdebug
+PHP Unit testing with PHPUnit and Selenium
+Code coverage
+Symfony framework support (since version 6.8)
+Zend Framework support (since version 6.9)
+Yii Framework support (since version 7.3)
+PHP 5.3 namespace and closure support (since version 6.8)
+Code Folding for Control Structures (since version 7.2 dev[19] )
+
+NetBeans IDE Complete Bundle[edit]
+Oracle also releases a version of NetBeans that includes all of the features of the above bundles. This bundle includes:
+
+NetBeans Base IDE
+Java SE, JavaFX
+Web and Java EE
+Java ME
+C/C++
+PHP (Version 6.5 and later)
+Groovy
+GlassFish
+Apache Tomcat
+
+Official Ruby support was removed with the release of 7.0
+Other NetBeans IDE Bundles[edit]
+Apart from the above-mentioned, a NetBeans IDE Bundle is also available for Python. NetBeans for Python is available as an "early access" download in an IDE bundle form and as a plugin for any NetBeans 6.5 IDE bundle as well. The Python bundle has been discontinued as of Netbeans 7.0.
+Localization[edit]
+NetBeans IDE is translated into the following languages:[20]
+
+Brazilian Portuguese (BR), as of 5.5[21]
+Japanese (JP), as of 3.4[22]
+Simplified Chinese (ZH)
+
+Community translations of the IDE are also available in the following languages:
+
+Community translations[23]
+
+Language
+Platform
+Java SE
+(IDE)
+All
+
+
+Afrikaans
+As of 6.9
+No
+No
+
+
+Albanian
+As of 5.5[24]
+No
+No
+
+
+Azerbaijani
+No
+No
+No
+
+
+Catalan
+As of 6.7.1[25]
+As of 6.7.1[25]
+As of 6.9.1[25]
+
+
+Czech
+As of 6.0[26]
+No
+No
+
+
+Dutch
+Yes
+Yes
+No
+
+
+Filipino
+As of 6.9
+No
+No
+
+
+French
+Yes
+Yes
+No
+
+
+Galician
+Yes
+Yes
+As of 6.8
+
+
+German
+As of 5.5[27]
+As of 5.5[27]
+No
+
+
+Greek
+As of 6.9
+No
+No
+
+
+Hindi
+As of 6.9
+No
+No
+
+
+Indonesian
+As of 5.5[24]
+No
+No
+
+
+Italian
+Yes
+Yes
+No
+
+
+Korean
+As of 5.0[28]
+As of 5.0[28]
+No
+
+
+Lithuanian
+As of 6.9
+No
+No
+
+
+Romanian
+As of 6.8
+No
+No
+
+
+Russian
+As of 5.0[28]
+As of 5.0[28]
+As of 6.9.1
+
+
+Serbian
+As of 6.9
+No
+No
+
+
+Spanish
+As of 5.5[27]
+As of 5.5[27]
+No
+
+
+Swedish
+Yes
+Yes
+No
+
+
+Traditional Chinese
+Yes
+Yes
+No
+
+
+Turkish
+Yes
+Yes
+No
+
+
+Vietnamese
+As of 6.9
+No
+No
+
+
+Related software[edit]
+Oracle Solaris Studio, formerly known as Sun Studio, is an IDE based on NetBeans, focusing on the programming languages C, C++, and Fortran.
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+Java portal
+
+
+
+
+Sun Microsystems
+NetBeans BlueJ Edition
+Comparison of integrated development environments
+Eclipse IDE
+
+References[edit]
+
+
+^ https://netbeans.org/community/releases/roadmap.html
+^ NetBeans IDE Dual License Header and License Notice. Netbeans.org (1989-04-01). Retrieved on 2013-07-18.
+^ platform: NetBeans Modules and Rich-Client Applications Learning Trail
+^ HTML5 Web Development Support
+^ "Experiences of NetBeans 7.4 testing". IDRsolutions. Retrieved 2013-09-12.&#160;
+^ NetBeans Release Roadmap. Netbeans.org. Retrieved on 2013-07-18.
+^ "original Xelfi homepage". Retrieved 2008-05-17.&#160;
+^ "Happy Birthday NetBeans - interview with Jaroslav "Yarda" Tulach". Netbeans.org. Retrieved 2008-05-17.&#160;
+^ "A Brief History of NetBeans". Netbeans.org. Retrieved 2008-05-17.&#160;
+^ "NetBeans IDE 7.0.1 Now Available for Download". Oracle. Retrieved 2011-09-11.&#160;
+^ "NetBeans IDE 7.3 Details". Oracle. Retrieved 2013-09-13.&#160;
+^ "Roadmap". Oracle. Retrieved 2013-09-11.&#160;
+^ Why dual license NetBeans faq
+^ "Profiler". Netbeans.org. Retrieved 2008-05-17.&#160;
+^ "Swing GUI Builder (formerly Project Matisse)". Netbeans.org. Retrieved 2008-05-17.&#160;
+^ "Javascript". Netbeans wiki. 2007-03-31. Retrieved 2008-04-19.&#160;
+^ "Java Web Applications". Netbeans.org. Retrieved 2008-04-19.&#160;
+^ "Web &amp; Java EE". Netbeans.org. Retrieved 2008-05-17.&#160;
+^ "Netbeans Bugzilla - Bug 186731". Retrieved 23 May 2012.&#160;
+^ NetBeans IDE 6.9.1 Release Notes and System Requirements. Netbeans.org. Retrieved on 2013-07-18.
+^ NetBeans.org Community News: NetBeans 5.5 Multilingual Release Candidate 1
+^ NetBeans.org Community News: Japanese version of NetBeans
+^ TFL10nCommunityStatus - NetBeans Wiki. Wiki.netbeans.org. Retrieved on 2013-07-18.
+^ a b NetBeans.org Community News: NetBeans 5.5 Platform in Albanian &amp; Indonesian!
+^ a b c Catalan localization group at OpenSolaris
+^ NetBeans.org Community News: Translate NetBeans 6 into Your Language!
+^ a b c d NetBeans.org Community News: Go Multilingual with NetBeans IDE 5.5.1!
+^ a b c d NetBeans.org Community News: Looking for NetBeans in Your Language?
+
+
+Further reading[edit]
+
+
+Boudreau, Tim; Glick, Jesse; Greene, Simeon; Woehr, Jack; Spurlin, Vaughn (October 15, 2002). "NetBeans: The Definitive Guide" (First ed.). O'Reilly Media. p.&#160;672. ISBN&#160;0-596-00280-7.&#160;
+Heffelfinger, David (October 31, 2008). "Java EE 5 Development with NetBeans 6" (First ed.). Packt Publishing. p.&#160;400. ISBN&#160;1-84719-546-6.&#160;
+Myatt, Adam (February 21, 2008). "Pro Netbeans IDE 6 Rich Client Platform Edition" (First ed.). Apress. p.&#160;491. ISBN&#160;1-59059-895-4.&#160;
+Keegan, Patrick; Champenois, Ludovic; Crawley, Gregory; Hunt, Charlie; Webster, Christopher (May 9, 2006). "NetBeans IDE Field Guide: Developing Desktop, Web, Enterprise, and Mobile Applications" (Second ed.). Prentice Hall. p.&#160;424. ISBN&#160;978-0-13-239552-6.&#160;
+Böck, Heiko (July 1, 2009). "The Definitive Guide to NetBeans Platform" (First ed.). Apress. p.&#160;450. ISBN&#160;1-4302-2417-7.&#160;
+Petri, Jürgen (August 11, 2010). "NetBeans Platform 6.9 Developer's Guide" (First ed.). Packt Publishing. p.&#160;288. ISBN&#160;1-84951-176-4.&#160;
+Böck, Heiko (December 28, 2011). "The Definitive Guide to NetBeans Platform 7" (First ed.). Apress. p.&#160;592. ISBN&#160;978-1-4302-4101-0.&#160;
+Wexbridge, Jason; Nyland, Walter (March 25, 2014). "NetBeans Platform for Beginners" (Second ed.). Leanpub. p.&#160;361.&#160;
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to:
+NetBeans (category)
+
+
+
+
+Official website
+Plugin Portal – NetBeans plugins from the community
+Geertjan Wielenga's NetBeans blog with daily articles and tips on NetBeans
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Free and open-source software
+
+
+
+
+
+
+General
+
+
+
+Alternative terms for free software
+Comparison of open source and closed source
+Comparison of source code hosting facilities
+Free software
+Free software project directories
+Gratis versus libre
+Long-term support
+Open-source software
+Open-source software development
+Outline
+SPDX
+
+
+
+
+
+
+
+
+Software packages
+
+
+
+Audio
+Bioinformatics
+Codecs
+Collaboration
+Configuration management
+Geophysics
+Health
+Mathematics
+Operating systems
+Programming languages
+Routing
+Statistics
+Television
+Video games
+Web applications
+
+Content management systems
+E-commerce
+
+
+Wireless drivers
+Word processors
+Android apps
+iOS apps
+Commercial
+Trademarked
+Formerly proprietary
+
+
+
+
+
+
+
+
+History
+
+
+
+BSD
+GNU
+Haiku
+Linux
+Mozilla
+
+Application Suite
+Firefox
+Thunderbird
+
+
+
+
+
+
+
+
+
+
+Community
+
+
+
+Free software movement
+Open-source movement
+Organizations
+Events
+
+
+
+
+
+
+
+
+Licenses
+
+
+
+Apache
+APSL
+Artistic
+Beerware
+Boost
+BSD
+CC0
+CDDL
+EPL
+GNU GPL
+GNU LGPL
+ISC
+MIT
+MPL
+Ms-PL/RL
+WTFPL
+zlib
+
+
+
+
+
+
+
+
+License types
+and standards
+
+
+
+Comparison of free and open-source software licenses
+Contributor License Agreement
+Copyfree
+Copyleft
+Debian Free Software Guidelines
+Definition of Free Cultural Works
+Free license
+The Free Software Definition
+The Open Source Definition
+Open-source license
+Permissive free software licence
+Public domain
+Viral license
+
+
+
+
+
+
+
+
+Challenges
+
+
+
+Binary blob
+Digital rights management
+Free and open-source graphics device driver
+Lack of wireless driver support
+Hardware restrictions
+License proliferation
+Mozilla software rebranding
+Proprietary software
+SCO–Linux controversies
+Secure boot
+Software patents
+Software security
+Trusted Computing
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+The Cathedral and the Bazaar
+Forking
+Linux distribution
+Microsoft Open Specification Promise
+Revolution OS
+
+
+
+
+
+
+
+
+
+
+
+ Book
+ Category
+ Commons
+ Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for C and C++
+
+
+
+
+
+
+Open source
+
+
+
+Anjuta
+Code::Blocks
+CodeLite
+Dev-C++
+Eclipse
+Geany
+GNAT Programming Studio
+KDevelop
+Kuzya
+MonoDevelop
+NetBeans
+QDevelop
+Qt Creator
+Ultimate++
+wxDev-C++
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Pelles C
+Oracle Solaris Studio (previously called Sun Studio)
+Visual Studio Express
+Xcode
+
+
+
+
+
+
+
+
+Retail
+
+
+
+C++Builder
+CodeWarrior
+IBM VisualAge
+Visual Studio
+SlickEdit
+
+
+
+
+
+
+
+
+
+
+
+&#160;Category
+ Comparison
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sun Microsystems (acquired by Oracle Corp, 2010)
+
+
+
+
+
+
+People
+
+
+
+Bill Joy
+Andy Bechtolsheim
+Scott McNealy
+Vinod Khosla
+List of notable employees
+
+
+
+
+
+
+
+
+Hardware
+
+
+
+Sun-1
+Sun-2
+Sun-3
+Sun386i
+Sun-4
+SPARCstation
+Netra
+Ultra
+Enterprise
+Sun Blade
+Sun Fire
+SPARC Enterprise
+SPARC
+JavaStation
+Sun Ray
+Sun Modular Datacenter
+more...
+
+
+
+
+
+
+
+
+Software
+
+
+
+SunOS
+Solaris
+NIS (+)
+NFS
+ZFS
+SunView
+NeWS
+OpenWindows
+Java Desktop System
+Sun Studio
+Java
+StarOffice
+iPlanet/Sun ONE/Java Enterprise System
+Sun Secure Global Desktop
+MySQL
+Sun xVM
+GlassFish
+more...
+
+
+
+
+
+
+
+
+Storage
+
+
+
+StorageTek
+Sun Open Storage
+QFS
+ZFS
+
+
+
+
+
+
+
+
+High-performance computing
+
+
+
+Sun Cloud
+Sun Constellation System
+Sun Visualization System
+Sun Grid Engine
+Lustre
+
+
+
+
+
+
+
+
+Research
+
+
+
+Sun Labs
+picoJava
+Fortress
+Project Looking Glass
+
+
+
+
+
+
+
+
+Education
+
+
+
+SCPs
+BlueJ
+
+
+
+
+
+
+
+
+Community
+
+
+
+Common Development and Distribution License
+Java Community Process
+NetBeans
+OpenOffice.org
+OpenSolaris
+OpenSPARC
+OpenJDK
+OSUM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Oracle Corporation
+
+
+
+
+
+
+Corporate directors
+
+
+
+Jeffrey Berg
+H. Raymond Bingham
+Michael Boskin
+Safra A. Catz
+Larry Ellison
+Héctor García-Molina
+Joseph Grundfest
+Jeffrey O. Henley
+Mark Hurd
+Jack F. Kemp
+Donald L. Lucas
+Naomi O. Seligman
+
+
+
+
+
+
+
+
+Acquisitions (list)
+
+
+
+Sun
+PeopleSoft
+Hyperion
+Siebel
+BEA
+JD Edwards
+RightNow
+Virtual Iron
+TimesTen
+Retek
+Sunopsis
+
+
+
+
+
+
+
+
+DBMS
+
+
+
+Oracle Database
+MySQL
+InnoDB
+Berkeley DB
+TimesTen
+Rdb
+Essbase
+
+
+
+
+
+
+
+
+Programming languages
+
+
+
+Java
+PL/SQL
+
+
+
+
+
+
+
+
+IDE
+
+
+
+JDeveloper
+Forms
+NetBeans
+Apex
+SQL Developer
+Solaris Studio
+
+
+
+
+
+
+
+
+Middleware
+
+
+
+Fusion Middleware
+WebCenter
+SOA Suite
+WebLogic Server
+Coherence
+Tuxedo
+GlassFish
+
+
+
+
+
+
+
+
+Operating systems
+
+
+
+Oracle Linux
+Oracle Solaris
+
+
+
+
+
+
+
+
+Computer hardware
+
+
+
+Sun Fire
+SPARC (T-Series, Enterprise)
+StorageTek
+
+
+
+
+
+
+
+
+Computer appliances
+
+
+
+Oracle Exadata
+Oracle Exalogic
+Oracle Exalytics
+Big Data Appliance
+
+
+
+
+
+
+
+
+Education and recognition
+
+
+
+Oracle Certification Program
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=NetBeans&amp;oldid=689496305"					
+				Categories: Integrated development environmentsFree integrated development environmentsAndroid (operating system) development softwareWeb development softwareFree web softwareFree computer programming toolsLinux integrated development environmentsCode navigation toolsFree HTML editorsFree UML toolsJava development toolsJava platformSun Microsystems softwareCross-platform free softwareFree software programmed in Java (programming language)2000 softwareFormerly proprietary softwareOS X text editorsLinux programming toolsSoftware development kitsOS X programming toolsProgramming tools for WindowsSoftware using the CDDL licenseHidden categories: Articles lacking reliable references from March 2015All articles lacking reliable referencesWikipedia introduction cleanup from March 2015All pages needing cleanupArticles covered by WikiProject Wikify from March 2015All articles covered by WikiProject Wikify				
+							
+		
+		
+			

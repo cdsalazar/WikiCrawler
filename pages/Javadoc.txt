@@ -1,0 +1,313 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Javadoc
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (July 2011)
+
+
+
+
+
+
+
+This article relies too much on references to primary sources. Please improve this article by adding secondary or tertiary sources. (July 2011)
+
+
+
+
+
+
+
+
+Javadoc (originally cased as JavaDoc)[1] is a documentation generator created by Sun Microsystems for the Java language (now owned by Oracle Corporation) for generating API documentation in HTML format from Java source code. The HTML format is used to add the convenience of being able to hyperlink related documents together.[2]
+The "doc comments" format used by Javadoc is the de facto industry standard for documenting Java classes. Some IDEs,[3] such as Netbeans and Eclipse, automatically generate Javadoc HTML. Many file editors assist the user in producing Javadoc source and use the Javadoc info as internal references for the programmer.
+Javadoc also provides an API for creating doclets and taglets, which allows you to analyze the structure of a Java application. This is how JDiff can generate reports of what changed between two versions of an API.
+
+
+
+Contents
+
+
+1 History
+2 Technical architecture
+
+2.1 Structure of a Javadoc comment
+2.2 Overview of Javadoc
+2.3 Example
+
+
+3 See also
+4 Notes
+5 External links
+
+
+
+History[edit]
+Javadoc was an early Java language documentation generator.[citation needed] Prior to the use of documentation generators it was customary to use technical writers who would typically write only standalone documentation for the software,[4] but it was much harder to keep this documentation in sync with the software itself.
+Javadoc has been used by Java since the first release, and is usually updated on every new release of the Java Development Kit.
+Technical architecture[edit]
+Structure of a Javadoc comment[edit]
+A Javadoc comment is set off from code by standard multi-line comment tags /* and */. The opening tag (called begin-comment delimiter), has an extra asterisk, as in /**.
+
+The first paragraph is a description of the method documented.
+Following the description are a varying number of descriptive tags, signifying:
+
+The parameters of the method (@param)
+What the method returns (@return)
+Any exceptions the method may throw (@throws)
+Other less-common tags such as @see (a "see also" tag)
+
+
+
+Overview of Javadoc[edit]
+The basic structure of writing document comments is to embed them inside /** ... */. The Javadoc is written next to the items without any separating newline. Note that any import statements must precede the class declaration. The class declaration usually contains:
+
+
+// import statements
+
+/**
+ * @author      Firstname Lastname &lt;address @ example.com&gt;
+ * @version     1.6                 (current version number of program)
+ * @since       2010-03-31          (the version of the package this class was first added to)
+ */
+public class Test {
+    // class body
+}
+
+For methods there is (1) a short, concise, one line description to explain what the item does. This is followed by (2) a longer description that may span multiple paragraphs. The details can be explained in full here. This section, marked in brackets [], is optional. Lastly, there is (3) a tag section to list the accepted input arguments and return values of the method. Note that all of the Javadoc is treated as HTML so the multiple paragraph sections are separated by a "&lt;p&gt;" paragraph break tag.
+
+
+/**
+ * Short one line description.                           (1)
+ * &lt;p&gt;
+ * Longer description. If there were any, it would be    [2]
+ * here.
+ * &lt;p&gt;
+ * And even more explanations to follow in consecutive
+ * paragraphs separated by HTML paragraph breaks.
+ *
+ * @param  variable Description text text text.          (3)
+ * @return Description text text text.
+ */
+public int methodName (...) {
+    // method body with a return statement
+}
+
+Variables are documented similarly to methods with the exception that part (3) is omitted. Here the variable contains only the short description:
+
+
+/**
+ * Description of the variable here.
+ */
+private int debug = 0;
+
+Note that it is not recommended[5] to define multiple variables in a single documentation comment. This is because Javadoc reads each variable and places them separately to the generated HTML page with the same documentation comment that is copied for all fields.
+
+
+/**
+ * The horizontal and vertical distances of point (x,y)
+ */
+public int x, y;      // AVOID
+
+Instead, it is recommended to write and document each variable separately:
+
+
+/**
+ * The horizontal distances of point.
+ */
+public int x;
+
+/**
+ * The vertical distances of point.
+ */
+public int y;
+
+Some of the available Javadoc tags[6] are listed in the table below:
+
+
+Tag &amp; Parameter
+Usage
+Applies to
+Since
+
+
+@author John Smith
+Describes an author.
+Class, Interface, Enum
+
+
+
+@version version
+Provides software version entry. Max one per Class or Interface.
+Class, Interface, Enum
+
+
+
+@since since-text
+Describes when this functionality has first existed.
+Class, Interface, Enum, Field, Method
+
+
+
+@see reference
+Provides a link to other element of documentation.
+Class, Interface, Enum, Field, Method
+
+
+
+@param name description
+Describes a method parameter.
+Method
+
+
+
+@return description
+Describes the return value.
+Method
+
+
+
+@exception classname description
+@throws classname description
+Describes an exception that may be thrown from this method.
+Method
+
+
+
+@deprecated description
+Describes an outdated method.
+Class, Interface, Enum, Field, Method
+
+
+
+{@inheritDoc}
+Copies the description from the overridden method.
+Overriding Method
+1.4.0
+
+
+{@link reference}
+Link to other symbol.
+Class, Interface, Enum, Field, Method
+
+
+
+{@value #STATIC_FIELD}
+Return the value of a static field.
+Static Field
+1.4.0
+
+
+{@code literal}
+Formats literal text in the code font. It is equivalent to &lt;code&gt;{@literal}&lt;/code&gt;.
+Class, Interface, Enum, Field, Method
+1.5.0
+
+
+{@literal literal}
+Denotes literal text. The enclosed text is interpreted as not containing HTML markup or nested javadoc tags.
+Class, Interface, Enum, Field, Method
+1.5.0
+
+
+Example[edit]
+An example of using Javadoc to document a method follows. Notice that spacing and number of characters in this example are as conventions state.
+
+
+/**
+ * Validates a chess move.
+ *
+ * Use {@link #doMove(int theFromFile, int theFromRank, int theToFile, int theToRank)} to move a piece.
+ *
+ * @param theFromFile file from which a piece is being moved
+ * @param theFromRank rank from which a piece is being moved
+ * @param theToFile   file to which a piece is being moved
+ * @param theToRank   rank to which a piece is being moved
+ * @return            true if the move is valid, otherwise false
+ */
+boolean isValidMove(int theFromFile, int theFromRank, int theToFile, int theToRank) {
+    // ...body
+}
+
+/**
+ * Moves a chess piece.
+ *
+ * @see java.math.RoundingMode
+ */
+void doMove(int theFromFile, int theFromRank, int theToFile, int theToRank)  {
+    // ...body
+}
+
+See also[edit]
+
+Comparison of documentation generators
+Visual Studio XML comments
+
+Notes[edit]
+
+
+^ Now cased as 'Javadoc'. See [1]. Originally cased as 'JavaDoc'. See [2]
+^ http://agile.csc.ncsu.edu/SEMaterials/tutorials/javadoc/
+^ NetBeans
+^ Bill Venners, James Gosling (2003-07-08). "Visualizing with JavaDoc". artima.com. Retrieved 2013-01-19. When I did the original JavaDoc in the original compiler, even the people close around me pretty soundly criticized it. And it was interesting, because the usual criticism was: a good tech writer could do a lot better job than the JavaDoc does. And the answer is, well, yeah, but how many APIs are actually documented by good tech writers? And how many of them actually update their documentation often enough to be useful?&#160;
+^ "Javadoc Tool Reference Page (Solaris, Linux, or Mac OS X). Section "Multiple-Field Declarations"". Retrieved 14 Sep 2015.&#160;
+^ Javadoc tags in JavaSE 6
+
+
+External links[edit]
+
+Javadoc tool web site
+Javadoc tags and how to write comments
+JSR 260 Javadoc Tag Technology Update Java Specification Request (defines new Javadoc tags)
+Improve on Javadocs with ashkelon
+A collection of Javadoc doclets
+MyJavadoc: Another search engine project, to get public Javadocs over Internet, with the possibility to submit new Javadocs
+Globaldocs: A viewer to browse multiple Javadocs simultaneously.
+Various Java documentations converted to Windows Help format
+JavaDoq is a handy open source tool to convert Java source code into browsable HTML documents with JavaDoc style and Eclipse Look-And-Feel.
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Javadoc&amp;oldid=691539050"					
+				Categories: Free documentation generatorsJava development toolsJava specification requestsHidden categories: Articles needing additional references from July 2011All articles needing additional referencesArticles lacking reliable references from July 2011All articles lacking reliable referencesAll articles with unsourced statementsArticles with unsourced statements from April 2013				
+							
+		
+		
+			

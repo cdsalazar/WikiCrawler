@@ -1,0 +1,166 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Special member functions
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Special member functions[1] in C++ are functions which the compiler will automatically generate if they are used, but not declared explicitly by the programmer. The automatically generated special member functions are:
+
+Default constructor if no other constructor is explicitly declared
+Copy constructor if no move constructor and move assignment operator are explicitly declared.
+
+
+If a destructor is declared generation of a copy constructor is deprecated (C++11, proposal N3242 [2]).
+
+
+Move constructor if no copy constructor, copy assignment operator, move assignment operator and destructor are explicitly declared.
+Copy assignment operator if no move constructor and move assignment operator are explicitly declared.
+
+
+If a destructor is declared generation of a copy assignment operator is deprecated.
+
+
+Move assignment operator if no copy constructor, copy assignment operator, move constructor and destructor are explicitly declared.
+Destructor
+
+In these cases the compiler generated versions of these functions perform a memberwise operation. For example the compiler generated destructor will destroy each sub-object (base class or member) of the object.
+The compiler generated functions will be public, non-virtual[3] and the copy constructor and assignment operators will receive const&amp; parameters (and not be of the alternative legal forms).
+
+
+
+Contents
+
+
+1 Example
+2 Signatures
+3 C++98
+4 References
+
+
+
+Example[edit]
+The following example depicts two classes: Explicit for which all C++98 special member functions are explicitly declared and Implicit for which none are declared.
+
+
+#include &lt;iostream&gt;
+
+class Explicit {
+    friend class Implicit;
+    string msg;
+public:
+    Explicit() : msg("") 
+    {
+        std::cout &lt;&lt; "Default constructor " &lt;&lt; msg &lt;&lt; '\n';
+    }
+
+    Explicit(const string&amp; value) : msg(value) 
+    {
+        std::cout &lt;&lt; "Non-default constructor " &lt;&lt; msg &lt;&lt; '\n';
+    }
+
+    Explicit(const Explicit&amp; other) : msg(other.msg) 
+    {
+        std::cout &lt;&lt; "Copy constructor " &lt;&lt; msg &lt;&lt; '\n';
+    }
+
+     Explicit&amp; operator=(const Explicit&amp; other) 
+    {
+        std::cout &lt;&lt; "Copy assignment operator " &lt;&lt; msg &lt;&lt; '\n';
+        if (this != &amp;other) {
+            msg = other.msg;
+        }
+        return *this;
+    }
+    
+    ~Explicit() 
+    {
+        std::cout &lt;&lt; "Destructor " &lt;&lt; msg &lt;&lt; '\n';
+    }
+};
+
+class Implicit : public Explicit {
+    int i;
+    void* p;
+    Explicit member;
+public:
+    void Spew() 
+    { 
+        std::cout &lt;&lt; "Implicit(" &lt;&lt; msg &lt;&lt; ", " &lt;&lt; member.msg &lt;&lt; ")\n"; 
+    }
+};
+
+Signatures[edit]
+Here are the signatures of the special member functions:
+
+
+Function
+syntax for class MyClass
+
+
+Default constructor
+MyClass();
+
+
+Copy constructor
+MyClass(const MyClass&amp; other);
+
+
+Move constructor
+MyClass(MyClass&amp;&amp; other) noexcept;
+
+
+Copy assignment operator
+MyClass&amp; operator=(const MyClass&amp; other);
+
+
+Move assignment operator
+MyClass&amp; operator=(MyClass&amp;&amp; other) noexcept;
+
+
+Destructor
+~MyClass();
+
+
+C++98[edit]
+In C++98 before the introduction of move semantics the special member functions[4] were:
+
+Default constructor (if no other constructor is explicitly declared)
+Copy constructor
+Copy assignment operator
+Destructor
+
+References[edit]
+
+
+^ ISO/IEC (2011). ISO/IEC 14882:2011 (3 ed.). ISO/IEC. pp.&#160;§12.&#160;
+^ http://accu.org/index.php/journals/1896
+^ Except for the destructor if a base class already has a virtual destructor.
+^ ISO/IEC (1998). International Standard ISO/IEC 14882: Programming languages—C++ = Languages de programmation—C++ (1 ed.). ISO/IEC. pp.&#160;§12. OCLC&#160;71718919.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Special_member_functions&amp;oldid=662581955"					
+				Categories: C++Hidden categories: Use dmy dates from January 2012Articles with example C++ code				
+							
+		
+		
+			

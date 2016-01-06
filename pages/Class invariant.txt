@@ -1,0 +1,216 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Class invariant
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the computer programming concept.  For the mathematical concept, see Equivalence class and Invariant (mathematics).
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (August 2010)
+
+
+In computer programming, specifically object-oriented programming, a class invariant (or type invariant) is an invariant used to constrain objects of a class. Methods of the class should preserve the invariant. The class invariant constrains the state stored in the object.
+Class invariants are established during construction and constantly maintained between calls to public methods. Temporary breaking of class invariance between private method calls is possible, although not encouraged.
+An object invariant, or representation invariant, is a computer programming construct consisting of a set of invariant properties that remain uncompromised regardless of the state of the object. This ensures that the object will always meet predefined conditions, and that methods may, therefore, always reference the object without the risk of making inaccurate presumptions. Defining class invariants can help programmers and testers to catch more bugs during software testing.
+
+
+
+Contents
+
+
+1 Class invariants and inheritance
+2 Programming language support
+
+2.1 Assertions
+2.2 Native support
+2.3 Non-native support
+
+
+3 Examples
+
+3.1 Native support
+
+3.1.1 D
+3.1.2 Eiffel
+
+
+3.2 Non-native support
+
+3.2.1 Java
+
+
+
+
+4 See also
+5 References
+6 External links
+
+
+
+Class invariants and inheritance[edit]
+The useful effect of class invariants in object-oriented software is enhanced in the presence of inheritance. Class invariants are inherited, that is, "the invariants of all the parents of a class apply to the class itself."[1]
+Inheritance can allow descendant classes to alter implementation data of parent classes, so it would be possible for a descendant class to change the state of instances in a way that made them invalid from the viewpoint of the parent class. The concern for this type of misbehaving descendant is one reason object-oriented software designers give for favoring composition over inheritance (i.e., inheritance breaks encapsulation).[2]
+However, because class invariants are inherited, the class invariant for any particular class consists of any invariant assertions coded immediately on that class, logically "and-ed" with all the invariant clauses inherited from the class's parents. This means that even though descendant classes may have access to the implementation data of the their parents, the class invariant can prevent them from manipulating those data in any way that produces an invalid instance at runtime.
+Programming language support[edit]
+Assertions[edit]
+Common programming languages like C++ and Java support assertions by default, which can be used to define class invariants. A common pattern to implement invariants in classes is for the constructor of the class to throw an exception if the invariant is not satisfied. Since methods preserve the invariants, they can assume the validity of the invariant and need not explicitly check for it.
+Native support[edit]
+The class invariant is an essential component of design by contract. So, programming languages that provide full native support for design by contract, such as Ada, Eiffel and D, will also provide full support for class invariants.
+Non-native support[edit]
+For Java, there is a more powerful tool called Java Modeling Language that provides a more robust way of defining class invariants.
+Examples[edit]
+Native support[edit]
+D[edit]
+D programming language has native support of class invariants, as well as other contract programming techniques. Here is an example from the official documentation.
+
+
+class Date {
+  int day;
+  int hour;
+
+  invariant() {
+    assert(1 &lt;= day &amp;&amp; day &lt;= 31);
+    assert(0 &lt;= hour &amp;&amp; hour &lt; 24);
+  }
+}
+
+Eiffel[edit]
+In Eiffel, the class invariant appears at the end of the class following the keyword invariant.
+
+
+class
+	DATE
+
+create
+	make
+
+feature {NONE} -- Initialization
+
+	make (a_day: INTEGER; a_hour: INTEGER)
+			-- Initialize `Current' with `a_day' and `a_hour'.
+		require
+			valid_day: 1 &lt;= a_day and a_day &lt;= 31
+			valid_hour: 0 &lt;= a_hour and a_hour &lt;= 23
+		do
+			day := a_day
+			hour := a_hour
+		ensure
+			day_set: day = a_day
+			hour_set: hour = a_hour
+		end
+
+feature -- Access
+
+	day: INTEGER
+		-- Day of month for `Current'
+
+	hour: INTEGER
+		-- Hour of day for `Current'
+
+feature -- Element change
+
+	set_day (a_day: INTEGER)
+			-- Set `day' to `a_day'
+		require
+			valid_argument: 1 &lt;= a_day and a_day &lt;= 31
+		do
+			day := a_day
+		ensure
+			day_set: day = a_day
+		end
+
+	set_hour (a_hour: INTEGER)
+			-- Set `hour' to `a_hour'
+		require
+			valid_argument: 0 &lt;= a_hour and a_hour &lt;= 23
+		do
+			hour := a_hour
+		ensure
+			hour_set: hour = a_hour
+		end
+
+invariant
+	valid_day: 1 &lt;= day and day &lt;= 31
+	valid_hour: 0 &lt;= hour and hour &lt;= 23
+end
+
+Non-native support[edit]
+Java[edit]
+This is an example of a class invariant in the Java programming language with Java Modeling Language. The invariant must hold to be true after the constructor is finished and at the entry and exit of all public member functions. Public member functions should define precondition and postcondition to help ensure the class invariant.
+
+
+public class Date {
+    int /*@spec_public@*/ day;
+    int /*@spec_public@*/ hour;
+
+    /*@invariant 1 &lt;= day &amp;&amp; day &lt;= 31; @*/ //class invariant
+    /*@invariant 0 &lt;= hour &amp;&amp; hour &lt; 24; @*/ //class invariant
+
+    /*@
+    @requires 1 &lt;= d &amp;&amp; d &lt;= 31;
+    @requires 0 &lt;= h &amp;&amp; h &lt; 24;
+    @*/
+    public Date(int d, int h) { // constructor
+        day = d;
+        hour = h;
+    }
+
+    /*@
+    @requires 1 &lt;= d &amp;&amp; d &lt;= 31;
+    @ensures day == d;
+    @*/
+    public void setDay(int d) {
+        day = d;
+    }
+
+    /*@
+    @requires 0 &lt;= h &amp;&amp; h &lt; 24;
+    @ensures hour == h;
+    @*/
+    public void setHour(int h) {
+        hour = h;
+    }
+}
+
+See also[edit]
+
+Design by contract
+
+References[edit]
+
+
+^ Meyer, Bertrand. Object-Oriented Software Construction, second edition, Prentice Hall, 1997, p. 570.
+^ E. Gamma, R. Helm, R. Johnson, and J. Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley, Reading, Massachusetts, 1995., p. 20.
+
+
+External links[edit]
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Class_invariant&amp;oldid=682142930"					
+				Categories: Class (computer programming)Hidden categories: Articles needing additional references from August 2010All articles needing additional references				
+							
+		
+		
+			

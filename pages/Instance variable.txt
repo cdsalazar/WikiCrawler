@@ -1,0 +1,120 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Instance variable
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs attention from an expert in Computer science. Please add a reason or a talk parameter to this template to explain the issue with the article. WikiProject Computer science (or its Portal) may be able to help recruit an expert. (September 2013)
+
+
+
+
+
+
+
+This article possibly contains original research. Please improve it by verifying the claims made and adding inline citations. Statements consisting only of original research should be removed. (September 2013)
+
+
+
+
+
+
+
+This article's tone or style may not reflect the encyclopedic tone used on Wikipedia. See Wikipedia's guide to writing better articles for suggestions. (September 2013)
+
+
+
+
+
+
+
+
+Not to be confused with class variable.
+In object-oriented programming with classes, an instance variable is a variable defined in a class (i.e. a member variable), for which each instantiated object of the class has a separate copy, or instance. An instance variable is similar to a class variable.[1]
+An instance variable is not a class variable although there are similarities. It is a type of class attribute (or class property, field, or data member). The same dichotomy between instance and class members applies to methods ("member functions") as well; a class may have both instance methods and class methods.
+Each class variable and instance variable you invoke with the object lives in memory for the life of that object.[2]
+Variables are properties an object knows about itself. All instances of an object have their own copies of instance variables, even if the value is the same from one object to another. One object instance can change values of its instance variables without affecting all other instances. Instance variables can be used by all methods of a class unless the method is declared as static.[3]
+Example[edit]
+
+
+struct Request {
+
+    static int count1; // variable name is not of importance
+    int number;
+
+    Request() {
+        number = count1; // modifies the instance variable "this-&gt;number"
+        ++count1; // modifies the class variable "Request::count1"
+    }
+
+};
+
+int Request::count1 = 0;
+
+In this C++ example, the instance variable Request::number is a copy of the class variable Request::count1 where each instance constructed is assigned a sequential value of count1 before it is incremented. Since number is an instance variable, each Request object contains its own distinct value; in contrast, there is only one object Request::count1 available to all instances with the same value.
+References[edit]
+
+
+^ "The Java Tutorial, Variables". docs.oracle.com. Oracle. Archived from the original on 23 October 2014. Retrieved 23 October 2014.&#160;
+^ "The Java Tutorials, Understanding Class Members". docs.oracle.com. Oracle. Archived from the original on 11 October 2014. Retrieved 23 October 2014.&#160;
+^ Matuszek, David. "Static". cis.upenn.edu. University of Pennsylvania. Archived from the original on 23 October 2014. Retrieved 23 October 2014.&#160;
+
+
+
+
+
+
+This computer-programming-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Instance_variable&amp;oldid=685831685"					
+				Categories: Object-oriented programmingVariable (computer science)Computer programming stubsHidden categories: Articles needing expert attention with no reason or talk parameterArticles needing expert attention from September 2013All articles needing expert attentionComputer science articles needing expert attentionArticles that may contain original research from September 2013All articles that may contain original researchWikipedia articles needing style editing from September 2013All articles needing style editingAll stub articles				
+							
+		
+		
+			

@@ -1,0 +1,80 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			offsetof
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				C's offsetof() macro is an ANSI C library feature found in stddef.h. It evaluates to the offset (in bytes) of a given member within a struct or union type, an expression of type size_t. The offsetof() macro takes two parameters, the first being a structure name, and the second being the name of a member within the structure. It cannot be described as a C prototype.[1]
+Implementation[edit]
+The "traditional" implementation of the macro relied on the compiler being not especially picky about pointers; it obtained the offset of a member by specifying a hypothetical structure that begins at address zero:
+
+
+#define offsetof(st, m) ((size_t)(&amp;((st *)0)-&gt;m))
+
+This works by casting a null pointer into a pointer to structure st, and then obtaining the address of member m within said structure. While this implementation works correctly in many compilers, it has undefined behavior according to the C standard,[2] since it involves a dereference of a null pointer (although, one might argue that no dereferencing takes place, because the whole expression is calculated at compile time). It also tends to produce confusing compiler diagnostics if one of the arguments is misspelled. Some modern compilers (such as GCC) define the macro using a special form instead, e.g.[3]
+
+
+#define offsetof(st, m) __builtin_offsetof(st, m)
+
+This builtin is especially useful with C++ classes or structs that declare a custom unary operator &amp;.[4]
+Usage[edit]
+It is useful when implementing generic data structures in C. For example, the Linux kernel uses offsetof() to implement container_of(), which allows something like a mixin type to find the structure that contains it:[5]
+
+
+#define container_of(ptr, type, member) ({ \
+                const typeof( ((type *)0)-&gt;member ) *__mptr = (ptr); \
+                (type *)( (char *)__mptr - offsetof(type,member) );})
+
+This macro is used to retrieve an enclosing structure from a pointer to a nested element, such as this iteration of a linked list of my_struct objects:
+
+
+struct my_struct {
+    const char *name;
+    struct list_node list;
+};
+
+extern struct list_node * list_next(struct list_node *);
+
+struct list_node *current = /* ... */
+while(current != NULL){
+    struct my_struct *element = container_of(current, struct my_struct, list);
+    printf("%s\n", element-&gt;name);
+    current = list_next(&amp;element-&gt;list);
+}
+
+References[edit]
+
+
+^ "offsetof reference". MSDN. Retrieved 2010-09-19.&#160;
+^ "Does &amp;((struct name *)NULL -&gt; b) cause undefined behaviour in C11?". Retrieved 2015-02-07.&#160;
+^ "GCC offsetof reference". Free Software Foundation. Retrieved 2010-09-19.&#160;
+^ "what is the purpose and return type of the __builtin_offsetof operator?". Retrieved 2012-10-20.&#160;
+^ Greg Kroah-Hartman (June 2003). "container_of()". Linux Journal. Retrieved 2010-09-19.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Offsetof&amp;oldid=650537829"					
+				Categories: C standard library				
+							
+		
+		
+			

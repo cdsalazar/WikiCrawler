@@ -1,0 +1,394 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			const (computer programming)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Const-correctness)
+												
+					Jump to:					navigation, 					search
+				
+				In the C, C++, and D programming languages, const is a type qualifier:[a] a keyword applied to a data type that indicates that the data is constant (does not vary). While this can be used to declare constants, const in the C family of languages differs from similar constructs in other languages in being part of the type, and thus has complicated behavior when combined with pointers, references, composite data types, and type-checking.
+
+
+
+Contents
+
+
+1 Introduction
+2 Consequences
+3 Other uses
+4 Syntax
+
+4.1 Simple data types
+4.2 Pointers and references
+
+4.2.1 C convention
+4.2.2 C++ convention
+
+
+4.3 Parameters and variables
+
+
+5 C++
+
+5.1 Methods
+
+
+6 Loopholes to const-correctness
+7 Problems
+
+7.1 strchr problem
+
+
+8 D
+9 History
+10 Other languages
+11 See also
+12 Notes
+13 References
+14 External links
+
+
+
+Introduction[edit]
+When applied in an object declaration,[b] it indicates that the object is a constant: its value does not change, unlike a variable. This basic use – to declare constants – has parallels in many other languages.
+However, unlike in other languages, in the C family of languages the const is part of the type, not part of the object. For example, in C, const int x = 1; declares an object x of const int type – the const is part of the type, as if it were parsed “(const int) x” – while in Ada, X&#160;: constant INTEGER&#160;:= 1_ declares a constant (a kind of object) X of INTEGER type: the constant is part of the object, but not part of the type.
+This has two subtle results. Firstly, const can be applied to parts of a more complex type – for example, int const * const x; declares a constant pointer to a constant integer, while int const * x; declares a variable pointer to a constant integer, and int * const x; declares a constant pointer to a variable integer. Secondly, because const is part of the type, it must match as part of type-checking. For example, the following code is invalid:
+
+
+void f(int&amp; x);
+// ...
+const int i;
+f(i);
+
+because the argument to f must be a variable integer, but i is a constant integer. This matching is a form of program correctness, and is known as const-correctness. This allows a form of programming by contract, where functions specify as part of their type signature whether they modify their arguments or not, and whether their return value is modifiable or not. This type-checking is primarily of interest in pointers and references – not basic value types like integers – but also for composite data types or templated types such as containers. It is concealed by the fact that the const can often be omitted, due to type coercion (implicit type conversion) and C being call-by-value (C++ and D are either call-by-value or call-by-reference).
+Consequences[edit]
+The idea of const-ness does not imply that the variable as it is stored in the computer's memory is unwritable. Rather, const-ness is a compile-time construct that indicates what a programmer should do, not necessarily what they can do. Note, however, that in the case of predefined data (such as const char * string literals), C const is often unwritable.
+Other uses[edit]
+In addition, a (non-static) member-function can be declared as const. In this case, the this pointer inside such a function is of type return_value_type const * const rather than merely of type return_value_type * const. This means that non-const functions for this object cannot be called from inside such a function, nor can member variables be modified. In C++, a member variable can be declared as mutable, indicating that this restriction does not apply to it. In some cases, this can be useful, for example with caching, reference counting, and data synchronization. In these cases, the logical meaning (state) of the object is unchanged, but the object is not physically constant since its bitwise representation may change.
+Syntax[edit]
+In C, C++, and D, all data types, including those defined by the user, can be declared const, and const-correctness dictates that all variables or objects should be declared as such unless they need to be modified. Such proactive use of const makes values "easier to understand, track, and reason about,"[1] and it thus increases the readability and comprehensibility of code and makes working in teams and maintaining code simpler because it communicates information about a value's intended use. This can help the compiler as well as the developer when reasoning about code. It can also enable an optimizing compiler to generate more efficient code.[2]
+Simple data types[edit]
+For simple non-pointer data types, applying the const qualifier is straightforward. It can go on either side of the type for historical reasons (that is, const char foo = 'a'; is equivalent to char const foo = 'a';). On some implementations, using const on both sides of the type (for instance, const char const) generates a warning but not an error.
+Pointers and references[edit]
+For pointer and reference types, the meaning of const is more complicated – either the pointer itself, or the value being pointed to, or both, can be const. Further, the syntax can be confusing. A pointer can be declared as a const pointer to writable value, or a writable pointer to a const value, or const pointer to const value. A const pointer cannot be reassigned to point to a different object from the one it is initially assigned, but it can be used to modify the value that it points to (called the pointee). Reference variables are thus an alternate syntax for const pointers. A pointer to a const object, on the other hand, can be reassigned to point to another memory location (which should be an object of the same type or of a convertible type), but it cannot be used to modify the memory that it is pointing to. A const pointer to a const object can also be declared and can neither be used to modify the pointee nor be reassigned to point to another object. The following code illustrates these subtleties:
+
+
+void Foo( int * ptr,
+          int const * ptrToConst,
+          int * const constPtr,
+          int const * const constPtrToConst )
+{
+    *ptr = 0; // OK: modifies the "pointee" data
+    ptr  = NULL; // OK: modifies the pointer
+
+    *ptrToConst = 0; // Error! Cannot modify the "pointee" data
+    ptrToConst  = NULL; // OK: modifies the pointer
+
+    *constPtr = 0; // OK: modifies the "pointee" data
+    constPtr  = NULL; // Error! Cannot modify the pointer
+
+    *constPtrToConst = 0; // Error! Cannot modify the "pointee" data
+    constPtrToConst  = NULL; // Error! Cannot modify the pointer
+}
+
+C convention[edit]
+Following usual C convention for declarations, declaration follows use, and the * in a pointer is written on the pointer, indicating dereferencing. For example, in the declaration int *ptr, the dereferenced form *ptr is an int, while the reference form ptr is a pointer to an int. Thus const modifies the name to its right. The C++ convention is instead to associate the * with the type, as in int* ptr, and read the const as modifying the type to the left. int const * ptrToConst can thus be read as "*ptrToConst is a int const" (the value is constant), or "ptrToConst is a int const *" (the pointer is a pointer to a constant integer). Thus:
+
+
+int *ptr; // *ptr is an int value
+int const *ptrToConst; // *ptrToConst is a constant (int: integer value)
+int * const constPtr; // constPtr is a constant (int *: integer pointer)
+int const * const constPtrToConst; // constPtrToConst is a constant (pointer)
+                                   // as is *constPtrToConst (value)
+
+C++ convention[edit]
+Following C++ convention of analyzing the type, not the value, a rule of thumb is to read the declaration from right to left. Thus, everything to the left of the star can be identified as the pointee type and everything to the right of the star are the pointer properties. For instance, in our example above, int const * can be read as a writable pointer that refers to a non-writable integer, and int * const can be read as a non-writable pointer that refers to a writable integer.
+C/C++ also allows the const to be placed to the left of the type, in the following syntax:
+
+
+const int*       ptrToConst;     //identical to: int const *       ptrToConst,
+const int* const constPtrToConst;//identical to: int const * const constPtrToConst
+
+This more clearly separates the two locations for the const, and allows the * to always be bound to its preceding type, though it still requires reading right-to-left, as follows:
+
+
+int* ptr;
+const int* ptrToConst; // (const int)*, not const (int*)
+int* const constPtr;
+const int* const constPtrToConst;
+
+Note, however, that despite the different convention for formatting C++ code, the semantics of pointer declaration are the same:
+
+
+int* a; // a is an int pointer
+int* a, b; // TRICKY: a is an int pointer as above, but b is not; b is an int value
+int* a, *b; // both a and b are pointers; *a and *b are int values
+
+Bjarne Stroustrup's FAQ recommends only declaring one variable per line if using the C++ convention, to avoid this issue.[3]
+C++ references follow similar rules. A declaration of a const reference is redundant since references can never be made to refer to another object:
+
+
+int i = 22;
+int const &amp; refToConst = i; // OK
+int &amp; const constRef = i; // Error the "const" is redundant
+
+Even more complicated declarations can result when using multidimensional arrays and references (or pointers) to pointers; however, some[who?] have argued that these are confusing and error-prone and that they therefore should generally be avoided or replaced with higher-level structures.
+Parameters and variables[edit]
+const can be declared both on function parameters and on variables (static or automatic, including global or local). The interpretation varies between uses. A const static variable (global variable or static local variable) is a constant, and may be used for data like mathematical constants, such as const double PI = 3.14159 – realistically longer, or overall compile-time parameters. A const automatic variable (non-static local variable) means that single assignment is happening, though a different value may be used each time, such as const int x_squared = x*x. A const parameter in pass-by-reference means that the referenced value is not modified – it is part of the contract – while a const parameter in pass-by-value (or the pointer itself, in pass-by-reference) does not add anything to the interface (as the value has been copied), but indicates that internally, the function does not modify the parameter (it is a single assignment). For this reason, some favor using const in parameters only for pass-by-reference, where it changes the contract, but not for pass-by-value, where it exposes the implementation.
+C++[edit]
+Methods[edit]
+In order to take advantage of the design by contract approach for user-defined types (structs and classes), which can have methods as well as member data, the programmer must tag instance methods as const if they don't modify the object's data members. Applying the const qualifier to instance methods thus is an essential feature for const-correctness, and is not available in many other object-oriented languages such as Java and C# or in Microsoft's C++/CLI or Managed Extensions for C++. While const methods can be called by const and non-const objects alike, non-const methods can only be invoked by non-const objects. The const modifier on an instance method applies to the object pointed to by the "this" pointer, which is an implicit argument passed to all instance methods. Thus having const methods is a way to apply const-correctness to the implicit "this" pointer argument just like other arguments.
+This example illustrates:
+
+
+class C
+{
+    int i;
+public:
+    int Get() const // Note the "const" tag
+      { return i; }
+    void Set(int j) // Note the lack of "const"
+      { i = j; }
+};
+
+void Foo(C&amp; nonConstC, const C&amp; constC)
+{
+    int y = nonConstC.Get(); // Ok
+    int x = constC.Get();    // Ok: Get() is const
+
+    nonConstC.Set(10); // Ok: nonConstC is modifiable
+    constC.Set(10);    // Error! Set() is a non-const method and constC is a const-qualified object
+}
+
+In the above code, the implicit "this" pointer to Set() has the type "C *const"; whereas the "this" pointer to Get() has type "const C *const", indicating that the method cannot modify its object through the "this" pointer.
+Often the programmer will supply both a const and a non-const method with the same name (but possibly quite different uses) in a class to accommodate both types of callers. Consider:
+
+
+class MyArray
+{
+    int data[100];
+public:
+    int &amp;       Get(int i)       { return data[i]; }
+    int const &amp; Get(int i) const { return data[i]; }
+};
+
+void Foo( MyArray &amp; array, MyArray const &amp; constArray )
+{
+    // Get a reference to an array element
+    // and modify its referenced value.
+
+    array.Get( 5 )      = 42; // OK! (Calls: int &amp; MyArray::Get(int))
+    constArray.Get( 5 ) = 42; // Error! (Calls: int const &amp; MyArray::Get(int) const)
+}
+
+The const-ness of the calling object determines which version of MyArray::Get() will be invoked and thus whether or not the caller is given a reference with which he can manipulate or only observe the private data in the object. The two methods technically have different signatures because their "this" pointers have different types, allowing the compiler to choose the right one. (Returning a const reference to an int, instead of merely returning the int by value, may be overkill in the second method, but the same technique can be used for arbitrary types, as in the Standard Template Library.)
+Loopholes to const-correctness[edit]
+There are several loopholes to pure const-correctness in C and C++. They exist primarily for compatibility with existing code.
+The first, which applies only to C++, is the use of const_cast, which allows the programmer to strip the const qualifier, making any object modifiable. The necessity of stripping the qualifier arises when using existing code and libraries that cannot be modified but which are not const-correct. For instance, consider this code:
+
+
+// Prototype for a function which we cannot change but which
+// we know does not modify the pointee passed in.
+void LibraryFunc(int* ptr, int size);
+
+void CallLibraryFunc(const int* ptr, int size)
+{
+    LibraryFunc(ptr, size); // Error! Drops const qualifier
+
+    int* nonConstPtr = const_cast&lt;int*&gt;(ptr); // Strip qualifier
+    LibraryFunc(nonConstPtr, size);  // OK
+}
+
+However, any attempt to modify an object that is itself declared const by means of const cast results in undefined behavior according to the ISO C++ Standard. In the example above, if ptr references a global, local, or member variable declared as const, or an object allocated on the heap via new const int, the code is only correct if LibraryFunc really does not modify the value pointed to by ptr.
+The C language has a need of a loophole because a certain situation exists. Variables with static storage duration are allowed to be defined with an initial value. However, the initializer can use only constants like string constants and other literals, and is not allowed to use non-constant elements like variable names, whether the initializer elements are declared const or not, or whether the static duration variable is being declared const or not. There is a non-portable way to initialize a const variable that has static storage duration. By carefully constructing a typecast on the left hand side of a later assignment, a const variable can be written to, effectively stripping away the const attribute and 'initializing' it with non-constant elements like other const variables and such. Writing into a const variable this way may work as intended, but it causes undefined behavior and seriously contradicts const-correctness:
+
+
+const size_t    bufferSize = 8*1024;
+const size_t    userTextBufferSize;  //initial value depends on const bufferSize, can't be initialized here
+
+...
+
+int setupUserTextBox(textBox_t *defaultTextBoxType, rect_t *defaultTextBoxLocation)
+{
+    *(size_t*)&amp;userTextBufferSize = bufferSize - sizeof(struct textBoxControls);  // warning: might work, but not guaranteed by C
+    ...
+}
+
+Another loophole [4] applies both to C and C++. Specifically, the languages dictate that member pointers and references are "shallow" with respect to the const-ness of their owners — that is, a containing object that is const has all const members except that member pointees (and referees) are still mutable. To illustrate, consider this C++ code:
+
+
+struct S
+{
+    int val;
+    int *ptr;
+};
+
+void Foo(const S &amp; s)
+{
+    int i  = 42;
+    s.val  = i;  // Error: s is const, so val is a const int
+    s.ptr  = &amp;i; // Error: s is const, so ptr is a const pointer to int
+    *s.ptr = i;  // OK: the data pointed to by ptr is always mutable,
+                 //     even though this is sometimes not desirable
+}
+
+Although the object s passed to Foo() is constant, which makes all of its members constant, the pointee accessible through s.ptr is still modifiable, though this may not be desirable from the standpoint of const-correctness because s might solely own the pointee. For this reason, Meyers argues that the default for member pointers and references should be "deep" const-ness, which could be overridden by a mutable qualifier when the pointee is not owned by the container, but this strategy would create compatibility issues with existing code. Thus, for historical reasons[citation needed], this loophole remains open in C and C++.
+The latter loophole can be closed by using a class to hide the pointer behind a const-correct interface, but such classes either don't support the usual copy semantics from a const object (implying that the containing class cannot be copied by the usual semantics either) or allow other loopholes by permitting the stripping of const-ness through inadvertent or intentional copying.
+Finally, several functions in the C standard library violate const-correctness, as they accept a const pointer to a character string and return a non-const pointer to a part of the same string. strtol and strchr are among these functions. Some implementations of the C++ standard library, such as Microsoft's[5] try to close this loophole by providing two overloaded versions of some functions: a "const" version and a "non-const" version.
+Problems[edit]
+
+
+
+This section requires expansion. (November 2014)
+
+
+The use of the type system to express constancy leads to various complexities and problems, and has accordingly been criticized and not adopted outside the narrow C family of C, C++, and D. Java and C#, which are heavily influenced by C and C++, both explicitly rejected const-style type qualifiers, instead expressing constancy by keywords that apply to the identifier (final in Java, const and readonly in C#). Even within C and C++, the use of const varies significantly, with some projects and organizations using it consistently, and others avoiding it.
+strchr problem[edit]
+The const type qualifier causes difficulties when the logic of a function is agnostic to whether its input is constant or not, but returns a value which should be of the same qualified type as an input. In other words, for these functions, if the input is constant (const-qualified), the return value should be as well, but if the input is variable (not const-qualified), the return value should be as well. Because the type signature of these functions differs, it requires two functions (or potentially more, in case of multiple inputs) with the same logic – a form of generic programming.
+This problem arises even for simple functions in the C standard library, notably strchr; this observation is credited by Ritchie to Tom Plum in the mid 1980s.[6] The strchr function locates a character in a string; formally, it returns a pointer to the first occurrence of the character c in the string s, and in classic C (K&amp;R C) its prototype is:
+
+
+char *strchr(char *s, int c);
+
+The strchr function does not modify the input string, but the return value is often used by the caller to modify the string, such as:
+
+
+if (p = strchr(q, '/'))
+    *p = ' ';
+
+Thus on the one hand the input string can be const (since it is not modified by the function), and if the input string is const the return value should be as well – most simply because it might return exactly the input pointer, if the first character is a match – but on the other hand the return value should not be const if the original string was not const, since the caller may wish to use the pointer to modify the original string.
+In C++ this is done via function overloading, typically implemented via a template, resulting in two functions, so that the return value has the same const-qualified type as the input:[c]
+
+
+char* strchr(char* s, int c);
+const char* strchr(const char* s, int c);
+
+These can in turn be defined by a template:
+
+
+template &lt;T&gt;
+T* strchr(T* s, int c) { ... }
+
+In D this is handled via the inout keyword, which acts as a wildcard for const, immutable, or unqualified (variable), yielding:[7][d]
+
+
+inout(char)* strchr(inout(char)* s, int c);
+
+However, in C neither of these is possible, since C does not have function overloading, and instead this is handled by having a single function where the input is constant but the output is writable:
+
+
+char *strchr(const char *s, int c);
+
+This allows idiomatic C code, but does strip the const qualifier if the input actually was const-qualified, violating type safety. This solution was proposed by Ritchie, and subsequently adopted. This difference is one of the failures of compatibility of C and C++.
+D[edit]
+In Version 2 of the D programming language, two keywords relating to const exist.[8] The immutable keyword denotes data that cannot be modified through any reference. The const keyword denotes a non-mutable view of mutable data. Unlike C++ const, D const and immutable are "deep" or transitive, and anything reachable through a const or immutable object is const or immutable respectively.
+Example of const vs. immutable in D
+
+
+int[] foo = new int[5];  // foo is mutable.
+const int[] bar = foo;   // bar is a const view of mutable data.
+immutable int[] baz = foo;  // Error:  all views of immutable data must be immutable.
+
+immutable int[] nums = new immutable(int)[5];  // No mutable reference to nums may be created.
+const int[] constNums = nums;  // Works.  immutable is implicitly convertible to const.
+int[] mutableNums = nums;  // Error:  Cannot create a mutable view of immutable data.
+
+Example of transitive or deep const in D
+
+
+class Foo {
+    Foo next;
+    int num;
+}
+
+immutable Foo foo = new immutable(Foo);
+foo.next.num = 5;  // Won't compile.  foo.next is of type immutable(Foo).
+                   // foo.next.num is of type immutable(int).
+
+History[edit]
+const was introduced by Bjarne Stroustrup in C with Classes, the predecessor to C++, in 1981, and was originally called readonly.[9][10] As to motivation, Stroustrup writes:[10]
+
+"It served two functions: as a way of defining a symbolic constant that obeys scope and type rules (that is, without using a macro) and as a way of deeming an object in memory immutable."
+
+The first use, as a scoped and typed alternative to macros, was analogously fulfilled for function-like macros via the inline keyword. Constant pointers, and the * const notation, were suggested by Dennis Ritchie and so adopted.[10]
+const was then adopted in C as part of standardization, and appears in C89 (and subsequent versions) along with the other type qualifier, volatile.[11] A further qualifier, noalias, was suggested at the December 1987 meeting of the X3J11 committee, but was rejected; its goal was ultimately fulfilled by the restrict keyword in C99. Ritchie was not very supportive of these additions, arguing that they did not "carry their weight", but ultimately did not argue for their removal from the standard.[12]
+D subsequently inherited const from C++, where it is known as a type constructor (not type qualifier) and added two further type constructors, immutable and inout, to handle related use cases.[e]
+Other languages[edit]
+Other languages do not follow C/C++ in having constancy part of the type, though they often have superficially similar constructs and may use the const keyword. Typically this is only used for constants (constant objects).
+C# has a const keyword, but with radically different and simpler semantics: it means a compile-time constant, and is not part of the type.
+In Java the object-oriented keyword final is used for attributes (and thence also for local variables), but while const is a reserved word, it is not actually used as a keyword, and one cannot mark parameters as constant. There was a proposal to add const to Java in 1999, but this was rejected, notably because adding it after the fact and then changing the standard library to use it consistently would have broken compatibility.[13]
+Java does not have const – it instead has final, which can be applied to local "variable" declarations and applies to the identifier, not the type. It has a different object-oriented use for object members, which is the origin of the name.
+Interestingly, the Java language specification regards const as a reserved keyword – i.e., one that cannot be used as variable identifier – but assigns no semantics to it: it is a reserved word (it cannot be used in identifiers) but not a keyword (it has no special meaning). It is thought that the reservation of the keyword occurred to allow for an extension of the Java language to include C++-style const methods and pointer to const type.[citation needed] An enhancement request ticket for implementing const correctness exists in the Java Community Process, but was closed in 2005 on the basis that it was impossible to implement in a backwards-compatible fashion.[14]
+The contemporary Ada 83 independently had the notion of a constant object and a constant keyword,[15][f] with input parameters and loop parameters being implicitly constant. Here the constant is a property of the object, not of the type.
+See also[edit]
+
+Single assignment
+restrict
+pointer aliasing
+
+Notes[edit]
+
+
+^ In D the term type constructor is used instead of type qualifier, by analogy with constructors in object-oriented programming.
+^ Formally when the const is part of the outermost derived type in a declaration; pointers complicate discussion.
+^ Note that pointer declaration syntax conventions differ between C and C++: in C char *s is standard, while in C++ char* s is standard.
+^ Idiomatic D code would use an array here instead of a pointer.[7]
+^ D also introduced the shared type constructor, but this is related to use cases of volatile, not const.
+^ The Ada standard calls this a "reserved word"; see that article for usage.
+
+
+References[edit]
+
+
+^ Herb Sutter and Andrei Alexandrescu (2005). C++ Coding Standards. p. 30. Boston: Addison Wesley. ISBN 0-321-11358-6
+^ "Why is the kfree() argument const?". lkml.org. 2013-01-12.&#160;
+^ http://www.stroustrup.com/bs_faq2.html#whitespace
+^ Scott Meyers (2005). Effective C++, Third Edition. pp. 21-23. Boston: Addison Wesley. ISBN 978-0-321-33487-9
+^ "strchr, wcschr, _mbschr (CRT)". Msdn.microsoft.com. Retrieved 2013-08-18.&#160;
+^ http://www.lysator.liu.se/c/dmr-on-noalias.html
+^ a b The D Programming Language, Andrei Alexandrescu, 8.8: Propagating a Qualifier from Parameter to Result
+^ "const(FAQ) – D Programming Language". Digitalmars.com. Retrieved 2013-08-18.&#160;
+^ Bjarne Stroustrup, "Extensions of the C Language Type Concept.", Bell Labs internal Technical Memorandum, January 5, 1981.
+^ a b c Sibling Rivalry: C and C++, Bjarne Stroustrup, 2002, p. 5
+^ Dennis M. Ritchie, "The Development of the C Language", 2003: "X3J11 also introduced a host of smaller additions and adjustments, for example, the type qualifiers const and volatile, and slightly different type promotion rules."
+^ "Let me begin by saying that I'm not convinced that even the pre-December qualifiers (`const' and `volatile') carry their weight; I suspect that what they add to the cost of learning and using the language is not repaid in greater expressiveness. `Volatile', in particular, is a frill for esoteric applications, and much better expressed by other means. Its chief virtue is that nearly everyone can forget about it. `Const' is simultaneously more useful and more obtrusive; you can't avoid learning about it, because of its presence in the library interface. Nevertheless, I don't argue for the extirpation of qualifiers, if only because it is too late."
+^ JDK-4211070&#160;: Java should support const parameters (like C++) for code maintainence [sic]
+^ "Bug ID: JDK-4211070 Java should support const parameters (like C++) for code maintainence [sic]". Bugs.sun.com. Retrieved 2014-11-04.&#160;
+^ 1815A, 3.2.1. Object Declarations:
+"The declared object is a constant if the reserved word constant appears in the object declaration; the declaration must then include an explicit initialization. The value of a constant cannot be modified after initialization. Formal parameters of mode in of subprograms and entries, and generic formal parameters of mode in, are also constants; a loop parameter is a constant within the corresponding loop; a subcomponent or slice of a constant is a constant."
+
+
+External links[edit]
+
+"Const-Correctness" by Herb Sutter
+"Constant Optimization?" by Herb Sutter
+The C++ FAQ Lite: Const correctness by Marshall Cline
+Section "Value substitution" from the free electronic book Thinking in C++ by Bruce Eckel
+"Here A Const, There A Const" by Walter Bright
+"Const and Invariant" from D programming language specification, version 2 (experimental)
+Some notes on const correctness in straight C in "C Pointer Qualifiers" by Thomas Stover
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Const_(computer_programming)&amp;oldid=687517748"					
+				Categories: C programming language familyData typesProgramming language topicsHidden categories: All articles with specifically marked weasel-worded phrasesArticles with specifically marked weasel-worded phrases from April 2012All articles with unsourced statementsArticles with unsourced statements from February 2010Articles to be expanded from November 2014All articles to be expandedArticles with unsourced statements from February 2011Articles with example C codeArticles with example C++ code				
+							
+		
+		
+			

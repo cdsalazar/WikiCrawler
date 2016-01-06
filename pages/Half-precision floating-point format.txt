@@ -1,0 +1,451 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Half-precision floating-point format
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computing, half precision is a binary floating-point computer number format that occupies 16 bits (two bytes in modern computers) in computer memory.
+In IEEE 754-2008 the 16-bit base 2 format is officially referred to as binary16. It is intended for storage (of many floating-point values where higher precision need not be stored), not for performing arithmetic computations.
+Half-precision floating point is a relatively new binary floating-point format. Nvidia defined the half datatype in the Cg language, released in early 2002, and was the first to implement 16-bit floating point in silicon, with the GeForce FX, released in late 2002.[1] ILM was searching for an image format that could handle dynamic ranges, but without the hard drive and memory cost of floating-point representations that are commonly used for floating-point computation (single and double precision).[2] The hardware-accelerated programmable shading group led by John Airey at SGI (Silicon Graphics) invented the s10e5 data type in 1997 as part of the 'bali' design effort. This is described in a SIGGRAPH 2000 paper[3] (see section 4.3) and further documented in US patent 7518615.[4]
+This format is used in several computer graphics environments including OpenEXR, JPEG XR, OpenGL, Cg, and D3DX. The advantage over 8-bit or 16-bit binary integers is that the increased dynamic range allows for more detail to be preserved in highlights and shadows for images. The advantage over 32-bit single-precision binary formats is that it requires half the storage and bandwidth (at the expense of precision and range).[2]
+
+
+Floating-point precisions
+
+
+
+
+
+IEEE 754
+
+
+
+
+16-bit: Half (binary16)
+32-bit: Single (binary32), decimal32
+64-bit: Double (binary64), decimal64
+128-bit: Quadruple (binary128), decimal128
+Extended precision formats
+
+
+
+
+Other
+
+
+
+
+Minifloat
+Arbitrary precision
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+Contents
+
+
+1 IEEE 754 half-precision binary floating-point format: binary16
+
+1.1 Exponent encoding
+1.2 Half precision examples
+1.3 Precision limitations on decimal values in [0, 1]
+1.4 Precision limitations on other decimal values
+1.5 Precision limitations on integer values
+
+
+2 ARM alternative half-precision
+3 See also
+4 References
+5 External links
+
+
+
+IEEE 754 half-precision binary floating-point format: binary16[edit]
+The IEEE 754 standard specifies a binary16 as having the following format:
+
+Sign bit: 1 bit
+Exponent width: 5 bits
+Significand precision: 11 bits (10 explicitly stored)
+
+The format is laid out as follows:
+
+The format is assumed to have an implicit lead bit with value 1 unless the exponent field is stored with all zeros. Thus only 10 bits of the significand appear in the memory format but the total precision is 11 bits. In IEEE 754 parlance, there are 10 bits of significand, but there are 11 bits of significand precision (log10(211) ≈ 3.311 decimal digits).
+Exponent encoding[edit]
+The half-precision binary floating-point exponent is encoded using an offset-binary representation, with the zero offset being 15; also known as exponent bias in the IEEE 754 standard.
+
+Emin = 000012 − 011112 = −14
+Emax = 111102 − 011112 = 15
+Exponent bias = 011112 = 15
+
+Thus, as defined by the offset binary representation, in order to get the true exponent the offset of 15 has to be subtracted from the stored exponent.
+The stored exponents 000002 and 111112 are interpreted specially.
+
+
+Exponent
+Significand zero
+Significand non-zero
+Equation
+
+
+000002
+zero, −0
+subnormal numbers
+(−1)signbit × 2−14 × 0.significantbits2
+
+
+000012, ..., 111102
+normalized value
+(−1)signbit × 2exponent−15 × 1.significantbits2
+
+
+111112
+±infinity
+NaN (quiet, signalling)
+
+
+The minimum strictly positive (subnormal) value is 2−24 ≈ 5.96 × 10−8. The minimum positive normal value is 2−14 ≈ 6.10 × 10−5. The maximum representable value is (2−2−10) × 215 = 65504.
+Half precision examples[edit]
+These examples are given in bit representation of the floating-point value. This includes the sign bit, (biased) exponent, and significand.
+
+0 01111 0000000000 = 1
+0 01111 0000000001 = 1 + 2−10 = 1.0009765625 (next smallest float after 1)
+1 10000 0000000000 = −2
+
+0 11110 1111111111 = 65504  (max half precision)
+
+0 00001 0000000000 = 2−14 ≈ 6.10352 × 10−5 (minimum positive normal)
+0 00000 1111111111 = 2−14 - 2−24 ≈ 6.09756 × 10−5 (maximum subnormal)
+0 00000 0000000001 = 2−24 ≈ 5.96046 × 10−8 (minimum positive subnormal)
+
+0 00000 0000000000 = 0
+1 00000 0000000000 = −0
+
+0 11111 0000000000 = infinity
+1 11111 0000000000 = −infinity
+
+0 01101 0101010101 = 0.333251953125 ≈ 1/3
+
+By default, 1/3 rounds down like for double precision, because of the odd number of bits in the significand. So the bits beyond the rounding point are 0101... which is less than 1/2 of a unit in the last place.
+Precision limitations on decimal values in [0, 1][edit]
+
+Decimals between 2−24 (minimum positive subnormal) and 2−14 (maximum subnormal)
+
+
+fixed interval 2−24
+
+
+Decimals between 2−14 (minimum positive normal) and 2−13: fixed interval 2−24
+Decimals between 2−13 and 2−12: fixed interval 2−23
+Decimals between 2−12 and 2−11: fixed interval 2−22
+Decimals between 2−11 and 2−10: fixed interval 2−21
+Decimals between 2−10 and 2−9: fixed interval 2−20
+Decimals between 2−9 and 2−8: fixed interval 2−19
+Decimals between 2−8 and 2−7: fixed interval 2−18
+Decimals between 2−7 and 2−6: fixed interval 2−17
+Decimals between 2−6 and 2−5: fixed interval 2−16
+Decimals between 2−5 and 2−4: fixed interval 2−15
+Decimals between 2−4 and 2−3: fixed interval 2−14
+Decimals between 2−3 and 2−2: fixed interval 2−13
+Decimals between 2−2 and 2−1: fixed interval 2−12
+Decimals between 2−1 and 1: fixed interval 2−11
+Decimals between 1 and 2: fixed interval 2−10 (1+2−10 is the next smallest float after 1)
+
+Precision limitations on other decimal values[edit]
+
+Decimals between 2 and 4: fixed interval 2-9
+Decimals between 4 and 8: fixed interval 2-8
+Decimals between 8 and 16: fixed interval 2-7
+Decimals between 16 and 32: fixed interval 2-6
+Decimals between 32 and 64: fixed interval 2-5
+Decimals between 64 and 128: fixed interval 2-4
+Decimals between 128 and 256: fixed interval 2-3
+Decimals between 256 and 512: fixed interval 2-2
+Decimals between 512 and 1024: fixed interval 2-1
+Decimals between 1024 and 2048: fixed interval 20
+
+Precision limitations on integer values[edit]
+
+Integers between 0 and 2048 can be exactly represented
+Integers between 2049 and 4096 round to a multiple of 2 (even number)
+Integers between 4097 and 8192 round to a multiple of 4
+Integers between 8193 and 16384 round to a multiple of 8
+Integers between 16385 and 32768 round to a multiple of 16
+Integers between 32769 and 65519 round to a multiple of 32
+Integers equal to or above 65520 are rounded to "infinity".
+
+ARM alternative half-precision[edit]
+ARM processors support (via a floating point control register bit) an "alternative half-precision" format, which does away with the special case for an exponent value of 31.[5] It is almost identical to the IEEE format, but there is no encoding for infinity or NaNs; instead, an exponent of 31 encodes normalized numbers in the range 65536 to 131008.
+See also[edit]
+
+IEEE 754: IEEE standard for floating-point arithmetic (IEEE 754)
+ISO/IEC 10967, Language Independent Arithmetic
+Primitive data type
+RGBE image format
+
+References[edit]
+
+
+^ Nvidia
+^ a b http://www.openexr.com/about.html
+^ http://people.csail.mit.edu/ericchan/bib/pdf/p425-peercy.pdf
+^ http://www.google.com/patents/US7518615
+^ "Half-precision floating-point number support". RealView Compilation Tools Compiler User Guide. 10 December 2010. Retrieved 2015-05-05.&#160;
+
+
+External links[edit]
+
+Minifloats (in Survey of Floating-Point Formats)
+OpenEXR site
+Half precision constants from D3DX
+OpenGL treatment of half precision
+Fast Half Float Conversions
+Analog devices variant (four-bit exponent)
+C source code to convert between IEEE double, single, and half precision can be found here
+C# source code implementing a half-precision floating-point data type can be found here
+Java source code for half-precision floating-point conversion
+Half precision floating point for one of the extended GCC features
+[1]
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Half-precision_floating-point_format&amp;oldid=690487697"					
+				Categories: Binary arithmeticFloating point types				
+							
+		
+		
+			

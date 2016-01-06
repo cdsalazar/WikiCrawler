@@ -1,0 +1,2736 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Inductive reasoning
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Inductive inference" redirects here. For the technique in mathematical proof, see Mathematical induction.
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (November 2010)
+
+
+Inductive reasoning (as opposed to deductive reasoning or abductive reasoning) is reasoning in which the premises seek to supply strong evidence for (not absolute proof of) the truth of the conclusion. While the conclusion of a deductive argument is certain, the truth of the conclusion of an inductive argument is probable, based upon the evidence given.[1]
+Many dictionaries define inductive reasoning as reasoning that derives general principles from specific observations, though some sources disagree with this usage.[2]
+The philosophical definition of inductive reasoning is more nuanced than simple progression from particular/individual instances to broader generalizations. Rather, the premises of an inductive logical argument indicate some degree of support (inductive probability) for the conclusion but do not entail it; that is, they suggest truth but do not ensure it. In this manner, there is the possibility of moving from general statements to individual instances (for example, statistical syllogisms, discussed below).
+
+
+
+Contents
+
+
+1 Description
+2 Inductive vs. deductive reasoning
+3 Criticism
+
+3.1 Biases
+
+
+4 Types
+
+4.1 Generalization
+4.2 Statistical syllogism
+4.3 Simple induction
+4.4 Argument from analogy
+4.5 Causal inference
+4.6 Prediction
+
+
+5 Bayesian inference
+6 Inductive inference
+7 See also
+8 References
+9 Further reading
+10 External links
+
+
+
+Description[edit]
+Inductive reasoning is inherently uncertain. It only deals in degrees to which, given the premises, the conclusion is credible according to some theory of evidence. Examples include a many-valued logic, Dempster–Shafer theory, or probability theory with rules for inference such as Bayes' rule. Unlike deductive reasoning, it does not rely on universals holding over a closed domain of discourse to draw conclusions, so it can be applicable even in cases of epistemic uncertainty (technical issues with this may arise however; for example, the second axiom of probability is a closed-world assumption).[3]
+An example of an inductive argument:
+
+90% of biological life forms that we know of depend on liquid water to exist.
+Therefore, if we discover a new biological life form it will probably depend on liquid water to exist.
+
+This argument could have been made every time a new biological life form was found, and would have been correct every time; however, it is still possible that in the future a biological life form not requiring water could be discovered.
+As a result, the argument may be stated less formally as:
+
+All biological life forms that we know of depend on liquid water to exist.
+All biological life probably depends on liquid water to exist.
+
+Inductive vs. deductive reasoning[edit]
+Unlike deductive arguments, inductive reasoning allows for the possibility that the conclusion is false, even if all of the premises are true.[4] Instead of being valid or invalid, inductive arguments are either strong or weak, which describes how probable it is that the conclusion is true.[5]
+Given that "if A is true then B, C, and D are true", an example of deduction would be "A is true therefore we can deduce that B, C, and D are true". An example of induction would be "B, C, and D are observed to be true therefore A may be true". A is a reasonable explanation for B, C, and D being true.
+For example:
+
+A large enough asteroid impact would create a very large crater and cause a severe impact winter that could drive the non-avian dinosaurs to extinction.
+We observe that there is a very large crater in the gulf of Mexico dating to very near the time of the extinction of the non-avian dinosaurs
+Therefore it is possible that this impact could explain why the non-avian dinosaurs went extinct.
+
+Note however that this is not necessarily the case. Other events also coincide with the extinction of the non-avian dinosaurs. For example, the Deccan Traps in India.
+A classical example of an incorrect inductive argument was presented by John Vickers:
+
+All of the swans we have seen are white.
+Therefore, all swans are white.
+
+Note that this definition of inductive reasoning excludes mathematical induction, which is a form of deductive reasoning.
+Criticism[edit]
+Main article: Problem of induction
+Inductive reasoning has been criticized by thinkers as diverse as Sextus Empiricus[6] and Karl Popper.[7]
+The classic philosophical treatment of the problem of induction was given by the Scottish philosopher David Hume.[8]
+Although the use of inductive reasoning demonstrates considerable success, its application has been questionable. Recognizing this, Hume highlighted the fact that our mind draws uncertain conclusions from relatively limited experiences. In deduction, the truth value of the conclusion is based on the truth of the premise. In induction, however, the dependence on the premise is always uncertain. As an example, let's assume "all ravens are black." The fact that there are numerous black ravens supports the assumption. However, the assumption becomes inconsistent with the fact that there are white ravens. Therefore, the general rule of "all ravens are black" is inconsistent with the existence of the white raven. Hume further argued that it is impossible to justify inductive reasoning: specifically, that it cannot be justified deductively, so our only option is to justify it inductively. Since this is circular he concluded that our use of induction is unjustifiable with the help of "Hume's Fork".[9]
+However, Hume then stated that even if induction were proved unreliable, we would still have to rely on it. So instead of a position of severe skepticism, Hume advocated a practical skepticism based on common sense, where the inevitability of induction is accepted.[10]
+Biases[edit]
+Inductive reasoning is also known as hypothesis construction because any conclusions made are based on current knowledge and predictions.[citation needed] As with deductive arguments, biases can distort the proper application of inductive argument, thereby preventing the reasoner from forming the most logical conclusion based on the clues. Examples of these biases include the availability heuristic, confirmation bias, and the predictable-world bias.
+The availability heuristic causes the reasoner to depend primarily upon information that is readily available to him/her. People have a tendency to rely on information that is easily accessible in the world around them. For example, in surveys, when people are asked to estimate the percentage of people who died from various causes, most respondents would choose the causes that have been most prevalent in the media such as terrorism, and murders, and airplane accidents rather than causes such as disease and traffic accidents, which have been technically "less accessible" to the individual since they are not emphasized as heavily in the world around him/her.
+The confirmation bias is based on the natural tendency to confirm rather than to deny a current hypothesis. Research has demonstrated that people are inclined to seek solutions to problems that are more consistent with known hypotheses rather than attempt to refute those hypotheses. Often, in experiments, subjects will ask questions that seek answers that fit established hypotheses, thus confirming these hypotheses. For example, if it is hypothesized that Sally is a sociable individual, subjects will naturally seek to confirm the premise by asking questions that would produce answers confirming that Sally is in fact a sociable individual.
+The predictable-world bias revolves around the inclination to perceive order where it has not been proved to exist, either at all or at a particular level of abstraction. Gambling, for example, is one of the most popular examples of predictable-world bias. Gamblers often begin to think that they see simple and obvious patterns in the outcomes and, therefore, believe that they are able to predict outcomes based upon what they have witnessed. In reality, however, the outcomes of these games are difficult to predict and highly complex in nature. However, in general, people tend to seek some type of simplistic order to explain or justify their beliefs and experiences, and it is often difficult for them to realise that their perceptions of order may be entirely different from the truth.[11]
+Types[edit]
+Generalization[edit]
+A generalization (more accurately, an inductive generalization) proceeds from a premise about a sample to a conclusion about the population.
+
+The proportion Q of the sample has attribute A.
+Therefore:
+The proportion Q of the population has attribute A.
+
+
+Example
+
+There are 20 balls—either black or white—in an urn. To estimate their respective numbers, you draw a sample of four balls and find that three are black and one is white. A good inductive generalization would be that there are 15 black and five white balls in the urn.
+How much the premises support the conclusion depends upon (a) the number in the sample group, (b) the number in the population, and (c) the degree to which the sample represents the population (which may be achieved by taking a random sample). The hasty generalization and the biased sample are generalization fallacies.
+Statistical syllogism[edit]
+Main article: Statistical syllogism
+A statistical syllogism proceeds from a generalization to a conclusion about an individual.
+
+A proportion Q of population P has attribute A.
+An individual X is a member of P.
+Therefore:
+There is a probability which corresponds to Q that X has A.
+
+The proportion in the first premise would be something like "3/5ths of", "all", "few", etc. Two dicto simpliciter fallacies can occur in statistical syllogisms: "accident" and "converse accident".
+Simple induction[edit]
+Simple induction proceeds from a premise about a sample group to a conclusion about another individual.
+
+Proportion Q of the known instances of population P has attribute A.
+Individual I is another member of P.
+Therefore:
+There is a probability corresponding to Q that I has A.
+
+This is a combination of a generalization and a statistical syllogism, where the conclusion of the generalization is also the first premise of the statistical syllogism.
+Argument from analogy[edit]
+Main article: Argument from analogy
+The process of analogical inference involves noting the shared properties of two or more things, and from this basis inferring that they also share some further property:[12]
+
+P and Q are similar in respect to properties a, b, and c.
+Object P has been observed to have further property x.
+Therefore, Q probably has property x also.
+
+Analogical reasoning is very frequent in common sense, science, philosophy and the humanities, but sometimes it is accepted only as an auxiliary method. A refined approach is case-based reasoning.[13]
+Causal inference[edit]
+A causal inference draws a conclusion about a causal connection based on the conditions of the occurrence of an effect. Premises about the correlation of two things can indicate a causal relationship between them, but additional factors must be confirmed to establish the exact form of the causal relationship.
+Prediction[edit]
+A prediction draws a conclusion about a future individual from a past sample.
+
+Proportion Q of observed members of group G have had attribute A.
+Therefore:
+There is a probability corresponding to Q that other members of group G will have attribute A when next observed.
+
+Bayesian inference[edit]
+As a logic of induction rather than a theory of belief, Bayesian inference does not determine which beliefs are a priori rational, but rather determines how we should rationally change the beliefs we have when presented with evidence. We begin by committing to a prior probability for a hypothesis based on logic or previous experience, and when faced with evidence, we adjust the strength of our belief in that hypothesis in a precise manner using Bayesian logic.
+Inductive inference[edit]
+Around 1960, Ray Solomonoff founded the theory of universal inductive inference, the theory of prediction based on observations; for example, predicting the next symbol based upon a given series of symbols. This is a formal inductive framework that combines algorithmic information theory with the Bayesian framework. Universal inductive inference is based on solid philosophical foundations,[14] and can be considered as a mathematically formalized Occam's razor. Fundamental ingredients of the theory are the concepts of algorithmic probability and Kolmogorov complexity.
+See also[edit]
+
+
+
+
+Thinking portal
+
+
+
+Logic portal
+
+
+
+
+
+Abductive reasoning
+Algorithmic information theory
+Algorithmic probability
+Analogy
+Bayesian probability
+Counterinduction
+Deductive reasoning
+Explanation
+Failure mode and effects analysis
+Falsifiability
+Grammar induction
+Inductive inference
+Inductive logic programming
+Inductive probability
+Inductive programming
+Inductive reasoning aptitude
+Inquiry
+Kolmogorov complexity
+Lateral thinking
+Laurence Jonathan Cohen
+Logic
+Logical positivism
+Machine learning
+Mathematical induction
+Mill's Methods
+Minimum description length
+Minimum message length
+Open world assumption
+Raven paradox
+Recursive Bayesian estimation
+Retroduction
+Solomonoff's theory of inductive inference
+Statistical inference
+Stephen Toulmin
+Universal artificial intelligence
+
+
+References[edit]
+
+
+^ Copi, I. M.; Cohen, C.; Flage, D. E. (2007). Essentials of Logic (Second ed.). Upper Saddle River, NJ: Pearson Education. ISBN&#160;978-0-13-238034-8.&#160;
+^ "Deductive and Inductive Arguments", Internet Encyclopedia of Philosophy, Some dictionaries define "deduction" as reasoning from the general to specific and "induction" as reasoning from the specific to the general. While this usage is still sometimes found even in philosophical and mathematical contexts, for the most part, it is outdated.&#160;
+^ Kosko, Bart (1990). "Fuzziness vs. Probability". International Journal of General Systems 17 (1): 211–240. doi:10.1080/03081079008935108.&#160;
+^ John Vickers. The Problem of Induction. The Stanford Encyclopedia of Philosophy.
+^ Herms, D. "Logical Basis of Hypothesis Testing in Scientific Research" (pdf).&#160;
+^ Sextus Empiricus, Outlines Of Pyrrhonism. Trans. R.G. Bury, Harvard University Press, Cambridge, Massachusetts, 1933, p. 283.
+^ Popper, Karl R.; Miller, David W. (1983). "A proof of the impossibility of inductive probability". Nature 302 (5910): 687–688. doi:10.1038/302687a0.&#160;
+^ David Hume (1910) [1748]. An Enquiry concerning Human Understanding. P.F. Collier &amp; Son. ISBN&#160;0-19-825060-6.&#160;
+^ Vickers, John. "The Problem of Induction" (Section 2). Stanford Encyclopedia of Philosophy. 21 June 2010
+^ Vickers, John. "The Problem of Induction" (Section 2.1). Stanford Encyclopedia of Philosophy. 21 June 2010.
+^ Gray, Peter (2011). Psychology (Sixth ed.). New York: Worth. ISBN&#160;978-1-4292-1947-1.&#160;
+^ Baronett, Stan (2008). Logic. Upper Saddle River, NJ: Pearson Prentice Hall. pp.&#160;321–325.&#160;
+^ For more information on inferences by analogy, see Juthe, 2005.
+^ Rathmanner, Samuel; Hutter, Marcus (2011). "A Philosophical Treatise of Universal Induction". Entropy 13 (6): 1076–1136. doi:10.3390/e13061076.&#160;
+
+
+Further reading[edit]
+
+Cushan, Anna-Marie (1983/2014). Investigation into Facts and Values: Groundwork for a theory of moral conflict resolution. [Thesis, Melbourne University], Ondwelle Publications (online): Melbourne. [1]
+Herms, D. "Logical Basis of Hypothesis Testing in Scientific Research" (PDF).&#160;
+Kemerling, G. (27 October 2001). "Causal Reasoning".&#160;
+Holland, J. H.; Holyoak, K. J.; Nisbett, R. E.; Thagard, P. R. (1989). Induction: Processes of Inference, Learning, and Discovery. Cambridge, MA, USA: MIT Press. ISBN&#160;0-262-58096-9.&#160;
+Holyoak, K.; Morrison, R. (2005). The Cambridge Handbook of Thinking and Reasoning. New York: Cambridge University Press. ISBN&#160;978-0-521-82417-0.&#160;
+
+External links[edit]
+
+
+
+Wikiquote has quotations related to: Inductive reasoning
+
+
+
+
+
+Look up inductive reasoning in Wiktionary, the free dictionary.
+
+
+
+
+
+Wikisource has the text of a 1920 Encyclopedia Americana article about Inductive reasoning.
+
+
+
+Confirmation and Induction entry in the Internet Encyclopedia of Philosophy
+Inductive Logic entry in the Stanford Encyclopedia of Philosophy
+Inductive reasoning at PhilPapers
+Inductive reasoning at the Indiana Philosophy Ontology Project
+Four Varieties of Inductive Argument from the Department of Philosophy, University of North Carolina at Greensboro.
+
+
+Properties of Inductive Reasoning&#160;PDF&#160;(166&#160;KiB), a psychological review by Evan Heit of the University of California, Merced.
+The Mind, Limber An article which employs the film The Big Lebowski to explain the value of inductive reasoning.
+The Pragmatic Problem of Induction, by Thomas Bullemore
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Logic
+
+
+
+
+
+
+
+
+
+Outline
+History
+
+
+
+
+
+
+
+
+Fields
+
+
+
+Argumentation theory
+Axiology
+Critical thinking
+Logic in computer science
+Mathematical logic
+Metalogic
+Metamathematics
+Non-classical logic
+Philosophical logic
+Philosophy of logic
+Set theory
+
+
+
+
+
+
+
+
+Foundations
+
+
+
+Abduction
+Analytic and synthetic propositions
+Antinomy
+A priori and a posteriori
+Deduction
+Definition
+Description
+Induction
+Inference
+Logical form
+Logical consequence
+Logical truth
+Name
+Necessity and sufficiency
+Meaning
+Paradox
+Possible world
+Presupposition
+Probability
+Reason
+Reasoning
+Reference
+Semantics
+Statement
+Strict implication
+Substitution
+Syntax
+Truth
+Validity
+
+
+
+
+
+
+
+
+Lists
+
+
+
+
+topics
+
+
+
+Mathematical logic
+Boolean algebra
+Set theory
+
+
+
+
+
+
+
+
+other
+
+
+
+Logicians
+Rules of inference
+Paradoxes
+Fallacies
+Logic symbols
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portal
+Category
+WikiProject&#160;(talk)
+changes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Philosophy of science
+
+
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Analysis
+Analytic–synthetic distinction
+A priori and a posteriori
+Causality
+Commensurability
+Consilience
+Construct
+Creative synthesis
+Demarcation problem
+Empirical evidence
+Explanatory power
+Fact
+Falsifiability
+Feminist method
+Ignoramus et ignorabimus
+Inductive reasoning
+Intertheoretic reduction
+Inquiry
+Nature
+Objectivity
+Observation
+Paradigm
+Problem of induction
+Scientific law
+Scientific method
+Scientific revolution
+Scientific theory
+Testability
+Theory choice
+Theory-ladenness
+Underdetermination
+Unity of science
+
+
+
+
+
+
+
+
+Metatheory
+of science
+
+
+
+Coherentism
+Confirmation holism
+Constructive empiricism
+Constructive realism
+Constructivist epistemology
+Contextualism
+Conventionalism
+{Deductive-nomological model
+Hypothetico-deductive model
+Inductionism}
+Epistemological anarchism
+Fallibilism
+Foundationalism
+Instrumentalism
+Pragmatism
+Model-dependent realism
+Naturalism
+Physicalism
+Positivism-Reductionism-Determinism
+Rationalism&#160;/ Empiricism
+Received view&#160;/ Semantic view of theories
+Scientific realism&#160;/ Anti-realism
+Scientific essentialism
+Scientific formalism
+Scientific skepticism
+Scientism
+Structuralism
+Uniformitarianism
+Vitalism
+
+
+
+
+
+
+
+
+Philosophy of
+
+
+
+Physics
+
+thermal and statistical
+Motion
+
+
+Chemistry
+Biology
+Environment
+Geography
+Social science
+Technology
+
+Engineering
+Artificial intelligence
+Computer science
+
+
+Information
+Mind
+Psychology
+Perception
+Space and time
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Alchemy
+Criticism of science
+Epistemology
+Faith and rationality
+History and philosophy of science
+History of science
+History of evolutionary thought
+Logic
+Metaphysics
+Pseudoscience
+Relationship between religion and science
+Rhetoric of science
+Sociology of scientific knowledge
+Sociology of scientific ignorance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Philosophers of science by era
+
+
+
+
+
+
+
+
+
+
+Ancient
+
+
+
+Plato
+Aristotle
+Stoicism
+Epicurians
+
+
+
+
+
+
+
+
+Medieval
+
+
+
+Averroes
+Avicenna
+Roger Bacon
+William of Ockham
+Hugh of Saint Victor
+Dominicus Gundissalinus
+Robert Kilwardby
+
+
+
+
+
+
+
+
+Early modern
+
+
+
+Francis Bacon
+Thomas Hobbes
+René Descartes
+Galileo Galilei
+Pierre Gassendi
+Isaac Newton
+David Hume
+
+
+
+
+
+
+
+
+Late modern
+
+
+
+Immanuel Kant
+Friedrich Schelling
+Auguste Comte
+William Whewell
+Wilhelm Windelband
+John Stuart Mill
+Herbert Spencer
+Pierre Duhem
+Henri Poincaré
+Wilhelm Wundt
+
+
+
+
+
+
+
+
+Contemporary
+
+
+
+Albert Einstein
+Bertrand Russell
+Alfred North Whitehead
+Rudolf Carnap
+W.V.O. Quine
+Bas van Fraassen
+Carl Gustav Hempel
+Charles Sanders Peirce
+Daniel Dennett
+Hans Reichenbach
+Ian Hacking
+Imre Lakatos
+Jürgen Habermas
+Karl Pearson
+Karl Popper
+Larry Laudan
+Michael Polanyi
+Otto Neurath
+Paul Feyerabend
+Thomas Kuhn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portal
+Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Philosophy
+
+
+
+
+
+
+
+
+
+
+&#160;
+Branches
+
+
+
+
+
+
+
+
+
+
+Traditional
+
+
+
+Metaphysics
+Epistemology
+Logic
+Ethics
+Aesthetics
+
+
+
+
+
+
+
+
+Philosophy of
+
+
+
+Action
+Art
+
+Culture
+Design
+Music
+Film
+
+
+Being
+Business
+Dialogue
+Education
+Environment
+Futility
+Happiness
+Healthcare
+History
+Human nature
+Humor
+Language
+Literature
+Mathematics
+Mind
+
+Pain
+Psychology
+
+
+Philosophy
+Religion
+Science
+
+Physics
+Chemistry
+Biology
+Geography
+
+
+Sexuality
+Social science
+
+Economics
+Justice
+Law
+Politics
+Society
+
+
+Space and time
+Sport
+Technology
+
+Computer science
+Engineering
+Information
+
+
+War
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Schools of thought
+
+
+
+
+
+
+
+
+
+
+By era
+
+
+
+Ancient
+Western
+
+Medieval
+Renaissance
+Early modern
+Modern
+Contemporary
+
+
+
+
+
+
+
+
+
+
+Ancient
+
+
+
+
+Chinese
+
+
+
+Agriculturalism
+Confucianism
+Legalism
+Logicians
+Mohism
+Chinese naturalism
+Neotaoism
+Taoism
+Yangism
+Zen
+
+
+
+
+
+
+
+
+Greco-Roman
+
+
+
+Aristotelianism
+Cynicism
+Epicureanism
+Hermeneutics
+Neoplatonism
+Peripatetic
+Platonism
+Presocratic
+Pythagoreanism
+Sophism
+Stoicism
+
+
+
+
+
+
+
+
+Indian
+
+
+
+Buddhist
+Cārvāka
+Hindu
+Jain
+
+
+
+
+
+
+
+
+Persian
+
+
+
+Mazdakism
+Zoroastrianism
+Zurvanism
+
+
+
+
+
+
+
+
+
+
+
+Medieval
+9th–16th
+century
+
+
+
+
+
+European
+
+
+
+Christian philosophy
+Scholasticism
+Thomism
+Renaissance humanism
+
+
+
+
+
+
+
+
+East Asian
+
+
+
+Korean Confucianism
+Edo Neo-Confucianism
+Neo-Confucianism
+
+
+
+
+
+
+
+
+Indian
+
+
+
+Navya-Nyāya
+Vishishtadvaita
+Dvaita
+
+
+
+
+
+
+
+
+Islamic
+
+
+
+Averroism
+Avicennism
+Persian Illuminationism
+Ilm al-Kalam
+Sufi
+
+
+
+
+
+
+
+
+Jewish
+
+
+
+Judeo-Islamic
+
+
+
+
+
+
+
+
+
+
+
+Modern
+17th–19th
+century
+
+
+
+
+
+people
+
+
+
+Neo-Scholasticism
+Cartesianism
+Kantianism
+Neo-Kantianism
+Hegelianism
+Marxism
+
+
+
+
+
+
+
+
+Ideal&#160;/ Material
+
+
+
+Idealism
+Absolute idealism
+Rationalism
+Empiricism
+Utilitarianism
+Pragmatism
+
+
+
+
+
+
+
+
+Other
+
+
+
+Liberalism
+Anarchism
+Modernism
+Phenomenology
+Transcendentalism
+Existentialism
+Kokugaku
+New Confucianism
+
+
+
+
+
+
+
+
+
+
+
+Contemporary
+20th–21st
+century
+
+
+
+
+
+Analytic
+
+
+
+Analytic feminism
+Consequentialism
+Experimental philosophy
+Internalism and Externalism
+Falsificationism
+Foundationalism&#160;/ Coherentism
+Logical positivism
+Legal positivism
+Quinean Naturalism
+Ordinary language philosophy
+Quietism
+Rawlsian
+Reformed epistemology
+Postanalytic philosophy
+Contemporary utilitarianism
+Neo-Aristotelian
+Vienna Circle
+Wittgensteinian
+
+
+
+
+
+
+
+
+Continental
+
+
+
+Critical theory
+Deconstruction
+Existentialism
+Feminist
+Frankfurt School
+Postmodernism
+Post-structuralism
+Social constructionism
+Structuralism
+
+
+
+
+
+
+
+
+Other
+
+
+
+Kyoto School
+Objectivism
+Russian cosmism
+more...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Positions
+
+
+
+
+
+
+
+
+
+
+Aesthetics
+
+
+
+Formalism
+Institutionalism
+Aesthetic response
+
+
+
+
+
+
+
+
+Ethics
+
+
+
+Consequentialism
+Deontology
+Virtue
+
+
+
+
+
+
+
+
+Free will
+
+
+
+Compatibilism
+Determinism
+Libertarianism
+
+
+
+
+
+
+
+
+Metaphysics
+
+
+
+Atomism
+Dualism
+Monism
+Naturalism
+
+
+
+
+
+
+
+
+Epistemology
+
+
+
+Constructivism
+Empiricism
+Idealism
+Particularism
+Fideism
+Rationalism&#160;/ Reasonism
+Skepticism
+Solipsism
+
+
+
+
+
+
+
+
+Mind
+
+
+
+Behaviorism
+Eliminativism
+Epiphenomenalism
+Functionalism
+Objectivism
+Subjectivism
+
+
+
+
+
+
+
+
+Normativity
+
+
+
+Absolutism
+Particularism
+Relativism
+Nihilism
+Skepticism
+Universalism
+
+
+
+
+
+
+
+
+Ontology
+
+
+
+Action
+Event
+Process
+
+
+
+
+
+
+
+
+Reality
+
+
+
+Anti-realism
+Conceptualism
+Idealism
+Materialism
+Naturalism
+Nominalism
+Realism
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+
+
+
+Philosophy by region
+Philosophy-related lists
+
+
+
+
+
+
+
+
+
+
+
+
+
+By region
+
+
+
+African
+Ethiopian
+Aztec
+Native America
+Eastern
+Chinese
+Egyptian
+Czech
+Indian
+Indonesian
+Iranian
+Japanese
+Korean
+Vietnam
+Pakistani
+Western
+American
+British
+Danish
+French
+German
+Greek
+Italian
+Polish
+Romanian
+Russian
+Slovene
+
+
+
+
+
+
+
+
+Lists
+
+
+
+Outline
+Index
+Years
+Problems
+Schools
+Glossary
+Philosophers
+Movements
+Publications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portal
+Category
+WikiProject
+Changes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Positivism
+
+
+
+
+
+
+
+
+
+
+Perspectives
+
+
+
+Antihumanism
+Empiricism
+Rationalism
+Scientism
+
+
+
+
+
+
+
+
+Declinations
+
+
+
+Legal positivism
+Logical positivism&#160;/ Analytic philosophy
+Positivist school
+Postpositivism
+Sociological positivism
+Machian positivism (Empirio-criticism)
+Rankean historical positivism
+Polish positivism
+Russian positivism (Empiriomonism)
+
+
+
+
+
+
+
+
+Principal concepts
+
+
+
+Consilience
+Demarcation
+Evidence
+Induction
+Justificationism
+Pseudoscience
+The Critique of Metaphysics
+Unity of science
+Verificationism
+
+
+
+
+
+
+
+
+Antitheses
+
+
+
+Antipositivism
+Confirmation holism
+Critical theory
+Falsifiability
+Geisteswissenschaft
+Hermeneutics
+Historicism
+Historism
+Human science
+Humanities
+Problem of induction
+Reflectivism
+
+
+
+
+
+
+
+
+Related paradigm shifts
+in the history of science
+
+
+
+Non-Euclidean geometry (1830s)
+Heisenberg uncertainty principle (1927)
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Behavioralism
+Critical rationalism
+Criticism of science
+Epistemological idealism
+Epistemology
+Holism in anthropology
+Instrumentalism
+Modernism
+Naturalism in literature
+Nomothetic–idiographic distinction
+Objectivity in science
+Operationalism
+Phenomenalism
+Philosophy of science
+
+Deductive-nomological model
+Ramsey sentence
+Sense-data theory
+
+
+Qualitative research
+Relationship between religion and science
+Sociology
+Social science
+Structural functionalism
+Structuralism
+Structuration theory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Positivist-related debate
+
+
+
+
+
+
+
+
+
+
+Method
+
+
+
+1890s&#160;Methodenstreit (economics)
+1909&#160;Werturteilsstreit
+1960s&#160;Positivismusstreit
+1990s&#160;Science Wars
+
+
+
+
+
+
+
+
+Contributions
+
+
+
+1830&#160;The Course in Positive Philosophy
+1848&#160;A General View of Positivism
+1886&#160;The Analysis of Sensations
+1927&#160;The Logic of Modern Physics
+1936&#160;Language, Truth, and Logic
+1959&#160;The Two Cultures
+2001&#160;The Universe in a Nutshell
+
+
+
+
+
+
+
+
+Proponents
+
+
+
+Richard Avenarius
+Auguste Comte
+Émile Durkheim
+Berlin Circle
+Vienna Circle
+
+
+
+
+
+
+
+
+Criticism
+
+
+
+1909&#160;Materialism and Empirio-criticism
+1923&#160;History and Class Consciousness
+1934&#160;The Logic of Scientific Discovery
+1936&#160;The Poverty of Historicism
+1942&#160;World Hypotheses
+1951&#160;Two Dogmas of Empiricism
+1960&#160;Truth and Method
+1962&#160;The Structure of Scientific Revolutions
+1963&#160;Conjectures and Refutations
+1964&#160;One-Dimensional Man
+1968&#160;Knowledge and Human Interests
+1978&#160;The Poverty of Theory
+1980&#160;The Scientific Image
+1986&#160;The Rhetoric of Economics
+
+
+
+
+
+
+
+
+Critics
+
+
+
+Theodor W. Adorno
+Gaston Bachelard
+Mario Bunge
+Wilhelm Dilthey
+Paul Feyerabend
+Hans-Georg Gadamer
+Thomas Kuhn
+György Lukács
+Karl Popper
+W. V. O. Quine
+Max Weber
+
+
+
+
+
+
+
+
+Concepts in contention
+
+
+
+Knowledge
+Phronesis
+Truth
+Verstehen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Statistics
+
+
+
+
+
+
+
+
+
+Outline
+Index
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Descriptive statistics
+
+
+
+
+
+
+
+
+
+
+Continuous data
+
+
+
+
+Location
+
+
+
+Mean
+
+arithmetic
+geometric
+harmonic
+
+
+Median
+Mode
+
+
+
+
+
+
+
+
+Dispersion
+
+
+
+Range
+Standard deviation
+Coefficient of variation
+Percentile
+Interquartile range
+
+
+
+
+
+
+
+
+Shape
+
+
+
+Variance
+Skewness
+Kurtosis
+Moments
+L-moments
+
+
+
+
+
+
+
+
+
+
+
+Count data
+
+
+
+Index of dispersion
+
+
+
+
+
+
+
+
+Summary tables
+
+
+
+Grouped data
+Frequency distribution
+Contingency table
+
+
+
+
+
+
+
+
+Dependence
+
+
+
+Pearson product-moment correlation
+Rank correlation
+
+Spearman's rho
+Kendall's tau
+
+
+Partial correlation
+Scatter plot
+
+
+
+
+
+
+
+
+Statistical graphics
+
+
+
+Bar chart
+Biplot
+Box plot
+Control chart
+Correlogram
+Fan chart
+Forest plot
+Histogram
+Pie chart
+Q–Q plot
+Run chart
+Scatter plot
+Stem-and-leaf display
+Radar chart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Data collection
+
+
+
+
+
+
+
+
+
+
+Study design
+
+
+
+Effect size
+Standard error
+Statistical power
+Sample size determination
+
+
+
+
+
+
+
+
+Survey methodology
+
+
+
+Sampling
+
+stratified
+cluster
+
+
+Opinion poll
+Questionnaire
+
+
+
+
+
+
+
+
+Controlled experiments
+
+
+
+Design
+
+control
+optimal
+
+
+Controlled trial
+Randomized
+Random assignment
+Replication
+Blocking
+Factorial experiment
+
+
+
+
+
+
+
+
+Uncontrolled studies
+
+
+
+Observational study
+Natural experiment
+Quasi-experiment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Statistical inference
+
+
+
+
+
+
+
+
+
+
+Statistical theory
+
+
+
+Sampling distribution
+Order statistic
+Scan statistic
+Record value
+Sufficiency
+Completeness
+Exponential family
+Permutation test&#160;(Randomization test)
+Empirical distribution
+Bootstrap
+U statistic
+Efficiency
+Asymptotics
+Robustness
+
+
+
+
+
+
+
+
+Frequentist inference
+
+
+
+
+
+
+
+Confidence interval
+Testing hypotheses
+Power
+
+
+
+
+
+
+
+
+Unbiased estimators
+
+
+
+Mean unbiased minimum-variance
+Median unbiased
+
+
+
+
+
+
+
+
+Biased estimators
+
+
+
+Maximum likelihood
+Method of moments
+Minimum distance
+Density estimation
+
+
+
+
+
+
+
+
+Parametric tests
+
+
+
+Likelihood-ratio
+Wald
+Score
+
+
+
+
+
+
+
+
+
+
+
+Specific tests
+
+
+
+
+
+
+
+Z (normal)
+Student's t-test
+F
+Shapiro–Wilk
+Kolmogorov–Smirnov
+
+
+
+
+
+
+
+
+Goodness of fit
+
+
+
+Chi-squared
+G
+Sample source (Anderson–Darling)
+Sample normality (Shapiro–Wilk)
+Skewness&#160;/ kurtosis normality (Jarque-Bera)
+Model comparison (Likelihood-ratio)
+Model quality (Akaike criterion)
+
+
+
+
+
+
+
+
+Signed-rank
+
+
+
+1-sample (Wilcoxon)
+2-sample (Mann–Whitney U)
+1-way anova (Kruskal–Wallis)
+
+
+
+
+
+
+
+
+
+
+
+Bayesian inference
+
+
+
+Bayesian probability
+
+prior
+posterior
+
+
+Credible interval
+Bayes factor
+Bayesian estimator
+Maximum posterior estimator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+
+
+
+Correlation
+Regression analysis
+
+
+
+
+
+
+
+
+
+
+
+
+
+Correlation
+
+
+
+Pearson product–moment
+Partial correlation
+Confounding variable
+Coefficient of determination
+
+
+
+
+
+
+
+
+Regression analysis
+
+
+
+Errors and residuals
+Regression model validation
+Mixed effects models
+Simultaneous equations models
+Multivariate adaptive regression splines (MARS)
+
+
+
+
+
+
+
+
+Linear regression
+
+
+
+Simple linear regression
+Ordinary least squares
+General linear model
+Bayesian regression
+
+
+
+
+
+
+
+
+Non-standard predictors
+
+
+
+Nonlinear regression
+Nonparametric
+Semiparametric
+Isotonic
+Robust
+Heteroscedasticity
+Homoscedasticity
+
+
+
+
+
+
+
+
+Generalized linear model
+
+
+
+Exponential families
+Logistic (Bernoulli)&#160;/ Binomial&#160;/ Poisson regressions
+
+
+
+
+
+
+
+
+Partition of variance
+
+
+
+Analysis of variance (ANOVA, anova)
+Analysis of covariance
+Multivariate ANOVA
+Degrees of freedom
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Categorical&#160;/ Multivariate&#160;/ Time-series&#160;/ Survival analysis
+
+
+
+
+
+
+
+
+
+
+Categorical
+
+
+
+Cohen's kappa
+Contingency table
+Graphical model
+Log-linear model
+McNemar's test
+
+
+
+
+
+
+
+
+Multivariate
+
+
+
+Multivariate regression
+Principal components
+Factor analysis
+Cluster analysis
+Classification
+Copulas
+
+
+
+
+
+
+
+
+Time-series
+
+
+
+
+General
+
+
+
+Decomposition
+Trend
+Stationarity
+Seasonal adjustment
+Exponential smoothing
+Cointegration
+Structural break
+Granger causality
+
+
+
+
+
+
+
+
+Specific tests
+
+
+
+Dickey–Fuller
+Johansen
+Q-statistic (Ljung–Box)
+Durbin–Watson
+Breusch–Godfrey
+
+
+
+
+
+
+
+
+Time domain
+
+
+
+Autocorrelation (ACF)
+
+partial (PACF)
+
+
+Cross-correlation (XCF)
+ARMA model
+ARIMA model (Box–Jenkins)
+Autoregressive conditional heteroskedasticity (ARCH)
+Vector autoregression (VAR)
+
+
+
+
+
+
+
+
+Frequency domain
+
+
+
+Spectral density estimation
+Fourier analysis
+Wavelet
+
+
+
+
+
+
+
+
+
+
+
+Survival
+
+
+
+
+Survival function
+
+
+
+Kaplan–Meier estimator (product limit)
+Proportional hazards models
+Accelerated failure time (AFT) model
+First hitting time
+
+
+
+
+
+
+
+
+Hazard function
+
+
+
+Nelson–Aalen estimator
+
+
+
+
+
+
+
+
+Test
+
+
+
+Log-rank test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Applications
+
+
+
+
+
+
+
+
+
+
+Biostatistics
+
+
+
+Bioinformatics
+Clinical trials&#160;/ studies
+Epidemiology
+Medical statistics
+
+
+
+
+
+
+
+
+Engineering statistics
+
+
+
+Chemometrics
+Methods engineering
+Probabilistic design
+Process&#160;/ quality control
+Reliability
+System identification
+
+
+
+
+
+
+
+
+Social statistics
+
+
+
+Actuarial science
+Census
+Crime statistics
+Demography
+Econometrics
+National accounts
+Official statistics
+Population
+Psychometrics
+
+
+
+
+
+
+
+
+Spatial statistics
+
+
+
+Cartography
+Environmental statistics
+Geographic information system
+Geostatistics
+Kriging
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Category
+Portal
+Commons
+ WikiProject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Inductive_reasoning&amp;oldid=691142704"					
+				Categories: EpistemologyProblem solvingInductive reasoningReasoningStatistical inferenceCausal inferenceEpistemology of scienceHidden categories: Use dmy dates from July 2013Articles lacking in-text citations from November 2010All articles lacking in-text citationsAll articles with unsourced statementsArticles with unsourced statements from March 2012				
+							
+		
+		
+			

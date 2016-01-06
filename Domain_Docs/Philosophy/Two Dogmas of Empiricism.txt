@@ -1,0 +1,475 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Two Dogmas of Empiricism
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article is written like a personal reflection or opinion essay that states the Wikipedia editor's particular feelings about a topic, rather than the opinions of experts. Please help improve it by rewriting it in an encyclopedic style. (May 2010)
+
+
+
+
+
+
+
+This article reads like a review rather than an encyclopedic description of the subject. Please help improve this article to make it neutral in tone and meet Wikipedia's quality standards. (May 2010)
+
+
+
+
+
+
+
+
+
+Two Dogmas of Empiricism is a paper by analytic philosopher Willard Van Orman Quine published in 1951. According to City University of New York professor of philosophy Peter Godfrey-Smith, this "paper [is] sometimes regarded as the most important in all of twentieth-century philosophy".[1] The paper is an attack on two central aspects of the logical positivists' philosophy. One is the analytic-synthetic distinction between analytic truths and synthetic truths, explained by Quine as truths grounded only in meanings and independent of facts, and truths grounded in facts. The other is reductionism, the theory that each meaningful statement gets its meaning from some logical construction of terms that refers exclusively to immediate experience.
+"Two Dogmas" is divided into six sections. The first four sections are focused on analyticity, the last two sections on reductionism. There, Quine turns the focus to the logical positivists' theory of meaning. He also presents his own holistic theory of meaning.
+
+
+
+Contents
+
+
+1 Analyticity and circularity
+2 Reductionism
+3 Quine's holism
+4 Critique and influence
+5 See also
+6 Notes
+7 References
+8 External links
+
+
+
+Analyticity and circularity[edit]
+Most of Quine's argument against analyticity in the first four sections is focused on showing that different explanations of analyticity are circular. The main purpose is to show that no satisfactory explanation of analyticity has been given.
+Quine begins by making a distinction between two different classes of analytic statements. The first one is called logically true and has the form:
+
+(1) No unmarried man is married
+
+A sentence with that form is true independent of the interpretation of "man" and "married", so long as the logical particles "no", "un-" and "is" have their ordinary English meaning.
+The statements in the second class have the form:
+
+(2) No bachelor is married.
+
+A statement with this form can be turned into a statement with form (1) by exchanging synonyms with synonyms, in this case "bachelor" with "unmarried man". It is the second class of statements that lack characterization according to Quine. The notion of the second form of analyticity leans on the notion of synonymy, which Quine believes is in as much need of clarification as analyticity. Most of Quine's following arguments are focused on showing how explanations of synonymy end up being dependent on the notions of analyticity, necessity, or even synonymy itself.
+How do we reduce sentences from the second class to a sentence of class (1)? Some might propose definitions. "No bachelor is married" can be turned into "No unmarried man is married" because "bachelor" is defined as "unmarried man". But, Quine asks: how do we find out that "bachelor" is defined as "unmarried man"? Clearly, a dictionary would not solve the problem, as a dictionary is a report of already known synonyms, and thus is dependent on the notion of synonymy, which Quine holds as unexplained.
+A second suggestion Quine considers is an explanation of synonymy in terms of interchangeability. Two linguistic forms are (according to this view) synonymous if they are interchangeable without changing the truth-value. That is, in all contexts without change of truth value. But consider the following example:
+
+(3) "Bachelor" has fewer than ten letters.
+
+Obviously "bachelor" and "unmarried man" are not interchangeable in that sentence. To exclude that example and some other obvious counterexamples, such as poetic quality, Quine introduces the notion of cognitive synonymy. But does interchangeability hold as an explanation of cognitive synonymy? Suppose we have a language without modal adverbs like "necessarily". Such a language would be extensional, in the way that two predicates which are true about the same objects are interchangeable again without altering the truth-value. Thus, there is no assurance that two terms that are interchangeable without the truth-value changing are interchangeable because of meaning, and not because of chance. For example, "creature with a heart" and "creature with kidneys" share extension.
+In a language with the modal adverb "necessarily" the problem is solved, as salva veritate holds in the following case:
+
+(4) Necessarily all and only bachelors are unmarried men
+
+while it does not hold for
+
+(5) Necessarily all and only creatures with a heart are creatures with kidneys.
+
+Presuming that 'creature with a heart' and 'creature with kidneys' have the same extension, they will be interchangeable salva veritate. But this interchangeability rests upon both empirical features of the language itself and the degree to which extension is empirically found to be identical for the two concepts, and not upon the sought for principle of cognitive synonymy.
+It seems that the only way to assert the synonymy is by supposing that the terms 'bachelor' and 'unmarried man' are synonymous and that the sentence "All and only all bachelors are unmarried men" is analytic. But for salva veritate to hold as a definition of something more than extensional agreement, i.e., cognitive synonymy, we need a notion of necessity and thus of analyticity.
+So, from the above example, it can be seen that in order for us to distinguish between analytic and synthetic we must appeal to synonymy; at the same time, we should also understand synonymy with interchangeability salva veritate. However, such a condition to understand synonymy is not enough so we not only argue that the terms should be interchangeable, but necessarily so. And to explain this logical necessity we must appeal to analyticity once again.
+Reductionism[edit]
+Analyticity would be acceptable if we allowed for the verification theory of meaning: an analytic statement would be one synonymous with a logical truth, which would be an extreme case of meaning where empirical verification is not needed. "So, if the verification theory can be accepted as an adequate account of statement synonymy, the notion of analyticity is saved after all."
+The problem that naturally follows is how statements are to be verified. An empiricist would say that it can only be done using empirical evidence. So some form of reductionism - "the belief that each meaningful statement is equivalent to some logical construct upon terms which refer to immediate experience" - must be assumed in order for an empiricist to 'save' the notion of analyticity. Such reductionism, says Quine, presents just as intractable a problem as did analyticity.
+In order to prove that all meaningful statements can be translated into a sense-datum language, a reductionist would surely have to confront "the task of specifying a sense-datum language and showing how to translate the rest of significant discourse, statement by statement, into it." To illustrate the difficulty of doing so, Quine describes Rudolf Carnap's attempt in his book Der logische Aufbau der Welt.
+Quine first observes that Carnap's starting point was not the strictest possible, as his "sense-datum language" included not only sense-events but also "the notations of logic, up through higher set theory... Empiricists there are who would boggle at such prodigality." Nonetheless, says Quine, Carnap showed great ingenuity in defining sensory concepts "which, but for his constructions, one would not have dreamed were definable on so slender a basis." However, even such admirable efforts left Carnap, by his own admission, far short of completing the whole project.
+Finally, Quine objects in principle to Carnap's proposed translation of statements like "quality q is at point-instant x;y;z;t" into his sense-datum language, because he does not define the connective "is at". Without statements of this kind, it is difficult to see, even in principle, how Carnap's project could have been completed.
+The difficulty that Carnap encountered shows that reductionism is, at best, unproven and very difficult to prove. Until a reductionist can produce an acceptable proof, Quine maintains that reductionism is another "metaphysical article of faith".
+Quine's holism[edit]
+See also: Confirmation holism
+Instead of reductionism, Quine proposes that it is the whole field of science and not single statements that are verified. All scientific statements are interconnected. Logical laws give the relation between different statements, while they also are statements of the system. This makes talk about the empirical content of a single statement misleading. It also becomes impossible to draw a line between synthetic statements, which depend on experience, and analytic statements, that hold come what may. Any statement can be held as necessarily true according to Quine, if the right changes are made somewhere else in the system. In the same way, no statements are immune to revision.
+Even logical laws can be revised according to Quine. Quantum logic, introduced by Garrett Birkhoff and John von Neumann, abandons the law of distributivity from classical logic in order to reconcile some of the apparent inconsistencies of classical Boolean logic with the facts related to measurement and observation in quantum mechanics. Quine makes the case that the empirical study of physics has furnished apparently credible grounds for replacing classical logic by quantum logic, rather as Newtonian physics gave way to Einsteinian physics. The idea that logical laws are not immune to revision in the light of empirical evidence has provoked an intense debate (see Is logic empirical?).
+According to Quine, there are two different results of his reasoning. The first is a blurring of the line between metaphysics and natural science. The common-sense theory about physical objects is epistemologically comparable to the gods of Homer. Quine is a Physicalist, in the sense that he considers it a scientific error not to adopt a theory which makes reference to physical objects. However, like Gods of Homer, physical objects are posits, and there is no great epistemic difference in kind; the difference is rather that the theory of physical objects has turned out to be a more efficient theory. As Quine states in Two Dogmas, "The myth of physical objects is epistemologically superior to most in that it has proved more efficacious than other myths as a device for working a manageable structure into the flux of experience".
+The second result is a move towards pragmatism. Since, Quine says, the function of science is to predict future experiences in the light of past ones, the only ground for choosing which explanations to believe is "the degree to which they expedite our dealings with sense experiences." While pragmatic concerns are important for Carnap and other logical positivists when choosing linguistic framework, their pragmatism "leaves off at the imagined boundary between the analytic and the synthetic". For Quine, every change in the system of science is, when rational, pragmatic.
+Critique and influence[edit]
+Rudolf Carnap prepared a reply entitled "Quine on Analyticity", but this was not published until 1990. Addressing Quine's concern over the status of the sentence "Everything green is extended", Carnap wrote "the difficulty here lies in the unclarity of the word 'green', namely in an indecision over whether one should use the word for something unextended, i.e., for a single space-time point. In daily life it is never so used, and one scarcely ever speaks of space-time points." Carnap then puts forward that an exact artificial language ought to clarify the problem by defining 'green' (or its synonym) as something that is either necessarily or contingently not applied to space-time points. He wrote that once that decision is made, the difficulty is resolved. Carnap also answers Quine's argument on the use of sets of formal sentences to explain analyticity by arguing that this method is an explication of a poorly understood notion.[2]
+Paul Grice and P. F. Strawson criticized "Two Dogmas" in their (1956) article "In Defense of a Dogma". Among other things, they argue that Quine's skepticism about synonyms leads to a skepticism about meaning. If statements can have meanings, then it would make sense to ask "What does it mean?". If it makes sense to ask "What does it mean?", then synonymy can be defined as follows: Two sentences are synonymous if and only if the true answer of the question "What does it mean?" asked of one of them is the true answer to the same question asked of the other. They also draw the conclusion that discussion about correct or incorrect translations would be impossible given Quine's argument. Four years after Grice and Strawson published their paper, Quine's book Word and Object was released. In the book Quine presented his theory of indeterminacy of translation.
+In "'Two Dogmas' revisited", Hilary Putnam argues that Quine is attacking two different notions. Analytic truth defined as a true statement derivable from a tautology by putting synonyms for synonyms are near Kant's account of analytic truth as a truth whose negation is a contradiction. Analytic truth defined as a truth confirmed no matter what however, is closer to one of the traditional accounts of a priori. While the first four sections of Quine's paper concern analyticity, the last two concern a priority. Putnam considers the argument in the two last sections as independent of the first four, and at the same time as Putnam criticizes Quine, he also emphasizes his historical importance as the first top rank philosopher to both reject the notion of apriority and sketch a methodology without it.[3]
+Jerrold Katz, a onetime associate of Noam Chomsky's, countered the arguments of Two Dogmas directly by trying to define analyticity non-circularly on the syntactical features of sentences.[4][5][6]
+In his book Philosophical Analysis in the Twentieth Century, Volume 1&#160;: The Dawn of Analysis Scott Soames (pp 360–361) has pointed out that Quine's circularity argument needs two of the logical positivists' central theses to be effective:
+
+All necessary truths (and all a priori truths) are analytic
+
+
+Analyticity is needed to explain and legitimate necessity.
+
+It is only when these two theses are accepted that Quine's argument holds. It is not a problem that the notion of necessity is presupposed by the notion of analyticity if necessity can be explained without analyticity. According to Soames, both theses were accepted by most philosophers when Quine published Two Dogmas. Today however, Soames holds both statements to be antiquated.
+See also[edit]
+
+Duhem–Quine thesis
+American philosophy
+
+Notes[edit]
+
+
+^ Peter Godfrey-Smith, Theory and Reality, 2003, University of Chicago, ISBN 0-226-30062-5, pages 30-33 (section 2.4 "Problems and Changes")
+^ Quine, W.V. and Rudolf Carnap (1990). Dear Carnap, Dear Van: The Quine-Carnap Correspondence and Related Work. Berkeley, CA: University of California Press. pp.&#160;427–432.&#160;
+^ Putnam, Hilary, "'Two dogmas' revisited." In Gilbert Ryle, Contemporary Aspects of Philosophy. Stocksfield: Oriel Press, 1976, 202–213.
+^ Linksy, J. Analytical/Synthetic and Semantic Theory
+^ Quine, W. v. O.: On a Suggestion of Katz
+^ Katz, J: Where Things Stand Now with the Analytical/Synthetic Distinction
+
+
+References[edit]
+
+Quine, W.V.O. (1951), "Two Dogmas of Empiricism," The Philosophical Review 60: 20–43. Reprinted in his 1953 From a Logical Point of View. Harvard University Press.
+
+External links[edit]
+
+Two Dogmas of Empiricism
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Positivism
+
+
+
+
+
+
+
+
+
+
+Perspectives
+
+
+
+Antihumanism
+Empiricism
+Rationalism
+Scientism
+
+
+
+
+
+
+
+
+Declinations
+
+
+
+Legal positivism
+Logical positivism&#160;/ Analytic philosophy
+Positivist school
+Postpositivism
+Sociological positivism
+Machian positivism (Empirio-criticism)
+Rankean historical positivism
+Polish positivism
+Russian positivism (Empiriomonism)
+
+
+
+
+
+
+
+
+Principal concepts
+
+
+
+Consilience
+Demarcation
+Evidence
+Induction
+Justificationism
+Pseudoscience
+The Critique of Metaphysics
+Unity of science
+Verificationism
+
+
+
+
+
+
+
+
+Antitheses
+
+
+
+Antipositivism
+Confirmation holism
+Critical theory
+Falsifiability
+Geisteswissenschaft
+Hermeneutics
+Historicism
+Historism
+Human science
+Humanities
+Problem of induction
+Reflectivism
+
+
+
+
+
+
+
+
+Related paradigm shifts
+in the history of science
+
+
+
+Non-Euclidean geometry (1830s)
+Heisenberg uncertainty principle (1927)
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Behavioralism
+Critical rationalism
+Criticism of science
+Epistemological idealism
+Epistemology
+Holism in anthropology
+Instrumentalism
+Modernism
+Naturalism in literature
+Nomothetic–idiographic distinction
+Objectivity in science
+Operationalism
+Phenomenalism
+Philosophy of science
+
+Deductive-nomological model
+Ramsey sentence
+Sense-data theory
+
+
+Qualitative research
+Relationship between religion and science
+Sociology
+Social science
+Structural functionalism
+Structuralism
+Structuration theory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Positivist-related debate
+
+
+
+
+
+
+
+
+
+
+Method
+
+
+
+1890s&#160;Methodenstreit (economics)
+1909&#160;Werturteilsstreit
+1960s&#160;Positivismusstreit
+1990s&#160;Science Wars
+
+
+
+
+
+
+
+
+Contributions
+
+
+
+1830&#160;The Course in Positive Philosophy
+1848&#160;A General View of Positivism
+1886&#160;The Analysis of Sensations
+1927&#160;The Logic of Modern Physics
+1936&#160;Language, Truth, and Logic
+1959&#160;The Two Cultures
+2001&#160;The Universe in a Nutshell
+
+
+
+
+
+
+
+
+Proponents
+
+
+
+Richard Avenarius
+Auguste Comte
+Émile Durkheim
+Berlin Circle
+Vienna Circle
+
+
+
+
+
+
+
+
+Criticism
+
+
+
+1909&#160;Materialism and Empirio-criticism
+1923&#160;History and Class Consciousness
+1934&#160;The Logic of Scientific Discovery
+1936&#160;The Poverty of Historicism
+1942&#160;World Hypotheses
+1951&#160;Two Dogmas of Empiricism
+1960&#160;Truth and Method
+1962&#160;The Structure of Scientific Revolutions
+1963&#160;Conjectures and Refutations
+1964&#160;One-Dimensional Man
+1968&#160;Knowledge and Human Interests
+1978&#160;The Poverty of Theory
+1980&#160;The Scientific Image
+1986&#160;The Rhetoric of Economics
+
+
+
+
+
+
+
+
+Critics
+
+
+
+Theodor W. Adorno
+Gaston Bachelard
+Mario Bunge
+Wilhelm Dilthey
+Paul Feyerabend
+Hans-Georg Gadamer
+Thomas Kuhn
+György Lukács
+Karl Popper
+W. V. O. Quine
+Max Weber
+
+
+
+
+
+
+
+
+Concepts in contention
+
+
+
+Knowledge
+Phronesis
+Truth
+Verstehen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Two_Dogmas_of_Empiricism&amp;oldid=647282838"					
+				Categories: 1951 essaysAcademic journal articlesAnalytic philosophy literatureEmpiricismEpistemology literatureHolismLogical truthPhilosophy essaysPhilosophy of language literaturePhilosophy of science literatureWillard Van Orman QuineWorks originally published in American magazinesWorks originally published in philosophy magazinesHidden categories: Wikipedia articles needing style editing from May 2010All articles needing style editing				
+							
+		
+		
+			

@@ -1,0 +1,946 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Mac OS X Snow Leopard
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Mac OS X 10.6)
+												
+					Jump to:					navigation, 					search
+				
+				
+Mac OS X v10.6 Snow Leopard
+
+A version of the Mac OS X operating system
+
+
+
+
+
+
+Screenshot of Mac OS X Snow Leopard
+
+
+
+Developer
+Apple Inc.
+
+
+Source model
+Closed source (with open source components)
+
+
+Released to
+manufacturing
+August&#160;28, 2009; 6 years ago&#160;(2009-08-28)
+
+
+Latest release
+10.6.8 v1.1 (Build 10K549) / July&#160;25, 2011; 4 years ago&#160;(2011-07-25)[1]
+
+
+Update method
+Apple Software Update
+
+
+Platforms
+IA-32, x86-64[2]
+
+
+Kernel type
+Hybrid (XNU)
+
+
+License
+Commercial software license and Apple Public Source License (APSL)
+
+
+Preceded by
+Mac OS X 10.5 Leopard
+
+
+Succeeded by
+Mac OS X 10.7 Lion
+
+
+Official website
+Mac OS X Snow Leopard at the Wayback Machine (archived June 6, 2011)
+
+
+Support status
+
+
+Unsupported as of February 25, 2014, though the last security update happened in September 2013.[3]
+
+
+Mac OS X Snow Leopard (version 10.6) is the seventh major release of Mac OS X, Apple's desktop and server operating system for Macintosh computers.
+Snow Leopard was publicly unveiled on June 8, 2009 at the Apple Worldwide Developers Conference. On August 28, 2009, it was released worldwide,[4] and was made available for purchase from Apple's website and its retail stores at the price of US$29 for a single-user license. As a result of the low price, initial sales of Snow Leopard were significantly higher than that of its predecessors.[5] The release of Snow Leopard came nearly two years after the introduction of Mac OS X Leopard, the second longest time span between successive Mac OS X releases (the time span between Tiger and Leopard was the longest).
+Unlike those of previous versions of Mac OS X, the goals of Snow Leopard were improved performance, greater efficiency and the reduction of its overall memory footprint. Addition of new end-user features was not a primary consideration: its name was intended to signify its goal to be a refinement of the previous OS X version, Leopard.[citation needed] Much of the software in Mac OS X was extensively rewritten for this release in order to take advantage fully of modern Macintosh hardware. New programming frameworks, such as OpenCL, were created, allowing software developers to use graphics cards in their applications. This is also the first Mac OS release since System 7.1.1 that does not support Macs using PowerPC processors, as Apple now intends to focus on its current line of Intel-based products.[6] As support for Rosetta was dropped in OS X Lion, Snow Leopard is the last version of Mac OS X that is able to run PowerPC-only applications.
+Snow Leopard was succeeded by Mac OS X Lion (version 10.7) on July 20, 2011.[7] Since then, Apple has continued to sell Snow Leopard from its online store for the benefit of users that require Snow Leopard in order to upgrade to later versions of OS X, which have all been distributed through the Mac App Store introduced in the Snow Leopard 10.6.6 update.[8]
+Snow Leopard is the last release of Mac OS X to support the 32-bit Intel Core Solo and Intel Core Duo CPUs.
+
+
+
+Contents
+
+
+1 System requirements
+2 License
+3 New or changed features
+
+3.1 Refinements to the user interface
+3.2 New wallpapers
+3.3 Dropped features
+
+
+4 Developer technologies
+
+4.1 64-bit architecture
+4.2 Grand Central Dispatch
+4.3 OpenCL
+4.4 CUPS
+4.5 Power management
+
+
+5 Security
+6 Compatibility
+7 Reception
+8 Release history
+9 See also
+10 References
+11 External links
+
+
+
+System requirements
+Apple states the following basic Snow Leopard system requirements are:
+
+Mac computer with an Intel processor (IA-32). "Yonah" processors such as Core Solo and Core Duo can run only 32-bit applications; later x86-64 architecture processors such as Core 2 Duo are also able to run 64-bit applications.
+1&#160;GB of RAM
+5&#160;GB of free disk space
+DVD drive (also accessible via Remote Disc) or external USB or FireWire DVD drive for installation
+
+Additional requirements to use certain features:[9]
+
+QuickTime H.264 hardware acceleration support, requires an Nvidia GeForce 9400M, 320M, or GT 330M graphics card
+OpenCL, requires a supported Nvidia or ATI graphics card[9]
+
+Snow Leopard does not support PowerPC-based Macs (e.g., Power Macs, PowerBooks, iBooks, iMacs (G3-G5), all eMacs, plus pre-February 2006 Mac minis and the Power Mac G4 Cube), although PowerPC applications are supported via Rosetta, which is now an optional install.
+License
+Snow Leopard is available as an upgrade for Intel-based Macintosh computers. Single-user licenses and "family pack" licenses for up to five computers are available. For qualifying Mac computers bought after June 8, 2009, Apple offered a discounted price through their "up to date" program provided that customers' orders were faxed or postmarked by December 26, 2009. The standalone retail version of Snow Leopard is marketed as being restricted to users of Mac OS X Leopard, while the recommended upgrade path from Apple for Mac OS X Tiger is through the "Mac Box Set", which includes Mac OS X Snow Leopard and the current versions of iLife and iWork.
+There are three licenses available.[10] These licenses differ in their requirements for pre-installed versions of Mac OS X:
+
+Leopard Upgrade: requires that Mac OS X Leopard already be installed.
+
+
+If you have purchased an Upgrade for Mac OS X Leopard license, then subject to the terms and conditions of this License, you are granted a limited non-exclusive license to install, use and run one (1) copy of the Apple Software on a single Apple-branded computer as long as that computer has a properly licensed copy of Mac OS X Leopard already installed on it.[11]
+
+
+A "Family Pack Upgrade for Mac OS X Leopard" license is also mentioned as a subset of the Leopard Upgrade.
+
+
+Single Use: places no restriction on which (if any) version of Mac OS X should already be installed. Used for the non-upgrade and Mac Box Set versions of Snow Leopard.
+
+
+Subject to the terms and conditions of this License ... you are granted a limited non-exclusive license to install, use and run one (1) copy of the Apple Software on a single Apple-branded computer at a time.[11]
+
+
+Family Pack: identical to the Single Use license in this respect.
+
+It is not entirely clear which license is offered with the retail version of Snow Leopard. As noted above, Apple's website advertised this version as an "upgrade from Mac OS X Leopard for $29" and suggest that others upgrade using the Mac Box Set, implying the stand-alone retail version to be a "Leopard Upgrade" license. On the other hand, some Apple press materials appear to indicate that this version is, in fact, the "Single Use" license:
+
+The Snow Leopard single user license will be available for a suggested retail price of $29 (US)[12] (emphasis added)
+
+However, even if the retail edition of Snow Leopard is in fact a "Leopard Upgrade", the company has acknowledged that there is no technical barrier in that edition preventing a direct upgrade from Mac OS X "Tiger".[13]
+The Leopard Upgrade license explicitly applies to the Up-To-Date Program[14] (US$9.95) for Macs bought between June 8 and December 26, 2009[15] and the installation discs provided through this program are clearly marked as upgrades unlike either of the retail editions.
+New or changed features
+Mac OS X Snow Leopard is intended to be a release aimed to refine the existing feature set, expand the technological capabilities of the operating system, and improve application efficiency. Many of the changes involve how the system works in the background and are not intended to be seen by the user. For example, the Finder application was completely rewritten in the Cocoa application programming interface. Despite significant changes in the software, users will experience almost no changes in the user interface. Snow Leopard includes the following changes:
+
+Boot Camp now allows Windows partitions to read and copy files from HFS+ partitions. The new version also adds support for advanced features on Cinema Displays and a new command-line version of the Startup Disk Control Panel.
+The Finder has been completely rewritten in Cocoa to take advantage of the new technologies introduced in Snow Leopard.
+A much smaller OS footprint, taking up about 7&#160;GB less space than Mac OS X Leopard. Some of the recovered disk space (~250&#160;MB) is because printer drivers are now downloaded or installed only as needed, rather than being pre-installed. The default install only contains those drivers needed for existing printers and a small subset of popular printers.[16]
+iChat enhancements include greater resolution video chats in iChat Theater and lowered upload bandwidth requirements.
+Microsoft Exchange support is now integrated into the Mail, Address Book, and iCal applications. However, only Microsoft Exchange 2007 is supported and customers using prior versions of Exchange must either upgrade or use Microsoft Entourage.
+Full multi-touch trackpad support has been added to notebooks prior to those introduced in October 2008.[17] While the original MacBook Air and other early multi-touch trackpad enabled notebooks had support for some gestures, they were unable to use four-finger gestures. This limitation has now been removed in Snow Leopard.
+Preview can infer the structure of a paragraph in a PDF document.
+QuickTime X, the next version of QuickTime player and multimedia framework, has been completely rewritten into a full 64-bit Cocoa application and builds on the media technologies in Mac OS X, such as Core Audio, Core Video, and Core Animation, to deliver playback. Apple has redesigned the QuickTime user interface to resemble the full-screen QuickTime view in prior versions, where the entire window displays the video. The titlebar and playback controls fade in and out as needed. QuickTime X also supports HTTP live streaming and takes advantage of ColorSync to provide high-quality color reproduction.[18] If Snow Leopard is installed on a Mac with an nVidia GeForce 9400M, 320M or GT 330M graphics card, QuickTime X will be able to use its video-decoding capabilities to reduce CPU load.
+Safari 4 features Top Sites, Cover Flow, VoiceOver, expanded standards support, and built-in crash resistance, which prevents browser crashes caused by plug-ins by running them in separate processes.[19] Safari 4 is bundled with Snow Leopard but does not require it, as it is available for free for Mac OS X Tiger and Leopard as well as Windows.
+Time Machine connection establishment and backups are now much faster.
+VoiceOver has also been greatly enhanced in Snow Leopard. Reading of web pages is improved with Auto Web Spots&#160;— areas of a page automatically designated for quick access. On newer Apple portables, trackpad gestures can be used to control VoiceOver functions, including the "rotor" gesture first seen in VoiceOver for the iPhone 3GS, allowing for the changing of certain VoiceOver navigation options by rotating fingers on the trackpad. Braille Display support is also improved, with Bluetooth displays supported for the first time.[20]
+
+The 10.6.6 update introduced support for the Mac App Store, Apple's digital distribution platform for OS X applications.[21]
+Refinements to the user interface
+While the Finder was completely rewritten in Cocoa, it did not receive a major user interface overhaul. Instead, the interface has been modified in several areas to promote ease of use. These changes include:
+
+The "traffic light" titlebar controls are now slightly lighter in appearance and have less depth than they did in Mac OS X 10.5.
+Exposé can now display windows for a single program by left clicking and holding its icon in the dock. Windows are arranged in a new grid pattern.
+Contextual menus which come out of Dock icons now have more options and have a new look, with a semi-transparent charcoal background and white text.
+An option has been added to the Finder preferences that allows the user to modify search behavior. The default setting can be selected to (1) search the entire computer, (2) search only the current folder from which the search was initiated, or (3) perform the search based on the previously used scope.
+Dock Stacks, when viewed as a grid, allow viewing of a subfolder as a new stack, rather than launching a Finder window, in a manner similar to "tunnelling". When viewed as grids or lists, scroll-bars are provided to navigate folders with more items than the current screen resolution will accommodate, as the program does not scale the icons to show as many as possible the way it did in OS X 10.5.[22]
+The default gamma has been changed from 1.8 to 2.2 to better serve the color needs of digital content producers and consumers.[16]
+Windows can now be minimized directly onto their application's icon in the dock.[23]
+Faster PDF and JPEG icon refreshes.[24]
+When searching for a network, the AirPort menu-bar icon animates until it finds a network and shows network strength of available networks in the drop down menu.
+Prefixes for bytes are now used in strictly decimal meaning (as opposed to their binary meaning) when describing disk space, such that an indicated file size of 1&#160;MB corresponds to 1 million bytes, as commonly used by hard disk manufacturers.[25]
+Snow Leopard shuts down and goes to sleep faster.[26]
+
+New wallpapers
+As with most upgrades of Mac OS X, new wallpapers are available. There are new wallpapers in the Nature (two of which are of snow leopards), Plants and Black and White sub-folders under the Apple folder. Furthermore, there are new Apple wallpaper sub-folders with multiple wallpapers:
+
+Art: Dancer on the Stage, Nighthawks, Poppies Blooming, Sunday Afternoon, Suprematism, The Great Wave, and Water Lilies.
+Patterns: Pinstripe and Saree.
+
+New solid colors can be used as wallpapers as well. There is a new blue and gray, as well as a solid kelp which serves as the "green wallpaper." The default "space nebula" wallpaper has been updated as well.
+Dropped features
+
+AppleTalk is no longer supported.[27]
+It is no longer possible to change an application's language using the Finder "Get Info" dialogue. While there are workarounds for some applications, others (such as Adobe After Effects CS4) will not be able to be run in a different language than the one installed[28] without using Terminal commands or 3rd party software.
+Creator codes, which are per-file metadata attributes that define, for a file that has a creator code, what application should open that file, regardless of its extension, have had their priority in the application selection process reduced.[29]
+Creating or updating a Hierarchical File System volume is no longer supported.
+
+Developer technologies
+64-bit architecture
+Mac OS X Tiger added limited support for 64-bit applications on machines with 64-bit processors; Leopard extended the support for 64-bit applications to include applications using most of Mac OS X's libraries and frameworks.
+In Snow Leopard, most built-in applications have been rebuilt to use the 64-bit x86-64 architecture (excluding iTunes, Front Row, Grapher and DVD Player applications).[30] They will run in 32-bit mode on machines with 32-bit processors, and in 64-bit mode on machines with 64-bit processors.
+In addition, the Mac OS X kernel has been rebuilt to run in 64-bit mode on some machines. On those machines, Snow Leopard supports up to 16 terabytes of RAM. Newer Xserve and Mac Pro machines will run a 64-bit kernel by default; newer iMac and MacBook Pro machines can run a 64-bit kernel, but will not do so by default.[31] Users wishing to use the 64-bit kernel on those machines must hold down the numbers 6 and 4 on the keyboard while booting to get the 64-bit kernel to load.[32][33] A change to the com.apple.Boot.plist will also enable users with compatible computers to permanently boot into 64-bit for those wishing to do so.
+Stuart Harris, software product marketing manager at Apple Australia, said, "For the most part, everything that they experience on the Mac, from the 64-bit point of view, the applications, the operating system, is all going to be 64-bit, but that at this stage there were very few things, such as device drivers, that required 64-bit mode at the kernel level".[33]
+With Mac OS X Snow Leopard only the following Apple computers run or are capable of running the 64-bit kernel:[34]
+
+
+Product
+Model identifier
+K64 status on client version
+K64 status on server version
+
+
+Xserve early 2008 and later
+Xserve2,1 and higher
+Capable
+Default
+
+
+Mac Pro early 2008
+MacPro3,1
+Capable
+Default
+
+
+Mac Pro early 2009
+MacPro4,1
+Capable
+Default
+
+
+Mac Pro mid-2010
+MacPro5,1
+Default
+Default
+
+
+MacBook Pro early 2008
+MacBookPro4,1
+Capable
+Capable
+
+
+MacBook Pro late 2008
+MacBookPro4,1 and 5,1
+Capable
+Capable
+
+
+MacBook Pro early 2009
+MacBookPro5,2
+Capable
+Capable
+
+
+MacBook Pro mid-2009
+MacBookPro5,3 and 5,4 and 5,5
+Capable
+Capable
+
+
+MacBook Pro mid-2010
+MacBookPro6,1 and 6,2 and 7,1
+Capable
+Capable
+
+
+MacBook Pro early 2011
+MacBookPro8,1 and 8,2 and 8,3
+Default
+Default
+
+
+iMac early 2008 and later
+iMac8,1 and higher
+Capable
+Capable
+
+
+Mac Mini mid-2010
+Macmini4,1
+Capable
+Default
+
+
+^* Amit Singh has reported that the early 2009 Mac Mini and MacBook may be capable of running the 64-bit kernel; however, Apple has set these models to boot into the 32-bit kernel. With some tweaking, the Unibody MacBook can be set to boot the 64-bit kernel.[35]
+Grand Central Dispatch
+Grand Central Dispatch uses the multiple processor cores now in every new Macintosh for more efficient performance. Due to the technical difficulties traditionally involved in making applications optimized for multicore CPUs, the majority of computer applications do not effectively use multiple processor cores.[36] As a result, processing power often goes unused. Grand Central Dispatch includes APIs to help programmers efficiently use these cores for parallel programming.
+Grand Central Dispatch shifts thread handling focus to itself rather than leaving it to specific applications to distribute jobs evenly across cores and clears up unused memory created by inactive or old threads to achieve maximum performance. Apple is also releasing APIs for Grand Central Dispatch for developers to use in their applications and also to analyze specific blocks of code running on Grand Central Dispatch.[37]
+A new C and Objective-C language feature named "Blocks" facilitates creation of code that will easily optimize to take advantage of Grand Central Dispatch.[38][39][40]
+OpenCL
+OpenCL (Open Computing Language) addresses the power of graphics processing units (GPUs) to leverage them in any application, and not just for graphics-intensive applications like 3D games. OpenCL automatically optimizes for the kind of graphics processor in the Mac, adjusting itself to the available processing power. OpenCL provides consistent numeric precision and accuracy, fixing a problem that has hampered GPU-based programming in the past.[41]
+OpenCL includes a C-based programming language with a structure that is already familiar to Mac OS X programmers, who can use Xcode developer tools to adapt their programs to work with OpenCL. Only the most process intensive parts of the application need to be written in OpenCL C without affecting the rest of the code. OpenCL is an open standard that has been supported by AMD, Intel, and Nvidia; it is maintained by Khronos Group.[18]
+It serves a similar purpose to Nvidia's C for CUDA and Microsoft's Direct3D 11 compute shaders.
+It only works with the following Mac GPUs: NVIDIA GeForce 320M, GT 330M, 9400M, 9600M GT, 8600M GT, GT 120, GT 130, GTX 285, 8800 GT, 8800 GS, Quadro FX 4800, FX 5600 and ATI Radeon HD 4670, HD 4850, HD 4870, HD 5670, HD 5750, HD 5770, HD 5870, HD 6490M, HD 6750M, HD 6770M, HD 6970M.[9] If the system does not possess one of these compatible GPUs, OpenCL code will instead execute on the system's CPU.[42]
+CUPS
+CUPS (the printing system used in many Unix-like operating systems) has been updated to version 1.4 which provides improved driver, networking, and Kerberos support along with performance improvements. CUPS 1.4 is also the first implementation of the Internet Printing Protocol version&#160;2.1.[43]
+Power management
+Power management has been improved, with implementation of a new wake on demand feature supported on more recent Macintosh hardware.[44] Wake on demand takes advantage of the sleep proxy service implemented in AirPort and Time Capsule routers,[45] so that the computer can sleep while the router responds to mDNS queries. Should the request require the host computer to wake up, the router sends the necessary special wake-up-packet[46] to the sleeping computer.
+Security
+Apple strengthened Mac OS X by implementing stack protection, and sandboxing more Mac OS X components such as the H.264 decoder in QuickTime and browser plug-ins as a separate process in Safari.[47] An anti-malware feature was also added to the system that alerts the user if malware is detected.[48] Mac OS X 10.6.8 added daily malware definition updates.[49]
+Computer security researcher Charlie Miller claims that OS X Snow Leopard is more vulnerable to attack than Microsoft Windows for lacking full address space layout randomization (ASLR) since Mac OS X Leopard,[50] a technology that Microsoft started implementing in Windows Vista.[51]
+The Safari web browser has received updates to version 6.0 in Lion and Mountain Lion, but not in Snow Leopard.[52]
+Compatibility
+Snow Leopard breaks compatibility with several older versions of some applications, such as Parallels Desktop 3.0, versions of Aperture before 2.1.1, and versions of Keynote before 2.0.2, among other software.[53] Apple has also published a list of applications with known compatibility issues with Snow Leopard.[54]
+Printer and scanner drivers used by previous versions of Mac OS X are not compatible with Snow Leopard and will be replaced during Snow Leopard installation. Since the initial release of Snow Leopard many manufacturers have provided compatible drivers that are available via Software Update.[55] If a native driver is not available Snow Leopard also includes CUPS and Gutenprint open source drivers that may provide limited functionality.
+10.6.0 introduced a bug that frequently prevented DNS queries from returning IPv6 addresses.[56][57][58] This was resolved in 10.6.8.[59]
+Reception
+At the WWDC in 2009, Apple stated that Snow Leopard features no new major visual changes.[60] Instead, the release focuses on refining the operating system to enable better performance.[60]
+OSNews reported that Mac OS X Snow Leopard was well received by critics.[61][62]
+Engadget reviewed Snow Leopard and pointed out that the price of Snow Leopard dropped from the $129 Apple charged for previous versions of Mac OS X to $29. Engadget's opinion was that this could be largely because most users would not see a noticeable change in the look and feel of the system.[63] However, most reviews commented on the large improvement in speed of the native Mac OS X applications Finder, iCal, Mail, etc.[63]
+CNET editors gave it 4 stars out of 5, stating "Intel Mac users will like Snow Leopard's smartly designed interface enhancements, and its Exchange support is a must-have (especially with Outlook for Mac on the way). With a ton of technological improvements, Snow Leopard is worth the $29 upgrade fee."[64]
+On October 21, 2009, SFGate blogger Yobie Benjamin wrote that the "MacBook Pro that came preloaded with Snow Leopard kicks butt and is a screaming fast machine", but "when I tried to upgrade one of my 'older' MacBooks, it was a fricking disaster from hell". Apart from upgrading, Benjamin also tried a clean install. But he complained of slowness even after his clean install. He wrote, "I ended up downgrading back to OSX 10.5.8" then he concluded by writing, "I might try to do it again but it won't be till Apple releases at least 2 major fix updates. If you want to roll the dice and try, go ahead... your upgrade might work, however, random installs not working is not good for me. Lesson learned --- I'll wait."[65]
+The single-user upgrade and Family Pack units of Snow Leopard ranked 1 and 2 respectively on Amazon.com's software bestseller charts when Apple announced it would release it within the week.[66]
+Testmac.com highlighted other unexpected improvements including the release of a new version of Boot Camp, version 3.0, a cleaner, popup software update process and screen and video recording in the new QuickTime Player.[67]
+The BBC reported that a bug in Mac OS X versions 10.6.0 and 10.6.1 which, in rare cases, caused loss of user account data after use of a previously existing guest account by users who had upgraded from a previous version of Mac OS X, received wide publicity.[68] The bug was fixed as of version 10.6.2.[69]
+Release history
+Former Apple CEO Steve Jobs announced Snow Leopard at WWDC on June 9, 2008,[70] and it was privately demonstrated to developers by Senior Vice President of Software Engineering Bertrand Serlet. On Monday, May 11, 2009, after build 10A354, Apple issued a code freeze on Snow Leopard's APIs.[71] The first public demonstration was given at WWDC 2009 by Serlet and Vice President of Mac OS Engineering, Craig Federighi.[6][72]
+
+
+Version
+Build[73]
+Date
+OS name
+Notes
+Download
+
+
+10.6
+10A432
+August 28, 2009
+Darwin 10.0
+Original retail DVD release
+N/A
+
+
+10A433
+Server edition; Original retail DVD release
+
+
+10.6.1
+10B504
+September 10, 2009
+Darwin 10.1
+About the Mac OS X v10.6.1 Update
+Mac OS X v10.6.1 Update
+
+
+10.6.2
+10C540
+November 9, 2009
+Darwin 10.2
+About the Mac OS X v10.6.2 Update
+Mac OS X v10.6.2 Update
+
+
+10.6.3
+10D573
+March 29, 2010
+Darwin 10.3
+About the Mac OS X v10.6.3 Update
+Mac OS X v10.6.3 Update
+
+
+10D575
+April 1, 2010
+Second retail DVD release
+N/A
+
+
+10D578
+April 13, 2010
+About the Mac OS X v10.6.3 Update; v1.1
+Mac OS X v10.6.3 v1.1 Update (Combo)
+
+
+10.6.4
+10F569
+June 15, 2010
+Darwin 10.4
+About the Mac OS X v10.6.4 Update
+Mac OS X v10.6.4 Update (Combo)
+
+
+10.6.5
+10H574
+November 10, 2010
+Darwin 10.5
+About the Mac OS X v10.6.5 Update
+Mac OS X v10.6.5 Update (Combo)
+
+
+10.6.6
+10J567
+January 6, 2011
+Darwin 10.6
+About the Mac OS X v10.6.6 Update
+Mac OS X v10.6.6 Update (Combo)
+
+
+10.6.7
+10J869
+March 21, 2011
+Darwin 10.7
+About the Mac OS X v10.6.7 Update
+Mac OS X v10.6.7 Update (Combo)
+
+
+10J3250
+March 21, 2011
+For the early 2011 Macbook Pro
+Mac OS X v10.6.7 Update for early 2011 MacBook Pro
+
+
+10J4138
+May 4, 2011
+For the early 2011 Macbook Pro
+MacBook Pro Software Update 1.4
+
+
+10.6.8
+10K540
+June 23, 2011
+Darwin 10.8
+About the Mac OS X v10.6.8 Update
+Mac OS X v10.6.8 Update (Combo)
+
+
+10K549
+July 25, 2011
+About the Mac OS X v10.6.8 Update; v1.1
+Mac OS X v10.6.8 v1.1 Update (Combo)
+
+
+Mac OS X Server includes these features and other server-related features. Apple initially stated that Server would include ZFS support, but mention of this feature later disappeared from Apple's website and it was not included in the final release due to licensing issues.[74]
+See also
+
+List of Macintosh software
+
+References
+
+
+^ http://support.apple.com/kb/DL1400
+^ "Mac OS X v10.6 Snow Leopard&#160;— Installation and Setup Guide" (PDF). Apple Inc. September 2009. Retrieved February 8, 2011.&#160;
+^ http://www.computerworld.com/s/article/9246609/Apple_retires_Snow_Leopard_from_support_leaves_1_in_5_Macs_vulnerable_to_attacks
+^ "Apple to Ship Mac OS X Snow Leopard on August 28" (Press release). Apple Inc. August 24, 2009. Retrieved February 8, 2011.&#160;
+^ "Snow Leopard Leaps Out of the Gate: Sales for Latest Apple OS Far Exceed Prior Launches, According to NPD". NPD Group. September 17, 2009. Retrieved May 7, 2010.&#160;
+^ a b "Apple Previews Mac OS X Snow Leopard to Developers" (Press release). Apple Inc. June 9, 2008. Retrieved June 11, 2008.&#160;
+^ "Mac OS X Lion Available Today From the Mac App Store". Apple.com. Apple Inc. Retrieved July 20, 2011.&#160;
+^ "Upgrade to OS X Mavericks". Apple.com. Apple Inc. Retrieved November 5, 2013. If you’re running Leopard and would like to upgrade to OS X Mavericks, first you’ll need to upgrade to OS X Snow Leopard. You can purchase OS X Snow Leopard here.&#160;
+^ a b c Apple Inc. "Mac OS X Snow Leopard: Technical Specs". Apple Inc. Retrieved June 12, 2009.&#160;
+^ "EnglishLicense" (PDF). Retrieved February 22, 2010.&#160;
+^ a b Apple Inc. "Software license agreement for Mac OS X: Single Use, Family Pack and Leopard Upgrade Licenses for use on Apple-branded Systems" (PDF). Apple Inc. Retrieved February 1, 2011.&#160;
+^ "Apple Unveils Mac OS X Snow Leopard" (Press release). Apple Inc. June 8, 2009. Retrieved September 4, 2009.&#160;
+^ Walter S. Mossberg (August 26, 2009). "Apple Changes Leopard’s Spots". The Wall Street Journal. Retrieved August 27, 2009.&#160;
+^ "Mac OS X Snow Leopard.". Apple Inc. 2011. Retrieved February 8, 2011.&#160;
+^ In the Up-To-Date Program terms and conditions, the 'upgrade' language is used: This program entitles the purchaser of a qualifying product purchased between June 8, 2009, and December 26, 2009, to upgrade to Mac OS X v10.6 Snow Leopard. "Mac OS X Snow Leopard Up-to-Date Program". Apple Inc. Retrieved September 4, 2009.&#160;
+^ a b "Mac OS X 10.6 Refinements". Apple Inc. Retrieved August 29, 2009.&#160;
+^ "Apple&#160;— Mac OS X Snow Leopard&#160;— Enhancements and Refinements". Multi-Touch gestures in older Mac models. All Mac notebooks with Multi-Touch trackpads now support three- and four-finger gestures.&#160;
+^ a b "Mac OS X Snow Leopard". Apple Inc. Retrieved June 11, 2008.&#160;
+^ "Apple&#160;– Mac OS X&#160;– What is Mac OS X&#160;– Safari". Apple. October 22, 2009. Archived from the original on May 21, 2011. Retrieved October 22, 2009.&#160;
+^ "Apple&#160;— Mac OS X&#160;— Universal Access". Apple Inc. Retrieved October 23, 2009.&#160;
+^ Reisinger, Don (January 6, 2011). "Mac App Store launches on Snow Leopard". CNET. CBS Interactive.&#160;
+^ Marsal, Katie (March 5, 2009). "Apple prepping new Snow Leopard, iWeb, ARD updates". Bits (AppleInsider). Retrieved April 13, 2009.&#160;
+^ "New in Snow Leopard: Minimize windows to App icon and Expose". Vnoel.wordpress.com. June 27, 2009. Retrieved August 29, 2009.&#160;
+^ "Mac OS X Snow Leopard&#160;— Refining the user experience". Apple Inc. Retrieved December 2, 2009.&#160;
+^ "News&#160;— Snow Leopard: 1&#160;GB = 1000&#160;MB". macprime.ch. June 19, 2009. Retrieved August 29, 2009.&#160;
+^ Siracusa, John (August 31, 2009). "Mac OS X 10.6 Snow Leopard: the Ars Technica review". Ars Technica. Retrieved February 8, 2011.&#160;
+^ "Mac OS X v10.6: Mac 101 - Printing". support.apple.com. Apple Inc. April 29, 2010. Retrieved August 21, 2010.&#160;
+^ "Known issues with Adobe After Effects CS4 in Mac OS X 10.6 (Snow Leopard)". Adobe. November 13, 2009. Retrieved November 16, 2009.&#160;
+^ "Snow Leopard Snubs Document Creator Codes". TidBITS. September 6, 2009. Retrieved March 17, 2010.&#160;
+^ "Mac OS X&#160;— New technologies in Snow Leopard". Apple. Archived from the original on November 12, 2009. Retrieved August 29, 2009.&#160;
+^ "Mac OS X Server v10.6: Macs that use the 64-bit kernel". Apple. Retrieved September 6, 2009.&#160;
+^ "Mac OS X Server v10.6: Starting up with the 32-bit or 64-bit kernel". Apple. Retrieved September 6, 2009.&#160;
+^ a b "64-bit Snow Leopard defaults to 32-bit kernel". CNET. Retrieved September 6, 2009.&#160;
+^ Apple Inc. (August 27, 2009). "Mac OS X Server v10.6: Macs that use the 64-bit kernel". Retrieved February 8, 2011. Learn which Macs can use the 64-bit kernel in Mac OS X Server v10.6, and which use it by default.&#160;
+^ "Is Your Machine Good Enough for Snow Leopard K64?". Mac OS X Internals: The Blog. Retrieved February 8, 2011.&#160;
+^ Siracusa, John (August 31, 2009). "Mac OS X 10.6 Snow Leopard: the Ars Technica review". Ars Technica. Retrieved February 8, 2011.&#160;
+^ Markoff, John (June 10, 2008). "Apple in Parallel: Turning the PC World Upside Down?". The New York Times. Retrieved February 8, 2011.&#160;
+^ Lattner, Chris (August 27, 2008). ""Blocks" in Clang (aka closures)".&#160;
+^ Quatermain, Alan (September 1, 2008). "Comment on Article: Cocoa for Scientists (Part XXVII): Getting Closure with Objective-C". MacResearch.&#160;
+^ "Grand Central Dispatch a better way to do multicore" (PDF). Apple Inc. 2009.&#160;
+^ OpenCL Taking the graphics processor beyond graphics (PDF), Apple Inc., 2009&#160;
+^ [1], John Siracusa's review of Snow Leopard for Ars Technica.
+^ Sweet, Michael (January 9, 2009). "IPP/2.1 support now in CUPS 1.4svn!". Bits (Printer Working Group). Retrieved June 5, 2009.&#160;
+^ Glenn Fleishman (August 28, 2009). "Wake on Demand lets Snow Leopard sleep with one eye open". Macworld.com. Retrieved September 15, 2009. How it works", "Energy Saver preference pane&#160;
+^ "Mac OS X v10.6: About Wake on Demand (Apple Article HT3774)". Apple. August 27, 2009. Retrieved September 15, 2009. Setting up Wake on Demand", "Setting up a Bonjour Sleep Proxy&#160;
+^ Note: The networking industry nomenclature for a wake-up-packet is Magic Packet
+^ "Peering Inside Snow Leopard Security", TidBITS Safe Computing, August 27, 2009
+^ Apple Confirms Anti-Malware Added to 'Snow Leopard'., August 27, 2009&#160;
+^ Apple releases Mac OS X update to catch MAC Defender malware, May 31, 2011&#160;
+^ "Apple's Snow Leopard Is Less Secure Than Windows, But Safer," Wired, September 2, 2009
+^ "Snow Leopard security - The good, the bad and the missing", The Register, August 29, 2009
+^ Where are the Safari security updates for Windows and Snow Leopard? Users left exposed, Sophos Naked Security blog, July 30, 2012&#160;
+^ Jesus Diaz (August 28, 2009). "Applications unsupported by Snow Leopard: The Unofficial List". Gizmodo.com. Retrieved June 21, 2011.&#160;
+^ "Mac OS X v10.6: About incompatible software". support.apple.com. Apple Inc. November 25, 2009. Retrieved December 29, 2010.&#160;
+^ "Mac OS X v10.6: Printer and scanner software". Support.apple.com. Retrieved June 21, 2011.&#160;
+^ "Two new bugs reported". Lists.apple.com. February 4, 2010. Retrieved June 21, 2011.&#160;
+^ Published (September 29, 2010). "There is no Plan B: why the IPv4-to-IPv6 transition will be ugly". Arstechnica.com. Retrieved June 21, 2011.&#160;
+^ Published (November 11, 2010). "Apple fixes broken IPv6 by breaking it some more". Arstechnica.com. Retrieved June 21, 2011.&#160;
+^ "10.6.8 seems better". Ipv6-dev (Mailing list) (Apple Inc.). June 24, 2011. Retrieved April 22, 2013.&#160;
+^ a b John Siracusa (August 31, 2009). "Mac OS X 10.6 Snow Leopard: the Ars Technica review". Ars Technica.&#160;
+^ "Snow Leopard Reviews Positive, Upgrades Tiger Too". Osnews.com. Retrieved June 21, 2011.&#160;
+^ "Review roundup: Apple's Snow Leopard sports subtle improvements". Appleinsider.com. August 27, 2009. Retrieved June 21, 2011.&#160;
+^ a b "Review From". Engadget.com. Retrieved June 21, 2011.&#160;
+^ "Snow Leopard Review and Rating from CNET". Reviews.cnet.com. Retrieved June 21, 2011.&#160;
+^ Benjamin, Yobie (October 21, 2009). "Windows 7 is darn good; Apple OS X Snow Leopard is a upgrade dog". Sfgate.com. Retrieved June 21, 2011.&#160;
+^ Gregg Keizer (August 24, 2009). "Snow Leopard Pre-Order sales". Computerworld.com. Retrieved June 21, 2011.&#160;
+^ "Review From TestMac.com". Testmac.net. June 26, 2008. Retrieved June 21, 2011.&#160;
+^ "Data losses in Snow Leopard bug". BBC News. October 13, 2009.&#160;
+^ "Apple releases Mac OS X 10.6.2 with guest account bug fix". Appleinsider.com. November 9, 2009. Retrieved June 21, 2011.&#160;
+^ "Apple Previews Mac OS X Snow Leopard to Developers" (Press release). Apple Inc. June 9, 2008. Retrieved August 16, 2012.&#160;
+^ Muchmore, Michael (May 15, 2009). "Analyst's View: What to Expect in Apple's Snow Leopard". PC Magazine. Retrieved May 26, 2009.&#160;
+^ Apple Inc. (2009). "Apple - QuickTime - Apple WWDC Keynote Address". Apple Inc. Retrieved December 29, 2010.&#160;
+^ "Mac OS X: About This Mac "build" information". Apple Inc. April 14, 2010. Retrieved April 26, 2010.&#160;
+^ Chris Foresman (October 26, 2009). "Apple abandons ZFS on Mac OS X project over licensing issues". Ars Technica. Retrieved November 9, 2009.&#160;
+
+
+External links
+
+Mac OS X Snow Leopard at Apple.com
+Mac OS X Server Snow Leopard at Apple.com
+Mac OS X Snow Leopard application compatibility list: a user-edited list of Mac applications that have been tested on Snow Leopard
+Mac OS X Snow Leopard review at Ars Technica
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Macintosh operating systems
+
+
+
+
+
+
+Classic Mac OS (history)
+
+
+
+System 1, 2, 3, 4, 5
+System 6
+System 7
+Mac OS 7.6
+Mac OS 8
+Mac OS 9
+
+
+
+
+
+
+
+
+OS X (history)
+
+
+
+NeXTSTEP
+OpenStep
+Darwin
+Mac OS X Server 1.0
+Public Beta
+v10.0
+v10.1
+v10.2
+v10.3
+v10.4
+v10.5
+v10.6
+v10.7
+v10.8
+v10.9
+v10.10
+v10.11
+
+
+
+
+
+
+
+
+Server
+
+
+
+OpenStep
+Rhapsody
+OS X Server (OS X Server 1.0)
+
+
+
+
+
+
+
+
+Other OS projects
+
+
+
+A/UX
+Taligent
+Newton OS
+Copland
+MkLinux
+iOS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+OS X
+
+
+
+
+
+
+Versions
+
+
+
+Server 1.0 Hera
+Public Beta Kodiak
+10.0 Cheetah
+10.1 Puma
+10.2 Jaguar
+10.3 Panther
+10.4 Tiger
+10.5 Leopard
+10.6 Snow Leopard
+10.7 Lion
+10.8 Mountain Lion
+10.9 Mavericks
+10.10 Yosemite
+10.11 El Capitan
+
+
+
+
+
+
+
+
+Applications
+
+
+
+
+
+
+
+Automator
+Calculator
+Calendar
+Chess
+Contacts
+Dashboard
+Dictionary
+DVD Player
+FaceTime
+Finder
+Game Center
+Grapher
+iTunes&#160;(version history)
+Launchpad
+Mac App Store
+Mail
+Messages
+Notes
+Notification Center
+Photo Booth
+Photos
+Preview
+QuickTime
+Reminders
+Safari&#160;(version history)
+Stickies
+TextEdit
+Time Machine
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Front Row
+iChat
+iPhoto
+iSync
+Sherlock
+
+
+
+
+
+
+
+
+
+
+
+Utilities
+
+
+
+
+
+
+
+Activity Monitor
+AirPort Utility
+AppleScript Editor
+Archive Utility
+Audio MIDI Setup
+Bluetooth File Exchange
+Boot Camp
+ColorSync
+Configurator
+Console
+Crash Reporter
+DigitalColor Meter
+Directory Utility
+DiskImageMounter
+Disk Utility
+Font Book
+Grab
+Help Viewer
+Image Capture
+Installer
+Keychain Access
+Migration Assistant
+Network Utility
+ODBC Administrator
+Screen Sharing
+System Preferences
+System Information
+Terminal
+Universal Access
+VoiceOver
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Software Update
+Remote Install Mac OS X
+
+
+
+
+
+
+
+
+
+
+
+Technology and
+user interface
+
+
+
+
+
+
+
+AirDrop
+Apple menu
+Apple Push Notification Service
+AppleScript
+Aqua
+Audio Units
+Bonjour
+Cocoa
+ColorSync
+Command key
+Core Animation
+Core Audio
+Core Data
+Core Foundation
+Core Image
+Core OpenGL
+Core Text
+Core Video
+CUPS
+Cover Flow
+Darwin
+Dock
+File Quarantine
+FileVault
+Fonts
+Gatekeeper
+Grand Central Dispatch
+icns
+Inkwell
+I/O Kit
+Kernel panic
+Keychain
+launchd
+Mach-O
+MacRuby
+Menu extra
+Metal
+Mission Control
+OpenCL
+Option key
+Preference Pane
+Property list
+Quartz
+QuickTime
+Quick Look
+Smart Folders
+Speakable items
+Spotlight
+Stacks
+System Integrity Protection
+Uniform Type Identifier
+Universal binary
+WebKit
+XNU
+XQuartz
+
+
+
+
+
+
+
+
+
+Deprecated
+
+
+
+
+Carbon
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+BootX
+Brushed metal
+Classic Environment
+Rosetta
+Spaces
+Xgrid
+
+
+
+
+
+
+
+
+
+
+
+
+
+Preceded&#160;by
+OS X 10.5
+OS X 10.6
+2009
+Succeeded&#160;by
+OS X 10.7
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Mac_OS_X_Snow_Leopard&amp;oldid=691709075"					
+				Categories: 2009 softwareOS XIA-32 operating systemsX86-64 operating systemsHidden categories: Use mdy dates from October 2013All articles with unsourced statementsArticles with unsourced statements from February 2013				
+							
+		
+		
+			

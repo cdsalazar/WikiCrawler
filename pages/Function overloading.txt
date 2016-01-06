@@ -1,0 +1,231 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Function overloading
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (October 2011)
+
+
+
+
+
+
+
+This article may be in need of reorganization to comply with Wikipedia's layout guidelines. Please help by editing the article to make improvements to the overall structure. (October 2011)
+
+
+
+
+
+
+
+
+
+
+Polymorphism
+
+
+
+
+Ad hoc polymorphism
+Function overloading
+Operator overloading
+Parametric polymorphism
+Double dispatch
+Multiple dispatch
+Single &amp; dynamic dispatch
+Subtyping
+Virtual function
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In some programming languages, function overloading or method overloading is the ability to create multiple methods of the same name with different implementations. Calls to an overloaded function will run a specific implementation of that function appropriate to the context of the call, allowing one function call to perform different tasks depending on context.
+For example, doTask() and doTask(object O) are overloaded methods. To call the latter, an object must be passed as a parameter, whereas the former does not require a parameter, and is called with an empty parameter field. A common error would be to assign a default value to the object in the second method, which would result in an ambiguous call error, as the compiler wouldn't know which of the two methods to use.
+Another appropriate example would be a Print(object O) method. In this case one might like the method to be different when printing, for example, text or pictures. The two different methods may be overloaded as Print(text_object T); Print(image_object P). If we write the overloaded print methods for all objects our program will "print", we never have to worry about the type of the object, and the correct function call again, the call is always: Print(something).
+
+
+
+Contents
+
+
+1 Rules in function overloading
+2 Constructor overloading
+3 Complications
+4 Caveats
+5 See also
+6 References
+7 External links
+
+
+
+Rules in function overloading[edit]
+
+The overloaded function must differ either by the arity or data types...
+The same function name is used for various instances of function call.
+
+It is a classification of static polymorphism in which a function call is resolved using the 'best match technique', i.e., the function is resolved depending upon the argument list. Method overloading is usually associated with statically-typed programming languages which enforce type checking in function calls. When overloading a method, you are really just making a number of different methods that happen to have the same name. It is resolved at compile time which of these methods are used.
+Method overloading should not be confused with forms of polymorphism where the correct method is chosen at runtime, e.g. through virtual functions, instead of statically. Polymorphism is the ability for a message or data to be processed in more than one form.
+Example: function overloading in c++
+
+
+#include &lt;iostream&gt;
+
+// volume of a cube
+int volume(int s)
+{
+    return s*s*s;
+}
+
+// volume of a cylinder
+double volume(double r, int h)
+{
+    return 3.14*r*r*static_cast&lt;double&gt;(h);
+}
+
+// volume of a cuboid
+long volume(long l, int b, int h)
+{
+    return l*b*h;
+}
+
+int main()
+{
+    std::cout &lt;&lt; volume(10);
+    std::cout &lt;&lt; volume(2.5, 8);
+    std::cout &lt;&lt; volume(100, 75, 15);
+}
+
+In the above example, the volume of various components are calculated using the same function call "volume", with arguments differing in their data type or their number.
+Constructor overloading[edit]
+Constructors, used to create instances of an object, may also be overloaded in some object oriented programming languages. Because in many languages the constructor’s name is predetermined by the name of the class, it would seem that there can be only one constructor. Whenever multiple constructors are needed, they are implemented as overloaded functions. In C++, default constructors take no parameters, instantiating the object members with a value zero.[1] For example, a default constructor for a restaurant bill object written in C++ might set the Tip to 15%:
+
+
+Bill()
+{ 
+    tip = 0.15;    // percentage
+    total = 0.0; 
+}
+
+The drawback to this is that it takes two steps to change the value of the created Bill object. The following shows creation and changing the values within the main program:
+
+
+Bill cafe;
+cafe.tip = 0.10;
+cafe.total = 4.00;
+
+By overloading the constructor, one could pass the tip and total as parameters at creation. This shows the overloaded constructor with two parameters:
+
+
+Bill(double setTip, double setTotal)
+{ 
+    tip = setTip; 
+    total = setTotal; 
+}
+
+Now a function that creates a new Bill object could pass two values into the constructor and set the data members in one step. The following shows creation and setting the values:
+
+
+Bill cafe(0.10, 4.00);
+
+This can be useful in increasing program efficiency and reducing code length.
+Another reason for constructor overloading can be to enforce mandatory data members. In this case the default constructor is declared private or protected to make it inaccessible from outside. For the Bill above total might be the only constructor parameter - since a Bill has no sensible default for total - whereas tip defaults to 10.
+Complications[edit]
+Two issues complicate function overloading: name masking (due to scope) and implicit type conversion.
+If a function is declared in one scope, and then another function with the same name is declared in an inner scope, there are two natural possible overloading behaviors: the inner declaration masks the outer declaration (regardless of signature), or both the inner declaration and the outer declaration are both included in the overload, with the inner declaration masking the outer declaration only if the signature matches. The first is taken in C++: "in C++, there is no overloading across scopes."[2] As a result, to obtain an overload set with functions declared in different scopes, one needs to explicitly import the functions from the outer scope into the inner scope, using the using keyword
+Implicit type conversion complicates function overloading because if the types of arguments do not exactly match the signature of one of the overloaded functions, but can match after type conversion, resolution depends on which type conversion is chosen.
+These can combine in confusing ways: an inexact match declared in an inner scope can mask an exact match declared in an outer scope, for instance.[2]
+For example, to have a derived class with an overloaded function taking a double or an int, using the function taking an int from the base class, in C++ one would write:
+
+
+class B {
+public:
+    void f(int i);
+};
+
+class D : public B {
+public:
+    using B::f;
+    void f(double d);
+};
+
+Failing to include the using results in an int argument passed to f in the derived class being converted to a double and matching the function in the derived class, rather than in the base class; including using results in an overload in the derived class and thus matching the function in the base class.
+Caveats[edit]
+If a method is designed with an excessive number of overloads, it may be difficult for developers to discern which overload is being called simply by reading the code. This is particularly true if some of the overloaded parameters are of types that are inherited types of other possible parameters (for example "object"). An IDE can perform the overload resolution and display (or navigate to) the correct overload.
+See also[edit]
+
+Factory method pattern
+Object-oriented programming
+Constructor (computer science)
+Abstraction (computer science)
+Dynamic dispatch
+Method overriding
+Operator overloading
+Method signature
+
+References[edit]
+
+
+^ Computer Science A Structured Approach Using C++ by Behrouz A. Forouzan and Richard F. Gilberg
+^ a b "Why doesn't overloading work for derived classes?", Bjarne Stroustrup's C++ Style and Technique FAQ, Bjarne Stroustrup
+
+
+External links[edit]
+
+Bertrand Meyer: Overloading vs Object Technology, in Journal of Object-Oriented Programming (JOOP), vol. 14, no. 4, October–November 2001, available online
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Function_overloading&amp;oldid=685511353"					
+				Categories: Method (computer programming)Hidden categories: Articles needing additional references from October 2011All articles needing additional referencesWikipedia articles needing reorganization from October 2011				
+							
+		
+		
+			

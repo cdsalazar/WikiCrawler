@@ -1,0 +1,674 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			D (programming language)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For other programming languages named D, see D (disambiguation)#Computing.  For other uses, see D (disambiguation).
+
+D programming language
+
+
+
+
+Paradigm
+multi-paradigm: procedural, object-oriented, functional, generic
+
+
+Designed&#160;by
+Walter Bright, Andrei Alexandrescu (since 2006)
+
+
+Developer
+Digital Mars, Andrei Alexandrescu (since 2006)
+
+
+First&#160;appeared
+2001; 14&#160;years ago&#160;(2001)[1]
+
+
+Stable release
+2.069.1[2] / November&#160;11, 2015; 10 days ago&#160;(2015-11-11)[3]
+
+
+Typing discipline
+strong, static, inferred
+
+
+OS
+DMD: Unix-like (FreeBSD, Linux etc.), Windows, OS X
+
+
+License
+Boost (DMD frontend,[4] standard and runtime libraries),
+source available (DMD backend),[5]
+Fully open-source (LDC and GDC)[6]
+
+
+Filename extensions
+.d
+
+
+Website
+dlang.org
+
+
+Major implementations
+
+
+DMD (reference implementation), GDC, LDC
+
+
+Influenced by
+
+
+C, C++, C#, Eiffel,[7] Java, Python[citation needed], Ruby[citation needed]
+
+
+Influenced
+
+
+MiniD, DScript, Vala, Qore, Swift,[8] Genie
+
+
+
+
+ D Programming at Wikibooks
+
+
+
+
+The D programming language is an object-oriented, imperative, multi-paradigm system programming language created by Walter Bright of Digital Mars and released in 2001. Bright was joined in the design and development effort in 2006 by Andrei Alexandrescu. Though it originated as a re-engineering of C++, D is a distinct language, having redesigned some core C++ features while also taking inspiration from other languages, notably Java, Python, Ruby, C#, and Eiffel.
+D's design goals attempt to combine the performance and safety of compiled languages with the expressive power of modern dynamic languages. Idiomatic D code is commonly as fast as equivalent C++ code, while being shorter[citation needed] and memory-safe.[9]
+Type inference, automatic memory management and syntactic sugar for common types allow faster development, while bounds checking, design by contract features and a concurrency-aware type system help reduce the occurrence of bugs.[10]
+
+
+
+Contents
+
+
+1 Features
+
+1.1 Programming paradigms
+
+1.1.1 Imperative
+1.1.2 Object-oriented
+1.1.3 Metaprogramming
+1.1.4 Functional
+1.1.5 Parallel
+1.1.6 Concurrent
+
+
+1.2 Memory management
+1.3 SafeD
+1.4 Interaction with other systems
+
+
+2 History
+3 Implementations
+4 Development tools
+5 Examples
+
+5.1 Example 1
+5.2 Example 2
+
+
+6 See also
+7 References
+8 Further reading
+9 External links
+
+
+
+Features[edit]
+D is designed with lessons learned from practical C++ usage rather than from a theoretical perspective. Even though it uses many C/C++ concepts it also discards some, and as such is not compatible with C/C++ source code. D has however been constrained in its design by the rule that any code that is legal in both C and D should behave the same. It adds to the functionality of C++ by also implementing design by contract, unit testing, true modules, garbage collection, first class arrays, associative arrays, dynamic arrays, array slicing, nested functions, inner classes, closures, anonymous functions, compile time function execution, lazy evaluation and has a reengineered template syntax. D retains C++'s ability to do low-level coding, and adds to it with support for an integrated inline assembler. C++ multiple inheritance is replaced by Java style single inheritance with interfaces and mixins. D's declaration, statement and expression syntax closely matches that of C++.
+The inline assembler typifies the differences between D and application languages like Java and C#. An inline assembler lets programmers enter machine-specific assembly code within standard D code, a method often used by system programmers to access the low-level features of the processor needed to run programs that interface directly with the underlying hardware, such as operating systems and device drivers.
+D has built-in support for documentation comments, allowing automatic documentation generation.
+Programming paradigms[edit]
+D supports five main programming paradigms—imperative, object-oriented, metaprogramming, functional and concurrent (actor model).
+Imperative[edit]
+Imperative programming in D is almost identical to C. Functions, data, statements, declarations and expressions work just as in C, and the C runtime library can be accessed directly. Some notable differences between D and C in the area of imperative programming include D's foreach loop construct, which allows looping over a collection, and nested functions, which are functions that are declared inside of another and may access the enclosing function's local variables.
+Object-oriented[edit]
+Object-oriented programming in D is based on a single inheritance hierarchy, with all classes derived from class Object. D does not support multiple inheritance; instead, it uses Java-style interfaces, which are comparable to C++ pure abstract classes, and mixins, which allow separating common functionality out of the inheritance hierarchy. D also allows defining static and final (non-virtual) methods in interfaces.
+Metaprogramming[edit]
+Metaprogramming is supported by a combination of templates, compile time function execution, tuples, and string mixins. The following examples demonstrate some of D's compile-time features.
+Templates in D can be written in a more imperative style compared to C++ functional style for templates. This is a regular function that calculates the factorial of a number:
+
+
+ulong factorial(ulong n)
+{
+    if (n&lt;2)
+        return 1;
+    else
+        return n * factorial(n-1);
+}
+
+Here, the use of static if, D's compile-time conditional construct, is demonstrated to construct a template that performs the same calculation using code that is similar to that of the function above:
+
+
+template Factorial(ulong n)
+{
+    static if (n&lt;2)
+        enum Factorial = 1;
+    else
+        enum Factorial = n * Factorial!(n-1);
+}
+
+In the following two examples, the template and function defined above are used to compute factorials. The types of constants need not be specified explicitly as the compiler infers their types from the right-hand sides of assignments:
+
+
+enum fact_7 = Factorial!(7);
+
+This is an example of compile time function execution. Ordinary functions may be used in constant, compile-time expressions provided they meet certain criteria:
+
+
+enum fact_9 = factorial(9);
+
+The std.string.format function performs printf-like data formatting (also at compile-time, through CTFE), and the "msg" pragma displays the result at compile time:
+
+
+import std.string : format;
+pragma(msg, format("7! = %s", fact_7));
+pragma(msg, format("9! = %s", fact_9));
+
+String mixins, combined with compile-time function execution, allow generating D code using string operations at compile time. This can be used to parse domain-specific languages to D code, which will be compiled as part of the program:
+
+
+import FooToD; // hypothetical module which contains a function that parses Foo source code
+               // and returns equivalent D code
+void main()
+{
+    mixin(fooToD(import("example.foo")));
+}
+
+Functional[edit]
+D supports functional programming features such as function literals, closures, recursively-immutable objects and the use of higher-order functions. There are two syntaxes for anonymous functions, including a multiple-statement form and a "shorthand" single-expression notation:[11]
+
+
+int function(int) g;
+g = (x) { return x * x; }; // longhand
+g = (x) =&gt; x * x;          // shorthand
+
+There are two builtin types for function literals, function, which is simply a pointer to a stack-allocated function, and delegate, which also includes a pointer to the surrounding environment. Type inference can be used with an anonymous function, in which case the compiler creates a delegate unless it can prove that an environment pointer is not necessary. Likewise, to implement a closure, the compiler places enclosed local variables on the heap only if necessary (for example, if a closure is returned by another function, and exits that function's scope). When using type inference, the compiler will also add attributes such as pure and nothrow to a function's type, if it can prove that they apply.
+Other functional features such as currying and common higher-order functions such as map, filter, and reduce are available through the standard library modules std.functional and std.algorithm.
+
+
+import std.stdio, std.algorithm, std.range;
+
+void main()
+{
+    int[] a1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    int[] a2 = [6, 7, 8, 9];
+
+    // must be immutable to allow access from inside a pure function
+    immutable pivot = 5;
+ 
+    int mySum(int a, int b) pure nothrow // pure function
+    {
+        if (b &lt;= pivot) // ref to enclosing-scope
+            return a + b;
+        else
+            return a;
+    }
+    
+    // passing a delegate (closure)
+    auto result = reduce!mySum(chain(a1, a2));
+    writeln("Result: ", result); // Result: 15
+
+    // passing a delegate literal
+    result = reduce!((a, b) =&gt; (b &lt;= pivot) ? a + b : a)(chain(a1, a2));
+    writeln("Result: ", result); // Result: 15
+}
+
+Alternatively, the above function compositions can be expressed using Uniform Function Call Syntax (UFCS) for more natural left-to-right reading:
+
+
+    auto result = a1.chain(a2).reduce!mySum();
+    writeln("Result: ", result);
+
+    result = a1.chain(a2).reduce!((a, b) =&gt; (b &lt;= pivot) ? a + b : a)();
+    writeln("Result: ", result);
+
+Parallel[edit]
+
+
+import std.stdio : writeln;
+import std.range : iota;
+import std.parallelism : parallel;
+
+void main()
+{
+    foreach (i; iota(10).parallel) {
+        // The body of the foreach loop is executed in parallel for each i
+        writeln("processing ", i);
+    }
+}
+
+Concurrent[edit]
+
+
+import std.stdio, std.concurrency;
+
+void foo()
+{
+    bool cont = true;
+
+    while (cont)
+    {
+        receive( // delegates are used to match the message type
+            (int msg) =&gt; writeln("int received: ", msg),
+            (Tid sender) { cont = false; sender.send(-1); },
+            (Variant v) =&gt; writeln("huh?") // Variant matches any type
+        );
+    }
+}
+
+void main()
+{
+    auto tid = spawn(&amp;foo); // spawn a new thread running foo()
+
+    foreach (i; 0 .. 10)
+        tid.send(i);   // send some integers
+    tid.send(1.0f);    // send a float
+    tid.send("hello"); // send a string
+    tid.send(thisTid); // send a struct (Tid)
+
+    receive((int x) =&gt; writeln("Main thread received message: ", x));
+}
+
+Memory management[edit]
+Memory is usually managed with garbage collection, but specific objects can be finalized immediately when they go out of scope. Explicit memory management is possible using the overloaded operators new and delete, and by simply calling C's malloc and free directly. Garbage collection can be controlled: programmers can add and exclude memory ranges from being observed by the collector, can disable and enable the collector and force a generational or a full collection cycle.[12] The manual gives many examples of how to implement different highly optimized memory management schemes for when garbage collection is inadequate in a program.[13]
+SafeD[edit]
+SafeD[14] is the name given to the subset of D that can be guaranteed to be memory safe (no writes to memory that were not allocated or that have already been recycled). Functions marked @safe are checked at compile time to ensure that they do not use any features that could result in corruption of memory, such as pointer arithmetic and unchecked casts, and any other functions called must also be marked as @safe or @trusted. Functions can be marked @trusted for the cases where the compiler cannot distinguish between safe use of a feature that is disabled in SafeD and a potential case of memory corruption.
+Interaction with other systems[edit]
+C's application binary interface (ABI) is supported as well as all of C's fundamental and derived types, enabling direct access to existing C code and libraries. D bindings are available for many popular C libraries. C's standard library is part of standard D.
+Because C++ does not have a single standard ABI, D can only fully access C++ code that is written to the C ABI. The D parser understands an extern (C++) calling convention for limited linking to C++ objects.
+On Microsoft Windows, D can access Component Object Model (COM) code.
+History[edit]
+Walter Bright decided to start working on a new language in 1999. D was first released in December 2001,[1] and reached version 1.0 in January 2007.[15] The first version of the language (D1) concentrated on the imperative, object oriented and metaprogramming paradigms,[16] similar to C++.
+Dissatisfied with Phobos, D's official runtime and standard library, members of the D community created an alternative runtime and standard library named Tango. The first public Tango announcement came within days of D 1.0's release.[17] Tango adopted a different programming style, embracing OOP and high modularity. Being a community-led project, Tango was more open to contributions, which allowed it to progress faster than the official standard library. At that time, Tango and Phobos were incompatible due to different runtime support APIs (the garbage collector, threading support, etc.). This made it impossible to use both libraries in the same project. The existence of two libraries, both widely in use, has led to significant dispute due to some packages using Phobos and others using Tango.[18]
+In June 2007, the first version of D2 was released.[2] The beginning of D2's development signalled the stabilization of D1; the first version of the language has been placed in maintenance, only receiving corrections and implementation bugfixes. D2 was to introduce breaking changes to the language, beginning with its first experimental const system. D2 later added numerous other language features, such as closures, purity, and support for the functional and concurrent programming paradigms. D2 also solved standard library problems by separating the runtime from the standard library. The completion of a D2 Tango port was announced in February 2012.[19]
+The release of Andrei Alexandrescu's book The D Programming Language on June 12, 2010 marked the stabilization of D2, which today is commonly referred to as just "D".
+In January 2011, D development moved from a bugtracker / patch-submission basis to GitHub. This has led to a significant increase in contributions to the compiler, runtime and standard library.[20]
+In December 2011, Andrei Alexandrescu announced that D1, the first version of the language, would be discontinued on December 31, 2012.[21] The final D1 release, D v1.076, was on December 31, 2012.[22]
+Implementations[edit]
+Most current D implementations compile directly into machine code for efficient execution.
+
+DMD — The Digital Mars D compiler is the official D compiler by Walter Bright. The front-end is licensed under the Boost Software License.[4] The back-end source code is available but not under an open source license,[5] because it was partially developed at Symantec and cannot be relicensed as open source.[23]
+GDC — A front-end for the GCC back-end, built using the open DMD compiler source code.[24]
+LDC — A compiler based on the DMD front-end that uses LLVM as its compiler back-end. The first release-quality version was published on January 9, 2009.[25] It supports version 2.0.[26]
+D Compiler for .NET — A back-end for the D programming language 2.0 compiler.[27][28] It compiles the code to Common Intermediate Language (CIL) bytecode rather than to machine code. The CIL can then be run via a Common Language Infrastructure (CLR) virtual machine.
+SDC — A D compiler using a custom front-end and LLVM as its compiler back-end. It is written in D and uses a scheduler to handle symbol resolution in order to elegantly handle the compile-time features of D. This compiler currently supports a limited subset of the language.[29][30]
+
+Development tools[edit]
+Editors and integrated development environments (IDEs) supporting D include Eclipse, Microsoft Visual Studio, SlickEdit, Emacs, vim, SciTE, Smultron, TextMate, MonoDevelop, Zeus,[31] and Geany among others.[32]
+
+Eclipse plug-ins for D include: DDT,[33] and Descent (dead project).[34]
+Visual Studio integration is provided by VisualD.[35]
+Vim supports both syntax highlighting and code completion (through patched Ctags).
+A bundle is available for TextMate, and the Code::Blocks IDE includes partial support for the language. However, standard IDE features such as code completion or refactoring are not yet available, though they do work partially in Code::Blocks (due to D's similarity to C).
+A plugin for Xcode 3 is available, D for Xcode, to enable D-based projects and development.[36]
+An AddIn for MonoDevelop is available, named Mono-D.[37]
+KDevelop (as well as its text editor backend, Kate) autocompletion plugin is available.[38]
+
+Open source D IDEs for Windows exist, some written in D, such as Poseidon,[39] D-IDE,[40] and Entice Designer.[41]
+D applications can be debugged using any C/C++ debugger, like GDB or WinDbg, although support for various D-specific language features is extremely limited. On Windows, D programs can be debugged using Ddbg, or Microsoft debugging tools (WinDBG and Visual Studio), after having converted the debug information using cv2pdb. The ZeroBUGS debugger for Linux has experimental support for the D language. Ddbg can be used with various IDEs or from the command line; ZeroBUGS has its own graphical user interface (GUI).
+Examples[edit]
+Example 1[edit]
+This example program prints its command line arguments. The main function is the entry point of a D program, and args is an array of strings representing the command line arguments. A string in D is an array of characters, represented by char[] in D1, or immutable(char)[] in D2.
+
+
+1 import std.stdio: writefln;
+2 
+3 void main(string[] args)
+4 {
+5     foreach (i, arg; args)
+6         writefln("args[%d] = '%s'", i, arg);
+7 }
+
+The foreach statement can iterate over any collection. In this case, it is producing a sequence of indexes (i) and values (arg) from the array args. The index i and the value arg have their types inferred from the type of the array args.
+Example 2[edit]
+The following shows several D capabilities and D design trade-offs in a very short program. It iterates over the lines of a text file named words.txt, which contains a different word on each line, and prints all the words that are anagrams of other words.
+
+
+ 1 import std.stdio, std.algorithm, std.range, std.string;
+ 2 
+ 3 void main()
+ 4 {
+ 5     dstring[][dstring] signs2words;
+ 6 
+ 7     foreach(dchar[] w; lines(File("words.txt")))
+ 8     {
+ 9         w = w.chomp().toLower();
+10         immutable key = w.dup.sort().release().idup;
+11         signs2words[key] ~= w.idup;
+12     }
+13 
+14     foreach(words; signs2words)
+15         if(words.length &gt; 1)
+16             writefln(words.join(" "));
+17 }
+
+
+signs2words is a built-in associative array that maps dstring (32-bit / char) keys to arrays of dstrings. It is similar to defaultdict(list) in Python.
+lines(File()) yields lines lazily, with the newline. It has to then be copied with idup to obtain a string to be used for the associative array values (the idup property of arrays returns an immutable duplicate of the array, which is required since the dstring type is actually immutable(dchar)[]). Built-in associative arrays require immutable keys.
+The ~= operator appends a new dstring to the values of the associate dynamic array.
+toLower, join and chomp are string functions that D allows to use with a method syntax. The name of such functions is often very similar to Python string methods. The toLower converts a string to lower case, join("&#160;") joins an array of strings into a single string using a single space as separator, and chomp removes a newline from the end of the string if one is present.
+The sort is an std.algorithm function that sorts the array in place, creating a unique signature for words that are anagrams of each other. The release() method on the return value of sort() is handy to keep the code as a single expression.
+The second foreach iterates on the values of the associative array, it's able to infer the type of words.
+key is assigned to an immutable variable, its type is inferred.
+UTF-32 dchar[] is used instead of normal UTF-8 char[] otherwise sort() refuses to sort it. There are more efficient ways to write this program, that use just UTF-8.
+
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+Information technology portal
+
+
+
+
+Ddoc
+Gtk+ D Support
+
+References[edit]
+
+
+^ a b "D Change Log to Nov 7 2005". D Programming Language 1.0. Digital Mars. Retrieved 1 December 2011.&#160;
+^ a b "Changelog". D Programming Language 2.0. Digital Mars. Retrieved 11 November 2015.&#160;
+^ Martin Nowak. "Release D 2.069.1". Retrieved 11 November 2015.&#160;
+^ a b "dmd front end now switched to Boost license". Retrieved September 9, 2014.&#160;
+^ a b "readme.txt". DMD source code. GitHub. Retrieved March 5, 2012.&#160;
+^ "D 2.0 FAQ". Retrieved 11 August 2015.&#160;
+^ Alexandrescu, Andrei (2010). The D programming language (First ed.). Upper Saddle River, NJ: Addison-Wesley. p.&#160;314. ISBN&#160;0321635361.&#160;
+^ "Building assert() in Swift, Part 2: __FILE__ and __LINE__". Retrieved September 25, 2014.&#160;
+^ Bright, Walter. D programming Language Specification (e-book ed.). 7227: Digital Mars (via Amazon).&#160; Memory Safety has an entire chapter, with recipes. It's a major theme of the language. Failures to reach this standard are defects.
+^ Andrei Alexandrescu (August 2, 2010). Three Cool Things About D.&#160;
+^ "Expressions". Digital Mars. Retrieved December 27, 2012.&#160;
+^ "std.gc". D Programming Language 1.0. Digital Mars. Retrieved 6 July 2010.&#160;
+^ "Memory Management". D Programming Language 2.0. Digital Mars. Retrieved February 17, 2012.&#160;
+^ Bartosz Milewski. "SafeD - D Programming Language". Retrieved 17 July 2014.&#160;
+^ "D Change Log". D Programming Language 1.0. Digital Mars. Retrieved 11 January 2012.&#160;
+^ "Intro". D Programming Language 1.0. Digital Mars. Retrieved 1 December 2011.&#160;
+^ "Announcing a new library". Retrieved 15 February 2012.&#160;
+^ "Wiki4D - Standard Lib". Retrieved 6 July 2010.&#160;
+^ "Tango for D2: All user modules ported". Retrieved 16 February 2012.&#160;
+^ Walter Bright. "Re: GitHub or dsource?". Retrieved 15 February 2012.&#160;
+^ Andrei Alexandrescu. "D1 to be discontinued on December 31, 2012". Retrieved 31 January 2014.&#160;
+^ "D Change Log". D Programming Language 1.0. Digital Mars. Retrieved 31 January 2014.&#160;
+^ "Reddit comment by Walter Bright". Retrieved September 9, 2014.&#160;
+^ "gdc project homepage". Retrieved 14 October 2012.&#160;
+^ "LLVM D compiler project on DSource". Retrieved 3 July 2010.&#160;
+^ "BuildInstructionsPhobosDruntimeTrunk - ldc - D Programming Language - Trac". Retrieved 11 August 2015.&#160;
+^ "D .NET project on CodePlex". Retrieved 3 July 2010.&#160;
+^ Jonathan Allen (15 May 2009). "Source for the D.NET Compiler is Now Available". InfoQ. Retrieved 6 July 2010.&#160;
+^ "DConf 2014: SDC, a D Compiler as a Library by Amaury Sechet". Retrieved 8 January 2014.&#160;
+^ "deadalnix/SDC". Retrieved 8 January 2014.&#160;
+^ "Wiki4D: EditorSupport/ZeusForWindows". Retrieved 11 August 2015.&#160;
+^ "Wiki4D - Editor Support". Retrieved 3 July 2010.&#160;
+^ "Google Project Hosting". Retrieved 11 August 2015.&#160;
+^ "descent". Retrieved 11 August 2015.&#160;
+^ "Visual D". Retrieved 11 August 2015.&#160;
+^ "Michel Fortin – D for Xcode". Retrieved 11 August 2015.&#160;
+^ "Mono-D - D Support for MonoDevelop". Retrieved 11 August 2015.&#160;
+^ "Dav1dde/lumen". GitHub. Retrieved 11 August 2015.&#160;
+^ "poseidon". Retrieved 11 August 2015.&#160;
+^ "Mono-D - D Support for MonoDevelop". Retrieved 11 August 2015.&#160;
+^ "Entice Designer - Dprogramming.com - The D programming language". Retrieved 11 August 2015.&#160;
+
+
+Further reading[edit]
+
+Alexandrescu, Andrei (January 4, 2010). The D Programming Language (1 ed.). Addison-Wesley Professional. ISBN&#160;978-0-321-63536-5.&#160;
+Alexandrescu, Andrei (June 15, 2009). "The Case for D". Dr. Dobb's Journal.&#160;
+Bright, Walter (April 8, 2014). "How I Came to Write D". Dr. Dobb's Journal.&#160;
+Çehreli, Ali (February 1, 2012). "Programming in D".&#160; (distributed under CC-BY-NC-SA license). This book provides a basic level introduction.
+Metz, Cade (July 7, 2014). "The Next Big Programming Language You’ve Never Heard Of". Wired.&#160;
+Ruppe, Adam (May 2014). D Cookbook (1 ed.). PACKT Publishing. ISBN&#160;978-1-783-28721-5.&#160;
+
+External links[edit]
+
+
+
+Wikibooks has a book on the topic of: A Beginner's Guide to D
+
+
+
+
+
+Wikibooks has a book on the topic of: D Programming
+
+
+
+Official website
+Digital Mars
+D-Programming-Language on GitHub
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+C programming language
+
+
+
+
+
+
+
+
+
+ANSI C
+
+C89 and C90
+
+
+C99
+C11
+Embedded C
+MISRA C
+
+
+
+
+
+
+
+
+C features
+
+
+
+Functions
+Header files
+Libraries
+Operators
+String
+Syntax
+Preprocessor
+Data types
+
+
+
+
+
+
+
+
+C standard library functions
+
+
+
+Char (ctype.h)
+File I/O (stdio.h)
+Math (math.h)
+Dynamic memory (stdlib.h)
+String (string.h)
+Time (time.h)
+Variadic (stdarg.h)
+POSIX
+
+
+
+
+
+
+
+
+C standard libraries
+
+
+
+Bionic
+
+libhybris
+
+
+dietlibc
+EGLIBC
+glibc
+klibc
+Microsoft Run-time Library
+musl
+Newlib
+uClibc
+BSD libc
+
+
+
+
+
+
+
+
+Compilers
+
+
+
+Comparison of C compilers
+ACK
+Borland Turbo C
+Clang
+GCC
+LCC
+Pelles C
+PCC
+TCC
+Microsoft Visual Studio Express C++
+Watcom C/C++
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Comparison of C IDEs
+Anjuta
+Code::Blocks
+CodeLite
+Eclipse
+Geany
+Microsoft Visual Studio
+NetBeans
+
+
+
+
+
+
+
+
+C and other languages
+
+
+
+Compatibility of C and C++
+Comparison of C and Embedded C
+Comparison of C and Pascal
+Comparison of programming languages
+
+
+
+
+
+
+
+
+Descendant languages
+
+
+
+C++
+C#
+D
+Objective-C
+Alef
+Limbo
+Go
+Vala
+
+
+
+
+
+
+
+
+
+
+
+ Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=D_(programming_language)&amp;oldid=691714202"					
+				Categories: C programming language familyClass-based programming languagesMulti-paradigm programming languagesSystems programming languagesProgramming languages created in 2001Statically typed programming languagesFree compilers and interpretersProcedural programming languagesObject-oriented programming languagesCross-platform softwareHigh-level programming languagesHidden categories: All articles with unsourced statementsArticles with unsourced statements from June 2015Articles with unsourced statements from December 2014				
+							
+		
+		
+			

@@ -1,0 +1,1148 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			KDE
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the software project.  For other uses, see KDE (disambiguation).
+
+KDE
+
+
+
+
+Founded
+October&#160;14, 1996; 19 years ago&#160;(1996-10-14)
+
+
+Founder
+Matthias Ettrich
+
+
+Type
+Community
+
+
+Focus
+Free software
+
+
+Products
+KDE Software Compilation, Calligra Suite, KDevelop, Amarok, etc.
+
+
+Method
+Artwork, development, documentation, promotion, and translation.
+
+
+Slogan
+Experience Freedom!
+
+
+Website
+kde.org
+
+
+KDE (/ˌkeɪdiːˈiː/) is an international free software community[1] producing an integrated set of cross-platform applications designed to run on modern Unix-like and Microsoft Windows systems. It is known for its Plasma Desktop, a desktop environment which is provided as the default work environment on many Linux distributions, such as openSUSE, Mageia, and Kubuntu. It is also the default desktop environment on PC-BSD, a BSD operating system.[2]
+The goal of the community is to provide basic desktop functions and applications for daily needs of an end-user as well as tools and documentation for developers to write stand-alone applications for the system. In this regard, the KDE project serves as an umbrella project for many standalone applications and smaller projects that are based on KDE technology. These include Calligra Suite, digiKam, and many others.
+KDE software is based on the Qt framework. The original GPL version of this toolkit only existed for the X11 platform, but with the release of Qt 4, LGPL versions are available for all platforms. This allows KDE software based on Qt 4 or newer to also be distributed to Microsoft Windows and OS X.[3]
+
+
+
+Contents
+
+
+1 History
+
+1.1 Origins
+1.2 Product releases
+1.3 Licensing
+1.4 Brand repositioning
+
+
+2 Community structure
+
+2.1 Organization
+2.2 Local community
+2.3 Communication
+2.4 Identity
+
+
+3 Contributors
+
+3.1 Development
+3.2 Other groups
+
+
+4 Activities
+
+4.1 Akademy
+4.2 Camp KDE
+4.3 Akademy-es
+4.4 Other community events
+
+
+5 Technology platform
+
+5.1 KDE Frameworks
+5.2 Plasma Workspaces
+5.3 KDE Applications
+
+
+6 Implementation
+7 Collaborations with other organizations
+
+7.1 Wikimedia
+7.2 Free Software Foundation Europe
+7.3 Commercial enterprises
+7.4 Others
+
+
+8 Notable uses
+9 See also
+10 References
+11 External links
+
+
+
+History[edit]
+Origins[edit]
+
+
+
+
+Matthias Ettrich, Founder of KDE
+
+
+K Desktop Environment (KDE) was founded in 1996 by Matthias Ettrich, who was then a student at the Eberhard Karls University of Tübingen. At the time, he was troubled by certain aspects of the Unix desktop. Among his concerns was that none of the applications looked, felt, or worked alike. He proposed the creation of not merely a set of applications but a desktop environment in which users could expect things to look, feel, and work consistently. He also wanted to make this desktop easy to use; one of his complaints about desktop applications of the time was that it is too complicated for end user. His initial Usenet post spurred a lot of interest, and the KDE project was born.[4]
+The name KDE was intended as a wordplay on the existing Common Desktop Environment, available for Unix systems. CDE is an X11-based user environment jointly developed by HP, IBM, and Sun through the X/Open consortium, with an interface and productivity tools based on the Motif graphical widget toolkit. It was supposed to be an intuitively easy-to-use desktop computer environment.[5] The K was originally suggested to stand for "Kool", but it was quickly decided that the K should stand for nothing in particular. The KDE initialism is therefore expanded to "K Desktop Environment".
+Product releases[edit]
+Main article: KDE Software Compilation
+
+
+
+
+KDE Plasma Desktop 4.10, showing KWrite
+
+
+Matthias Ettrich chose to use Trolltech’s Qt framework for the KDE project.[6] Other programmers quickly started developing KDE/Qt applications, and by early 1997, a few applications were being released. On 12 July 1998 the first version of the desktop environment, called KDE 1.0, was released.
+
+
+Version
+Date
+Information
+
+
+
+October 14, 1996
+KDE development announced
+
+
+1.0
+July 12, 1998
+
+
+
+2.0
+October 23, 2000
+
+
+
+3.0
+April 3, 2002
+
+
+
+4.0
+January 11, 2008
+
+
+
+5.0
+July 15, 2014
+
+
+
+Licensing[edit]
+In November 1998, the Qt framework was dual-licensed under the free and open source Q Public License (QPL) and a commercial license for proprietary software developers. The same year, the KDE Free Qt foundation was created which guarantees that Qt would fall under a variant of the very liberal BSD license should Trolltech cease to exist or no free version of Qt be released during 12 months.[7]
+Debate continued about compatibility with the GNU General Public License (GPL), hence in September 2000 Trolltech made the Unix version of the Qt libraries available under the GPL in addition to the QPL which eliminated the concerns of the Free Software Foundation.[8] Trolltech continued to require licenses for developing proprietary software with Qt. The core libraries of KDE are collectively licensed under the GNU LGPL but the only way for proprietary software to make use of them was to be developed under the terms of the Qt proprietary license.
+Starting with Qt 4.5, Qt was also made available under the LGPL version 2.1,[9] now allowing proprietary applications to legally use the open source Qt version.
+Brand repositioning[edit]
+On 24 November 2009 the KDE Marketing Team announced a rebranding of the KDE project components, motivated by the perceived shift from building a desktop environment to a wider ranging project around a community of "people who create software". The rebranding focused on de-emphasizing the desktop environment as "just another product", and emphasizing both the community and the other technologies provided as KDE software. After the repositioning, the name KDE no longer stands for K Desktop Environment, as it now acts as an umbrella brand for software produced by the community. What would have been previously known as KDE 4 will now be split into three products: Plasma Workspaces, KDE Applications, and KDE Platform – bundled as "KDE Software Compilation 4" (abbreviated "KDE SC 4").[10] With the releases of Frameworks 5 and Plasma 5, each product got its own release cycle and the products are no longer bundled into a "Software Compilation".[11]
+Community structure[edit]
+Organization[edit]
+The financial and legal matters of KDE are handled by KDE e.V., which is a German non-profit organization, and help organizing the conferences and meetings of the community members is also handled by the organization.[12] KDE e.V. helps run the servers needed by the KDE community. It owns the trademark on KDE and the logo. It pays for travel to meetings and subsidizes events.[13] The working groups are a structure which will formalize some roles within KDE and enhance coordination within KDE and communication between parts of KDE.[14] KDE e.V. has no influence on development. KDE e.V. logo has been contributed by David Vignoni. The three flags on top of the logo represent the three main tasks of the KDE e.V.: supporting the community, representing the community, and governing the community.[15]
+The KDE community's developer meetings, servers, and related events are frequently sponsored by individuals, universities, and businesses.[16] The supporting members of the KDE e.V. are extraordinary members supporting the KDE through financial or material contributions.[17] Supporting members are entitled to display the "Member of KDE" logo on their website or in printed materials. The Patron of KDE is the highest level of supporting member. The patrons of KDE also are entitled to display the exclusive "Patron of KDE" logo on their website or in printed materials.[18] On 15 October 2006, it was announced that Mark Shuttleworth had become the first Patron of KDE.[19] On 7 July 2007, it was announced that Intel Corporation and Novell had also become patrons of KDE.[20] In January 2010, Google became a supporting member. On 9 June 2010, KDE e.V. launched the "Join the Game" campaign. This campaign promotes the idea of becoming a supporting member for individuals. It is made available for those who would like to support KDE, but do not have enough time to do so. Georg Greve, founder of the Free Software Foundation Europe (FSFE) was first to 'join the game'.[21]
+Local community[edit]
+In many countries, KDE has local branches. These are either informal organizations (KDE India) or like the KDE e.V., given a legal form (KDE France). The local organizations host and maintain regional websites, and organise local events, such as tradeshows, contributor meetings and social community meetings.
+
+
+
+
+KDE–AR logo
+
+
+KDE–AR (KDE Argentina) is the group of KDE developers and users in Argentina, and was officially opened in 22 November 2008 at a meeting in an IRC channel. They organise release parties on holidays to celebrate releases of new versions of the KDE SC since 4.2. KDE–AR has an own mailing lists and an IRC channel.
+KDE Brasil is composed by several local groups in Brazil, like KDE–MG, Live Blue, KDE Piauí, and KDE–RS. The main goals of local groups are regional promotion and direction of contributions of members, and still maintaining harmony with the KDE Brazil community. KDE–MG is a local group in Minas Gerais. The idea of structuring the group has arisen during the FISL (Fórum Internacional Software Livre) 10. Live Blue is a KDE working group in Bahia. KDE Piauí is a group of users and contributors of KDE in the Piauí. The idea was born during the Software Freedom Day Teresina 2009 and has concretized during the Akademy–Br 2010, where the group was officially created. KDE–RS is a group of KDE users from Rio Grande do Sul. KDE Lovelace is a Brazilian female group of users and contributors in KDE.
+KDE España was registered as an association under the Spanish law in 2009. The aim is stimulating the development and use of the KDE software in Spain. Its supreme governing body is the general assembly. Ordinary as well as extraordinary general assemblies canbe held. An ordinary general assembly is held at least once a year. Extraordinary general assemblies are held as necessary. The board consists of the president, the vice president, the secretary, the treasurer and members. In the current board are Aleix Pol i Gonzàlez (president), Alejandro Fiestas Olivares (vice president), Víctor Blázquez Francisco (secretary), and José Millán Soto (treasurer).[22] In addition, KDE España is the official representative of KDE e.V. in Spain.[23]
+KDE.in (KDE India), founded in 2005, provides Indian KDE developers and users with a community hub to coordinate with and support each other. Besides making efforts in the internationalization and localization, a major aim is to foster the creation and adaptation of KDE applications to needs specific to India.[24]
+Japan KDE Users' Group (JKUG/日本 KDE ユーザ会, Nihon KDE Yūzakai?) is the Japanese local users' group of KDE. The membership types of the association are corporate members (法人会員, hōjin kaiin?) and individual members (個人会員, kojin kaiin?). About 15 members form the active staff. The officers include one president (会長, kaichō?), two vice presidents (副会長, fuku-kaichō?) and one accountant. Currently, president is Daisuke Kameda (亀田大輔, Kameda Daisuke?), vice presidents are Taiki Komoda (菰田泰生, Komoda Taiki?) and Satoru Satō (佐藤暁, Satō Satoru?). The association holds an annual general assembly in December.[25] Its activities include message translation to Japanese, making patches for multilingualization, and exchanging information about KDE/Qt.[26]
+KDE GB is a KDE community with a constitution in Britain. At their meeting in October 2010 they agreed to register as a charity.[27] KDE-ir (فارسی KDE) is a Persian KDE community. Korean KDE Users Group was started in 1999. The group's work is mostly translation.[28]
+KDE România is a community founded in Romania in 2013.
+Communication[edit]
+Communication within the community takes place via mailing lists, IRC, blogs, forums, news announcements, wikis and conferences. The community has a Code of Conduct for acceptable behavior within the community.[29]
+The mailing lists are one of the main channels of communication. The Kde list is for user discussion and Kde-announce for version updates, security patches and other changes. The general development lists are Kde-devel, for developer communication, and Kde-core-devel, used to discuss development of the KDE Platform. Many applications have individual mailing lists.
+The KDE Community Forums are actively used. "KDE Brainstorm", allows users to submit ideas to developers. The request can then be considered by other users. Every few months, the highest-voted features are submitted to developers.[30] IRC bots that announce new threads and posts on IRC channels, by braiding forum posts into mailinglist messages and by offering RSS feeds.[31]
+KDE has three wikis: UserBase, TechBase and Community Wiki. They are translated with the MediaWiki Translate extension. UserBase provides documentation for end users: tutorials, links to help and an application catalogue. Its logo was designed by Eugene Trounev.[32] TechBase provides technical documentation for developers and system administrators.[33] Community Wiki coordinates community teams. It is used for publishing and sharing community-internal information.
+IRC channels provide real-time discussions. Planet KDE is made from the blogs of KDE's contributors. KDE.News is the website of office news announcements.[34] KDE Buzz tracks identi.ca, Twitter, Picasa, Flickr and YouTube to show social media activity concerning KDE.[35] KDE Pastebin allows for posting of source code snippets and provides syntax highlighting to ease reviewing code. Sections can be password protected. RSS notifies of new posts.[36] KDE Bug Tracking System uses Bugzilla to manage reports and fixes. "Behind KDE" offers interviews with KDE contributors.
+Identity[edit]
+
+
+
+
+Konqi
+
+
+
+
+
+
+Katie
+
+
+The KDE community’s mascot is a green dragon named Konqi.[37] Konqi has a girlfriend named Katie. Konqi and Katie made their costumed appearance at the KDE 4.0 Release Event and Camp KDE 2010.[38] Konqi also appears on the KDE software's about dialog. Kandalf the wizard was the former mascot for the KDE community during its 1.x and 2.x versions, but he was dropped owing to copyright issues (his resemblance to Gandalf). Konqi's appearance was officially redesigned with the coming of Plasma 5, with Tyson Tan's entry (seen on the right) winning the redesign competition on the KDE Forums.[39]
+KDE has community identity guidelines (CIG) for definitions and recommendations which help the community to establish a unique, characteristic, and appealing design.[40] The KDE official logo displays the white trademarked K-Gear shape on a blue square with mitred corners.Copying of the KDE Logo is subject to the LGPL.[41] Some local community logos are derivations of the official logo. The KDE software labels are used by producers of software to show that they are part of the KDE community or that they use the KDE Platform. There are three labels available. The Powered by KDE label is used to show that an application derives its strength from the KDE community and from the KDE development platform. The Built on the KDE Platform label indicates that the application uses the KDE platform. The Part of the KDE family label is used by application authors to identify themselves as being part of the KDE community.[42]
+Many KDE applications have a K in the name, mostly as an initial letter. The K in many KDE applications is obtained by spelling a word which originally begins with C or Q differently, for example Konsole and Kaffeine. Also, some just prefix a commonly used word with a K, for instance KGet. Among KDE SC 4 applications and technologies, however, the trend is not to have a K in the name at all, such as Stage and Dolphin.
+Contributors[edit]
+Like many free/open source software projects, KDE is primarily a volunteer effort, although various companies, such as Novell, Nokia,[43] and Mandriva,[citation needed] employ developers to work on the project. Since a large number of individuals contribute to KDE in various ways (e.g. code, translation, artwork), organization of such a project is complex.
+Development[edit]
+The overall direction of the KDE Platform is made on the KDE Core Team. These are developers who have made significant contributions to KDE over a long period of time. This team communicates using the kde-core-devel mailing list, which is publicly archived and readable, but joining requires approval. KDE does not have a single central leader who can veto important decisions. Instead, the KDE core team consisting of several dozen contributors takes decisions. The decisions do not take a formal vote, but through discussions.[44] The Developers also organize alongside topical teams. For example, the KDE Edu team develops free educational software. While these teams work mostly independent and do not all follow a common release schedule. Each team has its own messaging channels, both on IRC and on the mailinglists. And they have mentor program which helps beginners to get started.[45][46]
+Currently KDE community uses the Git repository.[clarification needed] The KDE Projects site gives an overview of all projects within Git repository. QuickGit is another repository browser.[clarification needed] It shows all the Git repositories. ReviewBoard site gives patch review.[citation needed] Commitfilter will send an email with each commit for the projects you want to watch, without either getting tons of mails or getting infrequent and redundant information. English Breakfast Network (EBN) is a collection of machines that do automated KDE source artifact quality checking. The EBN provides KDE API documentation validation, user documentation validation, source code checking. It is operated by Adriaan de Groot and Allen Winter. Commit-Digest site gives a weekly overview of the development activity. LXR indexes classes and methods used in KDE.
+Season of KDE (SoK) is a program for people could not get accepted into Google Summer of Code. They will have a mentor from the KDE community to help them if any question arises or if they do not know how to continue.[citation needed]
+On 20 July 2009, KDE announced that the one millionth commit has been made to its Subversion repository.[47] On October 11, 2009, Cornelius Schumacher, a main developer within KDE,[48] wrote about the estimated cost (using the COCOMO model with SLOCCount) to develop KDE software package with 4,273,291 LoC, which would be about US$175,364,716.[49] This estimation does not include Qt, Calligra Suite, Amarok, Digikam, and other applications that are not part of KDE core.[clarification needed]
+The work can be measured in figures:
+
+Over 6 million lines of code. This does not include Qt.[50]
+More than 1800 contributors help develop KDE.[50] About 20 new developers contribute their first code each month.[47]
+KDE is translated in over 108 languages.[51]
+KDE has more than 114 official FTP mirrors in over 34 countries.[52]
+The KDE community is the second largest Free Software community behind the Linux kernel community.[50][non-primary source needed]
+
+Other groups[edit]
+The KDE community has many smaller teams working towards specific goals. The Accessibility team make KDE accessible to all users, including those with physical handicaps.[53] The Artists team has designed most of the artwork used by the software like icons, wallpapers and themes. They have also produced graphics for T-shirts and websites. Discuss of the team is most active on the IRC channel.[54] The Bugsquad team keeps track of incoming bugs. They verify that a bug exists, that it is reproducible, and that the reporter has given enough information. The goal is to help developers notice valid bugs quicker, and to save their time.[55] The Documentation team writing documentation for application.[56] The team uses the DocBook format and custom tools to create documentation.[57] The Localization team translate KDE software into many different languages. This team works beside the Documentation team.[58] The Marketing and Promotion team manages marketing and promotion. The team writes news articles, release announcements and other webpages on KDE websites. The articles of KDE.News is submitted by the team. It also has channels at social media sites for communication and promotion. They also attend conference events.[59] The Research team is to improve the collaboration with external parties to achieve more funded research. They support community members by providing information, navigating bureaucracies, and matching research partners. The usability team has written a Human Interface Guideline (HIG) for the developers and they do regular reviews of KDE applications. The HIG provides a standardized layout.[60] The Web team maintains KDE’s web presence. The KDE Women help women to contribute and encourage women to give talks at conferences.[61]
+The Release team defines and executes the official software releases. The Team is responsible for setting release schedules for the official releases. This includes release dates, deadlines for individual release steps and restrictions for code changes. The Release Team coordinates release dates with the marketing and press efforts of KDE. The release team is composed of Module Coordinators, Marketing Team liaison, and the people who actually do the work of tagging and creating the releases.[62]
+Activities[edit]
+The two most important conferences of KDE are Akademy and Camp KDE. Each event is on a large scale, both thematically and geographically. Akademy-BR and Akademy-es are local community events.
+Akademy[edit]
+
+
+
+
+Akademy 2008 logo
+
+
+Akademy is the annual world summit, held each summer at varying venues in Europe.[63] The primary goals of Akademy are to act as a community building event, to communicate the achievements of community, and to provide a platform for collaboration with community and industry partners. Secondary goals are to engage local people, and to provide space for getting together to write code. KDE e.V. assist with procedures, advice and organization. Akademy including conference, KDE e.V. general assembly, marathon coding sessions, BOFs (birds of a feather sessions) and social program. BOFs are meet to discuss specific sub-projects or issues.[64]
+The KDE community held KDE One that was first conference in Arnsberg, Germany in 1997 to discuss the first KDE release. Initially, each conference was numbered after the release, and not regular held. Since 2003 the conferences were held once a year. And they were named Akademy since 2004.
+The yearly Akademy conference gives Akademy Awards, are awards that the KDE community gives to KDE contributors. Their purpose is to recognize outstanding contribution to KDE. There are three awards, best application, best non-application and jury's award. As always the winners are chosen by the winners from the previous year.[65] First winners received a framed picture of Konqi signed by all attending KDE developers.[66]
+Camp KDE[edit]
+
+
+Year
+Venue
+Date
+
+
+2009
+Negril, Jamaica
+1/17–1/18
+
+
+2010
+La Jolla, USA
+1/15–1/22
+
+
+2011
+San Francisco, USA
+4/4–4/5
+
+
+Camp KDE is another annual contributor’s conference of the KDE community. The event provides a regional opportunity for contributors and enthusiasts to gather and share their experiences. It's free to all participants. It is intended to ensure that KDE in the world is not simply seen as being Euro-centric. The KDE e.V. helps travel and accommodation subsidies for presenters, BoF leaders, organizers or core contributor. It is held in the North America since 2009.
+In January 2008, KDE 4.0 Release Event was held at the Google headquarters in Mountain View, California, USA to celebrate the release of KDE SC 4.0. The community realized that there was a strong demand for KDE events in the Americas, therefore Camp KDE was produced.
+Camp KDE 2009 was the premiere meeting of the KDE Americas, was held at the Travellers Beach Resort in Negril, Jamaica, sponsored by Google, Intel, iXsystem, KDE e.V. and Kitware. The event included 1–2 days of presentations, BoF meetings and hackathon sessions.[67] Camp KDE 2010 took place at the University of California, San Diego (UCSD) in La Jolla, USA. The schedule included presentations, BoFs, hackathons and a day trip. It started with a short introduction by Jeff Mitchell, who was the principal organizer of the conference, talked a bit of history about Camp KDE and some statistics about the KDE community. The talks of the event were relatively well attended, and an increase over the previous year to around 70 people. On 1/19, the social event was a tour of a local brewery.[68] Camp KDE 2011 was held at Hotel Kabuki in San Francisco, USA, was co-located with the Linux Foundation Collaboration Summit. The schedule included presentations, hackathons and a party at Noisebridge. The conference opened with an introduction spoken by Celeste Lyn Paul.[69]
+Akademy-es[edit]
+
+
+Year
+Venue
+Date
+
+
+2006
+Barcelona
+3/3–3/5
+
+
+2007
+Zaragoza
+11/17–11/18
+
+
+2008
+A Coruña
+11/21–11/23
+
+
+2009
+Gran Canaria
+7/10–7/11
+
+
+2010
+Bilbao
+5/7–5/9
+
+
+2011
+Barcelona
+5/20–5/22
+
+
+2012
+Zaragoza
+5/18–5/20
+
+
+2013
+Bilbao
+7/11–7/12
+
+
+2014
+Málaga
+7/11–7/12
+
+
+2015
+A Coruña
+23/7–24/7
+
+
+Akademy-es is a conference for Spanish community since 2006, aimed at Spanish speakers. The event is organized by Spanish local organization. KDE España organizes the event since 2008. The annual KDE España Assembly takes place during the event.
+Akademy-es 2006 was held at Espai Jove Bocanord in Barcelona, organized by Badopi.[70] Akademy-es 2007 was hosted by Hispalinux, Wireless Zaragoza, and the Zaragoza council.[71] Akademy-es 2008 was held at University of A Coruña, was organized by the KDE España and GPUL, sponsored by Oficina de Software Libre da Universidade da Coruña, Mancomun, Igalia, Qt Software and eyeOs.[72] Akademy-es 2009 was held in the University of Las Palmas de Gran Canaria.[73] Akademy-es 2010 was held in the Engineering Technical School of Bilbao, was organized by KDE España and Itsas. There were approximately 80 participants. The KDE España Assembly elected the new board consists of Albert Astals Cid (president), Rafael Fernández López (vice president), Aleix Pol (secretary), and José Millán Soto (treasurer).[74] Akademy-es 2011 was organized by KDE España, was sponsored by Google and Nokia, and was supported by the Linux and Todo-Linux magazines. The event was held in the in two different locations: the Polytechnic University of Catalunya for presentations of fist day, The School of Sant Marc de Sarrià for last two day.[75]
+Other community events[edit]
+Akademy-BR is addressed to Brazilian community since 2010. The purpose of the meeting is to gather and organize ideas Brazilian developers on how to help KDE in Brazil. Akademy-BR 2010 was organized by the local group named LiveBlue. There were thirty participants from all over Brazil.[76] Akademy-BR 2011 is organized by KDE-MG.
+
+
+Akademy-BR
+
+
+Year
+Venue
+Date
+
+
+2010
+Salvador
+4/9–4/11
+
+
+2011
+São Paulo
+11/12–11/15
+
+
+
+
+conf.KDE.in
+
+
+Year
+Venue
+Date
+
+
+2011
+Bengaluru
+3/9–3/13
+
+
+conf.kde.in was the first KDE and Qt conference in India. The conference was organized by KDE India, was held at R.V. College of Engineering in Bengaluru, India. The first three days of the event had talks, tutorials and interactive sessions. The last two days were a focused code sprint.[77] The conference was opened by its main organiser Pradeepto Bhattacharya, over 300 people were at the opening talks. The Lighting of the Auspicious Lamp ceremony was performed to open the conference. The first session was by Lydia Pintscher who talk "So much to do – so little time". At the event, Project Neon announced return on Mar 11, 2011, provides nightly builds of the KDE Software Compilation.[78] Closing the conference was keynote speaker and old-time KDE developer Sirtaj.
+Día KDE (KDE Day) is an Argentinian event focused on KDE. It gives talks and workshops. The purpose of the event are: spread the free software movement among the population of Argentina, bringing to it the KDE community and environment developed by it, to know and strengthen KDE-AR, and generally bring the community together to have fun. The event is free.[79]
+
+
+Día KDE
+
+
+Year
+Venue
+Date
+
+
+2011
+Rosario
+8/27
+
+
+A Release party is a party, which celebrates the release of a new version of the KDE SC (twice a year).[80] KDE also participates in other conferences that revolve around free software.
+Technology platform[edit]
+
+
+
+
+KDE brand map
+
+
+The KDE technology platform consists of three parts: KDE Development Platform, KDE Workspace and KDE Applications.
+KDE Frameworks[edit]
+Main articles: KDE Platform 4 and KDE Frameworks 5
+In KDE 4 series KDE Platform consists of the libraries and services needed to run KDE applications. Libraries include: Solid, Nepomuk, Phonon, etc. Packages include: kdelibs, kdepimlibs and kdebase-runtime. The libraries must be licensed under one of the LGPL, BSD license, MIT License and X11 license.[81]
+While the KDE Platform is mainly written in C++, it includes bindings for other programming languages.[82] Bindings use the following generic technologies:
+
+Smoke: for creating bindings for Ruby, C# and PHP
+SIP: for creating bindings for Python
+Kross: Embedded scripting for C++ applications, with support for Ruby, Python, JavaScript, QtScript, Falcon and Java
+
+Stable and mature bindings available for the following programming languages:[83]
+
+Python
+Ruby (Korundum, built on top of QtRuby)
+C# (However, the current framework for binding to C# and other .Net languages has been deprecated, and the replacement only compiles on Windows.[84])
+Perl
+
+When updating to use Qt 5 KDE platform was transformed into modular multitude of frameworks.
+Plasma Workspaces[edit]
+Main articles: KDE Plasma 4 and KDE Plasma 5
+
+
+
+
+KDE Plasma Netbook
+
+
+KDE Plasma Workspaces, KDE Plasma 4 and KDE Plasma 5, provide the environment for running and managing applications.[85] KDE Plasma 4 is the umbrella term for the fourth generation graphical environments. Its successor, KDE Plasma 5 is a set of graphical shells released on July 15, 2014. They include many components such as KWin, KDM, Plasma core libraries, Klipper, KSysguard, and System Settings. There are different available GUI environments: Plasma Desktop for desktop computers, Plasma Netbook for netbooks, and "Plasma Active" for smartphones and tablets.[86]
+KDE Applications[edit]
+KDE Applications are built on top of the KDE Platform like Okular, KTorrent, Kexi and KDE Partition Manager. KDE applications can potentially be portable between operating systems and independent of a particular workspace or desktop environment. Some brands identify application suites built up from several applications, such as KDE Network, KDE Graphics and KDE Utilities. Some applications are part of the regular Software Compilation releases, others are part of Extragear and release to their own schedule.
+Implementation[edit]
+Most KDE software uses the Qt framework which runs on most Unix and Unix-like systems (including OS X), and Microsoft Windows. As of 2011[update] CMake serves as the build tool. This allows KDE to support a wider range of platforms, including Windows.[87] GNU gettext is used for translation. Doxygen is used to generate api documentation.[88]
+
+KDE Software Compilation: KDE Software Compilation (KDE SC) is the coordinated releases of new software versions, gathering elements from the previous components to build an integrated core of software. The KDE SC is not a product as a single entity.
+Calligra Suite: Integrated office suite.
+KDEWebdev: Web development tools.
+KDE-Extragear: Extragear is a collection of applications associated with KDE. Those applications are not part the official software compilation, but they are still part of the project.
+KDE-Playground: This package contains pre-release and unstable software. It is a place for applications to mature.[89]
+
+Collaborations with other organizations[edit]
+Wikimedia[edit]
+
+
+
+Wikinews has related news: Wikipedia founder Jimmy Wales announces cooperation between KDE Group and Wikimedia
+
+
+
+
+
+
+Amarok with information retrieved from Wikipedia.
+
+
+On 23 June 2005, chairman of the Wikimedia Foundation announced that the KDE community and the Wikimedia Foundation have begun efforts towards cooperation.[90] Fruits of that cooperation are MediaWiki syntax highlighting in Kate and accessing Wikipedia content within KDE applications, such as Amarok and Marble.
+On 4 April 2008, the KDE e.V. and Wikimedia Deutschland opened shared offices in Frankfurt.[91] In September 2009 KDE e.V. moved to shared offices with Free Software Foundation Europe in Berlin.[92]
+Free Software Foundation Europe[edit]
+In May 2006, KDE e.V. became an Associate Member of the Free Software Foundation Europe (FSFE).[92]
+On 22 August 2008, KDE e.V. and FSFE jointly announced that after working with FSFE’s Freedom Task Force for one and a half years KDE adopts FSFE’s Fiduciary Licence Agreement. Using that, KDE developers can – on a voluntary basis – assign their copyrights to KDE e.V.[93]
+In September 2009, KDE e.V. and FSFE moved into shared offices in Berlin.[94]
+Commercial enterprises[edit]
+Several companies actively contribute to KDE, like Collabora, Erfrakon, Intevation GmbH, Kolab Konsortium, Klarälvdalens Datakonsult AB (KDAB), Blue Systems, and KO GmbH.
+Nokia used Calligra Suite as base for their Office Viewer application for Maemo/MeeGo.[95] They have also been contracting KO GmbH to bring MS Office 2007 file format filters to Calligra.[96] Nokia also employed several KDE developers directly – either to use KDE software for MeeGo (e.g. KCal[97]) or as sponsorship.
+The software development and consulting companies Intevation GmbH of Germany and the Swedish KDAB use Qt and KDE software – especially Kontact and Akonadi for Kolab – for their services and products, therefore both employ KDE developers.
+Others[edit]
+KDE participates in freedesktop.org, an effort to standardize Unix desktop interoperability.
+In 2009 and 2011, GNOME and KDE co-hosted their conferences Akademy and GUADEC under the Desktop Summit label.
+In December 2010 KDE e.V. became a licensee of the Open Invention Network.[98]
+Many Linux distributions and other free operating systems are involved in the development and distribution of the software, and are therefore also active in the KDE community. These include commercial distributors such as SUSE/Novell[99] or Red Hat[100] but also government-funded non-commercial organizations such as the Scientific and Technological Research Council of Turkey with its Linux distribution Pardus.
+Notable uses[edit]
+Brazil’s primary school education system operates computers running KDE software, with more than 42,000 schools in 4,000 cities, thus serving nearly 52 million children. The base distribution is called Educational Linux, which is based on Kubuntu.[101] Besides this, thousands more students in Brazil use KDE products in their universities. KDE software is also running on computers in Portuguese and Venezuelan schools, with respectively 700,000 and one million systems reached.[102]
+Germany uses KDE software in its embassies around the world, representing around 11,000 systems. Through use of Pardus, a local Linux distribution, many sections of the Turkish government make use of KDE software, including the Turkish Armed Forces,[103] Ministry of Foreign Affairs,[103] Ministry of National Defence,[104] Turkish Police,[103] and the SGK (Social Security Institution of Turkey),[103][105] although these departments often do not exclusively use Pardus as their operating system. The CERN (European Organization for Nuclear Research) is using KDE software.[106]
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+
+List of KDE applications
+Free software community
+
+References[edit]
+
+
+^ "About KDE". Retrieved 2012-01-25.&#160;
+^ Ryan Paul (2009-08-21). "OpenSUSE community konfesses love for KDE, makes it default". Condé Nast Digital. Ars technica. Retrieved 2010-11-28.&#160;
+^ Ryan Paul (January 23, 2008). "KDE goes cross-platform with Windows, Mac OS X support". Ars Technica. Retrieved 2010-12-04.&#160;
+^ Ettrich, Matthias (14 October 1996). "New Project: Kool Desktop Environment (KDE)". Newsgroup:&#160;de.comp.os.linux.misc. Usenet:&#160;53tkvv$b4j@newsserv.zdv.uni-tuebingen.de. Retrieved 2010-12-04.&#160;
+^ "COSE Update FYI". Retrieved 2010-11-06.&#160;
+^ "history of the KDE project". August 2003. Retrieved 2010-12-02.&#160;
+^ "KDE Free Qt Foundation". KDE. Retrieved 2010-11-13.&#160;
+^ "Trolltech offers a choice in licensing with the addition of GPL licensing for the upcoming release of Qt". 2000-09-05. Retrieved 2010-11-28.&#160;
+^ Ryan Paul. "LGPL License Option Added to Qt". Nokia. Retrieved 2010-11-13.&#160;
+^ Stuart Jarvis (2009-11-24). "Repositioning the KDE Brand". KDE. KDE.NEWS. Retrieved 2010-11-13.&#160;
+^ Jos Poortvliet (2014-07-16). "Repositioning the KDE Brand". Retrieved 2014-07-27.&#160;
+^ "KDE e.V. - What is KDE e.V.". KDE e.V. Board. Retrieved 2011-01-02.&#160;
+^ "KDE e.V. - KDE e.V. Activities". KDE e.V. Board. Retrieved 2011-01-08.&#160;
+^ "KDE Working Groups Discussion". KDE e.V. Retrieved 2011-01-02.&#160;
+^ Sebastian Kuegler (2008-08-12). "KDE e.V. Endorses Community Working Group, Code of Conduct". KDE. KDE.NEWS. Retrieved 2010-12-24.&#160;
+^ "KDE – Sponsorship Thanks". Retrieved 2010-11-13.&#160;
+^ "Articles of Association". Retrieved 2010-11-28.&#160;
+^ "Become a Supporting Member of the KDE e.V.". Retrieved 2010-11-12.&#160;
+^ Danny Allen (2006-10-16). "Mark Shuttleworth Becomes the First Patron of KDE". KDE. KDE.NEWS. Retrieved 2010-11-13.&#160;
+^ Francis Giannaros (2007-07-07). "Intel and Novell Become Patrons of KDE". KDE. KDE.NEWS. Retrieved 2010-11-13.&#160;
+^ Jos Poortvliet (2010-06-09). "Announcing the KDE e.V. Supporting Membership". KDE. KDE.NEWS. Retrieved 2010-12-24.&#160;
+^ "KDE España-Junta Directiva". KDE España. Retrieved 2011-07-24.&#160;
+^ "KDE España to represent KDE e.V. in Spain". KDE e.V. Board. Retrieved 2010-11-13.&#160;
+^ Daniel Molkentin (2005-12-10). "Kaun Banega KDE Hacker: KDE India Founded". KDE. KDE.NEWS. Retrieved 2011-05-04.&#160;
+^ "Japan KDE Users' Group website". 日本 KDE ユーザ会. Retrieved 2011-02-03.&#160;
+^ Jonathan Riddell (2008-04-17). "Japan KDE Users Group Interview". KDE. KDE.NEWS. Retrieved 2011-04-20.&#160;
+^ "KDE GB - KDE Community Wiki". Retrieved 2011-02-12.&#160;
+^ Jonathan Riddell (2008-04-28). "KDE in Korea". KDE. KDE.NEWS. Retrieved 2011-04-23.&#160;
+^ "KDE Community Code of Conduct". Retrieved 2010-11-28.&#160;
+^ Luca Beltrame (2009-03-20). "KDE Brainstorm: Get Your Ideas Into KDE!". KDE. KDE.NEWS. Retrieved 2010-12-18.&#160;
+^ Sebastian Kuegler (2008-10-12). "KDE Launches User Forums". KDE. KDE.NEWS. Retrieved 2011-01-01.&#160;
+^ Lydia Pintscher (2008-09-19). "UserBase Goes Live!". KDE. KDE.NEWS. Retrieved 2010-12-24.&#160;
+^ "KDE-Support". KDE. Retrieved 2010-11-28.&#160;
+^ Navindra Umanee (2000-09-21). "KDE Dot News goes live!". KDE. KDE.NEWS. Retrieved 2011-01-02.&#160;
+^ Will Stephenson (2009-08-04). "New KDE Buzz". KDE. KDE.NEWS. Retrieved 2010-12-24.&#160;
+^ Amber Graner (2010-12-28). "KDE's Pastebin". Linux New Media. Linux Magazine. Retrieved 2011-02-01.&#160;
+^ "KDE-Clipart page". Retrieved 2010-11-20.&#160;
+^ Troy Unrau (2010-01-25). "Camp KDE 2010 Wrapup". KDE. KDE.NEWS. Retrieved 2011-03-05.&#160;
+^ "Konqui, Katie and Friends".&#160;
+^ "Community Identity Guidelines". Retrieved 2010-12-01.&#160;
+^ "The KDE CIG Logo page". September 28, 2006. Retrieved 2010-11-06.&#160;
+^ Stuart Jarvis (2010-06-21). "Introducing Your KDE Software Labels". KDE. KDE.NEWS. Retrieved 2010-11-13.&#160;
+^ "KDE Free Qt Foundation". KDE e.V. Retrieved September 29, 2012.&#160;
+^ "Project Management". Retrieved 2010-11-13.&#160;
+^ "Becoming a KDE Developer". Retrieved 2011-01-01.&#160;
+^ George Kuk (2006). "Strategic Interaction and Knowledge Sharing in the KDE Developer Mailing List". Management Science 52 (7): 1031–1042. doi:10.1287/mnsc.1060.0551.&#160;[dead link]
+^ a b Jeff Mitchell (2009-07-20). "KDE Reaches 1,000,000 Commits in its Subversion Repository". KDE. KDE.NEWS. Retrieved 2010-11-13.&#160;
+^ "People Behind KDE: Cornelius Schumacher". February 4, 2002. Retrieved 2010-11-18.&#160;
+^ Marcel Hilzinger (2009-10-12). "Code Statistics: KDE Costs 175 Million Dollars". Linux Magazine. Retrieved 2010-12-30.&#160;
+^ a b c "KDE – Press page". KDE. Retrieved 2010-12-30.&#160;
+^ "KDE Localization statistics". 5 November 2010. Retrieved 2010-11-06.&#160;
+^ "the status of KDE mirrors". Retrieved 2010-11-06.&#160;
+^ "Getting Started with KDE Accessibility". Retrieved 2011-01-01.&#160;
+^ "Becoming a KDE Artist". KDE. Retrieved 2010-11-13.&#160;
+^ "Contribute/Bugsquad". Retrieved 2010-12-31.&#160;
+^ "Get Involved with KDE Documentation". KDE. Retrieved 2010-11-28.&#160;
+^ "The KDE DocBook XML toolchain". Retrieved 2010-11-28.&#160;
+^ "KDE – Get Involved with KDE Translation". Retrieved 2010-11-22.&#160;
+^ "Get Involved with KDE Promotion". Retrieved 2010-11-13.&#160;
+^ "KDE Human Interface Guidelines". Retrieved 2010-12-01.&#160;
+^ Yixin Qiu, Katherine J. Stewart, and Kathryn M. Bartol (2010). "Joining and Socialization in Open Source Women's Groups: An Exploratory Study of KDE-Women". IFIP Advances in Information and Communication Technology. IFIP Advances in Information and Communication Technology 319: 239–251. doi:10.1007/978-3-642-13244-5_19. ISBN&#160;978-3-642-13243-8.&#160;
+^ "Projects/Release Team". Retrieved 2010-11-22.&#160;
+^ "KDE e.V. - Akademy". KDE e.V. Retrieved 2010-11-13.&#160;
+^ "Requirements for Akademy Location". KDE e.V. Retrieved 2010-11-13.&#160;
+^ Jonathan Riddell (2009-07-06). "Akademy Awards 2009". KDE. KDE.NEWS. Retrieved 2011-01-07.&#160;
+^ Daniel Molkentin (2005-08-30). "First KDE Appreciation Awards Announced". KDE. KDE.NEWS. Retrieved 2011-01-07.&#160;
+^ Wade Olson (2008-11-30). "Camp KDE 2009 Presentations Announced". KDE. KDE.NEWS. Retrieved 2010-11-28.&#160;
+^ Jeff Mitchell (2009-08-07). "Announcing Camp KDE 2010!". KDE. KDE.NEWS. Retrieved 2010-11-28.&#160;
+^ Celeste Lyn Paul (2011-02-05). "Camp KDE 2011 Announced". KDE. KDE.NEWS. Retrieved 2011-01-07.&#160;
+^ Antonio Larrosa (2006-02-09). "aKademy-es 2006 in Barcelona". KDE. KDE.NEWS. Retrieved 2011-01-03.&#160;
+^ Aleix Pol Gonzalez (2007-11-22). "Akademy-es 2007 in Zaragoza Spain". KDE. KDE.NEWS. Retrieved 2010-11-28.&#160;
+^ Albert Astals Cid (2008-11-15). "Akademy-es 2008 in A Coruña". KDE. KDE.NEWS. Retrieved 2011-01-02.&#160;
+^ Albert Astals Cid (2009-07-23). "Akademy-es 2009". KDE. KDE.NEWS. Retrieved 2010-11-17.&#160;
+^ Albert Astals Cid (2010-03-09). "Akademy-es 2010". KDE. KDE.NEWS. Retrieved 2011-01-03.&#160;
+^ Albert Astals Cid (2011-04-08). "KDE Spain announces Akademy-es 2011". KDE. KDE.NEWS.&#160;
+^ Danny Allen, Artur Souza, Claudia Rauch, Torsten Thelke, Jos Poortvliet, Justin Kirby (24 August 2010). KDE e.V. Quarterly Report 2010Q2 (Issue 14) (PDF). KDE e.V. p.&#160;5. Retrieved 2011-01-01.&#160;
+^ Shantanu Tushar (2010-12-28). "conf.KDE.in: First KDE Conference in India". KDE. KDE.NEWS. Retrieved 2011-01-03.&#160;
+^ Valorie Zimmerman (2011-03-11). "conf.kde.in: Project Neon Returns With Bleeding Edge KDE Software". KDE. KDE.NEWS. Retrieved 2011-05-30.&#160;
+^ "Salió la versión candidata de KDE SC 4.7". 2011-06-28.&#160;
+^ Jos Poortvliet (2010-03-21). "KDE Partying Around the World for New Release". KDE. KDE.NEWS.&#160;
+^ "KDE Licensing Policy". Retrieved 2010-11-06.&#160;
+^ "The KDE development platform". Retrieved 2010-11-26.&#160;
+^ Development/Languages - KDE TechBase. Techbase.kde.org (2012-07-12). Retrieved on 2013-07-17.
+^ "Qyoto". Retrieved 2015-01-18.&#160;
+^ "The KDE Workspaces". Retrieved 2010-12-04.&#160;
+^ Artur Souza (2010-12-03). "KDE's Mobile Team Meets for First Sprint". KDE. KDE.NEWS. Retrieved 2011-01-01.&#160;
+^ Troy Unrau (2007-02-22). "The Road to KDE 4: CMake, a New Build System for KDE". KDE. KDE.NEWS. Retrieved 2010-11-13.&#160;
+^ "Software Engineering Framework". 29 October 2010. Retrieved 2010-11-28.&#160;
+^ "KDE Software Compilation". Retrieved 2010-11-20.&#160;
+^ Sven Krohlas (2005-06-23). "KDE and Wikipedia Announce Cooperation". KDE. KDE.NEWS. Retrieved 2010-11-13.&#160;
+^ "KDE and Wikimedia Start Collaboration". April 4, 2008. Retrieved 2010-11-13.&#160;
+^ a b "KDE e.V. Becomes Associate Member of FSFE". May 9, 2006. Retrieved 2010-11-06.&#160;
+^ "FSFE welcomes KDE’s adoption of the Fiduciary Licence Agreement (FLA)". 22 August 2008. Retrieved 2010-11-06.&#160;
+^ "FSFE: Events. Office warming party, Berlin, Germany". 12 December 2009. Retrieved 2010-11-26.&#160;
+^ Jonathan Riddell (2010-01-21). "KOffice Based Office Viewer Launched for Nokia N900". KDE. KDE.NEWS.&#160;
+^ Inge Wallin (2009-10-11). "Nokia Announces MS Office 2007 Import Filters for KOffice".&#160;
+^ Stephen Kelly (2010-06-03). "KDE PIM Stabilization Sprint". KDE. KDE.NEWS.&#160;
+^ Aaron J. Seigo (2010-12-21). "KDE e.V. Joins Open Invention Network". KDE. KDE.NEWS. Retrieved 2010-12-23.&#160;
+^ Development begins on a lightweight KDE version - The H Open: News and Features at the Wayback Machine (archived December 7, 2013). H-online.com (2013-04-14). Retrieved on 2013-07-17.
+^ All KDE &amp; Fedora: This month (May) in Redhat KDE. Ltinkl.blogspot.de (2006-07-11). Retrieved on 2013-07-17.
+^ "LinuxCon: The world's largest Linux desktop deployment". 2011-08-22.&#160;
+^ KDE promo team (ed.). KDE promo booklet (PDF). Retrieved 2011-02-26.&#160;
+^ a b c d "Pardus 2009 yolda" (in Turkish). 2009-05-25. Retrieved 2009-05-25.&#160;
+^ "MSB, Pardus ile 2 milyon dolar tasarruf etti" (in Turkish). 2009-04-14. Retrieved 2009-04-14.&#160;
+^ "SGK, Pardus'a göç etmeye hazırlanıyor" (in Turkish). 2009-04-13. Retrieved 2009-04-13.&#160;
+^ Jonathan Riddell (2008-09-10). "KDE Congratulates CERN's Large Hadron Collider".&#160;
+
+
+External links[edit]
+
+
+
+Find more about
+KDE
+at Wikipedia's sister projects
+
+
+
+
+Definitions from Wiktionary
+
+
+
+Media from Commons
+
+
+
+News stories from Wikinews
+
+
+
+Quotations from Wikiquote
+
+
+
+Source texts from Wikisource
+
+
+
+Textbooks from Wikibooks
+
+
+
+Learning resources from Wikiversity
+
+
+
+The KDE website
+KDE.News, news announcements
+KDE TechBase
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+KDE
+
+
+
+
+
+
+Software
+Compilation
+
+
+
+KDE 1
+KDE 2
+KDE 3
+KDE SC 4
+after 4, split into
+
+KDE Frameworks 5
+KDE Plasma 5
+KDE Applications
+
+
+
+
+
+
+
+
+
+
+
+
+
+KDE Core
+Applications
+
+
+
+
+Development
+
+
+
+Cervisia
+KDbg
+KDESvn
+KDevelop
+KImageMapEditor
+Kompare
+Lokalize
+Quanta Plus
+Umbrello
+
+
+
+
+
+
+
+
+Education
+
+
+
+Cantor
+GCompris
+KAlgebra
+Kanagram
+Kalzium
+KBibTeX
+KGeography
+KLettres
+KHangMan
+Kig
+Kiten
+kst
+KStars
+KTouch
+KTurtle
+KWordQuiz
+LabPlot
+Marble
+RKWard
+Rocs
+Step
+
+
+
+
+
+
+
+
+Games
+
+
+
+KAtomic
+KBounce
+Kolf
+KMines
+
+
+
+
+
+
+
+
+Graphics
+
+
+
+digiKam
+Gwenview
+Karbon
+KColorEdit
+KolourPaint
+KPhotoAlbum
+KPovModeler
+Krita
+KSnapshot
+Skanlite
+
+
+
+
+
+
+
+
+Internet
+
+
+
+Akregator
+KGet
+KMail
+KMLDonkey
+KNode
+Konqueror
+Konversation
+Kopete
+Kppp
+KRDC
+KTorrent
+Rekonq
+
+
+
+
+
+
+
+
+Multimedia
+
+
+
+Dragon Player
+JuK
+K3b
+K9Copy
+Kaffeine
+Kdenlive
+
+
+
+
+
+
+
+
+Office
+
+
+
+Okular
+Calligra Suite
+
+Words
+Sheets
+Stage
+Flow
+Karbon
+Krita
+Kexi
+Plan
+
+
+KAddressBook
+Kile
+KMyMoney
+Kontact
+KOrganizer
+KPilot
+Tellico
+
+
+
+
+
+
+
+
+System
+
+
+
+Dolphin
+KDE Partition Manager
+KDE System Guard
+KInfoCenter
+Konsole
+Yakuake
+
+
+
+
+
+
+
+
+Utilities
+
+
+
+Ark
+Filelight
+KAlarm
+Kate
+KCalc
+KGPG
+Klipper
+KJots
+Krusader
+KRename
+KWallet
+KWrite
+RSIBreak
+
+
+
+
+
+
+
+
+
+
+
+3rd party
+Applications
+
+
+
+Amarok
+Avogadro
+QGIS
+qBittorrent
+Transmission-Qt
+Mumble
+ChessX
+Clementine
+Freeseer
+Marble
+Mixxx
+Puddletag
+Subsurface
+Trojitá
+
+
+
+
+
+
+
+
+Platform
+
+
+
+
+User interface
+
+
+
+
+Current
+
+
+
+KWin
+KDE Plasma 5
+Oxygen Project
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+KDesktop
+Kicker
+SuperKaramba
+KDE Plasma 4
+Crystal Project
+
+
+
+
+
+
+
+
+
+
+
+Current
+
+
+
+KWin
+SDDM (5–)
+Qt
+KDE Frameworks 5 (5–)
+
+Akonadi
+Flake
+KJS
+KHTML
+KIO
+ThreadWeaver
+Kiosk
+KIPI
+KParts
+Kross
+Phonon
+Solid
+Sonnet
+Soprano
+Strigi
+XMLGUI
+
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+KDElibs (–3)
+DCOP (3)
+KDE Platform 4 (4)
+KDM (–4)
+NEPOMUK (4.13)
+
+
+
+
+
+
+
+
+freedesktop.org
+(shared)
+
+
+
+AppStream
+D-Bus
+GStreamer
+NetworkManager
+Poppler
+Wayland
+X.Org Server
+PulseAudio
+
+
+
+
+
+
+
+
+
+
+
+Packages
+
+
+
+Calligra Suite
+Accessibility
+Bindings
+Education
+Games
+Graphics
+Multimedia
+Network
+SDK
+Utils
+Web Dev
+Extragear
+
+
+
+
+
+
+
+
+Community
+
+
+
+KDE e.V.
+Akademy
+KDE.News
+Konqi
+
+
+
+
+
+
+
+
+People
+
+
+
+Matthias Kalle Dalheimer
+Matthias Ettrich
+Adriaan de Groot
+Frank Karlitschek
+Celeste Lyn Paul
+Nuno Pinheiro
+Cornelius Schumacher
+Aaron Seigo
+David Vignoni
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Project
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=KDE&amp;oldid=691469672"					
+				Categories: 1996 establishments in Germany1996 softwareFree and open-source software organizationsFree software projectsKDEHidden categories: All articles with dead external linksArticles with dead external links from April 2012CS1 Turkish-language sources (tr)Articles containing Japanese-language textAll articles with unsourced statementsArticles with unsourced statements from April 2012Wikipedia articles needing clarification from April 2012All pages needing factual verificationWikipedia articles needing factual verification from April 2012Articles containing potentially dated statements from 2011All articles containing potentially dated statements				
+							
+		
+		
+			

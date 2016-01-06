@@ -1,0 +1,410 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Subroutine
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (February 2013)
+
+
+In computer programming, a subroutine is a sequence of program instructions that perform a specific task, packaged as a unit. This unit can then be used in programs wherever that particular task should be performed. Subprograms may be defined within programs, or separately in libraries that can be used by multiple programs. In different programming languages, a subroutine may be called a procedure, a function, a routine, a method, or a subprogram. The generic term callable unit is sometimes used.[1]
+As the name subprogram suggests, a subroutine behaves in much the same way as a computer program that is used as one step in a larger program or another subprogram. A subroutine is often coded so that it can be started (called) several times and from several places during one execution of the program, including from other subroutines, and then branch back (return) to the next instruction after the call once the subroutine's task is done. Maurice Wilkes, David Wheeler, and Stanley Gill are credited with the invention of this concept, which they termed a closed subroutine,[2][3] contrasted with an open subroutine or macro.[4]
+Subroutines are a powerful programming tool,[5] and the syntax of many programming languages includes support for writing and using them. Judicious use of subroutines (for example, through the structured programming approach) will often substantially reduce the cost of developing and maintaining a large program, while increasing its quality and reliability.[6] Subroutines, often collected into libraries, are an important mechanism for sharing and trading software. The discipline of object-oriented programming is based on objects and methods (which are subroutines attached to these objects or object classes).
+In the compiling method called threaded code, the executable program is basically a sequence of subroutine calls.
+
+
+
+Contents
+
+
+1 Main concepts
+2 Language support
+3 Advantages
+4 Disadvantages
+5 History
+
+5.1 Language support
+5.2 Subroutine libraries
+5.3 Return by indirect jump
+5.4 Jump to subroutine
+5.5 Call stack
+5.6 Delayed stacking
+
+
+6 C and C++ examples
+7 Visual Basic 6 examples
+8 PL/I example
+9 Local variables, recursion and reentrancy
+10 Overloading
+11 Closures
+12 Conventions
+
+12.1 Return codes
+
+
+13 Optimization of subroutine calls
+
+13.1 Inlining
+
+
+14 See also
+15 References
+
+
+
+Main concepts[edit]
+The content of a subroutine is its body, which is the piece of program code that is executed when the subroutine is called or invoked.
+A subroutine may be written so that it expects to obtain one or more data values from the calling program (its parameters or formal parameters). The calling program provides actual values for these parameters, called arguments. Different programming languages may use different conventions for passing arguments:
+
+
+Convention
+Description
+Common use
+
+
+Call by value
+Argument is evaluated and copy of value is passed to subroutine
+Default in most Algol-like languages after Algol 60, such as Pascal, Delphi, Simula, CPL, PL/M, Modula, Oberon, Ada, and many others. C, C++, Java (References to objects and arrays are also passed by value)
+
+
+Call by reference
+Reference to argument, typically its address is passed
+Selectable in most Algol-like languages after Algol 60, such as Algol 68, Pascal, Delphi, Simula, CPL, PL/M, Modula, Oberon, Ada, and many others. C (structures and arrays), C++, Fortran, PL/I
+
+
+Call by result
+Parameter value is copied back to argument on return from the subroutine
+Ada OUT parameters
+
+
+Call by value-result
+Parameter value is copied back on entry to the subroutine and again on return
+Algol
+
+
+Call by name
+Like a macro – replace the parameters with the unevaluated argument expressions
+Algol, Scala
+
+
+Call by constant value
+Like call by value except that the parameter is treated as a constant
+PL/I NONASSIGNABLE parameters, Ada IN parameters
+
+
+The subroutine may return a computed value to its caller (its return value), or provide various result values or output parameters. Indeed, a common use of subroutines is to implement mathematical functions, in which the purpose of the subroutine is purely to compute one or more results whose values are entirely determined by the parameters passed to the subroutine. (Examples might include computing the logarithm of a number or the determinant of a matrix.)
+A subroutine call may also have side effects such as modifying data structures in a computer memory, reading from or writing to a peripheral device, creating a file, halting the program or the machine, or even delaying the program's execution for a specified time. A subprogram with side effects may return different results each time it is called, even if it is called with the same arguments. An example is a random number function, available in many languages, that returns a different pseudo-random number each time it is called. The widespread use of subroutines with side effects is a characteristic of imperative programming languages.
+A subroutine can be coded so that it may call itself recursively, at one or more places, to perform its task. This method allows direct implementation of functions defined by mathematical induction and recursive divide and conquer algorithms.
+A subroutine whose purpose is to compute one boolean-valued function (that is, to answer a yes/no question) is sometimes called a predicate. In logic programming languages, often[vague] all subroutines are called predicates, since they primarily[vague] determine success or failure.[citation needed] For example, any type of function is a subroutine but not main().
+Language support[edit]
+High-level programming languages usually include specific constructs to:
+
+delimit the part of the program (body) that makes up the subroutine
+assign an identifier (name) to the subroutine
+specify the names and data types of its parameters and return values
+provide a private naming scope for its temporary variables
+identify variables outside the subroutine that are accessible within it
+call the subroutine
+provide values to its parameters
+specify the return values from within its body
+return to the calling program
+dispose of the values returned by a call
+handle any exceptional conditions encountered during the call
+package subroutines into a module, library, object, class, etc.
+
+Some programming languages, such as Pascal, Fortran, Ada and many dialects of BASIC, distinguish between functions or function subprograms, which provide an explicit return value to the calling program, and subroutines or procedures, which do not. In those languages, function calls are normally embedded in expressions (e.g., a sqrt function may be called as y = z + sqrt(x)). Procedure calls either behave syntactically as statements (e.g., a print procedure may be called as if x &gt; 0 then print(x) or are explicitly invoked by a statement such as CALL or GOSUB (e.g. call print(x)). Other languages, such as C and Lisp, do not distinguish between functions and subroutines.
+In strictly functional programming languages such as Haskell, subprograms can have no side effects, which means that various internal states of the program will not change. Functions will always return the same result if repeatedly called with the same arguments. Such languages typically only support functions, since subroutines that do not return a value have no use unless they can cause a side effect.
+In programming languages such as C, C++, and C#, subroutines may also simply be called functions, not to be confused with mathematical functions or functional programming, which are different concepts.
+A language's compiler will usually translate procedure calls and returns into machine instructions according to a well-defined calling convention, so that subroutines can be compiled separately from the programs that call them. The instruction sequences corresponding to call and return statements are called the procedure's prologue and epilogue.
+Advantages[edit]
+The advantages of breaking a program into subroutines include:
+
+Decomposing a complex programming task into simpler steps: this is one of the two main tools of structured programming, along with data structures
+Reducing duplicate code within a program
+Enabling reuse of code across multiple programs
+Dividing a large programming task among various programmers, or various stages of a project
+Hiding implementation details from users of the subroutine
+Improving traceability (i.e. most languages offer ways to obtain the call trace which includes the names of the involved subroutines and perhaps even more information such as file names and line numbers); by not decomposing the code into subroutines, debugging would be impaired severely
+
+Disadvantages[edit]
+Invoking a subroutine (versus using in-line code) imposes some computational overhead in the call mechanism.
+The subroutine typically requires standard housekeeping code – both at entry to, and exit from, the function (function prologue and epilogue – usually saving general purpose registers and return address as a minimum).
+History[edit]
+The idea of a subroutine was worked out after computing machines had already existed for some time. The arithmetic and conditional jump instructions were planned ahead of time and have have changed relatively little; but the special instructions used for procedure calls have changed greatly over the years. The earliest computers and microprocessors, such as the Small-Scale Experimental Machine and the RCA 1802, did not have a single subroutine call instruction. Subroutines could be implemented, but they required programmers to use the call sequence -- a series of instructions -- at each call site. Some very early computers and microprocessors, such as the IBM 1620, the Intel 8008, and the PIC microcontrollers, have a single-instruction subroutine call that uses dedicated hardware stack to store return addresses -- such hardware supports only a few levels of subroutine nesting, but can support recursive subroutines. Machines before the mid 1960s -- such as the UNIVAC I, the PDP-1, and the IBM 1130 -- typically use a calling convention which saved the instruction counter in the first memory location of the called subroutine. This allows arbitrarily deep levels of subroutine nesting, but does not support recursive subroutines. The PDP-11 (1970) is one of the first computers with a stack-pushing subroutine call instruction; this feature supports both arbitrarily deep subroutine nesting and also supports recursive subroutines.[7]
+Language support[edit]
+In the very early assemblers, subroutine support was limited. Subroutines were not explicitly separated from each other or from the main program, and indeed the source code of a subroutine could be interspersed with that of other subprograms. Some assemblers would offer predefined macros to generate the call and return sequences. By the 1960s, assemblers usually had much more sophisticated support for both inline and separately assembled subroutines that could be linked together.
+Subroutine libraries[edit]
+Even with this cumbersome approach, subroutines proved very useful. For one thing they allowed the same code to be used in many different programs. Morever, memory was a very scarce resource on early computers, and subroutines allowed significant savings in program size.
+In many early computers, the program instructions were entered into memory from a punched paper tape. Each subroutine could then be provided by a separate piece of tape, loaded or spliced before or after the main program; and the same subroutine tape could then be used by many different programs. A similar approach was used in computers whose main input was through punched cards. The name subroutine library originally meant a library, in the literal sense, which kept indexed collections of such tapes or card decks for collective use.
+Return by indirect jump[edit]
+To remove the need for self-modifying code, computer designers eventually provided an indirect jump instruction, whose operand, instead of being the return address itself, was the location of a variable or processor register containing the return address.
+On those computers, instead of modifying the subroutine's return jump, the calling program would store the return address in a variable so that when the subroutine completed, it would execute an indirect jump that would direct execution to the location given by the predefined variable.
+Jump to subroutine[edit]
+Another advance was the jump to subroutine instruction, which combined the saving of the return address with the calling jump, thereby minimizing overhead significantly.
+In the IBM System/360, for example, the branch instructions BAL or BALR, designed for procedure calling, would save the return address in a processor register specified in the instruction. To return, the subroutine had only to execute an indirect branch instruction (BR) through that register. If the subroutine needed that register for some other purpose (such as calling another subroutine), it would save the register's contents to a private memory location or a register stack.
+In systems such as the HP 2100, the JSB instruction would perform a similar task, except that the return address was stored in the memory location that was the target of the branch. Execution of the procedure would actually begin at the next memory location. In the HP 2100 assembly language, one would write, for example
+
+       ...
+       JSB MYSUB    (Calls subroutine MYSUB.)
+ BB    ...          (Will return here after MYSUB is done.)
+
+to call a subroutine called MYSUB from the main program. The subroutine would be coded as
+
+ MYSUB NOP          (Storage for MYSUB's return address.)
+ AA    ...          (Start of MYSUB's body.)
+       ...
+       JMP MYSUB,I  (Returns to the calling program.)
+
+The JSB instruction placed the address of the NEXT instruction (namely, BB) into the location specified as its operand (namely, MYSUB), and then branched to the NEXT location after that (namely, AA = MYSUB + 1). The subroutine could then return to the main program by executing the indirect jump JMP MYSUB,I which branched to the location stored at location MYSUB.
+Compilers for Fortran and other languages could easily make use of these instructions when available. This approach supported multiple levels of calls; however, since the return address, parameters, and return values of a subroutine were assigned fixed memory locations, it did not allow for recursive calls.
+Incidentally, a similar method was used by Lotus 1-2-3, in the early 1980s, to discover the recalculation dependencies in a spreadsheet. Namely, a location was reserved in each cell to store the return address. Since circular references are not allowed for natural recalculation order, this allows a tree walk without reserving space for a stack in memory, which was very limited on small computers such as the IBM PC.
+Call stack[edit]
+Most modern implementations use a call stack, a special case of the stack data structure, to implement subroutine calls and returns. Each procedure call creates a new entry, called a stack frame, at the top of the stack; when the procedure returns, its stack frame is deleted from the stack, and its space may be used for other procedure calls. Each stack frame contains the private data of the corresponding call, which typically includes the procedure's parameters and internal variables, and the return address.
+The call sequence can be implemented by a sequence of ordinary instructions (an approach still used in reduced instruction set computing (RISC) and very long instruction word (VLIW) architectures), but many traditional machines designed since the late 1960s have included special instructions for that purpose.
+The call stack is usually implemented as a contiguous area of memory. It is an arbitrary design choice whether the bottom of the stack is the lowest or highest address within this area, so that the stack may grow forwards or backwards in memory; however, many architectures chose the latter.[citation needed]
+Some designs, notably some Forth implementations, used two separate stacks, one mainly for control information (like return addresses and loop counters) and the other for data. The former was, or worked like, a call stack and was only indirectly accessible to the programmer through other language constructs while the latter was more directly accessible.
+When stack-based procedure calls were first introduced, an important motivation was to save precious memory.[citation needed] With this scheme, the compiler does not have to reserve separate space in memory for the private data (parameters, return address, and local variables) of each procedure. At any moment, the stack contains only the private data of the calls that are currently active (namely, which have been called but haven't returned yet). Because of the ways in which programs were usually assembled from libraries, it was (and still is) not uncommon to find programs that include thousands of subroutines, of which only a handful are active at any given moment.[citation needed] For such programs, the call stack mechanism could save significant amounts of memory. Indeed, the call stack mechanism can be viewed as the earliest and simplest method for automatic memory management.
+However, another advantage of the call stack method is that it allows recursive subroutine calls, since each nested call to the same procedure gets a separate instance of its private data.
+Delayed stacking [edit]
+One disadvantage of the call stack mechanism is the increased cost of a procedure call and its matching return.[clarification needed] The extra cost includes incrementing and decrementing the stack pointer (and, in some architectures, checking for stack overflow), and accessing the local variables and parameters by frame-relative addresses, instead of absolute addresses. The cost may be realized in increased execution time, or increased processor complexity, or both.
+This overhead is most obvious and objectionable in leaf procedures or leaf functions, which return without making any procedure calls themselves.[8][9][10] To reduce that overhead, many modern compilers try to delay the use of a call stack until it is really needed.[citation needed] For example, the call of a procedure P may store the return address and parameters of the called procedure in certain processor registers, and transfer control to the procedure's body by a simple jump. If procedure P returns without making any other call, the call stack is not used at all. If P needs to call another procedure Q, it will then use the call stack to save the contents of any registers (such as the return address) that will be needed after Q returns.
+C and C++ examples[edit]
+In the C and C++ programming languages, subprograms are termed functions (or member functions when associated with a class). These languages use the special keyword void to indicate that a function takes no parameters (especially in C) or does not return any value. Note that C/C++ functions can have side-effects, including modifying any variables whose addresses are passed as parameters (i.e., passed by reference). Examples:
+
+
+ void function1(void) { /* some code */ }
+
+The function does not return a value and has to be called as a stand-alone function, e.g., function1();
+
+
+ int function2(void)
+ {
+     return 5;
+ }
+
+This function returns a result (the number 5), and the call can be part of an expression, e.g., x + function2()
+
+
+ char function3(int number)
+ {
+     char selection[] = {'S','M','T','W','T','F','S'};
+     return selection[number];
+ }
+
+This function converts a number between 0 to 6 into the initial letter of the corresponding day of the week, namely 0 to 'S', 1 to 'M', ..., 6 to 'S'. The result of calling it might be assigned to a variable, e.g., num_day = function3(number);.
+
+
+ void function4(int *pointer_to_var)
+ {
+     (*pointer_to_var)++;
+ }
+
+This function does not return a value but modifies the variable whose address is passed as the parameter; it would be called with "function4(&amp;variable_to_increment);".
+Visual Basic 6 examples[edit]
+In the Visual Basic 6 language, subprograms are termed functions or subs (or methods when associated with a class). Visual Basic 6 uses various terms called types to define what is being passed as a parameter. By default, an unspecified variable is registered as a variant type and can be passed as ByRef (default) or ByVal. Also, when a function or sub is declared, it is given a public, private, or friend designation, which determines whether it can be accessed outside the module or project that it was declared in.
+
+By value [ByVal] – a way of passing the value of an argument to a procedure instead of passing the address. This allows the procedure to access a copy of the variable. As a result, the variable's actual value can't be changed by the procedure to which it is passed.
+By reference [ByRef] – a way of passing the address of an argument to a procedure instead of passing the value. This allows the procedure to access the actual variable. As a result, the variable's actual value can be changed by the procedure to which it is passed. Unless otherwise specified, arguments are passed by reference.
+Public (optional) – indicates that the function procedure is accessible to all other procedures in all modules. If used in a module that contains an Option Private, the procedure is not available outside the project.
+Private (optional) – indicates that the function procedure is accessible only to other procedures in the module where it is declared.
+Friend (optional) – used only in a class module. Indicates that the Function procedure is visible throughout the project, but not visible to a controller of an instance of an object.
+
+
+
+Private Function Function1()
+    ' Some Code Here
+End Function
+
+The function does not return a value and has to be called as a stand-alone function, e.g., Function1
+
+
+Private Function Function2() as Integer
+    Function2 = 5
+End Function
+
+This function returns a result (the number 5), and the call can be part of an expression, e.g., x + Function2()
+
+
+Private Function Function3(ByVal intValue as Integer) as String
+    Dim strArray(6) as String
+    strArray = Array("M", "T", "W", "T", "F", "S", "S")
+    Function3 = strArray(intValue)
+End Function
+
+This function converts a number between 0 and 6 into the initial letter of the corresponding day of the week, namely 0 to 'M', 1 to 'T', ..., 6 to 'S'. The result of calling it might be assigned to a variable, e.g., num_day = Function3(number).
+
+
+Private Function Function4(ByRef intValue as Integer)
+    intValue = intValue + 1
+End Function
+
+This function does not return a value but modifies the variable whose address is passed as the parameter; it would be called with "Function4(variable_to_increment)".
+PL/I example[edit]
+In PL/I a called procedure may be passed a descriptor providing information about the argument, such as string lengths and array bounds. This allows the procedure to be more general and eliminates the need for the programmer to pass such information. By default PL/I passes arguments by reference. A (trivial) subroutine to change the sign of each element of a two-dimensional array might look like:
+
+
+  change_sign: procedure(array);
+    declare array(*,*) float;
+    array = -array;
+    end change_sign;
+
+This could be called with various arrays as follows:
+
+
+  /* first array bounds from -5 to +10 and 3 to 9 */
+  declare array1 (-5:10, 3:9)float;
+  /* second array bounds from 1 to 16 and 1 to 16 */
+  declare array2 (16,16) float;
+  call change_sign(array1);
+  call change_sign(array2);
+
+Local variables, recursion and reentrancy[edit]
+A subprogram may find it useful to make use of a certain amount of scratch space; that is, memory used during the execution of that subprogram to hold intermediate results. Variables stored in this scratch space are termed local variables, and the scratch space is termed an activation record. An activation record typically has a return address that tells it where to pass control back to when the subprogram finishes.
+A subprogram may have any number and nature of call sites. If recursion is supported, a subprogram may even call itself, causing its execution to suspend while another nested execution of the same subprogram occurs. Recursion is a useful means to simplify some complex algorithms, and breaking down complex problems. Recursive languages generally provide a new copy of local variables on each call. If the programmer desires the value of local variables to stay the same between calls, they can be declared static in some languages, or global values or common areas can be used. Here is an example of recursive subroutine in C/C++ to find Fibonacci numbers:
+
+
+int fib(int n)
+{
+	if(n&lt;=1) return n;
+	return fib(n-1)+fib(n-2);
+}
+
+Early languages like Fortran did not initially support recursion because variables were statically allocated, as well as the location for the return address. Most computers before the late 1960s such as the PDP-8 did not have support for hardware stack registers.[citation needed]
+Modern languages after ALGOL such as PL/1 and C almost invariably use a stack, usually supported by most modern computer instruction sets to provide a fresh activation record for every execution of a subprogram. That way, the nested execution is free to modify its local variables without concern for the effect on other suspended executions in progress. As nested calls accumulate, a call stack structure is formed, consisting of one activation record for each suspended subprogram. In fact, this stack structure is virtually ubiquitous, and so activation records are commonly termed stack frames.
+Some languages such as Pascal and Ada also support nested subroutines, which are subroutines callable only within the scope of an outer (parent) subroutine. Inner subroutines have access to the local variables of the outer subroutine that called them. This is accomplished by storing extra context information within the activation record, also termed a display.
+If a subprogram can function properly even when called while another execution is already in progress, that subprogram is said to be reentrant. A recursive subprogram must be reentrant. Reentrant subprograms are also useful in multi-threaded situations, since multiple threads can call the same subprogram without fear of interfering with each other. In the IBM CICS transaction processing system, quasi-reentrant was a slightly less restrictive, but similar, requirement for application programs that were shared by many threads.
+In a multi-threaded environment, there is generally more than one stack. An environment that fully supports coroutines or lazy evaluation may use data structures other than stacks to store their activation records.
+Overloading[edit]
+In strongly typed languages, it is sometimes desirable to have a number of functions with the same name, but operating on different types of data, or with different parameter profiles. For example, a square root function might be defined to operate on reals, complex values or matrices. The algorithm to be used in each case is different, and the return result may be different. By writing three separate functions with the same name, the programmer has the convenience of not having to remember different names for each type of data. Further if a subtype can be defined for the reals, to separate positive and negative reals, two functions can be written for the reals, one to return a real when the parameter is positive, and another to return a complex value when the parameter is negative.
+In object-oriented programming, when a series of functions with the same name can accept different parameter profiles or parameters of different types, each of the functions is said to be overloaded.
+Here is an example of subroutine overloading in C++:
+
+
+#include &lt;iostream&gt;
+
+double area(double h, double w) {
+   return h * w;
+}
+
+double area(double r) {
+   return r * r * 3.14;
+}
+
+int main() {
+   double rectangle_area = area(3, 4);
+   double circle_area = area(5);
+
+   std::cout &lt;&lt; "Area of a rectangle is " &lt;&lt; rectangle_area &lt;&lt; std::endl;
+   std::cout &lt;&lt; "Area of a circle is " &lt;&lt; circle_area &lt;&lt; std::endl;
+
+   return 0;
+}
+
+In this code there are two functions of same name but they have different parameters.
+As another example, a subroutine might construct an object that will accept directions, and trace its path to these points on screen. There are a plethora of parameters that could be passed in to the constructor (colour of the trace, starting x and y co-ordinates, trace speed). If the programmer wanted the constructor to be able to accept only the color parameter, then he could call another constructor that accepts only color, which in turn calls the constructor with all the parameters passing in a set of default values for all the other parameters (X and Y would generally be centered on screen or placed at the origin, and the speed would be set to another value of the coder's choosing).
+Closures[edit]
+Main article: Closure (computer science)
+A closure is a subprogram together with the values of some of its variables captured from the environment in which it was created. Closures were a notable feature of the Lisp programming language, introduced by John McCarthy. Depending on the implementation, closures can serve as a mechanism for side-effects.
+Conventions[edit]
+A wide number of conventions for the coding of subroutines have been developed. Pertaining to their naming, many developers have adopted the approach that the name of a subroutine should be a verb when it does a certain task, an adjective when it makes some inquiry, and a noun when it is used to substitute variables.
+Some programmers suggest that a subroutine should perform only one task, and if a subroutine does perform more than one task, it should be split up into more subroutines. They argue that subroutines are key components in code maintenance, and their roles in the program must remain distinct.
+Proponents of modular programming (modularizing code) advocate that each subroutine should have minimal dependency on other pieces of code. For example, the use of global variables is generally deemed unwise by advocates for this perspective, because it adds tight coupling between the subroutine and these global variables. If such coupling is not necessary, their advice is to refactor subroutines to accept passed parameters instead. However, increasing the number of parameters passed to subroutines can affect code readability.
+Return codes[edit]
+Besides its main or normal effect, a subroutine may need to inform the calling program about exceptional conditions that may have occurred during its execution. In some languages and programming standards, this is often done through a return code, an integer value placed by the subroutine in some standard location, which encodes the normal and exceptional conditions.
+In the IBM System/360, where a return code was expected from the subroutine, the return value was often designed to be a multiple of 4—so that it could be used as a direct branch table index into a branch table often located immediately after the call instruction to avoid extra conditional tests, further improving efficiency. In the System/360 assembly language, one would write, for example:
+
+           BAL  14,SUBRTN01    go to subroutine, storing return address in R14
+           B    TABLE(15)      use returned value in reg 15 to index the branch table, 
+*                              branching to the appropriate branch instr.
+TABLE      B    OK             return code =00   GOOD                  }
+           B    BAD            return code =04   Invalid input         } Branch table
+           B    ERROR          return code =08   Unexpected condition  }
+
+Optimization of subroutine calls[edit]
+There is a significant runtime overhead in a calling a subroutine, including passing the arguments, branching to the subprogram, and branching back to the caller. The overhead often includes saving and restoring certain processor registers, allocating and reclaiming call frame storage, etc.. In some languages, each subroutine call also implies automatic testing of the subroutine's return code, or the handling of exceptions that it may raise. In object-oriented languages, a significant source of overhead is the intensively used dynamic dispatch for method calls.
+There are some seemingly obvious optimizations of procedure calls that cannot be applied if the procedures may have side effects. For example, in the expression (f(x)-1)/(f(x)+1), the function f must be called twice, because the two calls may return different results. Moreover, the value of x must be fetched again before the second call, since the first call may have changed it. Determining whether a subprogram may have a side effect is very difficult (indeed, undecidable).[citation needed] So, while those optimizations are safe in purely functional programming languages, compilers of typical imperative programming usually have to assume the worst.
+Inlining[edit]
+A method used to eliminate this overhead is inline expansion or inlining of the subprogram's body at each call site (versus branching to the subroutine and back). Not only does this avoid the call overhead, but it also allows the compiler to optimize the procedure's body more effectively by taking into account the context and arguments at that call. The inserted body can be optimized by the compiler. Inlining however, will usually increase the code size, unless the program contains only one call to the subroutine, or the subroutine body is less code than the call overhead.
+See also[edit]
+
+
+
+Look up subroutine in Wiktionary, the free dictionary.
+
+
+
+Function (mathematics)
+Method (computer programming)
+Evaluation strategy
+Modular programming
+Transclusion
+Operator overloading
+Functional programming
+Command-query separation
+Coroutines, subprograms that call each other as if both were the main programs
+Event handler, a subprogram that is called in response to an input event or interrupt
+
+References[edit]
+
+
+^ U.S. Election Assistance Commission (2007). "Definitions of Words with Special Meanings". Voluntary Voting System Guidelines. Retrieved 2013-01-14.&#160;
+^ Wheeler, D. J. (1952). "The use of sub-routines in programmes". Proceedings of the 1952 ACM national meeting (Pittsburgh) on - ACM '52. p.&#160;235. doi:10.1145/609784.609816.&#160;
+^ Wilkes, M. V.; Wheeler, D. J.; Gill, S. (1951). Preparation of Programs for an Electronic Digital Computer. Addison-Wesley.&#160;
+^ Dainith, John. ""open subroutine." A Dictionary of Computing. 2004..". Encyclopedia.com. Retrieved January 14, 2013.&#160;
+^ Donald E. Knuth. The Art of Computer Programming, Volume I: Fundamental Algorithms. Addison-Wesley. ISBN&#160;0-201-89683-4.&#160;
+^ O.-J. Dahl; E. W. Dijkstra; C. A. R. Hoare (1972). Structured Programming. Academic Press. ISBN&#160;0-12-200550-3.&#160;
+^ Guy Lewis Steele Jr. AI Memo 443. 'Debunking the "Expensive Procedure Call" Myth; or, Procedure call implementations considered harmful". Section "C. Why Procedure Calls Have a Bad Reputation".
+^ "ARM Information Center". Infocenter.arm.com. Retrieved 2013-09-29.&#160;
+^ "Overview of x64 Calling Conventions". Msdn.microsoft.com. Retrieved 2013-09-29.&#160;
+^ "Function Types". Msdn.microsoft.com. Retrieved 2013-09-29.&#160;
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4253859-2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Subroutine&amp;oldid=690064476"					
+				Categories: Source codeUniversity of Cambridge Computer LaboratoryHolismProgramming constructsSubroutinesHidden categories: Pages with syntax highlighting errorsArticles needing additional references from February 2013All articles needing additional referencesAll Wikipedia articles needing clarificationWikipedia articles needing clarification from November 2009All articles with unsourced statementsArticles with unsourced statements from November 2009Articles with unsourced statements from November 2008Wikipedia articles needing clarification from November 2015Articles with unsourced statements from June 2011Articles with unsourced statements from May 2010Wikipedia articles with GND identifiersArticles with example C code				
+							
+		
+		
+			

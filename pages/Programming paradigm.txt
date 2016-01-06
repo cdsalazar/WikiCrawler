@@ -1,0 +1,1232 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Programming paradigm
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Multi-paradigm programming language)
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (February 2011)
+
+
+
+
+Programming paradigms
+
+
+
+
+Action
+Agent-oriented
+Array-oriented
+Automata-based
+Concurrent computing
+
+Relativistic programming
+
+
+Data-driven
+Declarative (contrast: Imperative)
+
+Constraint
+
+Constraint logic
+
+Concurrent constraint logic
+
+
+
+
+Dataflow
+
+Flow-based
+Cell-oriented (spreadsheets)
+Reactive
+
+
+Functional
+
+Functional logic
+Purely functional
+
+
+Logic
+
+Abductive logic
+Answer set
+Concurrent logic
+Functional logic
+Inductive logic
+
+
+
+
+End-user programming
+Event-driven
+
+Service-oriented
+Time-driven
+
+
+Expression-oriented
+Feature-oriented
+Function-level (contrast: Value-level)
+Generic
+Imperative (contrast: Declarative)
+
+Literate
+Procedural
+
+
+Inductive programming
+Language-oriented
+
+Natural language programming
+Discipline-specific
+Domain-specific
+Grammar-oriented
+
+Dialecting
+
+
+Intentional
+
+
+Metaprogramming
+
+Automatic
+Reflective
+
+Attribute-oriented
+
+
+Homoiconic
+Template
+
+Policy-based
+
+
+
+
+Non-structured (contrast: Structured)
+
+Array
+
+
+Nondeterministic
+Parallel computing
+
+Process-oriented
+
+
+Point-free style
+
+Concatenative
+
+
+Semantic
+Structured (contrast: Non-structured)
+
+Block-structured
+Modular (contrast: Monolithic)
+Object-oriented (OOP)
+
+Class-based
+Concurrent
+Prototype-based
+By separation of concerns:
+
+Aspect-oriented
+Role-oriented
+Subject-oriented
+
+
+
+
+Recursive
+
+
+Value-level (contrast: Function-level)
+Probabilistic
+Concept
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+A programming paradigm is a fundamental style of computer programming, serving as a way of building the structure and elements of computer programs. Capabilities and styles of various programming languages are defined by their supported programming paradigms; some programming languages are designed to follow only one paradigm, while others support multiple paradigms.
+Programming paradigms that are often distinguished include imperative, declarative, functional, object-oriented, procedural, logic and symbolic programming.[1][2][3] With different paradigms, programs can be seen and built in different ways; for example, in object-oriented programming, a program is a collection of objects interacting in explicitly defined ways, while in declarative programming the computer is told only what the problem is, not how to actually solve it.
+
+
+
+Contents
+
+
+1 Overview
+2 History
+
+2.1 Machine code
+2.2 Procedural languages
+2.3 Object-oriented programming
+2.4 Further paradigms
+
+
+3 Multi-paradigm
+4 See also
+5 References
+6 External links
+
+
+
+Overview[edit]
+
+
+
+
+Overview of the various programming paradigms according to Peter Van Roy[4]:5
+
+
+Just as software engineering (as a process) is defined by differing methodologies, so the programming languages (as models of computation) are defined by differing paradigms. Some languages are designed to support one particular paradigm (Smalltalk supports object-oriented programming, Haskell supports functional programming), while other programming languages support multiple paradigms (such as Object Pascal, C++, Java, C#, Scala, Visual Basic, Common Lisp, Scheme, Perl, Python, Ruby, Oz and F#). For example, programs written in C++ or Object Pascal can be purely procedural, purely object-oriented, or they can contain elements of both or other paradigms. Software designers and programmers decide how to use those paradigm elements.
+In object-oriented programming, programmers can think of a program as a collection of interacting objects, while in functional programming a program can be thought of as a sequence of stateless function evaluations. When programming computers or systems with many processors, process-oriented programming allows programmers to think about applications as sets of concurrent processes acting upon logically shared data structures.
+Many programming paradigms are as well known for what techniques they forbid as for what they enable. For instance, pure functional programming disallows the use of side-effects, while structured programming disallows the use of the goto statement. Partly for this reason, new paradigms are often regarded as doctrinaire or overly rigid by those accustomed to earlier styles.[5] Avoiding certain techniques can, though, make it easier to prove theorems about the correctness of a program, or simply to understand its behavior.
+Programming paradigms can also be compared with programming models that are abstractions of computer systems. For example, the "von Neumann model" is a programming model used in traditional sequential computers. For parallel computing, there are many possible models typically reflecting different ways processors can be interconnected. The most common are based on shared memory, distributed memory with message passing, or a hybrid of the two.
+Some programming language researchers criticise the notion of paradigms as a classification of programming languages, e.g. Krishnamurthi.[6] They argue that many programming languages cannot be strictly classified into one paradigm, but rather include features from several paradigms.
+History[edit]
+Different approaches to programming have developed over time, being identified as such either at the time or retrospectively. An early approach consciously identified as such is structured programming, advocated since the mid 1960s. The concept of a "programming paradigm" as such dates at least to 1978, in the Turing Award lecture of Robert W. Floyd, entitled The Paradigms of Programming, which cites the notion of paradigm as used by Thomas Kuhn in his The Structure of Scientific Revolutions (1962).[7]
+Machine code[edit]
+The lowest level programming paradigms are machine code, which directly represents the instructions (the contents of program memory) as a sequence of numbers, and assembly language where the machine instructions are represented by mnemonics and memory addresses can be given symbolic labels. These are sometimes called first- and second-generation languages.
+In the 1960s, assembly languages were developed to support library COPY and quite sophisticated conditional macro generation and pre-processing capabilities, CALL to (subroutines), external variables and common sections (globals), enabling significant code re-use and isolation from hardware specifics via use of logical operators such as READ/WRITE/GET/PUT. Assembly was, and still is, used for time critical systems and frequently in embedded systems as it gives the most direct control of what the machine actually does.
+Procedural languages[edit]
+The next advance was the development of procedural languages. These third-generation languages (the first described as high-level languages) use vocabulary related to the problem being solved. For example,
+
+COBOL (COmmon Business Oriented Language)&#160;–  uses terms like file, move and copy.
+FORTRAN (FORmula TRANslation)&#160;–  using mathematical language terminology, it was developed mainly for scientific and engineering problems.
+ALGOL (ALGOrithmic Language)&#160;–  focused on being an appropriate language to define algorithms, while using mathematical language terminology and targeting scientific and engineering problems just like FORTRAN.
+PL/I (Programming Language One)&#160;–  a hybrid commercial/scientific general purpose language supporting pointers.
+BASIC (Beginners All purpose Symbolic Instruction Code)&#160;–  it was developed to enable more people to write programs.
+C&#160;–  a general-purpose programming language, initially developed by Dennis Ritchie between 1969 and 1973 at AT&amp;T Bell Labs.
+
+All these languages follow the procedural paradigm. That is, they describe, step by step, exactly the procedure that should, according to the particular programmer at least, be followed to solve a specific problem. The efficacy and efficiency of any such solution are both therefore entirely subjective and highly dependent on that programmer's experience, inventiveness and ability.
+Object-oriented programming[edit]
+Following the widespread use of procedural languages, object-oriented languages like Simula, Smalltalk, C++, C#, Eiffel and Java were created. In these languages, data and methods of manipulating the data are kept as a single unit called an object. The only way that a user can access the data is via the object's "methods"; as a result, the inner workings of an object may be changed without affecting any code that uses the object. There is still some controversy raised by Alexander Stepanov, Richard Stallman[8] and other programmers, concerning the efficacy of the OOP paradigm versus the procedural paradigm. The necessity of every object to have associative methods leads some skeptics to associate OOP with software bloat. Polymorphism was developed as one attempt to resolve this dilemma.
+Because object-oriented programming is considered a paradigm, not a language, it is possible to create even an object-oriented assembler language. High Level Assembly (HLA) is an example of this that fully supports advanced data types and object-oriented assembly language programming&#160;–  despite its early origins. Thus, differing programming paradigms can be thought of as more like "motivational memes" of their advocates&#160;–  rather than necessarily representing progress from one level to the next. Precise comparisons of the efficacy of competing paradigms are frequently made more difficult because of new and differing terminology applied to similar entities and processes together with numerous implementation distinctions across languages.
+Further paradigms[edit]
+Literate programming, as a form of imperative programming, structures programs as a human-centered web, as in a hypertext essay: documentation is integral to the program, and the program is structured following the logic of prose exposition, rather than compiler convenience.
+Independent of the imperative branch, declarative programming paradigms were developed. In these languages the computer is told what the problem is, not how to solve the problem&#160;–  the program is structured as a collection of properties to find in the expected result, not as a procedure to follow. Given a database or a set of rules, the computer tries to find a solution matching all the desired properties. The archetypical example of a declarative language is the fourth generation language SQL, as well as the family of functional languages and logic programming.
+Functional programming is a subset of declarative programming. Programs written using this paradigm use functions, blocks of code intended to behave like mathematical functions. Functional languages discourage changes in the value of variables through assignment, making a great deal of use of recursion instead.
+The logic programming paradigm views computation as automated reasoning over a corpus of knowledge. Facts about the problem domain are expressed as logic formulae, and programs are executed by applying inference rules over them until an answer to the problem is found, or the collection of formulae is proved inconsistent.
+Symbolic programming is a paradigm that describes programs able to manipulate formulas and program components as data.[3] Programs can thus effectively modify themselves, and appear to "learn", making them suited for applications such as artificial intelligence, expert systems, natural language processing and computer games. Languages that support this paradigm include LISP and Prolog.[9]
+Multi-paradigm[edit]
+See also: Comparison of multi-paradigm programming languages
+A multi-paradigm programming language is a programming language that supports more than one programming paradigm.[10] The design goal of such languages is to allow programmers to use the most suitable programming style and associated language constructs for a particular job, considering that no single paradigm solves all problems in the easiest or most efficient way.
+One example is C#, which includes imperative and object-oriented paradigms as well as some support for functional programming with features like delegates (allowing functions to be treated as first-order objects), type inference, anonymous functions and Language Integrated Query. Other examples are F# and Scala, which provides similar functionality to C# but also includes full support for functional programming (including currying, pattern matching, algebraic data types, lazy evaluation, tail recursion, immutability, etc.). Perhaps the most extreme example is Oz, which has subsets that adhere to logic (Oz descends from logic programming), functional, object-oriented, dataflow concurrent, and other paradigms. Oz was designed over a ten-year period to combine in a harmonious way concepts that are traditionally associated with different programming paradigms. Lisp, while often taught as a functional language, is known for its malleability and thus its ability to engulf many paradigms.
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+
+
+Architecture description language
+Comparison of programming paradigms
+Domain-specific language
+Mindset
+Modeling language
+Programming domain
+Type system
+Turing completeness
+Von Neumann programming languages
+
+
+References[edit]
+
+
+^ Nørmark, Kurt. Overview of the four main programming paradigms. Aalborg University, 9 May 2011. Retrieved 22 September 2012.
+^ Frans Coenen (1999-10-11). "Characteristics of declarative programming languages". cgi.csc.liv.ac.uk. Retrieved 2014-02-20.&#160;
+^ a b Michael A. Covington (2010-08-23). "CSCI/ARTI 4540/6540: First Lecture on Symbolic Programming and LISP" (PDF). University of Georgia. Retrieved 2013-11-20.&#160;
+^ Peter Van Roy (2009-05-12). "Programming Paradigms for Dummies: What Every Programmer Should Know" (PDF). info.ucl.ac.be. Retrieved 2014-01-27.&#160;
+^ Frank Rubin (March 1987). "'GOTO Considered Harmful' Considered Harmful" (PDF). Communications of the ACM 30 (3): 195–196. doi:10.1145/214748.315722. Archived from the original (PDF) on March 20, 2009.&#160;
+^ Krishnamurthi, Shriram (November 2008). "Teaching programming languages in a post-linnaean age". SIGPLAN. ACM. pp.&#160;81–83. Not. 43, 11.&#160;.
+^ Floyd, R. W. (1979). "The paradigms of programming". Communications of the ACM 22 (8): 455. doi:10.1145/359138.359140.&#160;
+^ "Mode inheritance, cloning, hooks &amp; OOP (Google Groups Discussion)".&#160;[dead link]
+^ "Business glossary: Symbolic programming definition". allbusiness.com. Retrieved 2014-07-30.&#160;
+^ "Multi-Paradigm Programming Language". developer.mozilla.org. Retrieved 21 October 2013.&#160;
+
+
+External links[edit]
+
+Classification of the principal programming paradigms
+How programming paradigms evolve and get adopted?
+
+
+
+
+
+
+&#160;
+Software engineering
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of computer languages
+
+
+
+
+
+
+
+
+
+Architecture description
+Hardware description
+Markup
+Modeling
+Programming language
+Query
+Specification
+Stylesheet
+Template processing
+Transformation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software engineering
+
+
+
+
+
+
+Fields
+
+
+
+Computer programming
+Requirements engineering
+Software deployment
+Software design
+Software maintenance
+Software testing
+Systems analysis
+Formal methods
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Data modeling
+Enterprise architecture
+Functional specification
+Modeling language
+Orthogonality
+Programming paradigm
+Software
+Software archaeology
+Software architecture
+Software configuration management
+Software development methodology
+Software development process
+Software quality
+Software quality assurance
+Software verification and validation
+Structured analysis
+
+
+
+
+
+
+
+
+Orientations
+
+
+
+Agile
+Aspect-oriented
+Object orientation
+Ontology
+Service orientation
+SDLC
+
+
+
+
+
+
+
+
+Models
+
+
+
+
+
+Developmental
+
+
+
+
+Agile
+EUP
+Executable UML
+Incremental model
+Iterative model
+Prototype model
+RAD
+UP
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+SPICE
+CMMI
+Data model
+ER model
+Function model
+Information model
+Metamodeling
+Object model
+Systems model
+View model
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+IDEF
+UML
+SysML
+
+
+
+
+
+
+
+
+
+
+
+
+Software
+engineers
+
+
+
+
+Kent Beck
+Grady Booch
+Fred Brooks
+Barry Boehm
+Ward Cunningham
+Tom DeMarco
+Edsger W. Dijkstra
+Martin Fowler
+C. A. R. Hoare
+Watts Humphrey
+Michael A. Jackson
+Ivar Jacobson
+Stephen J. Mellor
+Bertrand Meyer
+David Parnas
+Winston W. Royce
+James Rumbaugh
+Niklaus Wirth
+Edward Yourdon
+Victor Basili
+
+
+
+
+
+
+
+
+Related fields
+
+
+
+Computer science
+Computer engineering
+Project management
+Risk management
+Systems engineering
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Major fields of computer science
+
+
+
+
+
+
+
+Note: Computer science can also be divided into different topics or fields according to the ACM Computing Classification System.
+
+
+
+
+
+
+Hardware
+
+
+
+Printed circuit board
+Peripheral
+Integrated circuit
+Very-large-scale integration
+Energy consumption
+Electronic design automation
+
+
+
+
+
+
+
+
+Computer systems
+organization
+
+
+
+Computer architecture
+Embedded system
+Real-time computing
+Dependability
+
+
+
+
+
+
+
+
+Networks
+
+
+
+Network architecture
+Network protocol
+Network components
+Network scheduler
+Network performance evaluation
+Network service
+
+
+
+
+
+
+
+
+Software organization
+
+
+
+Interpreter
+Middleware
+Virtual machine
+Operating system
+Software quality
+
+
+
+
+
+
+
+
+Software notations
+and tools
+
+
+
+Programming paradigm
+Programming language
+Compiler
+Domain-specific language
+Modeling language
+Software framework
+Integrated development environment
+Software configuration management
+Software library
+Software repository
+
+
+
+
+
+
+
+
+Software development
+
+
+
+Software development process
+Requirements analysis
+Software design
+Software implementation
+Software verification and validation
+Software maintenance
+Programming team
+Open-source model
+
+
+
+
+
+
+
+
+Theory of computation
+
+
+
+Model of computation
+Formal language
+Automata theory
+Computational complexity theory
+Logic
+Semantics
+
+
+
+
+
+
+
+
+Algorithms
+
+
+
+Algorithm design
+Analysis of algorithms
+Randomized algorithm
+Computational geometry
+
+
+
+
+
+
+
+
+Mathematics
+of computing
+
+
+
+Discrete mathematics
+Probability
+Statistics
+Mathematical software
+Information theory
+Mathematical analysis
+Numerical analysis
+
+
+
+
+
+
+
+
+Information
+systems
+
+
+
+Database management system
+Information storage systems
+Enterprise information system
+Social information systems
+Geographic information system
+Decision support system
+Process control system
+Multimedia information system
+Data mining
+Digital library
+Computing platform
+Digital marketing
+World Wide Web
+Information retrieval
+
+
+
+
+
+
+
+
+Security
+
+
+
+Cryptography
+Formal methods
+Security services
+Intrusion detection system
+Hardware security
+Network security
+Information security
+Application security
+
+
+
+
+
+
+
+
+Human–computer
+interaction
+
+
+
+Interaction design
+Social computing
+Ubiquitous computing
+Visualization
+Accessibility
+
+
+
+
+
+
+
+
+Concurrency
+
+
+
+Concurrent computing
+Parallel computing
+Distributed computing
+Multithreading
+Multiprocessing
+
+
+
+
+
+
+
+
+Artificial
+intelligence
+
+
+
+Natural language processing
+Knowledge representation and reasoning
+Computer vision
+Automated planning and scheduling
+Search methodology
+Control method
+Philosophy of artificial intelligence
+Distributed artificial intelligence
+
+
+
+
+
+
+
+
+Machine learning
+
+
+
+Supervised learning
+Unsupervised learning
+Reinforcement learning
+Multi-task learning
+Machine learning algorithms
+Cross-validation
+
+
+
+
+
+
+
+
+Graphics
+
+
+
+Animation
+Rendering
+Image manipulation
+Graphics processing unit
+Mixed reality
+Virtual reality
+Image compression
+Solid modeling
+
+
+
+
+
+
+
+
+Applied
+computing
+
+
+
+E-commerce
+Enterprise software
+Computational mathematics
+Computational physics
+Computational chemistry
+Computational biology
+Computational social science
+Computational engineering
+Computational healthcare
+Digital art
+Electronic publishing
+Cyberwarfare
+Electronic voting
+Video game
+Word processing
+Operations research
+Educational technology
+Document management
+
+
+
+
+
+
+
+
+
+
+
+ Computer science portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Programming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Programming language generations
+
+
+
+
+
+
+
+
+
+Generations Overview
+
+1GL
+2GL
+3GL
+4GL
+5GL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Programming languages
+
+
+
+
+
+
+
+
+
+Comparison
+Timeline
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Bash
+BASIC
+C
+C++
+C#
+COBOL
+Fortran
+Java
+JavaScript (JS)
+Lisp
+Pascal
+Perl
+PHP
+Python
+Ruby
+Smalltalk
+Visual Basic .NET (VB.NET)
+more...
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Comparison
+ Lists
+
+Alphabetical
+Categorical
+Generational
+Non-English-based
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Programming_paradigm&amp;oldid=688570464#Multi-paradigm"					
+				Categories: Programming paradigmsProgramming language classificationProgramming language topicsHidden categories: All articles with dead external linksArticles with dead external links from January 2013Articles needing additional references from February 2011All articles needing additional references				
+							
+		
+		
+			

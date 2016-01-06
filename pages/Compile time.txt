@@ -1,0 +1,67 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Compile time
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article does not cite any references (sources). Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2009)
+
+
+In computer science, compile time refers to either the operations performed by a compiler (the "compile-time operations"), programming language requirements that must be met by source code for it to be successfully compiled (the "compile-time requirements"), or properties of the program that can be reasoned about during compilation.
+The operations performed at compile time usually include syntax analysis, various kinds of semantic analysis (e.g., type checks and instantiation of template) and code generation.
+Programming language definitions usually specify compile time requirements that source code must meet to be successfully compiled. For example, languages may stipulate that the amount of storage required by types and variables can be deduced.
+Properties of a program that can be reasoned about at compile time include range-checks (e.g., proving that an array index will not exceed the array bounds), deadlock freedom in concurrent languages, or timings (e.g., proving that a sequence of code takes no more than an allocated amount of time).
+Compile time occurs before link time (when the output of one or more compiled files are joined together) and runtime (when a program is executed). In some programming languages it may be necessary for some compilation and linking to occur at runtime. There is a trade-off between compile-time and link-time in that many compile time operations can be deferred to link-time without incurring extra run-time.
+"Compile time" can also refer to the amount of time required for compilation.
+See also[edit]
+
+Link time
+Run time (program lifecycle phase)
+Compiling
+Just in time compilation
+
+
+
+
+This computer science article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Compile_time&amp;oldid=634013830"					
+				Categories: Compiler constructionComputer science stubsHidden categories: Articles lacking sources from December 2009All articles lacking sourcesAll stub articles				
+							
+		
+		
+			

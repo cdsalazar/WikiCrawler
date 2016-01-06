@@ -1,0 +1,459 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Dataflow programming
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Programming paradigms
+
+
+
+
+Action
+Agent-oriented
+Array-oriented
+Automata-based
+Concurrent computing
+
+Relativistic programming
+
+
+Data-driven
+Declarative (contrast: Imperative)
+
+Constraint
+
+Constraint logic
+
+Concurrent constraint logic
+
+
+
+
+Dataflow
+
+Flow-based
+Cell-oriented (spreadsheets)
+Reactive
+
+
+Functional
+
+Functional logic
+Purely functional
+
+
+Logic
+
+Abductive logic
+Answer set
+Concurrent logic
+Functional logic
+Inductive logic
+
+
+
+
+End-user programming
+Event-driven
+
+Service-oriented
+Time-driven
+
+
+Expression-oriented
+Feature-oriented
+Function-level (contrast: Value-level)
+Generic
+Imperative (contrast: Declarative)
+
+Literate
+Procedural
+
+
+Inductive programming
+Language-oriented
+
+Natural language programming
+Discipline-specific
+Domain-specific
+Grammar-oriented
+
+Dialecting
+
+
+Intentional
+
+
+Metaprogramming
+
+Automatic
+Reflective
+
+Attribute-oriented
+
+
+Homoiconic
+Template
+
+Policy-based
+
+
+
+
+Non-structured (contrast: Structured)
+
+Array
+
+
+Nondeterministic
+Parallel computing
+
+Process-oriented
+
+
+Point-free style
+
+Concatenative
+
+
+Semantic
+Structured (contrast: Non-structured)
+
+Block-structured
+Modular (contrast: Monolithic)
+Object-oriented (OOP)
+
+Class-based
+Concurrent
+Prototype-based
+By separation of concerns:
+
+Aspect-oriented
+Role-oriented
+Subject-oriented
+
+
+
+
+Recursive
+
+
+Value-level (contrast: Function-level)
+Probabilistic
+Concept
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In computer programming, dataflow programming is a programming paradigm that models a program as a directed graph of the data flowing between operations, thus implementing dataflow principles and architecture. Dataflow programming languages share some features of functional languages, and were generally developed in order to bring some functional concepts to a language more suitable for numeric processing. Some authors use the term Datastream instead of Dataflow to avoid confusion with Dataflow Computing or Dataflow architecture, based on an indeterministic machine paradigm. Dataflow programming was pioneered by Jack Dennis and his graduate students at MIT in the 1960's.
+
+
+
+Contents
+
+
+1 Properties of dataflow programming languages
+
+1.1 State
+1.2 Representation
+
+
+2 History
+3 Languages
+4 Application programming interfaces
+5 See also
+6 References
+7 External links
+
+
+
+Properties of dataflow programming languages[edit]
+Traditionally, a program is modeled as a series of operations happening in a specific order; this may be referred to as sequential,[1]:p.3 procedural,[2] Control flow[2] (indicating that the program chooses a specific path), or imperative programming. The program focuses on commands, in line with the von Neumann[1]:p.3 vision of sequential programming, where data is normally "at rest"[2]:p.7
+In contrast, dataflow programming emphasizes the movement of data and models programs as a series of connections. Explicitly defined inputs and outputs connect operations, which function like black boxes.[2]:p.2 An operation runs as soon as all of its inputs become valid.[3] Thus, dataflow languages are inherently parallel and can work well in large, decentralized systems.[1]:p.3[4] [5]
+State[edit]
+One of the key concepts in computer programming is the idea of state, essentially a snapshot of various conditions in the system. Most programming languages require a considerable amount of state information, which is generally hidden from the programmer. Often, the computer itself has no idea which piece of information encodes the enduring state. This is a serious problem, as the state information needs to be shared across multiple processors in parallel processing machines. Most languages force the programmer to add extra code to indicate which data and parts of the code are important to the state. This code tends to be both expensive in terms of performance, as well as difficult to read or debug. Explicit parallelism is one of the main reasons for the poor performance of Enterprise Java Beans when building data-intensive, non-OLTP applications.
+Where a linear program can be imagined as a single worker moving between tasks (operations), a dataflow program is more like a series of workers on an assembly line, each doing a specific task whenever materials are available. Since the operations are only concerned with the availability of data inputs, they have no hidden state to track, and are all "ready" at the same time.
+Representation[edit]
+Dataflow programs are represented in different ways. A traditional program is usually represented as a series of text instructions, which is reasonable for describing a serial system which pipes data between small, single-purpose tools that receive, process, and return. Dataflow programs start with an input, perhaps the command line parameters, and illustrate how that data is used and modified. The flow of data is explicit, often visually illustrated as a line or pipe.
+In terms of encoding, a dataflow program might be implemented as a hash table, with uniquely identified inputs as the keys, used to look up pointers to the instructions. When any operation completes, the program scans down the list of operations until it finds the first operation where all inputs are currently valid, and runs it. When that operation finishes, it will typically output data, thereby making another operation become valid.
+For parallel operation, only the list needs to be shared; it is the state of the entire program. Thus the task of maintaining state is removed from the programmer and given to the language's runtime. On machines with a single processor core where an implementation designed for parallel operation would simply introduce overhead, this overhead can be removed completely by using a different runtime.
+History[edit]
+A pioneer dataflow language was BLODI (BLOck DIagram), developed by John Larry Kelly, Jr., Carol Lochbaum and Victor A. Vyssotsky for specifying sampled data systems.[6] A BLODI specification of functional units (amplifiers, adders, delay lines, etc.) and their interconnections was compiled into a single loop that updated the entire system for one clock tick.
+More conventional dataflow languages were originally developed in order to make parallel programming easier. In Bert Sutherland's 1966 Ph.D. thesis, The On-line Graphical Specification of Computer Procedures,[7] Sutherland created one of the first graphical dataflow programming frameworks. Subsequent dataflow languages were often developed at the large supercomputer labs. One of the most popular was SISAL, developed at Lawrence Livermore National Laboratory. SISAL looks like most statement-driven languages, but variables should be assigned once. This allows the compiler to easily identify the inputs and outputs. A number of offshoots of SISAL have been developed, including SAC, Single Assignment C, which tries to remain as close to the popular C programming language as possible.
+The United States Navy funded development of ACOS and SPGN (signal processing graph notation) starting in early 1980's. This is in use on a number of platforms in the field today.[8]
+A more radical concept is Prograph, in which programs are constructed as graphs onscreen, and variables are replaced entirely with lines linking inputs to outputs. Incidentally, Prograph was originally written on the Macintosh, which remained single-processor until the introduction of the DayStar Genesis MP in 1996.
+There are many hardware architectures oriented toward the efficient implementation of dataflow programming models. MIT's tagged token dataflow architecture was designed by Greg Papadopoulos.
+Data flow has been proposed as an abstraction for specifying the global behavior of distributed system components: in the live distributed objects programming model, distributed data flows are used to store and communicate state, and as such, they play the role analogous to variables, fields, and parameters in Java-like programming languages.
+Languages[edit]
+
+
+
+
+
+It has been suggested that List of dataflow programming languages be merged into this section. (Discuss) Proposed since April 2015.
+
+
+
+Agilent VEE
+Alteryx
+ANI
+DARTS
+ASCET
+AviSynth scripting language, for video processing
+BLODI
+BMDFM Binary Modular Dataflow Machine
+CAL
+[ SPGN - Signal Processing Graph Notation]
+COStream
+Cassandra-vision - A Visual programming language with OpenCV support and C++ extension API
+Сorezoid - cloud OS with visual development environment for business process management within any company
+Curin
+Hartmann pipelines
+Hume
+Joule
+Juttle
+KNIME
+Korduene
+LabVIEW, G[3]
+Linda
+Lucid[2]
+Lustre
+M, used as the backend of Microsoft Excel's ETL plugin Power Query.
+MaxCompiler - Designed by Maxeler Technologies and is compatible with OpenSPL
+Max/MSP
+Microsoft Visual Programming Language - A component of Microsoft Robotics Studio designed for Robotics programming
+Nextflow - A data-driven toolkit for computational pipelines based on the dataflow programming model
+OpenWire - adds visual dataflow programming capabilities to Delphi via VCL or FireMonkey components and a graphical editor (homonymous binary protocol is unrelated)
+OpenWire Studio - A visual development environment which allows the development of software prototypes by non developers.
+Oz now also distributed since 1.4.0
+Pifagor
+Pipeline Pilot
+POGOL
+Prograph
+Pure Data
+Pythonect
+Quartz Composer - Designed by Apple; used for graphic animations and effects
+SAC Single Assignment C
+Scala (with a library SynapseGrid)
+SIGNAL (a dataflow-oriented synchronous language enabling multi-clock specifications)
+Simulink
+SIMPL
+SISAL
+stromx - A visual programming environment focused on industrial vision (open source)
+SWARM
+System Verilog
+Tersus - Visual programming platform (open source)
+Verilog
+VHDL
+Vignette's VBIS language for business processes integration
+vvvv
+VSXu
+Widget Workshop, a "game" designed for children which is technically a simplified dataflow programming language.
+XEE (Starlight) XML Engineering Environment
+XProc
+
+Application programming interfaces[edit]
+
+DC: Library that allows the embedding of one-way dataflow constraints in a C/C++ program.
+SystemC: Library for C++, mainly aimed at hardware design.
+MDF: Library for python aimed at financial models
+
+See also[edit]
+
+Actor model
+Data-driven programming
+Digital signal processing
+Event-driven programming
+Flow-based programming
+Functional reactive programming
+Glossary of reconfigurable computing
+High-performance reconfigurable computing
+Incremental computing
+Parallel programming model
+Partitioned global address space
+Signal programming
+Stream processing
+Pipeline (Unix)
+Yahoo Pipes
+
+References[edit]
+
+
+^ a b c Johnston, Wesley M.; J.R. Paul Hanna; Richard J. Millar (March 2004). "Advances in Dataﬂow Programming Languages" (PDF). ACM Computing Surveys 36: 1–34. doi:10.1145/1013208.1013209. Retrieved 15 August 2013.&#160;
+^ a b c d e Wadge, William W.; Edward A. Ashcroft (1985). Lucid, the Dataflow Programming Language (PDF) (illustrated ed.). Academia Press. ISBN&#160;9780127296500. Retrieved 15 August 2013.&#160;
+^ a b "Dataflow Programming Basics". Getting Started with NI Products. National Instruments Corporation. Retrieved 15 August 2013.&#160;
+^ Harter, Richard. "Data Flow languages and programming - Part I". Richard Harter's World. Retrieved 15 August 2013.&#160;
+^ "Why Dataflow Programming Languages are Ideal for Programming Parallel Hardware". Multicore Programming Fundamentals Whitepaper Series. National Instruments Corporation. Retrieved 15 August 2013.&#160;
+^ John L. Kelly Jr., Carol Lochbaum, V. A. Vyssotsky (1961). "A block diagram compiler". Bell System Tech. J. 40: 669–678. doi:10.1002/j.1538-7305.1961.tb03236.x.&#160;
+^ W.R. Sutherland (1966). "The On-line Graphical Specification of Computer Procedures". MIT.&#160;
+^ Underwater Acoustic Data Processing, Y.T. Chan
+
+
+External links[edit]
+
+Dataflow Analytics
+Dataflow and Reactive Programming Systems
+Basics of Dataflow Programming in F# and C#
+Dataflow Programming - Concept, Languages and Applications
+Static Scheduling of Synchronous Data Flow Programs for Digital Signal Processing
+Handling huge loads without adding complexity The basic concepts of dataflow programming, Dr. Dobb's, Sept. 2011
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Dataflow_programming&amp;oldid=691818040"					
+				Categories: Concurrent programming languagesProgramming paradigmsHidden categories: Articles to be merged from April 2015All articles to be merged				
+							
+		
+		
+			

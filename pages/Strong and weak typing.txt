@@ -1,0 +1,141 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Strong and weak typing
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Strong typing)
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article possibly contains original research. Please improve it by verifying the claims made and adding inline citations. Statements consisting only of original research should be removed. (June 2015)
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2015)
+
+
+
+
+
+
+
+
+In computer programming, programming languages are often colloquially classified as strongly typed or weakly typed (loosely typed). These terms do not have a precise definition, but in general, a strongly typed language is more likely to generate an error or refuse to compile if the argument passed to a function does not closely match the expected type. On the other hand, a very weakly typed language may produce unpredictable results or may perform implicit type conversion.[1] A different but related concept is latent typing.
+
+
+
+Contents
+
+
+1 History
+2 Definitions of "strong" or "weak"
+
+2.1 Implicit type conversions and "type punning"
+2.2 Pointers
+2.3 Untagged unions
+2.4 Static type-checking
+2.5 Dynamic type-checking
+
+
+3 Variation across programming languages
+4 References
+5 See also
+
+
+
+History[edit]
+In 1974, Liskov and Zilles defined a strongly-typed language as one in which "whenever an object is passed from a calling function to a called function, its type must be compatible with the type declared in the called function."[2] In 1977, Jackson wrote, "In a strongly typed language each data area will have a distinct type and each process will state its communication requirements in terms of these types."[3]
+Definitions of "strong" or "weak"[edit]
+A number of different language design decisions have been referred to as evidence of "strong" or "weak" typing. In fact, many of these are more accurately understood as the presence or absence of type safety, memory safety, static type-checking, or dynamic type-checking.
+Implicit type conversions and "type punning"[edit]
+Some programming languages make it easy to use a value of one type as if it were a value of another type. This is sometimes described as "weak typing".
+For example, Aahz Maruch opines that "Type Conversion occurs when you have a statically typed language and you use the syntactic features of the language to force the usage of one type as if it were a different type (consider the common use of void* in C). Coercion is usually a symptom of weak typing. Conversion, on the other hand, creates a brand-new object of the appropriate type."[4]
+As another example, GCC describes this as type-punning and warns that it will break strict aliasing. Thiago Macieira discusses several problems that can arise when type-punning causes the compiler to make inappropriate optimizations.[5]
+There are many examples of languages that allow implicit type conversions, but in a type-safe manner. For example, both C++ and C# allow programs to define operators to convert a value from one type to another in a semantically meaningful way. When a C++ compiler encounters such a conversion, it treats the operation just like a function call. In contrast, converting a value to the C type void* is an unsafe operation that is invisible to the compiler.
+Pointers[edit]
+Some programming languages expose pointers as if they were numeric values, and allow users to perform arithmetic on them. These languages are sometimes referred to as "weakly typed", since pointer arithmetic can be used to bypass the language's type system.
+Untagged unions[edit]
+Some programming languages support untagged unions, which allow a value of one type to be viewed as if it were a value of another type.
+Static type-checking[edit]
+In Luca Cardelli's article Typeful Programming,[6] a "strong type system" is described as one in which there is no possibility of an unchecked runtime type error. In other writing, the absence of unchecked run-time errors is referred to as safety or type safety; Tony Hoare's early papers call this property security.
+Dynamic type-checking[edit]
+Some programming languages do not have static type-checking. In many such languages, it is easy to write programs that would be rejected by most static type-checkers. For example, a variable might store either a number or the Boolean value "false". Some programmers[who?] refer to these languages as "weakly typed", since they do not seem to enforce the "strong" type discipline found in a language with a static type-checker.
+Variation across programming languages[edit]
+Note that some of these definitions are contradictory, others are merely orthogonal, and still others are special cases (with additional constraints) of other, more "liberal" (less strong) definitions. Because of the wide divergence among these definitions, it is possible to defend claims about most programming languages that they are either strongly or weakly typed. For instance:
+
+Java, Pascal, Ada and C require all variables to have a declared type, and support the use of explicit casts of arithmetic values to other arithmetic types. Java, C#, Ada and Pascal are sometimes said to be more strongly typed than C, a claim that is probably based on the fact that C supports more kinds of implicit conversions, and C also allows pointer values to be explicitly cast while Java and Pascal do not. Java itself may be considered more strongly typed than Pascal as manners of evading the static type system in Java are controlled by the Java virtual machine's type system. C# is similar to Java in that respect, though it allows disabling dynamic type checking by explicitly putting code segments in an "unsafe context". Pascal's type system has been described as "too strong", because the size of an array or string is part of its type, making some programming tasks very difficult.[7][8]
+Smalltalk, Perl, JavaScript, Ruby, Python, and Self are all "strongly typed" in the sense that typing errors are prevented at runtime and they do little implicit type conversion, but these languages make no use of static type checking: the compiler does not check or enforce type constraint rules. The term duck typing is now used to describe the dynamic typing paradigm used by the languages in this group.
+The Lisp family of languages are all "strongly typed" in the sense that typing errors are prevented at runtime. Some Lisp dialects like Common Lisp or Clojure do support various forms of type declarations[9] and some compilers (CMUCL[10] and related) use these declarations together with type inference to enable various optimizations and also limited forms of compile time type checks.
+Standard ML, F#, OCaml and Haskell are statically type-checked but the compiler automatically infers a precise type for all values.
+Visual Basic is a hybrid language. In addition to variables with declared types, it is also possible to declare a variable of "Variant" data type that can store data of any type. Its implicit casts are fairly liberal where, for example, one can sum string variants and pass the result into an integer variable.
+Assembly language and Forth have been said to be untyped. There is no type checking; it is up to the programmer to ensure that data given to functions is of the appropriate type. Any type conversion required is explicit.
+
+For this reason, writers who wish to write unambiguously about type systems often eschew the term "strong typing" in favor of specific expressions such as "type safety".
+References[edit]
+
+
+^ "CS1130. Transition to OO programming. – Spring 2012 --self-paced version". Cornell University, Department of Computer Science. 2005. Archived from the original (HTML) on 2005. Retrieved 2015-11-23.&#160;
+^ Liskov, B; Zilles, S (1974). "Programming with abstract data types". ACM Sigplan Notices. CiteSeerX: 10.1.1.136.3043.&#160;
+^ Jackson, K. (1977). Parallel processing and modular software construction. Design and Implementation of Programming Languages. Lecture Notes in Computer Science 54: 436–443. doi:10.1007/BFb0021435. ISBN&#160;3-540-08360-X.&#160;
+^ Aahz. "Typing: Strong vs. Weak, Static vs. Dynamic". Retrieved 16 August 2015.&#160;
+^ "Type-punning and strict-aliasing - Qt Blog". Qt Blog. Retrieved 16 August 2015.&#160;
+^ ftp://gatekeeper.research.compaq.com/pub/DEC/SRC/research-reports/SRC-045.pdf page 3
+^ "InfoWorld". Retrieved 16 August 2015.&#160;
+^ "Brian Kernighan". Wikipedia. 2015-11-21. Archived from the original (HTML) on 2015-11-21. Retrieved 2015-11-23. Why Pascal is not my favourite language&#160;
+^ "CLHS: Chapter 4". Retrieved 16 August 2015.&#160;
+^ "CMUCL User's Manual: The Compiler". Retrieved 16 August 2015.&#160;
+
+
+See also[edit]
+
+Data type includes a more thorough discussion of typing issues
+Comparison of programming languages
+Latent typing
+Memory safety
+Type safety
+Type system
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Strong_and_weak_typing&amp;oldid=691974564"					
+				Categories: Type theoryHidden categories: Articles that may contain original research from June 2015All articles that may contain original researchArticles needing additional references from June 2015All articles needing additional referencesAll articles with specifically marked weasel-worded phrasesArticles with specifically marked weasel-worded phrases from August 2014				
+							
+		
+		
+			

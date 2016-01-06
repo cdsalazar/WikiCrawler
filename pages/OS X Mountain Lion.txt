@@ -1,0 +1,1391 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			OS X Mountain Lion
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from OS X 10.8)
+												
+					Jump to:					navigation, 					search
+				
+				
+OS X 10.8 Mountain Lion
+
+A version of the OS X operating system
+
+
+
+
+
+
+Screenshot of OS X Mountain Lion
+
+
+
+Developer
+Apple Inc.
+
+
+Source model
+Closed source (with open source components)
+
+
+Released to
+manufacturing
+July&#160;25, 2012; 3 years ago&#160;(2012-07-25)
+
+
+Latest release
+10.8.5 (Build 12F45) / October&#160;3, 2013; 2 years ago&#160;(2013-10-03)
+
+
+Platforms
+x86-64
+
+
+Kernel type
+Hybrid (XNU)
+
+
+License
+Apple Public Source License (APSL) and Apple end-user license agreement (EULA)
+
+
+Preceded by
+Mac OS X 10.7 Lion
+
+
+Succeeded by
+OS X 10.9 Mavericks
+
+
+Official website
+OS X Mountain Lion at the Wayback Machine (archived October 18, 2013)
+
+
+Support status
+
+
+Unsupported as of about September 2015[1]
+
+
+Articles in the series
+
+
+
+
+Game Center
+Gatekeeper
+Messages
+Notification Center
+
+
+
+
+OS X Mountain Lion (version 10.8) is the ninth major release of OS X (formerly Mac OS X), Apple Inc.'s desktop and server operating system for Macintosh computers. OS X Mountain Lion was released on July 25, 2012 for purchase and download through Apple's Mac App Store, as part of a switch to releasing OS X versions online and every year. Named to signify its status as a refinement of the previous OS X version, Lion, Apple's stated aims in developing Mountain Lion were to allow users to more easily manage and synchronise content between multiple Apple devices and to make the operating system more familiar.
+The operating system gained the new malware-blocking system Gatekeeper and integration with Apple's online Game Center and iCloud services, while the Safari web browser was updated to version 6. As on iOS, Notes and Reminders became full applications, separate from Mail and Calendar, while the iChat application was replaced with a version of iOS's Messages. Mountain Lion also added a version of iOS's Notification Center, which groups updates from different applications in one place. Integrated links allowing the user to rapidly transfer content to Twitter were present in the operating system from launch. Facebook integration was also planned but unfinished at launch date. It was released as a downloadable update later.
+OS X Mountain Lion received positive reviews, with critics praising Notification Center, Messages, and speed improvements over Mac OS X Lion, while criticizing iCloud for unreliability and Game Center for lack of games. Mountain Lion sold three million units in the first four days, and has sold 28 million units as of June 10, 2013, making it Apple's most popular OS X release.
+
+
+
+Contents
+
+
+1 History
+2 System requirements
+3 New and changed features
+
+3.1 Notification Center
+3.2 Notes
+3.3 Messages
+3.4 Game Center
+3.5 Application updates
+3.6 Other updates
+3.7 Dropped and changed features
+
+
+4 Reception
+5 Release history
+6 See also
+7 References
+8 External links
+
+
+
+History[edit]
+
+
+
+
+OS X Mountain Lion was announced at WWDC 2012 at Moscone West.
+
+
+OS X Mountain Lion was officially announced by Apple on their website on February 16, 2012, as a successor to Mac&#160;OS&#160;X 10.7 Lion.[2] It achieved golden master status on July 9, 2012.[3] Following a soft transition started with Mac OS X Lion, Apple consistently refers to OS X Mountain Lion as "OS X" rather than "Mac OS X".[2][4]
+During the Apple Worldwide Developers Conference keynote on June 11, 2012, Apple announced a "near final" release version of Mountain Lion for developers, with the public version arriving in July 2012 at a price tag of US$19.99[5] (€15.99 in Europe, £13.99 in the UK, $20.99 in Australia and ￥128 in Mainland China). The third generation MacBook Pro, revised MacBook Air, iPad Smart Case, and third-generation AirPort Express were announced at the keynote as well.[6]
+The specific release date of July 25 was not confirmed until the day before, July 24, by Apple CEO, Tim Cook, as part of Apple's 2012 third-quarter earnings announcement.[7] It was released to the Mac App Store on July 25, 2012, where it sold 3 million units in the first four days of release.[8][9]
+An update for Mountain Lion, version 10.8.1, was released on August 23, 2012. It resolved issues with iMessages, Migration Assistant, Safari, Microsoft Exchange Server, Mail, and many other applications.[10] Tests of the update revealed that 10.8.1 also improved battery life on laptops, albeit gaining back only half of the battery life that was lost in updating to Mountain Lion.[11] Although 10.8.1 improved battery life for some customers, others continue to complain about reduced battery life and a constant drop in battery health, ultimately resulting in a "Service Battery" message. [12]
+System requirements[edit]
+The official system requirements of OS X 10.8 are 2 GB RAM, 8 GB available storage, OS X 10.6.8 (Snow Leopard) or later, and any of the following Macs:[13]
+
+iMac (Mid 2007 or newer)
+MacBook (Aluminum, Late 2008), (Polycarbonate, Early 2009 or newer)
+MacBook Pro (Mid/Late 2007 or newer)
+MacBook Air (Late 2008 or newer)
+Mac Mini (Early 2009 or newer)
+Mac Pro (Early 2008 or newer)
+Xserve (Early 2009)
+
+As in 10.7, the earliest models supporting AirDrop are the late-2008 MacBook Pro, late-2010 MacBook Air, late-2008 MacBook, mid-2010 Mac Mini, and early-2009 Mac Pro with an AirPort Extreme card. Any Mac released in or after 2011, except the MacBook, supports AirPlay Mirroring. Power Nap is supported on the mid-2011 or newer MacBook Air and the MacBook Pro with Retina display.[14]
+The technical basis for these requirements is incompatibility with 32-bit EFI and 32-bit kernel extensions (most importantly, drivers for GPUs shipped in some older Macs). In order to prevent potentially incompatible systems from installing 10.8, the installer contains a whitelist of supported motherboard IDs. Users have bypassed these limitations so that 10.8 may run with varying functionality on some officially unsupported computers.[15]
+New and changed features[edit]
+
+
+
+
+Notification Center in OS X Mountain Lion, showing a banner, the Tweet and Post buttons.
+
+
+Notification Center[edit]
+Main article: Notification Center
+Notification Center was added in the operating system. It provides an overview of alerts from applications and displays notifications until the user completes an associated action, rather than requiring instant resolution. Users may choose what applications appear in Notification Center, and how they are handled.[16] There are three types of notifications: banners, alerts, and badges. Banners are displayed for a short period of time in the upper right corner of the Mac's screen, and then slide off to the right. The icon of the application is displayed on the left side of the banner, while the message from the application will be displayed on the right side. Alerts are the same as banners, but will not disappear from the screen until the user takes action. Badges are red notification icons that are displayed on the application's icon. They indicate the number of items available for the application.[17]
+Notification Center can be accessed by clicking the icon in the right corner of the menu bar. When open, the user can click a button to tweet, post status updates to Facebook, or view all notifications in the sidebar pane. Swiping up will reveal the option to disable Notification Center for one day.[18] Many settings of Notification Center can be customized under the "Notifications" pane in System Preferences. Each application can have three ways to display notifications: none, banners, and alerts. Options to toggle the app icons and sounds are also available. Users can click and drag an app in the pane to change the order the applications are displayed within Notification Center.[19]
+Notes[edit]
+Main article: Notes (application)
+Notes, another transfer from iOS, is added. It is separate from Mail in its own application, with support for desktop notes added (syncs along with its iOS counterpart).[20][21] Created notes are synced through all the user's Apple devices through the iCloud service.[citation needed] Notes can be arranged in folders, and pinned to the user's desktop. When the application is closed, the pinned note still remains.[citation needed]
+Notes can be created in three different default fonts - Noteworthy, Marker Felt, and Helvetica. Users can add custom fonts by visiting the Show Fonts menu. The menu allows users to change text size, format lists, choose the alignment (left, center, justify, or right), assign a writing direction, and indent text. Attachments, images, and hyperlinks can also be added into a note. Attachments cannot be viewed on iOS devices.[22]
+Messages[edit]
+Main article: Messages (application)
+Messages, an instant messaging software application, is added in Mountain Lion. It was announced on February 16, 2012, as part of the OS X Mountain Lion developer preview.[23] Starting with this release, Messages replaced iChat as the default OS X instant-messaging client. A free beta version of Messages was available to download for Mac OS X Lion from the Apple website until June 2012.[24] The final version of Messages was included with the release version of OS X Mountain Lion.[25]
+As with its predecessor, Messages has text messaging, audio, and screen-sharing capabilities. Messages also contains native video conversation support, utilising Apple's FaceTime video calling application where possible. However, it does retain video capabilities for interfacing with other instant messaging clients.[26][27] Messages supports Apple's iMessage, a free instant messaging service previously only available on devices running iOS 5. It also supports both Extensible Messaging and Presence Protocol (XMPP) (shown in the application under its former name, Jabber) and the AOL Instant Messenger (AIM) OSCAR protocol. In addition, it also offers a direct connection to Yahoo! Messenger and Google Talk.[24]
+Game Center[edit]
+Main article: Game Center
+The Game Center application from iOS was added in OS X Mountain Lion. It is an online multiplayer social-gaming network, and allows users to invite friends to play a game, start a multiplayer game through matchmaking, track their achievements, and compare their high scores on a leader board.[28] Points are awarded to players as a part of Game Center's achievement tracking system. Players can earn points by meeting specific in-game challenges.[citation needed]
+A player must establish an Apple ID to associate with a Game Center nickname.[29] A player has the option to create an Apple ID from within Game Center if he or she does not already have one. Only one nickname may be associated with an Apple ID at any given time.[citation needed] Each player is assigned a profile in Game Center. A profile consists of the player's nickname, the number of Game Center-compatible games the player owns, the number of friends the player has, the number of achievement points a player has, and an optional photo and player-defined status.[citation needed]
+Application updates[edit]
+OS X Mountain Lion added updates for many applications on the operating system. The Chess app supports Game Center. Dashboard widgets can be managed in a UI similar to Launchpad.[30] Mail adds new VIP feature to save frequent contacts.[31] The Preview app gets an improved user interface.[32] It is able to fill out forms in PDF documents that don't contain actual PDF form fields. Reminders is a new to-do list application, separate from Calendar in its own application that syncs along with its iOS counterpart.[33] Safari 6 gets a new release and features a new omnibar; a combination of the address bar and the search field. The omnibar also has a "Reader" button, showing the user just the text of the article without advertisements and distraction. When the user is on a website with no article, the button is disabled.[34] Safari 6 is available as a download for Mac OS X Lion. Time Machine is able to do rotating backups on more than one storage medium.[35]
+Other updates[edit]
+AirPlay Mirroring is added, which allows wireless mirroring of a Mac's screen to an Apple TV.[36] System-wide integration of AirPlay audio transmission is added.[37] There are many new features for Chinese users, including support for Baidu as an option for Safari search engine, QQ, 163.com and 126.com services for Mail, Contacts and Calendar, Youku, Tudou and Sina Weibo are integrated into share sheets.[38] Dictation, new in Mountain Lion, is a system-wide voice input mechanism that requires a broadband Internet connection.[39][40] Facebook gained full integration following an update in late 2012. Some of the features include single-sign on and integration in Notification Center, Contacts and Share Sheets.[41] Gatekeeper, also new to Mountain Lion, is an anti-malware feature based on digital signatures and the Mac App Store.[42]
+Power Nap allows flash storage-based Macintoshes (late 2010 MacBook Air and later, or the MacBook Pro with Retina display) to synchronize with iCloud (Reminders, Calendars, Photo Stream, Notes, Mail, and Find My Mac) while sleeping and also allows a Mac to download App Store and OS X updates as well as make periodic Time Machine backups when it is plugged in and sleeping. Several new screensavers were added.[43] Share Sheets, a "Share" button and dialog box in Safari and other applications, are added.[44] Twitter was integrated with almost all of the applications, with single-sign on, tweeting from an app, Tweet Sheets, tweeting photos and links, using multiple Twitter accounts, Twitter notifications, profile picture integration, and Location Services available.[45]
+Application updates automatically install from the Mac App Store. The iCloud library User interface (UI) was integrated throughout the operating systems, which includes new Open and Save dialog boxes across built-in applications, iWork and third-party applications via an Application programming interface (API). Applications that make use of this API support a new user interface to view and manage documents in the cloud that are specific to the application being used.[46] to users of Apple's more popular mobile operating system, iOS.[citation needed] Documents can be renamed from the title bar. iWork documents automatically synchronize with iCloud. The full screen ability is on every display.[citation needed]
+The Dock has received an updated look, emulating the appearance of the aluminum metal surface that much of Apple's current hardware line-up sports.[47] Scroll bars widen when the mouse hovers over them. Finder displays a progress bar in the "size" column when copying a file, and on icons in Launchpad when downloading from the Mac App Store. Launchpad has Spotlight search for finding applications.[48] Address Book was renamed "Contacts",[46] and iCal was renamed "Calendar".[46]
+Dropped and changed features[edit]
+
+MobileMe was replaced entirely by iCloud, specifically in System Preferences options.[citation needed]
+RSS support in Mail and Safari was removed;[49] a message is shown to suggest to users that they search the Mac App Store for an RSS app.[citation needed]
+The Software Update service was unified into the Mac App Store.[citation needed]
+The list of updates installed in the past was removed.[50]
+The "Web Sharing" option was removed from System Preferences. Apache is still included with the operating system and can be enabled using third-party software.[51]
+When the X11 app is opened, users are directed to the open source XQuartz project instead.[52]
+Xgrid support was removed (including in OS X Server edition).[53]
+The Display Preferences status menu was replaced by the AirPlay icon, and it is no longer possible to quickly switch resolutions without first opening up preferences.[citation needed]
+The option in Menu Bar to display battery life using "Time" is no longer offered. Instead, the only option is to display battery "Percentage". However, battery time can still be viewed in the dropdown by clicking on the battery icon.[citation needed]
+
+Reception[edit]
+Reception for OS X Mountain Lion has generally been positive. John Siracusa of Ars Technica said that 10.8 corrected and simplified UI changes made with Lion, saying that it had become "what 10.7 should've been" and that the faster speeds and features merit the upgrade, then adding that "If we'd had to wait for two years after 10.6 for the next major release of OS X, chances are good that the worst of the missteps in Lion would just be landing on our doorsteps today. I'll take 10.8, thanks."[50] Many reviewers found that Mountain Lion was far more stable than its predecessor, including Jason Snell of Macworld, who said "All told, I found Mountain Lion to be a stable, solid release. Even prerelease builds were far more stable than I've come to expect from OS X betas, leading me to wonder if Apple's new annual schedule is leading to more careful incremental updates (with fewer bugs) rather than great leaps (with more, nastier bugs)."[54]
+The general attitude towards Mountain Lion was that it was faster and smoother, including Brian Heater of Engadget, who said the following:[55]
+
+"Taken as a whole, the features mark a fairly aggressive bid to fold the best of OS X and iOS into one product -- a strategy we first saw with the introduction of the Mac App Store on Snow Leopard, and with the arrival of Launchpad last year in Lion. [...]
+That said, it seems time for Apple to make a bold new pronouncement on the desktop front. The company appears to have most of its resources invested in the mobile side -- and there's no question as to why: the iPhone and iPad have reinvigorated the company, making it a computing player on a scale that no one (save, perhaps, for Jobs himself) could have predicted a decade ago. Still, it might be hard for OS X users not to feel neglected -- many of the latest new features feel a bit like iOS hand-me-downs. When and if Apple rolls out a new operating system this time next year, hopefully we'll be seeing a very different side of Mac OS."[55]
+
+MG Siegler of TechCrunch said that the difference between Lion and Mountain Lion was not comparable to the difference between Leopard and Snow Leopard because Mountain Lion adds many new features that were not available in Lion. He also praised the application compatibility and said that the only updates needed were to add Notification Center features to applications.[56] Jim Dalrymple of The Loop commented "there will be tens of thousands of words published on Wednesday when Mountain Lion hits the Mac App Store, but let's face it, what you really want to know is whether Mountain Lion is worth the upgrade. Let's get that out of the way now — yes, it is definitely worth it," and said that at $19.99, Mountain Lion was a "bargain".[57] David Pogue of The New York Times said "Over all, then, Mountain Lion is a gentle, thoughtful upgrade. All 200 new features? No, not really. But 10 that you'll use every day? For $20? Yes."[58]
+While the operating system in general was well received, some reviewers dissented from that viewpoint. Jesus Diaz of Gizmodo felt that Apple was running out of ideas and that Microsoft's Windows 8 may out-innovate OS X.[59] Apple also received criticism for failing to provide an official upgrade pathway for owners of 2006 Mac Pro workstation computers.[60]
+Game Center was the most criticised aspect of Mountain Lion. Reviewers criticized the service for the lack of games available, reliability issues and the lack of integration with iOS games. Scott Stein of CNET commented "Game Center-compatible titles will have achievements, leaderboard info...and, potentially, a way of playing cross-platform games. As of the time of this post, I could find only seven Game Center games featured the Mac App Store," and "Until Game Center becomes a complete portal for all games on the Mac, and a true method of cross-platform iOS/Mac play, I'm not sure many people will even bother checking it out."[61] Matt Clark of MacLife also commented that if developers don't develop applications for Game Center, it is "likely doomed to sit unnoticed on your hard drive".[62]
+Mountain Lion sold 3 million units in the first four days, making it Apple's most successful OS X release to date.[9] A report by Chitika Insights revealed that OS X Mountain Lion had been used by 3.2% of OS X users within the first 48 hours of release, and 10% penetration in the first month.[63]
+Release history[edit]
+
+
+Version
+Build[64]
+Date
+OS name
+Notes
+Standalone download
+
+
+10.8
+12A269 (GM)
+July 25, 2012
+Darwin 12.0
+Original retail Mac App Store release
+
+
+
+10.8.1
+12B19
+August 23, 2012
+Darwin 12.1
+About OS X Mountain Lion v10.8.1 Update
+OS X v10.8.1 Individual update
+
+
+10.8.2
+12C54
+September 19, 2012
+Darwin 12.2
+About OS X Mountain Lion v10.8.2 Update
+OS X v10.8.2 Individual update
+OS X v10.8.2 Combo update
+
+
+
+12C60
+October 4, 2012
+About OS X Mountain Lion v10.8.2 Update
+(supplementary update described at the end)
+
+OS X v10.8.2 Supplementary update
+
+
+12C2034
+October 23, 2012
+For Mac Mini (Late 2012) (Pulled)[65]
+
+
+
+12C3104
+November 29, 2012
+For Mac Mini (Late 2012)[65]
+
+
+
+10.8.3
+12D78
+March 14, 2013
+Darwin 12.3
+About OS X Mountain Lion v10.8.3 Update
+OS X v10.8.3 Individual update
+OS X v10.8.3 Combo update
+
+
+
+10.8.4
+12E55
+June 4, 2013
+Darwin 12.4
+About OS X Mountain Lion v10.8.4 Update
+OS X v10.8.4 Individual update
+OS X v10.8.4 Combo update
+
+
+
+12E3067
+June 10, 2013
+For MacBook Air (Mid 2013)
+
+
+
+12E4022
+September 25, 2013
+For iMac (Late 2013)
+
+
+
+10.8.5
+12F37
+September 12, 2013
+Darwin 12.5
+About the OS X Mountain Lion v10.8.5 Update
+OS X v10.8.5 Individual update
+OS X v10.8.5 Combo update
+
+
+
+12F45
+October 3, 2013
+About the OS X Mountain Lion v10.8.5 Supplemental Update
+OS X v10.8.5 Supplemental Update
+
+
+Note: Combo updates include all previous releases (ex: 10.8 to 10.8.3). Individual update is a smaller package size and can be used if currently using the previous release (ex: 10.8.2 to 10.8.3).
+See also[edit]
+
+
+
+
+Computing portal
+
+
+
+Software portal
+
+
+
+Apple Inc. portal
+
+
+
+
+History of OS X
+List of Macintosh software
+
+References[edit]
+
+
+^ "Apple security updates". Apple. October 21, 2015. Retrieved November 3, 2015.&#160;
+^ a b "Apple Releases OS X Mountain Lion Developer Preview with Over 100 New Features" (Press release). Apple. February 16, 2012. Retrieved February 16, 2012.&#160;
+^ "Apple releases OS X Mountain Lion Golden Master to Developers, Xcode 4.4". Retrieved July 9, 2012.&#160;
+^ Patel, Nilay (February 16, 2012). "Apple officially renames Mac OS X to OS X, drops the 'Mac'". The Verge. Retrieved February 21, 2012.&#160;
+^ "Mountain Lion Available in July From Mac App Store" (Press release). June 11, 2012. Retrieved June 24, 2012.&#160;
+^ Falcone, John P. (June 11, 2012). "New MacBooks, accessories debut at WWDC". CNET. Retrieved August 27, 2012.&#160;
+^ McCarty, Brad (July 24, 2012). "Apple confirms July 25th release of OS X Mountain Lion for $19". The Next Web. Retrieved August 25, 2012.&#160;
+^ "Mountain Lion Available Today From the Mac App Store" (Press release). July 25, 2012. Retrieved July 25, 2012.&#160;
+^ a b Epstein, Zach (July 30, 2012). "Apple: OS X Mountain Lion downloaded 3 million times since launch". Boy Genius Report. Retrieved August 14, 2012.&#160;
+^ Cheng, Jacqui (August 23, 2012). "OS X 10.8.1 now out with fixes for Migration Assistant, Exchange Server, more". Ars Technica. Retrieved August 25, 2012.&#160;
+^ Tanous, Jim (August 23, 2012). "MacBook Pro Mountain Lion Battery Life: 10.7 vs 10.8 vs 10.8.1". The Mac Observer. Retrieved August 25, 2012.&#160;
+^ Various (July 25, 2012). "Battery life dropped considerably on Mountain Lion". Apple Support Communities. Retrieved August 31, 2012.&#160;
+^ https://support.apple.com/HT202575
+^ "System requirements for OS X Mountain Lion". Apple. August 13, 2012. Retrieved February 16, 2014.&#160;
+^ Kyle, Brock (September 9, 2012). "How can I upgrade or "hack" an incompatible Intel Mac to run OS X 10.8 "Mountain Lion"? Is it even possible?". EveryMac. Retrieved February 16, 2014.&#160;
+^ "OS X Mountain Lion - See everything the new OS X can do.". Apple. Section "Notification Center". Retrieved August 20, 2012.&#160;
+^ August 17, 2012. "Mac 101: Notification Center". Apple accessdate=September 1, 2012.&#160;
+^ Dachis, Adam (July 28, 2012). "Top 10 Secret Features of OS X Mountain Lion". Lifehacker. Retrieved September 1, 2012.&#160;
+^ Jason, Snell (February 16, 2012). "Mountain Lion: Hands on with Notification Center". Macworld. Mac Publishing. Retrieved September 1, 2012.&#160;
+^ "OS X Mountain Lion - See everything the new OS X can do.". Apple. Section "Notes". Retrieved February 22, 2012.&#160;
+^ Titlow, John Paul. "Apple's Convergence of Desktop and Mobile Continues With Mountain Lion". ReadWrite. Retrieved April 24, 2012.&#160;
+^ Breen, Christopher (July 26, 2012). "Up close with Mountain Lion: Notes". Macworld. Mac Publishing. Retrieved September 3, 2012.&#160;
+^ "OS X Mountain Lion - Inspired by iPad. Made for the Mac". Apple. Retrieved March 23, 2012.&#160;
+^ a b Montgomery, Kelly (February 17, 2012). "Hands on with Messages Beta for Apple OS X Lion". Digital Trends. Retrieved September 1, 2012.&#160;
+^ Cheng, Jacqui. "OS X Mountain Lion now available via Mac App Store". Ars Technica. Retrieved September 1, 2012.&#160;
+^ "Your questions and answers about Messages beta on the Mac". Ars Technica. March 3, 2012. Retrieved September 1, 2012.&#160;
+^ Dylan Love (February 16, 2012). "Apple Messages For Mac". Business Insider. Retrieved September 1, 2012.&#160;
+^ "OS X Mountain Lion - See everything the new OS X can do.". Apple. Section "Game Center". Retrieved August 20, 2012.&#160;
+^ "Using Game Center". Apple. August 27, 2012. Retrieved September 2, 2012.&#160;
+^ "Inside OS X 10.8 Mountain Lion: Dashboard gets iOS-style widget organization". AppleInsider. February 22, 2012. Retrieved June 12, 2012.&#160;
+^ "Mountain Lion: What you need to know". Macworld. Mac Publishing. Retrieved June 12, 2012.&#160;
+^ "Inside OS X 10.8 Mountain Lion: a Preview of how Apple plans to revamp the toolbar". AppleInsider. Retrieved June 12, 2012.&#160;
+^ Caldwell, Serenity; Frakes, Dan (February 16, 2012). "Mountain Lion: Hands on with Contacts and Calendar". Macworld (Mac Publishing). Retrieved February 17, 2012.&#160;
+^ "Inside OS X 10.8 Mountain Lion: Safari 5.2 gets a simplified user interface with new sharing features". AppleInsider. Retrieved May 22, 2012.&#160;
+^ Caldwell, Serenity (February 21, 2012). "Ten exciting system changes in Mountain Lion". Macworld. Mac Publishing. Retrieved March 15, 2012.&#160;
+^ "OS X Mountain Lion - See everything the new OS X can do.". Apple. Section "AirPlay Mirroring". Retrieved August 20, 2012.&#160;
+^ "Apple OS X Mountain Lion Airplay Audio and Parallels". Laptop News. July 31, 2012. Retrieved July 31, 2012.&#160;
+^ Panzarino, Matthew (February 16, 2012). "Apple courts China with Sina Weibo, Baidu, Youku and more integrated in Mountain Lion". The Next Web. Retrieved March 15, 2012.&#160;
+^ "OS X Mountain Lion - See everything the new OS X can do.". Apple. Section "Dictation". Retrieved August 20, 2012.&#160;
+^ "OS X Mountain Lion - Technical Specifications". Apple. July 30, 2012. Retrieved August 22, 2012.&#160;
+^ Beasley, Mike. "Mountain Lion's Facebook integration coming in the fall, not at July launch". 9 to 5 Mac. Retrieved June 13, 2012.&#160;
+^ Sieger, MG (February 16, 2012). "Surprise! OS X Mountain Lion Roars Into Existence (For Developers Today, Everyone This Summer)". TechCrunch. Retrieved February 16, 2012.&#160;
+^ "Apple - OS X Mountain Lion - See everything the new OS X can do.". Apple, Inc. Section "System". Retrieved June 12, 2012.&#160;
+^ "OS X Mountain Lion - See everything the new OS X can do.". Apple. Section "Built-in Sharing". Retrieved August 20, 2012.&#160;
+^ "OS X Mountain Lion - See everything the new OS X can do.". Apple. Section "Twitter". Retrieved August 20, 2012.&#160;
+^ a b c Gruber, John (February 16, 2012). "Mountain Lion". Daring Fireball. Retrieved September 13, 2013.&#160;
+^ Rettinger, Jon. "Mountain Lion OS 10.8 Feature Overview". TechnoBuffalo. Retrieved July 25, 2012.&#160;
+^ Li, Chao. "8 Features of Mountain Lion Revealed". Laptopmag.com. Retrieved June 12, 2012.&#160;
+^ Frakes, Dan (February 19, 2012). "Mountain Lion: Hands on with Mail". Macworld. Mac Publishing. Retrieved February 23, 2012.&#160;
+^ a b "OS X 10.8 Mountain Lion: the Ars Technica review". Ars Technica. July 25, 2012. Retrieved July 25, 2012.&#160;
+^ "Web Sharing in OS X Mountain Lion". Click On Tyler. February 18, 2012. Retrieved July 19, 2012.&#160;
+^ Slivka, Eric (February 17, 2012). "Apple Removes X11 in OS X Mountain Lion, Shifts Support to Open Source XQuartz". Mac Rumors. Retrieved February 23, 2012.&#160;
+^ "Xgrid supercomputer enabler excised from OS X Mountain Lion?". MacNN. June 12, 2012. Retrieved July 20, 2012.&#160;
+^ Jason, Snell (July 25, 2012). "OS X Mountain Lion". Macworld. Mac Publishing. Retrieved August 24, 2012.&#160;
+^ a b Heater, Brian (July 25, 2012). "Apple OS X Mountain Lion 10.8 review". Engadget. Retrieved August 24, 2012.&#160;
+^ Siegler, MG (July 25, 2012). "OS X Mountain Lion: Quick, Familiar, Cheap, And Drenched In iOS Goodness". TechCrunch. Retrieved August 24, 2012.&#160;
+^ Dalrymple, Jim (July 25, 2012). "Apple releases OS X Mountain Lion". The Loop. Retrieved August 27, 2012.&#160;
+^ Pogue, David (July 25, 2012). "The Payout in an Apple Upgrade". The New York Times. Retrieved September 1, 2012.&#160;
+^ Diaz, Jesus (July 25, 2012). "Mountain Lion Review: OS X Needs a New Vision". Gizmodo. Retrieved August 24, 2012.&#160;
+^ Kessler, Topher (July 25, 2012). "OS X Mountain Lion can run on unsupported Intel Mac Pros". Wikipedia. CBS Interactive. Retrieved September 17, 2013.&#160;
+^ Stein, Scott (July 25, 2012). "Game Center arrives on the Mac via Mountain Lion, but where are the games?". CNET. Retrieved September 3, 2012.&#160;
+^ Clark, Matt (July 31, 2012). "First Look: Game Center For Mac Is A (Potentially) Cool Addition". MacLife. Future US. Retrieved September 3, 2012.&#160;
+^ Lavey-Heaton, Megan (August 31, 2012). "Chitika research: Mountain Lion on 1 of every 10 Macs". The Unofficial Apple Weblog. Retrieved September 3, 2012.&#160;
+^ "Mac OS X: About This Mac "build" information". Apple. April 14, 2010. Retrieved July 25, 2012.&#160;
+^ a b "Apple re-posts 10.8.2 update for Mac Mini and MacBook users". CNET. CBS Interactive. November 30, 2012. Retrieved December 3, 2012.&#160;
+
+
+External links[edit]
+
+Official website
+WWDC Keynote
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Apple Inc.
+
+
+
+
+
+
+
+
+
+History
+Outline
+
+
+
+
+
+
+
+
+Founders
+
+
+
+Steve Jobs
+Steve Wozniak
+Ronald Wayne
+
+
+
+
+
+
+
+
+
+
+
+Board of directors
+
+
+
+
+Current
+
+
+
+Tim Cook (CEO)
+Al Gore
+Bob Iger
+Andrea Jung
+Arthur D. Levinson (Chairman)
+Ronald Sugar
+Susan Wagner
+
+
+
+
+
+
+
+
+Former
+
+
+
+Steve Jobs
+Fred D. Anderson
+Gil Amelio
+Bill Campbell
+Larry Ellison
+Delano Lewis
+Mike Markkula
+Arthur Rock
+Eric Schmidt
+John Sculley
+Edgar S. Woolard, Jr.
+Jerry York
+Mickey Drexler
+
+
+
+
+
+
+
+
+
+
+
+Executives
+
+
+
+
+Current
+
+
+
+Tim Cook
+Angela Ahrendts
+Eddy Cue
+Craig Federighi
+Jonathan Ive
+Luca Maestri
+Dan Riccio
+Phil Schiller
+Bruce Sewell
+Jeff Williams
+
+
+
+
+
+
+
+
+Former
+
+
+
+Steve Jobs
+Fred D. Anderson
+John Browett
+Tony Fadell
+Scott Forstall
+Nancy R. Heinen
+Ron Johnson
+Peter Oppenheimer
+Mark Papermaster
+Jon Rubinstein
+Bertrand Serlet
+Sina Tamaddon
+Avie Tevanian
+
+
+
+
+
+
+
+
+
+
+
+Services
+
+
+
+Apple ID
+Apple Maps
+Apple Music
+Apple News
+Apple Pay
+Cloud
+
+iCloud
+iWork.com
+
+
+Developer
+
+iAd
+TestFlight
+
+
+Game Center
+Discontinued services
+
+
+
+
+
+Stores
+
+
+
+
+Apple Store
+
+online
+
+
+App Store
+iBookstore
+iTunes Store
+Mac App Store
+
+
+
+
+
+
+
+
+
+Support
+
+
+
+
+AppleCare
+Apple Specialist
+Certifications
+Genius Bar
+JointVenture
+One to One
+
+
+
+
+
+
+
+
+
+
+
+Products
+
+
+
+
+
+Hardware
+
+
+
+
+Macintosh
+
+Intel transition
+
+
+iPod
+
+Nano
+Shuffle
+Touch
+
+
+iPhone
+iPad
+
+Mini
+Air
+
+
+Apple Watch
+Apple SIM
+Peripherals
+Discontinued hardware
+
+
+
+
+
+
+
+
+
+Software
+
+
+
+
+Mac OS
+
+History
+OS X
+
+History
+
+
+OS X Server
+General
+
+
+iOS
+
+Version history
+
+
+watchOS
+Core Foundation
+Developer Tools
+Final Cut Studio
+Logic Studio
+QuickTime
+CarPlay
+Discontinued software
+
+
+
+
+
+
+
+
+
+
+
+Companies
+
+
+
+
+
+Subsidiaries
+
+
+
+
+Beats Electronics
+
+Beats Music
+
+
+Braeburn Capital
+FileMaker Inc.
+
+
+
+
+
+
+
+
+
+Acquisitions
+
+
+
+
+Anobit
+AuthenTec
+Beats Electronics
+
+Beats Music
+
+
+Cue
+Emagic
+FingerWorks
+Intrinsity
+Lala
+NeXT
+Nothing Real
+P.A. Semi
+PrimeSense
+Siri
+Spotsetter
+Topsy
+
+
+
+
+
+
+
+
+
+
+
+Related
+
+
+
+Advertising
+
+1984
+Think different
+Get a Mac
+iPods
+
+
+Campus
+Design
+
+IDg
+Typography
+
+
+History
+
+Codenames
+Community
+Criticism
+Litigation
+iOS app approvals
+
+
+People
+
+Key Staff
+Mac Design Team
+
+
+Apple Music Festival
+
+
+
+
+
+
+
+
+
+
+
+ Book
+&#160;Category
+ Portal
+ WikiProject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Macintosh operating systems
+
+
+
+
+
+
+Classic Mac OS (history)
+
+
+
+System 1, 2, 3, 4, 5
+System 6
+System 7
+Mac OS 7.6
+Mac OS 8
+Mac OS 9
+
+
+
+
+
+
+
+
+OS X (history)
+
+
+
+NeXTSTEP
+OpenStep
+Darwin
+Mac OS X Server 1.0
+Public Beta
+v10.0
+v10.1
+v10.2
+v10.3
+v10.4
+v10.5
+v10.6
+v10.7
+v10.8
+v10.9
+v10.10
+v10.11
+
+
+
+
+
+
+
+
+Server
+
+
+
+OpenStep
+Rhapsody
+OS X Server (OS X Server 1.0)
+
+
+
+
+
+
+
+
+Other OS projects
+
+
+
+A/UX
+Taligent
+Newton OS
+Copland
+MkLinux
+iOS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+OS X
+
+
+
+
+
+
+Versions
+
+
+
+Server 1.0 Hera
+Public Beta Kodiak
+10.0 Cheetah
+10.1 Puma
+10.2 Jaguar
+10.3 Panther
+10.4 Tiger
+10.5 Leopard
+10.6 Snow Leopard
+10.7 Lion
+10.8 Mountain Lion
+10.9 Mavericks
+10.10 Yosemite
+10.11 El Capitan
+
+
+
+
+
+
+
+
+Applications
+
+
+
+
+
+
+
+Automator
+Calculator
+Calendar
+Chess
+Contacts
+Dashboard
+Dictionary
+DVD Player
+FaceTime
+Finder
+Game Center
+Grapher
+iTunes&#160;(version history)
+Launchpad
+Mac App Store
+Mail
+Messages
+Notes
+Notification Center
+Photo Booth
+Photos
+Preview
+QuickTime
+Reminders
+Safari&#160;(version history)
+Stickies
+TextEdit
+Time Machine
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Front Row
+iChat
+iPhoto
+iSync
+Sherlock
+
+
+
+
+
+
+
+
+
+
+
+Utilities
+
+
+
+
+
+
+
+Activity Monitor
+AirPort Utility
+AppleScript Editor
+Archive Utility
+Audio MIDI Setup
+Bluetooth File Exchange
+Boot Camp
+ColorSync
+Configurator
+Console
+Crash Reporter
+DigitalColor Meter
+Directory Utility
+DiskImageMounter
+Disk Utility
+Font Book
+Grab
+Help Viewer
+Image Capture
+Installer
+Keychain Access
+Migration Assistant
+Network Utility
+ODBC Administrator
+Screen Sharing
+System Preferences
+System Information
+Terminal
+Universal Access
+VoiceOver
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Software Update
+Remote Install Mac OS X
+
+
+
+
+
+
+
+
+
+
+
+Technology and
+user interface
+
+
+
+
+
+
+
+AirDrop
+Apple menu
+Apple Push Notification Service
+AppleScript
+Aqua
+Audio Units
+Bonjour
+Cocoa
+ColorSync
+Command key
+Core Animation
+Core Audio
+Core Data
+Core Foundation
+Core Image
+Core OpenGL
+Core Text
+Core Video
+CUPS
+Cover Flow
+Darwin
+Dock
+File Quarantine
+FileVault
+Fonts
+Gatekeeper
+Grand Central Dispatch
+icns
+Inkwell
+I/O Kit
+Kernel panic
+Keychain
+launchd
+Mach-O
+MacRuby
+Menu extra
+Metal
+Mission Control
+OpenCL
+Option key
+Preference Pane
+Property list
+Quartz
+QuickTime
+Quick Look
+Smart Folders
+Speakable items
+Spotlight
+Stacks
+System Integrity Protection
+Uniform Type Identifier
+Universal binary
+WebKit
+XNU
+XQuartz
+
+
+
+
+
+
+
+
+
+Deprecated
+
+
+
+
+Carbon
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+BootX
+Brushed metal
+Classic Environment
+Rosetta
+Spaces
+Xgrid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Operating systems by Apple Inc.
+
+
+
+
+
+
+Apple II/III/Lisa
+
+
+
+Apple II series
+
+Apple DOS
+ProDOS
+GS/OS
+
+
+Apple III
+
+SOS
+
+
+Lisa
+
+Lisa OS
+
+
+
+
+
+
+
+
+
+
+Macintosh OS
+
+
+
+
+
+Mac OS Classic
+
+
+
+
+System 1
+Systems 2, 3, and 4
+System 5
+System 6
+System 7
+Mac OS 8
+Mac OS 9
+
+
+
+
+
+
+
+
+
+Mac OS X Family
+
+
+
+
+Rhapsody (pre-release of Mac OS X)
+Darwin
+Mac OS X
+Mac OS X Server
+
+
+
+
+
+
+
+
+
+
+
+Macintosh (other)
+
+
+
+Shipped projects
+A/ROSE
+A/UX
+MkLinux
+Development projects
+
+Taligent
+Copland
+
+
+
+
+
+
+
+
+
+
+Mobile
+
+
+
+Newton OS
+iPod OS
+iOS
+watchOS
+
+
+
+
+
+
+
+
+
+Italics indicate discontinued products. Related category: Apple Inc. operating systems
+
+
+
+
+
+
+
+
+Preceded&#160;by
+OS X 10.7
+OS X 10.8
+2012
+Succeeded&#160;by
+OS X 10.9
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=OS_X_Mountain_Lion&amp;oldid=691868221"					
+				Categories: 2012 softwareOS XX86-64 operating systemsHidden categories: Pages using duplicate arguments in template callsUse mdy dates from October 2013All articles with unsourced statementsArticles with unsourced statements from November 2013Official website different in Wikidata and Wikipedia				
+							
+		
+		
+			

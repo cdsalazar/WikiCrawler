@@ -1,0 +1,112 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Interface (computing)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Interface (computer science))
+												
+					Jump to:					navigation, 					search
+				
+				This article is about points of interaction of computer systems.  For other uses, see Interface (disambiguation)#Computing.
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (May 2010)
+
+
+In computing, an interface is a shared boundary across which two separate components of a computer system exchange information. The exchange can be between software, computer hardware, peripheral devices, humans and combinations of these. Some computer hardware devices such as a touchscreen can both send and receive data through the interface, while others such as a mouse, microphone or joystick are one way only.[1]
+
+
+
+Contents
+
+
+1 Hardware interfaces
+2 Software interfaces
+
+2.1 Software interfaces in practice
+2.2 Software interfaces in object-oriented languages
+2.3 Programming to the interface
+
+
+3 User interfaces
+4 See also
+5 References
+
+
+
+Hardware interfaces[edit]
+Main article: Hardware interface
+Hardware interfaces exist in many of the components such as the various buses, storage devices, other I/O devices, etc. A hardware interface is described by the mechanical, electrical and logical signals at the interface and the protocol for sequencing them (sometimes called signaling).[2] A standard interface, such as SCSI, decouples the design and introduction of computing hardware, such as I/O devices, from the design and introduction of other components of a computing system, thereby allowing users and manufacturers great flexibility in the implementation of computing systems.[2] Hardware interfaces can be parallel with several electrical connections carrying parts of the data simultaneously, or serial where data is sent one bit at a time .
+Software interfaces[edit]
+See also: Application binary interface and Application programming interface
+A software interface may refer to a wide range of different types of interface at different "levels": an operating system may interface with pieces of hardware. Applications or programs running on the operating system may need to interact via streams, and in object oriented programs, objects within an application may need to interact via methods.
+Software interfaces in practice[edit]
+A key principle of design is to prohibit access to all resources by default, allowing access only through well-defined entry points, i.e. interfaces.[3] Software interfaces provide access to computer resources (such as memory, CPU, storage, etc.) of the underlying computer system; direct access (i.e. not through well designed interfaces) to such resources by software can have major ramifications—sometimes disastrous ones—for functionality and stability.
+Interfaces between software components can provide: constants, data types, types of procedures, exception specifications and method signatures. Sometimes, public variables are also defined as part of an interface.
+The interface of a software module A is deliberately defined separately from the implementation of that module. The latter contains the actual code of the procedures and methods described in the interface, as well as other "private" variables, procedures, etc. Another software module B, for example the client to A, that interacts with A is forced to do so only through the published interface. One practical advantage of this arrangement is that replacing the implementation of A by another implementation of the same interface should not cause B to fail—how A internally meets the requirements of the interface is not relevant to B, which is only concerned with the specifications of the interface. (See also Liskov substitution principle.)
+Software interfaces in object-oriented languages[edit]
+Main articles: Protocol (object-oriented programming) and Concept (generic programming)
+In object-oriented languages, the term interface is often used to define an abstract type that contains no data or code, but defines behaviors as method signatures. A class having code and data for all the methods corresponding to that interface is said to implement that interface.[4] Furthermore, a class can implement multiple interfaces, and hence can be of different types at the same time.[5]
+An interface is hence a type definition; anywhere an object can be exchanged (for example, in a function or method call) the type of the object to be exchanged can be defined in terms of its interface rather than specifying a particular class. This means that any class that implements that interface can be used. For example, a dummy implementation may be used to allow development to progress before the final implementation is available. In another case, a fake or mock implementation may be substituted during testing. Such stub implementations are replaced by real code later in the development process.
+Usually a method defined in an interface contains no code and thus cannot itself be called; it must be implemented by non-abstract code to be run when it is invoked. An interface called "Stack" might define two methods: push() and pop(). It can be implemented in different ways, for example, FastStack and GenericStack—the first being fast, working with a stack of fixed size, and the second using a data structure that can be resized, but at the cost of somewhat lower speed.
+Though interfaces can contain many methods they may contain only one or even none at all. For example, the Java language defines the interface Readable that has the single read() method; various implementations are used for different purposes, including BufferedReader, FileReader, InputStreamReader, PipedReader, and StringReader. Marker interfaces like Serializable contain no methods at all and serve to provide run-time information to generic processing using Reflection.[6]
+Programming to the interface[edit]
+The use of interfaces allows a programming style called programming to the interface. The idea behind this is to base programming logic on the interfaces of the objects used, rather than on internal implementation details. Programming to the interface reduces dependency on implementation specifics and makes code more reusable.[7]
+
+Pushing this idea to the extreme, inversion of control leaves the context to inject the code with the specific implementations of the interface that will be used to perform the work.
+User interfaces[edit]
+Main article: User interface
+A user interface is a point of interaction between a computer and humans; it includes any number of modalities of interaction (such as graphics, sound, position, movement...) where data is transferred between the user and the computer system.
+See also[edit]
+
+Abstraction inversion
+Application binary interface
+Application programming interface
+Business Interoperability Interface
+Computer bus
+Hard disk drive interface
+Implementation (computer science)
+Implementation inheritance
+Inheritance semantics
+Modular programming
+Software componentry
+Virtual inheritance
+
+References[edit]
+
+
+^ IEEE 100 - The Authoritative Dictionary Of IEEE Standards Terms. NYC, NY, USA: IEEE Press. 2000. pp.&#160;574–575. ISBN&#160;0-7381-2601-2.&#160;
+^ a b Blaauw, Gerritt A.; Brooks, Jr., Frederick P. (1997), "Chapter 8.6, Device Interfaces", Computer Architecture-Concepts and Evolution, Addison-Wesley, pp.&#160;489–493, ISBN&#160;0-201-10557-8&#160; See also: Patterson, David A.; Hennessey, John L. (2005), "Chapter 8.5, Interfacing I/O Devices to the Processor, Memory and Operating System", Computer Organization and Design - The Hardware/Software Interface, Third Edition, Morgan Kaufmann, pp.&#160;588–596, ISBN&#160;1-55860-604-1&#160;
+^ Bill Venners (2005-06-06). "Leading-Edge Java: Design Principles from Design Patterns: Program to an interface, not an implementation - A Conversation with Erich Gamma, Part III". http://www.artima.com/index.jsp: artima developer. Retrieved 2011-08-03. Once you depend on interfaces only, you're decoupled from the implementation. That means the implementation can vary, and that is a healthy dependency relationship. For example, for testing purposes you can replace a heavy database implementation with a lighter-weight mock implementation. Fortunately, with today's refactoring support you no longer have to come up with an interface up front. You can distill an interface from a concrete class once you have the full insights into a problem. The intended interface is just one 'extract interface' refactoring away. ...&#160;
+^ "What Is an Interface". The Java Tutorials. Oracle. Retrieved 2012-05-01.&#160;
+^ "Interfaces". The Java Tutorials. Oracle. Retrieved 2012-05-01.&#160;
+^ "Performance improvement techniques in Serialization". http://www.precisejava.com/: Precise Java. Retrieved 2011-08-04. We will talk initially about Serializable interface. This is a marker interface and does not have any methods.&#160;
+^ Gamma; Helm; Johnson; Vlissides (1995). Design Patterns: Elements of Reusable Object-Oriented Software. Addison Wesley. pp.&#160;17–18.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Interface_(computing)&amp;oldid=688710636"					
+				Categories: InterfacesObject-oriented programmingProgramming constructsHidden categories: Articles needing additional references from May 2010All articles needing additional referencesArticles with example Java code				
+							
+		
+		
+			

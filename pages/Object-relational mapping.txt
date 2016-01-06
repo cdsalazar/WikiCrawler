@@ -1,0 +1,304 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Object-relational mapping
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (May 2009)
+
+
+
+Not to be confused with Object-Role Modeling.
+
+Object-relational mapping (ORM, O/RM, and O/R mapping) in computer science is a programming technique for converting data between incompatible type systems in object-oriented programming languages. This creates, in effect, a "virtual object database" that can be used from within the programming language. There are both free and commercial packages available that perform object-relational mapping, although some programmers opt to create their own ORM tools.
+In object-oriented programming, data management tasks act on object-oriented (OO) objects that are almost always non-scalar values. For example, consider an address book entry that represents a single person along with zero or more phone numbers and zero or more addresses. This could be modeled in an object-oriented implementation by a "Person object" with attributes/fields to hold each data item that the entry comprises: the person's name, a list of phone numbers, and a list of addresses. The list of phone numbers would itself contain "PhoneNumber objects" and so on. The address book entry is treated as a single object by the programming language (it can be referenced by a single variable containing a pointer to the object, for instance). Various methods can be associated with the object, such as a method to return the preferred phone number, the home address, and so on.
+However, many popular database products such as SQL database management systems (DBMS) can only store and manipulate scalar values such as integers and strings organized within tables. The programmer must either convert the object values into groups of simpler values for storage in the database (and convert them back upon retrieval), or only use simple scalar values within the program. Object-relational mapping is used to implement the first approach.[1]
+The heart of the problem is translating the logical representation of the objects into an atomized form that is capable of being stored in the database, while preserving the properties of the objects and their relationships so that they can be reloaded as objects when needed. If this storage and retrieval functionality is implemented, the objects are said to be persistent.[1]
+
+
+
+Contents
+
+
+1 Overview
+2 Comparison with traditional data access techniques
+3 Alternatives to ORMs
+4 NoSQL databases
+5 Challenges
+6 See also
+7 References
+8 External links
+
+
+
+Overview[edit]
+Implementation-specific details of storage drivers are generally wrapped in an API in the programming language in use, exposing methods to interact with the storage medium in a way which is simpler and more in line with the paradigms of surrounding code.
+The following is a simple example. The below is C# code to deliver a query, itself written in SQL, to a database engine.
+
+
+String sql = "SELECT ... FROM persons WHERE id = 10";
+DbCommand cmd = new DbCommand(connection, sql);
+Result res = cmd.Execute();
+String name = res[0]["FIRST_NAME"];
+
+In contrast, the following makes use of an ORM API, allowing the writing of code which naturally makes use of the features of the language.
+
+
+Person p = repository.GetPerson(10);
+String name = p.getFirstName();
+
+The case above makes use of an object representing the storage repository, and methods of that object. Other frameworks might provide code as static methods, as in the below, and yet other methods may not implement an object-oriented system at all. Often the choice of paradigm is made to fit the ORM best into the surrounding language's design principles.
+
+
+Person p = Person.Get(10);
+
+Usually, the framework will expose some filtering and querying functionality, allowing subsets of the storage base to be accessed and modified. The code below queries for people in the database whose ID value is '10'.
+
+
+Person p = Person.Get(Person.Properties.Id == 10);
+
+Comparison with traditional data access techniques[edit]
+Compared to traditional techniques of exchange between an object-oriented language and a relational database, ORM often reduces the amount of code that needs to be written.[2]
+Disadvantages of ORM tools generally stem from the high level of abstraction obscuring what is actually happening in the implementation code. Also, heavy reliance on ORM software has been cited as a major factor in producing poorly designed databases.[3]
+Alternatives to ORMs[edit]
+Lately, alternatives to ORMs such as Slazure have become available. These kinds of data client libraries requires a combination of schema-less databases and a dynamic type system to work.
+NoSQL databases[edit]
+Another approach is to use an object-oriented database management system (OODBMS) or document-oriented databases such as native XML databases that provide more flexibility in data modeling. OODBMSs are databases designed specifically for working with object-oriented values. Using an OODBMS eliminates the need for converting data to and from its SQL form, as the data is stored in its original object representation and relationships are directly represented, rather than requiring join tables/operations.
+Document oriented databases also prevent the user from having to "shred" objects into table rows. Many of these systems also support the XQuery query language to retrieve datasets.
+Object-oriented databases tend to be used in complex, niche applications. One of the arguments against using an OODBMS is that switching from an SQL DBMS to a purely object-oriented DBMS means that you may lose the capability to create application independent queries for retrieving ad hoc combinations of data without restriction to access path.[citation needed] For this reason, many programmers find themselves more at home with an object-SQL mapping system, even though most object-oriented databases are able to process SQL queries to a limited extent. Other OODBMS (such as RavenDB[4]) provide replication to SQL databases, as a means of addressing the need for ad hoc queries, while preserving well-known query patterns.
+Challenges[edit]
+There are a variety of difficulties that arise when considering how to match an object system to a relational database. These difficulties are referred to as the object-relational impedance mismatch.
+An alternative to implementing ORM is use of the native procedural languages provided with every major database on the market. These can be called from the client using SQL statements. The Data Access Object (DAO) design pattern is used to abstract these statements and offer a lightweight object-oriented interface to the rest of the application.[5]
+See also[edit]
+
+List of object-relational mapping software
+Comparison of object-relational mapping software
+AutoFetch - automatic query tuning
+CORBA
+Object database
+Object persistence
+Object-relational database
+Object-relational impedance mismatch
+Relational model
+Java Data Objects
+Service Data Objects
+Entity Framework
+Active record pattern
+
+References[edit]
+
+
+^ a b "What is Object/Relational Mapping?". Hibernate Overview. JBOSS Hibernate. Retrieved 19 April 2011.&#160;
+^ Douglas Barry, Torsten Stanienda, "Solving the Java Object Storage Problem," Computer, vol. 31, no. 11, pp. 33-40, Nov. 1998, http://www2.computer.org/portal/web/csdl/doi/10.1109/2.730734, Excerpt at http://www.service-architecture.com/object-relational-mapping/articles/transparent_persistence_vs_jdbc_call-level_interface.html. Lines of code using O/R are only a fraction of those needed for a call-level interface (1:4). For this exercise, 496 lines of code were needed using the ODMG Java Binding compared to 1,923 lines of code using JDBC.
+^ Josh Berkus, "Wrecking Your Database", Computer, Aug. 2009, http://it.toolbox.com/blogs/database-soup/wrecking-your-database-33298, Webcast at http://www.youtube.com/watch?v=uFLRc6y_O3s
+^ "Index Replication". Index Replication Bundle. Hibernating Rhinos.&#160;
+^ Feuerstein, Steven; Bill Pribyl (September 1997). "Oracle PL/SQL Programming". 18.5 Modifying Persistent Objects. Retrieved 23 August 2011.&#160;
+
+
+External links[edit]
+
+About ORM by Anders Hejlsberg
+Mapping Objects to Relational Databases: O/R Mapping In Detail by Scott W. Ambler
+Core J2EE Design Pattern: Data Access Objects
+Choosing an Object-Relational mapping tool
+Object-Relational Mapping Concepts
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Database
+
+
+
+
+
+
+Main
+
+
+
+Requirements
+Theory
+Models
+Database management system
+Machine
+Server
+Application
+Connection
+
+datasource
+DSN
+
+
+Administrator
+Lock
+Types
+Tools
+
+
+
+
+
+
+
+
+Languages
+
+
+
+Data definition
+Data manipulation
+Query
+
+information retrieval
+
+
+
+
+
+
+
+
+
+
+Security
+
+
+
+Activity monitoring
+Audit
+Forensics
+Negative database
+
+
+
+
+
+
+
+
+Design
+
+
+
+Entities and relationships (and Enhanced notation)
+Normalization
+Refactoring
+
+
+
+
+
+
+
+
+Programming
+
+
+
+Abstraction layer
+Object-relational mapping
+
+
+
+
+
+
+
+
+Management
+
+
+
+Virtualization
+Tuning
+
+caching
+
+
+Migration
+Preservation
+Integrity
+
+
+
+
+
+
+
+
+See also
+
+
+
+Database-centric architecture
+Intelligent database
+Two-phase locking
+Locks with ordered sharing
+Load file
+Publishing
+Halloween Problem
+Log shipping
+
+
+
+
+
+
+
+
+
+
+
+ Book
+ Category
+ WikiProject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Object-relational_mapping&amp;oldid=688812565"					
+				Categories: Object-relational mappingData mappingHidden categories: Articles needing additional references from May 2009All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from September 2013				
+							
+		
+		
+			

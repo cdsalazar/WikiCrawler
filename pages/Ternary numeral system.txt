@@ -1,0 +1,868 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Ternary numeral system
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Numeral systems
+
+
+
+
+
+Hindu–Arabic numeral system
+
+
+
+
+
+Arabic
+Eastern Arabic
+
+
+
+
+Bengali
+Dzongkha
+Indian
+Sinhala
+Tamil
+
+
+
+
+Burmese
+Khmer
+Lao
+Thai
+
+
+
+
+Balinese
+Javanese
+Mongolian
+
+
+
+
+
+East Asian
+
+
+
+
+
+Chinese
+
+Suzhou
+
+
+Japanese
+Korean
+Vietnamese
+
+
+
+
+Counting rods
+
+
+
+
+
+Alphabetic
+
+
+
+
+
+Abjad
+Armenian
+Āryabhaṭa
+Cyrillic
+
+Ge'ez
+Georgian
+Greek
+Hebrew
+Roman
+
+
+
+
+
+Former
+
+
+
+
+
+Aegean
+Attic
+Babylonian
+Brahmi
+
+Egyptian
+Etruscan
+Inuit
+Kharosthi
+
+Mayan
+Quipu
+
+
+
+
+Prehistoric
+
+
+
+
+
+Positional systems by base
+
+
+
+
+
+2
+3
+4
+5
+6
+8
+10
+12
+16
+20
+60
+
+
+
+
+
+Non-standard positional numeral systems
+
+
+
+
+
+Bijective numeration (1)
+Signed-digit representation (Balanced ternary)
+factorial
+negative
+Complex base systems (2i)
+Non-integer representation (φ)
+mixed
+
+
+
+
+
+List of numeral systems
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+Ternary is the base-3 numeral system. Analogous to a bit, a ternary digit is a trit (trinary digit). One trit contains  (about 1.58496) bits of information. Although ternary most often refers to a system in which the three digits 0, 1, and 2 are all non-negative numbers, the adjective also lends its name to the balanced ternary system, used in comparison logic and ternary computers.
+
+
+
+Contents
+
+
+1 Comparison to other radices
+
+1.1 Sum of the digits in ternary as opposed to binary
+1.2 Compact ternary representation: base 9 and 27
+
+
+2 Practical usage
+
+2.1 Tryte
+
+
+3 See also
+4 Notes
+5 References
+6 External links
+
+
+
+Comparison to other radices[edit]
+
+A ternary multiplication table
+
+*
+1
+2
+10
+11
+12
+20
+21
+22
+100
+
+
+1
+1
+2
+10
+11
+12
+20
+21
+22
+100
+
+
+2
+2
+11
+20
+22
+101
+110
+112
+121
+200
+
+
+10
+10
+20
+100
+110
+120
+200
+210
+220
+1000
+
+
+11
+11
+22
+110
+121
+202
+220
+1001
+1012
+1100
+
+
+12
+12
+101
+120
+202
+221
+1010
+1022
+1111
+1200
+
+
+20
+20
+110
+200
+220
+1010
+1100
+1120
+1210
+2000
+
+
+21
+21
+112
+210
+1001
+1022
+1120
+1211
+2002
+2100
+
+
+22
+22
+121
+220
+1012
+1111
+1210
+2002
+2101
+2200
+
+
+100
+100
+200
+1000
+1100
+1200
+2000
+2100
+2200
+10000
+
+
+
+Representations of integer numbers in ternary do not get uncomfortably lengthy as quickly as in binary. For example, decimal 365 corresponds to binary 101101101 (9 digits) and to ternary 111112 (6 digits). However, they are still far less compact than the corresponding representations in bases such as decimal — see below for a compact way to codify ternary using nonary and septemvigesimal.
+
+Numbers one to twenty-seven in standard ternary
+
+Ternary
+1
+2
+10
+11
+12
+20
+21
+22
+100
+
+
+Binary
+1
+10
+11
+100
+101
+110
+111
+1000
+1001
+
+
+Decimal
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+
+
+
+Ternary
+101
+102
+110
+111
+112
+120
+121
+122
+200
+
+
+Binary
+1010
+1011
+1100
+1101
+1110
+1111
+10000
+10001
+10010
+
+
+Decimal
+10
+11
+12
+13
+14
+15
+16
+17
+18
+
+
+
+
+
+Ternary
+201
+202
+210
+211
+212
+220
+221
+222
+1000
+
+
+Binary
+10011
+10100
+10101
+10110
+10111
+11000
+11001
+11010
+11011
+
+
+Decimal
+19
+20
+21
+22
+23
+24
+25
+26
+27
+
+
+
+Powers of three in ternary
+
+Ternary
+1
+10
+100
+1 000
+10 000
+
+
+Binary
+1
+11
+1001
+1 1011
+101 0001
+
+
+Decimal
+1
+3
+9
+27
+81
+
+
+Power
+30
+31
+32
+33
+34
+
+
+
+
+
+Ternary
+100 000
+1 000 000
+10 000 000
+100 000 000
+1 000 000 000
+
+
+Binary
+1111 0011
+10 1101 1001
+1000 1000 1011
+1 1001 1010 0001
+100 1100 1110 0011
+
+
+Decimal
+243
+729
+2 187
+6 561
+19 683
+
+
+Power
+35
+36
+37
+38
+39
+
+
+As for rational numbers, ternary offers a convenient way to represent one third (as opposed to its cumbersome representation as an infinite string of recurring digits in decimal); but a major drawback is that, in turn, ternary does not offer a finite representation for one half (neither for one quarter, one sixth, one eighth, one tenth, etc.), because 2 is not a prime factor of the base.
+
+Fractions in ternary
+
+Fraction
+1/2
+1/3
+1/4
+1/5
+1/6
+1/7
+1/8
+1/9
+1/10
+1/11
+1/12
+1/13
+
+
+Ternary
+0.1
+0.1
+0.02
+0.0121
+0.01
+0.010212
+0.01
+0.01
+0.0022
+0.00211
+0.002
+0.002
+
+
+Binary
+0.1
+0.01
+0.01
+0.0011
+0.001
+0.001
+0.001
+0.000111
+0.00011
+0.0001011101
+0.0001
+0.000100111011
+
+
+Decimal
+0.5
+0.3
+0.25
+0.2
+0.16
+0.142857
+0.125
+0.1
+0.1
+0.09
+0.083
+0.076923
+
+
+Sum of the digits in ternary as opposed to binary[edit]
+The value of a binary number with n bits that are all 1 is 2n&#160;−&#160;1.
+Similarly, for a number N(b,d) with base b and d digits, all of which are the maximum digit value b&#160;−&#160;1, we can write
+N(b,d) = (b&#160;−&#160;1) bd−1 + (b&#160;−&#160;1) bd−2 + … + (b&#160;−&#160;1) b1 + (b&#160;−&#160;1) b0,
+N(b,d) = (b&#160;−&#160;1) (bd−1 + bd−2 + … + b1 + 1),
+N(b,d) = (b&#160;−&#160;1) M.
+bM = bd + bd−1 + … + b2 + b1, and
+−M = −bd−1&#160;−&#160;bd−2&#160;−&#160;…&#160;−&#160;b1&#160;−&#160;1, so
+bM&#160;−&#160;M = bd&#160;−&#160;1, or
+M = (bd&#160;−&#160;1)/(b&#160;−&#160;1).
+Then, N(b,d) = (b&#160;−&#160;1)M,
+N(b,d) = (b&#160;−&#160;1) (bd&#160;−&#160;1)/(b &#160;−&#160;1), and
+N(b,d) = bd&#160;−&#160;1. For a 3-digit ternary number, N(3,3) = 33&#160;−&#160;1 = 26 = 2 × 32 + 2 × 31 + 2 × 30 = 18 + 6 + 2.
+Compact ternary representation: base 9 and 27[edit]
+Nonary (base 9, each digit is two ternary digits) or septemvigesimal (base 27, each digit is three ternary digits) can be used for compact representation of ternary, similar to how octal and hexadecimal systems are used in place of binary.
+Practical usage[edit]
+A base-three system is used in Islam to keep track of counting Tasbih to 99 or to 100 on a single hand for counting prayers (as alternative for the Misbaha).
+In certain analog logic, the state of the circuit is often expressed ternary. This is most commonly seen in Transistor–transistor logic using 7406 open collector logic. The output is said to either be low (grounded), high, or open (high-Z). In this configuration the output of the circuit is actually not connected to any voltage reference at all. Where the signal is usually grounded to a certain reference, or at a certain voltage level, the state is said to be high impedance because it is open and serves its own reference. Thus, the actual voltage level is sometimes unpredictable.
+A rare "ternary point" is used to denote fractional parts of an inning in baseball. Since each inning consists of three outs, each out is considered one third of an inning and is denoted as .1. For example, if a player pitched all of the 4th, 5th and 6th innings, plus 2 outs of the 7th inning, his Innings pitched column for that game would be listed as 3.2, meaning 3⅔. In this usage, only the fractional part of the number is written in ternary form.
+Ternary numbers can be used to convey self-similar structures like the Sierpinski triangle or the Cantor set conveniently. Additionally, it turns out that the ternary representation is useful for defining the Cantor set and related point sets, because of the way the Cantor set is constructed. The Cantor set consists of the points from 0 to 1 that have a ternary expression that does not contain any instance of the digit 1.[1][2] Any terminating expansion in the ternary system is equivalent to the expression that is identical up to the term preceding the last non-zero term followed by the term one less than the last nonzero term of the first expression, followed by an infinite tail of twos. For example: .1020 is equivalent to .1012222... because the expansions are the same until the "two" of the first expression, the two was decremented in the second expansion, and trailing zeros were replaced with trailing twos in the second expression.
+Ternary is the integer base with the highest radix economy, followed closely by binary and quaternary. It has been used for some computing systems because of this efficiency. It is also used to represent 3 option trees, such as phone menu systems, which allow a simple path to any branch.
+A form of redundant binary representation called balanced ternary or signed-digit representation is sometimes used in low-level software and hardware to accomplish fast addition of integers because it can eliminate carries.[3]
+Tryte[edit]
+Some ternary computers such as the Setun defined a tryte to be 6 trits or same as ~9.5 bits (holding a little more information than the de facto binary byte).[4]
+See also[edit]
+
+Ternary logic
+Tai Xuan Jing
+Setun, a ternary computer
+Qutrit
+
+Notes[edit]
+
+^ Mohsen Soltanifar, On A sequence of cantor Fractals, Rose Hulman Undergraduate Mathematics Journal, Vol 7, No 1, paper 9, 2006.
+^ Mohsen Soltanifar, A Different Description of A Family of Middle-a Cantor Sets, American Journal of Undergraduate Research, Vol 5, No 2, pp 9–12, 2006.
+^ Dhananjay Phatak, I. Koren, Hybrid Signed-Digit Number Systems: A Unified Framework for Redundant Number Representations with Bounded Carry Propagation Chains, 1994, [1]
+^ Brousentsov, N. P.; Maslov, S. P.; Ramil Alvarez, J.; Zhogolev, E.A. "Development of ternary computers at Moscow State University". Retrieved 20 January 2010.&#160;
+
+References[edit]
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (September 2010)
+
+
+
+Hayes, Brian (2001), "Third base", American Scientist 89 (6): 490–494, doi:10.1511/2001.40.3268&#160;.
+
+External links[edit]
+
+Third Base
+Ternary Arithmetic
+The ternary calculating machine of Thomas Fowler
+Ternary Base Conversion includes fractional part, from Maths Is Fun
+Gideon Frieder's replacement ternary numeral system
+Visualization of numeral systems
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Ternary_numeral_system&amp;oldid=683128373"					
+				Categories: Computer arithmeticPositional numeral systemsTernary computersHidden categories: Use dmy dates from September 2010Articles lacking in-text citations from September 2010All articles lacking in-text citations				
+							
+		
+		
+			

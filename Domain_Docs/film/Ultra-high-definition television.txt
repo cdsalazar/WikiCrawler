@@ -1,0 +1,1515 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Ultra-high-definition television
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Ultra High Definition Television)
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+Comparison of 8K UHDTV, 4K UHDTV, HDTV and SDTV resolution
+
+
+
+
+
+
+Diagram of the CIE 1931 color space that shows the Rec. 2020 (UHDTV) color space in the outer triangle and Rec. 709 (HDTV) color space in the inner triangle. Both Rec.&#160;2020 and Rec.&#160;709 use Illuminant D65 for the white point.
+
+
+Ultra-high-definition television (also known as Super Hi-Vision, Ultra HD television, UltraHD, UHDTV, or UHD) includes 4K UHD (2160p) and 8K UHD (4320p), which are two digital video formats proposed by NHK Science &amp; Technology Research Laboratories and defined and approved by the International Telecommunication Union (ITU).
+The Consumer Electronics Association announced on October 17, 2012, that "Ultra High Definition", or "Ultra HD", would be used for displays that have an aspect ratio of 16:9 and at least one digital input capable of carrying and presenting native video at a minimum resolution of 3840×2160 pixels.[1][2]
+
+
+
+Contents
+
+
+1 Alternative terms
+2 Technical details
+
+2.1 Resolution
+2.2 Color space dynamic range and frame rate
+
+
+3 History
+
+3.1 2001–2011
+3.2 2012
+3.3 2013
+3.4 2014
+3.5 2015
+
+
+4 Field trials of UHDTV over DTT networks
+5 Status of standardization of UHDTV
+
+5.1 Standardization in ITU-R
+5.2 Standardization in ITU-T and MPEG
+5.3 Standardization in SMPTE
+5.4 Standardization for Europe
+5.5 Standardization for Korea
+
+
+6 See also
+7 Notes
+8 References
+9 External links
+
+
+
+Alternative terms[edit]
+Ultra-high-definition television is also known as Ultra HD, UHD, and UHDTV.[3][4][5][6][7] In Japan, 8K UHDTV will be known as Super Hi-Vision since Hi-Vision was the term used in Japan for HDTV.[8][9] In the consumer electronics market companies had previously only used the term 4K at the 2012 CES but that had changed to Ultra HD during the 2013 CES.[6][7] The Ultra HD term is an umbrella term that was selected by the Consumer Electronics Association after extensive consumer research.[10]
+Technical details[edit]
+
+Super Hi-Vision specifications:[8][9][11][12]
+
+Number of pixels: 7680x4320
+Aspect ratio: 16:9
+Viewing distance: 0.75 H
+Viewing angle: 180°
+Colorimetry: Rec. 2020
+Frame rate: 120&#160;Hz progressive
+Bit depth: 12-bits per color RGB
+Audio system: 22.2 surround sound
+
+Sampling rate: 96,192 kHz
+Bit length: 24 bit
+Number of channels: 24 ch
+
+Upper layer: 9 ch
+Middle layer: 10 ch
+Lower layer: 3 ch
+LFE: 2 ch
+
+
+
+
+Compressed bit rate: 50 Mbps (H.265)HEVC
+Uncompressed
+video bit rate: 48 Gbit/s[13]
+
+
+See also: Rec. 2020 and DisplayPort: DisplayID
+Resolution[edit]
+Two resolutions are defined as UHDTV:[3][4][5]
+
+4K UHDTV (2160p) is 3840 pixels wide by 2160 pixels tall (8.29 megapixels), which is four times as many pixels as 1920x1080 (2.07 megapixels).
+8K UHDTV (4320p) is 7680 pixels wide by 4320 pixels tall (33.18 megapixels), which is sixteen times as many pixels and Four times the spacial resolution of current 1080p HDTV, which brings it closer to the detail level of 15/70 mm IMAX.[4][14][15] NHK advocates the 8K UHDTV format with 22.2 surround sound as Super Hi-Vision.555
+
+The suffix "p" in 2160p and 4320p stands for progressive scan or non-interlaced.
+Color space dynamic range and frame rate[edit]
+The human visual system has a limited ability to discern improvements in resolution below a certain size and beyond a certain distance. At current consumer home viewing distances and TV sizes, increasing resolution to 4K may have little perceptual impact, as consumers would not be close enough (the Lechner distance) to appreciate the differences in pixel count between 4K and HD. UHDTV also allows other image enhancements in dynamic range and color, which can improve the perceived difference between 4KTV and HDTV. UHDTV allows the future use of the new Rec. 2020 (UHDTV) color space which can reproduce colors that cannot be shown with the current Rec. 709 (HDTV and most current 4KTV) color space.[8] When dealing with CIE 1931 color space coverage, the Rec.&#160;2020 color space covers 75.8%, whereas the digital cinema reference projector color space covers 53.6%, the Adobe RGB color space covers 52.1%, and the Rec.&#160;709 color space covers 35.9%.[8] UHDTV also allows for an increase in dynamic range, meaning brighter highlights but also increased detail in the greyscale. UHDTV also allows for frame rates up to 120 frames per second (fps).[5][16] Note that UHDTV potentially allows Rec.2020, higher dynamic range and higher frame rates to be applied to HD services, without necessarily increasing resolution to 4K.
+History[edit]
+
+
+
+
+
+This section is in a list format that may be better presented using prose. You can help by converting this section to prose, if appropriate. Editing help is available. (March 2014)
+
+
+2001–2011[edit]
+
+
+
+
+Prototype camera head (2006)
+
+
+
+
+
+
+Prototype camera head (2009)
+
+
+IBM introduced the first UHDTV production monitor, the IBM T220, in June 2001 with a 3840x2400 native format.[17] It was manufactured by IDTech. Improved follow-on models with IBM T221 as the base model number, were introduced in the following years.
+NHK researchers built their own UHDTV prototype which they demonstrated in 2003.[18] They used an array of 16 HDTV recorders with a total capacity of almost 3.5 TB that could capture up to 18 minutes of test footage.[18] The camera itself was built with four 2.5&#160;inch (64&#160;mm) CCDs, each with a resolution of only 3840x2048.[18] Using two CCDs for green and one each for red and blue, they then used a spatial pixel offset method to bring it to 7680x4320.[18][a] Subsequently, an improved and more compact system was built using CMOS image sensor technology[19] and the CMOS image sensor system was demonstrated at Expo 2005, Aichi, Japan, the NAB 2006 and NAB 2007 conferences, Las Vegas, at IBC 2006 and IBC 2008,[20] Amsterdam, Netherlands, and CES 2009. A review of the NAB 2006 demo was published in a Broadcast Engineering e-newsletter.[21] Individuals at NHK and elsewhere project that the timeframe for UHDTV to be available in domestic homes varies between 2015 to 2020 but Japan may get it in the 2016 time frame.[22]
+On November 2, 2006, NHK demonstrated a live relay of a UHDTV program over a 260&#160;kilometer (km) distance by a fiber-optic network.[23] Using dense wavelength division multiplex (DWDM), 24 Gbit/s speed was achieved with a total of 16 different wavelength signals.[23]
+On December 31, 2006, NHK demonstrated a live relay of their annual Kōhaku Uta Gassen over IP from Tokyo to a 450&#160;in (11.4&#160;m) screen in Osaka. Using a codec developed by NHK, the video was compressed from 24&#160;Gbit/s to 180–600 Mbit/s and the audio was compressed from 28&#160;Mbit/s to 7–28&#160;Mbit/s.[24] Uncompressed, a 20-minute broadcast would require roughly 4&#160;TB of storage.
+The SMPTE first released Standard 2036 for UHDTV in 2007.[25] UHDTV was defined as having two levels called UHDTV1 (3840×2160 or 4K UHDTV) and UHDTV2 (7680x4320 or 8K UHDTV).[25][26]
+In May 2007, the NHK did an indoor demonstration at the NHK Open House in which a UHDTV signal (7680x4320 at 60 fps) was compressed to a 250&#160;Mbit/s MPEG2 stream.[27] The signal was input to a 300&#160;MHz wide band modulator and broadcast using a 500&#160;MHz QPSK modulation.[27] This "on the air" transmission had a very limited range (less than 2 meters), but shows the feasibility of a satellite transmission in the 36,000&#160;km orbit.[27]
+In 2008, Aptina Imaging announced the introduction of a new CMOS image sensor specifically designed for the NHK UHDTV project.[28] During IBC 2008 Japan's NHK, Italy's RAI, BSkyB, Sony, Samsung, Panasonic Corporation, Sharp Corporation, and Toshiba (with various partners) demonstrated the first ever public live transmission of UHDTV, from London to the conference site in Amsterdam.[29][30]
+On September 29, 2010, the NHK partnered up and recorded The Charlatans live in the UK in the UHDTV format, before broadcasting over the internet to Japan.[31]
+On May 19, 2011, SHARP in collaboration with NHK demonstrated a direct-view 85&#160;in (220&#160;cm) LCD display capable of 7680×4320 pixels at 10 bits per pixel.[32] It was the first direct-view Super Hi-Vision-compatible display to be released.[33]
+Before 2011, UHDTV allowed for frame rates of 24, 25, 50, and 60 fps.[26] In an ITU-R meeting during 2011, an additional frame rate was added to UHDTV of 120 fps.[34] William Updegrove was the co-founder in the 4k and 8k resolution breakthrough
+2012[edit]
+On February 23, 2012, NHK announced that with Shizuoka University they had developed an 8K sensor that can shoot video at 120 fps.[35][36][37]
+In April 2012, NHK (in collaboration with Panasonic) announced a 145&#160;in (370&#160;cm) display (7680×4320 at 60 fps), which has 33.2 million 0.417&#160;mm square pixels.[38]
+In April 2012, the four major Korean terrestrial broadcasters (KBS, MBC, SBS, and EBS) announced that in the future, they would begin test broadcasts of UHDTV on channel 66 in Seoul.[39][40] At the time of the announcement, the UHDTV technical details had not yet been decided.[39][40] LG Electronics and Samsung will also be involved in the test broadcasts of UHDTV.[40]
+In May 2012, NHK showed the world's first ultra-high-definition shoulder-mount camera.[41] By reducing the size and weight of the camera, the portability had been improved, making it more maneuverable than previous prototypes, so it can be used in a wide variety of shooting situations.[41] The single-chip sensor uses a Bayer color-filter array, where only one color component is acquired per pixel.[41] Researchers at NHK have also developed a high-quality up-converter, which estimates the other two-color components to convert the output into full resolution video.[41]
+Also in May 2012, NHK showed the ultra-high-definition imaging system it has developed in conjunction with Shizuoka University, which outputs 33.2-megapixel video at 120 fps with a color depth of 12 bits.[42][43] As ultra-high-definition broadcasts at full resolution are designed for large, wall-sized displays, there is a possibility that fast-moving subjects may not be clear when shot at 60 fps, so the option of 120 fps has been standardized for these situations.[42] To handle the sensor output of approximately 4 billion pixels per second with a data rate as high as 51.2&#160;Gbit/s, a faster analog-to-digital converter has been developed to process the data from the pixels, and then a high-speed output circuit distributes the resulting digital signals into 96 parallel channels.[42] This 1.5&#160;in (38&#160;mm) CMOS sensor is smaller and uses less power when compared to conventional ultra-high-definition sensors, and it is also the world's first to support the full specifications of the ultra-high-definition standard.[42]
+During the 2012 Summer Olympics in Great Britain, the format was publicly showcased by the world's largest broadcaster, the BBC,[44] which set up 15 meter wide screens in London, Glasgow, and Bradford to allow viewers to see the Games in ultra-high definition.[45][46]
+On May 31, 2012,[47] Sony released the VPL-VW1000ES 4K 3D Projector,[48] the world's first consumer-prosumer projector using the 4K UHDTV system, with the shutter-glasses stereoscopic 3D technology priced at US$24,999.99.[49][50]
+On August 22, 2012, LG announced the world's first 3D UHDTV using the 4K system.[51]
+On August 23, 2012, UHDTV was officially approved as a standard by the International Telecommunication Union (ITU), standardizing both 4K and 8K resolutions for the format in ITU-R Recommendation BT.2020.[16][52]
+On September 15, 2012, David Wood, Deputy Director of the EBU Technology and Development Department (who chairs the ITU working group that created Rec.&#160;2020), told The Hollywood Reporter that Korea plans to begin test broadcasts of 4K UHDTV next year.[53][54][55] Wood also said that many broadcasters have the opinion that going from HDTV to 8K UHDTV is too much of a leap and that it would be better to start with 4K UHDTV.[53] In the same article Masakazu Iwaki, NHK Research senior manager, said that the NHK plan to go with 8K UHDTV is for economic reasons since directly going to 8K UHDTV would avoid an additional transition from 4K UHDTV to 8K UHDTV.[53]
+On October 18, 2012, the Consumer Electronics Association (CEA) announced that it had been unanimously agreed on by a vote of the CEA's Board of Industry Leaders that the term "Ultra High-Definition", or "Ultra HD", would be used for displays that have a resolution of at least 8 megapixels with a vertical resolution of at least 2,160 pixels and a horizontal resolution of at least 3,840 pixels.[56][57][58][59] The Ultra HD label also requires the display to have an aspect ratio of at least 16x9 and to have at least one digital input that can carry and present a native video signal of 3840x2160 without having to rely on a video scaler.[56][57][58][59] Sony announced that their 4K products will be marketed as "4K Ultra High-Definition (4K UHD)".[60]
+On October 23, 2012, Ortus Technology Co., Ltd announced the development of the world's smallest 3840x2160 pixel LCD panel with a size of 9.6&#160;in (24&#160;cm) and a pixel density of 458ppi.[61][62][63] The LCD panel is designed for medical equipment and professional video equipment.[61][62][63]
+On October 25, 2012, LG Electronics began selling the first flat panel Ultra HD display in the United States with a resolution of 3840x2160.[64][65][66] The LG 84LM9600 is a 84&#160;in (210&#160;cm) flat panel LED-backlit LCD display with a price of US$19,999 though the retail store was selling it for US$16,999.[64][65][66]
+On November 29, 2012, Sony announced the 4K Ultra HD Video Player, which is a hard disk server preloaded with ten 4K movies and several 4K video clips that will be included with the Sony XBR-84X900.[67][68][69] The preloaded 4K movies will be The Amazing Spider-Man, Total Recall (2012), The Karate Kid (2010), Salt, Battle: Los Angeles, The Other Guys, Bad Teacher, That's My Boy, Taxi Driver, and The Bridge on the River Kwai.[67][68][69] Additional 4K movies and 4K video clips will be offered for the 4K Ultra HD Video Player in the future .[67][68][69]
+On November 30, 2012, Red Digital Cinema Camera Company announced that they were taking pre-orders for the US$1,450 REDRAY 4K Cinema Player which is capable of outputting 4K resolution to a single 4K display or to four 1080p displays arranged in any configuration and connected using four HDMI 1.4 connections.[70][71] Video output can be 4K DCI (4096x2160), 4K Ultra HD, 1080p, and 720p at frame rates of up to 60 fps with a bit depth of up to 12-bits with 4:2:2 chroma subsampling.[70] Audio output can be up to 7.1 channels.[70] Content will be distributed online using the ODEMAX video service.[70] External storage can be connected using eSATA, Ethernet, USB, or a Secure Digital memory card.[70]
+2013[edit]
+On January 6, 2013, the NHK announced that Super Hi-Vision satellite broadcasts could begin in Japan in 2016.[72]
+On January 7, 2013, Eutelsat announced the first dedicated 4K Ultra HD channel.[73][74][75][76] Ateme uplinks the H.264/MPEG-4 AVC channel to the EUTELSAT 10A satellite.[73][74][75][76] The 4K Ultra HD channel has a frame rate of 50 fps and is encoded at 40 Mbit/s.[73][74][75][76] The channel started transmission on January 8, 2013.[73][74][75][76] On the same day Qualcomm CEO Paul Jacobs announced that mobile devices capable of playing and recording 4K Ultra HD video will be released in 2013[needs update] using the Snapdragon 800 chip.[77][78][79]
+On January 8, 2013, Broadcom announced the BCM7445 which is an Ultra HD decoding chip capable of decoding High Efficiency Video Coding (HEVC) at up to 4096x2160p at 60 fps.[80][81][82][83] The BCM7445 is a 28&#160;nm ARM architecture chip capable of 21,000 Dhrystone MIPS with volume production estimated for the middle of 2014.[80][81][82][83] On the same day THX announced the "THX 4K Certification" program for Ultra HD displays.[84][85][86] The certification involves up to 600 tests and the goal of the program is so that "content viewed on a THX Certified Ultra HD display meets the most exacting video standards achievable in a consumer television today".[84][85][86]
+On January 14, 2013, Blu-ray Disc Association president Andy Parsons stated that a task force created three months ago is studying an extension to the Blu-ray Disc specification that would add support for 4K Ultra HD video.[87][88]
+On January 25, 2013, the BBC announced that the BBC Natural History Unit will produce Survival which will be the first wildlife TV series to be filmed in 4K resolution. This was announced after the BBC had experimented with 8k during the London Olympics.[89][90]
+On January 27, 2013, Asahi Shimbun reported that 4K Ultra HD satellite broadcasts will start in Japan with the 2014 FIFA World Cup.[90][91][92] Japan's Ministry of Internal Affairs and Communications decided on this move to stimulate demand for 4K Ultra HD TVs.[90][91][92]
+On February 21, 2013, Sony announced that the PlayStation 4 will support 4K resolution output for photos and videos but games can not be rendered at that resolution.[93][94]
+On March 26, 2013, the Advanced Television Systems Committee (ATSC) announced a call of proposals for the ATSC 3.0 physical layer which states that the plan is for the system to support video with a resolution of 3840x2160 at 60 fps.[95][96][97][98]
+On April 11, 2013, Bulb TV created by Canadian serial entrepreneur Evan Kosiner became the first broadcaster to provide a 4K linear channel and VOD content to cable and satellite companies in North America.[99][100][101][102] The channel is licensed by the Canadian Radio-Television and Telecommunications Commission to provide educational content.[103]
+On April 19, 2013, SES announced the first Ultra HD transmission using the HEVC standard.[104][105][106] The transmission had a resolution of 3840x2160 and a bit rate of 20 Mbit/s.[104][105][106]
+On May 9, 2013, NHK and Mitsubishi Electric announced that they had jointly developed the first HEVC encoder for 8K Ultra HD TV, which is also called Super Hi-Vision (SHV).[107][108][109][110] The HEVC encoder supports the Main 10 profile at Level 6.1 allowing it to encode 10-bit video with a resolution of 7680x4320 at 60 fps.[107][108][109][110] The HEVC encoder has 17 3G-SDI inputs and uses 17 boards for parallel processing with each board encoding a row of 7680x256 pixels to allow for real time video encoding.[107][108][109][110] The HEVC encoder is compliant with draft 4 of the HEVC standard and has a maximum bit rate of 340 Mbit/s.[111] The HEVC encoder was shown at the NHK Science &amp; Technology Research Laboratories Open House 2013 that took place from 30 May to June 2.[107][109][112] At the NHK Open House 2013 the HEVC encoder used a bit rate of 85 Mbit/s which gives a compression ratio of 350:1.[113][114]
+On May 21, 2013, Microsoft announced the Xbox One which will support 4K resolution (3840×2160) video output and 7.1 surround sound.[115][116][117] Yusuf Mehdi, corporate vice president of marketing and strategy for Microsoft, has stated that there is no hardware restriction that would prevent Xbox One games from running at 4K resolution.[116]
+On May 30, 2013, Eye IO announced that their encoding technology was licensed by Sony Pictures Entertainment to deliver 4K Ultra HD video.[118][119] Eye IO encodes their video assets at 3840x2160 and includes support for the xvYCC color space.[118][119]
+In mid-2013, a China television manufacturer produced the first 50-inch UHD television set costing less than $1,000.[120]
+On June 11, 2013, Comcast announced that they had demonstrated the first public U.S. based delivery of 4K Ultra HD video at the 2013 NCTA show.[121][122] The demonstration included segments from Oblivion, Defiance, and nature content sent over a DOCSIS 3.0 network.[122]
+On June 13, 2013, ESPN announced that they would end the broadcast of the ESPN 3D channel by the end of the year and that they will "experiment with things like UHDTV".[123]
+On June 26, 2013, Sharp announced the LC-70UD1U which is a 70&#160;in (180&#160;cm) 4K Ultra HD TV.[124][125] The LC-70UD1U is the world's first TV with THX 4K certification.[124][125]
+On July 2, 2013, Jimmy Kimmel Live! recorded in 4K Ultra HD a performance by musical guest Karmin and the video clip will be used as demonstration material at Sony stores.[126]
+On July 3, 2013, Sony announced the release of their 4K Ultra HD Media Player with a price of US$7.99 for rentals and US$29.99 for purchases.[127][128] The 4K Ultra HD Media Player only works with Sony's 4K Ultra HD TVs.[128]
+On July 15, 2013, the CEA announced the publication of CEA-861-F which is a standard that can be used by interfaces such as DVI, HDMI, and LVDS.[129] CEA-861-F adds support for several Ultra HD video formats and additional color spaces.[129]
+On September 2, 2013 Acer announced the first smartphone dubbed Liquid S2 capable of recording 4K.[130]
+On September 4, 2013, the HDMI Forum announced the release of the HDMI 2.0 specification which can support 4K resolution at 60 fps.[131] On the same day Panasonic announced the Panasonic TC-L65WT600 which will be the first 4K TV to support 4K resolution at 60 fps.[132][133] The Panasonic TC-L65WT600 will have a 65&#160;in (170&#160;cm) screen, support for DisplayPort 1.2a, support for HDMI 2.0, an expected ship date of October, and a suggested retail price of US$5,999.[132][133]
+On September 12–17, 2013,[134] at the 2013 IBC Conference in Amsterdam, Nagra introduced a Ultra HD User Interface called Project Ultra based on HTML 5 which works with OpenTV 5.[135]
+On October 4, 2013, DigitalEurope, announced the requirements for their UHD logo in Europe.[136] The DigitalEurope UHD logo will require that the display support a resolution of at least 3840x2160, a 16:9 aspect ratio, the Rec. 709 (HDTV) color space, 8-bit video, 24p/25p/30p/50p/60p frame rates, and 2 channel audio.[136]
+On October 29, 2013, Elemental Technologies announced support for real-time 4K Ultra HD HEVC video processing. Elemental provided live video streaming of the 2013 Osaka Marathon on October 27, 2013, in a workflow designed by K-Opticom, a telecommunications operator in Japan. Live coverage of the race in 4K Ultra HD was available to viewers at the International Exhibition Center in Osaka. This transmission of 4K Ultra HD HEVC video in real-time was an industry-first.[137]
+On November 28, 2013, Organizing Committee of the XXII Olympic Winter Games and XI Paralympic Winter Games 2014 in Sochi chief Dmitri Chernyshenko stated that the 2014 Olympic Winter Games are to be filmed in 8K Super Hi-Vision.[138]
+On December 25, 2013, YouTube added a "2160p 4K" option to its videoplayer. Previously, a visitor had to select the "original" setting in the video quality menu in order to watch a video in 4K resolution. With the new setting, YouTube users can much more easily identify and play 4K videos.[139]
+On December 30, 2013, Samsung announced availability of its 110-inch Ultra HDTV for custom orders, making this the world's largest Ultra HDTV so far.[140]
+2014[edit]
+On January 22, 2014, European Southern Observatory became the first scientific organization to deliver Ultra HD footage at regular intervals.[141]
+On May 6, 2014, France announced[142] DVB-T2 tests in Paris for Ultra HD HEVC broadcast with objectives to replace by 2020 the current DVB-T MPEG4 HD national broadcast.
+On May 26, 2014, satellite operator Eutelsat announced[143] the launch of Europe's first Ultra HD demo channel in HEVC, broadcasting at 50 frames/second. The channel is available on the Hot Bird satellites and can be watched by viewers with 4k TVs equipped with DVB-S2 demodulators and HEVC decoders.
+In June 2014, the FIFA World Cup of that year (held in Brazil) became the first to be shot entirely in Ultra HD, by Sony. The European Broadcasting Union (EBU) broadcast matches of the FIFA World Cup to audiences in North America, Latin America, Europe and Asia in Ultra HD via SES' NSS-7 and SES-6 satellites.[144] Indian satellite TV provider unveils its plan to launch 4k UHD service early in 2015 and showcased live FIFA World Cup quarter final match in 4k UHD through Sony Entertainment Television Sony SIX.[145]
+On June 24, 2014, the CEA announced that it has updated the guidelines for Ultra High-Definition and released guidelines for Connected Ultra High-Definition which adds support for internet video delivered using HEVC.[146][147] The CEA is developing a UHD logo for voluntary use by companies that have products which meet the CEA guidelines.[146][147] The CEA also clarified that "Ultra High-Definition", "Ultra HD", or "UHD" can be used with other modifiers and gave an example with "Ultra High-Definition TV 4K".[146][147]
+On July 15, 2014, Researchers from the University of Essex both captured and delivered its graduation ceremonies in 4kUHDTV over the internet using H.264 in realtime.[148][149] The 4K video stream was published at 8 Mbit/s and 14 Mbit/s for all its 11 ceremonies (till July 19), with people viewing in from countries such as Cyprus, Bulgaria, Germany, Australia, UK and others.
+On September 4, 2014, Canon Inc. announced that with a firmware upgrade they will add support for the Rec. 2020 color space to their EOS C500 and EOS C500 PL camera models and their DP-V3010 4K display.[150][151]
+On September 4, 2014, Microsoft announced a firmware update for the Microsoft Lumia 1020, 930, Icon, and 1520 phones that adds 4k video recording. The update was later released by the individual phone carriers over the following weeks and months after the announcement.[152]
+On September 5, 2014, the Blu-ray Disc Association announced that the 4K Blu-ray Disc specification will support 4K video at 60 fps, High Efficiency Video Coding, the Rec. 2020 color space, high dynamic range, and 10-bit color depth.[153][154] 4K Blu-ray Disc will have a data rate of at least 50 Mbit/s and may include support for 66/100 GB discs.[153][154] 4K Blu-ray Disc will be licensed in the spring or summer of 2015 and 4K Blu-ray Disc players have an expected release date of late 2015.[153][154]
+On September 5, 2014, DigitalEurope released their Ultra HD logo for companies that meet their technical requirements.[155][156][157]
+On September 11, 2014 satellite operator SES announced the first Ultra HD conditional access-protected broadcast using DVB standards at the IBC show in Amsterdam. The demonstration used a Samsung Ultra HD TV, with a standard Kudelski SmarDTV CI Plus conditional access module, to decrypt a full 3840x2160 pixel CAS-protected Ultra HD signal in HEVC broadcast via an SES Astra satellite at 19.2°E.[158]
+On November 19, 2014, rock band Linkin Park's concert at Berlin's O2 World Arena was broadcast live in Ultra HD via an Astra 19.2°E satellite. The broadcast was encoded in the UHD 4K standard with the HEVC codec (50 frame per second and a 10 bit colour depth), and was a joint enterprise of satellite owner SES, SES Platform Services and Samsung.[159]
+2015[edit]
+Indian satellite pay TV provider Tata Sky launched UHD service and UHD Set Top Box on 9 January 2015. The service is 4Kp50 and price of UHD box is ₹5900 for existing SD/HD customers and ₹6400 for new customers. Cricket World Cup 2015 will be telecast live in 4K for free to those who own Tata Sky's UHD 4K STB.
+In May 2015, France Télévisions broadcast matches from Roland Garros live in Ultra HD via the EUTELSAT 5 West A satellite in the HEVC standard. The channel “France TV Sport Ultra HD” was available via the Fransat platform for viewers in France.[160]
+In May, satellite operator SES announced that Europe's first free-to-air Ultra HD channel (from Germany's pearl.tv shopping channel) will launch in September 2015, broadcast in native Ultra HD via the Astra 19.2°E satellite position.[161]
+In June, SES launched its first Ultra HD demonstration channel for cable operators and content distributors in North America to prepare their systems and test their networks for Ultra HD delivery. The channel is broadcast from the SES-3 satellite at 103°W.[162]
+In June, SPI International previewed its “4K FunBox UHD” Ultra HD channel on the HOT BIRD 4K1 channel, in advance of its commercial launch on Eutelsat’s HOT BIRD satellites in the autumn.[163]
+In July 2015, German HD satellite broadcaster HD+ and TV equipment manufacturer TechniSat announced an Ultra HD TV set with integrated decryption for reception of existing HD+ channels (available in the Autumn) and a new Ultra HD demonstration channel due to begin broadcasting in September.[164]
+On 2 August 2015, The FA community shield in England was broadcast in ultra HD by broadcast company BT Sport, becoming the first English football game to be shown in the Ultra HD format. The match was shown on Europe's first ultra hd channel, BT Sport Ultra HD.[165]
+Fashion One 4K launched on September 2, 2015 becoming the first global Ultra HD TV channel. Reaching nearly 370 million households across the World, the fashion, lifestyle and entertainment network broadcasts via satellite from Measat at 91.5°E (for Asia Pacific, Middle East, Australia) and from SES satellites Astra 19.2°E (for Europe), SES-3 at 103°W (for North America), NSS-806 at 47.5°W (for South America).[166]
+In September 2015, Eutelsat presented new consumer research, conducted by TNS and GfK, on Ultra HD and screen sales in key TV markets. The study looked at consumer exposure to Ultra HD, perceived benefits and willingness to invest in equipment and content. GfK predicts a 200% increase in Ultra HD screen sales from June to December 2015, with sales expected to reach five million by the end of the year. GfK also forecasts that Ultra HD screens in 2020 will represent more than 70% of total sales across Europe and almost 60% in the Middle East and North Africa.[167]
+On 2 September 2015, Sony unveiled the Xperia Z5 Premium; the first smartphone with a 4K display.[168]
+On 9 September 2015, Apple Inc. announced that their new smartphone the iPhone 6s will be able to record video in 4K.[169]
+On 6 October 2015, Microsoft unveiled the latest version of their hybrid laptop-tablet Microsoft Surface Pro 4 with a display of "over 6 million pixels", as well as the Microsoft Surface Book with a similar screen, and their new phones the Microsoft Lumia 950 and 950 XL which, aside from 4k video recording that their predecessors included, feature a display of "over 5 million pixels". ).[170]
+Field trials of UHDTV over DTT networks[edit]
+Field trials have included the following.[171]
+
+
+Type
+Country
+Transmitter site
+Covering
+ERP
+DTT System
+Channel Bandwidth
+Transmission Mode
+Multiplex Capacity
+Signal bit rate
+Video Encoding Standard
+Picture Standard
+Audio Encoding Standard
+Center Frequency Used
+
+
+8K-UHD
+Japan[172]
+NHK Hitoyoshi Station
+City of Hitoyoshi
+140W(H)
+135W(V)
+
+ISDB-T
+6&#160;MHz
+32k
+GI= 1/32 4096QAM FEC 3/4 dual-polarized MIMO
+
+91.8 Mbit/s
+91.0 Mbit/s
+MPEG-4
+AVC/H.264
+
+7680 x 4320p
+59.94frame/s 8 bits/pixel
+
+MPEG-4 AAC
+384 kbit/s
+
+671&#160;MHz
+(Ch 46 in Japan)
+
+
+
+8K-UHD
+Korea (Republic of)
+Technical Research Institute Building of Korean Broadcasting System (KBS)
+Yeoeuido, Seoul
+1&#160;mW(H)
+1&#160;mW(V)
+
+-
+6&#160;MHz
+2k
+GI= 1/16 256QAM FEC 3/4 dual-polarized MIMO
+
+50.475 Mbit/s
+50.0 Mbit/s
+HEVC
+-
+-
+785&#160;MHz
+(Ch 66 in Korea)
+
+
+
+4K-UHD
+Korea (Republic of)
+Gwanaksan
+South Metropolitan area,of Seoul
+36.7&#160;kW
+DVB-T2
+6&#160;MHz
+32k extended mode
+GI = 1/16 PP4 256 QAM FEC 3/4, 4/5, 5/6
+
+&lt; 35.0 Mbit/s
+Variable
+(some trials at 25~34 Mbit/s)
+
+HEVC Main10
+Level 5.1 Max 28 Mbit/s
+
+3840x2160p
+60 frames/s 8 bits or 10 bits/pixel
+
+MPEG-4 AAC-LC
+or Dolby AC-3
+Max 5.1Ch Max 600 kbit/s
+
+761&#160;MHz (Ch 62 in Korea)
+
+
+12.9&#160;kW
+701&#160;MHz
+(Ch 52 in Korea)
+
+
+
+40.0&#160;kW
+707&#160;MHz
+(Ch 53 in Korea)
+
+
+
+Namsan
+Central area of Seoul
+2.2&#160;kW
+761&#160;MHz (Ch 62 in Korea)
+
+
+Yongmunsan
+West Metropolitan area of,Seoul
+8.3&#160;kW
+707&#160;MHz
+(Ch 53 in Korea)
+
+
+
+4K-UHD
+France
+Eiffel Tower
+City of Paris
+1&#160;kW
+DVB-T2
+8&#160;MHz
+32k extended mode, GI = 1/128, 256QAM,
+FEC2/3, PP7
+
+40.2 Mbit/s
+Two programmes carried:
+one at 22.5 Mbit/s, one at,17.5 Mbit/s
+
+HEVC
+3840x2160p,
+50 frames/s, 8 bits/pixel
+
+HE-AAC 192 kbit/s
+514&#160;MHz
+(Ch26 in Region 1)
+
+
+
+4K-UHD
+Spain
+ETSI Tele-comunicación
+Ciudad Universitaria Madrid
+125W
+DVB-T2
+8&#160;MHz
+32k, extended mode, GI = 1/128, 64QAM, FEC5/6, PP7
+36.72 Mbit/s
+35 Mbit/s, (other bit rates also tested)
+HEVC
+3840x2160p,
+50 frames/s, 8 bits/pixel
+
+E-AC-3 5.1
+754&#160;MHz, (Ch56 in Region 1)
+
+
+4K-UHD
+Sweden
+Stockholm Nacka
+City of Stockholm
+35&#160;kW
+DVB-T2
+8&#160;MHz
+32k, extended mode, GI =,19/256, 256QAM, FEC3/5, PP4
+31.7 Mbit/s
+24 Mbit/s
+HEVC
+3840x2160p
+29.97 frames/s, 8 bits/pixel
+
+
+618&#160;MHz (Ch 39 in Region 1)
+
+
+4K-UHD
+United Kingdom[173]
+Crystal Palace
+Greater London,(serving over 4.5 Million households)
+40,kW
+DVB-T2
+8&#160;MHz
+32k, extended mode,
+GI = 1/128, 256QAM, FEC 2/3, PP7
+
+40.2 Mbit/s
+Variable (some trials at 35 Mbit/s)
+HEVC
+Mixture of 3840x2160p,50 frames/s and 3840x2160p,59.94 frames/s,Most of the trial at 8 bits/pixel, some at 10 bits/pixel
+
+586&#160;MHz,(Ch 35 in Region 1)
+
+
+4K-UHD
+Winter Hill
+North-west of England, including Manchester and Liverpool (serving 2.7 Million households)
+22.5,kW
+DVB-T2
+
+602&#160;MHz,(Ch 37 in Region 1)
+
+
+4K-UHD
+Black Hill
+Central Scotland, including Glasgow and Edinburgh (serving 1 Million households)
+39,kW
+DVB-T2
+
+586&#160;MHz,(Ch 35 in Region 1)
+
+
+4K-UHD
+Czech Republic[174]
+Žižkov Television Tower
+Prague
+-
+DVB-T2
+8&#160;MHz
+-
+-
+-
+HEVC
+3840x2160p
+-
+706&#160;MHz (Ch50 in Region 1)
+
+
+Status of standardization of UHDTV[edit]
+Standards that deal with UHDTV include:
+Standardization in ITU-R[edit]
+Standards approved in ITU-R:
+
+Rec. ITU-R BT.1201-1 (2004)[175]
+Rec. ITU-R BT.1769 (2006)[176]
+Rec. ITU-R BT.2020 (2012, revised 2014)[16][177]
+Rec. ITU-R BT.2035-0 (07/13) A reference viewing environment for evaluation of HDTV program material or completed programmes
+Rec. ITU-R BS.2051-0 (02/14) Advanced sound system for programme production
+
+Other documents prepared or being prepared by ITU-R:
+
+Report ITU-R BT.2246-3 (2014) The present state of ultra-high definition television
+Draft New Report ITU-R BT.[UHDTV-DTT TRIALS] (Sub-Working Group 6A-1) Collection of field trials of UHDTV over DTT networks[171]
+
+Standardization in ITU-T and MPEG[edit]
+Standards developed in ITU-T's VCEG and ISO/IEC JTC 1's MPEG that support Ultra-HD include:
+
+H.265/MPEG-H HEVC High Efficiency Video Coding (2013, revised 2014)
+H.264/MPEG-4 AVC Advanced Video Coding (support for Ultra-HD added circa 2013)
+
+Standardization in SMPTE[edit]
+
+SMPTE 2036-1 (2009)[178]
+SMPTE 2036-2 (2008)[179]
+SMPTE 2036-3 (2010)[180]
+
+Standardization for Europe[edit]
+DVB approved the Standard TS 101 154 V2.1.1, published (07/2014) in the DVB Blue Book A157 Specification for the use of Video and Audio Coding in Broadcasting Applications based on the MPEG-2 Transport Stream, which is expected to be published by ETSI in the coming months.
+Standardization for Korea[edit]
+Standards for UHDTV in Korea have been developed by its Telecommunications Technology Association.
+On August 30, 2013, the scenarios for 4K-UHDTV service were described in the Report "TTAR 07.0011: A Study on the UHDTV Service Scenarios and its Considerations".
+On May 22, 2014, the technical report "TTAR-07.0013: Terrestrial 4K UHDTV Broadcasting Service" was published.
+On October 13, 2014, an interim standard – "TTAI.KO-07.0123: Transmission and Reception for Terrestrial UHDTV Broadcasting Service" – was published based on HEVC encoding, with MPEG 2 TS, and DVB-T2 serving as the standards.
+See also[edit]
+
+22.2 surround sound – The audio component of Super Hi-Vision
+4K resolution – Resolutions of common 4K formats and list of 4K-monitors, TVs, projectors
+8K resolution – Specifications for ~8x4K UHD and 8Kx8K fulldome
+High Efficiency Video Coding (HEVC)
+IMAX – A film theater format that historically has been innovative in creating a more realistic viewing experience
+Rec. 709 – ITU-R Recommendation for HDTV
+Rec. 2020 – ITU-R Recommendation for UHDTV
+VP9 / WebM
+
+Notes[edit]
+
+
+^ The resulting lines in the image alternate between pixels from the green-1 and red CCDs, and pixels from the blue and green-2 CCDs.
+
+
+References[edit]
+
+
+^ "What is Ultra HDTV?", Ultra HDTV Magazine, retrieved October 27, 2013&#160;
+^ "The Ultimate Guide to 4K Ultra HD", Ultra HDTV Magazine, retrieved October 27, 2013&#160;
+^ a b "Ultra High Definition Television: Threshold of a new age". ITU. May 24, 2012. Retrieved July 31, 2012.&#160;
+^ a b c "4K and 8K UHDTV defined". EBU Technical. May 19, 2012. Retrieved July 31, 2012.&#160;
+^ a b c "UHDTV to be name for both 4K and 8K television standard?". Techradar. May 28, 2012. Retrieved July 31, 2012.&#160;
+^ a b Johnston, Casey (January 9, 2013). "Whatever happened to 4K? The rise of "Ultra HD" TV". Ars Technica. Retrieved January 12, 2013.&#160;
+^ a b Drawbaugh, Benjamin 'Ben' (January 11, 2013). "Ultra HD TVs stole the show at CES 2013, but they're just part of the puzzle". Engadget. Retrieved January 8, 2013.&#160;
+^ a b c d "'Super Hi-Vision' as Next-Generation Television and Its Video Parameters". Information Display. Retrieved December 27, 2012.&#160;
+^ a b "Super Hi-Vision: The Next Generation of TV". JP: NHK. Retrieved January 12, 2013.&#160;
+^ Arlen, Gary (January 6, 2013). "Ultra High-Def TV: Super-Sizing An Immersive Experience". Consumer Electronics Association. Retrieved January 17, 2013.&#160;
+^ "Super Hi-Vision Production Devices for Mobile". NHK. Retrieved May 18, 2013.&#160;
+^ "The international standard for Super Hi-Vision TV". NHK. August 23, 2012. Retrieved August 29, 2012.&#160;
+^ http://www.pcworld.com/article/2089720/japans-nhk-tests-longdistance-8k-tv-broadcast-signal.html
+^ Latest "Research Activities of NHK Science and Technical Research Laboratories" Check |url= scheme (help) (PDF), SET Open House (PDF)|format= requires |url= (help), BR: Dibeg, 2002&#160;
+^ "Progress on Large, Wide-screen Image Presentation" (PDF), Broadcast Technology (JP: NHK STRL) (18), Spring 2004&#160;
+^ a b c "BT.2020: Parameter values for ultra high-definition television systems for production and international programme exchange". ITU. August 23, 2012. Retrieved August 24, 2012.&#160;
+^ "IBM Introduces World's Highest-Resolution Computer Monitor" (Press release). IBM. 2001-06-27. Archived from the original on May 28, 2012. Retrieved 2012-03-09.&#160;
+^ a b c d Kanazawa, M; et al. (2003). "Ultrahigh-Definition Video System with 4000 Scanning Lines" (PDF). NHK. Archived from the original (PDF) on April 1, 2012. Retrieved December 11, 2012.&#160;
+^ Takayanagi, I; et al. (February 2003). "A 1-1/4-inch 8.3 M Pixel Digital Output CMOS APS for UDTV Application". Proc. IEEE Int. Solid-State Circuits Conf (San Francisco, CA).&#160;
+^ Sangani, Kris (October 11, 2008). "A game of leapfrog". Engineering &amp; Technology 3 (17): 8. doi:10.1049/et:20081720. ISSN&#160;1750-9637. Retrieved October 31, 2008.&#160;
+^ "Ultra HD draws crowds, interest at NAB2006". BroadcastEngineering HD Technology Update e-newsletter. May 2, 2006. Archived from the original on February 4, 2007. Retrieved February 14, 2007.&#160;
+^ Forrester, Chris (November 2008). "INSIGHT - Super HD: Technology Jump?". satmagazine.com. Satnews Publishers. Archived from the original on January 2, 2014. Retrieved June 28, 2014.&#160;
+^ a b "World's First Live Relay Experiment of Super Hi-Vision" (PDF). NHK. Retrieved December 11, 2012.&#160;
+^ "Super Hi-Vision live relay over IP". JP: NHK. April 3, 2007. Retrieved January 15, 2008.&#160;
+^ a b "Beyond HD". Broadcast Engineering. November 1, 2010. Retrieved May 11, 2012.&#160;
+^ a b Hoffmann, Hans (March 1, 2011). "More pixels, More immersive television experience" (PDF) (7). EBU Technical. pp.&#160;8–9. Retrieved May 11, 2012.&#160;
+^ a b c Sugawara, Masayuki. "Super Hi-Vision" (PDF). CH: EBU Technical. p.&#160;5. Retrieved December 21, 2012.&#160;
+^ "Aptina Imaging introduces new high-performance CMOS sensor for high-definition broadcasting video camera" (Press release).&#160;
+^ "IBC Plans Two HD Firsts". AVS Forums. September 18, 2008. Retrieved October 3, 2008.&#160;
+^ "Live super-HD TV to debut at IBC". UK: Broadcast Now. May 27, 2008. Retrieved October 3, 2008.&#160;
+^ "'Historic' broadcast of super HD from UK to Japan". News (UK: BBC). September 29, 2010.&#160;
+^ "Sharp and NHK SHV display demonstrations". En gadget. May 19, 2011.&#160;
+^ "Sharp and NHK Successfully Develop 85-Inch Direct-View LCD Compatible with Super Hi-Vision, a World First". Sharp. May 19, 2011. Retrieved October 5, 2012.&#160;
+^ Wood, David (December 1, 2011). "Beyond HDTV AT ITU-R" (PDF) (10). CH: EBU Technical. p.&#160;14. Retrieved May 11, 2012.&#160;
+^ Websteron, Andrew (February 23, 2012). "NHK developing 8K ultra HD image sensor that shoots at 120 fps". The Verge. Retrieved May 11, 2012.&#160;
+^ "NHK develops 8K camera sensor with 120FPS video". Electronista. February 25, 2012. Retrieved May 11, 2012.&#160;
+^ "Information". NHK. February 23, 2012. Retrieved May 11, 2012.&#160;
+^ "145-inch Ultra High Definition plasma display". DIGINFO TV. April 28, 2012. Retrieved August 1, 2012.&#160;
+^ a b "Progression of 3DTV and Ultra High Definition Television". Technical Review. June 1, 2012. p.&#160;27. Retrieved September 22, 2012.&#160;
+^ a b c Jun Ji-youn (July 24, 2012). "UHDTV Broadcasting Tested by Terrestrial Stations". etnews.com. Retrieved September 22, 2012.&#160;
+^ a b c d "World's first Ultra High Definition shoulder-mount camera". DIGINFO TV. May 23, 2012. Retrieved August 1, 2012.&#160;
+^ a b c d "NHK 33 Megapixel 120fps Ultra High Definition imaging system". DIGINFO TV. May 25, 2012. Retrieved August 1, 2012.&#160;
+^ "120 Hz Super Hi-Vision Image Sensor". NHK. Retrieved October 5, 2012.&#160;
+^ "BBC: World's largest broadcaster &amp; Most trusted media brand".&#160;
+^ Sweney, Mark (August 28, 2011). "BBC plans to use 3D and 'super hi-vision' for London Olympics". The Guardian (London).&#160;
+^ "London's digital Olympics". The Telegraph. Retrieved August 23, 2012.&#160;
+^ "Sony releases world's first 4K home theater projector". gizmag.com. May 31, 2012. Retrieved August 29, 2012.&#160;
+^ "Sony 4K home theater projector". sony.com. December 19, 2011. Retrieved August 29, 2012.&#160;
+^ "Projector Central". projectorcentral.com. August 29, 2012. Retrieved August 29, 2012.&#160;
+^ "B &amp; H Photo Video". bhphotovideo.com. February 29, 2012. Retrieved August 29, 2012.&#160;
+^ "LG launches world's first 84-inch UD 3D TV with unparallel picture quality". LG Newsroom. August 22, 2012. Retrieved August 24, 2012.&#160;
+^ Alabaster, Jay (August 23, 2012). "TV with 16 times resolution of HDTV passed by UN standards body". Techworld. Retrieved August 24, 2012.&#160;
+^ a b c Giardina, Carolyn (September 15, 2012). "Forget HDTV, Because Ultra-HDTV Is on the Horizon". The Hollywood Reporter. Retrieved September 16, 2012.&#160;
+^ "David Wood, Contributor to 8K TV System Recommendation, to Receive SMPTE Progress Medal". The Hollywood Reporter. September 3, 2012. Retrieved September 16, 2012.&#160;
+^ "Awards: EBU department deputy head recognised as technology leader". EBU. September 12, 2011. Retrieved September 16, 2012.&#160;
+^ a b "Consumer Electronics Industry Announces Ultra High-Definition". Consumer Electronics Association. October 18, 2012. Retrieved October 20, 2012.&#160;
+^ a b Winslow, George (October 18, 2012). "CEA Votes for Ultra High-Definition". Broadcasting &amp; Cable. Retrieved October 20, 2012.&#160;
+^ a b Tribbey, Chris (October 18, 2012). "Consumer Electronics Association Gives 4K a Name". Home Media Magazine. Retrieved October 22, 2012.&#160;
+^ a b Mlot, Stephanie (October 19, 2012). "4K Technology Renamed 'Ultra High-Definition'". PC Magazine. Retrieved December 11, 2012.&#160;
+^ Dante D'Orazio (October 19, 2012). "Sony bucks Ultra High-Definition name, to use '4K UHD' instead". theverge.com. Retrieved October 22, 2012.&#160;
+^ a b "Announce"World's smallest size 4K2K"Color TFT LCD". Ortustech. October 23, 2012. Retrieved October 27, 2012.&#160;
+^ a b Saeki, Shinya (October 25, 2012). "Japanese Firm Announces 'World's Smallest' 4k2k LCD Panel". Tech-On. Retrieved October 27, 2012.&#160;
+^ a b "Ortus shows 9.6-inch LCD panel with 4K resolution". Electronista. October 25, 2012. Retrieved October 27, 2012.&#160;
+^ a b Lawler, Richard (September 6, 2012). "LG's 84-inch 4K ultra high definition TV goes on sale in the US next month for $19,999". Engadget. Retrieved October 26, 2012.&#160;
+^ a b Snider, Mike (October 25, 2012). "New Ultra HD TVs arrive in stores". USA Today. Retrieved October 26, 2012.&#160;
+^ a b Jacobson, Julie (October 25, 2012). "Street Price set at $16,999 for LG's 84-in 4K Ultra HD TV". CEPro. Retrieved October 26, 2012.&#160;
+^ a b c "Sony's First Collection of 4K Ultra HD Content for the Home Now Available For Consumers". Sony. November 29, 2012. Retrieved November 29, 2012.&#160;
+^ a b c "Sony's First Collection of 4K Ultra HD Content for the Home Now Available For Consumers". PRNewswire. November 29, 2012. Retrieved November 29, 2012.&#160;
+^ a b c Lawler, Richard (November 29, 2012). "Sony's 4K Ultra HD Video Player revealed, COO Phil Molyneux tells us what 'only Sony can do'". Engadget. Retrieved November 29, 2012.&#160;
+^ a b c d e "REDRAY 4K Cinema Player". Red Digital Cinema. November 30, 2012. Retrieved December 1, 2012.&#160;
+^ Lawler, Richard (November 30, 2012). "Redray 4K Cinema Player is ready to pre-order: $1,450 for high-res, high framerate home viewing". Engadget. Retrieved December 7, 2012.&#160;
+^ Williams, Martyn (January 6, 2013). "Japan's NHK eyes 8K TV broadcasting from 2016". PC World. Retrieved January 23, 2013.&#160;
+^ a b c d "Eutelsat Launches Europe's First Dedicated Ultra HD (4K) Channel". PRNewswire. January 7, 2013. Retrieved January 8, 2013.&#160;
+^ a b c d "Eutelsat Launches Europe's First Dedicated Ultra HD (4K) Channel" (PDF). Eutelsat. January 7, 2013. Retrieved January 8, 2013.&#160;
+^ a b c d Drawbaugh, Ben (January 14, 2013). "First Ultra HD channel goes live in Europe". Engadget. Retrieved January 15, 2013.&#160;
+^ a b c d Hunter, Philip (January 11, 2013). "Eutelsat provides Europe's first ultra HD channel". Broadcast Engineering. Retrieved January 15, 2013.&#160;
+^ Talluri, Raj (January 7, 2013). "Snapdragon 800 Series and 600 Processors Unveiled". Qualcomm. Retrieved January 10, 2013.&#160;
+^ Lanxon, Nate (January 8, 2013). "Mobiles that capture 4K 'Ultra HD' coming this year, confirms Qualcomm CEO". Wired (website). Retrieved January 10, 2013.&#160;
+^ Osborne, Charlie (January 8, 2013). "Qualcomm unveils Snapdragon 800 chips, aimed at 'premium' mobiles". ZDNet. Retrieved January 10, 2013.&#160;
+^ a b "BCM7445". Broadcom. Retrieved January 8, 2013.&#160;
+^ a b "Broadcom Unveils World's First UltraHD TV Home Gateway Chip". Broadcom. January 8, 2013. Retrieved January 8, 2013.&#160;
+^ a b Volpe, Joseph (January 8, 2013). "Broadcom's new ARM-based chip boosts Ultra HD TV into living rooms of the future". Engadget. Retrieved January 8, 2013.&#160;
+^ a b Takahashi, Dean (January 8, 2013). "Broadcom unveils first Ultra HD TV home gateway chip". VentureBeat. Retrieved January 8, 2013.&#160;
+^ a b "THX Unveils New 4K Certification Program for Ultra High-Definition Displays". THX. January 8, 2013. Retrieved January 12, 2013.&#160;
+^ a b "THX Unveils New 4K Certification Program for Ultra High-Definition Displays". Yahoo! Finance. January 8, 2013. Retrieved January 12, 2013.&#160;
+^ a b "THX Unveils New 4K Certification Program for Ultra High-Definition Displays". Business Wire. January 8, 2013. Retrieved January 12, 2013.&#160;
+^ Melissa J. Perenson (January 14, 2013). "Blu-ray looks ahead to 4K". PC World. Retrieved January 17, 2013.&#160;
+^ Halfacree, Gareth (January 16, 2013). "Ultra HD Blu-ray discs being researched by the BDA". expertreviews.co.uk. Retrieved January 17, 2013.&#160;
+^ Burrell, Ian (January 25, 2013). "HD? 3D? No, the future of television is 4K – and it's brought to you by some very sharp meerkats". The Independent. Retrieved January 28, 2013.&#160;
+^ a b c Solomon, Kate (January 28, 2013). "Meerkats to go Ultra HD in BBC's first 4K broadcast". TechRadar. Retrieved January 28, 2013.&#160;
+^ a b Smith, Tony (January 28, 2013). "Japan promised Ultra HD TV broadcasts two years early". The Register. Retrieved January 28, 2013.&#160;
+^ a b Bilton, Ricardo (January 27, 2013). "Japan wants to bring 4K Ultra HD broadcasts to televisions by next year". VentureBeat. Retrieved January 28, 2013.&#160;
+^ Fletcher, JC (February 21, 2013). "PS4 will output video in 4K, but not games". Joystiq. Retrieved February 21, 2013.&#160;
+^ Alexa Ray Corriea (February 21, 2013). "PS4 will support 4K for 'personal contents' like photos, but not games". Polygon (website). Retrieved February 21, 2013.&#160;
+^ "Call for Proposals for ATSC-3.0 Physical Layer" (PDF). Advanced Television Systems Committee. March 26, 2013. Retrieved April 15, 2013.&#160;
+^ "Advanced Television Systems Committee Invites Proposals for Next-Generation TV Broadcasting Technologies". Advanced Television Systems Committee. March 26, 2013. Retrieved April 15, 2013.&#160;
+^ "ATSC seeks proposals for ATSC 3.0 physical layer". Broadcast Engineering. March 27, 2013. Retrieved April 15, 2013.&#160;
+^ Lung, Doug (March 28, 2013). "ATSC Seeks Next-Gen TV Physical Layer Proposals". TV Technology. Retrieved April 15, 2013.&#160;
+^ "Canadian Serial Entrepreneur to Launch First 4,000-pixel Television Signal, Bulb TV". 11 April 2013. Retrieved 12 November 2013.&#160;
+^ "Young media mogul granted TV licence". 12 April 2013. Retrieved 12 November 2013.&#160;
+^ "Canadian Cat B Channel Plans 4K Video Feed". 16 April 2013. Retrieved 12 November 2013.&#160;
+^ "Bulb TV to turn on 4k". 12 April 2013. Retrieved 12 November 2013.&#160;
+^ Kosiner, Evan (May 4, 2012). "Broadcasting Decision CRTC 2012-268" (PDF). CRTC.gc.ca. Canadian Radio-television and Telecommunications Commission. Retrieved March 13, 2015.&#160;
+^ a b "SES to pioneer first Ultra HD transmission in new standard at SES Industry Days". SES S.A. April 19, 2013. Retrieved April 19, 2013.&#160;
+^ a b "SES to pioneer first Ultra HD transmission in new standard at SES Industry Days". Yahoo Finance. April 19, 2013. Retrieved April 19, 2013.&#160;
+^ a b Grotticelli, Michael (April 19, 2013). "SES UltraHD transmission via satellite and HEVC compression successful". Broadcast Engineering. Retrieved April 19, 2013.&#160;
+^ a b c d "NHK and Mitsubishi Develop First HEVC encoder for 8K Super Hi-Vision". CDRinfo. May 9, 2013. Retrieved May 9, 2013.&#160;
+^ a b c Fingas, Jon (May 9, 2013). "NHK and Mitsubishi develop the first H.265 encoder for 8K video". Engadget. Retrieved May 9, 2013.&#160;
+^ a b c d "NHK and Mitsubishi Electric Corporation successfully develop World's First HEVC encoder for 8K "Super Hi-Vision"" (PDF). Mitsubishi Electric. May 9, 2013. Retrieved May 9, 2013.&#160;
+^ a b c "NHK and Mitsubishi Electric Corporation Successfully Develop World's First HEVC Encoder for 8K "Super Hi-Vision"". Finance (Yahoo). May 9, 2013. Retrieved May 9, 2013.&#160;
+^ "Super Hi-Vision HEVC Real-time Encoder". NHK. Retrieved May 17, 2013.&#160;
+^ "Open House". NHK. 2013. Retrieved May 9, 2013.&#160;
+^ "8K Ultra HD compact camera and H.265 encoder developed by NHK with UHD trial broadcasts slated for 2016". Diginfo TV. May 31, 2013. Retrieved June 5, 2013.&#160;
+^ "8K Ultra HD compact camera and H.265 encoder developed by NHK #DigInfo". YouTube. May 31, 2013. Retrieved June 5, 2013.&#160;
+^ Sakr, Sharif (May 21, 2013). "Xbox One Hardware and Specs: 8-Core CPU, 8&#160;GB RAM, 500&#160;GB Hard Drive and More". Engadget. Retrieved May 21, 2013.&#160;
+^ a b Hickey, Matthew 'Matt' (May 21, 2013). "Microsoft's Mehdi: Xbox One Can Do 4K Gaming; More Original Content Coming". Forbes. Retrieved May 21, 2013.&#160;
+^ Shilov, Anton (May 21, 2013). "Microsoft Unveils Xbox One: The One and Only Machine One Needs in the Living Room". Xbit. Retrieved May 21, 2013.&#160;
+^ a b "eyeIO Delivers Unprecedented Viewing Experience for Sony Pictures Content on Sony 4K UltraHD TVs". Eye IO. May 30, 2013. Retrieved June 5, 2013.&#160;
+^ a b Sprangler, Todd (May 30, 2013). "Sony Gears Up for 4K Ultra HD Internet Movie Service". Variety. Retrieved June 5, 2013.&#160;
+^ Fox Van Allen. "Meet the First 4K TV to Cost Under $1,000". Retrieved March 16, 2014.&#160;
+^ "Comcast Harnesses the Power of Its Network to Demonstrate the Future of Broadband Speed and 4K Ultra HD Video". MarketWatch. June 11, 2013. Retrieved June 14, 2013.&#160;
+^ a b Werner, Anthony 'Tony' (June 11, 2013). "Comcast Debuts First Public U.S.-Based Delivery of 4K Ultra HD at NCTA 2013". Comcast. Retrieved June 14, 2013.&#160;
+^ Gross, Douglas 'Doug' (June 11, 2013). "With ESPN out, is 3-D TV dead?". CNN. Retrieved June 14, 2013.&#160;
+^ a b "Sharp® Unveils AQUOS® Ultra HD LED TV". PRNewswire. June 26, 2013. Retrieved June 27, 2013.&#160;
+^ a b "Sharp Unveils First THX-Certified Ultra HD TV". Home Theater. June 26, 2013. Retrieved June 27, 2013.&#160;
+^ Giardina, Carolyn (July 3, 2013). "'Jimmy Kimmel Live' Films Karmin Performance in 'Ultra HD'". The Hollywood Reporter. Retrieved July 3, 2013.&#160;
+^ Katie (July 3, 2013). "Announcing: Sony's First All 4K Ultra HD Media Player and Content Download Service". Sony. Retrieved July 9, 2013.&#160;
+^ a b Welch, Chris (July 3, 2013). "Sony's 4K Ultra HD player now available, rentals to cost $7.99 with purchases priced at $29.99". The Verge. Retrieved July 9, 2013.&#160;
+^ a b "CEA Announces Publication of New DTV Interface Standard". Business Wire. July 15, 2013. Retrieved July 17, 2013.&#160;
+^ "4K video recording with a mobile: Acer Liquid S2 6 phablet arrives", Phone arena&#160;
+^ "HDMI Forum releases version 2.0 of the HDMI specification". HDMI forum. September 4, 2013. Retrieved September 4, 2013.&#160;
+^ a b Hide, Nicholas 'Nick' (September 4, 2013). "Panasonic 65WT600 4K Ultra HD TV is the first to boast HDMI 2.0 and 60fps". CNET. Retrieved September 4, 2013.&#160;
+^ a b Teoh, Vincent (September 4, 2013). "Panasonic TX-L65WT600 is world's first 4K TV with HDMI 2.0". HDTVtest. Retrieved September 4, 2013.&#160;
+^ "IBC2014 - IBC2013 Conference Dates". ibc.org. 17 April 2014. Archived from the original on 17 April 2014. Retrieved 17 April 2014.&#160;
+^ Winslow, George (September 16, 2013). "IBC: Nagra Demoes Project Ultra". broadcastingcable.com. Archived from the original on April 17, 2014. Retrieved April 17, 2014. OpenTV&#160;
+^ a b Wheatley, Michael 'Mike' (October 4, 2013). "4K TVs Allowed To Display UHD Logo Without Ultra HD Colour Space". HDTVtest. Retrieved October 19, 2013.&#160;
+^ "Elemental Technologies hails world's first real-time 4K HEVC transmission". Europe: Sports Video Group. October 30, 2013. Retrieved November 7, 2013.&#160;
+^ Tass telecom, RU&#160;
+^ "YouTube Adds "2160p 4K" Option To Video Quality Settings". December 25, 2013. Retrieved January 21, 2014.&#160;
+^ "Samsung's 110-inch Ultra HDTV is the world's largest, and it goes on sale Monday". Retrieved December 30, 2013.&#160;
+^ "Ultra HD Adds a New Dimension to ESO Videos". ESO Announcement. Retrieved 6 February 2014.&#160;
+^ http://www.csa.fr/Espace-juridique/Decisions-du-CSA/Ultra-haute-definition-UHD-reponse-au-HD-Forum
+^ http://www.eutelsat.com/en/news/press-releases/2014/Eutelsat-launches-ultra-hd-demo-channel-HEVC.html
+^ "SES AND EBU BROADCAST 2014 FIFA WORLD CUP IN ULTRA HD" (Press release). SES. June 17, 2014. Retrieved June 29, 2014.&#160;
+^ http://indianexpress.com/article/technology/technology-others/tata-sky-unveils-plans-for-4k-set-top-box/
+^ a b c "CEA Updates Characteristics for Ultra High-Definition Displays". Consumer Electronics Association. June 24, 2014. Retrieved August 16, 2014.&#160;
+^ a b c "CEA Expands Ultra HD TV Terminology". TWICE. July 7, 2014. Retrieved August 16, 2014.&#160;
+^ "Live 4K Ultra-High Definition Graduation". 21 July 2014: i++ School Newsletter. Retrieved 24 July 2015.&#160;
+^ "Essex scientists give insight into future of ultra-HDTV live stream technology". Events at Essex. http://www.essex.ac.uk/events/event.aspx?e_id=6720.&#160; Missing or empty |url= (help); |access-date= requires |url= (help)
+^ "Free Canon Firmware for Cinema EOS System Cameras Delivers Improved Basic Performance, Including Support for ITU-R BT.2020 Color Space". MarketWatch. September 4, 2014. Retrieved September 6, 2014.&#160;
+^ "Free Canon Firmware Upgrade for DP-V3010 30-Inch 4K Professional Display Enables Confirmation of ITU-R BT.2020 Color Gamut Video Content". Business Wire. September 4, 2014. Retrieved September 6, 2014.&#160;
+^ "Lumia Denim firmware announced by Microsoft, brings 4K-quality video and more". Windows Central. Retrieved 4 September 2014.&#160;
+^ a b c "4K Blu-ray discs arriving in 2015 to fight streaming media". CNET. September 5, 2014. Retrieved September 6, 2014.&#160;
+^ a b c "BDA Updates Blu-ray 4K Timeline". Home Media Magazine. September 5, 2014. Retrieved September 6, 2014.&#160;
+^ "DIGITALEUROPE launches Ultra High Definition logo for new generation of screens on 5 September at IFA". DigitalEurope. September 5, 2014. Retrieved September 6, 2014.&#160;
+^ "Technical Requirements". DigitalEurope. Retrieved September 6, 2014.&#160;
+^ "DIGITALEUROPE launches Ultra High Definition logo for new generation of screens". DTG. September 5, 2014. Retrieved September 6, 2014.&#160;
+^ "SES, SMARDTV and Samsung Demonstrate World's First Ultra HD CAS-Protected Broadcast Service using UVD Standards" (Press release). SES. September 11, 2014. Retrieved October 28, 2014.&#160;
+^ "SES and Samsung Mark Ultra HD's First – With Live Broadcast of Linkin Park Concert via Satellite" (Press release). SES. November 12, 2014. Retrieved November 30, 2014.&#160;
+^ FRANSAT et France Télévisions s’associent pour retransmettre partout en France la chaîne événementielle «&#160;France TV Sport Ultra HD&#160;»
+^ "EUROPE'S FIRST FREE-TO-AIR ULTRA HD CHANNEL TO BROADCAST ON ASTRA 19.2 DEGREES EAST" (Press release). SES. 20 May 2015. Retrieved 22 May 2015.&#160;
+^ SES launches Ultra HD demo channel in North America IP&amp;TV Nerws. June 17, 2015. Accessed June 28, 2015
+^ SPI International previews “4K FunBox UHD” Ultra HD channel in advance of commercial launch at Eutelsat’s HOT BIRD position
+^ "HD+ UNVEILS FIRST HD+ EMBEDDED UHD TV AND ANNOUNCES NEW DEMO UHD CHANNEL" (Press release). SES. July 9, 2015. Retrieved August 30, 2015.&#160;
+^ [1] IB times UK.
+^ Fashion One 4K channel launches globally Digital TV Europe September 2, 2015. Retrieved September 29, 2015
+^ http://news.eutelsat.com/pressreleases/eutelsat-reveals-new-consumer-research-on-ultra-hd-and-data-on-skyrocketing-screen-sales-in-key-tv-markets-1216550
+^ http://blogs.sonymobile.com/press_release/sony-unveils-xperia-z5-series/
+^ http://www.theverge.com/2015/9/9/9261591/apple-iphone-6s-announced-specs-price-release-date
+^ [2] Microsoft.com October 6, 2015. Retrieved October 6, 2015
+^ a b "ITU-R WP6A Temporary Document 223 Draft new Report ITU-R BT.[UHDTV-DTT TRIALS] - Collection of field trials of UHDTV over DTT networks". Retrieved February 19, 2015.&#160;
+^ "8K (Super Hi-Vision) Long-distance transmission test is successfully achieved" (PDF). Retrieved February 3, 2014.&#160;
+^ Layton, Phil (25 June 2014). "BBC R&amp;D Ultra-High Definition Trials". BBC. Retrieved 2014-03-25.&#160;
+^ "Czech republic begins UltraHD trial broadcasting over DVB-T2". Retrieved May 19, 2014.&#160;
+^ "BT.1201-1: Extremely high resolution imagery". ITU. March 1, 2004. Retrieved November 4, 2012.&#160;
+^ "BT.1769: Parameter values for an expanded hierarchy of LSDI image formats for production and international programme exchange". ITU. July 1, 2006. Retrieved November 4, 2012.&#160;
+^ "CEA Updates Characteristics for Ultra High-Definition Displays". CEA. Retrieved June 24, 2014.&#160;
+^ "ST 2036-1-2009". SMPTE. Retrieved November 5, 2012.&#160;
+^ "ST 2036-2-2008". SMPTE. Retrieved November 5, 2012.&#160;
+^ "ST 2036-3-2010". SMPTE. Retrieved November 5, 2012.&#160;
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Ultra High Definition Television.
+
+
+
+4K TV Mag - an online magazine about Ultra HD TV
+"What is 4K Ultra HD?" - 4K TV Mag
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Broadcast video formats
+
+
+
+
+
+
+
+
+
+
+&#160;
+Television
+
+
+
+
+
+
+
+
+
+
+
+Analog
+
+
+
+
+
+
+525 lines
+
+
+
+
+NTSC
+
+System M
+
+
+NTSC-J
+PAL-M
+
+System M
+
+
+
+
+
+
+
+
+
+
+
+625 lines
+
+
+
+
+PAL
+
+System B
+System D
+System G
+System H
+System I
+System K
+
+
+PAL-N
+PALplus
+SECAM
+
+System B
+System D
+System G
+System K
+System L
+
+
+
+
+
+
+
+
+
+
+
+Audio
+
+
+
+
+BTSC (MTS)
+EIAJ
+NICAM
+SAP
+Sound-in-Syncs
+Zweiton (A2/IGR)
+
+
+
+
+
+
+
+
+
+Hidden signals
+
+
+
+
+Captioning
+CGMS-A
+EPG
+GCR
+PDC
+Teletext
+VBI
+VEIL
+VIT
+VITC
+WSS
+XDS
+
+
+
+
+
+
+
+
+
+Historical
+
+
+
+
+Pre-1940
+Mechanical television
+180-line
+405-line
+
+System A
+
+
+441-line
+819-line
+MAC
+MUSE
+
+
+
+
+
+
+
+
+
+
+
+
+Digital
+
+
+
+
+
+
+Interlaced
+
+
+
+
+SDTV
+
+480i
+576i
+
+
+HDTV
+
+1080i
+
+
+
+
+
+
+
+
+
+
+
+Progressive
+
+
+
+
+LDTV
+
+1seg
+240p
+288p
+
+
+EDTV
+
+480p
+576p
+
+
+HDTV
+
+720p
+1080p
+
+
+UHDTV
+
+2160p
+4320p
+
+
+
+
+
+
+
+
+
+
+
+MPEG-2 standards
+
+
+
+
+ATSC
+DVB
+ISDB
+DTMB
+DVB 3D-TV
+
+
+
+
+
+
+
+
+
+MPEG-4 AVC standards
+
+
+
+
+ATSC A/72
+DMB
+DTMB
+DVB
+SBTVD
+1seg
+
+
+
+
+
+
+
+
+
+Audio
+
+
+
+
+AC-3 (5.1)
+DTS
+MPEG-1 Audio Layer II
+MPEG Multichannel
+PCM
+LPCM
+AAC
+HE-AAC
+
+
+
+
+
+
+
+
+
+Hidden signals
+
+
+
+
+AFD
+Broadcast flag
+Captioning
+CPCM
+EPG
+Teletext
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Technical issues
+
+
+
+
+
+
+
+
+
+14:9 compromise
+Broadcast-safe
+Digital cinema (DCI)
+Display motion blur
+Moving image formats
+MPEG transport stream
+Reverse Standards Conversion
+Standards conversion
+Television transmitter
+Video on demand
+Video processing
+Widescreen signaling
+Templates (Analogue TV Topics)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Computer display standards
+
+
+
+
+
+
+Video hardware
+
+
+
+MDA (1981)
+CGA (1981)
+Orchid Graphics Adapter (1982)
+Hercules (1982)
+Plantronics Colorplus (1982)
+Tandy (1984)
+PGC (1984)
+EGA (1984)
+MCGA (1987)
+VGA (1987)
+8514 (1987)
+SVGA (1987)
+TIGA (1989)
+XGA (1990)
+
+
+
+
+Size comparison
+
+
+
+
+
+
+
+Display resolutions
+
+
+
+160×120
+240×160
+320×200
+320×240
+480×320
+640×200
+640×350
+640×400
+640×480
+720x348
+800×600
+1024×768
+1280×800
+1366×768
+1152×864
+1280×1024
+1400×1050
+1920×1080
+2048×1152
+1600×1200
+1920×1200
+2048×1536
+2560×1600
+2560×2048
+3200×2400
+4096×3072
+5120×4096
+6400×4096
+6400×4800
+7680×4800
+
+
+
+
+
+
+
+
+Widescreen variants
+
+
+
+432×240
+800×480
+854×480
+1024×576
+1280×720
+1280×768
+1366×900
+1440×900
+1600×900
+1680×945
+1680×1050
+1920×1080
+2560×1440
+3200×2048
+3840×2160
+3200×2400
+5120x2880
+5120×3200
+5760x3240
+6400×4096
+7680×4320
+15360x8640
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Digital video resolutions
+
+
+
+
+
+
+Designation
+
+
+
+
+Usage examples
+Definition (lines)
+Rate (Hz)
+
+
+Interlaced (fields)
+Progressive (frames)
+
+
+
+
+
+
+
+
+
+Low,
+MP@LL
+
+
+
+
+LDTV, VCD, HTV
+240, 288 (SIF)
+&#160;
+24, 30; 25
+
+
+
+
+
+
+
+
+
+Standard,
+MP@ML
+
+
+
+
+SDTV, SVCD, DVD, DV
+480 (NTSC), 576 (PAL)
+60, 50
+24, 30; 25
+
+
+
+
+
+
+
+
+
+Enhanced,
+HMP@HML
+
+
+
+
+EDTV
+480 (NTSC-HQ), 576
+&#160;
+60, 50
+
+
+
+
+
+
+
+
+
+High,
+MP@HL
+
+
+
+
+HDTV, BD, HD DVD, HDV
+720
+&#160;
+24, 30, 60; 25, 50
+
+
+1080
+25, 30
+24, 50, 60
+
+
+
+
+
+
+
+
+
+Ultra-high
+
+
+
+
+UHDTV
+2160, 4320
+&#160;
+60, 120,180
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+High-definition (HD)
+
+
+
+
+
+
+Concepts
+
+
+
+High-definition television
+High-definition video
+Ultra-high-definition television
+
+
+
+
+
+
+
+
+Analog broadcast
+(All defunct)
+
+
+
+819 line system
+HD MAC
+MUSE (Hi-Vision)
+
+
+
+
+
+
+
+
+Digital broadcast
+
+
+
+ATSC
+DMB-T/H
+DVB
+ISDB
+SBTVD
+
+
+
+
+
+
+
+
+Audio
+
+
+
+Dolby Digital
+Surround sound
+DSD
+DXD
+DTS
+
+
+
+
+
+
+
+
+Filming and storage
+
+
+
+DCI
+HDV
+
+
+
+
+
+
+
+
+HD media and
+compression
+
+
+
+Blu-ray
+CBHD
+D-VHS
+DVD-Audio
+H.264
+HD DVD
+HD VMD
+MPEG-2
+MVC
+Super Audio CD
+Uncompressed
+VC-1
+
+
+
+
+
+
+
+
+Connectors
+
+
+
+Component
+DisplayPort
+DVI
+HDMI
+VGA
+
+
+
+
+
+
+
+
+Deployments
+
+
+
+List of digital television deployments by country
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Ultra-high-definition_television&amp;oldid=692004087"					
+				Categories: Emerging standardsFilm and video technologyVideo formatsHidden categories: Pages using citations with format and no URLPages with URL errorsPages using web citations with no URLPages using citations with accessdate and no URLUse mdy dates from January 2014Articles needing cleanup from March 2014All pages needing cleanupArticles with sections that need to be turned into prose from March 2014Wikipedia articles in need of updating from August 2015All Wikipedia articles in need of updatingCommons category with local link different than on Wikidata				
+							
+		
+		
+			

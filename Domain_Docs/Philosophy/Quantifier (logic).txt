@@ -1,0 +1,621 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Quantifier (logic)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Quantification (logic))
+												
+					Jump to:					navigation, 					search
+				
+				In logic, quantification is a construct that specifies the quantity of specimens in the domain of discourse that satisfy an open formula. For example, in arithmetic, it allows the expression of the statement that every natural number has a successor. A language element which generates a quantification (such as "every") is called a quantifier. The resulting expression is a quantified expression, it is said to be quantified over the predicate (such as "the natural number x has a successor") whose free variable is bound by the quantifier. In formal languages, quantification is a formula constructor that produces new formulas from old ones. The semantics of the language specifies how the constructor is interpreted. Two fundamental kinds of quantification in predicate logic are universal quantification and existential quantification. The traditional symbol for the universal quantifier "all" is "∀", a rotated letter "A", and for the existential quantifier "exists" is "∃", a rotated letter "E". These quantifiers have been generalized beginning with the work of Mostowski and Lindström.
+Quantification is used as well in natural languages; examples of quantifiers in English are for all, for some, many, few, a lot, and no; see Quantifier (linguistics) for details.
+
+
+
+Contents
+
+
+1 Mathematics
+2 Algebraic approaches to quantification
+3 Notation
+4 Nesting
+5 Equivalent expressions
+6 Range of quantification
+7 Formal semantics
+8 Paucal, multal and other degree quantifiers
+9 Other quantifiers
+10 History
+11 See also
+12 References
+13 External links
+
+
+
+Mathematics[edit]
+Consider the following statement:
+
+1 · 2 = 1 + 1, and 2 · 2 = 2 + 2, and 3 · 2 = 3 + 3, ..., and 100 · 2 = 100 + 100, and ..., etc.
+
+This has the appearance of an infinite conjunction of propositions. From the point of view of formal languages this is immediately a problem, since syntax rules are expected to generate finite objects. The example above is fortunate in that there is a procedure to generate all the conjuncts. However, if an assertion were to be made about every irrational number, there would be no way to enumerate all the conjuncts, since irrationals cannot be enumerated. A succinct formulation which avoids these problems uses universal quantification:
+
+For each natural number n, n · 2 = n + n.
+
+A similar analysis applies to the disjunction,
+
+1 is equal to 5 + 5, or 2 is equal to 5 + 5, or 3 is equal to 5 + 5, ... , or 100 is equal to 5 + 5, or ..., etc.
+
+which can be rephrased using existential quantification:
+
+For some natural number n, n is equal to 5+5.
+
+Algebraic approaches to quantification[edit]
+It is possible to devise abstract algebras whose models include formal languages with quantification, but progress has been slow and interest in such algebra has been limited. Three approaches have been devised to date:
+
+Relation algebra, invented by Augustus De Morgan, and developed by Charles Sanders Peirce, Ernst Schröder, Alfred Tarski, and Tarski's students. Relation algebra cannot represent any formula with quantifiers nested more than three deep. Surprisingly, the models of relation algebra include the axiomatic set theory ZFC and Peano arithmetic;
+Cylindric algebra, devised by Alfred Tarski, Leon Henkin, and others;
+The polyadic algebra of Paul Halmos.
+
+Notation[edit]
+The two most common quantifiers are the universal quantifier and the existential quantifier. The traditional symbol for the universal quantifier is "∀", an inverted letter "A", which stands for "for all" or "all". The corresponding symbol for the existential quantifier is "∃", a rotated letter "E", which stands for "there exists" or "exists".
+An example of translating a quantified English statement would be as follows. Given the statement, "Each of Peter's friends either likes to dance or likes to go to the beach", we can identify key aspects and rewrite using symbols including quantifiers. So, let X be the set of all Peter's friends, P(x) the predicate "x likes to dance", and lastly Q(x) the predicate "x likes to go to the beach". Then the above sentence can be written in formal notation as , which is read, "for every x that is a member of X, P applies to x or Q applies to x."
+Some other quantified expressions are constructed as follows,
+
+
+
+for a formula P. These two expressions (using the definitions above) are read as "there exists a friend of Peter who likes to dance" and "all friends of Peter like to dance" respectively. Variant notations include, for set X and set members x:
+
+
+
+All of these variations also apply to universal quantification. Other variations for the universal quantifier are
+
+
+
+Some versions of the notation explicitly mention the range of quantification. The range of quantification must always be specified; for a given mathematical theory, this can be done in several ways:
+
+Assume a fixed domain of discourse for every quantification, as is done in Zermelo–Fraenkel set theory,
+Fix several domains of discourse in advance and require that each variable have a declared domain, which is the type of that variable. This is analogous to the situation in statically typed computer programming languages, where variables have declared types.
+Mention explicitly the range of quantification, perhaps using a symbol for the set of all objects in that domain or the type of the objects in that domain.
+
+One can use any variable as a quantified variable in place of any other, under certain restrictions in which variable capture does not occur. Even if the notation uses typed variables, variables of that type may be used.
+Informally or in natural language, the "∀x" or "∃x" might appear after or in the middle of P(x). Formally, however, the phrase that introduces the dummy variable is placed in front.
+Mathematical formulas mix symbolic expressions for quantifiers, with natural language quantifiers such as
+
+For every natural number x, ....
+There exists an x such that ....
+For at least one x.
+
+Keywords for uniqueness quantification include:
+
+For exactly one natural number x, ....
+There is one and only one x such that ....
+
+Further, x may be replaced by a pronoun. For example,
+
+For every natural number, its product with 2 equals to its sum with itself
+Some natural number is prime.
+
+Nesting[edit]
+The order of quantifiers is critical to meaning, as is illustrated by the following two propositions:
+
+For every natural number n, there exists a natural number s such that s = n2.
+
+This is clearly true; it just asserts that every natural number has a square. The meaning of the assertion in which the quantifiers are turned around is different:
+
+There exists a natural number s such that for every natural number n, s = n2.
+
+This is clearly false; it asserts that there is a single natural number s that is at the same time the square of every natural number. This is because the syntax directs that any variable cannot be a function of subsequently introduced variables.
+A less trivial example from mathematical analysis are the concepts of uniform and pointwise continuity, whose definitions differ only by an exchange in the positions of two quantifiers. A function f from R to R is called
+
+pointwise continuous if ∀ε&gt;0 ∀x∈R ∃δ&gt;0 ∀h∈R (|h| &lt; δ → |f(x) – f(x + h)| &lt; ε)
+uniformly continuous if ∀ε&gt;0 ∃δ&gt;0 ∀x∈R ∀h∈R (|h| &lt; δ → |f(x) – f(x + h)| &lt; ε)
+
+In the former case, the particular value chosen for δ can be a function of both ε and x, the variables that precede it. In the latter case, δ can be a function only of ε, i.e. it has to be chosen independent of x. For example, f(x) = x2 satisfies pointwise, but not uniform continuity. In contrast, interchanging the two initial universal quantifiers in the definition of pointwise continuity does not change the meaning.
+The maximum depth of nesting of quantifiers inside a formula is called its quantifier rank.
+Equivalent expressions[edit]
+If D is a domain of x and P(x) is a predicate dependent on x, then the universal proposition can be expressed as
+
+
+
+This notation is known as restricted or relativized or bounded quantification. Equivalently,
+
+
+
+The existential proposition can be expressed with bounded quantification as
+
+
+
+or equivalently
+
+
+
+Together with negation, only one of either the universal or existential quantifier is needed to perform both tasks:
+
+
+
+which shows that to disprove a "for all x" proposition, one needs no more than to find an x for which the predicate is false. Similarly,
+
+
+
+to disprove a "there exists an x" proposition, one needs to show that the predicate is false for all x.
+Range of quantification[edit]
+Every quantification involves one specific variable and a domain of discourse or range of quantification of that variable. The range of quantification specifies the set of values that the variable takes. In the examples above, the range of quantification is the set of natural numbers. Specification of the range of quantification allows us to express the difference between, asserting that a predicate holds for some natural number or for some real number. Expository conventions often reserve some variable names such as "n" for natural numbers and "x" for real numbers, although relying exclusively on naming conventions cannot work in general since ranges of variables can change in the course of a mathematical argument.
+A more natural way to restrict the domain of discourse uses guarded quantification. For example, the guarded quantification
+
+For some natural number n, n is even and n is prime
+
+means
+
+For some even number n, n is prime.
+
+In some mathematical theories a single domain of discourse fixed in advance is assumed. For example, in Zermelo–Fraenkel set theory, variables range over all sets. In this case, guarded quantifiers can be used to mimic a smaller range of quantification. Thus in the example above to express
+
+For every natural number n, n·2 = n + n
+
+in Zermelo–Fraenkel set theory, it can be said
+
+For every n, if n belongs to N, then n·2 = n + n,
+
+where N is the set of all natural numbers.
+Formal semantics[edit]
+Mathematical Semantics is the application of mathematics to study the meaning of expressions in a formal language. It has three elements: A mathematical specification of a class of objects via syntax, a mathematical specification of various semantic domains and the relation between the two, which is usually expressed as a function from syntactic objects to semantic ones. This article only addresses the issue of how quantifier elements are interpreted.
+Given a model theoretical logical framework, the syntax of a formula can be given by a syntax tree. Quantifiers have scope and a variable x is free if it is not within the scope of a quantification for that variable. Thus in
+
+
+
+the occurrence of both x and y in C(y,x) is free.
+
+
+
+
+Syntactic tree illustrating scope and variable capture
+
+
+An interpretation for first-order predicate calculus assumes as given a domain of individuals X. A formula A whose free variables are x1, ..., xn is interpreted as a boolean-valued function F(v1, ..., vn) of n arguments, where each argument ranges over the domain X. Boolean-valued means that the function assumes one of the values T (interpreted as truth) or F (interpreted as falsehood). The interpretation of the formula
+
+
+
+is the function G of n-1 arguments such that G(v1, ...,vn-1) = T if and only if F(v1, ..., vn-1, w) = T for every w in X. If F(v1, ..., vn-1, w) = F for at least one value of w, then G(v1, ...,vn-1) = F. Similarly the interpretation of the formula
+
+
+
+is the function H of n-1 arguments such that H(v1, ...,vn-1) = T if and only if F(v1, ...,vn-1, w) = T for at least one w and H(v1, ..., vn-1) = F otherwise.
+The semantics for uniqueness quantification requires first-order predicate calculus with equality. This means there is given a distinguished two-placed predicate "="; the semantics is also modified accordingly so that "=" is always interpreted as the two-place equality relation on X. The interpretation of
+
+
+
+then is the function of n-1 arguments, which is the logical and of the interpretations of
+
+
+
+
+Paucal, multal and other degree quantifiers[edit]
+See also: Fubini's theorem and measurable
+None of the quantifiers previously discussed apply to a quantification such as
+
+There are many integers n &lt; 100, such that n is divisible by 2 or 3 or 5.
+
+One possible interpretation mechanism can be obtained as follows: Suppose that in addition to a semantic domain X, we have given a probability measure P defined on X and cutoff numbers 0 &lt; a ≤ b ≤ 1. If A is a formula with free variables x1,...,xn whose interpretation is the function F of variables v1,...,vn then the interpretation of
+
+
+
+is the function of v1,...,vn-1 which is T if and only if
+
+
+
+and F otherwise. Similarly, the interpretation of
+
+
+
+is the function of v1,...,vn-1 which is F if and only if
+
+
+
+and T otherwise.[citation needed]
+Other quantifiers[edit]
+A few other quantifiers have been proposed over time. In particular, the solution quantifier,[1] noted § (section sign) and read "those". For example:
+
+
+
+is read "those n in N such that n2 ≤ 4 are in {0,1,2}." The same construct is expressible in set-builder notation:
+
+
+
+Some other quantifiers sometimes used in mathematics include:
+
+There are infinitely many elements such that...
+For all but finitely many elements... (sometimes expressed as "for almost all elements...").
+There are uncountable many elements such that...
+For all but countably many elements...
+For all elements in a set of positive measure...
+For all elements except those in a set of measure zero...
+
+History[edit]
+Term logic, also called Aristotelian logic, treats quantification in a manner that is closer to natural language, and also less suited to formal analysis. Term logic treated All, Some and No in the 4th century BC, in an account also touching on the alethic modalities.
+Gottlob Frege, in his 1879 Begriffsschrift, was the first to employ a quantifier to bind a variable ranging over a domain of discourse and appearing in predicates. He would universally quantify a variable (or relation) by writing the variable over a dimple in an otherwise straight line appearing in his diagrammatic formulas. Frege did not devise an explicit notation for existential quantification, instead employing his equivalent of ~∀x~, or contraposition. Frege's treatment of quantification went largely unremarked until Bertrand Russell's 1903 Principles of Mathematics.
+In work that culminated in Peirce (1885), Charles Sanders Peirce and his student Oscar Howard Mitchell independently invented universal and existential quantifiers, and bound variables. Peirce and Mitchell wrote Πx and Σx where we now write ∀x and ∃x. Peirce's notation can be found in the writings of Ernst Schröder, Leopold Loewenheim, Thoralf Skolem, and Polish logicians into the 1950s. Most notably, it is the notation of Kurt Gödel's landmark 1930 paper on the completeness of first-order logic, and 1931 paper on the incompleteness of Peano arithmetic.
+Peirce's approach to quantification also influenced William Ernest Johnson and Giuseppe Peano, who invented yet another notation, namely (x) for the universal quantification of x and (in 1897) ∃x for the existential quantification of x. Hence for decades, the canonical notation in philosophy and mathematical logic was (x)P to express "all individuals in the domain of discourse have the property P," and "(∃x)P" for "there exists at least one individual in the domain of discourse having the property P." Peano, who was much better known than Peirce, in effect diffused the latter's thinking throughout Europe. Peano's notation was adopted by the Principia Mathematica of Whitehead and Russell, Quine, and Alonzo Church. In 1935, Gentzen introduced the ∀ symbol, by analogy with Peano's ∃ symbol. ∀ did not become canonical until the 1960s.
+Around 1895, Peirce began developing his existential graphs, whose variables can be seen as tacitly quantified. Whether the shallowest instance of a variable is even or odd determines whether that variable's quantification is universal or existential. (Shallowness is the contrary of depth, which is determined by the nesting of negations.) Peirce's graphical logic has attracted some attention in recent years by those researching heterogeneous reasoning and diagrammatic inference.
+See also[edit]
+
+
+
+
+Logic portal
+
+
+
+
+Generalized quantifier — a higher-order property used as standard semantics of quantified noun phrases
+Lindström quantifier — a generalized polyadic quantifier
+Quantifier elimination
+
+References[edit]
+
+^ Hehner, Eric C. R., 2004, Practical Theory of Programming, 2nd edition, p. 28
+
+
+Barwise, Jon; and Etchemendy, John, 2000. Language Proof and Logic. CSLI (University of Chicago Press) and New York: Seven Bridges Press. A gentle introduction to first-order logic by two first-rate logicians.
+Frege, Gottlob, 1879. Begriffsschrift. Translated in Jean van Heijenoort, 1967. From Frege to Gödel: A Source Book on Mathematical Logic, 1879-1931. Harvard University Press. The first appearance of quantification.
+Hilbert, David; and Ackermann, Wilhelm, 1950 (1928). Principles of Mathematical Logic. Chelsea. Translation of Grundzüge der theoretischen Logik. Springer-Verlag. The 1928 first edition is the first time quantification was consciously employed in the now-standard manner, namely as binding variables ranging over some fixed domain of discourse. This is the defining aspect of first-order logic.
+Peirce, C. S., 1885, "On the Algebra of Logic: A Contribution to the Philosophy of Notation, American Journal of Mathematics, Vol. 7, pp. 180–202. Reprinted in Kloesel, N. et al., eds., 1993. Writings of C. S. Peirce, Vol. 5. Indiana University Press. The first appearance of quantification in anything like its present form.
+Reichenbach, Hans, 1975 (1947). Elements of Symbolic Logic, Dover Publications. The quantifiers are discussed in chapters §18 "Binding of variables" through §30 "Derivations from Synthetic Premises".
+Westerståhl, Dag, 2001, "Quantifiers," in Goble, Lou, ed., The Blackwell Guide to Philosophical Logic. Blackwell.
+Wiese, Heike, 2003. Numbers, language, and the human mind. Cambridge University Press. ISBN 0-521-83182-2.
+
+External links[edit]
+
+
+
+Look up quantification in Wiktionary, the free dictionary.
+
+
+
+Hazewinkel, Michiel, ed. (2001), "Quantifier", Encyclopedia of Mathematics, Springer, ISBN&#160;978-1-55608-010-4&#160;
+Stanford Encyclopedia of Philosophy:
+
+"Classical Logic — by Stewart Shapiro. Covers syntax, model theory, and metatheory for first order logic in the natural deduction style.
+"Generalized quantifiers" — by Dag Westerståhl.
+
+
+Peters, Stanley; Westerståhl, Dag (2002). "Quantifiers."
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Formal fallacies
+
+
+
+
+
+
+
+
+
+Masked man fallacy
+
+
+
+
+
+
+
+
+In propositional logic
+
+
+
+Affirming a disjunct
+Affirming the consequent
+Denying the antecedent
+Argument from fallacy
+False dilemma
+
+
+
+
+
+
+
+
+In quantificational logic
+
+
+
+Existential fallacy
+Illicit conversion
+Proof by example
+Quantifier shift
+
+
+
+
+
+
+
+
+Syllogistic fallacy
+
+
+
+Affirmative conclusion from a negative premise
+Exclusive premises
+Existential
+Necessity
+Four-term fallacy
+Illicit major
+Illicit minor
+Negative conclusion from affirmative premises
+Undistributed middle
+
+
+
+
+
+
+
+
+
+
+
+Other types of formal fallacy
+List of fallacies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Mathematical logic
+
+
+
+
+
+
+General
+
+
+
+Formal language
+Formation rule
+Formal system
+Deductive system
+Formal proof
+Formal semantics
+Well-formed formula
+Set
+Element
+Class
+Classical logic
+Axiom
+Natural deduction
+Rule of inference
+Relation
+Theorem
+Logical consequence
+Axiomatic system
+Type theory
+Symbol
+Syntax
+Theory
+
+
+
+
+
+
+
+
+Traditional logic
+
+
+
+Proposition
+Inference
+Argument
+Validity
+Cogency
+Syllogism
+Square of opposition
+Venn diagram
+
+
+
+
+
+
+
+
+
+Propositional
+calculus
+Boolean logic
+
+
+
+
+Boolean functions
+Propositional calculus
+Propositional formula
+Logical connectives
+Truth tables
+
+
+
+
+
+
+
+
+Predicate logic
+
+
+
+First-order
+Quantifiers
+Predicate
+Second-order
+Monadic predicate calculus
+
+
+
+
+
+
+
+
+Naive set theory
+
+
+
+Set
+Empty set
+Enumeration
+Extensionality
+Finite set
+Infinite set
+Subset
+Power set
+Countable set
+Uncountable set
+Recursive set
+Domain
+Range
+Map
+Function
+Relation
+Ordered pair
+
+
+
+
+
+
+
+
+Set theory
+
+
+
+Foundations of mathematics
+Zermelo–Fraenkel set theory
+Axiom of choice
+General set theory
+Kripke–Platek set theory
+Von Neumann–Bernays–Gödel set theory
+Morse–Kelley set theory
+Tarski–Grothendieck set theory
+
+
+
+
+
+
+
+
+Model theory
+
+
+
+Model
+Interpretation
+Non-standard model
+Finite model theory
+Truth value
+Validity
+
+
+
+
+
+
+
+
+Proof theory
+
+
+
+Formal proof
+Deductive system
+Formal system
+Theorem
+Logical consequence
+Rule of inference
+Syntax
+
+
+
+
+
+
+
+
+Computability
+theory
+
+
+
+Recursion
+Recursive set
+Recursively enumerable set
+Decision problem
+Church–Turing thesis
+Computable function
+Primitive recursive function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Quantifier_(logic)&amp;oldid=683804054"					
+				Categories: LogicPredicate logicQuantificationPhilosophical logicSemanticsHidden categories: All articles with unsourced statementsArticles with unsourced statements from June 2014				
+							
+		
+		
+			

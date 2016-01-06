@@ -1,0 +1,505 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Input/output (C++)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article has an unclear citation style. The references used may be made clearer with a different or consistent style of citation, footnoting, or external linking. Violates Wikipedia:External links: "Wikipedia articles may include links to web pages outside Wikipedia (external links), but they should not normally be used in the body of an article.". (June 2013)
+
+
+
+
+C++ Standard Library
+
+
+
+
+Input/output
+Strings
+
+
+
+
+Standard Template Library
+
+
+
+
+algorithm
+functional
+Sequence containers
+Associative containers
+Unordered associative containers
+
+
+
+
+C standard library
+
+
+
+
+Data types
+Character classification
+Strings
+Mathematics
+File input/output
+Date/time
+Localization
+Memory allocation
+Process control
+Signals
+Alternative tokens
+
+
+Miscellaneous headers:
+
+
+&lt;assert.h&gt;
+&lt;errno.h&gt;
+&lt;setjmp.h&gt;
+&lt;stdarg.h&gt;
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In the C++ programming language, Input/output library refers to a family of class templates and supporting functions in the C++ Standard Library that implement stream-based input/output capabilities.[1][2] It is an object-oriented alternative to C's FILE-based streams from the C standard library.[3][4]
+
+
+
+Contents
+
+
+1 Overview
+
+1.1 Header files
+
+
+2 Stream buffers
+3 Support classes
+
+3.1 Typedefs
+3.2 Formatting manipulators
+
+
+4 Input/output streams
+5 Output formatting
+
+5.1 Methods
+5.2 Manipulators
+
+
+6 Criticism
+7 Naming conventions
+8 Examples
+9 References
+10 External links
+
+
+
+Overview[edit]
+Most of the classes in the library are actually very generalized class templates. Each template can operate on various character types, and even the operations themselves, such as how two characters are compared for equality, can be customized. However, the majority of code needs to do input and output operations using only one or two character types, thus most of the time the functionality is accessed through several typedefs, which specify names for commonly used combinations of template and character type.
+For example, basic_fstream&lt;CharT,Traits&gt; refers to the generic class template that implements input/output operations on file streams. It is usually used as fstream which is an alias for basic_fstream&lt;char,char_traits&lt;char&gt;&gt;, or, in other words, basic_fstream working on characters of type char with the default character operation set.
+The classes in the library could be divided into roughly two categories: abstractions and implementations. Classes, that fall into abstractions category, provide an interface which is sufficient for working with any type of a stream. The code using such classes doesn't depend on the exact location the data is read from or is written to. For example, such code could write data to a file, a memory buffer or a web socket without a recompilation. The implementation classes inherit the abstraction classes and provide an implementation for concrete type of data source or sink. The library provides implementations only for file-based streams and memory buffer-based streams.
+The classes in the library could also be divided into two groups by whether it implements low-level or high-level operations. The classes that deal with low-level stuff are called stream buffers. They operate on characters without providing any formatting functionality. These classes are very rarely used directly. The high-level classes are called streams and provide various formatting capabilities. They are built on top of stream buffers.
+The following table lists and categorizes all classes provided by the input-output library.
+
+
+Class
+Explanation
+Typedefs
+
+
+Stream buffers (low level functionality)
+
+
+basic_streambuf
+provides abstract low level input/output interface, that can be implemented for concrete data sources or sinks. Rarely used directly.
+
+
+streambuf - operates on characters of type char
+wstreambuf - operates on characters of type wchar_t
+
+
+
+
+basic_filebuf
+implements low level input/output interface for file-based streams. Rarely used directly.
+
+
+filebuf - operates on characters of type char
+wfilebuf - operates on characters of type wchar_t
+
+
+
+
+basic_stringbuf
+implements low level input/output interface for string-based streams. Rarely used directly.
+
+
+stringbuf - operates on characters of type char
+wstringbuf - operates on characters of type wchar_t
+
+
+
+
+Support classes
+
+
+ios_base
+manages formatting information and exception state
+N/A
+
+
+basic_ios
+manages a stream buffer
+
+
+ios - operates on characters of type char
+wios - operates on characters of type wchar_t
+
+
+
+
+Input streams buffers (high level functionality)
+
+
+basic_istream
+wraps an abstract stream buffer and provides high level input interface, such as formatting capabilities.
+
+
+istream - operates on characters of type char
+wistream - operates on characters of type wchar_t
+
+
+
+
+basic_ifstream
+an input stream that wraps a file stream buffer. Provides functions to open or close a file in addition to those of generic input stream
+
+
+ifstream - operates on characters of type char
+wifstream - operates on characters of type wchar_t
+
+
+
+
+basic_istringstream
+an input stream that wraps a string stream buffer. Provides functions to access the underlying string in addition to those of generic input stream
+
+
+istringstream - operates on characters of type char
+wistringstream - operates on characters of type wchar_t
+
+
+
+
+Output streams buffers (high level functionality)
+
+
+basic_ostream
+wraps an abstract stream buffer and provides high level output interface, such as formatting capabilities.
+
+
+ostream - operates on characters of type char
+wostream - operates on characters of type wchar_t
+
+
+
+
+basic_ofstream
+an output stream that wraps a file stream buffer. Provides functions to open or close a file in addition to those of generic output stream
+
+
+ofstream - operates on characters of type char
+wofstream - operates on characters of type wchar_t
+
+
+
+
+basic_ostringstream
+an output stream that wraps a string stream buffer. Provides functions to access the underlying string in addition to those of generic output stream
+
+
+ostringstream - operates on characters of type char
+wostringstream - operates on characters of type wchar_t
+
+
+
+
+Input/output streams buffers (high level functionality)
+
+
+basic_iostream
+wraps an abstract stream buffer and provides high level input/output interface, such as formatting capabilities.
+
+
+iostream - operates on characters of type char
+wiostream - operates on characters of type wchar_t
+
+
+
+
+basic_fstream
+an input/output stream that wraps a file stream buffer. Provides functions to open or close a file in addition to those of generic input/output stream
+
+
+fstream - operates on characters of type char
+wfstream - operates on characters of type wchar_t
+
+
+
+
+basic_stringstream
+an input/output stream that wraps a string stream buffer. Provides functions to access the underlying string in addition to those of generic input/output stream
+
+
+stringstream - operates on characters of type char
+wstringstream - operates on characters of type wchar_t
+
+
+
+
+Header files[edit]
+The classes of the input/output library reside in several headers.
+
+&lt;ios&gt; contains the definitions of ios_base and basic_ios classes, that manage formatting information and the associated streambuffer.
+&lt;istream&gt; contains the definition of basic_istream class template, which implements formatted input
+&lt;ostream&gt; contains the definition of basic_ostream class template, which implements formatted output
+&lt;iostream&gt; contains the definition of basic_iostream class template, which implements formatted input and output
+&lt;fstream&gt; contains the definitions of basic_ifstream, basic_ofstream and basic_fstream class templates which implement formatted input, output and input/output on file streams.
+&lt;sstream&gt; contains the definitions of basic_istringstream, basic_ostringstream and basic_stringstream class templates which implement formatted input, output and input/output on string-based streams.
+&lt;iomanip&gt; contains formatting manipulators.
+&lt;iosfwd&gt; contains forward declarations of all classes in the input/output library.
+
+Stream buffers[edit]
+
+
+
+This section requires expansion. (March 2012)
+
+
+Support classes[edit]
+ios_base and basic_ios are two classes that manage the lower-level bits of a stream. ios_base stores formatting information and the state of the stream. basic_ios manages the associated stream-buffer. basic_ios is commonly known as simply ios or wios, which are two typedefs for basic_ios with a specific character type. basic_ios and ios_base are very rarely used directly by programmers. Usually, their functionality is accessed through other classes such as iostream which inherit them.[5][6]
+Typedefs[edit]
+
+
+Name
+description
+
+
+ios
+convenience typedef for a basic_ios working with characters of type char
+
+
+wios
+convenience typedef for a basic_ios working with characters of type wchar_t
+
+
+streamoff
+supports internal operations.
+
+
+streampos
+holds the current position of the buffer pointer or file pointer.
+
+
+wstreampos
+holds the current position of the buffer pointer or file pointer.
+
+
+streamsize
+specifies the size of the stream.
+
+
+Formatting manipulators[edit]
+
+
+Name
+Description
+
+
+boolalpha / noboolalpha
+specifies whether variables of type bool appear as true and false or as 0 and 1 in the stream.
+
+
+skipws / noskipws
+specifies whether the white space is skipped in input operations
+
+
+showbase / noshowbase
+specifies whether the notational base of the number is displayed
+
+
+showpoint / noshowpoint
+specifies whether to display the fractional part of a floating point number, when the fractional part is zero
+
+
+showpos / noshowpos
+specifies whether to display + for positive numbers
+
+
+unitbuf / nounitbuf
+specifies whether the output should be buffered
+
+
+uppercase / nouppercase
+specifies whether uppercase characters should be used in hexadecimal integer and floating-point output
+
+
+left / right / internal
+specifies how a number should be justified
+
+
+dec / oct/ hex
+specifies the notation an integer number should be displayed in
+
+
+fixed / scientific/
+hexfloat(C++11) /
+defaultfloat(C++11)
+specifies the notation a floating-point number should be displayed in
+
+
+Input/output streams[edit]
+
+
+
+
+
+This article may require cleanup to meet Wikipedia's quality standards. The specific problem is: Talks about a header, when it should talk about input/output streams. Please help improve this article if you can. (March 2012)
+
+
+C++ input/output streams are primarily defined by iostream, a header file that is part of the C++ standard library (the name stands for Input/Output Stream). In C++ and its predecessor, the C programming language, there is no special syntax for streaming data input or output. Instead, these are combined as a library of functions. Like the cstdio header inherited from C's stdio.h, iostream provides basic input and output services for C++ programs. iostream uses the objects cin, cout, cerr, and clog for sending data to and from the standard streams input, output, error (unbuffered), and log (buffered) respectively. As part of the C++ standard library, these objects are a part of the std namespace.[7]
+The cout object is of type ostream, which overloads the left bit-shift operator to make it perform an operation completely unrelated to bitwise operations, and notably evaluate to the value of the left argument, allowing multiple operations on the same ostream object, essentially as a different syntax for method cascading, exposing a fluent interface. The cerr and clog objects are also of type ostream, so they overload that operator as well. The cin object is of type istream, which overloads the right bit-shift operator. The directions of the bit-shift operators make it seem as though data is flowing towards the output stream or flowing away from the input stream.
+Output formatting[edit]
+Methods[edit]
+
+
+width(int x)
+minimum number of characters for next output
+
+
+fill(char x)
+character used to fill with in the case that the width needs to be elongated to fill the minimum.
+
+
+precision(int x)
+sets the number of significant digits for floating-point numbers
+
+
+Manipulators[edit]
+Manipulators are objects that can modify a stream using the &lt;&lt; or &gt;&gt; operators.
+
+
+endl
+"end line": inserts a newline into the stream and calls flush.
+
+
+ends
+"end string": inserts a null character into the stream and calls flush.
+
+
+flush
+forces an output stream to write any buffered characters
+
+
+ws
+causes an inputstream to 'eat' whitespace
+
+
+showpoint
+tells the stream to show the decimal point and some zeros with whole numbers
+
+
+Other manipulators can be found using the header iomanip.
+Criticism[edit]
+Some environments do not provide a shared implementation of the C++ library. These include embedded systems and Windows systems running programs built with MinGW. Under these systems, the C++ standard library must be statically linked to a program, which increases the size of the program,[8] or distributed as a shared library alongside the program. Some implementations of the C++ standard library have significant amounts of dead code. For example, GNU libstdc++ automatically constructs a locale when building an ostream even if a program never uses any types (date, time or money) that a locale affects,[9] and a statically linked hello world program that uses &lt;iostream&gt; of GNU libstdc++ produces an executable an order of magnitude larger than an equivalent program that uses &lt;cstdio&gt;.[10] There exist partial implementations of the C++ standard library designed for space-constrained environments; their &lt;iostream&gt; may leave out features that programs in such environments may not need, such as locale support.[11]
+Naming conventions[edit]
+Please refer to Standard streams.
+Examples[edit]
+The canonical Hello world program can be expressed as follows:
+
+
+#include &lt;iostream&gt;
+
+int main()
+{
+    std::cout &lt;&lt; "Hello, world!\n";
+}
+
+This program would output "Hello, world!" followed by a newline and standard output stream buffer flush.
+The following example creates a file called 'file.txt' and puts the text 'Hello World' followed by a newline into it.
+
+
+#include &lt;fstream&gt;
+int main()
+{
+    std::ofstream file{"file.txt"};
+    file &lt;&lt; "Hello world!\n";
+}
+
+References[edit]
+
+
+^ ISO/IEC 14882:2003 Programming Languages — C++. [lib.string.streams]/1
+^ Stanley B. Lippman, Josee Lajoie (1999). C++ Primer (third ed.). Massachusetts: Addison-Wesley. pp.&#160;1109–1112. ISBN&#160;0-201-82470-1.&#160;
+^ Bjarne Stroustrup (1997 3rd Printing). The C++ programming language. Addison-Wesley. pp.&#160;637–640. ISBN&#160;0-201-88954-4.&#160; Check date values in: |date= (help)
+^ Stanley B. Lippman, Josee Lajoie (1999). C++ Primer (third ed.). Massachusetts: Addison-Wesley. pp.&#160;1063–1067. ISBN&#160;0-201-82470-1.&#160;
+^ Stanley B. Lippman, Josee Lajoie (1999). C++ Primer (third ed.). Massachusetts: Addison-Wesley. pp.&#160;1112–1120. ISBN&#160;0-201-82470-1.&#160;
+^ "&lt;ios&gt; Visual Studio 2010". Microsoft MSDN: Visual Studio 2010. Retrieved 28 September 2011.&#160;
+^ Holzner, Steven (2001). C++&#160;: Black Book. Scottsdale, Ariz.: Coriolis Group. p.&#160;584. ISBN&#160;1-57610-777-9. ...endl, which flushes the output buffer and sends a newline to the standard output stream.&#160;
+^ "MinGW.org: Large executables". Retrieved 22 April 2009.&#160;
+^ GNU libstdc++ source code, bits/ios_base.h
+^ Pin Eight: RAnT (Rants, Articles, and Treatises)
+^ "uClibc++ C++ library". Retrieved 6 January 2012.&#160;
+
+
+External links[edit]
+
+C++ reference for input/output library
+Apache C++ Standard Library Iostreams
+Comprehensive tutorial on formatting output in C++.
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Input/output_(C%2B%2B)&amp;oldid=689703222"					
+				Categories: C++C++ Standard LibraryHidden categories: CS1 errors: datesWikipedia references cleanup from June 2013All articles needing references cleanupArticles covered by WikiProject Wikify from June 2013All articles covered by WikiProject WikifyArticles to be expanded from March 2012All articles to be expandedArticles needing cleanup from March 2012All articles needing cleanupCleanup tagged articles with a reason field from March 2012Wikipedia pages needing cleanup from March 2012Use dmy dates from January 2012Articles with example C++ code				
+							
+		
+		
+			

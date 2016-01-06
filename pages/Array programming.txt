@@ -1,0 +1,478 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Array programming
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Programming paradigms
+
+
+
+
+Action
+Agent-oriented
+Array-oriented
+Automata-based
+Concurrent computing
+
+Relativistic programming
+
+
+Data-driven
+Declarative (contrast: Imperative)
+
+Constraint
+
+Constraint logic
+
+Concurrent constraint logic
+
+
+
+
+Dataflow
+
+Flow-based
+Cell-oriented (spreadsheets)
+Reactive
+
+
+Functional
+
+Functional logic
+Purely functional
+
+
+Logic
+
+Abductive logic
+Answer set
+Concurrent logic
+Functional logic
+Inductive logic
+
+
+
+
+End-user programming
+Event-driven
+
+Service-oriented
+Time-driven
+
+
+Expression-oriented
+Feature-oriented
+Function-level (contrast: Value-level)
+Generic
+Imperative (contrast: Declarative)
+
+Literate
+Procedural
+
+
+Inductive programming
+Language-oriented
+
+Natural language programming
+Discipline-specific
+Domain-specific
+Grammar-oriented
+
+Dialecting
+
+
+Intentional
+
+
+Metaprogramming
+
+Automatic
+Reflective
+
+Attribute-oriented
+
+
+Homoiconic
+Template
+
+Policy-based
+
+
+
+
+Non-structured (contrast: Structured)
+
+Array
+
+
+Nondeterministic
+Parallel computing
+
+Process-oriented
+
+
+Point-free style
+
+Concatenative
+
+
+Semantic
+Structured (contrast: Non-structured)
+
+Block-structured
+Modular (contrast: Monolithic)
+Object-oriented (OOP)
+
+Class-based
+Concurrent
+Prototype-based
+By separation of concerns:
+
+Aspect-oriented
+Role-oriented
+Subject-oriented
+
+
+
+
+Recursive
+
+
+Value-level (contrast: Function-level)
+Probabilistic
+Concept
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In computer science, array programming languages (also known as vector or multidimensional languages) generalize operations on scalars to apply transparently to vectors, matrices, and higher-dimensional arrays.
+Array programming primitives concisely express broad ideas about data manipulation. The level of conciseness can be dramatic in certain cases: it is not uncommon to find array programming language one-liners that require more than a couple of pages of Java code.[1]
+Modern programming languages that support array programming are commonly used in scientific and engineering settings; these include Fortran 90, MATLAB, Analytica , TK Solver (as lists), Octave, R, Cilk Plus, Julia, and the NumPy extension to Python. In these languages, an operation that operates on entire arrays can be called a vectorized operation,[2] regardless of whether it is executed on a vector processor or not.
+
+
+
+Contents
+
+
+1 Concepts
+2 Uses
+3 Languages
+
+3.1 Scalar languages
+3.2 Array languages
+
+3.2.1 Ada
+3.2.2 Analytica
+3.2.3 BASIC
+3.2.4 MATLAB
+3.2.5 rasql
+
+
+
+
+4 Mathematical reasoning and language notation
+5 Third party libraries
+6 See also
+7 References
+8 External links
+
+
+
+Concepts[edit]
+The fundamental idea behind array programming is that operations apply at once to an entire set of values. This makes it a high-level programming model as it allows the programmer to think and operate on whole aggregates of data, without having to resort to explicit loops of individual scalar operations.
+Iverson described[3] the rationale behind array programming (actually referring to APL) as follows:
+
+most programming languages are decidedly inferior to mathematical notation and are little used as tools of thought in ways that would be considered significant by, say, an applied mathematician. [...]
+The thesis [...] is that the advantages of executability and universality found in programming languages can be effectively combined, in a single coherent language, with the advantages offered by mathematical notation. [...] it is important to distinguish the difficulty of describing and of learning a piece of notation from the difficulty of mastering its implications. For example, learning the rules for computing a matrix product is easy, but a mastery of its implications (such as its associativity, its distributivity over addition, and its ability to represent linear functions and geometric operations) is a different and much more difficult matter.
+Indeed, the very suggestiveness of a notation may make it seem harder to learn because of the many properties it suggests for explorations.
+[...] Users of computers and programming languages are often concerned primarily with the efficiency of execution of algorithms, and might, therefore, summarily dismiss many of the algorithms presented here. Such dismissal would be short-sighted, since a clear statement of an algorithm can usually be used as a basis from which one may easily derive more efficient algorithm.
+
+The basis behind array programming and thinking is to find and exploit the properties of data where individual elements are similar or adjacent. Unlike object orientation which implicitly breaks down data to its constituent parts (or scalar quantities), array orientation looks to group data and apply a uniform handling.
+Function rank is an important concept to array programming languages in general, by analogy to tensor rank in mathematics: functions that operate on data may be classified by the number of dimensions they act on. Ordinary multiplication, for example, is a scalar ranked function because it operates on zero-dimensional data (individual numbers). The cross product operation is an example of a vector rank function because it operates on vectors, not scalars. Matrix multiplication is an example of a 2-rank function, because it operates on 2-dimensional objects (matrices). Collapse operators reduce the dimensionality of an input data array by one or more dimensions. For example, summing over elements collapses the input array by 1 dimension.
+Uses[edit]
+Array programming is very well suited to implicit parallelization; a topic of much research nowadays. Further, Intel and compatible CPUs developed and produced after 1997 contained various instruction set extensions, starting from MMX and continuing through SSSE3 and 3DNow!, which include rudimentary SIMD array capabilities. Array processing is distinct from parallel processing in that one physical processor performs operations on a group of items simultaneously while parallel processing aims to split a larger problem into smaller ones (MIMD) to be solved piecemeal by numerous processors. Processors with two or more cores are increasingly common today.
+Languages[edit]
+The canonical examples of array programming languages are APL, J, and Fortran. Others include: D, A+, Analytica , IDL, K, Q, Mathematica, MATLAB, MOLSF, NumPy, GNU Octave, PDL, R, S-Lang, SAC, Nial and ZPL.
+Scalar languages[edit]
+In scalar languages such as C and Pascal, operations apply only to single values, so a+b expresses the addition of two numbers. In such languages, adding one array to another requires indexing and looping, which is tedious and error-prone[citation needed].
+
+
+for (i = 0; i &lt; n; i++)
+    for (j = 0; j &lt; n; j++)
+        a[i][j] += b[i][j];
+
+Array languages[edit]
+In array languages, operations are generalized to apply to both scalars and arrays. Thus, a+b expresses the sum of two scalars if a and b are scalars, or the sum of two arrays if they are arrays.
+An array language simplifies programming but possibly at a cost known as the abstraction penalty.[4][5][6] Because the additions are performed in isolation from the rest of the coding, they may not produce the optimally most efficient code. (For example, additions of other elements of the same array may be subsequently encountered during the same execution, causing unnecessary repeated lookups.) Even the most sophisticated optimizing compiler would have an extremely hard time amalgamating two or more apparently disparate functions which might appear in different program sections or sub-routines, even though a programmer could do this easily, aggregating sums on the same pass over the array to minimize overhead).
+Ada[edit]
+The previous C code would become the following in the Ada language,[7] which supports array-programming syntax.
+
+
+ A := A + B;
+
+Analytica[edit]
+Analytica provides the same economy of expression as Ada.
+
+
+ A := A + B;
+
+This operation works whether operands, A or B, are scalar or arrays with one more more dimensions. Each dimension is identified by an index variable, which controls the nature of the operation. The result has the union of the dimensions of the operands. If A and B have the same dimensions (indexes), the result has those same dimensions. If A and B are vectors with different dimensions, the resulting A is 2-dimensional, containing both dimensions, with each element the sum of the corresponding values of A and B. Variable A must be a local variable; Analytica, as a declarative language, avoids side effects by disallowing assignment to global variables.
+BASIC[edit]
+Dartmouth BASIC already had MAT statements for matrix and array manipulation in its third edition (1966).
+
+
+ DIM A(4),B(4),C(4)
+ MAT A = 1
+ MAT B = 2*A
+ MAT C = A + B
+ MAT PRINT A,B,C
+
+MATLAB[edit]
+The implementation in MATLAB allows the same economy allowed by using the Ada language.
+
+
+A = A + B;
+
+A variant of the MATLAB language is the GNU Octave language, which extends the original language with augmented assignments:
+
+
+A += B;
+
+Both MATLAB and GNU Octave natively support linear algebra operations such as matrix multiplication, matrix inversion, and the numerical solution of system of linear equations, even using the Moore–Penrose pseudoinverse.[8][9]
+The Nial example of the inner product of two arrays can be implemented using the native matrix multiplication operator. If a is a row vector of size [1 n] and b is a corresponding column vector of size [n 1].
+
+a * b;
+
+The inner product between two matrices having the same number of elements can be implemented with the auxiliary operator (:), which reshapes a given matrix into a column vector, and the transpose operator ':
+
+A(:)' * B(:);
+
+rasql[edit]
+The rasdaman query language is a database-oriented array-programming language. For example, two arrays could be added with the following query:
+
+
+SELECT A + B
+FROM   A, B
+
+Mathematical reasoning and language notation[edit]
+The matrix left-division operator concisely expresses some semantic properties of matrices. As in the scalar equivalent, if the (determinant of the) coefficient (matrix) A is not null then it is possible to solve the (vectorial) equation A * x = b by left-multiplying both sides by the inverse of A: A−1 (in both MATLAB and GNU Octave languages: A^-1). The following mathematical statements hold when A is a full rank square matrix:
+
+A^-1 *(A * x) == A^-1 * (b)
+(A^-1 * A)* x == A^-1 * b &#160; &#160; &#160; (matrix-multiplication associativity)
+x = A^-1 * b
+
+where == is the equivalence relational operator. The previous statements are also valid MATLAB expressions if the third one is executed before the others (numerical comparisons may be false because of round-off errors).
+If the system is overdetermined - so that A has more rows than columns - the pseudoinverse A+ (in MATLAB and GNU Octave languages: pinv(A)) can replace the inverse A−1, as follows:
+
+pinv(A) *(A * x) == pinv(A) * (b)
+(pinv(A) * A)* x == pinv(A) * b &#160; &#160; &#160; (matrix-multiplication associativity)
+x = pinv(A) * b
+
+However, these solutions are neither the most concise ones (e.g. still remains the need to notationally differentiate overdetermined systems) nor the most computationally efficient. The latter point is easy to understand when considering again the scalar equivalent a * x = b, for which the solution x = a^-1 * b would require two operations instead of the more efficient x = b / a. The problem is that generally matrix multiplications are not commutative as the extension of the scalar solution to the matrix case would require:
+
+(a * x)/ a == b / a
+(x * a)/ a == b / a &#160; &#160; &#160; (commutativity does not hold for matrices!)
+x * (a / a) == b / a &#160; &#160; &#160; (associativity also holds for matrices)
+x = b / a
+
+The MATLAB language introduces the left-division operator \ to maintain the essential part of the analogy with the scalar case, therefore simplifying the mathematical reasoning and preserving the conciseness:
+
+A \ (A * x) == A \ b
+(A \ A)* x == A \ b &#160; &#160; &#160; (associativity also holds for matrices, commutativity is no more required)
+x = A \ b
+
+This is not only an example of terse array programming from the coding point of view but also from the computational efficiency perspective, which in several array programming languages benefits from quite efficient linear algebra libraries such as ATLAS or LAPACK.[10][11]
+Returning to the previous quotation of Iverson, the rationale behind it should now be evident:
+
+it is important to distinguish the difficulty of describing and of learning a piece of notation from the difficulty of mastering its implications. For example, learning the rules for computing a matrix product is easy, but a mastery of its implications (such as its associativity, its distributivity over addition, and its ability to represent linear functions and geometric operations) is a different and much more difficult matter.
+Indeed, the very suggestiveness of a notation may make it seem harder to learn because of the many properties it suggests for explorations.
+
+Third party libraries[edit]
+The use of specialized and efficient libraries to provide more terse abstractions is also common in other programming languages. In C++ several linear algebra libraries exploit the language ability to overload operators. It is interesting to notice that in some case a very terse abstraction in those languages is explicitly influenced by the array programming paradigm, as the Armadillo and Blitz++ libraries do.[12][13]
+See also[edit]
+
+Array slicing
+List of array programming languages
+
+References[edit]
+
+
+^ Michael Schidlowsky. "Java and K". Retrieved 2008-01-23.&#160;
+^ Stéfan van der Walt, S. Chris Colbert and Gaël Varoquaux (2011). "The NumPy array: a structure for efficient numerical computation". Computing in Science and Engineering (IEEE).&#160;
+^ Iverson, K. E. (1980). "Notations as a Tool of Thought.". Communications of the ACM 23 (8): 444–465. doi:10.1145/358896.358899. Retrieved 2011-03-22.&#160;
+^ Surana P (2006). "Meta-Compilation of Language Abstractions." (PDF). Retrieved 2008-03-17.&#160;
+^ Kuketayev. "The Data Abstraction Penalty (DAP) Benchmark for Small Objects in Java.". Retrieved 2008-03-17.&#160;
+^ Chatzigeorgiou; Stephanides (2002). "Evaluating Performance and Power Of Object-Oriented Vs. Procedural Programming Languages". In Blieberger; Strohmeier. Proceedings - 7th International Conference on Reliable Software Technologies - Ada-Europe'2002. Springer. p.&#160;367. ISBN&#160;978-3-540-43784-0.&#160;
+^ Ada Reference Manual: G.3.1 Real Vectors and Matrices
+^ "GNU Octave Manual. Arithmetic Operators.". Retrieved 2011-03-19.&#160;
+^ "MATLAB documentation. Arithmetic Operators.". Retrieved 2011-03-19.&#160;
+^ "GNU Octave Manual. Appendix G Installing Octave.". Retrieved 2011-03-19.&#160;
+^ "Mathematica 5.2 Documentation. Software References.". Retrieved 2011-03-19.&#160;
+^ "Reference for Armadillo 1.1.8. Examples of Matlab/Octave syntax and conceptually corresponding Armadillo syntax.". Retrieved 2011-03-19.&#160;
+^ "Blitz++ User's Guide. 3. Array Expressions.". Retrieved 2011-03-19.&#160;
+
+
+External links[edit]
+
+"No stinking loops" programming
+Discovering Array Languages
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Array_programming&amp;oldid=688715188"					
+				Categories: Array programming languagesProgramming paradigmsHidden categories: Pages with syntax highlighting errorsAll articles with unsourced statementsArticles with unsourced statements from March 2015Articles with example MATLAB/Octave codeArticles with example BASIC codeArticles with example Ada code				
+							
+		
+		
+			

@@ -1,0 +1,93 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Second-generation programming language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (August 2008)
+
+
+Second-generation programming language (2GL) is a generational way to categorize assembly languages.[1] The term was coined to provide a distinction from higher level third-generation programming languages (3GL) such as COBOL and earlier machine code languages. Second-generation programming languages have the following properties:
+
+The code can be read and written by a programmer. To run on a computer it must be converted into a machine readable form, a process called assembly.
+The language is specific to a particular processor family and environment.
+
+Second-generation languages are sometimes used in kernels and device drivers (though C is generally employed for this in modern kernels), but more often find use in extremely intensive processing such as games, video editing, graphic manipulation/rendering.
+One method for creating such code is by allowing a compiler to generate a machine-optimized assembly language version of a particular function. This code is then hand-tuned, gaining both the brute-force insight of the machine optimizing algorithm and the intuitive abilities of the human optimizer.
+References[edit]
+
+
+^ "Computer Hope, Generation languages"
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Programming language generations
+
+
+
+
+
+
+
+
+
+Generations Overview
+
+1GL
+2GL
+3GL
+4GL
+5GL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Second-generation_programming_language&amp;oldid=625066930"					
+				Categories: Programming language classificationHidden categories: Articles needing additional references from August 2008All articles needing additional references				
+							
+		
+		
+			

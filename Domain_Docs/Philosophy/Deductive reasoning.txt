@@ -1,0 +1,1225 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Deductive reasoning
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Deductive reasoning, also deductive logic, logical deduction or, informally, "top-down" logic,[1] is the process of reasoning from one or more statements (premises) to reach a logically certain conclusion.[2] It differs from inductive reasoning or abductive reasoning.
+Deductive reasoning links premises with conclusions. If all premises are true, the terms are clear, and the rules of deductive logic are followed, then the conclusion reached is necessarily true.
+Deductive reasoning (top-down logic) contrasts with inductive reasoning (bottom-up logic) in the following way: In deductive reasoning, a conclusion is reached reductively by applying general rules that hold over the entirety of a closed domain of discourse, narrowing the range under consideration until only the conclusion(s) is left. In inductive reasoning, the conclusion is reached by generalizing or extrapolating from, i.e., there is epistemic uncertainty. Note, however, that the inductive reasoning mentioned here is not the same as induction used in mathematical proofs – mathematical induction is actually a form of deductive reasoning.
+
+
+
+Contents
+
+
+1 Simple example
+2 Law of detachment
+3 Law of syllogism
+4 Law of contrapositive
+5 Validity and soundness
+6 History
+7 Education
+8 See also
+9 References
+10 Further reading
+11 External links
+
+
+
+Simple example[edit]
+An example of a deductive argument:
+
+All men are mortal.
+Socrates is a man.
+Therefore, Socrates is mortal.
+
+The first premise states that all objects classified as "men" have the attribute "mortal". The second premise states that "Socrates" is classified as a "man"&#160;– a member of the set "men". The conclusion then states that "Socrates" must be "mortal" because he inherits this attribute from his classification as a "man".
+Law of detachment[edit]
+Main article: Modus ponens
+The law of detachment (also known as affirming the antecedent and Modus ponens) is the first form of deductive reasoning. A single conditional statement is made, and a hypothesis (P) is stated. The conclusion (Q) is then deduced from the statement and the hypothesis. The most basic form is listed below:
+
+P → Q (conditional statement)
+P (hypothesis stated)
+Q (conclusion deduced)
+
+In deductive reasoning, we can conclude Q from P by using the law of detachment.[3] However, if the conclusion (Q) is given instead of the hypothesis (P) then there is no definitive conclusion.
+The following is an example of an argument using the law of detachment in the form of an if-then statement:
+
+If an angle satisfies 90° &lt; A &lt; 180°, then A is an obtuse angle.
+A = 120°.
+A is an obtuse angle.
+
+Since the measurement of angle A is greater than 90° and less than 180°, we can deduce that A is an obtuse angle. If however, we are given the conclusion that A is an obtuse angle we cannot deduce the premise that A = 120°.
+Law of syllogism[edit]
+The law of syllogism takes two conditional statements and forms a conclusion by combining the hypothesis of one statement with the conclusion of another. Here is the general form:
+
+P → Q
+Q → R
+Therefore, P → R.
+
+The following is an example:
+
+If Larry is sick, then he will be absent.
+If Larry is absent, then he will miss his classwork.
+Therefore, if Larry is sick, then he will miss his classwork.
+
+We deduced the final statement by combining the hypothesis of the first statement with the conclusion of the second statement. We also allow that this could be a false statement. This is an example of the transitive property in mathematics. The transitive property is sometimes phrased in this form:
+
+A = B.
+B = C.
+Therefore, A = C.
+
+Law of contrapositive[edit]
+Main article: Modus tollens
+The law of contrapositive states that, in a conditional, if the conclusion is false, then the hypothesis must be false also. The general form is the following:
+
+P → Q.
+~Q.
+Therefore, we can conclude ~P.
+
+The following are examples:
+
+If it is raining, then there are clouds in the sky.
+There are no clouds in the sky.
+Thus, it is not raining.
+
+Validity and soundness[edit]
+Deductive arguments are evaluated in terms of their validity and soundness.
+An argument is valid if it is impossible for its premises to be true while its conclusion is false. In other words, the conclusion must be true if the premises are true. An argument can be valid even though the premises are false.
+An argument is sound if it is valid and the premises are true.
+It is possible to have a deductive argument that is logically valid but is not sound. Fallacious arguments often take that form.
+The following is an example of an argument that is valid, but not sound:
+
+Everyone who eats carrots is a quarterback.
+John eats carrots.
+Therefore, John is a quarterback.
+
+The example's first premise is false&#160;– there are people who eat carrots and are not quarterbacks&#160;– but the conclusion must be true, so long as the premises are true (i.e. it is impossible for the premises to be true and the conclusion false). Therefore, the argument is valid, but not sound. Generalizations are often used to make invalid arguments, such as "everyone who eats carrots is a quarterback." Not everyone who eats carrots is a quarterback, thus proving the flaw of such arguments.
+In this example, the first statement uses categorical reasoning, saying that all carrot-eaters are definitely quarterbacks. This theory of deductive reasoning&#160;– also known as term logic&#160;– was developed by Aristotle, but was superseded by propositional (sentential) logic and predicate logic.
+Deductive reasoning can be contrasted with inductive reasoning, in regards to validity and soundness. In cases of inductive reasoning, even though the premises are true and the argument is "valid", it is possible for the conclusion to be false (determined to be false with a counterexample or other means).
+History[edit]
+
+
+
+This section requires expansion. (January 2015)
+
+
+Aristotle started documenting deductive reasoning in the 4th century BC.[4]
+Education[edit]
+Deductive reasoning is generally considered[by whom?] to be a skill that develops without any formal teaching or training. As a result of this belief, deductive reasoning skills are not taught in secondary schools, where students are expected to use reasoning more often and at a higher level.[5] It is in high school, for example, that students have an abrupt introduction to mathematical proofs&#160;– which rely heavily on deductive reasoning.[5]
+See also[edit]
+
+
+
+
+Logic portal
+
+
+
+Web portal
+
+
+
+
+
+Abductive reasoning
+Analogical reasoning
+Argument (logic)
+Correspondence theory of truth
+Decision making
+Decision theory
+Defeasible reasoning
+Fallacy
+Fault Tree Analysis
+Geometry
+Hypothetico-deductive method
+Inductive reasoning
+Inference
+Inquiry
+Logic
+Logical consequence
+Mathematical induction
+Mathematical logic
+Natural deduction
+Propositional calculus
+Retroductive reasoning
+Scientific method
+Soundness
+Syllogism
+Theory of justification
+
+
+References[edit]
+
+
+^ Deduction &amp; Induction, Research Methods Knowledge Base
+^ Sternberg, R. J. (2009). Cognitive Psychology. Belmont, CA: Wadsworth. p.&#160;578. ISBN&#160;978-0-495-50629-4.&#160;
+^ Guide to Logic
+^ Evans, Jonathan St. B. T.; Newstead, Stephen E.; Byrne, Ruth M. J., eds. (1993). Human Reasoning: The Psychology of Deduction (Reprint ed.). Psychology Press. p.&#160;4. ISBN&#160;9780863773136. Retrieved 2015-01-26. In one sense [...] one can see the psychology of deductive reasoning as being as old as the study of logic, which originated in the writings of Aristotle.&#160;
+^ a b Stylianides, G. J.; Stylianides (2008). "A. J.". Mathematical Thinking and Learning 10 (2): 103–133. doi:10.1080/10986060701854425.&#160; |access-date= requires |url= (help)
+
+
+Further reading[edit]
+
+Vincent F. Hendricks, Thought 2 Talk: A Crash Course in Reflection and Expression, New York: Automatic Press / VIP, 2005, ISBN 87-991013-7-8
+Philip Johnson-Laird, Ruth M. J. Byrne, Deduction, Psychology Press 1991, ISBN 978-0-86377-149-1
+Zarefsky, David, Argumentation: The Study of Effective Reasoning Parts I and II, The Teaching Company 2002
+Bullemore, Thomas, * The Pragmatic Problem of Induction.
+
+External links[edit]
+
+
+
+Look up deductive reasoning in Wiktionary, the free dictionary.
+
+
+
+Deductive reasoning at PhilPapers
+Deductive reasoning at the Indiana Philosophy Ontology Project
+
+
+Deductive reasoning entry in the Internet Encyclopedia of Philosophy
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Logic
+
+
+
+
+
+
+
+
+
+Outline
+History
+
+
+
+
+
+
+
+
+Fields
+
+
+
+Argumentation theory
+Axiology
+Critical thinking
+Logic in computer science
+Mathematical logic
+Metalogic
+Metamathematics
+Non-classical logic
+Philosophical logic
+Philosophy of logic
+Set theory
+
+
+
+
+
+
+
+
+Foundations
+
+
+
+Abduction
+Analytic and synthetic propositions
+Antinomy
+A priori and a posteriori
+Deduction
+Definition
+Description
+Induction
+Inference
+Logical form
+Logical consequence
+Logical truth
+Name
+Necessity and sufficiency
+Meaning
+Paradox
+Possible world
+Presupposition
+Probability
+Reason
+Reasoning
+Reference
+Semantics
+Statement
+Strict implication
+Substitution
+Syntax
+Truth
+Validity
+
+
+
+
+
+
+
+
+Lists
+
+
+
+
+topics
+
+
+
+Mathematical logic
+Boolean algebra
+Set theory
+
+
+
+
+
+
+
+
+other
+
+
+
+Logicians
+Rules of inference
+Paradoxes
+Fallacies
+Logic symbols
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portal
+Category
+WikiProject&#160;(talk)
+changes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Philosophy
+
+
+
+
+
+
+
+
+
+
+&#160;
+Branches
+
+
+
+
+
+
+
+
+
+
+Traditional
+
+
+
+Metaphysics
+Epistemology
+Logic
+Ethics
+Aesthetics
+
+
+
+
+
+
+
+
+Philosophy of
+
+
+
+Action
+Art
+
+Culture
+Design
+Music
+Film
+
+
+Being
+Business
+Dialogue
+Education
+Environment
+Futility
+Happiness
+Healthcare
+History
+Human nature
+Humor
+Language
+Literature
+Mathematics
+Mind
+
+Pain
+Psychology
+
+
+Philosophy
+Religion
+Science
+
+Physics
+Chemistry
+Biology
+Geography
+
+
+Sexuality
+Social science
+
+Economics
+Justice
+Law
+Politics
+Society
+
+
+Space and time
+Sport
+Technology
+
+Computer science
+Engineering
+Information
+
+
+War
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Schools of thought
+
+
+
+
+
+
+
+
+
+
+By era
+
+
+
+Ancient
+Western
+
+Medieval
+Renaissance
+Early modern
+Modern
+Contemporary
+
+
+
+
+
+
+
+
+
+
+Ancient
+
+
+
+
+Chinese
+
+
+
+Agriculturalism
+Confucianism
+Legalism
+Logicians
+Mohism
+Chinese naturalism
+Neotaoism
+Taoism
+Yangism
+Zen
+
+
+
+
+
+
+
+
+Greco-Roman
+
+
+
+Aristotelianism
+Cynicism
+Epicureanism
+Hermeneutics
+Neoplatonism
+Peripatetic
+Platonism
+Presocratic
+Pythagoreanism
+Sophism
+Stoicism
+
+
+
+
+
+
+
+
+Indian
+
+
+
+Buddhist
+Cārvāka
+Hindu
+Jain
+
+
+
+
+
+
+
+
+Persian
+
+
+
+Mazdakism
+Zoroastrianism
+Zurvanism
+
+
+
+
+
+
+
+
+
+
+
+Medieval
+9th–16th
+century
+
+
+
+
+
+European
+
+
+
+Christian philosophy
+Scholasticism
+Thomism
+Renaissance humanism
+
+
+
+
+
+
+
+
+East Asian
+
+
+
+Korean Confucianism
+Edo Neo-Confucianism
+Neo-Confucianism
+
+
+
+
+
+
+
+
+Indian
+
+
+
+Navya-Nyāya
+Vishishtadvaita
+Dvaita
+
+
+
+
+
+
+
+
+Islamic
+
+
+
+Averroism
+Avicennism
+Persian Illuminationism
+Ilm al-Kalam
+Sufi
+
+
+
+
+
+
+
+
+Jewish
+
+
+
+Judeo-Islamic
+
+
+
+
+
+
+
+
+
+
+
+Modern
+17th–19th
+century
+
+
+
+
+
+people
+
+
+
+Neo-Scholasticism
+Cartesianism
+Kantianism
+Neo-Kantianism
+Hegelianism
+Marxism
+
+
+
+
+
+
+
+
+Ideal&#160;/ Material
+
+
+
+Idealism
+Absolute idealism
+Rationalism
+Empiricism
+Utilitarianism
+Pragmatism
+
+
+
+
+
+
+
+
+Other
+
+
+
+Liberalism
+Anarchism
+Modernism
+Phenomenology
+Transcendentalism
+Existentialism
+Kokugaku
+New Confucianism
+
+
+
+
+
+
+
+
+
+
+
+Contemporary
+20th–21st
+century
+
+
+
+
+
+Analytic
+
+
+
+Analytic feminism
+Consequentialism
+Experimental philosophy
+Internalism and Externalism
+Falsificationism
+Foundationalism&#160;/ Coherentism
+Logical positivism
+Legal positivism
+Quinean Naturalism
+Ordinary language philosophy
+Quietism
+Rawlsian
+Reformed epistemology
+Postanalytic philosophy
+Contemporary utilitarianism
+Neo-Aristotelian
+Vienna Circle
+Wittgensteinian
+
+
+
+
+
+
+
+
+Continental
+
+
+
+Critical theory
+Deconstruction
+Existentialism
+Feminist
+Frankfurt School
+Postmodernism
+Post-structuralism
+Social constructionism
+Structuralism
+
+
+
+
+
+
+
+
+Other
+
+
+
+Kyoto School
+Objectivism
+Russian cosmism
+more...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Positions
+
+
+
+
+
+
+
+
+
+
+Aesthetics
+
+
+
+Formalism
+Institutionalism
+Aesthetic response
+
+
+
+
+
+
+
+
+Ethics
+
+
+
+Consequentialism
+Deontology
+Virtue
+
+
+
+
+
+
+
+
+Free will
+
+
+
+Compatibilism
+Determinism
+Libertarianism
+
+
+
+
+
+
+
+
+Metaphysics
+
+
+
+Atomism
+Dualism
+Monism
+Naturalism
+
+
+
+
+
+
+
+
+Epistemology
+
+
+
+Constructivism
+Empiricism
+Idealism
+Particularism
+Fideism
+Rationalism&#160;/ Reasonism
+Skepticism
+Solipsism
+
+
+
+
+
+
+
+
+Mind
+
+
+
+Behaviorism
+Eliminativism
+Epiphenomenalism
+Functionalism
+Objectivism
+Subjectivism
+
+
+
+
+
+
+
+
+Normativity
+
+
+
+Absolutism
+Particularism
+Relativism
+Nihilism
+Skepticism
+Universalism
+
+
+
+
+
+
+
+
+Ontology
+
+
+
+Action
+Event
+Process
+
+
+
+
+
+
+
+
+Reality
+
+
+
+Anti-realism
+Conceptualism
+Idealism
+Materialism
+Naturalism
+Nominalism
+Realism
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+
+
+
+Philosophy by region
+Philosophy-related lists
+
+
+
+
+
+
+
+
+
+
+
+
+
+By region
+
+
+
+African
+Ethiopian
+Aztec
+Native America
+Eastern
+Chinese
+Egyptian
+Czech
+Indian
+Indonesian
+Iranian
+Japanese
+Korean
+Vietnam
+Pakistani
+Western
+American
+British
+Danish
+French
+German
+Greek
+Italian
+Polish
+Romanian
+Russian
+Slovene
+
+
+
+
+
+
+
+
+Lists
+
+
+
+Outline
+Index
+Years
+Problems
+Schools
+Glossary
+Philosophers
+Movements
+Publications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portal
+Category
+WikiProject
+Changes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Philosophical logic
+
+
+
+
+
+
+Critical thinking and
+informal logic
+
+
+
+Analysis
+Ambiguity
+Argument
+Belief
+Bias
+Credibility
+Evidence
+Explanation
+Explanatory power
+Fact
+Fallacy
+Inquiry
+Opinion
+Parsimony (Occam's razor)
+Premise
+Propaganda
+Prudence
+Reasoning
+Relevance
+Rhetoric
+Rigor
+Vagueness
+
+
+
+
+
+
+
+
+Theories of deduction
+
+
+
+Constructivism
+Dialetheism
+Fictionalism
+Finitism
+Formalism
+Intuitionism
+Logical atomism
+Logicism
+Nominalism
+Platonic realism
+Pragmatism
+Realism
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+NDL: 00561931
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Deductive_reasoning&amp;oldid=691143420"					
+				Categories: Deductive reasoningLogicProblem solvingReasoningHidden categories: Pages using citations with accessdate and no URLArticles to be expanded from January 2015All articles to be expandedArticles with specifically marked weasel-worded phrases from January 2015				
+							
+		
+		
+			

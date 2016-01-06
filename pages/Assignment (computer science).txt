@@ -1,0 +1,322 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Assignment (computer science)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For assignment of letters to disk file systems, see Drive letter assignment.
+In computer programming, an assignment statement sets and/or re-sets the value stored in the storage location(s) denoted by a variable name; in other words, it copies a value into the variable. In most imperative programming languages, the assignment statement (or expression) is a fundamental construct.
+Today, the most commonly used notation for this basic operation has come to be x = expr (originally Superplan 1949–1951, popularized by Fortran 1957 and C) followed by x&#160;:= expr (originally ALGOL 1958, popularised by Pascal),[1] although there are many other notations in use. In some languages the symbol used is regarded as an operator (meaning that the assignment has a value) while others define the assignment as a statement (meaning that it cannot be used in an expression).
+Assignments typically allow a variable to hold different values at different times during its life-span and scope. However, some languages (primarily strictly functional) do not allow that kind of "destructive" reassignment, as it might imply changes of non-local state. The purpose is to enforce referential transparency, i.e. functions that do not depend on the state of some variable(s), but produce the same results for a given set of parametric inputs at any point in time. Modern programs in other languages also often use similar strategies, although less strict, and only in certain parts, in order to reduce complexity, normally in conjunction with complementing methodologies such as data structuring, structured programming and object orientation.
+
+
+
+Contents
+
+
+1 Semantics
+2 Single assignment
+3 Value of an assignment
+4 Variant forms of assignment
+
+4.1 Augmented assignment
+4.2 Chained assignment
+4.3 Parallel assignment
+
+
+5 Assignment versus equality
+6 Notation
+7 See also
+8 Notes
+9 References
+
+
+
+Semantics[edit]
+An assignment operation is a process in imperative programming in which different values are associated with a particular variable name as time passes.[2] The program, in such model, operates by changing its state using successive assignment statements.[1][3] Primitives of imperative programming languages rely on assignment to do iteration.[4] At the lowest level, assignment is implemented using machine operations such as MOVE or STORE.[1][4]
+Variables are containers for values. It is possible to put a value into a variable and later replace it with a new one. An assignment operation modifies the current state of the executing program.[3] Consequently, assignment is dependent on the concept of variables. In an assignment:
+
+The expression is evaluated in the current state of the program.
+The variable is assigned the computed value, replacing the prior value of that variable.
+
+Example: Assuming that a is a numeric variable, the assignment a&#160;:= 2*a means that the content of the variable a is doubled after the execution of the statement.
+An example segment of C code:
+
+
+int x = 10; 
+float y;
+x = 23;
+y = 32.4f;
+
+In this sample, the variable x is first declared as an int, and is then assigned the value of 10. Notice that the declaration and assignment occur in the same statement. In the second line, y is declared without an assignment. In the third line, x is reassigned the value of 23. Finally, y is assigned the value of 32.4.
+For an assignment operation, it is necessary that the value of the expression is well-defined (it is a valid rvalue) and that the variable represents a modifiable entity (it is a valid modifiable (non-const) lvalue). In some languages, typically dynamic ones, it is not necessary to declare a variable prior to assigning it a value.
+Single assignment[edit]
+See also: Static single assignment form
+Any assignment that changes an existing value (e.g. x&#160;:= x + 1) is disallowed in purely functional languages.[4] In functional programming, assignment is discouraged in favor of single assignment, also called initialization. Single assignment is an example of name binding and differs from assignment as described in this article in that it can only be done once, usually when the variable is created; no subsequent reassignment is allowed.
+An evaluation of expression does not have a side effect if it does not change an observable state of the machine,[5] and produces same values for same input.[4] Imperative assignment can introduce side effects while destroying and making the old value unavailable while substituting it with a new one,[6] and is referred to as destructive assignment for that reason in LISP and functional programming, similar to destructive updating.
+Single assignment is the only form of assignment available in purely functional languages, such as Haskell, which do not have variables in the sense of imperative programming languages[4] but rather named constant values possibly of compound nature with their elements progressively defined on-demand. Purely functional languages can provide an opportunity for computation to be performed in parallel, avoiding the von Neumann bottleneck of sequential one step at time execution, since values are independent of each other.[7]
+Impure functional languages provide both single assignment as well as true assignment (though true assignment is typically used with less frequency than in imperative programming languages). For example, in Scheme, both single assignment (with let) and true assignment (with set!) can be used on all variables, and specialized primitives are provided for destructive update inside lists, vectors, strings, etc. In OCaml, only single assignment is allowed for variables, via the let name = value syntax; however destructive update can be used on elements of arrays and strings with separate &lt;- operator, as well as on fields of records and objects that have been explicitly declared mutable (meaning capable of being changed after their initial declaration) by the programmer.
+Functional programming languages that use single assignment include Clojure, Erlang, F#, Haskell, Lava, OCaml, Oz, SASL, Scala (for vals), SISAL, Standard ML. Non-backtracking Prolog code can be considered explicit single-assignment, explicit in a sense that its (named) variables can be in explicitly unassigned state, or be set exactly once. In Haskell, by contrast, there can be no unassigned variables, and every variable can be thought of as being implicitly set to its value (or rather to a computational object that will produce its value on demand) when it is created.
+Value of an assignment[edit]
+In some programming languages, an assignment statement returns a value, while in others it does not.
+In most expression-oriented programming languages (for example, C), the assignment statement returns the assigned value, allowing such idioms as x = y = a, in which the assignment statement y = a returns the value of a, which is then assigned to x. In a statement such as while ((ch = getchar())&#160;!= EOF) {…}, the return value of a function is used to control a loop while assigning that same value to a variable.
+In other programming languages, Scheme for example, the return value of an assignment is undefined and such idioms are invalid.
+In Haskell,[8] there is no variable assignment; but operations similar to assignment (like assigning to a field of an array or a field of a mutable data structure) usually evaluate to the unit type, which is represented as (). This type has only one possible value, therefore containing no information. It is typically the type of an expression that is evaluated purely for its side effects.
+Variant forms of assignment[edit]
+Certain use patterns are very common, and thus often have special syntax to support them. These are primarily syntactic sugar to reduce redundancy in the source code, but can also simplify compilation by clarifying the programmer's intent and easing analysis of the source code.
+Augmented assignment[edit]
+Main article: Augmented assignment
+The case where the assigned value depends on a previous one is so common that many imperative languages, most notably C and the majority of its descendants, provide special operators called augmented assignment, like *=, so a = 2*a can instead be written as a *= 2.[3] Beyond syntactic sugar, this simplifies compilation, since it makes it clear that in-place modification of the variable a is ok.
+Chained assignment[edit]
+A statement like w = x = y = z is called a chained assignment in which the value of z is assigned to multiple variables w, x, and y. Chained assignments are often used to initialize multiple variables, as in
+a = b = c = d = f = 0
+Not all programming languages support chained assignment. Chained assignments are equivalent to a sequence of assignments, but the evaluation strategy differs between languages. For simple chained assignments, like initializing multiple variables, the evaluation strategy does not matter, but if the targets (l-values) in the assignment are connected in some way, the evaluation strategy affects the result.
+In some programming languages (C for example), chained assignments are supported because assignments are expressions, and have values. In this case chain assignment can be implemented by having a right-associative assignment, and assignments happen right-to-left. For example, i = arr[i] = f() is equivalent to arr[i] = f(); i = arr[i]. In C++ they are also available for values of class types by declaring the appropriate return type for the assignment operator.
+In Python, assignment statements are not expressions and thus do not have a value. Instead, chained assignments are a series of statements with multiple targets for a single expression. The assignments are executed left-to-right so that i = arr[i] = f() evaluates the expression f(), then assigns the result to the leftmost target, i, and then assigns the same result to the next target, arr[i], using the new value of i.[9] This is essentially equivalent to tmp = f(); i = tmp; arr[i] = tmp though no actual variable is produced for the temporary value.
+Parallel assignment[edit]
+Some programming languages, such as Go,[10] JavaScript (since 1.7), Maple, Lua, occam 2,[11] Perl,[12] Python,[13] REBOL, Ruby,[14] and Windows PowerShell allow several variables to be assigned in parallel, with syntax like:
+
+a, b := 0, 1
+
+which simultaneously assigns 0 to a and 1 to b. This is most often known as parallel assignment; it was introduced in CPL in 1963, under the name simultaneous assignment,[15] and is sometimes called multiple assignment, though this is confusing when used with "single assignment", as these are not opposites. If the right-hand side of the assignment is a single variable (e.g. an array or structure), the feature is called unpacking[16] or destructuring assignment:[17]
+
+var list := {0, 1}
+a, b := list
+
+The list will be unpacked so that 0 is assigned to a and 1 to b. More interestingly,
+
+a, b := b, a
+
+swaps the values of a and b. In languages without parallel assignment, this would have to be written to use a temporary variable
+
+var t := a
+a := b
+b := t
+
+since a&#160;:= b; b&#160;:= a leaves both a and b with the original value of b.
+Some languages, such as Go and Python, combine parallel assignment, tuples, and automatic tuple unpacking to allow multiple return values from a single function, as in this Python example:
+
+
+def f():
+    return 1, 2
+a, b = f()
+
+This provides an alternative to the use of output parameters for returning multiple values from a function. This dates to CLU (1974), and CLU helped popularize parallel assignment generally.
+In C and C++, the comma operator is similar to parallel assignment in allowing multiple assignments to occur within a single statement, writing a = 1, b = 2 instead of a, b = 1, 2. This is primarily used in for loops, and is replaced by parallel assignment in other languages such as Go.[18]
+Assignment versus equality[edit]
+See also: Relational operator § Confusion with assignment operators
+The use of the equals sign = as an assignment operator has been frequently criticized, due to the conflict with equals as comparison for equality. This results both in confusion by novices in writing code, and confusion even by experienced programmers in reading code. The use of equals for assignment dates back to Heinz Rutishauser's language Superplan, designed from 1949 to 1951, and was particularly popularized by Fortran:
+
+A notorious example for a bad idea was the choice of the equal sign to denote assignment. It goes back to Fortran in 1957[a] and has blindly been copied by armies of language designers. Why is it a bad idea? Because it overthrows a century old tradition to let “=” denote a comparison for equality, a predicate which is either true or false. But Fortran made it to mean assignment, the enforcing of equality. In this case, the operands are on unequal footing: The left operand (a variable) is to be made equal to the right operand (an expression). x = y does not mean the same thing as y = x.[19]
+— Niklaus Wirth, Good Ideas, Through the Looking Glass
+
+Beginning programmers sometimes confuse assignment with the relational operator for equality, as "=" means equality in mathematics, and is used for assignment in many languages. But assignment alters the value of a variable, while equality testing tests whether two expressions have the same value.
+In some languages, such as BASIC, a single equals sign ("=") is used for both the assignment operator and the equality relational operator, with context determining which is meant. Other languages use different symbols for the two operators. For example:
+
+In Pascal, the assignment operator is a colon and an equals sign (":=") while the equality operator is a single equals ("=").
+In C, the assignment operator is a single equals sign ("=") while the equality operator is a pair of equals signs ("==").
+In R, the assignment operator is basically &lt;-, as in x &lt;- value, but a single equals sign can be used in certain contexts.
+
+The similarity in the two symbols can lead to errors if the programmer forgets which form ("=", "==", ":=") is appropriate, or mistypes "=" when "==" was intended. This is a common programming problem with languages such as C, where the assignment operator also returns the value assigned (in the same way that a function returns a value), and can be validly nested inside expressions. If the intention was to compare two values in an if statement, for instance, an assignment is quite likely to return a value interpretable as Boolean true, in which case the then clause will be executed, leading the program to behave unexpectedly. Some language processors (such as gcc) can detect such situations, and warn the programmer of the potential error.
+Notation[edit]
+The two most common representations for the copying assignment are equals sign (=) and colon-equals (:=). Both forms may semantically denote either an assignment statement or an assignment operator (which also has a value), depending on language and/or usage.
+
+
+
+
+variable = expression
+Fortran, PL/I, C (and descendants such as C++, Java, etc.), Bourne shell, Python, Go (assignment to pre-declared variables), R, Windows PowerShell, etc.
+
+
+variable&#160;:= expression
+ALGOL (and derivatives), Simula, CPL, BCPL, Pascal[20] (and descendants such as Modula), Mary, PL/M, Ada, Smalltalk, Eiffel,[21][22] Oberon, Dylan,[23] Seed7, Go (shorthand for declaring and defining a variable),[24] Io, AMPL, ML,[25] etc.
+
+
+
+
+Other possibilities include a left arrow or a keyword, though there are other, rarer, variants:
+
+
+
+
+variable &lt;&lt; expression
+Magik
+
+
+variable &lt;- expression
+F#, OCaml, R, S
+
+
+variable &lt;&lt;- expression
+R
+
+
+assign("variable", expression)
+R
+
+
+variable ← expression
+APL,[26] Smalltalk
+
+
+variable =: expression
+J
+
+
+LET variable = expression
+BASIC
+
+
+let variable&#160;:= expression
+XQuery
+
+
+set variable to expression
+AppleScript
+
+
+set variable = expression
+C shell
+
+
+Set-Variable variable (expression)
+Windows PowerShell
+
+
+variable&#160;: expression
+Macsyma, Maxima, Rebol
+
+
+var variable expression
+mIRC scripting language
+
+
+reference-variable&#160;:- reference-expression
+Simula
+
+
+
+
+Some platforms put the expression on the left and the variable on the right:
+
+
+
+
+MOVE expression TO variable
+COBOL
+
+
+expression → variable
+TI-BASIC, Casio BASIC
+
+
+expression -&gt; variable
+BETA, R
+
+
+put expression into variable
+LiveCode
+
+
+
+
+Some expression-oriented languages, such as Lisp[27][28] and Tcl, uniformly use prefix (or postfix) syntax for all statements, including assignment.
+
+
+
+
+(setf variable expression)
+Common Lisp
+
+
+(set! variable expression)
+Scheme[29][30][31]
+
+
+set variable expression
+Tcl
+
+
+expression variable&#160;!
+Forth
+
+
+
+
+See also[edit]
+
+Assignment operator in C++
+Operator (programming)
+Name binding
+Unification (computing)
+Immutable object
+Const-correctness
+
+Notes[edit]
+
+
+^ Use of = predates Fortran, though it was popularized by Fortran.
+
+
+References[edit]
+
+
+^ a b c Imperative Programming
+^ Topics in Information Processing
+^ a b c Ruediger-Marcus Flaig (2008). Bioinformatics programming in Python: a practical course for beginners. Wiley-VCH. pp.&#160;98–99. ISBN&#160;978-3-527-32094-3. Retrieved 25 December 2010.&#160;
+^ a b c d e Crossing borders: Explore functional programming with Haskell, by Bruce Tate
+^ Mitchell, John C. (2003). Concepts in programming languages. Cambridge University Press. p.&#160;23. ISBN&#160;978-0-521-78098-8. Retrieved 3 January 2011.&#160;
+^ Imperative Programming Languages (IPL)
+^ John C. Mitchell (2003). Concepts in programming languages. Cambridge University Press. pp.&#160;81–82. ISBN&#160;978-0-521-78098-8. Retrieved 3 January 2011.&#160;
+^ Hudak, Paul (2000). The Haskell School of Expression: Learning Functional Programming Through Multimedia. Cambridge: Cambridge University Press. ISBN&#160;0-521-64408-9.&#160;
+^ https://docs.python.org/reference/simple_stmts.html#assignment-statements
+^ The Go Programming Language Specification: Assignments
+^ INMOS Limited, ed. (1988). Occam 2 Reference Manual. New Jersey: Prentice Hall. ISBN&#160;0-13-629312-3.&#160;
+^ Wall, Larry; Christiansen, Tom; Schwartz, Randal C. (1996). Perl Programming Language (2 ed.). Cambridge: O´Reilly. ISBN&#160;1-56592-149-6.&#160;
+^ Lutz, Mark (2001). Python Programming Language (2 ed.). Sebastopol: O´Reilly. ISBN&#160;0-596-00085-5.&#160;
+^ Thomas, David; Hunt, Andrew (2001). Programming Ruby: The Pragmatic Programmer's Guide. Upper Saddle River: Addison Wesley. ISBN&#160;0-201-71089-7.&#160;
+^ D.W. Barron et al., "The main features of CPL", Computer Journal 6:2:140 (1963). full text (subscription)
+^ http://legacy.python.org/dev/peps/pep-3132/
+^ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+^ Effective Go: for, "Finally, Go has no comma operator and ++ and -- are statements not expressions. Thus if you want to run multiple variables in a for you should use parallel assignment (although that precludes ++ and --)."
+^ Niklaus Wirth. "Good Ideas, Through the Looking Glass". CiteSeerX: 10.1.1.88.8309.&#160; Missing or empty |url= (help); |access-date= requires |url= (help)
+^ Moore, Lawrie (1980). Foundations of Programming with Pascal. New York: John Wiley &amp; Sons. ISBN&#160;0-470-26939-1.&#160;
+^ Meyer, Bertrand (1992). Eiffel the Language. Hemel Hempstead: Prentice Hall International(UK). ISBN&#160;0-13-247925-7.&#160;
+^ Wiener, Richard (1996). An Object-Oriented Introduction to Computer Science Using Eiffel. Upper Saddle River, New Jersey: Prentice Hall. ISBN&#160;0-13-183872-5.&#160;
+^ Feinberg, Neal; Keene, Sonya E.; Mathews, Robert O.; Withington, P. Tucker (1997). Dylan Programming. Massachusetts: Addison Wesley. ISBN&#160;0-201-47976-1.&#160;
+^ The Go Programming Language Specification: short variable declarations
+^ Ullman, Jeffrey D. (1998). Elements of ML Programming: ML97 Edition. Englewood Cliffs, New Jersey: Prentice Hall. ISBN&#160;0-13-790387-1.&#160;
+^ Iverson, Kenneth E. (1962). A Programming Language. John Wiley and Sons. ISBN&#160;0-471-43014-5.&#160;
+^ Graham, Paul (1996). ANSI Common Lisp. New Jersey: Prentice Hall. ISBN&#160;0-13-370875-6.&#160;
+^ Steele, Guy L. (1990). Common Lisp: The Language. Lexington: Digital Press. ISBN&#160;1-55558-041-6.&#160;
+^ Dybvig, R. Kent (1996). The Scheme Programming Language: ANSI Scheme. New Jersey: Prentice Hall. ISBN&#160;0-13-454646-6.&#160;
+^ Smith, Jerry D. (1988). Introduction to Scheme. New Jersey: Prentice Hall. ISBN&#160;0-13-496712-7.&#160;
+^ Abelson, Harold; Sussman, Gerald Jay; Sussman, Julie (1996). Structure and Interpretation of Computer Programs. New Jersey: McGraw-Hill. ISBN&#160;0-07-000484-6.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Assignment_(computer_science)&amp;oldid=691244582"					
+				Categories: Programming language conceptsHidden categories: Pages using web citations with no URLPages using citations with accessdate and no URL				
+							
+		
+		
+			

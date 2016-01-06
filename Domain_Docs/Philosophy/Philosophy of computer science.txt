@@ -1,0 +1,797 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Philosophy of computer science
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				The philosophy of computer science is concerned with the philosophical questions that arise with the study of computer science, which is understood to mean not just programming but the whole study of concepts and methods that assist in the development and maintenance of computer systems.[1] According to (Tedre 2006), there is still no common understanding of the content, aim, focus, or topic of the philosophy of computer science, despite some attempts to develop a philosophy of computer science like the philosophy of physics or the philosophy of mathematics.
+The philosophy of computer science as such deals with the meta-activity that is associated with the development of the concepts and methodologies that implement and analyze the computational systems. [2]
+
+
+
+Contents
+
+
+1 See also
+2 References
+3 Further reading
+4 External links
+
+
+
+See also[edit]
+
+Computer-assisted proof: Philosophical objections
+Philosophy of artificial intelligence
+Philosophy of information
+Philosophy of mathematics
+Philosophy of science
+Philosophy of technology
+
+References[edit]
+
+
+^ Turner
+^ http://pcs.essex.ac.uk/
+
+
+Further reading[edit]
+
+Scott Aaronson. "Why Philosophers Should Care About Computational Complexity". To appear in Computability: Gödel, Turing, Church, and beyond.
+Timothy Colburn. Philosophy and Computer Science. Explorations in Philosophy. M.E. Sharpe, 1999. ISBN 1-56324-991-X.
+A.K. Dewdney. New Turning Omnibus: 66 Excursions in Computer Science
+Luciano Floridi (editor). The Blackwell Guide to the Philosophy of Computing and Information, 2004.
+Luciano Floridi (editor). Philosophy of Computing and Information: 5 Questions. Automatic Press, 2008.
+Luciano Floridi. Philosophy and Computing: An Introduction, Routledge, 1999.
+Christian Jongeneel. The informatical worldview, an inquiry into the methodology of computer science.
+Jan van Leeuwen. "Towards a philosophy of the information and computing sciences", NIAS Newsletter 42, 2009.
+Moschovakis, Y. (2001). What is an algorithm? In Enquist, B. and Schmid, W., editors, Mathematics unlimited — 2001 and beyond, pages 919–936. Springer.
+Alexander Ollongren, Jaap van den Herik. Filosofie van de informatica. London and New York: Routledge, 1999. ISBN 0-415-19749-X
+Tedre, Matti (2014), The Science of Computing: Shaping a Discipline&#160; Taylor and Francis.
+Ray Turner and Ammon H. Eden. "The Philosophy of Computer Science". Stanford Encyclopedia of Philosophy.
+Matti Tedre (2011). Computing as a Science: A Survey of Competing Viewpoints. Minds &amp; Machines 21, 3, 361–387.
+Jordi Vallverdu. "Thinking Machines and the Philosophy of Computer Science: Concepts and Principles"". Idea Books, 2010. http://www.igi-global.com/book/thinking-machines-philosophy-computer-science/40293
+
+External links[edit]
+
+The International Association for Computing and Philosophy
+Philosophy of Computing and Information at PhilPapers
+Philosophy of the Information and Computing Sciences held in February 2010 at the Lorentz Center
+A draft version of Philosophy of Computer Science by William J. Rapaport
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Major fields of computer science
+
+
+
+
+
+
+
+Note: This template roughly follows the 2012 ACM Computing classification.
+
+
+
+
+
+
+Hardware
+
+
+
+Printed circuit board
+Peripheral
+Integrated circuit
+Very-large-scale integration
+Energy consumption
+Electronic design automation
+
+
+
+
+
+
+
+
+Computer systems
+organization
+
+
+
+Computer architecture
+Embedded system
+Real-time computing
+Dependability
+
+
+
+
+
+
+
+
+Networks
+
+
+
+Network architecture
+Network protocol
+Network components
+Network scheduler
+Network performance evaluation
+Network service
+
+
+
+
+
+
+
+
+Software organization
+
+
+
+Interpreter
+Middleware
+Virtual machine
+Operating system
+Software quality
+
+
+
+
+
+
+
+
+Software notations
+and tools
+
+
+
+Programming paradigm
+Programming language
+Compiler
+Domain-specific language
+Modeling language
+Software framework
+Integrated development environment
+Software configuration management
+Software library
+Software repository
+
+
+
+
+
+
+
+
+Software development
+
+
+
+Software development process
+Requirements analysis
+Software design
+Software implementation
+Software verification and validation
+Software maintenance
+Programming team
+Open-source model
+
+
+
+
+
+
+
+
+Theory of computation
+
+
+
+Model of computation
+Formal language
+Automata theory
+Computational complexity theory
+Logic
+Semantics
+
+
+
+
+
+
+
+
+Algorithms
+
+
+
+Algorithm design
+Analysis of algorithms
+Randomized algorithm
+Computational geometry
+
+
+
+
+
+
+
+
+Mathematics
+of computing
+
+
+
+Discrete mathematics
+Probability
+Statistics
+Mathematical software
+Information theory
+Mathematical analysis
+Numerical analysis
+
+
+
+
+
+
+
+
+Information
+systems
+
+
+
+Database management system
+Information storage systems
+Enterprise information system
+Social information systems
+Geographic information system
+Decision support system
+Process control system
+Multimedia information system
+Data mining
+Digital library
+Computing platform
+Digital marketing
+World Wide Web
+Information retrieval
+
+
+
+
+
+
+
+
+Security
+
+
+
+Cryptography
+Formal methods
+Security services
+Intrusion detection system
+Hardware security
+Network security
+Information security
+Application security
+
+
+
+
+
+
+
+
+Human–computer
+interaction
+
+
+
+Interaction design
+Social computing
+Ubiquitous computing
+Visualization
+Accessibility
+
+
+
+
+
+
+
+
+Concurrency
+
+
+
+Concurrent computing
+Parallel computing
+Distributed computing
+Multithreading
+Multiprocessing
+
+
+
+
+
+
+
+
+Artificial
+intelligence
+
+
+
+Natural language processing
+Knowledge representation and reasoning
+Computer vision
+Automated planning and scheduling
+Search methodology
+Control method
+Philosophy of artificial intelligence
+Distributed artificial intelligence
+
+
+
+
+
+
+
+
+Machine learning
+
+
+
+Supervised learning
+Unsupervised learning
+Reinforcement learning
+Multi-task learning
+Machine learning algorithms
+Cross-validation
+
+
+
+
+
+
+
+
+Graphics
+
+
+
+Animation
+Rendering
+Image manipulation
+Graphics processing unit
+Mixed reality
+Virtual reality
+Image compression
+Solid modeling
+
+
+
+
+
+
+
+
+Applied
+computing
+
+
+
+E-commerce
+Enterprise software
+Computational mathematics
+Computational physics
+Computational chemistry
+Computational biology
+Computational social science
+Computational engineering
+Computational healthcare
+Digital art
+Electronic publishing
+Cyberwarfare
+Electronic voting
+Video game
+Word processing
+Operations research
+Educational technology
+Document management
+
+
+
+
+
+
+
+
+
+
+
+ Computer science portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Philosophy of science
+
+
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Analysis
+Analytic–synthetic distinction
+A priori and a posteriori
+Causality
+Commensurability
+Consilience
+Construct
+Creative synthesis
+Demarcation problem
+Empirical evidence
+Explanatory power
+Fact
+Falsifiability
+Feminist method
+Ignoramus et ignorabimus
+Inductive reasoning
+Intertheoretic reduction
+Inquiry
+Nature
+Objectivity
+Observation
+Paradigm
+Problem of induction
+Scientific law
+Scientific method
+Scientific revolution
+Scientific theory
+Testability
+Theory choice
+Theory-ladenness
+Underdetermination
+Unity of science
+
+
+
+
+
+
+
+
+Metatheory
+of science
+
+
+
+Coherentism
+Confirmation holism
+Constructive empiricism
+Constructive realism
+Constructivist epistemology
+Contextualism
+Conventionalism
+{Deductive-nomological model
+Hypothetico-deductive model
+Inductionism}
+Epistemological anarchism
+Fallibilism
+Foundationalism
+Instrumentalism
+Pragmatism
+Model-dependent realism
+Naturalism
+Physicalism
+Positivism-Reductionism-Determinism
+Rationalism&#160;/ Empiricism
+Received view&#160;/ Semantic view of theories
+Scientific realism&#160;/ Anti-realism
+Scientific essentialism
+Scientific formalism
+Scientific skepticism
+Scientism
+Structuralism
+Uniformitarianism
+Vitalism
+
+
+
+
+
+
+
+
+Philosophy of
+
+
+
+Physics
+
+thermal and statistical
+Motion
+
+
+Chemistry
+Biology
+Environment
+Geography
+Social science
+Technology
+
+Engineering
+Artificial intelligence
+Computer science
+
+
+Information
+Mind
+Psychology
+Perception
+Space and time
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Alchemy
+Criticism of science
+Epistemology
+Faith and rationality
+History and philosophy of science
+History of science
+History of evolutionary thought
+Logic
+Metaphysics
+Pseudoscience
+Relationship between religion and science
+Rhetoric of science
+Sociology of scientific knowledge
+Sociology of scientific ignorance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Philosophers of science by era
+
+
+
+
+
+
+
+
+
+
+Ancient
+
+
+
+Plato
+Aristotle
+Stoicism
+Epicurians
+
+
+
+
+
+
+
+
+Medieval
+
+
+
+Averroes
+Avicenna
+Roger Bacon
+William of Ockham
+Hugh of Saint Victor
+Dominicus Gundissalinus
+Robert Kilwardby
+
+
+
+
+
+
+
+
+Early modern
+
+
+
+Francis Bacon
+Thomas Hobbes
+René Descartes
+Galileo Galilei
+Pierre Gassendi
+Isaac Newton
+David Hume
+
+
+
+
+
+
+
+
+Late modern
+
+
+
+Immanuel Kant
+Friedrich Schelling
+Auguste Comte
+William Whewell
+Wilhelm Windelband
+John Stuart Mill
+Herbert Spencer
+Pierre Duhem
+Henri Poincaré
+Wilhelm Wundt
+
+
+
+
+
+
+
+
+Contemporary
+
+
+
+Albert Einstein
+Bertrand Russell
+Alfred North Whitehead
+Rudolf Carnap
+W.V.O. Quine
+Bas van Fraassen
+Carl Gustav Hempel
+Charles Sanders Peirce
+Daniel Dennett
+Hans Reichenbach
+Ian Hacking
+Imre Lakatos
+Jürgen Habermas
+Karl Pearson
+Karl Popper
+Larry Laudan
+Michael Polanyi
+Otto Neurath
+Paul Feyerabend
+Thomas Kuhn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portal
+Category
+
+
+
+
+
+
+
+
+
+
+
+This computer science article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Philosophy_of_computer_science&amp;oldid=682077130"					
+				Categories: Philosophy of mathematicsPhilosophy of sciencePhilosophy of technologyPhilosophy of computer sciencePhilosophy by fieldComputer scienceComputer science stubsHidden categories: All stub articles				
+							
+		
+		
+			

@@ -1,0 +1,424 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Option type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article relies largely or entirely upon a single source. Relevant discussion may be found on the talk page. Please help improve this article by introducing citations to additional sources. (June 2013)
+
+
+For families of option contracts in finance, see Option style.
+In programming languages (especially functional programming languages) and type theory, an option type or maybe type is a polymorphic type that represents encapsulation of an optional value; e.g., it is used as the return type of functions which may or may not return a meaningful value when they are applied. It consists of either an empty constructor (called None or Nothing), or a constructor encapsulating the original data type A (written Just A or Some A). Outside of functional programming, these are known as nullable types.
+
+In the Haskell language, the option type (called Maybe) is defined as data Maybe a = Nothing | Just a.
+In the Idris language, the option type is also defined as data Maybe a = Nothing | Just a.
+In the Agda language, the option type is called Maybe with variants nothing and just a.
+In the Coq language, the option type is defined as Inductive option (A:Type)&#160;: Type&#160;:=| Some&#160;: A -&gt; option A| None&#160;: option A. .
+In the OCaml language, the option type is defined as type 'a option = None | Some of 'a.
+In the Scala language, the option type is defined as parameterized abstract class '.. Option[A] = if (x == null) None else Some(x)...
+In the Standard ML language, the option type is defined as datatype 'a option = NONE | SOME of 'a.
+In the Rust language, it is defined as enum Option&lt;T&gt; { None, Some(T) }.
+In the Swift language, it is defined as enum Optional&lt;T&gt; { case None, Some(T) } but is generally written as T? and is initialized with either a value or nil.
+In the Java language since version 8, the option type is defined as parameterized final class Optional&lt;T&gt;.
+In the C++ language proposed extensions, the option type is defined as the template class template&lt;class T&gt; class optional.
+
+In type theory, it may be written as: .
+In languages that have tagged unions, as in most functional programming languages, option types can be expressed as the tagged union of a unit type plus the encapsulated type.
+In the Curry-Howard correspondence, option types are related to the annihilation law for ∨: x∨1=1.
+An option type can also be seen as a collection containing either a single element or zero elements.
+
+
+
+Contents
+
+
+1 The option monad
+2 Examples
+
+2.1 Scala
+2.2 F#
+2.3 Haskell
+2.4 Swift
+2.5 Rust
+
+
+3 See also
+4 References
+
+
+
+The option monad[edit]
+The option type is a monad under the following functions:
+
+
+
+
+We may also describe the option monad in terms of functions return, fmap and join, where the latter two are given by:
+
+
+
+
+The option monad is an additive monad: it has Nothing as a zero constructor and the following function as a monadic sum:
+
+
+
+In fact, the resulting structure is an idempotent monoid.
+Examples[edit]
+Scala[edit]
+Scala implements Option as a parameterized type, so a variable can be an Option, accessed as follows:[1]
+
+
+// Defining variables that are Options of type Int
+val res1: Option[Int] = Some(42)
+val res2: Option[Int] = None
+
+// sample 1 :  This function uses pattern matching to deconstruct Options
+def compute(opt: Option[Int]) = opt match {
+  case None =&gt; "No value"
+  case Some(x) =&gt; "The value is: " + x
+}
+
+// sample 2 :  This function uses monad method
+def compute(opt: Option[Int]) = opt.fold("No Value")(v =&gt; "The value is:" + v )
+
+println(compute(res1))  // The value is: 42
+println(compute(res2))  // No value
+
+There are two main ways to use an Option value. The first one, not the best, is the pattern matching as in the first example. The second one, the best practice, is the monad method as in the second example. In this way, the program is safe as it cannot generate any exception or error (e.g. by trying to obtain the value of an Option variable that is equal to None). Therefore, it essentially works as a type-safe alternative to the null value.
+F#[edit]
+
+
+(* This function uses pattern matching to deconstruct Options *)
+let compute = function
+  | None   -&gt; "No value"
+  | Some x -&gt; sprintf "The value is: %d" x
+
+printfn "%s" (compute &lt;| Some 42)(* The value is: 42 *)
+printfn "%s" (compute None)      (* No value         *)
+
+Haskell[edit]
+
+
+-- This function uses pattern matching to deconstruct Maybes
+compute :: Maybe Int -&gt; String
+compute Nothing  = "No value"
+compute (Just x) = "The value is: " ++ show x
+
+main :: IO ()
+main = do
+    print $ compute (Just 42) -- The value is: 42
+    print $ compute Nothing -- No value
+
+Swift[edit]
+
+func compute(x: Int?) -&gt; String {
+  // This function uses optional binding to deconstruct optionals
+  if let y = x {
+    return "The value is: \(y)"
+  } else {
+    return "No value"
+  }
+}
+
+print(compute(42)) // The value is: 42
+print(compute(nil)) // No value
+
+
+func compute(x: Int?) -&gt; String {
+  // This function explicitly unwraps an optional after comparing to nil
+  return nil == x ? "No value" : "The value is: \(x!)"
+}
+
+print(compute(42)) // The value is: 42
+print(compute(nil)) // No value
+
+
+func compute(x: Int?) -&gt; String {
+  // This function uses pattern matching to deconstruct optionals
+  switch x {
+  case .None: 
+    return "No value"
+  case .Some(let y): 
+    return "The value is: \(y)"
+  }
+}
+
+print(compute(42)) // The value is: 42
+print(compute(nil)) // No value
+
+Rust[edit]
+Rust allows using either pattern matching or optional binding to deconstruct the Option type:
+
+fn main() {
+    // This function uses pattern matching to deconstruct optionals
+    fn compute(x: Option&lt;i32&gt;) -&gt; String {
+        match x {
+            Some(a) =&gt; format!("The value is: {}", a),
+            None    =&gt; format!("No value")
+        }
+    }
+
+    println!("{}", compute(Some(42))); // The value is: 42
+    println!("{}", compute(None)); // No value
+}
+
+
+fn main() {
+    // This function uses optional binding to deconstruct optionals
+    fn compute(x: Option&lt;i32&gt;) -&gt; String {
+        if let Some(a) = x {
+            format!("The value is: {}", a)
+        } else {
+            format!("No value")
+        }
+    }
+
+    println!("{}", compute(Some(42))); // The value is: 42
+    println!("{}", compute(None)); // No value
+}
+
+See also[edit]
+
+Tagged union
+Nullable type
+Null Object pattern
+Sentinel value
+
+References[edit]
+
+^ Martin Odersky; Lex Spoon; Bill Venners (2008). Programming in Scala. Artima Inc. pp.&#160;282–284. ISBN&#160;978-0-9815316-0-1. Retrieved 6 September 2011.&#160;
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Option_type&amp;oldid=690571482"					
+				Categories: Functional programmingData typesType theoryHidden categories: Articles needing additional references from June 2013All articles needing additional references				
+							
+		
+		
+			

@@ -1,0 +1,171 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Resource Acquisition Is Initialization
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2012)
+
+
+Resource Acquisition Is Initialization (RAII)[1] is a programming idiom used in several object-oriented languages, most prominently C++, where it originated, but also D, Ada, Vala, and Rust. The technique was developed for exception-safe resource management in C++[2] during 1984–89, primarily by Bjarne Stroustrup and Andrew Koenig,[3] and the term itself was coined by Stroustrup.[4] RAII is generally pronounced as an initialism, sometimes pronounced as "R, A, double I".[5]
+In RAII, holding a resource is tied to object lifetime: resource allocation (acquisition) is done during object creation (specifically initialization), by the constructor, while resource deallocation (release) is done during object destruction, by the destructor. If objects are destroyed properly, resource leaks do not occur.
+Other names for this idiom include Constructor Acquires, Destructor Releases (CADRe) [6] and one particular style of use is called Scope-based Resource Management (SBRM).[7] This latter term is for the special case of automatic variables. RAII ties resources to object lifetime, which may not coincide with entry and exit of a scope (notably variables allocated on the free store have lifetimes unrelated to any given scope). However, using RAII for automatic variables (SBRM) is the most common use case.
+
+
+
+Contents
+
+
+1 C++11 example
+2 Benefits
+3 Typical uses
+4 GCC "cleanup" extension for C
+5 Limitations
+6 Reference counting
+7 Notes
+8 References
+9 External links
+
+
+
+C++11 example[edit]
+The following C++11 example demonstrates usage of RAII for file access and mutex locking:
+
+
+#include &lt;string&gt;
+#include &lt;mutex&gt;
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;stdexcept&gt;
+
+void write_to_file (const std::string &amp; message) {
+    // mutex to protect file access (shared across threads)
+    static std::mutex mutex;
+
+    // lock mutex before accessing file
+    std::lock_guard&lt;std::mutex&gt; lock(mutex);
+
+    // try to open file
+    std::ofstream file("example.txt");
+    if (!file.is_open())
+        throw std::runtime_error("unable to open file");
+    
+    // write message to file
+    file &lt;&lt; message &lt;&lt; std::endl;
+    
+    // file will be closed 1st when leaving scope (regardless of exception)
+    // mutex will be unlocked 2nd (from lock destructor) when leaving
+    // scope (regardless of exception)
+}
+
+This code is exception-safe because C++ guarantees that all stack objects are destroyed at the end of the enclosing scope, known as stack unwinding. The destructors of both the lock and file objects are therefore guaranteed to be called when returning from the function, whether an exception has been thrown or not.[8]
+Local variables allow easy management of multiple resources within a single function: they are destroyed in the reverse order of their construction, and an object is destroyed only if fully constructed—that is, if no exception propagates from its constructor.[9]
+Using RAII greatly simplifies resource management, reduces overall code size and helps ensure program correctness. RAII is therefore highly recommended in C++, and most of the C++ standard library follows the idiom.[10]
+Benefits[edit]
+The advantages of RAII as a resource management technique are that it provides encapsulation, exception safety (for stack resources), and locality (it allows acquisition and release logic to be written next to each other).
+Encapsulation is provided because resource management logic is defined once in the class, not at each call site. Exception safety is provided for stack resources (resources that are released in the same scope as they are acquired) by tying the resource to the lifetime of a stack variable (a local variable declared in a given scope): if an exception is thrown, and proper exception handling is in place, the only code that will be executed when exiting the current scope are the destructors of objects declared in that scope. Finally, locality of definition is provided by writing the constructor and destructor definitions next to each other in the class definition.
+Resource management therefore needs to be tied to the lifespan of suitable objects in order to gain automatic allocation and reclamation. Resources are acquired during initialization, when there is no chance of them being used before they are available, and released with the destruction of the same objects, which is guaranteed to take place even in case of errors.
+Comparing RAII with the finally construct used in Java, Stroustrup wrote that “In realistic systems, there are far more resource acquisitions than kinds of resources, so the "resource acquisition is initialization" technique leads to less code than use of a "finally" construct.”[1]
+Typical uses[edit]
+The RAII design is often used for controlling mutex locks in multi-threaded applications. In that use, the object releases the lock when destroyed. Without RAII in this scenario the potential for deadlock would be high and the logic to lock the mutex would be far from the logic to unlock it. With RAII, the code that locks the mutex essentially includes the logic that the lock will be released when execution leaves the scope of the RAII object.
+Another typical example is interacting with files: We could have an object that represents a file that is open for writing, wherein the file is opened in the constructor and closed when execution leaves the object's scope. In both cases, RAII ensures only that the resource in question is released appropriately; care must still be taken to maintain exception safety. If the code modifying the data structure or file is not exception-safe, the mutex could be unlocked or the file closed with the data structure or file corrupted.
+Ownership of dynamically allocated objects (memory allocated with new in C++) can also be controlled with RAII, such that the object is released when the RAII (stack-based) object is destroyed. For this purpose, the C++11 standard library defines the smart pointer classes std::unique_ptr for single-owned objects and std::shared_ptr for objects with shared ownership. Similar classes are also available through std::auto_ptr in C++98, and boost::shared_ptr in the Boost libraries.
+GCC "cleanup" extension for C[edit]
+The GNU Compiler Collection implements a non-standard extension to the C language to support RAII: the "cleanup" variable attribute.[11] The following macro annotates a variable with a given destructor function that it will call when the variable goes out of scope:
+
+
+static inline void fclosep(FILE **fp) { if (*fp) fclose(*fp); }
+#define _cleanup_fclose_ __attribute__((cleanup(fclosep)))
+
+This macro can then be used as follows:
+
+
+void example_usage() {
+  _cleanup_fclose_ FILE *logfile = fopen("logfile.txt", "w+");
+  fputs("hello logfile!", logfile);
+}
+
+In this example, the compiler arranges for the fclosep function to be called before example_usage returns.
+Limitations[edit]
+RAII only works for resources acquired and released (directly or indirectly) by stack-allocated objects, where there is a well-defined static object lifetime. Heap-allocated objects which themselves acquire and release resources are common in many languages, including C++. RAII depends on heap-based objects to be implicitly or explicitly deleted along all possible execution paths, in order to trigger its resource-releasing destructor (or equivalent).[12]:8:27 This can be achieved by using smart pointers to manage all heap objects, with weak-pointers for cyclically referenced objects.
+Reference counting[edit]
+Perl, Python (in the CPython implementation),[13] and PHP[14] manage object lifetime by reference counting, which makes it possible to use RAII. Objects that are no longer referenced are immediately destroyed or finalized and released, so a destructor or finalizer can release the resource at that time. However, it is not always idiomatic in such languages, and is specifically discouraged in Python (in favor of context managers).
+However, object lifetimes are not necessarily bound to any scope, and objects may be destroyed non-deterministically or not at all. This makes it possible to accidentally leak resources that should have been released at the end of some scope. Objects stored in a static variable (notably a global variable) may not be finalized when the program terminates, so their resources are not released; CPython makes no guarantee of finalizing such objects, for instance. Further, objects with circular references will not be collected by a simple reference counter, and will live indeterminately long; even if collected (by more sophisticated garbage collection), destruction time and destruction order will be non-deterministic. In CPython there is a cycle detector which detects cycles and finalizes the objects in the cycle, though prior to CPython 3.4, cycles are not collected if any object in the cycle has a finalizer.[15] Also, in the case of Python, the garbage collection strategy is an implementation detail, so running with an alternative interpreter (such as IronPython or Jython) could result in the RAII implementation not working.
+Notes[edit]
+
+
+^ a b Bjarne Stroustrup Why doesn't C++ provide a "finally" construct? Accessed on 2013-01-02.
+^ Stroustrup 1994, 16.5 Resource Management, pp. 388–89.
+^ Stroustrup 1994, 16.1 Exception Handling: Introduction, pp. 383–84.
+^ Stroustrup 1994, p.&#160;389. I called this technique “resource acquisition is initialization.”
+^ "How do you pronounce RAII?", StackOverflow
+^ https://groups.google.com/a/isocpp.org/forum/#!topic/std-proposals/UnarLCzNPcI
+^ http://books.google.com/books?id=bIxWAgAAQBAJ&amp;pg=PA4&amp;lpg=PA4&amp;dq=%22scope+based+resource+management%22&amp;source=bl&amp;ots=2MjJtUW991&amp;sig=VKrsj2_c_Ao3FQ7TsnK47DILQE0&amp;hl=en&amp;sa=X&amp;ei=llhNU4SPLO6GyQG84oGwCQ&amp;ved=0CG8Q6AEwBw#v=onepage&amp;q=%22scope%20based%20resource%20management%22&amp;f=false
+^ "dtors-shouldnt-throw". Retrieved 12 February 2013.&#160;
+^ "What's the order that local objects are destructed?". Retrieved 12 February 2013.&#160;
+^ "too-many-trycatch-blocks". C++ FAQ. Archived from the original on 1 November 2014. Retrieved 4 June 2014.&#160;
+^ http://gcc.gnu.org/onlinedocs/gcc/Variable-Attributes.html
+^ Weimer, W and Necula, G.C. (2008). "Exceptional Situations and Program Reliability" (PDF). ACM Transactions on Programming Languages and Systems, vol 30 (2).&#160;
+^ Extending Python with C or C++: Reference Counts
+^ http://stackoverflow.com/a/4938780
+^ gc — Garbage Collector interface
+
+
+References[edit]
+
+
+Stroustrup, Bjarne (1994). The Design and Evolution of C++. Addison-Wesley. ISBN&#160;0-201-54330-3.&#160;
+
+
+External links[edit]
+
+
+
+The Wikibook C++ Programming has a page on the topic of: RAII
+
+
+
+
+
+The Wikibook More C++ Idioms has a page on the topic of: Resource Acquisition Is Initialization
+
+
+
+Sample Chapter "Gotcha #67: Failure to Employ Resource Acquisition Is Initialization" by Stephen Dewhurst
+Interview "A Conversation with Bjarne Stroustrup" by Bill Venners
+Article "The Law of The Big Two" by Bjorn Karlsson and Matthew Wilson
+Article "Implementing the 'Resource Acquisition is Initialization' Idiom" by Danny Kalev
+Article "RAII, Dynamic Objects, and Factories in C++" by Roland Pibinger
+RAII in Delphi "One-liner RAII in Delphi" by Barry Kelly
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Resource_Acquisition_Is_Initialization&amp;oldid=689389346"					
+				Categories: Object-oriented programmingProgramming idiomsC++Hidden categories: Articles needing additional references from December 2012All articles needing additional referencesArticles with example C++ code				
+							
+		
+		
+			

@@ -1,0 +1,404 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Dependent type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Type systems
+
+
+
+
+Type safety
+Dynamic type-checking
+Static type-checking
+Inferred vs. Manifest
+Nominal vs. Structural
+Dependent typing
+Duck typing
+Gradual typing
+Latent typing
+Substructural typing
+Uniqueness typing
+Strong and weak typing
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In computer science and logic, a dependent type is a type that depends on a value. It is an overlapping feature of type theory and type systems. In intuitionistic type theory, dependent types are used to encode logic's quantifiers like "for all" and "there exists". In functional programming languages like ATS, Agda, Idris and Epigram, dependent types prevent bugs by allowing extremely expressive types.
+Two common examples of dependent types are dependent functions and dependent pairs. A dependent function's return type may depend on the value (not just type) of an argument. A function that takes a positive integer "n" may return an array of length "n". (Note that this is different from polymorphism and generic programming, both of which include the type is an argument.) A dependent pair may have a second value that depends on the first. It can be used to encode a pair of integers where the second one is greater than the first.
+Dependent types add complexity to a type system. Deciding the equality of dependent types in a program may require computations. If arbitrary values are allowed in dependent types, then deciding type equality may involve deciding whether two arbitrary programs produce the same result; hence type checking may become undecidable.
+
+
+
+Contents
+
+
+1 History
+2 Formal definition
+3 Dependent pair type
+
+3.1 Example as existential quantification
+
+
+4 Systems of the lambda cube
+
+4.1 First order dependent type theory
+4.2 Second order dependent type theory
+4.3 Higher order dependently typed polymorphic lambda calculus
+
+
+5 Simultaneous Programming language and Logic
+6 Comparison of languages with dependent types
+7 See also
+8 Footnotes
+9 References
+10 Further reading
+11 External
+
+
+
+History[edit]
+Dependent types were created to deepen the connection between programming and logic.
+In 1934, Haskell Curry noticed that the types used in mathematical programming languages followed the same pattern as axioms in propositional logic. Going further, for every proof in the logic, there was a matching function (term) in the programming language. One of Curry's examples was the correspondence between simply typed lambda calculus and intuitionistic logic.[1]
+Predicate logic is an extension of propositional logic, adding quantifiers. Howard and de Bruijn extended lambda calculus to match this more powerful logic by creating types for dependent functions, which correspond to "for all", and dependent pairs, which correspond to "there exists".[2]
+(Because of this and other work by Howard, propositions-as-types is known as the Curry-Howard correspondence.)
+Formal definition[edit]
+Dependent types can be, very loosely speaking, imagined to be similar to the type of an indexed family of sets. More formally, given a type  in a universe of types , one may have a family of types  which assigns to each term  a type . A function whose codomain varies depending on its argument is a dependent function, and the type of this function is called a dependent type, dependent product type or pi-type. For this example, the dependent type would be written as
+
+
+
+or as
+
+
+
+If B is a constant, the dependent type becomes an ordinary function . That is,  is judgementally equal to the function type .
+The name 'pi-type' comes from the idea that these may be viewed as a Cartesian product of types. Pi-types can also be understood as models of universal quantifiers.
+For example, writing  for -tuples of real numbers, then  would be the type of functions which, given a natural number n, return a tuple of real numbers of size n. The usual function space arises as a special case when the range type does not actually depend on the input, e.g.  is the type of functions from natural numbers to the real numbers, which is written as  in the simply typed lambda calculus.
+Polymorphic functions are an important example of dependent functions, that is, functions having dependent type. Given a type, these functions act on elements of that type (or on elements of a type constructed (derived, inherited) from that type). A polymorphic function returning elements of type C would have a polymorphic type written as
+
+
+
+Dependent pair type[edit]
+The opposite of the dependent product type is the dependent pair type, dependent sum type or sigma-type. It is analogous to the coproduct or disjoint union. Sigma-types can also be understood as existential quantifiers. Notationally, it is written as
+
+
+
+The dependent pair type captures the idea of an indexed pair, where the type of the second term is dependent on the first. Thus, if
+
+
+
+then  and . If B is a constant, then the dependent pair type becomes (is judgementally equal to) the product type, that is, an ordinary Cartesian product .
+Example as existential quantification[edit]
+Let  be sigma-type quantifying over type  with predicate . There exists an  such that  holds if and only if  is inhabited. For example, a is less than b iff there exists a natural number n and a proof that a+n=b.
+
+
+
+Systems of the lambda cube[edit]
+Henk Barendregt developed the lambda cube as a means of classifying type systems along three axes. The eight corners of the resulting cube-shaped diagram each correspond to a type system, with simply typed lambda calculus in the least expressive corner, and calculus of constructions in the most expressive. The three axes of the cube correspond to three different augmentations of the simply typed lambda calculus: the addition of dependent types, the addition of polymorphism, and the addition of higher kinded type constructors (functions from types to types, for example). The lambda cube is generalized further by pure type systems.
+First order dependent type theory[edit]
+The system  of pure first order dependent types, corresponding to the logical framework LF, is obtained by generalising the function space type of the simply typed lambda calculus to the dependent product type.
+Second order dependent type theory[edit]
+The system  of second order dependent types is obtained from  by allowing quantification over type constructors. In this theory the dependent product operator subsumes both the  operator of simply typed lambda calculus and the  binder of System F.
+Higher order dependently typed polymorphic lambda calculus[edit]
+The higher order system  extends  to all four forms of abstraction from the lambda cube: functions from terms to terms, types to types, terms to types and types to terms. The system corresponds to the Calculus of constructions whose derivative, the calculus of inductive constructions is the underlying system of the Coq proof assistant.
+Simultaneous Programming language and Logic[edit]
+The Curry–Howard correspondence implies that types can be constructed that express arbitrarily complex mathematical properties. If the user can supply a constructive proof that a type is inhabited (i.e., that a value of that type exists) then a compiler can check the proof and convert it into executable computer code that computes the value by carrying out the construction. The proof checking feature makes dependently typed languages closely related to proof assistants. The code-generation aspect provides a powerful approach to formal program verification and proof-carrying code, since the code is derived directly from a mechanically verified mathematical proof.
+Comparison of languages with dependent types[edit]
+
+See also: Proof assistant § Comparison
+
+
+Language
+Actively developed
+Paradigm[fn 1]
+Tactics
+Proof terms
+Termination checking
+Types can depend on[fn 2]
+Universes
+Proof irrelevance
+Program extraction
+Extraction erases irrelevant terms
+
+
+Agda
+Yes[3]
+Purely functional
+Few/limited[fn 3]
+Yes
+Yes (optional)
+Any term
+Yes (optional)[fn 4]
+Proof-irrelevant arguments (experimental)[5]
+Haskell, Javascript
+Yes[5]
+
+
+ATS
+Yes[6]
+Functional / imperative
+No[7]
+Yes
+Yes
+?
+?
+?
+Yes
+?
+
+
+Cayenne
+No
+Purely functional
+No
+Yes
+No
+Any term
+No
+No
+?
+?
+
+
+Coq
+Yes[8]
+Purely functional
+Yes
+Yes
+Yes
+Any term
+Yes[fn 5]
+No
+Haskell, Scheme and OCaml
+Yes
+
+
+Dependent ML
+No[fn 6]
+?
+?
+Yes
+?
+Natural numbers
+?
+?
+?
+?
+
+
+F*
+Yes[9]
+Functional and imperative
+No
+Yes
+Yes (optional)
+Any pure term
+No
+Yes
+OCaml and F#
+Yes
+
+
+Guru
+No[10]
+Purely functional[11]
+hypjoin[12]
+Yes[11]
+Yes
+Any term
+No
+Yes
+Carraway
+Yes
+
+
+Idris
+Yes[13]
+Purely functional[14]
+Yes[15]
+Yes
+Yes (optional)
+Any term
+Yes
+No
+Yes
+Yes, aggressively[15]
+
+
+Matita
+Yes[16]
+Purely functional
+Yes
+Yes
+Yes
+Any term
+Yes
+Yes
+OCaml
+Yes
+
+
+NuPRL
+Yes
+Purely functional
+Yes
+Yes
+Yes
+Any term
+Yes
+?
+Yes
+?
+
+
+PVS
+Yes
+?
+Yes
+?
+?
+?
+?
+?
+?
+?
+
+
+Sage
+?
+Hybrid typechecking
+?
+?
+?
+?
+?
+?
+?
+?
+
+
+Twelf
+Yes
+Logic programming
+?
+Yes
+Yes (optional)
+Any (LF) term
+No
+No
+?
+?
+
+
+Xanadu
+No[17]
+Imperative
+?
+?
+?
+?
+?
+?
+?
+?
+
+
+See also[edit]
+
+Typed lambda calculus
+
+Footnotes[edit]
+
+^ This refers to the core language, not to any tactic or code generation sublanguage.
+^ Subject to semantic constraints, such as universe constraints
+^ Ring solver[4]
+^ Optional universes, optional universe polymorphism, and optional explicitly specified universes
+^ Universes, automatically inferred universe constraints (not the same as Agda's universe polymorphism) and optional explicit printing of universe constraints
+^ Has been superseded by ATS
+
+References[edit]
+
+
+^ Sørensen, Morten Heine B.; Pawel Urzyczyn (1998). "Lectures on the Curry-Howard Isomorphism".&#160;
+^ Bove, Ana; Peter Dybjer (2008). "Dependent Types at Work" (PDF).&#160;
+^ "Agda download page".&#160;
+^ "Agda Ring Solver".&#160;
+^ a b "Announce: Agda 2.2.8".&#160;
+^ "ATS2 downloads".&#160;
+^ "email from ATS inventor Hongwei Xi".&#160;
+^ "Coq CHANGES in Subversion repository".&#160;
+^ "F* changes on GitHub".&#160;
+^ "Guru SVN".&#160;
+^ a b Aaron Stump (6 April 2009). "Verified Programming in Guru" (PDF). Retrieved 28 September 2010.&#160;
+^ Adam Petcher (1 April 2008). "Deciding Joinability Modulo Ground Equations in Operational Type Theory" (PDF). Retrieved 14 October 2010.&#160;
+^ "Idris git repository".&#160;
+^ "Idris, a language with dependent types - extended abstract" (PDF).&#160;
+^ a b Edwin Brady. "How does Idris compare to other dependently-typed programming languages?".&#160;
+^ "Matita SVN".&#160;
+^ "Xanadu home page".&#160;
+
+
+Further reading[edit]
+
+Martin-Löf, Per (1984). Intuitionistic Type Theory (PDF). Bibliopolis.&#160;
+Nordström, Bengt; Petersson, Kent; Smith, Jan M. (1990). Programming in Martin-Löf's Type Theory: An Introduction. Oxford University Press.&#160;
+Barendregt, Henk (1992). "Lambda calculi with types". In S. Abramsky, D. Gabbay and T. Maibaum. Handbook of Logic in Computer Science. Oxford Science Publications.&#160;
+McBride, Conor; McKinna, James (January 2004). "The view from the left". Journal of Functional Programming 14 (1): 69–111. doi:10.1017/s0956796803004829.&#160;
+Altenkirch, Thorsten; McBride, Conor; McKinna, James (April 2005). "Why dependent types matter" (PDF).&#160;
+Norell, Ulf. Towards a practical programming language based on dependent type theory. PhD thesis, Department of Computer Science and Engineering, Chalmers University of Technology, SE-412 96 Göteborg, Sweden, September 2007.
+Oury, Nicolas and Swierstra, Wouter (2008). "The Power of Pi". Accepted for presentation at ICFP, 2008.
+Norell, Ulf (2008). Dependently Typed Programming in Agda.
+
+External[edit]
+
+Dependently Typed Programming 2008
+Dependently Typed Programming 2010
+Dependently Typed Programming 2011
+"Dependent type" at the Haskell Wiki
+dependent type theory in nLab
+dependent type in nLab
+dependent product type in nLab
+dependent sum type in nLab
+dependent product in nLab
+dependent sum in nLab
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Dependent_type&amp;oldid=691284002"					
+				Categories: Dependently typed programmingType theory				
+							
+		
+		
+			

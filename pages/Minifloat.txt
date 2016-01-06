@@ -1,0 +1,464 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Minifloat
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs attention from an expert in Computing. Please add a reason or a talk parameter to this template to explain the issue with the article. WikiProject Computing (or its Portal) may be able to help recruit an expert. (June 2007)
+
+
+In computing, minifloats are floating point values represented with very few bits. Predictably, they are not well suited for general purpose numerical calculations. They are used for special purposes most often in computer graphics where iterations are small and precision has aesthetic effects. Additionally they are frequently encountered as a pedagogical tool in computer science courses to demonstrate the properties and structures of floating point arithmetic and IEEE 754 numbers.
+Minifloats with 16 bits are half-precision numbers (opposed to single and double precision). There are also minifloats with 8 bits or even fewer.
+Minifloats can be designed following the principles of the IEEE 754 standard. In this case they must obey the (not explicitly written) rules for the frontier between subnormal and normal numbers and they must have special patterns for infinity and NaN. Normalized numbers are stored with a biased exponent. The new revision of the standard, IEEE 754-2008, has 16-bit binary minifloats.
+The Radeon R300 and R420 GPUs used an "fp24" floating-point format with 7 bits of exponent and 16 bits (+1 implicit) of mantissa.[1] "Full Precision" in Direct3D 9.0 is a proprietary 24-bit floating point format. Microsoft's D3D9 (Shader Model 2.0) graphics API initially supported both FP24 (as in ATI's R300 chip) and FP32 (as in Nvidia's NV30 chip) as "Full Precision" as well as FP16 as "Partial Precision" for vertex and pixel shader calculations performed by the graphics hardware.
+In computer graphics minifloats are sometimes used to represent only integral values. If at the same time subnormal values should exist, the least subnormal number has to be 1. This statement can be used to calculate the bias value. The following example demonstrates the calculation as well as the underlying principles.
+
+
+Floating-point precisions
+
+
+
+
+
+IEEE 754
+
+
+
+
+16-bit: Half (binary16)
+32-bit: Single (binary32), decimal32
+64-bit: Double (binary64), decimal64
+128-bit: Quadruple (binary128), decimal128
+Extended precision formats
+
+
+
+
+Other
+
+
+
+
+Minifloat
+Arbitrary precision
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+Contents
+
+
+1 Example
+
+1.1 Representation of zero
+1.2 Subnormal numbers
+1.3 Normalized numbers
+1.4 Infinity
+1.5 Not a Number
+1.6 Value of the bias
+1.7 All values
+1.8 Properties of this example
+
+
+2 Arithmetic
+
+2.1 Addition
+2.2 Subtraction, multiplication and division
+
+
+3 See also
+4 References
+5 External links
+
+
+
+Example[edit]
+A minifloat in one byte (8 bit) with one sign bit, four exponent bits and three mantissa bits (in short a 1.4.3.−2 minifloat) should be used to represent integral values. All IEEE 754 principles should be valid. The only free value is the exponent bias, which will come out as −2. The unknown exponent is called for the moment x.
+Numbers in a different base are marked as ...base. Example 1012 = 5. The bit patterns have spaces to visualize their parts.
+Representation of zero[edit]
+
+0 0000 000 = 0
+
+Subnormal numbers[edit]
+The mantissa is extended with 0.:
+
+0 0000 001 = 0.0012 × 2x = 0.125 × 2x = 1 (least subnormal number)
+...
+0 0000 111 = 0.1112 × 2x = 0.875 × 2x = 7 (greatest subnormal number)
+
+Normalized numbers[edit]
+The mantissa is extended with 1.:
+
+0 0001 000 = 1.0002 × 2x = 1 × 2x = 8 (least normalized number)
+0 0001 001 = 1.0012 × 2x = 1.125 × 2x = 9
+...
+0 0010 000 = 1.0002 × 2x+1 = 1 × 2x+1 = 16
+0 0010 001 = 1.0012 × 2x+1 = 1.125 × 2x+1 = 18
+...
+0 1110 000 = 1.0002 × 2x+13 =  1.000 × 2x+13 =  65536
+0 1110 001 = 1.0012 × 2x+13 =  1.125 × 2x+13 =  73728
+...
+0 1110 110 = 1.1102 × 2x+13 =  1.750 × 2x+13 = 114688
+0 1110 111 = 1.1112 × 2x+13 =  1.875 × 2x+13 = 122880 (greatest normalized number)
+
+Infinity[edit]
+
+0 1111 000 = +infinity
+1 1111 000 = −infinity
+
+If the exponent field were not treated specially, the value would be
+
+0 1111 000 = 1.0002 × 2x+14 =  217 = 131072
+
+Not a Number[edit]
+
+x 1111 yyy = NaN (if yyy ≠ 000)
+
+Without the IEEE 754 special handling of the largest exponent, the greatest possible value would be
+
+0 1111 111 = 1.1112 × 2x+14 =  1.875 * 217 = 245760
+
+Value of the bias[edit]
+If the least subnormal value (second line above) should be 1, the value of x has to be x = 3. Therefore the bias has to be −2, that is every stored exponent has to be decreased by −2 or has to be increased by 2, to get the numerical exponent.
+All values[edit]
+
+0       1       2       3       4       5       6       7       8       9       10      11      12      13      14      15
+16      18      20      22      24      26      28      30      32      36      40      44      48      52      56      60
+64      72      80      88      96      104     112     120     128     144     160     176     192     208     224     240
+256     288     320     352     384     416     448     480     512     576     640     704     768     832     896     960
+1024    1152    1280    1408    1536    1664    1792    1920    2048    2304    2560    2816    3072    3328    3584    3840
+4096    4608    5120    5632    6144    6656    7168    7680    8192    9216    10240   11264   12288   13312   14336   15360
+16384   18432   20480   22528   24576   26624   28672   30720   32768   36864   40960   45056   49152   53248   57344   61440
+65536   73728   81920   90112   98304   106496  114688  122880  Inf     NaN     NaN     NaN     NaN     NaN     NaN     NaN
+-0      -1      -2      -3      -4      -5      -6      -7      -8      -9      -10     -11     -12     -13     -14     -15
+-16     -18     -20     -22     -24     -26     -28     -30     -32     -36     -40     -44     -48     -52     -56     -60
+-64     -72     -80     -88     -96     -104    -112    -120    -128    -144    -160    -176    -192    -208    -224    -240
+-256    -288    -320    -352    -384    -416    -448    -480    -512    -576    -640    -704    -768    -832    -896    -960
+-1024   -1152   -1280   -1408   -1536   -1664   -1792   -1920   -2048   -2304   -2560   -2816   -3072   -3328   -3584   -3840
+-4096   -4608   -5120   -5632   -6144   -6656   -7168   -7680   -8192   -9216   -10240  -11264  -12288  -13312  -14336  -15360
+-16384  -18432  -20480  -22528  -24576  -26624  -28672  -30720  -32768  -36864  -40960  -45056  -49152  -53248  -57344  -61440
+-65536  -73728  -81920  -90112  -98304  -106496 -114688 -122880 -Inf    NaN     NaN     NaN     NaN     NaN     NaN     NaN
+
+Properties of this example[edit]
+
+
+
+
+Graphical representation of integral (1.4.3.−2) minifloats.
+
+
+Integral minifloats in one byte have a greater range of ±122880 than twos complement integer with a range −128 to +127. The greater range is compensated by a poor precision, because there are only 4 mantissa bits, equivalent to slightly more than one decimal place. They also have greater range than half-precision minifloats with range ±65504, also compensated by lack of fractions and poor precision.
+There are only 242 different values (if +0 and −0 are regarded as different), because 14 bit patterns represent NaN.
+The values between 0 and 16 have the same bit pattern as minifloat or twos complement integer. The first pattern with a different value is 00010001, which is 18 as a minifloat and 17 as a twos complement integer.
+This coincidence does not occur at all with negative values, because this minifloat is a signed-magnitude format.
+The (vertical) real line on the right shows clearly the varying density of the floating point values - a property which is common to any floating point system. This varying density results in a curve similar to the exponential function.
+Although the curve may appear smooth, this is not the case. The graph actually consists of distinct points, and these points lie on line segments with discrete slopes. The value of the exponent bits determines the absolute precision of the mantissa bits, and it is this precision that determines the slope of each linear segment.
+Arithmetic[edit]
+Addition[edit]
+
+
+
+
+Addition of (1.3.2.3)-minifloats.
+
+
+The graphic demonstrates the addition of even smaller (1.3.2.3)-minifloats with 6 bits. This floating point system follows the rules of IEEE 754 exactly. NaN as operand produces always NaN results. Inf&#160;−&#160;Inf and (−Inf)&#160;+&#160;Inf results in NaN too (green area). Inf can be augmented and decremented by finite values without change. Sums with finite operands can give an infinite result (i.e. 14.0+3.0&#160;−&#160;+Inf as a result is the cyan area, −Inf is the magenta area). The range of the finite operands is filled with the curves x+y=c, where c is always one of the representable float values (blue and red for positive and negative results respectively).
+Subtraction, multiplication and division[edit]
+The other arithmetic operations can be illustrated similarly:
+
+
+
+
+
+
+
+Subtraction
+
+
+
+
+
+
+
+
+
+Multiplication
+
+
+
+
+
+
+
+
+
+Division
+
+
+
+
+See also[edit]
+
+Fixed-point arithmetic
+
+References[edit]
+
+
+^ Buck, Ian (2005-03-13), "Chapter 32. Taking the Plunge into GPU Computing", in Pharr, Matt, GPU Gems, ISBN&#160;0-321-33559-7, retrieved 2011-02-20&#160;
+
+
+Survey of Floating-Point Formats
+
+
+External links[edit]
+
+OpenGL half float pixel
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Minifloat&amp;oldid=682751560"					
+				Categories: Floating point typesComputer arithmeticHidden categories: Articles needing expert attention with no reason or talk parameterArticles needing expert attention from June 2007All articles needing expert attentionComputing articles needing expert attention				
+							
+		
+		
+			

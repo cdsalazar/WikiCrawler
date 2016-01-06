@@ -1,0 +1,741 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Windows Runtime
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from WinRT)
+												
+					Jump to:					navigation, 					search
+				
+				"WinRT" redirects here. It is not to be confused with Windows RT.
+
+Windows Runtime
+
+A component of Microsoft Windows
+
+
+Details
+
+
+Other names
+WinRT
+
+
+Type
+Application programming interface
+
+
+Included with
+Windows Server 2012, Windows 8, Windows RT, Windows 8.1, Windows Server 2012 R2, Windows 10, Windows Server 2016
+
+
+Related components
+
+
+Windows Store, Windows API
+
+
+Windows Runtime, or WinRT, is a platform-homogeneous application architecture first introduced in Windows Server 2012 in September 2012. WinRT supports development in C++/CX (Component Extensions, a language based on C++) and the managed code languages C# and VB.NET, as well as JavaScript and TypeScript. WinRT applications natively support both the x86 and ARM architectures, and also run inside a sandboxed environment to allow for greater security and stability.[1][2] WinRT components are designed with interoperability between multiple languages and APIs in mind, including native, managed and scripting languages.
+Windows Phone 8 uses a version of the Windows Runtime known as the Windows Phone Runtime. It enables app development in C#, VB.NET and development of Windows Runtime components in C++/CX.[3]
+
+
+
+Contents
+
+
+1 Background
+2 Technology
+3 Services
+
+3.1 Metadata
+3.2 Type system
+
+3.2.1 WinRT components
+
+
+3.3 Programming interfaces
+
+3.3.1 C++ (WRL, Component Extensions)
+3.3.2 .NET
+3.3.3 JavaScript
+3.3.4 Bridges
+
+
+3.4 API
+
+3.4.1 Runtime classes
+3.4.2 Naming conventions
+3.4.3 Restrictions and rules
+
+
+
+
+4 Version history
+5 Windows Phone Runtime
+
+5.1 Windows Phone 8
+5.2 Windows Phone 8.1
+
+
+6 See also
+7 References
+8 External links
+
+
+
+Background[edit]
+
+
+
+This section requires expansion. (August 2015)
+
+
+Technology[edit]
+WinRT is implemented in the C++ programming language[4] and is object-oriented by design.[4] (Its predecessor, Win32 API is written mostly in the C programming language.[5]) It is an unmanaged application programming interface (API) based on Component Object Model (COM) that allows interfacing from multiple languages, just as COM does. The API definitions, however, are stored in ".winmd" files, which are encoded in ECMA 335 metadata format, the same format that .NET Framework uses with a few modifications.[6][unreliable source?] This common metadata format allows for significantly less overhead when invoking WinRT from .NET applications compared to P/Invoke, and much simpler syntax.[7][unreliable source?]
+The new C++/CX (Component Extensions) language, which borrows some C++/CLI syntax, allows the authoring and consumption of WinRT components with less glue visible to the programmer compared to classic COM programming in C++, and at the same time imposes fewer restrictions compared to C++/CLI on the mixing of types. The Component Extensions of C++/CX are recommended to be used only at the API-boundary, not for other purposes.[8] Regular C++ (with COM-specific discipline) can also be used to program with WinRT components,[9] with the help of the new Windows Runtime C++ Template Library (WRL), which is similar in purpose to what Active Template Library provides for COM.[10]
+WinRT applications run within a sandbox and require explicit user approval to access critical OS features and underlying hardware. File access is restricted to several predetermined locations, such as Documents or Pictures.
+WinRT applications for Windows RT, Windows 8 and beyond are packaged in the .appx file format; based upon Open Packaging Conventions, it uses a ZIP format with additional XML files.[11] WinRT applications are primarily distributed through an application store known as Windows Store, where WinRT software (referred to as Windows Store apps) can be downloaded and purchased by end-users. WinRT apps can only be sideloaded from outside Windows Store on Windows 8 or RT systems that are part of a Windows domain, or equipped with a special activation key obtained from Microsoft.[12][13][14][15]
+In a major departure from Win32 and similarly to .NET Framework 4.5, most APIs which are expected to take significant time to complete are implemented as asynchronous. The application dispatches the API call, which immediately returns freeing the application to perform other tasks while waiting for the results.[16] Asynchronous model requires new programming language constructs (async keyword and await operator in C# and Visual Basic, task class and .then method in C++ which are provided by the WinRT SDK, promise keyword and then function in JavaScript/HTML5), similar to try/catch used in exception handling. Parts of the API that require asynchronous access include on-screen messages and dialogs, file access, Internet connectivity, sockets, streams, devices and services, and calendar, contacts and appointments.
+Services[edit]
+Metadata[edit]
+See also: Metadata (CLI)
+The metadata describes the code written for the WinRT platform. It defines a programming model that makes it possible to write object-oriented code that can be shared across programming languages. It also enables services like reflection.
+Herb Sutter, C++ expert at Microsoft, explained during his session on C++ at the 2011 BUILD conference that the WinRT metadata is CLI metadata.[8] Native code (i.e., processor-specific machine code) cannot contain metadata and it is then stored in separate WINMD-files that can be reflected just like ordinary CLI assemblies.[17]
+Because it is CLI metadata the programmer can then use code written in native WinRT-languages from managed CLI languages.
+Type system[edit]
+WinRT has a rich object-oriented class-based type system that is built on the metadata. It supports constructs with corresponding constructs that are found in the .NET framework: classes, methods, properties, delegates and events.
+One of the major additions to WinRT relative to COM is the cross-ABI, .NET-style generics. In C++/CX these are declared using the generic keyword with a syntax very similar to that of the template keyword. WinRT classes (ref classes) can also be genericized using C++ templates but only template instantiations can be exported to .winmd metadata (with some name mangling), unlike WinRT generics which preserve their genericity in the metadata. WinRT also provides a library of generic containers that parallel those from the C++ standard library, as well as some back-and-forth conversion functions. The consumption of WinRT collections in .NET languages (e.g. C# and VB) as well as in JavaScript is more transparent than in the case of C++, with automated mappings into their natural equivalents taking place behind the scenes. When authoring a WinRT component in a managed language, some extra, COM-style rules need to be followed, e.g. .NET framework collection types cannot be declared as return types, but only the WinRT interfaces that they implement can be used at the component boundary.
+WinRT components[edit]
+Classes that are compiled to target the WinRT are called WinRT components. They are classes that can be written in any supported language and for any supported platform. The key is the metadata. This metadata makes it possible to interface with the component from any other WinRT language. The runtime requires WinRT components that are built with .NET Framework to use the defined interface types or .NET type interfaces, which automatically map to the first named. Inheritance is as yet not supported in managed WinRT components, except for XAML classes.[18]
+Programming interfaces[edit]
+Programs and libraries targeted for the WinRT runtime can be created and consumed from a number of platforms and programming languages. Notably C/C++ (either with language extensions offering first-class support for WinRT concepts, or with a lower-level template library allowing to write code in standard C++), .NET (C# and VB.NET) and JavaScript. This is made possible by the metadata.
+In WinRT terminology, a language binding is referred to as a language projection.
+C++ (WRL, Component Extensions)[edit]
+See also: C++/CX
+Native C++ is a "first-class citizen" of the WinRT-platform. To use WinRT from C++ two supported options are available: WRL—an ATL-style template library—and C++/CX (C++ with Component Extensions) which resembles C++/CLI.[19] Because of the internal consumption requirements at Microsoft, WRL is exception-free, meaning its return-value discipline is HRESULT-based just like that of COM.[20] C++/CX on the other hand wraps-up calls to WinRT with code that does error checking and throws exceptions as appropriate.[21]
+C++/CX has a number of extensions that enable integration with the platform and its type system. The syntax resembles the one of C++/CLI although it produces native code and metadata that integrates with the runtime. For example, WinRT objects may be allocated with ref new, which is the counterpart of gcnew from C++/CLI. The hat operator (^) retains its meaning, however in the case where both the caller and callee are written in C++ and living in the same process, a hat reference is simply a pointer to a vptr to a vtable.[21]
+An addition to C++/CX relative to traditional C++ COM programming are partial classes, again inspired from .NET. These allow for instance XAML code to be translated into C++ code by tools and then combined with human-written code to produce the complete class while allowing clean separation of the machine-generated and human-edited parts of a class implementation into different files.
+WinRT is a native platform and supports any native C++ code. A C++ developer can reuse existing native C/C++ libraries with the only need to use the language extensions when writing code that is interfacing with the runtime.
+.NET[edit]
+See also: .NET Framework
+The .NET Framework and the Common Language Runtime (CLR) are integrated into the WinRT as a subplatform. It also has influenced and set the standards for the ecosystem through the metadata format and libraries. The CLR provides services like JIT-compilation code and garbage collection. WinRT applications using .NET languages use the new Windows Runtime XAML Framework, and are primarily written in C#, VB.NET, and for the first time for XAML, with native code using C++/CX. Although not yet officially supported, programs can also be written in other .NET languages.
+Limitations
+Classes defined in WinRT components that are built in managed .NET languages must be declared as sealed, so they cannot be derived from. However, non-sealed WinRT classes defined elsewhere can be inherited from in .NET, their virtual methods overridden, and so on (but the inherited managed class must still be sealed).
+Members that interface with another language must have a signature with WinRT types or a managed type that is convertible to these.[18]
+JavaScript[edit]
+See also: JavaScript and Rich Internet Application
+WinRT applications can also be coded using HTML with JavaScript in code-behind, which are run using the Trident rendering engine and Chakra JavaScript engine, both of which are also used by Internet Explorer. When coding a WinRT app in JavaScript, its features are adapted to follow JavaScript naming conventions, and namespaces are also mapped to JavaScript objects.
+Bridges[edit]
+
+
+
+This section requires expansion. (August 2015)
+
+
+API[edit]
+WinRT comes with an Application Programming Interface (API) in the form of a class library that exposes the features of Windows 8 for the developer, like its immersive interface API. It is accessible and consumable from any supported language.
+Runtime classes[edit]
+The Windows Runtime classes is a set SDKs that provide access to all functionality from the XAML parser to the camera function. The SDKs are implemented as native C/C++ libraries (unmanaged).
+Naming conventions[edit]
+The naming conventions for the components (classes and other members) in the API are heavily influenced by the .NET naming conventions which uses camel case (specifically PascalCase). Microsoft recommends users to follow these rules in case where no others are given.
+These conventions are projected differently in some languages, like JavaScript, which converts it to its conventions and the other way around. This is to give a native and consistent experience regardless of the programming language.
+Restrictions and rules[edit]
+Since Windows Runtime is projected to various languages, some restrictions on fundamental data types exist in order to host all of these languages. Programmers have to be careful with the behavior of those types when used with public access (for method parameters, method return values, properties, etc.).[22]
+
+Basic Types
+
+In .NET languages and C++, there is a rich set of data types representing various numerals.
+In JavaScript, a Number can only represent up to 53 bits of precision.
+In WinRT, the only lacking numeral data type is 8-bit signed integer when compared to .NET and C++. JavaScript developers have to pay attention when dealing with big numbers while coding against WinRT.
+
+
+Strings
+
+The strings in .NET and JavaScript are immutable, whereas they are mutable in C++.
+A null pointer passed as a string to WinRT by C++ will be converted to an empty string
+In .Net null being passed as a string to WinRT will be converted to an empty string
+In JavaScript null being passed as a string to WinRT will be converted to a string with the word "null". This is due to JavaScript's null keyword being represented as a null object
+
+Similar results happen when passing undefined to WinRT from JavaScript
+
+
+
+
+Structs
+
+In .NET and C++, structs are value types, and such a struct can contain any type in it.
+JavaScript does not directly support structs.
+In WinRT, usage of structs is only allowed for containment of types that has value semantics, including numerals, strings, and other structs. No pointers or interface references are allowed.
+
+
+References
+
+In .NET, objects are passed by reference, whereas numerals and structs are passed by value.
+In C++, all types can be passed by reference or by value.
+In WinRT, interfaces are passed by reference; all other types are passed by value.
+
+
+Arrays
+
+In .NET, C++, and JavaScript arrays are reference types.
+In WinRT, arrays are value types.
+
+
+Events
+
+In .NET and C++, clients subscribe to events using += operator.
+In JavaScript, addEventListener function or setting on&lt;EventName&gt; property is used to subscribe to events.
+In WinRT, all languages are allowed to use their own way of subscribing to events.
+
+
+Collections
+
+Various .NET collections map directly to WinRT collections.
+WinRT Vector type resembles arrays and the array syntax is used to consume them.
+WinRT Map type is a key/value pair collection, and is projected as Dictionary in .NET languages.
+
+
+Method Overloading
+
+All WinRT languages feature overloading on parameters (.NET, C++, JavaScript)
+.NET and C++ also feature overloading on type.
+In WinRT, only parameter number is used for overloading.
+
+
+Asynchrony
+
+All WinRT methods are designed such that any method taking longer than 50 milliseconds is an async method.
+There is an established naming pattern to distinguish asynchronous methods: &lt;Verb&gt;[&lt;Noun&gt;]Async. Through the entire runtime library, all methods that have chance to take longer than 50 ms are only implemented as asynchronous methods.
+
+
+
+Version history[edit]
+
+
+
+This section requires expansion. (August 2015)
+
+
+
+
+Windows version
+
+
+
+Windows 8
+Windows Runtime
+
+
+Windows 8.1
+
+
+
+Windows 10
+Universal Windows Platform (UWP)
+
+
+Windows Phone Runtime[edit]
+Starting from Windows Phone 8 it is possible to develop apps using a version of the Windows Runtime called the Windows Phone Runtime (WPRT). Although WP8 brought limited support, the platform did eventually converge with Windows 8.1 in Windows Phone 8.1.
+Windows Phone 8[edit]
+Windows Phone 8 has limited support for development and consuming of Windows Runtime components through Windows Phone Runtime. Many of the Windows Runtime APIs in Windows 8 that handle core operating-system functionality have been ported to Windows Phone 8.[23] Support for development of native games using C++/CX and DirectX has been added by request from the game development industry.
+The Windows Phone XAML Framework is however still based on the same Silverlight framework as in Windows Phone 7 for backwards compatibility. XAML development is therefore not currently possible in C++/CX. Development using either HTML5 or WinJS is unsupported on Windows Phone 8.
+Windows Phone 8.1[edit]
+Windows Runtime support on Windows Phone 8.1 converges with Windows 8.1. The release brings a complete Windows Runtime API to the platform, including Windows Runtime XAML support, as well as language bindings for C++/CX and HTML5/JavaScript. There is also a project type called Universal apps that enables apps to share code across Windows Phone 8.1 and Windows 8.1 platforms.
+Windows Phone Runtime uses the AppX package format from Windows 8, after previously been using Silverlight XAP.
+The Windows Phone 8 Silverlight Framework has been updated.[when?] It can take advantage of some of the new features in the Windows Runtime.
+See also[edit]
+
+Windows Runtime XAML Framework
+
+References[edit]
+
+
+^ Avram, Abel (21 September 2011). "Design Details of the Windows Runtime". InfoQ.&#160;
+^ Klug, Brian; Smith, Ryan (13 September 2011). "Microsoft BUILD: Windows 8, A Pre-Beta Preview". AnandTech.&#160;
+^ "Windows Phone API reference". Windows Phone API reference. Microsoft. July 21, 2014.&#160;
+^ a b Michael, Mayberry (2012). WinRT Revealed. New York City: Apress. p.&#160;3. ISBN&#160;978-1-4302-4585-8.&#160;
+^ "Creating Win32 Applications (C++)". MSDN. Microsoft. Retrieved 12 January 2014.&#160;
+^ De Icaza, Miguel (15 September 2011). "WinRT demystified". Personal blog of Miguel de Icaza. Self-published. Retrieved 15 January 2014.&#160;
+^ "What is the COM marshaling overhead in calling the WinRT API from C#&#160;?". MSDN forum. Self-published. 20 September 2011. Retrieved 15 January 2014.&#160;
+^ a b "Using the Windows Runtime from C++ | BUILD2011 | Channel 9". Channel9.msdn.com. 2011-09-14. Retrieved 2012-04-24.&#160;
+^ Sivakumar, Nish (2011-09-29). "Visual C++ and WinRT/Metro - Some fundamentals - CodeProject®". Codeproject.com. Retrieved 2012-04-24.&#160;
+^ "Using the Windows Runtime from C++ | BUILD2011 | Channel 9". Channel9.msdn.com. 2011-09-14. Retrieved 2012-04-24.&#160;
+^ "Designing a simple and secure app package – APPX". Windows 8 app developer blog. Retrieved 30 December 2013.&#160;
+^ "How to Add and Remove Apps". TechNet. Microsoft. 31 May 2012. Retrieved 4 October 2012. To enable sideloading on a Windows 8 Enterprise computer that is not domain-joined or on any Windows® 8 Pro computer, you must use a sideloading product activation key. To enable sideloading on a Windows® RT device, you must use a sideloading product activation key. For more information about sideloading product activation keys, see Microsoft Volume Licensing.&#160;
+^ "Windows 8: The Metro Mess". PC Magazine. Retrieved 8 September 2012.&#160;
+^ "Microsoft now using 'Modern UI Style' to refer to Windows 8 'Metro Style' apps". Retrieved 10 August 2012.&#160;
+^ "What's a Windows Store app?". Windows Dev Center. Retrieved 1 October 2012.&#160;
+^ "Asynchronous programming (Windows Store apps)". MSDN. Microsoft. Retrieved 12 January 2014.&#160;
+^ http://www.ciprianjichici.ro/blog/post/NET-Gets-a-New-Lease-of-Life.aspx[dead link]
+^ a b "Using the Windows Runtime from C# and Visual Basic | BUILD2011 | Channel 9". Channel9.msdn.com. 2011-09-14. Retrieved 2012-04-24.&#160;
+^ "Inside the C++/CX Design - Visual C++ Team Blog - Site Home - MSDN Blogs". Blogs.msdn.com. 2011-10-20. Retrieved 2012-04-24.&#160;
+^ Charles (2011-10-26). "GoingNative 3: The C++/CX Episode with Marian Luparu | C9::GoingNative | Channel 9". Channel9.msdn.com. Retrieved 2012-04-24.&#160;
+^ a b Under the covers with C++ for Metro style apps with Deon Brewis at //BUILD
+^ "Ten Tips When Writing a Hybrid Language Metro style Application - BUILD2011 - Channel 9". Channel 9. Microsoft.&#160;
+^ "Windows Phone Runtime API". microsoft.com. Microsoft.&#160;
+
+
+External links[edit]
+
+Official website
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Microsoft Windows components
+
+
+
+
+
+
+Management tools
+
+
+
+CMD.EXE
+Control Panel
+
+Applets
+
+
+Device Manager
+Disk Cleanup
+Disk Defragmenter
+Driver Verifier
+Event Viewer
+IExpress
+Management Console
+Netsh
+Recovery Console
+Resource Monitor
+ScanDisk
+Settings app
+Sysprep
+System Configuration
+System File Checker
+System Policy Editor
+System Restore
+Task Manager
+Windows Easy Transfer
+Windows Error Reporting
+Windows Installer
+Windows PowerShell
+Windows Update
+WinPE
+WinRE
+WMI
+
+
+
+
+
+
+
+
+Apps
+
+
+
+Calculator
+Calendar
+Character Map
+Cortana
+DVD Player
+Edge
+Fax and Scan
+Groove
+Internet Explorer
+Journal
+Magnifier
+Mail
+Maps
+Media Player
+MSN apps (News, Weather, Sports, Money)
+Movie Maker
+Movies &amp; TV
+Mobility Center
+Narrator
+Notepad
+OneDrive
+OneNote
+Paint
+People
+Remote Assistance
+Snipping Tool
+Sound Recorder
+Speech Recognition
+Skype
+Store
+Windows To Go
+WordPad
+Xbox
+
+
+
+
+
+
+
+
+Shell
+
+
+
+Action Center
+Aero
+AutoPlay
+AutoRun
+ClearType
+Explorer
+Search
+
+IFilter
+Saved search
+Namespace
+Special folder
+
+
+Start menu
+Taskbar
+Task View
+Windows XP visual styles
+
+
+
+
+
+
+
+
+Services
+
+
+
+Service Control Manager
+BITS
+CLFS
+Multimedia Class Scheduler
+Shadow Copy
+Task Scheduler
+Error Reporting
+Wireless Zero Configuration
+
+
+
+
+
+
+
+
+File systems
+
+
+
+CDFS
+DFS
+exFAT
+IFS
+FAT
+NTFS
+
+Hard link
+Junction point
+Mount Point
+Reparse point
+Symbolic link
+TxF
+EFS
+
+
+ReFS
+UDF
+WinFS
+
+
+
+
+
+
+
+
+Server
+
+
+
+Domains
+Active Directory
+DNS
+Group Policy
+Roaming user profiles
+Folder redirection
+Distributed Transaction Coordinator
+MSMQ
+Windows Media Services
+Rights Management Services
+IIS
+Remote Desktop Services
+WSUS
+SharePoint
+Network Access Protection
+PWS
+DFS Replication
+Remote Differential Compression
+Print Services for UNIX
+Remote Installation Services
+Windows Deployment Services
+System Resource Manager
+Hyper-V
+Server Core
+
+
+
+
+
+
+
+
+Architecture
+
+
+
+Architecture of Windows NT
+Startup process
+CSRSS
+Desktop Window Manager
+Portable Executable
+
+EXE
+DLL
+
+
+Enhanced Write Filter
+Graphics Device Interface
+hal.dll
+I/O request packet
+Imaging Format
+Kernel Transaction Manager
+Library files
+Logical Disk Manager
+LSASS
+MinWin
+NTLDR
+Ntoskrnl.exe
+Object Manager
+Open XML Paper Specification
+Registry
+Resource Protection
+Security Accounts Manager
+Server Message Block
+Shadow Copy
+SMSS
+System Idle Process
+USER
+WHEA
+Win32 console
+Winlogon
+
+
+
+
+
+
+
+
+Security
+
+
+
+Security and Maintenance
+BitLocker
+Data Execution Prevention
+Family Safety
+Kernel Patch Protection
+Mandatory Integrity Control
+Protected Media Path
+User Account Control
+User Interface Privilege Isolation
+Windows Defender
+Windows Firewall
+
+
+
+
+
+
+
+
+Compatibility
+
+
+
+COMMAND.COM
+Windows Services for UNIX
+
+POSIX subsystem
+Interix
+
+
+Virtual DOS machine
+Windows on Windows
+WoW64
+
+
+
+
+
+
+
+
+API
+
+
+
+Active Scripting
+
+WSH
+VBScript
+JScript
+
+
+COM
+
+ActiveX
+ActiveX Document
+COM Structured storage
+DCOM
+OLE
+OLE Automation
+Transaction Server
+
+
+DirectX
+.NET Framework
+Windows Holographic
+Windows Runtime
+Universal Windows Platform
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+
+Games
+
+
+
+3D Pinball
+Chess Titans
+FreeCell
+Hearts
+Hover!
+InkBall
+Hold 'Em
+Mahjong Titans
+Minesweeper
+Purble Place
+Reversi
+Solitaire
+Spider Solitaire
+Tinker
+
+
+
+
+
+
+
+
+Others
+
+
+
+ActiveMovie
+Anytime Upgrade
+Address Book
+Backup and Restore
+Cardfile
+CardSpace
+Contacts
+Desktop Gadgets
+Diagnostics
+DriveSpace
+DVD Maker
+Fax
+File Manager
+File Protection
+Food &amp; Drink
+Health &amp; Fitness
+HyperTerminal
+Internet Mail and News
+Mail
+Media Center
+Media Control Interface
+Meeting Space
+Messaging
+Messenger
+Mobile Device Center
+NetMeeting
+Next-Generation Secure Computing Base
+NTBackup
+Outlook Express
+Travel
+Photo Gallery
+Program Manager
+Video for Windows
+Windows Photo Viewer
+Windows SideShow
+WinHelp
+WinSAT
+Write
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Windows_Runtime&amp;oldid=683927642"					
+				Categories: Windows technology.NET FrameworkWindows APIs2012 introductionsHidden categories: All articles with dead external linksArticles with dead external links from August 2015Articles to be expanded from August 2015All articles to be expandedAll articles lacking reliable referencesArticles lacking reliable references from January 2014Vague or ambiguous time from May 2014				
+							
+		
+		
+			

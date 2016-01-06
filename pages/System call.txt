@@ -1,0 +1,245 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			System call
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Not to be confused with system command.
+
+
+
+
+A high-level overview of the Linux kernel's system call interface, which handles communication between its various components and the userspace
+
+
+In computing, a system call is how a program requests a service from an operating system's kernel. This may include hardware-related services (for example, accessing a hard disk drive), creation and execution of new processes, and communication with integral kernel services such as process scheduling. System calls provide an essential interface between a process and the operating system.
+In most systems, system calls are possible to be made only from userspace processes, while in some systems, OS/360 and successors for example, privileged system code also issues system calls.[1]
+
+
+
+Contents
+
+
+1 Privileges
+2 The library as an intermediary
+3 Examples and tools
+4 Typical implementations
+5 Categories of system calls
+6 Processor mode and context switching
+7 See also
+8 References
+9 External links
+
+
+
+Privileges[edit]
+The architecture of most modern processors, with the exception of some embedded systems, involves a security model. For example, the rings model specifies multiple privilege levels under which software may be executed: a program is usually limited to its own address space so that it cannot access or modify other running programs or the operating system itself, and is usually prevented from directly manipulating hardware devices (e.g. the frame buffer or network devices).
+However, many normal applications obviously need access to these components, so system calls are made available by the operating system to provide well defined, safe implementations for such operations. The operating system executes at the highest level of privilege, and allows applications to request services via system calls, which are often initiated via interrupts. An interrupt automatically puts the CPU into some elevated privilege level, and then passes control to the kernel, which determines whether the calling program should be granted the requested service. If the service is granted, the kernel executes a specific set of instructions over which the calling program has no direct control, returns the privilege level to that of the calling program, and then returns control to the calling program.
+The library as an intermediary[edit]
+Generally, systems provide a library or API that sits between normal programs and the operating system. On Unix-like systems, that API is usually part of an implementation of the C library (libc), such as glibc, that provides wrapper functions for the system calls, often named the same as the system calls they invoke. On Windows NT, that API is part of the Native API, in the ntdll.dll library; this is an undocumented API used by implementations of the regular Windows API and directly used by some system programs on Windows. The library's wrapper functions expose an ordinary function calling convention (a subroutine call on the assembly level) for using the system call, as well as making the system call more modular. Here, the primary function of the wrapper is to place all the arguments to be passed to the system call in the appropriate processor registers (and maybe on the call stack as well), and also setting a unique system call number for the kernel to call. In this way the library, which exists between the OS and the application, increases portability.
+The call to the library function itself does not cause a switch to kernel mode (if the execution was not already in kernel mode) and is usually a normal subroutine call (using, for example, a "CALL" assembly instruction in some Instruction set architectures (ISAs)). The actual system call does transfer control to the kernel (and is more implementation-dependent and platform-dependent than the library call abstracting it). For example, in Unix-like systems, fork and execve are C library functions that in turn execute instructions that invoke the fork and exec system calls. Making the system call directly in the application code is more complicated and may require embedded assembly code to be used (in C and C++) as well as knowledge of the low-level binary interface for the system call operation, which may be subject to change over time and thus not be part of the application binary interface; the library functions are meant to abstract this away.
+On exokernel based systems, the library is especially important as an intermediary. On exokernels, libraries shield user applications from the very low level kernel API, and provide abstractions and resource management.
+IBM operating systems descended from OS/360 and DOS/360, including z/OS and z/VSE, implement system calls through a library of assembly language macros. This reflects their origin at a time when programming in assembly language was more common than high-level language usage. IBM system calls are therefore not directly executable by high-level language programs, but require a callable assembly language wrapper subroutine.
+Examples and tools[edit]
+On Unix, Unix-like and other POSIX-compliant operating systems, popular system calls are open, read, write, close, wait, exec, fork, exit, and kill. Many modern operating systems have hundreds of system calls. For example, Linux and OpenBSD each have over 300 different calls,[2][3] NetBSD has close to 500,[4] FreeBSD has over 500,[5] while Plan 9 has 51.[6]
+Tools such as strace and truss allow a process to execute from start and report all system calls the process invokes, or can attach to an already running process and intercept any system call made by said process if the operation does not violate the permissions of the user. This special ability of the program is usually also implemented with a system call, e.g. strace is implemented with ptrace or system calls on files in procfs.
+Typical implementations[edit]
+Implementing system calls requires a control transfer which involves some sort of architecture-specific feature. A typical way to implement this is to use a software interrupt or trap. Interrupts transfer control to the operating system kernel so software simply needs to set up some register with the system call number needed, and execute the software interrupt.
+For many RISC processors this is the only technique provided, but CISC architectures such as x86 support additional techniques. One example is SYSCALL/SYSRET, SYSENTER/SYSEXIT (the two mechanisms were independently created by AMD and Intel, respectively, but in essence do the same thing). These are "fast" control transfer instructions that are designed to quickly transfer control to the OS for a system call without the overhead of an interrupt.[7] Linux 2.5 began using this on the x86, where available; formerly it used the INT instruction, where the system call number was placed in the EAX register before interrupt 0x80 was executed.[8][9]
+An older x86 mechanism is called a call gate and is a way for a program to literally call a kernel function directly using a safe control transfer mechanism the operating system sets up in advance. This approach has been unpopular, presumably due to the requirement of a far call (a call to a procedure located in a different segment than the current code segment[10]) which uses x86 memory segmentation and the resulting lack of portability it causes, and existence of the faster instructions mentioned above.
+For IA-64 architecture, EPC (Enter Privileged Code) instruction is used. The first eight system call arguments are passed in registers, and the rest are passed on the stack.
+In the IBM System/360 mainframe family, a Supervisor Call instruction implements a system call for legacy facilities; the Program Call instruction is used for newer facilities. In particular, PC is used when the caller might be in SRB mode.
+Categories of system calls[edit]
+System calls can be roughly grouped into five major categories:
+
+Process Control
+
+load
+execute
+end, abort
+create process (for example, fork on Unix-like systems, or NtCreateProcess in the Windows NT Native API)
+terminate process
+get/set process attributes
+wait for time, wait event, signal event
+allocate, free memory
+
+
+File management
+
+create file, delete file
+open, close
+read, write, reposition
+get/set file attributes
+
+
+Device Management
+
+request device, release device
+read, write, reposition
+get/set device attributes
+logically attach or detach devices
+
+
+Information Maintenance
+
+get/set time or date
+get/set system data
+get/set process, file, or device attributes
+
+
+Communication
+
+create, delete communication connection
+send, receive messages
+transfer status information
+attach or detach remote devices
+
+
+
+Processor mode and context switching[edit]
+System calls in most Unix-like systems are processed in kernel mode, which is accomplished by changing the processor execution mode to a more privileged one, but no process context switch is necessary&#160;–  although a privilege context switch does occur. The hardware sees the world in terms of the execution mode according to the processor status register, and processes are an abstraction provided by the operating system. A system call does not generally require a context switch to another process; instead, it is processed in the context of whichever process invoked it.[11][12]
+In a multithreaded process system calls can be made from multiple threads. The handling of such calls is entirely dependent on the design of the specific operating system. The following list shows typical models followed by kernels:[13][14]
+
+Many-to-one model: All system calls from any user thread in a process are handled by a single kernel-level thread. This model has a serious drawback&#160;–  any blocking system call (like awaiting input from user) can freeze all the other threads. Also, since only one thread can access the kernel at a time, this model cannot utilize multiple cores of processor.
+One-to-one model: Every user thread gets attached to a distinct kernel-level thread during a system call. This model solves the above problem of blocking system calls. It is found in all major distribution of Linux, recent Windows and Solaris versions.
+Many-to-many model: In this model a pool of user threads is mapped to a pool of kernel threads. All system calls from a user thread pool are handled by the threads in their corresponding kernel thread pool
+Hybrid model: This model implements both many to many and one to one model depending upon choice made by the kernel. This is found in old versions of IRIX, HP-UX and Solaris.
+
+See also[edit]
+
+Linux kernel API
+Supervisor Call instruction
+
+References[edit]
+
+
+^ IBM (March 1967). "Writing SVC Routines". IBM System/360 Operating System System Programmer's Guide (PDF). Third Edition. pp.&#160;32–36. C28-6550-2.&#160;
+^ "syscalls(2) - Linux manual page".&#160;
+^ OpenBSD (2013-09-14). "System call names (kern/syscalls.c)". BSD Cross Reference.&#160;
+^ NetBSD (2013-10-17). "System call names (kern/syscalls.c)". BSD Cross Reference.&#160;
+^ "FreeBSD syscalls.c, the list of syscall names and IDs".&#160;
+^ "Plan 9 sys.h, the list of syscall names and IDs".&#160;
+^ "SYSENTER (OSDev wiki)".&#160;
+^ Anonymous (2002-12-19). "Linux 2.5 gets vsyscalls, sysenter support". KernelTrap. Retrieved 2008-01-01.&#160;
+^ Manu Garg (2006). "Sysenter Based System Call Mechanism in Linux 2.6".&#160;
+^ "Liberation: x86 Instruction Set Reference". renejeschke.de. Retrieved 4 July 2015.&#160;
+^ Bach, Maurice J. (1986), The Design of the UNIX Operating System, Prentice Hall, pp. 15-16.
+^ Elliot, John (2011). "Discussion of system call implementation at ProgClub including quote from Bach 1986".&#160;
+^ "Threads".&#160;
+^ "Threading Models" (PDF).&#160;
+
+
+External links[edit]
+
+Linux system call reference&#160;–  Updated system call reference for Linux kernel 2.6, includes register and data structure references
+A list of modern Unix-like system calls
+Interactive map of Linux kernel
+Linux system calls&#160;–  system calls for Linux kernel 2.2, with IA-32 calling conventions
+How System Calls Work on Linux/i86 (1996, based on the 1993 0.99.2 kernel)
+Sysenter Based System Call Mechanism in Linux 2.6 (2006)
+Kernel command using Linux system calls, IBM developerWorks
+Choudhary, Amit; HOWTO for Implementing a System Call on Linux 2.6
+Modular system programming on Minix 3
+A simple open Unix Shell in C language&#160;–  examples on System Calls under Unix
+Inside the Native API&#160;–  Windows NT Native API, including system calls
+Gulbrandsen, John; System Call Optimization with the SYSENTER Instruction, CodeGuru.com, 8 October 2004
+
+This article is based on material taken from the Free On-line Dictionary of Computing prior to 1 November 2008 and incorporated under the "relicensing" terms of the GFDL, version 1.3 or later.
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=System_call&amp;oldid=682379222"					
+				Categories: Operating system technologyApplication programming interfacesSystem callsHidden categories: Use dmy dates from January 2013				
+							
+		
+		
+			

@@ -1,0 +1,315 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Operator overloading
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Polymorphism
+
+
+
+
+Ad hoc polymorphism
+Function overloading
+Operator overloading
+Parametric polymorphism
+Double dispatch
+Multiple dispatch
+Single &amp; dynamic dispatch
+Subtyping
+Virtual function
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In programming, operator overloading—less commonly known as operator ad hoc polymorphism—is a specific case of polymorphism, where different operators have different implementations depending on their arguments. Operator overloading is generally defined by the language, the programmer, or both.
+
+
+
+Contents
+
+
+1 Motivation
+2 Examples
+3 Criticisms
+4 Catalog
+5 Timeline of operator overloading
+
+5.1 1960s
+5.2 1980s
+5.3 1990s
+5.4 2000s
+
+
+6 See also
+
+
+
+Motivation[edit]
+Operator overloading is syntactic sugar, and is used because it allows the developer to program using notation closer to the target domain[1] and allows user-defined types a similar level of syntactic support as types built into the language. It is common, for example, in scientific computing, where it allows computational representations of mathematical objects to be manipulated with the same syntax as on paper.
+Operator overloading does not change the expressive power of a language (with functions), as it can be emulated using function calls; for example, consider variables a, b, c of some user-defined type, such as matrices:
+
+a + b * c
+
+In a language that supports operator overloading, and with the usual assumption that the '*' operator has higher precedence than '+' operator, this is a concise way of writing:
+
+add (a, multiply (b,c))
+
+However, the former syntax reflects common mathematical usage.
+Examples[edit]
+In this case, the addition operator is overloaded to allow addition on a user-defined type "Time" (in C++):
+
+
+Time operator+(const Time&amp; lhs, const Time&amp; rhs)
+{
+    Time temp = lhs;
+    temp.seconds += rhs.seconds;
+    temp.minutes += temp.seconds / 60;
+    temp.seconds %= 60;
+    temp.minutes += rhs.minutes;
+    temp.hours += temp.minutes / 60;
+    temp.minutes %= 60;
+    temp.hours += rhs.hours;
+    return temp;
+}
+
+Addition is a binary operation, which means it has two operands. In C++, the arguments being passed are the operands, and the temp object is the returned value.
+The operation could also be defined as a class method, replacing lhs by the hidden this argument; however this forces the left operand to be of type Time:
+
+
+Time Time::operator+(const Time&amp; rhs) const /* const means that 'this' is not to be modified */
+{
+    Time temp = *this;  /* Copy 'this' which is not to be modified */
+    temp.seconds += rhs.seconds;
+    temp.minutes += temp.seconds / 60;
+    temp.seconds %= 60;
+    temp.minutes += rhs.minutes;
+    temp.hours += temp.minutes / 60;
+    temp.minutes %= 60;
+    temp.hours += rhs.hours;
+    return temp;
+}
+
+Note that a unary operator defined as a class method would receive no apparent argument (it only works from this):
+
+
+bool Time::operator!() const
+{
+    return ((hours == 0) &amp;&amp; (minutes == 0) &amp;&amp; (seconds == 0));
+}
+
+Less than(&lt;) operator is often overloaded to sort a structure or class.
+
+
+class pair
+{
+	public:
+	int x,y;
+	bool operator &lt; ( const pair&amp; p ) const
+	{
+		if(x==p.x) return y&lt;p.y;
+		return x&lt;p.x;
+	}
+};
+
+In the last example, operator overloading is done within the class which is the same as the previous examples. In C++, after overloading the less-than operator (&lt;), standard sorting functions can be used to sort some classes.
+Criticisms[edit]
+Operator overloading has often been criticized[2] because it allows programmers to give operators completely different semantics depending on the types of their operands. For example, the use of the &lt;&lt; in C++'s:
+
+
+a &lt;&lt; 1
+
+shifts the bits in the variable a left by 1 bit if a is of an integer type, but if a is an output stream then the above code will attempt to write a "1" to the stream. Because operator overloading allows the original programmer to change the usual semantics of an operator and to catch any subsequent programmers by surprise, it is considered good practice to use operator overloading with care (the creators of Java decided not to use this feature,[3] although not necessarily for this reason).
+Another, more subtle, issue with operators is that certain rules from mathematics can be wrongly expected or unintentionally assumed. For example, the commutativity of + (i.e. that a + b == b + a) does not always apply; an example of this occurs when the operands are strings, since + is commonly overloaded to perform a concatenation of strings (i.e. "school" + "bag" yields "schoolbag", while "bag" + "school" yields "bagschool"). A typical counter[citation needed] to this argument comes directly from mathematics: While + is commutative on integers (and more generally any complex numbers), it is not commutative for other "types" of variable. In practice, + is not associative even with floating-point values, due to rounding errors. Another example: In mathematics, multiplication is commutative for real and complex numbers but not commutative in matrix multiplication.
+Catalog[edit]
+A classification of some common programming languages is made according to whether their operators are overloadable by the programmer and whether the operators are limited to a predefined set.
+
+
+Operators
+Not overloadable
+Overloadable
+
+
+New definable[clarification needed]
+
+
+ML
+Pico[4]
+Prolog
+
+
+
+
+ALGOL 68
+Clojure
+Eiffel
+Fortran[5]
+F#
+Haskell[6]
+Io
+Perl 6
+R
+Scala
+Seed7
+Smalltalk
+Swift
+
+
+
+
+Limited set
+
+
+BASIC
+C
+Go[7]
+Java
+JavaScript
+Modula-2
+Objective-C
+Pascal
+
+
+
+
+Ada
+C#
+C++
+Ceylon
+D
+Dart
+Delphi (since 2005)[8]
+FreeBASIC
+Groovy
+Lua
+MATLAB[9]
+Object Pascal (Free Pascal[10])
+PHP (using magic methods or ArrayAccess interface or Operator extension)
+Perl
+Python
+Ruby
+Rust
+Visual Basic .NET
+
+
+
+
+Timeline of operator overloading[edit]
+1960s[edit]
+The ALGOL 68 specification allowed operator overloading.[11]
+Extract from the ALGOL 68 language specification (page 177) where the overloaded operators ¬, =, ≠ and abs are defined:
+
+10.2.2. Operations on Boolean Operands
+a) op ∨ = (bool a, b) bool:( a | true | b );
+b) op ∧ = (bool a, b) bool: ( a | b | false );
+c) op ¬ = (bool a) bool: ( a | false | true );
+d) op = = (bool a, b) bool:( a∧b ) ∨ ( ¬b∧¬a );
+e) op ≠ = (bool a, b) bool: ¬(a=b);
+f) op abs = (bool a)int: ( a | 1 | 0 );
+
+Note that no special declaration is required to overload an operator, and the programmer is free to create new operators.
+1980s[edit]
+Ada supports overloading of operators from its inception, with the publication of the Ada 83 language standard. However, the designers of the language chose not to permit the definition of new operators: only the existing operators in the language may be overloaded (by defining new functions with identifiers such as "+", "*", "and" etc.). Subsequent revisions of the language (in 1995 and 2005) maintain the restriction to overloading of existing operators.
+C++'s operator overloading is further refined from that of ALGOL 68's.[12]
+1990s[edit]
+Sun chooses not to include operator overloading in the Java language.[13][14][15]
+Ruby allows operator overloading as syntactic sugar for simple method calls.
+Lua allows operator overloading as syntactic sugar for method calls with the added feature that if the first operand doesn't define that operator, the method for the second operand will be used.
+2000s[edit]
+Microsoft includes operator overloading for C# in 2001.
+Scala treats all operators as methods and thus allows operator overloading by proxy.
+In Perl 6, the definition of all operators is delegated to lexical functions, and so, using function definitions, operators can be overloaded or new operators added. For example, the function defined in the Rakudo source for incrementing a Date object with "+" is:
+
+
+multi infix:&lt;+&gt;(Date:D $d, Int:D $x) {
+    Date.new-from-daycount($d.daycount + $x)
+}
+
+Since "multi" was used, the function gets added to the list of multidispatch candidates, and "+" is only overloaded for the case where the type constraints in the function signature are met. While the capacity for overloading includes +, *, &gt;=, the postfix and term i, and so on, it also allows for overloading various brace operators: "[x, y]", "x[ y ]", "x{ y }", and "x( y )".
+See also[edit]
+
+Function overloading
+Polymorphism (computer science)
+Subroutine
+Operator (programming)
+Operators in C and C++
+
+
+
+^ "C++ FAQ Lite: What are the benefits of operator overloading?". June 2010. Retrieved August 2010.&#160;
+^ Issues in Overloading
+^ No more operator overloading – Features Removed from C and C++
+^ binary functions with a symbolic name can be called infix
+^ introduced in Fortran 90
+^ type classes instead of overloading
+^ "Why does Go not support overloading of methods and operators?". Retrieved 4 September 2011.&#160;
+^ "Operator Overloading, Delphi Manual". Retrieved December 2014.&#160;
+^ "Implementing Operators for Your Class". Retrieved October 2013.&#160;
+^ "Operator Overloading, Free Pascal Manual". Retrieved December 2014.&#160;
+^ A. van Wijngaarden, B.J. Mailloux, J.E.L. Peck, C.H.A. Koster; et al. (August 1968). "Report on the Algorithmic Language ALGOL 68, Section 10.2.2." (PDF). Retrieved April 2007.&#160; CS1 maint: Explicit use of et al. (link)
+^ Bjarne Stroustrup. "A History of C++: 1979−1991 - page 12" (PDF). Retrieved April 2007.&#160;
+^ comp.lang.java FAQ Question 6.9: Why isn't there operator overloading?
+^ java.sun.com
+^ Holzner, Steven (2001). C++: Black Book. Scottsdale, Ariz.: Coriolis Group. p.&#160;387. ISBN&#160;1-57610-777-9. One of the nicest features of C++ OOP is that you can overload operators to handle objects of your classes (you can't do this in some other OOP-centric languages, like Java).&#160;
+
+
+
+PHP magic methods overriding class properties
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4531051-8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Operator_overloading&amp;oldid=678336489"					
+				Categories: Operators (programming)Hidden categories: CS1 maint: Explicit use of et al.All articles with unsourced statementsArticles with unsourced statements from September 2013Wikipedia articles needing clarification from March 2015Use dmy dates from January 2012Wikipedia articles with GND identifiersArticles with example ALGOL 68 code				
+							
+		
+		
+			

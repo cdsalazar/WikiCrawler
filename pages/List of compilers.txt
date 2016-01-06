@@ -1,0 +1,3011 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			List of compilers
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article has an unclear citation style. The references used may be made clearer with a different or consistent style of citation, footnoting, or external linking. Violates Wikipedia:External links: "Wikipedia articles may include links to web pages outside Wikipedia (external links), but they should not normally be used in the body of an article.". (May 2012)
+
+
+This page is intended to list all current compilers, compiler generators, interpreters, translators, tool foundations, etc.
+
+
+
+Contents
+
+
+1 Ada compilers
+2 ALGOL compilers
+3 BASIC compilers
+4 Batch compilers
+5 C compilers
+6 Source-to-source compilers
+7 C++ compilers
+8 C# compilers
+9 COBOL compilers
+10 Common Lisp compilers
+11 D compilers
+12 DIBOL/DBL compilers
+13 ECMAScript interpreters
+14 Eiffel compilers
+15 Felix compilers
+16 Fortran compilers
+17 Go compilers
+18 Haskell compilers
+19 Java compilers
+20 Oberon compilers
+21 Pascal compilers
+22 PL/I compilers
+23 Python compilers
+24 Scheme compilers and interpreters
+25 Smalltalk compilers
+26 CLI compilers
+27 Open source compilers
+28 Research compilers
+29 See also
+30 References
+31 External links
+
+
+
+Ada compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+
+
+Aonix Object Ada
+Atego
+Yes
+Yes
+Yes
+Proprietary
+
+
+GCC GNAT
+GNU Project
+Yes
+Yes
+No
+GPL
+
+
+Irvine Compiler
+Irvine Compiler Corporation
+Yes
+Yes
+Yes
+Proprietary
+
+
+IBM Rational Apex
+IBM
+Yes
+Yes
+Yes
+Proprietary
+
+
+A#
+
+Yes
+
+Yes
+GPL
+
+
+SCORE Ada
+DDC-I
+Yes
+Yes
+Yes
+Proprietary
+
+
+ALGOL compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+
+
+ALGOL 60
+RHA (Minisystems) Ltd
+No
+No
+DOS, CP/M
+Free for personal use
+
+
+ALGOL 68G (Genie)
+Marcel van der Veer
+Yes
+Yes
+Various
+GPL
+
+
+Persistent S-algol
+Paul Cockshott
+Yes
+No
+DOS
+Copyright only
+
+
+MCP Compiler
+Unisys
+No
+No
+MCP
+Proprietary
+
+
+BASIC compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+
+
+BaCon
+Peter van Eerten
+No
+Yes
+Linux, OSX, Android
+Open Source
+
+
+BAIL
+Studio 403
+No
+Yes
+No
+Open Source
+
+
+BBC Basic for Windows
+Richard T Russel
+Yes
+No
+No
+Shareware
+
+
+BlitzMax
+Blitz Research
+Yes
+Yes
+No
+Proprietary
+
+
+Chipmunk Basic
+Ronald H. Nicholson, Jr.
+Yes
+Yes
+Yes
+Freeware
+
+
+CoolBasic
+Spywave
+Yes
+No
+No
+Freeware
+
+
+DarkBASIC
+The Game Creators
+Yes
+No
+No
+Proprietary
+
+
+DoyleSoft BASIC
+DoyleSoft
+Yes
+No
+No
+Open Source
+
+
+FreeBASIC
+FreeBASIC Development Team
+Yes
+Yes
+DOS
+GPL
+
+
+Gambas
+Benoît Minisini
+No
+Yes
+No
+GPL
+
+
+GLBasic
+Dream Design Entertainment
+Yes
+Yes
+Linux, OSX, iOS, WinCE, Android, WebOS, Pandora
+Proprietary
+
+
+Just BASIC
+Shoptalk Systems
+Yes
+No
+No
+Freeware
+
+
+KBasic
+KBasic Software
+Yes
+Yes
+No
+Open source
+
+
+Liberty BASIC
+Shoptalk Systems
+Yes
+No
+No
+Proprietary
+
+
+MMBasic
+Geoff Graham
+Yes
+No
+Maximite,PIC32
+Proprietary
+
+
+NBasic
+SylvaWare
+Yes
+No
+No
+Freeware
+
+
+PowerBASIC
+PowerBASIC, Inc.
+Yes
+No
+DOS
+Proprietary
+
+
+PureBasic
+Fantaisie Software
+Yes
+Yes
+Yes
+Proprietary
+
+
+QB64
+Galleon
+Yes
+Yes
+Yes
+LGPL
+
+
+QuickBASIC
+Microsoft
+No
+No
+DOS
+Proprietary
+
+
+RapidQ
+William Yu
+Yes
+Yes
+Yes
+Freeware
+
+
+Realbasic
+Real Software
+Yes
+Yes
+Yes
+Proprietary
+
+
+True BASIC
+True BASIC
+Yes
+No
+No
+Proprietary
+
+
+Visual Basic
+Microsoft
+Yes
+No
+DOS
+Proprietary
+
+
+Batch compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+
+
+Batch Compiler
+Isuru Arunoda
+Yes
+No
+No
+Free
+
+
+Bat To Exe Converter
+Fatih Kodak
+Yes
+No
+No
+Free
+
+
+Bat To Exe
+Dewald Esterhuizen
+Yes
+No
+No
+Free
+
+
+Quick Batch
+Abyss Media
+Yes
+No
+No
+Proprietary
+
+
+C compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Microsoft Windows
+Unix-like
+Other OSs
+License type
+
+
+AMPC
+Axiomatic Solutions Sdn Bhd
+No
+Yes
+Yes
+Proprietary
+
+
+Aztec C
+Manx Software Systems
+No
+No
+CP/M, CP/M-86, MS-DOS, Classic Mac OS
+Proprietary
+
+
+Amsterdam Compiler Kit
+Andrew Tanenbaum and Ceriel Jacobs
+No
+Yes
+Yes
+BSD
+
+
+CCS C Compiler
+CCS, Inc.
+Yes
+Yes
+Yes
+Proprietary
+
+
+Ch
+SoftIntegration, Inc
+Yes
+Mac OS X, FreeBSD, Linux, Solaris, HP-UX, AIX, Qnx
+Yes
+Freeware
+
+
+Clang
+LLVM Project
+Yes
+Yes
+Yes
+BSD
+
+
+CodeWarrior
+Metrowerks
+Yes
+Yes
+Classic Mac OS
+Proprietary
+
+
+CParser/libFirm
+Matthias Braun, Christoph Mallon and Michael Beck
+Yes
+Yes
+Yes
+GPL
+
+
+DeSmet-C
+C-Ware Corporation
+No
+No
+MS-DOS
+GPL
+
+
+Digital Mars
+Digital Mars
+Yes
+No
+No
+Proprietary
+
+
+Dignus Systems/C
+Dignus, L.L.C
+Yes (host)
+Yes (host)
+Z/Architecture
+Proprietary
+
+
+Edison Design Group
+Edison Design Group
+Yes
+Yes
+Yes
+Proprietary
+
+
+GCC C
+GNU Project
+MinGW, Cygwin
+Yes
+IBM mainframe, AmigaOS, VAX/VMS, RTEMS
+GPL
+
+
+Hippo-C
+Hippopotamus Software, Haba Systems
+No
+No
+Classic Mac OS, Atari ST
+Proprietary
+
+
+IAR C/C++ Compilers
+IAR Systems
+Yes
+No
+No
+Proprietary
+
+
+Interactive C
+KISS Institute for Practical Robotics
+Yes
+Unix, Mac OS X, Linux, IRIX, Solaris, SunOS
+No
+Freeware
+
+
+LabWindows/CVI
+National Instruments
+Yes
+Yes
+Yes
+Proprietary
+
+
+Lattice C
+Lifeboat Associates
+No
+Yes
+MS-DOS, OS/2, Commodore, Amiga, Atari ST, Sinclair QL
+Proprietary
+
+
+lcc
+Chris Fraser and David Hanson
+Yes
+Yes
+Yes
+Freeware (source code available for non-commercial use)
+
+
+Mac C
+Consulair
+No
+No
+Classic Mac OS
+Proprietary
+
+
+Mark Williams C
+Mark Williams Company
+Yes
+Coherent
+Yes
+Proprietary
+
+
+Micro-C Compiler (mcc)
+Dunfield Development Services
+No
+No
+MS-DOS
+Freeware (source code available)
+
+
+Micro C Compiler (mcc)
+Roshan Singh
+Yes
+Yes
+Yes
+Freeware (source code available for non-commercial use)
+
+
+MikroC Compiler
+Mikroelektronika
+Yes
+Yes
+Yes
+Proprietary
+
+
+MPW C
+Apple
+No
+No
+Classic Mac OS
+Proprietary
+
+
+Neatcc
+Ali Gholami Rudi
+No
+Yes
+No
+BSD
+
+
+Nwcc
+Nils Weller
+No
+Yes
+No
+BSD
+
+
+Open64
+AMD SGI Google HP Intel Nvidia PathScale Tsinghua University and others
+No
+Yes
+Yes
+GPL
+
+
+Open Watcom
+Sybase and SciTech Software
+Yes
+Linux
+OS/2, MS-DOS
+Sybase Open Watcom Public License
+
+
+Orange C compiler
+David Lindauer
+Yes
+No
+MS-DOS
+BSD
+
+
+Pelles C
+Pelle Orinius
+Yes
+No
+No
+Freeware
+
+
+PGCC
+The Portland Group
+Yes
+Yes
+Unknown
+Proprietary
+
+
+Portable C Compiler
+Stephen C. Johnson, Anders Magnusson and others
+Yes
+Yes
+Yes
+BSD
+
+
+Power C
+Mix Software
+No
+No
+Yes
+Proprietary
+
+
+QuickC
+Microsoft
+Yes
+No
+No
+Proprietary
+
+
+RCC (RCOR C Compiler)
+Rodrigo Caetano Rocha (rcor)
+Yes
+Yes
+No
+GPL
+
+
+RECC (Robert Elder Compiler Collection)
+Robert Elder
+Yes
+Yes
+No
+Proprietary
+
+
+Ritchie C Compiler (PDP-11)
+Dennis Ritchie and John Reiser; converted to cross-compiler by Doug Gwyn
+Yes
+Yes
+Yes
+Freeware
+
+
+SAS/C
+SAS Institute
+Yes
+Yes
+Yes IBM mainframe, AmigaOS, 68K, 88K
+Proprietary
+
+
+SCORE C (tcc)
+DDC-I
+Yes
+Yes
+Yes
+Proprietary
+
+
+Small-C
+Ron Caine, James E. Hendrix, Byte magazine
+Yes
+Yes
+CP/M, MS-DOS
+Public Domain
+
+
+Smaller C
+Alexey Frunze
+Yes
+Linux, RetroBSD
+MS-DOS
+BSD
+
+
+Small Device C Compiler
+Sandeep Dutta and others
+Yes
+Yes
+Unknown
+GPL
+
+
+SubC
+Nils M Holm
+MinGW
+FreeBSD, NetBSD, Linux
+MS-DOS
+Public Domain
+
+
+THINK C, Lightspeed C
+THINK Technologies
+No
+No
+Classic Mac OS
+Proprietary
+
+
+Tiny C Compiler
+Fabrice Bellard
+Yes
+Yes
+No
+LGPL
+
+
+(Borland) Turbo C
+Embarcadero
+Yes
+No
+Yes
+Proprietary - V 2.01 freely available
+
+
+ups debugger (includes C interpreter)
+Tom Hughes, Ian Edwards, and others
+No
+Yes
+Solaris, SunOS
+GPL
+
+
+VBCC
+Volker Barthelmann
+Yes
+Yes
+Yes
+Freeware (source code available, modification not allowed)
+
+
+Virtual-C IDE
+Dieter Pawelczak
+Yes
+Mac OS X
+No
+Freeware (for non-commercial use)
+
+
+Visual C++ Express
+Microsoft
+Yes
+No
+No
+Freeware
+
+
+Wind River (Diab) Compiler
+Wind River Systems
+Yes
+Yes
+Yes
+Proprietary
+
+
+XL C
+IBM
+No
+AIX, Linux
+No
+Proprietary
+
+
+MCP Compiler
+Unisys
+No
+No
+MCP
+Proprietary
+
+
+Source-to-source compilers[edit]
+This list is incomplete. A more extensive list of source-to-source compilers can be found here.
+
+
+Compiler
+Author
+Target Input
+Target Output
+Auto-Parallelizer
+Windows
+Unix-like
+Other OSs
+License type
+Framework?
+
+
+Edison Design Group
+Edison Design Group
+C/C++
+C
+No
+Yes
+Yes
+Yes
+Proprietary
+Yes
+
+
+Parallware
+Appentra[1]
+C/Fortran
+C Annotated with OpenACC/OpenMP
+Yes
+No
+Yes
+No
+Proprietary
+No
+
+
+Rose Compiler
+Lawrence Livermore National Laboratory
+C/Fortran and more
+C/Fortran and more
+Yes
+No
+Yes
+Yes
+BSD
+Yes
+
+
+PIPS Parallélisation interprocédurale de programmes scientifiques
+MINES ParisTech
+C
+C
+Yes
+No
+Yes
+Yes
+GPL
+Yes
+
+
+C++ compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+C++11 Standard conformance
+
+
+C++Builder
+Embarcadero (CodeGear)
+Yes
+OS X, iOS[2]
+No
+Proprietary
+Yes
+No
+(Supported via Clang.[3])
+
+
+Turbo C++ Explorer
+Embarcadero (CodeGear)
+Yes
+No
+No
+Freeware
+Yes
+?
+
+
+C++ Compiler
+Embarcadero (CodeGear)
+Yes
+No
+No
+Freeware
+No
+?
+
+
+CINT
+CERN
+Yes
+Yes
+BeBox, DOS, Convex, etc.
+X11/MIT
+Yes
+?
+
+
+Borland C++
+Borland (CodeGear)
+Yes
+No
+DOS
+Proprietary
+Yes
+No
+
+
+Turbo C++ for DOS
+Borland (CodeGear)
+No
+No
+DOS
+Proprietary
+Yes
+No
+
+
+Clang
+LLVM Project
+Yes
+Yes
+Yes
+BSD-like
+Xcode, QtCreator (optional)
+Yes
+
+
+CodeWarrior
+Metrowerks
+Yes
+Yes
+Yes
+Freeware
+Yes
+?
+
+
+Comeau C/C++
+Comeau Computing
+Yes
+Yes
+Yes
+Proprietary
+No
+No
+
+
+CoSy compiler development system
+ACE Associated Compiler Experts
+Yes
+Yes
+No
+Proprietary
+No
+?
+
+
+Digital Mars
+Digital Mars
+Yes
+No
+DOS
+Proprietary
+No
+?
+
+
+EDGE ARM C/C++
+Mentor Graphics
+Yes
+Yes
+Yes
+Proprietary
+Yes
+?
+
+
+Edison Design Group
+Edison Design Group
+Yes
+Yes
+Yes
+Proprietary
+No
+Yes
+
+
+GCC
+GNU Project
+MinGW, Cygwin
+Yes
+Yes
+GPLv3
+Xcode, QtCreator, Kdevelop, Eclipse, NetBeans, Code::Blocks, Geany
+Yes[4]
+
+
+HP aC++
+Hewlett-Packard
+No
+Yes
+No
+Proprietary
+No
+?
+
+
+IAR C/C++ Compilers
+IAR Systems
+Yes
+No
+No
+Proprietary
+Yes
+No
+
+
+Intel C++ Compiler
+Intel
+Yes
+Linux, OS X
+No
+Proprietary (Freeware for most non-commercial applications)
+Yes
+Yes
+
+
+KAI C++ Compiler
+Kuck &amp; Associates, Inc. (bought by Intel)
+No
+Digital Unix, HP-UX, Linux for Intel x86, SGI Irix 5.3,SGI Irix 6.x, Solaris 2.x
+No
+Proprietary
+Unknown
+?
+
+
+Microtec
+Mentor Graphics
+Yes
+Yes
+Yes
+Proprietary
+Yes
+?
+
+
+MULTI
+Green Hills Software
+Yes
+Yes
+Yes
+Proprietary
+Yes
+?
+
+
+Open Watcom
+Sybase
+Yes
+Yes
+Yes
+Sybase Open Watcom Public License
+Yes
+?
+
+
+Open64
+HP, AMD, Tsinghua University and others
+No
+Yes
+No
+Modified GPLv2
+No
+?
+
+
+PathScale
+PathScale and others
+No
+Yes
+Yes
+Mixed (Proprietary&amp;Open Source&amp;GNU General Public License)
+No
+?
+
+
+PGCPP
+The Portland Group
+Yes
+Yes
+?
+Proprietary
+Yes
+?
+
+
+ProDev WorkShop
+Silicon Graphics
+No
+No
+Yes
+Proprietary
+Yes
+?
+
+
+RealView C/C++ Compiler (armcc)
+Keil (ARM Limited)
+Yes
+Yes
+No
+Proprietary
+Yes
+?
+
+
+Salford C++ Compiler
+Silverfrost
+Yes
+No
+No
+Proprietary
+Yes
+?
+
+
+SAS/C C++
+SAS Institute
+Windows NT/95
+AIX, Solaris/SunOS, Linux
+IBM mainframe, DOS
+Proprietary
+No
+?
+
+
+SCORE C++ (tpp)
+DDC-I
+Yes
+Yes
+Yes
+Proprietary
+Yes
+No
+
+
+Systems/C,C++
+Dignus
+Yes
+Linux
+No
+Proprietary
+Yes
+?
+
+
+Solaris Studio
+Oracle
+No
+Linux, Solaris
+No
+Proprietary
+Yes
+Yes
+
+
+Solaris Studio Express
+Oracle
+No
+Linux, Solaris
+No
+Freeware
+Yes
+Yes
+
+
+TenDRA
+TenDRA Project
+No
+Yes
+No
+BSD License
+No
+?
+
+
+VectorC
+Codeplay
+Yes
+No
+No
+Proprietary
+No
+?
+
+
+Visual C++
+Microsoft
+Yes
+No
+No
+Proprietary
+Yes
+Yes[5]
+
+
+VisualAge C++
+IBM
+Yes
+AIX, Linux
+OS/2
+Proprietary
+Yes
+?
+
+
+XL C/C++
+IBM
+No
+Linux (POWER and Cell) and AIX
+BlueGene and VM
+Proprietary
+Eclipse
+Yes
+
+
+Wind River (Diab) Compiler
+Wind River Systems
+Yes
+Yes
+Yes
+Proprietary
+Yes
+?
+
+
+C# compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Visual C#
+Microsoft
+Yes
+No
+No
+Proprietary
+Yes
+
+
+Visual C# Express
+Microsoft
+Yes
+No
+No
+Freeware
+Yes
+
+
+Mono
+Xamarin
+Yes
+Yes
+Yes
+GPLv2
+Yes
+
+
+Portable.NET
+Dot Gnu Project
+Yes
+Yes
+No
+GPL
+No
+
+
+SharpDevelop
+IC#Code Team
+Yes
+?
+?
+LGPL
+Yes
+
+
+Roslyn
+.NET Foundation
+Yes
+No
+No
+Apache 2.0[6]
+No
+
+
+COBOL compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Elastic COBOL
+Heirloom
+Yes
+Yes
+Mac OS X and Raspberry Pi
+Free
+Eclipse
+
+
+IBM COBOL
+IBM
+Yes
+AIX
+z/OS and z/VM
+Proprietary
+Eclipse
+
+
+isCOBOL
+Veryant
+Yes
+Yes
+Yes
+Proprietary
+Yes
+
+
+NetCOBOL
+Fujitsu, GTSoftware
+Yes
+Yes
+No
+Proprietary
+Yes
+
+
+GNU Cobol (formerly OpenCOBOL)
+Keisuke Nishida, Roger While, Simon Sobisch
+Yes
+Yes
+Yes
+GPL
+No
+
+
+Raincode COBOL
+Raincode
+Yes
+No
+No
+Proprietary
+Visual Studio
+
+
+TinyCOBOL
+Rildo Pagrana
+Yes
+Yes
+No
+GPL
+No
+
+
+Visual COBOL
+Micro Focus
+Yes
+Yes
+Yes
+Proprietary
+Yes
+
+
+MCP Compiler
+Unisys
+No
+No
+MCP
+Proprietary
+CANDE
+
+
+Common Lisp compilers[edit]
+
+
+Compiler
+Author
+Target
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Allegro Common Lisp
+Franz, Inc.
+Native code
+Yes
+Yes
+Yes
+Proprietary
+Yes
+
+
+Armed Bear Common Lisp
+Peter Graves
+JVM
+Yes
+Yes
+Yes
+GPL
+Yes
+
+
+Clasp
+Chris Schafmeister
+Native code via LLVM
+No
+Yes
+No
+Free
+No
+
+
+CLISP
+GNU Project
+Bytecode
+Yes
+Yes
+Yes
+GPL
+No
+
+
+Clozure CL
+Clozure Associates
+Native code
+Yes
+Yes
+No
+LGPL
+Yes
+
+
+CMU Common Lisp
+Carnegie Mellon University
+Native code, Bytecode
+No
+Yes
+No
+Public Domain
+Yes
+
+
+Corman Common Lisp
+Corman Technologies
+Native code
+Yes
+No
+No
+MIT license
+Yes
+
+
+Embeddable Common Lisp
+Juanjo Garcia-Ripoll
+Bytecode, C
+Yes
+Yes
+Yes
+LGPL
+Yes
+
+
+GNU Common Lisp
+GNU Project
+C
+Yes
+Yes
+No
+GPL
+No
+
+
+LispWorks
+LispWorks Ltd
+Native code
+Yes
+Yes
+No
+Proprietary
+Yes
+
+
+ManKai Common Lisp
+Jean-Claude Beaudoin
+Bytecode, C
+Yes
+Yes
+Yes
+LGPL
+Yes
+
+
+Mezzano
+Henry Harrington
+Native code, own OS
+No
+No
+Yes
+BSD
+No
+
+
+mocl
+Wukix
+Native code
+No
+Yes
+Yes
+Proprietary
+No
+
+
+Movitz
+Frode V. Fjeld
+Native code, own OS
+No
+No
+Yes
+BSD
+No
+
+
+Open Genera
+Symbolics
+Ivory emulator, own OS
+No
+No
+Yes
+Proprietary
+Yes
+
+
+Scieneer Common Lisp
+Scieneer Pty Ltd
+Native code
+No
+Yes
+No
+Proprietary
+No
+
+
+Steel Bank Common Lisp
+sbcl.org
+Native code
+Yes
+Yes
+Yes
+Public Domain
+Yes
+
+
+XCL
+Peter Graves
+Native code
+Yes
+Yes
+No
+GPL
+No
+
+
+D compilers[edit]
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Digital Mars D (DMD)
+Digital Mars and others
+Yes
+32-bit Linux, OS X, FreeBSD
+No
+Boost (front end), source available for unlicensed backend
+No
+
+
+D Compiler for .Net
+&#160;?
+Yes
+Yes
+&#160;?
+&#160;?
+&#160;?
+
+
+GDC
+GCC
+Yes
+Yes
+No
+GPL
+No
+
+
+LDC
+LLVM
+Yes
+Yes
+No
+multiple Open Source license depending on module
+No
+
+
+DIBOL/DBL compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Synergy DBL[7][8][9]
+Synergex
+Yes
+Yes
+Yes
+Proprietary
+Yes
+
+
+ECMAScript interpreters[edit]
+See List of ECMAScript engines.
+Eiffel compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+EiffelStudio
+Eiffel Software / Community developed (sourceforge)
+Yes
+Yes
+Yes
+Dual GPL / Proprietary
+Yes
+
+
+Felix compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Felix
+John Skaller
+Yes
+Yes
+Open Source
+No
+
+
+Fortran compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Oracle Solaris Studio
+Oracle Corporation
+No
+Linux and Solaris
+No
+Proprietary
+Yes — Solaris Studio IDE
+
+
+PGFORTRAN
+The Portland Group
+Yes
+Linux only
+Yes
+Proprietary
+Yes — Visual Studio on Windows
+
+
+PathScale Compiler Suite
+SiCortex
+No
+Linux only
+No
+Proprietary
+Yes
+
+
+Absoft Pro Fortran
+Absoft
+Yes
+Linux and OS X
+Yes
+Proprietary
+Yes
+
+
+G95
+Andy Vaught
+Yes
+Yes
+Yes
+GPL
+No
+
+
+GNU Fortran
+GNU Project
+Yes
+Yes
+Yes
+GPLv3
+Yes — Photran (part of Eclipse)
+
+
+Intel Fortran Compiler
+Intel
+Yes
+Linux and OS X
+No
+Proprietary
+Yes (plugins) — Visual Studio on Windows, Eclipse on Linux, XCode on MAC.
+
+
+Lahey Fortran
+Lahey Computer Systems, Inc.
+Yes
+Linux only
+No
+Proprietary
+Yes (plugins) — Visual Studio on Windows.
+
+
+Open64
+Google, HP, Intel, Nvidia, PathScale, Tsinghua University and others
+Yes
+Yes
+Yes
+GPL
+No
+
+
+FTN95
+Silverfrost
+Yes
+No
+No
+Proprietary
+Yes
+
+
+NAG Fortran Compiler
+Numerical Algorithms Group
+Yes
+Yes
+No
+Proprietary
+Yes
+
+
+VS Fortran
+IBM
+No
+No
+z/OS and z/VM
+Proprietary
+Eclipse
+
+
+XL Fortran
+IBM
+No
+Linux (POWER and Cell) and AIX
+BlueGene
+Proprietary
+Eclipse
+
+
+MCP Compiler
+Unisys
+No
+No
+MCP
+Proprietary
+CANDE
+
+
+Open Watcom
+Sybase and Open Watcom Contributors
+Yes
+Yes
+Yes
+Sybase Open Watcom Public License
+Yes — on Windows and OS/2
+
+
+Go compilers[edit]
+
+
+Compiler
+Windows
+Mac OS X
+Unix-like
+License type
+
+
+Gc
+Yes
+Yes
+Yes
+BSD-style
+
+
+Gccgo
+MinGW, Cygwin
+No
+Yes
+GPL
+
+
+Llgo
+No
+No
+Yes
+University of Illinois/NCSA Open Source License
+
+
+Haskell compilers[edit]
+HaskellWiki maintains a list of Haskell implementations. Many of them are compilers.
+
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+Actively maintained?
+
+
+HBC
+Lennart Augustsson Thomas Johnsson
+?
+Yes
+No
+Open source
+No
+
+
+GHC
+GHC
+Yes
+Yes
+No
+Open source
+Yes
+
+
+NHC
+Niklas Röjemo
+Yes
+Yes
+No
+Open source
+No
+
+
+YHC
+YHC
+Yes
+Yes
+No
+Open source
+No
+
+
+JHC
+John Meacham
+Yes
+Yes
+No
+Open source
+Yes
+
+
+Java compilers[edit]
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Edison Design Group
+Edison Design Group
+Yes
+Yes
+Yes
+Proprietary
+No
+
+
+gcj
+GNU Project
+No
+Yes
+No
+GPL
+No
+
+
+javac
+Sun Microsystems (Owned by Oracle)
+Yes
+Yes
+Yes
+GPL
+No
+
+
+S.N Java Compiler
+SN Ink. (Owned by S.N)
+Yes
+No
+No
+Free
+No
+
+
+ECJ (Eclipse Compiler for Java)
+Eclipse project
+Yes
+Yes
+Yes
+EPL
+Yes
+
+
+Jikes
+IBM
+?
+?
+?
+?
+?
+
+
+Power J[10]
+Sybase (Owned by SAP)
+Yes
+?
+?
+?
+Yes
+
+
+Oberon compilers[edit]
+
+
+Compiler
+Author
+Microsoft Windows
+Unix-like
+Other OSs
+License type
+
+
+OberonC (Oberon-0 Compiler)
+Rodrigo Caetano Rocha (rcor)
+Yes
+Yes
+No
+GPL
+
+
+VOC (Vishap Oberon Compiler)
+Norayr Chilingarian (noch)
+No
+Yes
+Mac OS X, FreeBSD
+GPLv3
+
+
+Pascal compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Charm Pascal
+Alaa Ben Fatma
+Yes
+?
+?
+Freeware
+Yes
+
+
+Amsterdam Compiler Kit
+Andrew Tanenbaum and Ceriel Jacobs
+No
+Yes
+Yes
+BSD
+No
+
+
+Embarcadero Delphi
+Embarcadero (CodeGear)
+Yes
+Yes (Linux, Mac OS)
+Yes (iOS, Android)
+Proprietary
+Yes
+
+
+Delphi Prism
+RemObjects
+Yes
+Yes
+Yes
+Proprietary
+Yes
+
+
+FrameworkPascal
+Framework Computers, Inc.
+Yes
+No
+Yes (MS-DOS)
+Proprietary
+Yes
+
+
+Free Pascal
+Florian Paul Klämpfl
+Yes
+Yes
+Yes (OS/2, FreeBSD, Solaris, Haiku, etc.)
+GPL
+FPIDE, Lazarus, Geany (on Ubuntu)
+
+
+Irie Pascal
+Irie Tools Limited
+Yes
+Yes
+No
+Proprietary
+Yes
+
+
+GNU Pascal
+GNU Project
+Yes
+Yes
+Yes
+GPL
+No
+
+
+Kylix
+Borland (CodeGear)
+No
+Yes (Linux)
+No
+Proprietary
+Yes
+
+
+Turbo Pascal for Windows
+Borland (CodeGear)
+Yes (3.x)
+No
+No
+Proprietary
+Yes
+
+
+Microsoft Pascal
+Microsoft
+No
+No
+Yes (MS-DOS)
+Proprietary
+Yes
+
+
+HP Pascal
+Hewlett-Packard
+No
+No
+Yes (OpenVMS)
+Proprietary
+Unknown
+
+
+Turbo Pascal
+CodeGear (Borland)
+No
+No
+Yes
+Freeware
+Yes
+
+
+Vector Pascal
+Glasgow University
+Yes
+Yes
+No
+OpenSource
+No
+
+
+Virtual Pascal
+Bacem Hlabba
+Yes
+Yes
+Yes (OS/2)
+Freeware
+Yes
+
+
+WDSibyl
+Wolfgang Draxler and Speed-Soft
+Yes
+No
+Yes (OS/2)
+GPL
+Yes
+
+
+MCP Compiler
+Unisys
+No
+No
+MCP
+Proprietary
+CANDE
+
+
+PL/I compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+IBM Enterprise PL/I
+
+Yes
+No
+Yes (z/OS)
+Proprietary
+No
+
+
+IBM PL/I(F)
+
+No
+No
+Yes
+Free
+No
+
+
+Multics PL/I
+
+No
+No
+Yes
+Modified MIT[11]
+No
+
+
+Iron Spring PL/I
+
+No
+Yes
+Yes (OS/2)
+Proprietary
+No
+
+
+Kednos PL/I
+
+No
+Yes
+Yes (Open VMS)
+Proprietary
+No
+
+
+Raincode PL/I
+Raincode
+Yes
+No
+No
+Proprietary
+Visual Studio
+
+
+Python compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Target
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Psyco
+Armin Rigo, Christian Tismer
+JIT
+Yes
+Yes
+Yes
+MIT
+No
+
+
+Cython
+
+C
+Yes
+Yes
+Yes
+Apache 2.0
+No
+
+
+Shed Skin
+
+C++
+Yes
+Yes
+Yes
+GPLv3 and BSD
+No
+
+
+PyPy
+
+JIT
+Yes
+Yes
+Yes
+MIT
+No
+
+
+Nuitka
+
+C++
+Yes
+Yes
+Yes
+Apache 2.0
+No
+
+
+Scheme compilers and interpreters[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Target
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Bigloo
+Manuel Serrano
+native, bytecode
+Yes
+Yes
+?
+GPL (compiler) and LGPL (runtime)
+No
+
+
+Chez Scheme
+Cadence Research Systems
+native
+Yes
+Yes
+No
+Proprietary
+No
+
+
+Chicken Scheme
+The CHICKEN Team
+C
+Yes
+Yes
+?
+BSD
+No
+
+
+Common Larceny
+William Clinger, Lars Hansen
+CLI
+Yes
+?
+?
+Larceny License[12]
+No
+
+
+Gambit
+Marc Feeley
+C
+Yes
+Yes
+?
+LGPL
+No
+
+
+GNU Guile
+GNU Project
+bytecode
+Yes
+Yes
+?
+LGPL
+No
+
+
+Ikarus Scheme
+Abdulaziz Ghuloum
+native
+Yes
+Yes
+?
+GPL
+No
+
+
+IronScheme
+Llewellyn Pritchard
+CLI
+Yes
+Yes
+?
+Ms-PL
+No
+
+
+JScheme
+Ken Anderson, Tim Hickey, Peter Norvig
+bytecode
+Java
+Java
+Java
+zlib License
+No
+
+
+Kawa
+Per Bothner
+bytecode
+Java
+Java
+Java
+MIT
+No
+
+
+Larceny
+William Clinger, Lars Hansen
+native
+Yes
+Yes
+?
+Larceny License[13]
+No
+
+
+MIT/GNU Scheme
+GNU Project
+native
+Yes
+Yes
+?
+GPL
+No
+
+
+Owl Lisp
+Aki Helin
+C
+Yes
+Yes
+?
+MIT
+No
+
+
+Oxygen Scheme
+?
+?
+?
+?
+?
+?
+No
+
+
+Petit Larceny
+William Clinger, Lars Hansen
+C
+?
+Yes
+?
+Larceny License[14]
+No
+
+
+PVTS
+David Pilo
+bytecode
+Java
+Java
+Java
+GPL
+No
+
+
+Racket
+PLT Inc.
+bytecode + JIT
+Yes
+Yes
+?
+LGPL
+DrRacket
+
+
+RScheme
+Donovan Kolbly
+C, bytecode
+?
+Yes
+?
+Open source
+No
+
+
+#S
+?
+CLI
+?
+?
+?
+?
+No
+
+
+Scheme 48
+Richard Kelsey, Jonathan Rees
+C, bytecode
+Yes
+Yes
+?
+BSD
+No
+
+
+SCM
+Aubrey Jaffer
+C
+Yes
+Yes
+AmigaOS, Atari ST, Classic Mac OS, MS-DOS, OS/2, NOS/VE, OpenVMS
+LGPL
+No
+
+
+SISC
+Scott G. Miller, Matthias Radestock
+bytecode
+Java
+Java
+Java
+GPL and MPL
+No
+
+
+Stalin
+Jeffrey Mark Siskind
+C
+?
+Yes
+?
+LGPL
+No
+
+
+
+
+Interpreter
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Elk Scheme
+Oliver Laumann, Sam Hocevar
+Yes
+Yes
+?
+Open source
+No
+
+
+Gauche
+Shiro Kawai
+Yes
+Yes
+?
+BSD
+No
+
+
+Petite Chez Scheme
+Cadence Research Systems
+Yes
+Yes
+No
+Freeware
+No
+
+
+Smalltalk compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Target
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Smalltalk MT
+ObjectConnect
+native
+Yes
+No
+No
+Proprietary
+Yes
+
+
+GNU Smalltalk
+GNU Smalltalk project
+bytecode + JIT
+Yes
+Yes
+No
+GPL
+No
+
+
+Smalltalk YX
+Luca Bruno
+&#160;?
+Yes
+Yes
+Yes
+MIT License
+No
+
+
+VisualWorks
+Cincom Systems
+&#160;?
+Yes
+Yes
+Yes
+Proprietary
+Yes
+
+
+CLI compilers[edit]
+
+
+This list is incomplete; you can help by expanding it.
+
+
+
+
+Compiler
+Author
+Windows
+Unix-like
+Other OSs
+License type
+IDE?
+
+
+Visual Studio
+Microsoft
+Yes
+No
+No
+Proprietary
+Yes
+
+
+Mono
+Mono
+Yes
+Yes
+No
+Open source
+Yes
+
+
+Delphi Prism
+RemObjects
+Yes
+Yes
+Yes
+Proprietary
+Yes
+
+
+Portable.NET
+Dot Gnu Project
+Yes
+Yes
+No
+GPL
+Unknown
+
+
+ILDJIT
+Simone Campanoni
+No
+Yes
+No
+GPLv2
+No
+
+
+Open source compilers[edit]
+Production quality, open source compilers.
+
+The Plan 9 C compiler collection by Ken Thompson
+Amsterdam Compiler Kit (ACK) [C, Pascal, Modula-2, Occam, and BASIC] [Unix-like]
+Clang C/C++/Objective-C Compiler
+FreeBASIC [Basic] [DOS/Linux/Windows]
+Free Pascal [Pascal] [DOS/Linux/Windows(32/64/CE)/MacOS/NDS/GBA/..(and many more)]
+Roadsend PHP [PHP 5] [Linux, FreeBSD, Windows, OS X]
+GCC [C, C++ (G++), Java (GCJ), Ada (GNAT), Objective-C, Objective-C++, Fortran (GFortran), and Go (GCCGo). Also available, but not in standard are: Modula-2, Modula-3, Pascal, PL/I, D, Mercury, VHDL] [Linux, the BSDs, OS X, NeXTSTEP, Windows and BeOS, among others]
+Local C compiler [C] [Linux, SPARC, MIPS]
+The LLVM Compiler Infrastructure which is also frequently used for research
+Portable C Compiler [C] [Unix-like]
+Open Watcom [C, C++, and Fortran] [Windows and OS/2, Linux/FreeBSD WIP]
+TenDRA [C/C++] [Unix-like]
+Tiny C Compiler [C] [Linux, Windows]
+S7c - A compiler for Seed7 (extensible language with many advanced features). Generates C code for GCC, Visual C or Borland C, Supports portable programs for Linux, Windows, OS X, Unix and BSD.
+libJIT Just-In-Time compilation library, a library by Rhys Weatherley, Klaus Treichel, Aleksey Demakov, and Kirill Kononenko for development of Just-In-Time compilers (JIT) in Virtual Machine implementations, Dynamic programming languages, and Scripting languages.
+Open64, supported by AMD on Linux.
+COINS compiler infrastructure
+XPL PL/I dialect (several systems)
+
+Research compilers[edit]
+Research compilers are mostly not robust or complete enough to handle real, large applications. They are used mostly for fast prototyping new language features and new optimizations in research areas.
+
+Open64: one of the most popular research compilers today, many branches exist. Here is a list of research papers from the CGO 2009. (Open64 merges the open source changes from the PathScale compiler mentioned.)
+ROSE compiler framework: an open source compiler framework to generate source-to-source analyzers and translators for C/C++ and Fortran, developed at Lawrence Livermore National Laboratory
+Polaris compiler for Fortran
+
+Cetus for C/C++, successor of Polaris compiler
+
+
+MILEPOST GCC: interactive plugin-based open-source research compiler that combines the strength of GCC and the flexibility of the common Interactive Compilation Interface that transforms production compilers into interactive research toolsets.
+Interactive Compilation Interface - a plugin system with high-level API to transform production-quality compilers such as GCC into powerful and stable research infrastructure while avoiding developing new research compilers from scratch.
+SUIF: inactive since 2001
+
+MACHINE SUIF a branch focusing on machine-specific analyses and optimizations
+
+
+PIPS: a source-to-source compiler framework with a Fortran 77, Fortran 95 and C front-end, focussing on advanced analyses and transformations.
+OpenIMPACT Compiler
+Phoenix optimization and analysis framework by Microsoft
+Very Portable Optimizer (VPO) from the University of Virginia
+COINS compiler infrastructure
+Trimaran for research in instruction-level parallelism
+Parafrase-2 Inactive. It is a source-to-source vectorizing/parallelizing compiler, with Fortran and C front-ends.
+
+The PARADIGM compiler. Derived from Parafrase-2, it is a source-to-source research compiler for distributed-memory multicomputers for Fortran 77 and HPF.
+
+
+MLton standard ML compiler (SML compiler)
+Jikes Research Virtual machine (Jikes RVM): a research virtual machine for Java that uses two just-in-time compilers (a non-optimizing and an optimizing one)
+Soot: a Java Optimization framework
+The Scale compiler
+HotpathVM: a Java virtual machine using a trace-based just-in-time compiler
+ILDJIT: a compilation framework that targets the CIL bytecode that includes both static and dynamic compilers. ILDJIT provides a plugin-based framework for static, as well as dynamic tasks like code translations, code analysis, code optimizations, runtime instrumentation and memory management. Its plugin-based framework allows users to easily customize execution both at installation time, as well as at run-time (by dynamically loading and unloading plugins without perturbing execution). ILDJIT thus enables efficient co-design research at the architectural-boundary. Moreover, its multi-threaded design allows novel introspection of parallel compilation strategies to reduce overheads and dynamically optimize running code on today's x86 multi-core systems.
+Edison Design Group: provides production-quality front end compilers for C, C++, and Java (a number of the compilers listed on this page use front end source code from Edison Design Group[15]). Additionally, Edison Design Group makes their proprietary software available for research uses.[16]
+
+See also[edit]
+
+Compiler
+Comparison of integrated development environments
+
+References[edit]
+
+
+^ "Appentra - Automatic Software Acceleration".&#160;
+^ http://www.embarcadero.com/products/cbuilder
+^ http://docwiki.embarcadero.com/RADStudio/XE6/en/Clang-based_C%2B%2B_Compilers
+^ http://en.cppreference.com/w/cpp/compiler_support
+^ "Support For C++11 Features", MSDN, Retrieved on 31 May 2014.
+^ https://github.com/dotnet/roslyn/blob/master/License.txt
+^ http://dotnetpowered.com/languages.aspx/
+^ http://blogs.msdn.com/b/terryclancy/archive/2010/12/07/another-language-for-visual-studio-and-net-synergex-release-synergy-de.aspx/
+^ http://www.doublez.com.au/index.php?article=115/
+^ http://www.sybase.ca/products/archivedproducts/powerj
+^ "Multics Internet Server". MIT.&#160;
+^ "The Larceny Project - Licensing"
+^ "The Larceny Project - Licensing"
+^ "The Larceny Project - Licensing"
+^ https://www.edg.com/index.php?location=customers_oc
+^ https://www.edg.com/index.php?location=customers_research
+
+
+External links[edit]
+
+NAG Fortran Compiler
+http://www.compunity.org/resources/compilers/index.php
+An incomplete list of C++ compilers, maintained by C++'s inventor, Bjarne Stroustrup
+Free C/C++ compilers and interpreters
+http://www.idiom.com/free-compilers/
+Compiler resources
+CCS C compiler
+MikroC C Compiler
+Persistent S-algol compiler
+ALGOL 60 compiler
+ALGOL 68 Genie compiler
+Intel buys Kuck &amp; Associates
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=List_of_compilers&amp;oldid=688984126"					
+				Categories: CompilersLists of softwareHidden categories: Wikipedia references cleanup from May 2012All articles needing references cleanupArticles covered by WikiProject Wikify from May 2012All articles covered by WikiProject WikifyIncomplete lists from January 2009Incomplete lists from December 2010Incomplete lists from June 2011Incomplete lists from November 2014Incomplete lists from March 2009Incomplete lists from August 2008Incomplete lists from January 2010Incomplete lists from October 2011Incomplete lists from February 2013Incomplete lists from February 2010Incomplete lists from December 2011Incomplete lists from November 2009Incomplete lists from November 2011Incomplete lists from March 2011Incomplete lists from August 2009Incomplete lists from September 2010				
+							
+		
+		
+			

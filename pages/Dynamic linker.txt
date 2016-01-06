@@ -1,0 +1,218 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Dynamic linker
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+It has been suggested that Dynamic loading be merged into this article. (Discuss) Proposed since July 2015.
+
+
+
+
+
+
+
+This article relies too much on references to primary sources. Please improve this article by adding secondary or tertiary sources. (March 2011)
+
+
+In computing, a dynamic linker is the part of an operating system that loads and links the shared libraries needed by an executable when it is executed (at "run time"), by copying the content of libraries from persistent storage to RAM, and filling jump tables and relocating pointers. The specific operating system and executable format determine how the dynamic linker functions and how it is implemented.
+Linking is often referred to as a process that is performed when the executable is compiled, while a dynamic linker is a special part of an operating system that loads external shared libraries into a running process and then binds those shared libraries dynamically to the running process. This approach is also called dynamic linking or late linking.
+
+
+
+Contents
+
+
+1 Implementations
+
+1.1 Microsoft Windows
+1.2 Unix-like systems using ELF, and Darwin-based systems
+
+1.2.1 Systems using ELF
+1.2.2 OS X and iOS
+
+
+1.3 XCOFF-based Unix-like systems
+1.4 OS/360 and successors
+
+
+2 See also
+3 Notes
+4 References
+5 Further reading
+6 External links
+
+
+
+Implementations[edit]
+Microsoft Windows[edit]
+Main article: Dynamic-link library
+Dynamic-link library, or DLL, is Microsoft's implementation of the shared library concept in the Microsoft Windows and OS/2 operating systems. These libraries usually have the file extension DLL, OCX (for libraries containing ActiveX controls), or DRV (for legacy system drivers). The file formats for DLLs are the same as for Windows EXE files&#160;–  that is, Portable Executable (PE) for 32-bit and 64-bit Windows, and New Executable (NE) for 16-bit Windows. As with EXEs, DLLs can contain code, data, and resources, in any combination.
+Data files with the same file format as a DLL, but with different file extensions and possibly containing only resource sections, can be called resource DLLs. Examples of such DLLs include icon libraries, sometimes having the extension ICL, and font files, having the extensions FON and FOT.[1]
+Unix-like systems using ELF, and Darwin-based systems[edit]
+In most Unix-like systems, most of the machine code that makes up the dynamic linker is actually an external executable that the operating system kernel loads and executes first in a process address space newly constructed as a result of calling exec or posix_spawn functions. At link time, the path of the dynamic linker that should be used is embedded into the executable image.
+When an executable file is loaded, the operating system kernel reads the path of the dynamic linker from it and then attempts to load and execute this other executable binary; if that attempt fails because, for example, there is no file with that path, the attempt to execute the original executable fails. The dynamic linker then loads the initial executable image and all the dynamically-linked libraries on which it depends, and starts the executable. As a result, the pathname of the dynamic linker is part of the operating system's application binary interface.
+Systems using ELF[edit]
+In Unix-like systems that use ELF for executable images and dynamic libraries, such as Solaris, 64-bit versions of HP-UX, Linux, FreeBSD, NetBSD, OpenBSD, and DragonFly BSD, the path of the dynamic linker that should be used is embedded at link time into the .interp section of the executable's PT_INTERP segment. In those systems, dynamically loaded shared libraries can be identified by the filename suffix .so (shared object).
+The dynamic linker can be influenced into modifying its behavior during either the program's execution or the program's linking, and the examples of this can be seen in the run-time linker manual pages for various Unix-like systems.[2][3][4][5][6] A typical modification of this behavior is the use of LD_LIBRARY_PATH and LD_PRELOAD environment variables, which adjust the runtime linking process by searching for shared libraries at alternate locations and by forcibly loading and linking libraries that would otherwise not be, respectively. An example is zlibc,[7] also known as uncompress.so,[a] which facilitates transparent decompression when used through the LD_PRELOAD hack; as a result, it is possible to read pre-compressed (gzipped) file data on BSD and Linux systems as if the files were not compressed, essentially allowing a user to add transparent compression to the underlying filesystem, although with some caveats. The mechanism is flexible, allowing trivial adaptation of the same code to perform additional or alternate processing of data during the file read, prior to the provision of said data to the user process that has requested it.[8][9]
+OS X and iOS[edit]
+In the Apple Darwin operating system, and in the OS X and iOS operating systems built atop it, the path of the dynamic linker that should be used is embedded at link time into one of the Mach-O load commands in the executable image. In those systems, dynamically loaded shared libraries can be identified either by the filename suffix .dylib or by their placement inside the bundle for a framework.
+The dynamic linker not only links the target executable to the shared libraries but also places machine code functions at specific address points in memory that the target executable knows about at link time. When an executable wishes to interact with the dynamic linker, it simply executes the machine-specific call or jump instruction to one of those well-known address points. The executables on the OS X and iOS platforms often interact with the dynamic linker during the execution of the process; it is even known that an executable might interact with the dynamic linker, causing it to load more libraries and resolve more symbols, hours after it initially launches. The reason that an OS X or iOS program interacts with the dynamic linker so often is due both to Apple's Cocoa and Cocoa Touch APIs and Objective-C, the language in which they are implemented (see their main articles for more information.)
+The dynamic linker can be coerced into modifying some of its behavior; however, unlike other Unix-like operating systems, these modifications are hints that can be (and sometimes are) ignored by the dynamic linker. Examples of this can be seen in dyld's manual page.[10] A typical modification of this behavior is the use of the DYLD_FRAMEWORK_PATH and DYLD_PRINT_LIBRARIES environment variables. The previously-mentioned variables adjust the executables' search path for the shared libraries, while another displays the names of the libraries as they are loaded and linked.
+Apple's OS&#160;X dynamic linker is an open-source project released as part of Darwin and can be found in the Apple's open-source dyld project.[11]
+XCOFF-based Unix-like systems[edit]
+In Unix-like operating systems using XCOFF, such as AIX, dynamically-loaded shared libraries use the filename suffix .a.
+The dynamic linker can be influenced into modifying its behavior during either the program's execution or the program's linking. A typical modification of this behavior is the use of the LIBPATH environment variable. This variable adjusts the runtime linking process by searching for shared libraries at alternate locations and by forcibly loading and linking libraries that would otherwise not be, respectively.
+OS/360 and successors[edit]
+Dynamic linking from Assembler language programs in IBM OS/360 and its successors is done typically using a LINK macro instruction containing a Supervisor Call instruction that activates the operating system routines that makes the library module to be linked available to the program. Library modules may reside in a "STEPLIB" or "JOBLIB" specified in control cards and only available to a specific execution of the program, in a library included in the LINKLIST in the PARMLIB (specified at system startup time), or in the "link pack area" where specific reentrant modules are loaded at system startup time.
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+
+Direct binding
+DLL Hell
+Dynamic binding
+Dynamic loading
+prelink
+
+Notes[edit]
+
+
+^ Not to be confused with the zlib compression library.
+
+
+References[edit]
+
+
+^ Microsoft Corporation. "Creating a Resource-Only DLL". Microsoft Developer Network Library.&#160;
+^ ld.so.1(1):&#160;Solaris dynamic linker/loader&#160;–&#160;Solaris 10 User Commands Reference Manual
+^ ld-linux.so(8)&#160;–&#160;Linux Programmer's Manual – Administration and Privileged Commands
+^ rtld(1):&#160;FreeBSD dynamic linker/loader&#160;–&#160;FreeBSD General Commands Manual
+^ ld.elf_so(1):&#160;NetBSD dynamic linker/loader&#160;–&#160;NetBSD General Commands Manual
+^ ld.so(1):&#160;OpenBSD dynamic linker/loader&#160;–&#160;OpenBSD General Commands Manual
+^ ftp://metalab.unc.edu/pub/Linux/libs/compression/zlibc-0.9k.lsm
+^ "uncompress.so". delorie.com. Retrieved 2014-07-04.&#160;
+^ "zlibc.conf". delorie.com. Retrieved 2014-07-04.&#160;
+^ dyld(1):&#160;Darwin/Mac OS X dynamic linker/loader&#160;–&#160;Darwin and OS X General Commands Manual
+^ Apple Inc. "Open Source - Releases". apple.com. Retrieved 2014-07-04.&#160;
+
+
+Further reading[edit]
+
+Linkers and Loaders, John R. Levine, Morgan-Kauffman, October 1999, ISBN 1-55860-496-0
+
+External links[edit]
+
+Dynamic Linking and Loading, IECC.com
+Dynamic Linking in Linux and Windows, part one, Symantec.com
+Anatomy of Linux dynamic libraries, IBM.com
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Dynamic_linker&amp;oldid=691374844"					
+				Categories: Computer librariesComputer security exploitsCompilersHidden categories: Articles to be merged from July 2015All articles to be mergedArticles lacking reliable references from March 2011All articles lacking reliable references				
+							
+		
+		
+			

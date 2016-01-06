@@ -1,0 +1,281 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Protocol (object-oriented programming)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Interface (object-oriented programming)" redirects here. It is not to be confused with Interface (computing).
+
+
+
+
+
+This article's factual accuracy is disputed. Please help to ensure that disputed statements are reliably sourced. See the relevant discussion on the talk page. (March 2008)
+
+
+In object-oriented programming, a protocol or interface is a common means for unrelated objects to communicate with each other. These are definitions of methods and values which the objects agree upon in order to co-operate.[1]
+For example, in Java (where protocols are termed interfaces), the Comparable interface specifies a method compareTo() which implementing classes should implement. This means that a separate sorting method, for example, can sort any object which implements the Comparable interface, without having to know anything about the inner nature of the class (except that two of these objects can be compared by means of compareTo()).
+The protocol is a description of:
+
+The messages that are understood by the object.
+The arguments that these messages may be supplied with.
+The types of results that these messages return.
+The invariants that are preserved despite modifications to the state of an object.
+The exceptional situations that will be required to be handled by clients to the object.
+
+If the objects are fully encapsulated then the protocol will describe the only way in which objects may be accessed by other objects.
+Some programming languages provide explicit language support for protocols or interfaces (Ada, C#, D, Dart, Delphi, Java, Logtalk, Object Pascal, Objective-C, PHP, Racket, Seed7, Swift). In C++ interfaces are known as abstract base classes and implemented using pure virtual functions. The object-oriented features in Perl also support interfaces.
+Although the Go programming language is not generally considered an object-oriented language, it does allow methods to be defined on user-defined types. Go has "interface" types that are compatible with any type that supports a given set of methods (the type does not need to explicitly implement the interface). The empty interface, interface{}, is compatible with all types.
+Note that functional programming and distributed programming languages have a concept which is also called a protocol, but whose meaning is subtly different (i.e. a specification of allowed exchanges of messages, emphasis on exchanges, not on messages)[citation needed]. This difference is due to somewhat different assumptions of functional programming and object-oriented programming paradigms. In particular, the following are also considered as part of a protocol in these languages:
+
+The allowed sequences of messages,
+Restrictions placed on either participant in the communication,
+Expected effects that will occur as the message is handled.
+
+Type classes in languages like Haskell are used for many of the things that protocols are used for.
+See also[edit]
+
+Concept (generic programming)
+Delegation (programming)
+Protocols in Objective-C
+Class (computer science)
+Encapsulation (computer science)
+Public interface
+List of basic computer science topics
+Application programming interface
+
+References[edit]
+
+
+^ "The Objective-C programming Language:Protocols". Apple Inc. Retrieved 7 October 2012.&#160;
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Protocol_(object-oriented_programming)&amp;oldid=674381268"					
+				Categories: Object-oriented programmingHidden categories: Accuracy disputes from March 2008All accuracy disputesAll articles with unsourced statementsArticles with unsourced statements from August 2015				
+							
+		
+		
+			

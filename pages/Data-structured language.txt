@@ -1,0 +1,228 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Data-structured language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article does not cite any references (sources). Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2009)
+
+
+
+
+
+
+
+The topic of this article may not meet Wikipedia's general notability guideline. Please help to establish notability by adding reliable, secondary sources about the topic. If notability cannot be established, the article is likely to be merged, redirected, or deleted.
+Find sources:&#160;"Data-structured language"&#160;–&#160;news&#160;· newspapers&#160;· books&#160;· scholar&#160;· JSTOR&#160;· free images (April 2015)
+
+
+In computing a data-structured language is a programming language in which the data structure is a main organizing principle, representation, model, for data and logic (code) alike, in which both are stored and operated upon, i.e., program data and logic are structured and operated on in the same way, by the same representation.
+These are generally well suited to reflection and introspection, and are in some ways more consistent than many other languages. This makes them easier to learn, and to program in for those problems which naturally fit the language's data structure. Where this occurs, programming may become trivial. For those problems which do not naturally fit a language's data structure, programming may be no easier or even harder than in other languages.
+In programs written in some data-structured languages, when an instance occurs of the type of data representation which forms the basis of the language, then such instance is treated as a special case of quoted program.
+A similar concept based on consistency exists in some object-oriented languages, called "pure", which use a consistent object model: everything in them is treated uniformly as an object, from primitives such as characters and punctuation, all the way up to whole classes, prototypes, blocks, modules, etc.
+Variants[edit]
+Three main classes of data-structured languages exist, determined by the type of data structure on which they are based.
+Array-based
+
+A/A+
+APL
+J
+K
+Q
+
+List-based
+
+Joy
+Lisp
+
+Arc
+Common Lisp
+Dylan
+Emacs Lisp
+InterLisp
+Logo
+Scheme
+ZetaLisp
+
+
+Tcl
+TRAC
+
+Stack-based (open stacks)
+
+Forth
+Factor
+Poplog via its implementation language POP-11
+PostScript
+
+Some languages can statically link data inline with instructions. These can be considered data-structured, in the most primitive way. Some Assembly languages can do this.
+See also[edit]
+
+Homoiconicity
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+This programming-language-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Data-structured_language&amp;oldid=659624970"					
+				Categories: Data-structured programming languagesProgramming language topic stubsHidden categories: Articles lacking sources from December 2009All articles lacking sourcesArticles with topics of unclear notability from April 2015All articles with topics of unclear notabilityAll stub articles				
+							
+		
+		
+			

@@ -1,0 +1,101 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Language binding
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computing, a binding from a programming language to a library or operating system service is an application programming interface (API) providing glue code to use that library or service in a particular programming language.
+Binding generally refers to a mapping of one thing to another. In the context of software libraries, bindings are wrapper libraries that bridge two programming languages so that a library written for one language can be used in another language.[1] Many software libraries are written in system programming languages such as C or C++; in order to use these libraries from another (usually higher-level) language such as Java, Common Lisp, Python or Lua, a binding to the library must be created in that language, possibly requiring the recompilation of the language's code depending on the amount of modification necessary.[2] However, most languages offer an interface to foreign functions, such as Python's and OCaml's ctypes, and Embeddable Common Lisp's cffi and uffi.[3][4][5]
+For example, Python bindings are used when an already existing C library written for some purpose is to be used from Python. Another example is libsvn, which is written in C and provides an API for accessing Subversion; in order to access Subversion from within Java code, libsvnjavahl can be used, which depends on libsvn being installed and acts as a bridge between the Java programming language and libsvn, thus providing an API that invokes functions from libsvn to do the real work.[6]
+Software reuse is a major motivation for creating library bindings, rather than reimplementing the library in several languages. Another is the impossibility of implementing certain algorithms efficiently in high-level languages.
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+Computing portal
+
+
+
+
+
+Application programming interface (API)
+Application Binary Interface (ABI)
+Calling convention
+Common Language Infrastructure&#160;–  .NET cross-language cross-platform Object Model
+Comparison of application virtual machines
+COM&#160;–  Microsoft Windows only cross-language Object Model
+CORBA&#160;–  Common Object Request Broker Architecture, cross language cross platform object model
+DCOM&#160;–  Distributed COM, extension making COM able to work in networks
+Embedded SQL
+Foreign function interface
+Freedesktop.org D-Bus&#160;–  open cross language cross platform Object Model
+Name mangling
+SWIG&#160;–  open-source interfaces bindings generator from many languages to many languages
+Portable object&#160;–  cross language cross platform Object Model definition
+Porting
+XPCOM&#160;–  Mozilla applications cross-platform Component Object Model
+Wrapper function
+
+
+References[edit]
+
+
+^ "Appendix A. Creating a language binding for cairo". Cairographics.org. Retrieved 2014-04-02.&#160;
+^ "Standards, APIs, Interfaces and Bindings". Acm.org. Retrieved 2014-04-02.&#160;
+^ "15.17. ctypes — A foreign function library for Python". Python v2.7.6 documentation. Docs.python.org. Retrieved 2014-04-02.&#160;
+^ Jason Hickey; Anil Madhavapeddy; Yaron Minsky (2013). "Real Worl OCaml, Chapter 19. Foreign Function Interface". realworldocaml.org. Retrieved 2015-07-19.&#160;
+^ "Introduction - CFFI User Manual". Common-lisp.net. Retrieved 2014-04-02.&#160;
+^ "Subversion JavaHL FAQ". Subclipse.tigris.org. 2013-06-18. Retrieved 2014-04-02.&#160;
+
+
+External links[edit]
+
+JTC1/SC22/WG11 - Binding Techniques, an ISO standard for language bindings
+What is a language binding?
+
+
+
+
+
+This programming-language-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Language_binding&amp;oldid=672085747"					
+				Categories: CompilersComputer librariesProgramming language topic stubsHidden categories: All stub articles				
+							
+		
+		
+			

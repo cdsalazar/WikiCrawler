@@ -1,0 +1,151 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Data (computing)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Data (/ˈdeɪtə/ DAY-tə, /ˈdætə/ DA-tə, or /ˈdɑːtə/ DAH-tə;[1] treated as singular, plural, or as a mass noun) is any sequence of one (1) or more symbols giving meaning by specific act(s) of interpretation.
+Data is not information. Data requires interpretation to become information. To translate data to information, there must be several known factors considered. The factors involved are determined by the creator of the data and the desired information. The term metadata is used to reference the data about the data. Metadata may be implied, specified or given. Data relating to physical events or processes will also have a temporal component. In almost all cases this temporal component is implied. This is the case when a device such as a temperature logger received data from a temperature sensor. When the temperature is received it is assumed that the data has a temporal references of "now". So the device records the date, time and temperature together. When the data logger communicates temperatures, it must also report the date and time (metadata) for each temperature.
+Digital data is data that is represented using the binary number system of ones (1) and zeros (0). As opposed to analog representation. In modern (post 1960) computer systems, all data is digital. Data within a computer, in most cases, moves as parallel data. Data moving to or from a computer, in most cases, moves as serial data. See Parallel communication and Serial communication. Data sourced from an analog device, such as a temperature sensor, must pass through an "analog to digital converter" or "ADC" (see Analog-to-digital converter) to convert the analog data to digital data.
+Data representing quantities, characters, or symbols on which operations are performed by a computer, stored and recorded on magnetic, optical, or mechanical recording media, and transmitted in the form of digital electrical signals.[2]
+A program is a set of data that consists of a series of coded software instructions to control the operation of a computer or other machine.[3] Physical computer memory elements consist of an address and a byte/word of data storage. Digital data are often stored in relational databases, like tables or SQL databases, and can generally be represented as abstract key/value pairs.
+Data can be organized in many different types of data structures, including arrays, graphs, and objects. Data structures can store data of many different types, including numbers, strings and even other data structures. Data pass in and out of computers via peripheral devices.
+In an alternate usage, binary files (which are not human-readable) are sometimes called "data" as distinguished from human-readable "text".[4] The total amount of digital data in 2007 was estimated to be 281 billion gigabytes (= 281 exabytes).[5][6]
+
+
+
+Contents
+
+
+1 Characteristics
+2 Data keys and values, structures and persistence
+
+2.1 RAM
+2.2 Keys
+2.3 Organised recurring data structures
+2.4 Sorted or ordered data
+2.5 Peripheral storage
+2.6 Indexed data
+2.7 Abstraction and indirection
+2.8 Database data
+2.9 Parallel distributed data processing
+
+
+3 See also
+4 References
+
+
+
+Characteristics[edit]
+At its most essential, a single datum is a value stored at a specific location.
+Fundamentally, computers follow a sequence of instructions they are given in the form of data. A set of instructions to perform a given task (or tasks) is called a "program". In the nominal case, the program, as executed by the computer, will consist of binary machine code. The elements of storage manipulated by the program, but not actually executed by the CPU, are also data. The Marvellous twist is that program instructions; and data that the program manipulates, are both stored in exactly the same way. Therefore, it is possible for computer programs to operate on other computer programs, by manipulating their programmatic data.
+The line between program and data can become blurry. An interpreter, for example, is a program. The input data to an interpreter is itself a program, just not one expressed in native machine language. In many cases, the interpreted program will be a human-readable text file, which is manipulated with a text editor program (more normally associated with plain text data). Metaprogramming similarly involves programs manipulating other programs as data. Programs like compilers, linkers, debuggers, program updaters, virus scanners and such use other programs as their data.
+To store data bytes in a file, they have to be serialized in a "file format". Typically, programs are stored in special file types, different from those used for other data. Executable files contain programs; all other files are also data files. However, executable files may also contain "in-line" data which is "built-in" to the program. In particular, some executable files have a data segment, which nominally contains constants and initial values (both data).
+For example: a user might first instruct the operating system to load a word processor program from one file, and then edit a document stored in another file with the word processor program. In this example, the document would be considered data. If the word processor also features a spell checker, then the dictionary (word list) for the spell checker would also be considered data. The algorithms used by the spell checker to suggest corrections would be either machine code data or text in some interpretable programming language.
+Data keys and values, structures and persistence[edit]
+Keys in data provide the context for values. Regardless of the structure of data, there is always a key component present. Data keys in data and data-structures are essential for giving meaning to data values. Without a key that is directly or indirectly associated with a value, or collection of values in a structure, the values become meaningless and cease to be data. That is to say, there has to be at least a key component linked to a value component in order for it to be considered data. Data can be represented in computers in multiple ways, as per the following examples:
+RAM[edit]
+
+Random Access Memory holds data that the computer processor(s) has direct access to. A computer processor (CPU) may only manipulate data within itself (Processor register) or memory. This is as opposed to data storage, where the processor(s) must move data between the storage device (disk, tape...) and memory. RAM is an array of one (1) or more block(s) of linear contiguous locations that a processor may read or write by providing an address for the read or write operation. The "random" part of RAM means that the processor may operate on any location in memory at any time in any order. (Also see Memory management unit). In RAM the smallest element of data is the "Binary Bit". The capabilities and limitations of accessing RAM are processor specific. In general main memory or RAM is arranged as an array of "sets of electronic on/off switches" or locations beginning at address 0 (hexadecimal 0). Each location can store usually 8, 16, 32 or 64 parallel bits depending on the processor (CPU) architecture. Therefore, any value stored in a byte in RAM has a matching location expressed as an offset from the first memory location in the memory array i.e. 0+n, where n is the offset into the array of memory locations.
+
+Keys[edit]
+
+Data keys need not be a direct hardware address in memory. Indirect, abstract and logical keys codes can be stored in association with values to form a data structure. Data structures have predetermined offsets (or links or paths) from the start of the structure, in which data values are stored. Therefore, the data key consists of the key to the structure plus the offset (or links or paths) into the structure. When such a structure is repeated, storing variations of [the data values and the data keys] within the same repeating structure, the result can be considered to resemble a table, in which each element of the repeating structure is considered to be a column and each repetition of the structure is considered as a row of the table. In such an organization of data, the data key is usually a value in one (or a composite of the values in several of) the columns.
+
+Organised recurring data structures[edit]
+
+The tabular view of repeating data structures is only one of many possibilities. Repeating data structures can be organised hierarchically, such that nodes are linked to each other in a cascade of parent-child relationships. Values and potentially more complex data-structures are linked to the nodes. Thus the nodal hierarchy provides the key for addressing the data structures associated with the nodes. This representation can be thought of as an inverted tree. E.g. Modern computer operating system file-systems are a common example; and XML is another.
+
+Sorted or ordered data[edit]
+
+Data has some inherent features when it is sorted on a key. All the values for subsets of the key appear together. When passing sequentially through groups of the data with the same key, or a subset of the key changes, this is referred to in data processing circles as a break, or a control break. It particularly facilitates aggregation of data values on subsets of a key.
+
+Peripheral storage[edit]
+
+Until the advent of non-volatile computer memories like USB sticks, persistent data storage was traditionally achieved by writing the data to external block devices like magnetic tape and disk drives. These devices typically seek to a location on the magnetic media and then read or write blocks of data of a predetermined size. In this case, the seek location on the media,is the data key and the blocks are the data values. Early data file-systems, or disc operating systems used to reserve contiguous blocks on the disc drive for data files. In those systems, the files could be filled up, running out of data space before all the data had been written to them. Thus much unused data space was reserved unproductively to avoid incurring that situation. This was known as raw disk. Later file-systems introduced partitions. They reserved blocks of disc data space for partitions and used the allocated blocks more economically, by dynamically assigning blocks of a partition to a file as needed. To achieve this, the file-system had to keep track of which blocks were used or unused by data files in a catalog or file allocation table. Though this made better use of the disc data space, it resulted in fragmentation of files across the disc, and a concomitant performance overhead due to latency. Modern file systems reorganize fragmented files dynamically to optimize file access times. Further developments in file systems resulted in virtualization of disc drives i.e. where a logical drive can be defined as partitions from a number of physical drives.
+
+Indexed data[edit]
+
+Retrieving a small subset of data from a much larger set implies searching though the data sequentially. This is uneconomical. Indexes are a way to copy out keys and location addresses from data structures in files, tables and data sets, then organize them using inverted tree structures to reduce the time taken to retrieve a subset of the original data. In order to do this, the key of the subset of data to be retrieved must be known before retrieval begins. The most popular indexes are the B-tree and the dynamic hash key indexing methods. Indexing is yet another costly overhead for filing and retrieving data. There are other ways of organizing indexes, e.g. sorting the keys or correction of quantities (or even the key and the data together), and using a binary search on them.
+
+Abstraction and indirection[edit]
+
+Object orientation uses two basic concepts for understanding data and software: 1) The taxonomic rank-structure of program-code classes, which is an example of a hierarchical data structure; and 2) At run time, the creation of data key references to in-memory data-structures of objects that have been instantiated from a class library. It is only after instantiation that an executing object of a specified class exists. After an object's key reference is nullified, the data referred to by that object ceases to be data because the data key reference is null; and therefore the object also ceases to exist. The memory locations where the object's data was stored are then referred to as garbage and are reclassified as unused memory available for reuse.
+
+Database data[edit]
+
+The advent of databases introduced a further layer of abstraction for persistent data storage. Databases use meta data, and a structured query language protocol between client and server systems, communicating over a network, using a two phase commit logging system to ensure transactional completeness, when persisting data.
+
+Parallel distributed data processing[edit]
+
+Modern scalable / high performance data persistence technologies rely on massively parallel distributed data processing across many commodity computers on a high bandwidth network. An example of one is Apache Hadoop. In such systems, the data is distributed across multiple computers and therefore any particular computer in the system must be represented in the key of the data, either directly, or indirectly. This enables the differentiation between two identical sets of data, each being processed on a different computer at the same time.
+
+See also[edit]
+
+
+Assembly language
+Big data
+Bus (computing)
+Byte
+Computer memory
+CPU
+CPU cache
+Data
+Data dictionary
+Data modeling
+Data network
+Data storage device
+Data stream
+Data type
+Database
+Databus
+Foreign key
+Hash key
+Information processor
+Instruction set
+Memory address/location/key
+Offset (computer science)
+Primary/unique key
+Processor register
+Von Neumann architecture
+Shift register
+State (computer science)
+Tuple
+Value (computer science)
+
+
+References[edit]
+
+^ The pronunciation /ˈdeɪtə/ DAY-tə is widespread throughout most Englishes. The pronunciation/ˈdætə/ DA-tə is chiefly Irish and North American. The pronunciation /ˈdɑːtə/ DAH-tə is chiefly New Zealand and Australian. Each pronunciation may be realized differently depending on the dailect of the speaker.
+^ "data". Oxford Dictionaries. Retrieved 2012-10-11.&#160;
+^ "computer program". The Oxford Pocket Dictionary of Current English. Retrieved 2012-10-11.&#160;
+^ "file(1)". OpenBSD Manual Pages. 2004-12-04. Retrieved 2007-03-19.&#160;
+^ Paul, Ryan (March 12, 2008). "Study: amount of digital info &gt; global storage capacity". Ars Technics. Retrieved 2008-03-12.&#160;
+^ Gantz, John F.; et al. (2008). "The Diverse and Exploding Digital Universe". International Data Corporation via EMC. Retrieved 2008-03-12.&#160;
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Data_(computing)&amp;oldid=688488592"					
+				Categories: Computer data				
+							
+		
+		
+			

@@ -1,0 +1,2724 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			UTF-8
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				UTF-8 is a character encoding capable of encoding all possible characters, or code points, in Unicode.
+The encoding is variable-length and uses 8-bit code units. It was designed for backward compatibility with ASCII, and to avoid the complications of endianness and byte order marks in the alternative UTF-16 and UTF-32 encodings. The name is derived from: Universal Coded Character Set + Transformation Format—8-bit.[1]
+
+
+
+
+Graph indicates that UTF-8 (light blue) exceeded other main encodings of text on the Web, that by 2010 it was nearing 50% prevalent. Encodings were detected by examining the text, not from the encoding tag in the header,[2] and were sorted to the least inclusive set;[3] thus, ASCII text tagged as UTF-8 or ISO-8859-1 is identified as ASCII. By August 2015 the declared usage was up to 85%.[4]
+
+
+UTF-8 is the dominant character encoding for the World Wide Web, accounting for 85.1% of all Web pages in September 2015 (with the most popular East Asian encoding, GB 2312, at 1.0%).[4][2][5] The Internet Mail Consortium (IMC) recommends that all e-mail programs be able to display and create mail using UTF-8,[6] and the W3C recommends UTF-8 as the default encoding in XML and HTML.
+UTF-8 encodes each of the 1,112,064 valid code points in the Unicode code space (1,114,112 code points minus 2,048 surrogate code points) using one to four 8-bit bytes (a group of 8 bits is known as an octet in the Unicode Standard). Code points with lower numerical values (i.e., earlier code positions in the Unicode character set, which tend to occur more frequently) are encoded using fewer bytes. The first 128 characters of Unicode, which correspond one-to-one with ASCII, are encoded using a single octet with the same binary value as ASCII, making valid ASCII text valid UTF-8-encoded Unicode as well. And ASCII bytes do not occur when encoding non-ASCII code points into UTF-8, making UTF-8 safe to use within most programming and document languages that interpret certain ASCII characters in a special way, e.g. as end of string.
+The official IANA code for the UTF-8 character encoding is UTF-8.[7]
+
+
+
+Contents
+
+
+1 History
+2 Description
+
+2.1 Examples
+2.2 Codepage layout
+2.3 Overlong encodings
+2.4 Invalid byte sequences
+2.5 Invalid code points
+
+
+3 Official name and variants
+4 Derivatives
+
+4.1 CESU-8
+4.2 Modified UTF-8
+4.3 WTF-8
+
+
+5 Byte order mark
+6 Advantages and disadvantages
+
+6.1 General
+
+6.1.1 Advantages
+6.1.2 Disadvantages
+
+
+6.2 Compared to single-byte encodings
+
+6.2.1 Advantages
+6.2.2 Disadvantages
+
+
+6.3 Compared to other multi-byte encodings
+
+6.3.1 Advantages
+6.3.2 Disadvantages
+
+
+6.4 Compared to UTF-16
+
+6.4.1 Advantages
+6.4.2 Disadvantages
+
+
+
+
+7 See also
+8 References
+9 External links
+
+
+
+History[edit]
+By early 1992, the search was on for a good byte-stream encoding of multi-byte character sets. The draft ISO 10646 standard contained a non-required annex called UTF-1 that provided a byte-stream encoding of its 32-bit code points. This encoding was not satisfactory on performance grounds, but did introduce the notion that bytes in the range of 0–127 continue representing the ASCII characters in UTF, thereby providing backward compatibility with ASCII.
+In July 1992, the X/Open committee XoJIG was looking for a better encoding. Dave Prosser of Unix System Laboratories submitted a proposal for one that had faster implementation characteristics and introduced the improvement that 7-bit ASCII characters would only represent themselves; all multibyte sequences would include only bytes where the high bit was set. This original proposal, the File System Safe UCS Transformation Format (FSS-UTF), was similar in concept to UTF-8, but lacked the crucial property of self-synchronization.[8][9]
+In August 1992, this proposal was circulated by an IBM X/Open representative to interested parties. Ken Thompson of the Plan 9 operating system group at Bell Labs made a small but crucial modification to the encoding, making it slightly less bit-efficient than the previous proposal but allowing it to be self-synchronizing, meaning that it was no longer necessary to read from the beginning of the string to find code point boundaries. Thompson's design was outlined on September 2, 1992, on a placemat in a New Jersey diner with Rob Pike. In the following days, Pike and Thompson implemented it and updated Plan 9 to use it throughout, and then communicated their success back to X/Open.[8]
+UTF-8 was first officially presented at the USENIX conference in San Diego, from January 25 to 29, 1993.
+Google reported that in 2008 UTF-8 (misleadingly labelled "Unicode"[10]) became the most common encoding for HTML files.[11]
+Description[edit]
+The design of UTF-8 can be seen in this table of the scheme as originally proposed by Dave Prosser and subsequently modified by Ken Thompson (the x characters are replaced by the bits of the code point):
+
+
+Bits of
+code point
+First
+code point
+Last
+code point
+Bytes in
+sequence
+Byte 1
+Byte 2
+Byte 3
+Byte 4
+Byte 5
+Byte 6
+
+
+&#160;&#160;7
+U+0000
+U+007F
+1
+0xxxxxxx
+
+
+11
+U+0080
+U+07FF
+2
+110xxxxx
+10xxxxxx
+
+
+16
+U+0800
+U+FFFF
+3
+1110xxxx
+10xxxxxx
+10xxxxxx
+
+
+21
+U+10000
+U+1FFFFF
+4
+11110xxx
+10xxxxxx
+10xxxxxx
+10xxxxxx
+
+
+26
+U+200000
+U+3FFFFFF
+5
+111110xx
+10xxxxxx
+10xxxxxx
+10xxxxxx
+10xxxxxx
+
+
+31
+U+4000000
+U+7FFFFFFF
+6
+1111110x
+10xxxxxx
+10xxxxxx
+10xxxxxx
+10xxxxxx
+10xxxxxx
+
+
+The original specification covered numbers up to 31 bits (the original limit of the Universal Character Set). In November 2003, UTF-8 was restricted by RFC 3629 to end at U+10FFFF, in order to match the constraints of the UTF-16 character encoding. This removed all 5- and 6-byte sequences, and 983040 4-byte sequences.
+The salient features of this scheme are as follows:
+
+Backward compatibility: One-byte codes are used only for the ASCII values 0 through 127. In this case the UTF-8 code has the same value as the ASCII code. The high-order bit of these codes is always 0. This means that ASCII text is valid UTF-8, and UTF-8 can be used for parsers expecting 8-bit extended ASCII even if they are not designed for UTF-8.
+Clear distinction between multi-byte and single-byte characters: Code points larger than 127 are represented by multi-byte sequences, composed of a leading byte and one or more continuation bytes. The leading byte has two or more high-order 1s followed by a 0, while continuation bytes all have '10' in the high-order position.
+Self synchronization: The high order bits of every byte determine the type of byte; single bytes (0xxxxxxx), leading bytes (11xxxxxx), and continuation bytes (10xxxxxx) do not share values. This makes the scheme self-synchronizing, allowing the start of a character to be found by backing up at most five bytes (three bytes in actual UTF‑8 per RFC 3629 restriction, see above). The first byte of a valid character sequence will be either a single byte or leading byte.
+Clear indication of code sequence length: The number of high-order 1s in the leading byte of a multi-byte sequence indicates the number of bytes in the sequence, so that the length of the sequence can be determined without examining the continuation bytes.
+Code structure: The remaining bits of the encoding (the x bits in the above patterns) are used for the bits of the code point being encoded, padded with high-order 0s if necessary. The high-order bits go in the lead byte, lower-order bits in succeeding continuation bytes. The number of bytes in the encoding is the minimum required to hold all the significant bits of the code point.
+
+The first 128 characters (US-ASCII) need one byte. The next 1,920 characters need two bytes to encode. This covers the remainder of almost all Latin alphabets, and also Greek, Cyrillic, Coptic, Armenian, Hebrew, Arabic, Syriac and Tāna alphabets, as well as Combining Diacritical Marks. Three bytes are needed for characters in the rest of the Basic Multilingual Plane, which contains virtually all characters in common use[12] including most Chinese, Japanese and Korean characters. Four bytes are needed for characters in the other planes of Unicode, which include less common CJK characters, various historic scripts, mathematical symbols, and emoji (pictographic symbols).
+Examples[edit]
+Consider the encoding of the Euro sign, €.
+
+The Unicode code point for "€" is U+20AC.
+According to the scheme table above, this will take three bytes to encode, since it is between U+0800 and U+FFFF.
+Hexadecimal 20AC is binary 0010 0000 1010 1100. The two leading zeros are added because, as the scheme table shows, a three-byte encoding needs exactly sixteen bits from the code point.
+Because the encoding will be three bytes long, its leading byte starts with three 1s, then a 0 (1110...)
+The first 4 bits of the code point are stored in the remaining low order 4 bits of this byte (1110 0010), leaving 12 bits of the code point yet to be encoded (...0000 1010 1100).
+All continuation bytes contain exactly 6 bits from the code point. So the next 6 bits of the code point are stored in the low order 6 bits of the next byte, and 10 is stored in the high order two bits to mark it as a continuation byte (so 1000 0010).
+Finally the last 6 bits of the code point are stored in the low order 6 bits of the final byte, and again 10 is stored in the high order two bits (1010 1100).
+
+The three bytes 1110 0010 1000 0010 1010 1100 can be more concisely written in hexadecimal, as E2 82 AC.
+The following table summarises this conversion, as well as others with different lengths in UTF-8. The colors indicate how bits from the code point are distributed among the UTF-8 bytes. Additional bits added by the UTF-8 encoding process are shown in black.
+
+
+Character
+Binary code point
+Binary UTF-8
+Hexadecimal UTF-8
+
+
+$
+U+0024
+0100100
+00100100
+24
+
+
+¢
+U+00A2
+00010100010
+11000010 10100010
+C2 A2
+
+
+€
+U+20AC
+0010000010101100
+11100010 10000010 10101100
+E2 82 AC
+
+
+𐍈
+U+10348
+000010000001101001000
+11110000 10010000 10001101 10001000
+F0 90 8D 88
+
+
+Codepage layout[edit]
+
+UTF-8
+
+
+_0
+_1
+_2
+_3
+_4
+_5
+_6
+_7
+_8
+_9
+_A
+_B
+_C
+_D
+_E
+_F
+
+
+&#160;
+0_
+&#160;
+NUL
+0000
+0
+SOH
+0001
+1
+STX
+0002
+2
+ETX
+0003
+3
+EOT
+0004
+4
+ENQ
+0005
+5
+ACK
+0006
+6
+BEL
+0007
+7
+BS
+0008
+8
+HT
+0009
+9
+LF
+000A
+10
+VT
+000B
+11
+FF
+000C
+12
+CR
+000D
+13
+SO
+000E
+14
+SI
+000F
+15
+
+
+&#160;
+1_
+&#160;
+DLE
+0010
+16
+DC1
+0011
+17
+DC2
+0012
+18
+DC3
+0013
+19
+DC4
+0014
+20
+NAK
+0015
+21
+SYN
+0016
+22
+ETB
+0017
+23
+CAN
+0018
+24
+EM
+0019
+25
+SUB
+001A
+26
+ESC
+001B
+27
+FS
+001C
+28
+GS
+001D
+29
+RS
+001E
+30
+US
+001F
+31
+
+
+&#160;
+2_
+&#160;
+SP
+0020
+32
+!
+0021
+33
+"
+0022
+34
+#
+0023
+35
+$
+0024
+36
+%
+0025
+37
+&amp;
+0026
+38
+'
+0027
+39
+(
+0028
+40
+)
+0029
+41
+*
+002A
+42
++
+002B
+43
+,
+002C
+44
+-
+002D
+45
+.
+002E
+46
+/
+002F
+47
+
+
+&#160;
+3_
+&#160;
+0
+0030
+48
+1
+0031
+49
+2
+0032
+50
+3
+0033
+51
+4
+0034
+52
+5
+0035
+53
+6
+0036
+54
+7
+0037
+55
+8
+0038
+56
+9
+0039
+57
+:
+003A
+58
+;
+003B
+59
+&lt;
+003C
+60
+=
+003D
+61
+&gt;
+003E
+62
+?
+003F
+63
+
+
+&#160;
+4_
+&#160;
+@
+0040
+64
+A
+0041
+65
+B
+0042
+66
+C
+0043
+67
+D
+0044
+68
+E
+0045
+69
+F
+0046
+70
+G
+0047
+71
+H
+0048
+72
+I
+0049
+73
+J
+004A
+74
+K
+004B
+75
+L
+004C
+76
+M
+004D
+77
+N
+004E
+78
+O
+004F
+79
+
+
+&#160;
+5_
+&#160;
+P
+0050
+80
+Q
+0051
+81
+R
+0052
+82
+S
+0053
+83
+T
+0054
+84
+U
+0055
+85
+V
+0056
+86
+W
+0057
+87
+X
+0058
+88
+Y
+0059
+89
+Z
+005A
+90
+[
+005B
+91
+\
+005C
+92
+]
+005D
+93
+^
+005E
+94
+_
+005F
+95
+
+
+&#160;
+6_
+&#160;
+`
+0060
+96
+a
+0061
+97
+b
+0062
+98
+c
+0063
+99
+d
+0064
+100
+e
+0065
+101
+f
+0066
+102
+g
+0067
+103
+h
+0068
+104
+i
+0069
+105
+j
+006A
+106
+k
+006B
+107
+l
+006C
+108
+m
+006D
+109
+n
+006E
+110
+o
+006F
+111
+
+
+&#160;
+7_
+&#160;
+p
+0070
+112
+q
+0071
+113
+r
+0072
+114
+s
+0073
+115
+t
+0074
+116
+u
+0075
+117
+v
+0076
+118
+w
+0077
+119
+x
+0078
+120
+y
+0079
+121
+z
+007A
+122
+{
+007B
+123
+|
+007C
+124
+}
+007D
+125
+~
+007E
+126
+DEL
+007F
+127
+
+
+&#160;
+8_
+&#160;
+•
++00
+128
+•
++01
+129
+•
++02
+130
+•
++03
+131
+•
++04
+132
+•
++05
+133
+•
++06
+134
+•
++07
+135
+•
++08
+136
+•
++09
+137
+•
++0A
+138
+•
++0B
+139
+•
++0C
+140
+•
++0D
+141
+•
++0E
+142
+•
++0F
+143
+
+
+&#160;
+9_
+&#160;
+•
++10
+144
+•
++11
+145
+•
++12
+146
+•
++13
+147
+•
++14
+148
+•
++15
+149
+•
++16
+150
+•
++17
+151
+•
++18
+152
+•
++19
+153
+•
++1A
+154
+•
++1B
+155
+•
++1C
+156
+•
++1D
+157
+•
++1E
+158
+•
++1F
+159
+
+
+&#160;
+A_
+&#160;
+•
++20
+160
+•
++21
+161
+•
++22
+162
+•
++23
+163
+•
++24
+164
+•
++25
+165
+•
++26
+166
+•
++27
+167
+•
++28
+168
+•
++29
+169
+•
++2A
+170
+•
++2B
+171
+•
++2C
+172
+•
++2D
+173
+•
++2E
+174
+•
++2F
+175
+
+
+&#160;
+B_
+&#160;
+•
++30
+176
+•
++31
+177
+•
++32
+178
+•
++33
+179
+•
++34
+180
+•
++35
+181
+•
++36
+182
+•
++37
+183
+•
++38
+184
+•
++39
+185
+•
++3A
+186
+•
++3B
+187
+•
++3C
+188
+•
++3D
+189
+•
++3E
+190
+•
++3F
+191
+
+
+&#160;
+2-byte
+C_
+&#160;
+2-byte
+inval
+(0000)
+192
+2-byte
+inval
+(0040)
+193
+Latin-1
+0080
+194
+Latin-1
+00C0
+195
+Latin
+Ext-A
+0100
+196
+Latin
+Ext-A
+0140
+197
+Latin
+Ext-B
+0180
+198
+Latin
+Ext-B
+01C0
+199
+Latin
+Ext-B
+0200
+200
+IPA
+0240
+201
+IPA
+0280
+202
+Spaci
+Modif
+02C0
+203
+Combi
+Diacr
+0300
+204
+Combi
+Diacr
+0340
+205
+Greek
+0380
+206
+Greek
+03C0
+207
+
+
+&#160;
+2-byte
+D_
+&#160;
+Cyril
+0400
+208
+Cyril
+0440
+209
+Cyril
+0480
+210
+Cyril
+04C0
+211
+Cyril
+0500
+212
+Armen
+0540
+213
+Hebrew
+0580
+214
+Hebrew
+05C0
+215
+Arabic
+0600
+216
+Arabic
+0640
+217
+Arabic
+0680
+218
+Arabic
+06C0
+219
+Syriac
+0700
+220
+Arabic
+0740
+221
+Thaana
+0780
+222
+N'Ko
+07C0
+223
+
+
+&#160;
+3-byte
+E_
+&#160;
+Indic
+0800*
+224
+Misc.
+1000
+225
+Symbol
+2000
+226
+Kana
+CJK
+3000
+227
+CJK
+4000
+228
+CJK
+5000
+229
+CJK
+6000
+230
+CJK
+7000
+231
+CJK
+8000
+232
+CJK
+9000
+233
+Asian
+A000
+234
+Hangul
+B000
+235
+Hangul
+C000
+236
+Hangul
+Surr
+D000
+237
+Priv Use
+E000
+238
+Forms
+F000
+239
+
+
+&#160;
+4-byte
+F_
+&#160;
+Ancient
+Sym,CJK
+10000*
+240
+unall
+40000
+241
+unall
+80000
+242
+Tags
+Priv
+C0000
+243
+Priv
+Use
+100000
+244
+4-byte
+inval
+140000
+245
+4-byte
+inval
+180000
+246
+4-byte
+inval
+1C0000
+247
+5-byte
+inval
+200000*
+248
+5-byte
+inval
+1000000
+249
+5-byte
+inval
+2000000
+250
+5-byte
+inval
+3000000
+251
+6-byte
+inval
+4000000*
+252
+6-byte
+inval
+40000000
+253
+7-byte
+inval
+80000000
+254
+Infinity
+inval
+1000000000
+255
+
+
+Legend: Yellow cells are control characters, blue cells are punctuation, purple cells are digits and green cells are ASCII letters.
+Orange cells with a large dot are continuation bytes. The hexadecimal number shown after a "+" plus sign is the value of the 6 bits they add.
+White cells are the start bytes for a sequence of multiple bytes, the length shown at the left edge of the row. The text shows the Unicode blocks encoded by sequences starting with this byte, and the hexadecimal code point shown in the cell is the lowest character value encoded using that start byte.
+Pink cells are the start bytes for a sequence of multiple bytes, of which some, but not all, possible continuation sequences are valid. Overlong encodings (E0, F0), surrogates (ED), as well as code points greater than 0x10FFFF (F4), are not valid UTF-8. When a start byte could form both overlong and valid encodings, the lowest non-overlong-encoded code point is shown, marked by an asterisk "*".
+Red cells must never appear in a valid UTF-8 sequence. The first two (C0 and C1) could only be used for an invalid "overlong encoding" of ASCII characters (i.e., trying to encode a 7-bit ASCII value between 0 and 127 using 2 bytes instead of 1; see below). The remaining red cells indicate start bytes of sequences that could only encode numbers larger than the 0x10FFFF limit of Unicode.
+Overlong encodings[edit]
+In principle, it would be possible to inflate the number of bytes in an encoding by padding the code point with leading 0s. To encode the Euro sign € from the above example in four bytes instead of three, it could be padded with leading 0s until it was 21 bits long—000 000010 000010 101100, and encoded as 11110000 10000010 10000010 10101100 (or F0 82 82 AC in hexadecimal). This is called an overlong encoding.
+The standard specifies that the correct encoding of a code point use only the minimum number of bytes required to hold the significant bits of the code point. Longer encodings are called overlong and are not valid UTF-8 representations of the code point. This rule maintains a one-to-one correspondence between code points and their valid encodings, so that there is a unique valid encoding for each code point. This ensures that string comparisons and searches are well-defined.
+Modified UTF-8 uses the 2-byte overlong encoding of U+0000 (the NUL character), 11000000 10000000 (hex C0 80), rather than 00000000 (hex 00). This allows the byte 00 to be used as a string terminator.
+Invalid byte sequences[edit]
+Not all sequences of bytes are valid UTF-8. A UTF-8 decoder should be prepared for:
+
+the red invalid bytes in the above table
+an unexpected continuation byte
+a start byte not followed by enough continuation bytes
+an Overlong Encoding as described above
+A 4-byte sequence (starting with 0xF4) that decodes to a value greater than U+10FFFF
+
+Many earlier decoders would happily try to decode these. Carefully crafted invalid UTF-8 could make them either skip or create ASCII characters such as NUL, slash, or quotes. Invalid UTF-8 has been used to bypass security validations in high profile products including Microsoft's IIS web server[13] and Apache's Tomcat servlet container.[14]
+RFC 3629 states "Implementations of the decoding algorithm MUST protect against decoding invalid sequences."[15] The Unicode Standard requires decoders to "...treat any ill-formed code unit sequence as an error condition. This guarantees that it will neither interpret nor emit an ill-formed code unit sequence."
+Many UTF-8 decoders throw exceptions on encountering errors.[16] This can turn what would otherwise be harmless errors (producing a message such as "no such file") into a denial of service bug. Early versions of Python 3.0 would exit immediately if the command line or environment variables contained invalid UTF-8,[17] making it impossible to handle such errors.
+More recent converters translate the first byte of an invalid sequence to a replacement character and continue parsing with the next byte. These error bytes will always have the high bit set. This avoids denial-of-service bugs, and it is very common in text rendering such as browser display, since mangled text is probably more useful than nothing for helping the user figure out what the string was supposed to contain. Popular replacements include:
+
+The replacement character "�" (U+FFFD)
+The invalid Unicode code points U+DC80–U+DCFF where the low 8 bits are the byte's value.[18] Sometimes it is called UTF-8B[19]
+The Unicode code points U+0080–U+00FF with the same value as the byte, thus interpreting the bytes according to ISO-8859-1[citation needed]
+The Unicode code point for the character represented by the byte in CP1252,[citation needed] which is similar to using ISO-8859-1, except that some characters in the range 0x80–0x9F are mapped into different Unicode code points. For example, 0x80 becomes the Euro sign, U+20AC.
+
+These replacement algorithms are "lossy", as more than one sequence is translated to the same code point. This means that it would not be possible to reliably convert back to the original encoding, therefore losing information. (UTF-8B is lossless if the UTF-8 encoding of these error code points is considered invalid so they convert to 3 errors. However the resulting UTF-16 cannot be modified before converting back, as a sequence of "errors" may convert to a valid UTF-8 sequence! This makes this scheme much less useful than it may first appear, for instance you cannot use it to make a loss-less UTF-8 editor from a loss-less UTF-16 editor).
+The large number of invalid byte sequences provides the advantage of making it easy to have a program accept both UTF-8 and legacy encodings such as ISO-8859-1. Software can check for UTF-8 correctness, and if that fails assume the input to be in the legacy encoding. It is technically true that this may detect an ISO-8859-1 string as UTF-8, but this is very unlikely if it contains any 8-bit bytes as they all have to be in unusual patterns of two or more in a row, such as "Â£".
+Invalid code points[edit]
+According to the UTF-8 definition (RFC 3629) the high and low surrogate halves used by UTF-16 (U+D800 through U+DFFF) are not legal Unicode values, and their UTF-8 encoding should be treated as an invalid byte sequence.
+Whether an actual application should do this is debatable, as it makes it impossible to store invalid UTF-16 (that is, UTF-16 with unpaired surrogate halves) in a UTF-8 string. This is necessary to store unchecked UTF-16 such as Windows filenames as UTF-8. It is also incompatible with CESU encoding (described below).
+Official name and variants[edit]
+The official name is "UTF-8". All letters are upper-case, and the name is hyphenated. This spelling is used in all the Unicode Consortium documents relating to the encoding.
+Alternatively, the name "utf-8" may be used by all standards conforming to the Internet Assigned Numbers Authority (IANA) list (which include CSS, HTML, XML, and HTTP headers),[20] as the declaration is case insensitive.[21]
+Other descriptions that omit the hyphen or replace it with a space, such as "utf8" or "UTF 8", are not accepted as correct by the governing standards.[15] Despite this, most agents such as browsers can understand them, and so standards intended to describe existing practice (such as HTML5) may effectively require their recognition.
+Unofficially, UTF-8-BOM or UTF-8-NOBOM are sometimes used to refer to text files which contain or lack a byte order mark (BOM). In Japan especially, UTF-8 encoding without BOM is sometimes called "UTF-8N".[22][23]
+Derivatives[edit]
+The following implementations show slight differences from the UTF-8 specification. They are incompatible with the UTF-8 specification.
+CESU-8[edit]
+Main article: CESU-8
+Many programs added UTF-8 conversions for UCS-2 data and did not alter this UTF-8 conversion when UCS-2 was replaced with the surrogate-pair using UTF-16. In such programs each half of a UTF-16 surrogate pair is encoded as its own 3-byte UTF-8 encoding, resulting in 6-byte sequences rather than 4 bytes for characters outside the Basic Multilingual Plane. Oracle and MySQL databases use this, as well as Java and Tcl as described below, and probably many Windows programs where the programmers were unaware of the complexities of UTF-16. Although this non-optimal encoding is generally not deliberate, a supposed benefit is that it preserves UTF-16 binary sorting order when CESU-8 is binary sorted.
+Modified UTF-8[edit]
+In Modified UTF-8,[24] the null character (U+0000) is encoded as 0xC0,0x80. Modified UTF-8 strings never contain any actual null bytes but can contain all Unicode code points including U+0000,[25] which allows such strings (with a null byte appended) to be processed by traditional null-terminated string functions.
+All known Modified UTF-8 implementations also treat the surrogate pairs as in CESU-8.
+In normal usage, the Java programming language supports standard UTF-8 when reading and writing strings through InputStreamReader and OutputStreamWriter. However it uses Modified UTF-8 for object serialization,[26] for the Java Native Interface,[27] and for embedding constant strings in class files.[28] The dex format defined by Dalvik also uses the same modified UTF-8 to represent string values.[29] Tcl also uses the same modified UTF-8[30] as Java for internal representation of Unicode data, but uses strict CESU-8 for external data.
+WTF-8[edit]
+WTF-8 (Wobbly Transformation Format − 8-bit) is an extension of UTF-8 where the encodings of the surrogate halves (U+D800 through U+DFFF) are allowed even when not paired. This is necessary to store possibly-invalid UTF-16, such as Windows filenames. The term seems to have come from the Rust programming language.[31] Many systems that deal with UTF-8 work this way without considering it a different encoding, as it is simpler.
+Byte order mark[edit]
+
+
+
+
+
+This section possibly contains original research. Please improve it by verifying the claims made and adding inline citations. Statements consisting only of original research should be removed. (August 2015)
+
+
+Many Windows programs (including Windows Notepad) add the bytes 0xEF, 0xBB, 0xBF at the start of any document saved as UTF-8. This is the UTF-8 encoding of the Unicode byte order mark (BOM), and is commonly referred to as a UTF-8 BOM, even though it is not relevant to byte order. A BOM can also appear if another encoding with a BOM is translated to UTF-8 without stripping it. Software that is not aware of multibyte encodings will display the BOM as three strange characters (e.g., "ï»¿" in software interpreting the document as ISO 8859-1 or Windows-1252) at the start of the document.
+The Unicode Standard neither requires nor recommends the use of the BOM for UTF-8, but does allow the character to be at the start of a file.[32] The presence of the UTF-8 BOM may cause problems with existing software that could otherwise handle UTF-8, for example:
+
+Programming language parsers not explicitly designed for UTF-8 can often handle UTF-8 in string constants and comments, but cannot parse the BOM at the start of the file.
+Programs that identify file types by leading characters may fail to identify the file if a BOM is present even if the user of the file could skip the BOM. An example is the Unix shebang syntax. Another example is Internet Explorer which will render pages in standards mode only when it starts with a document type declaration.
+Programs that insert information at the start of a file will break use of the BOM to identify UTF-8 (one example is offline browsers that add the originating URL to the start of the file).
+
+Many programmers think that it is impossible to reliably detect UTF-8 without testing for a leading BOM.[citation needed] This is not true, the fact that a file is UTF-8 can be determined with surprisingly high probability by searching for valid multi-byte characters. If the bytes are random, the chances of a byte with the high bit set starting a valid UTF-8 character is only 6.64%. The chances of finding 7 of these without finding an invalid sequence is actually lower than the chance of the first three bytes randomly being the UTF-8 BOM.
+Advantages and disadvantages[edit]
+
+
+
+
+
+This section needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (October 2009)
+
+
+General[edit]
+Advantages[edit]
+
+UTF-8 is the only encoding for XML entities that does not require a BOM or an indication of the encoding.[33]
+UTF-8 and UTF-16 are the standard encodings for Unicode text in HTML documents, with UTF-8 as the preferred and most used encoding.
+UTF-8 strings can be fairly reliably recognized as such by a simple heuristic algorithm.[34] Valid UTF-8 cannot contain a lone byte with the high bit set, and the chance that any pair of bytes both with the high bit set is valid UTF-8 is 11.7%[35] and the odds are even lower for longer sequences. This makes it extremely unlikely that text in any other encoding (such as ISO/IEC 8859-1) is valid UTF-8. This is an advantage that most other encodings do not have, and allows UTF-8 to be mixed with a legacy encoding without having to add data to identify which encoding is in use, avoiding errors (mojibake) typically encountered when trying to change a system to a new default encoding.
+Sorting a set of UTF-8 encoded strings as strings of unsigned bytes yields the same order as sorting the corresponding Unicode strings lexicographically by codepoint.
+
+Disadvantages[edit]
+
+A UTF-8 parser that is not compliant with current versions of the standard might accept a number of different pseudo-UTF-8 representations and convert them to the same Unicode output. This provides a way for information to leak past validation routines designed to process data in its eight-bit representation.[15]
+
+Compared to single-byte encodings[edit]
+Advantages[edit]
+
+UTF-8 can encode any Unicode character, avoiding the need to figure out and set a "code page" or otherwise indicate what character set is in use, and allowing output in multiple scripts at the same time. For many scripts there have been more than one single-byte encoding in usage, so even knowing the script was insufficient information to display it correctly.
+The bytes 0xFE and 0xFF do not appear, so a valid UTF-8 stream never matches the UTF-16 byte order mark and thus cannot be confused with it. The absence of 0xFF (0377) also eliminates the need to escape this byte in Telnet (and FTP control connection).
+
+Disadvantages[edit]
+
+UTF-8 encoded text is larger than specialized single-byte encodings except for plain ASCII characters. In the case of scripts which used 8-bit character sets with non-Latin characters encoded in the upper half (such as most Cyrillic and Greek alphabet code pages), characters in UTF-8 will be double the size. For some scripts, such as Thai and Hindi's Devanagari, characters will triple in size. There are even examples where a single byte turns into a composite character in Unicode and is thus 6 times larger in UTF-8. This has caused objections in India and other countries.
+It is possible in UTF-8 (or any other multi-byte encoding) to split or truncate a string in the middle of a character. This can result in an invalid string if the two halves are not concatenated later.
+If the code points are all the same size, measurements of a fixed number of them is easy. Due to ASCII-era documentation where "character" is used as a synonym for "byte" this is often considered important. However, by measuring string positions using bytes instead of "characters" most algorithms can be easily and efficiently adapted for UTF-8. Searching for a string within a long string can for example be done byte by byte.
+Some software, such as text editors, will refuse to correctly display or interpret UTF-8 unless the text starts with a Byte Order Mark, and will insert such a mark. This has the effect of making it impossible to use UTF-8 with any older software that can handle ASCII-like encodings but cannot handle the byte order mark.
+
+Compared to other multi-byte encodings[edit]
+Advantages[edit]
+
+UTF-8 uses the codes 0–127 only for the ASCII characters. This means that UTF-8 is an ASCII extension and can be processed by software that supports 7-bit characters and assigns no meaning to non-ASCII bytes. By contrast, in Shift-JIS a byte that can be a 7-bit ASCII character can also be used as part of a multi-byte character. The byte 0x5C, for example, might be part of a multibyte character, but in the context of a string some programming languages or application software would instead interpret it as a backslash ('\') and assume that it marks the beginning of an escape sequence, incorrectly influencing the interpretation of subsequent bytes.[36]
+UTF-8 can encode any Unicode character. Files in different scripts can be displayed correctly without having to choose the correct code page or font. For instance Chinese and Arabic can be supported (in the same text) without special codes inserted or manual settings to switch the encoding.
+UTF-8 is self-synchronizing: character boundaries are easily identified by scanning for well-defined bit patterns in either direction. If bytes are lost due to error or corruption, one can always locate the beginning of the next valid character and resume processing. Many multi-byte encodings are much harder to resynchronize.
+Any byte oriented string searching algorithm can be used with UTF-8 data, since the sequence of bytes for a character cannot occur anywhere else. Some older variable-length encodings (such as Shift JIS) did not have this property and thus made string-matching algorithms rather complicated. In Shift JIS the end byte of a character and the first byte of the next character could look like another legal character, something that can't happen in UTF-8.
+Efficient to encode using simple bit operations. UTF-8 does not require slower mathematical operations such as multiplication or division (unlike the obsolete UTF-1 encoding).
+
+Disadvantages[edit]
+
+UTF-8 will take more space than a multi-byte encoding designed for a specific script. East Asian legacy encodings generally used two bytes per character yet take three bytes per character in UTF-8.
+
+Compared to UTF-16[edit]
+Advantages[edit]
+
+Byte encodings and UTF-8 are represented by byte arrays in programs, and often nothing needs to be done to a function when converting from a byte encoding to UTF-8. UTF-16 is represented by 16-bit word arrays, and converting to UTF-16 while maintaining compatibility with existing ASCII-based programs (such as was done with Windows) requires every API and data structure that takes a string to be duplicated, one version accepting byte strings and another version accepting UTF-16.
+Text encoded in UTF-8 will be smaller than the same text encoded in UTF-16 if there are more code points below U+0080 than in the range U+0800..U+FFFF. This is true of all modern European languages. As numbers (digits 0–9), spaces and line terminators, and HTML markup characters are all code points below U+0080, this is often true even for Asian scripts.
+Most communication and storage was designed for a stream of bytes. A UTF-16 string must use a pair of bytes for each code unit:
+
+The order of those two bytes becomes an issue and must be specified in the UTF-16 protocol, such as with a byte order mark.
+If an odd number of bytes is missing from UTF-16, the whole rest of the string will be meaningless text. Any bytes missing from UTF-8 will still allow the text to be recovered accurately starting with the next character after the missing bytes.
+
+
+
+Disadvantages[edit]
+
+Characters U+0800 through U+FFFF use three bytes in UTF-8, but only two in UTF-16. As a result, text in (for example) Chinese, Japanese or Hindi will take more space in UTF-8 if there are more of these characters than there are ASCII characters.
+
+
+
+
+This happens for pure text[37] but rarely[citation needed] for HTML documents or documents in XML based formats such as .docx or .odt. For example, both the Japanese UTF-8 and the Hindi Unicode articles on Wikipedia take more space in UTF-16 than in UTF-8.[38]
+
+
+
+
+A minor advantage for UTF-16 is that a (incorrect) UTF-8 decoder may accept all possible 4-byte sequences, or even the 5- and 6-byte sequences defined above, and thus produce invalid code points past the U+10FFFF limit defined by Unicode (though this limit was chosen specifically so to match exactly the set that UTF-16 could encode). It is much more difficult to accidentally write a UTF-16 decoder with a similar error. However, these problems do not arise in properly implemented parsers which disregard invalid sequences.
+
+See also[edit]
+
+
+Alt code
+Character encodings in HTML
+Comparison of e-mail clients § Features
+Comparison of Unicode encodings
+GB 18030
+Iconv—a standardized API used to convert between different character encodings
+ISO/IEC 8859
+Specials (Unicode block)
+Unicode and e-mail
+Unicode and HTML
+Universal Character Set
+UTF-8 in URIs
+UTF-9 and UTF-18
+UTF-16/UCS-2
+
+
+References[edit]
+
+
+^ "Chapter 2. General Structure". The Unicode Standard (6.0 ed.). Mountain View, California, USA: The Unicode Consortium. ISBN&#160;978-1-936213-01-6.&#160;
+^ a b Davis, Mark (28 January 2010). "Unicode nearing 50% of the web". Official Google Blog. Google. Retrieved 5 December 2010.&#160;
+^ van der Poel, Erik (8 May 2008). "utf-8 Growth On The Web (response)". W3C Blog. W3C. Retrieved 6 August 2015.&#160;
+^ a b "Usage Statistics of Character Encodings for Websites, (updated daily)". W3Techs. Retrieved 18 September 2015.&#160;
+^ "UTF-8 Usage Statistics". BuiltWith. Retrieved 28 March 2011.&#160;
+^ "Using International Characters in Internet Mail". Internet Mail Consortium. 1 August 1998. Retrieved 8 November 2007.&#160;
+^ "CHARACTER SETS". Internet Assigned Numbers Authority. November 4, 2010. Retrieved 5 December 2010.&#160;
+^ a b Pike, Rob (30 Apr 2003). "UTF-8 history". Retrieved September 7, 2012.&#160;
+^ Pike, Rob (September 6, 2012). "UTF-8 turned 20 years old yesterday". Retrieved September 7, 2012.&#160;
+^ Goodger, David (6 May 2008). "Unicode misinformation". Retrieved 2013-03-01.&#160;
+^ Davis, Mark (5 May 2008). "Moving to Unicode 5.1". Retrieved 2013-03-01.&#160;
+^ Allen, Julie D.; Anderson, Deborah; Becker, Joe; Cook, Richard, eds. (2012). "The Unicode Standard, Version 6.1". Mountain View, California: Unicode Consortium. The Basic Multilingual Plane (BMP, or Plane 0) contains the common-use characters for all the modern scripts of the world as well as many historical and rare characters. By far the majority of all Unicode characters for almost all textual data can be found in the BMP.&#160;
+^ Marin, Marvin (October 17, 2000). "Web Server Folder Traversal MS00-078".&#160;
+^ "National Vulnerability Database - Summary for CVE-2008-2938".&#160;
+^ a b c Yergeau, F. (2003). "RFC 3629 - UTF-8, a transformation format of ISO 10646". Internet Engineering Task Force. Retrieved 3 February 2015.&#160;
+^ decode() method of Java UTF8 object
+^ "Non-decodable Bytes in System Character Interfaces". python.org. 2009-04-22. Retrieved 2014-08-13.&#160;
+^ Kuhn, Markus (2000-07-23). "Substituting malformed UTF-8 sequences in a decoder". Retrieved 2014-09-25.&#160;
+^ Sittler, B. (2006-04-02). "Binary vs. UTF-8, and why it need not matter". Retrieved 2014-09-25.&#160;
+^ Dürst, Martin. "Setting the HTTP charset parameter". W3C. Retrieved February 8, 2013.&#160;
+^ "Character Sets". Internet Assigned Numbers Authority. January 23, 2013. Retrieved February 8, 2013.&#160;
+^ "BOM - suikawiki" (in Japanese). Retrieved 2013-04-26.&#160;
+^ Davis, Mark. "Forms of Unicode". IBM. Archived from the original on 6 May 2005. Retrieved 18 September 2013.&#160;
+^ "Java SE documentation for Interface java.io.DataInput, subsection on Modified UTF-8". Oracle Corporation. 2015. Retrieved Oct 16, 2015.&#160;
+^ "The Java Virtual Machine Specification, section 4.4.7: "The CONSTANT_Utf8_info Structure"". Oracle Corporation. 2015. Retrieved Oct 16, 2015. [...] Java virtual machine UTF-8 strings never have embedded nulls.&#160;
+^ "Java Object Serialization Specification, chapter 6: Object Serialization Stream Protocol, section 2: Stream Elements". Oracle Corporation. 2010. Retrieved Oct 16, 2015. [...] encoded in modified UTF-8.&#160;
+^ "Java Native Interface Specification, chapter 3: JNI Types and Data Structures, section: Modified UTF-8 Strings". Oracle Corporation. 2015. Retrieved Oct 16, 2015. The JNI uses modified UTF-8 strings to represent various string types.&#160;
+^ "The Java Virtual Machine Specification, section 4.4.7: "The CONSTANT_Utf8_info Structure"". Oracle Corporation. 2015. Retrieved Oct 16, 2015. [...] differences between this format and the "standard" UTF-8 format.&#160;
+^ "dex — Dalvik Executable Format". Retrieved April 9, 2013. [T]he dex format encodes its string data in a de facto standard modified UTF-8 form, hereafter referred to as MUTF-8.&#160;
+^ "Tcler's Wiki: UTF-8 bit by bit (Revision 6)". April 25, 2009. Retrieved May 22, 2009. In orthodox UTF-8, a NUL byte(\x00) is represented by a NUL byte. [...] But [...] we [...] want NUL bytes inside [...] strings [...]&#160;
+^ Sapin, Simon (2015-05-27). "The WTF-8 encoding". Retrieved 2015-05-27.&#160;
+^ "The Unicode Standard - Chapter 2" (PDF). p.&#160;30.&#160;
+^ "Extensible Markup Language (XML) 1.0 (Fifth Edition)". W3C. November 26, 2008. Retrieved February 8, 2013.&#160;
+^ Dürst, Martin. "Multilingual Forms". W3C. Retrieved February 8, 2013.&#160;
+^ 1920 valid 2-byte UTF-8 characters over 128 × 128 possible 2-byte sequences
+^ "#418058 - iconv: half-smart on ascii compatible code conversion (shift-jis) - Debian Bug report logs". Bugs.debian.org. 2007-04-06. Retrieved 2014-06-13.&#160;
+^ Although the difference may not be great: the 2010-11-22 version of hi:यूनिकोड (Unicode in Hindi), when the pure text was pasted to Notepad, generated 19 KB when saved as UTF-16 and 22 KB when saved as UTF-8.
+^ The 2010-10-27 version of ja:UTF-8 generated 169 KB when converted with Notepad to UTF-16, and only 101 KB when converted back to UTF-8. The 2010-11-22 version of hi:यूनिकोड (Unicode in Hindi) required 119 KB in UTF-16 and 76 KB in UTF-8.
+
+
+External links[edit]
+
+
+
+Look up UTF-8 in Wiktionary, the free dictionary.
+
+
+There are several current definitions of UTF-8 in various standards documents:
+
+RFC 3629 / STD 63 (2003), which establishes UTF-8 as a standard Internet protocol element
+The Unicode Standard, Version 6.0, §3.9 D92, §3.10 D95 (2011)
+ISO/IEC 10646:2012 §9.1
+
+They supersede the definitions given in the following obsolete works:
+
+ISO/IEC 10646-1:1993 Amendment 2 / Annex R (1996)
+The Unicode Standard, Version 5.0, §3.9 D92, §3.10 D95 (2007)
+The Unicode Standard, Version 4.0, §3.9–§3.10 (2003)
+The Unicode Standard, Version 2.0, Appendix A (1996)
+RFC 2044 (1996)
+RFC 2279 (1998)
+The Unicode Standard, Version 3.0, §2.3 (2000) plus Corrigendum #1&#160;: UTF-8 Shortest Form (2000)
+Unicode Standard Annex #27: Unicode 3.1 (2001)
+
+They are all the same in their general mechanics, with the main differences being on issues such as allowed range of code point values and safe handling of invalid input.
+
+Original UTF-8 paper (or pdf) for Plan 9 from Bell Labs
+RFC 5198 defines UTF-8 NFC for Network Interchange
+UTF-8 test pages by Andreas Prilop, Jost Gippert and the World Wide Web Consortium
+Unix/Linux: UTF-8/Unicode FAQ, Linux Unicode HOWTO, UTF-8 and Gentoo
+The Unicode/UTF-8-character table displays UTF-8 in a variety of formats (with Unicode and HTML encoding information)
+Characters, Symbols and the Unicode Miracle – Computerphile on YouTube
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Unicode
+
+
+
+
+
+
+Unicode
+
+
+
+Unicode Consortium
+ISO/IEC 10646 (Universal Character Set)
+Versions
+
+
+
+
+
+
+
+
+Code points
+
+
+
+Blocks
+Universal Character Set
+Character charts
+Character property
+Planes
+Private Use Areas
+
+
+
+
+
+
+
+
+Characters
+
+
+
+
+
+Special purpose
+
+
+
+
+BOM
+Combining Grapheme Joiner
+Left-to-right mark / Right-to-left mark
+Soft hyphen
+Word joiner
+Zero-width joiner
+Zero-width non-joiner
+Zero-width space
+
+
+
+
+
+
+
+
+
+Lists
+
+
+
+
+Characters
+CJK Unified Ideographs
+Combining character
+Duplicate characters
+Numerals
+Scripts
+Spaces
+Symbols
+Halfwidth and fullwidth
+
+
+
+
+
+
+
+
+
+
+
+Processing
+
+
+
+
+
+Algorithms
+
+
+
+
+Bi-directional text
+Collation
+
+ISO 14651
+
+
+Equivalence
+
+
+
+
+
+
+
+
+
+Comparison
+
+
+
+
+BOCU-1
+CESU-8
+Punycode
+SCSU
+UTF-1
+UTF-7
+UTF-8
+UTF-9/UTF-18
+UTF-16/UCS-2
+UTF-32/UCS-4
+UTF-EBCDIC
+
+
+
+
+
+
+
+
+
+
+
+On pairs of
+code points
+
+
+
+Combining character
+Compatibility characters
+Duplicate characters
+Equivalence
+Homoglyph
+Precomposed character
+
+list
+
+
+Z-variant
+
+
+
+
+
+
+
+
+Usage
+
+
+
+Domain names (IDN)
+Email
+Fonts
+HTML
+
+entity references
+numeric references
+
+
+Input
+
+
+
+
+
+
+
+
+Related standards
+
+
+
+Common Locale Data Repository (CLDR)
+GB 18030
+Han unification
+ISO/IEC 8859
+ISO 15924
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Anomalies
+ConScript Unicode Registry
+Ideographic Rapporteur Group
+International Components for Unicode
+People involved with Unicode
+
+
+
+
+
+
+
+
+
+
+
+
+&#160;
+Scripts and symbols in Unicode
+
+
+
+
+
+
+
+Common and
+inherited scripts
+
+
+
+
+Combining marks
+Diacritics
+Punctuation
+Space
+
+
+
+
+
+
+
+
+
+Modern scripts
+
+
+
+
+Arabic
+
+diacritics
+
+
+Armenian
+Balinese
+Bamum
+Batak
+Bengali
+Bopomofo
+Braille
+Buhid
+Burmese
+Canadian Aboriginal
+Chakma
+Cham
+Cherokee
+CJK Unified Ideographs (Han)
+Cyrillic
+Deseret
+Devanagari
+Ge'ez
+Georgian
+Greek
+Gujarati
+Gurmukhī
+Hangul
+Hanja
+Hanunó'o
+Hebrew
+
+diacritics
+
+
+Hiragana
+Javanese
+Kanji
+Kannada
+Katakana
+Kayah Li
+Khmer
+Khudawadi
+Lao
+Latin
+Lepcha
+Limbu
+Lisu (Fraser)
+Lontara
+Malayalam
+Mandaic
+Meetei Mayek
+Mende Kikakui
+Miao (Pollard)
+Mongolian
+Mro
+N'Ko
+New Tai Lue
+Ol Chiki
+Oriya
+Osmanya
+Pahawh Hmong
+Pau Cin Hau
+Rejang
+Samaritan
+Śāradā
+Saurashtra
+Shavian
+Sinhala
+Sorang Sompeng
+Sundanese
+Sylheti Nagari
+Syriac
+Tagalog (Baybayin)
+Tagbanwa
+Tai Le
+Tai Tham
+Tai Viet
+Takri
+Tamil
+Telugu
+Thaana
+Thai
+Tibetan
+Tifinagh
+Tirhuta
+Vai
+Varang Kshiti
+Yi
+
+
+
+
+
+
+
+
+
+Ancient and
+historic scripts
+
+
+
+
+Ahom
+Anatolian hieroglyphs
+Ancient North Arabian
+Avestan
+Bassa Vah
+Brāhmī
+Carian
+Caucasian Albanian
+Coptic
+Cuneiform
+Cypriot
+Egyptian hieroglyphs
+Elbasan
+Glagolitic
+Gothic
+Grantha
+Hatran
+Imperial Aramaic
+Inscriptional Pahlavi
+Inscriptional Parthian
+Kaithi
+Kharosthi
+Khojki
+Linear A
+Linear B
+Lycian
+Lydian
+Mahajani
+Manichaean
+Meroitic
+Modi
+Multani
+Nabataean
+Ogham
+Old Hungarian
+Old Italic
+Old Permic
+Old Persian cuneiform
+Old Turkic
+Palmyrene
+'Phags-pa
+Phoenician
+Psalter Pahlavi
+Runic
+Siddham
+South Arabian
+Ugaritic
+
+
+
+
+
+
+
+
+
+Notational scripts
+
+
+
+
+Duployan
+SignWriting
+
+
+
+
+
+
+
+
+
+Symbols
+
+
+
+
+Cultural, political, and religious symbols
+Currency
+Mathematical operators and symbols
+Phonetic symbols (including IPA)
+Emoji
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Character encodings
+
+
+
+
+
+
+
+ Character sets
+
+
+
+
+
+
+Early telecommunications
+
+
+
+ASCII
+ISO/IEC 646
+ISO/IEC 6937
+T.61
+BCD
+Baudot code
+Morse code (Telegraph code)
+Special telegraphy codes: Non-Latin, Chinese, Cyrillic
+
+
+
+
+
+
+
+
+ISO/IEC 8859
+
+
+
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+-8
+-9
+-10
+-11
+-12
+-13
+-14
+-15
+-16
+
+
+
+
+
+
+
+
+Bibliographic use
+
+
+
+ANSEL
+ISO 5426 / 5426-2 / 5427 / 5428 / 6438 / 6861 / 6862 / 10585 / 10586 / 10754 / 11822
+MARC-8
+
+
+
+
+
+
+
+
+National standards
+
+
+
+ArmSCII
+CNS 11643
+GOST 10859
+GB 18030
+HKSCS
+ISCII
+JIS X 0201
+JIS X 0208
+JIS X 0212
+JIS X 0213
+KPS 9566
+KS X 1001
+PASCII
+SI 960
+TIS-620
+TSCII
+VISCII
+YUSCII
+
+
+
+
+
+
+
+
+EUC
+
+
+
+CN
+JP
+KR
+TW
+
+
+
+
+
+
+
+
+ISO/IEC 2022
+
+
+
+CN
+JP
+KR
+CCCII
+
+
+
+
+
+
+
+
+MacOS codepages ("scripts")
+
+
+
+Arabic
+CentralEurRoman
+ChineseSimp / EUC-CN
+ChineseTrad / Big5
+Croatian
+Cyrillic
+Devanagari
+Dingbats
+Farsi
+Greek
+Gujarati
+Gurmukhi
+Hebrew
+Icelandic
+Japanese / ShiftJIS
+Korean / EUC-KR
+Roman
+Romanian
+Symbol
+Thai / TIS-620
+Turkish
+Ukrainian
+
+
+
+
+
+
+
+
+DOS codepages
+
+
+
+111
+112
+113
+151
+161
+162
+163
+164
+165
+301
+437
+667
+668
+708
+709
+710
+711
+720
+737
+770
+771
+772
+773
+774
+775
+776
+777
+778
+790
+806
+808
+813
+819
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868
+869
+872
+874
+876
+877
+878
+881
+882
+883
+884
+885
+891
+895
+896
+897
+898
+899
+900
+901
+902
+903
+904
+906
+907
+909
+910
+911
+912
+913
+914
+915
+916
+919
+920
+921
+922
+923
+925
+926
+927
+928
+932
+934
+936
+938
+941
+942
+943
+944
+946
+947
+948
+949
+950
+951
+952
+953
+954
+955
+956
+957
+958
+959
+960
+961
+962
+963
+964
+965
+966
+991
+1004
+1006
+1008
+1009
+1010
+1011
+1012
+1013
+1014
+1015
+1016
+1017
+1018
+1019
+1020
+1021
+1023
+1034
+1036
+1040
+1041
+1042
+1043
+1044
+1046
+1086
+1088
+1089
+1090
+1092
+1098
+1111
+1114
+1115
+1116
+1117
+1118
+1119
+1124
+1125
+1126
+1127
+1129
+1131
+1133
+1139
+1161
+1162
+1163
+1167
+1168
+1169
+1174
+1350
+1351
+1361
+1362
+1363
+1373
+Kamenický
+Mazovia
+MIK
+Iran System
+
+
+
+
+
+
+
+
+Windows codepages
+
+
+
+874 / TIS-620
+932 / Shift JIS
+936 / GBK
+949 / EUC-KR
+950 / Big5
+1250
+1251
+1252
+1253
+1254
+1255
+1256
+1257
+1258
+54936 / GB18030
+
+
+
+
+
+
+
+
+EBCDIC codepages
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+29
+30
+31
+32
+33
+34
+35
+36
+37/1140
+38
+39
+40
+251
+252
+254
+256
+257
+258
+259
+260
+264
+273/1141
+274
+275
+276
+277/1142
+278/1143
+280/1144
+281
+282
+283
+284/1145
+285/1146
+286
+287
+288
+289
+290
+293
+297/1147
+298
+300
+320
+321
+322
+330
+351
+361
+363
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+410
+420/16804
+421
+423
+424/12712
+425
+435
+500/1148
+803
+829
+833
+834
+835
+836
+837
+838/1160
+839
+870/1153
+871/1149
+875/9067
+880
+881
+882
+883
+884
+885
+886
+887
+888
+889
+890
+892
+893
+905
+918
+930/1390
+931
+933/1364
+935/1388
+937/1371
+939/1399
+1001
+1002
+1003
+1005
+1007
+1024
+1025/1154
+1026/1155
+1027
+1028
+1030
+1031
+1032
+1033
+1037
+1047/924
+1068
+1069
+1070
+1071
+1073
+1074
+1075
+1076
+1077
+1078
+1079
+1080
+1081
+1082
+1083
+1084
+1085
+1087
+1091
+1097
+1110
+1112/1156
+1113
+1122/1157
+1123/1158
+1130/1164
+1132
+1136
+1137
+1150
+1151
+1152
+1159
+1165
+1278
+1303
+1364
+JEF
+KEIS
+
+
+
+
+
+
+
+
+Platform specific
+
+
+
+ATASCII
+CDC display code
+DEC-MCS
+DEC Radix-50
+ELWRO-Junior
+Fieldata
+GSM 03.38
+HP roman8
+PETSCII
+TI calculator character sets
+WISCII
+ZX80 character set
+ZX Spectrum character set
+
+
+
+
+
+
+
+
+Unicode / ISO/IEC 10646
+
+
+
+UTF-8
+UTF-16/UCS-2
+UTF-32/UCS-4
+UTF-7
+UTF-1
+UTF-EBCDIC
+GB 18030
+SCSU
+BOCU-1
+
+
+
+
+
+
+
+
+Miscellaneous codepages
+
+
+
+APL
+Cork
+HZ
+KOI8
+TRON
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+control character&#160;(C0 C1)
+CCSID
+Character encodings in HTML
+charset detection
+Han unification
+ISO 6429/IEC 6429/ANSI X3.64
+mojibake
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Rob Pike
+
+
+
+
+
+
+Operating systems
+
+
+
+Plan 9 from Bell Labs
+Inferno
+
+
+
+
+
+
+
+
+Programming languages
+
+
+
+Newsqueak
+Limbo
+Go
+Sawzall
+
+
+
+
+
+
+
+
+Software
+
+
+
+acme
+Blit
+sam
+rio
+8½
+
+
+
+
+
+
+
+
+Publications
+
+
+
+The Practice of Programming
+The Unix Programming Environment
+
+
+
+
+
+
+
+
+Other
+
+
+
+Renée French
+Mark V. Shaney
+UTF-8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Ken Thompson
+
+
+
+
+
+
+Operating systems
+
+
+
+Unix
+Plan 9 from Bell Labs
+
+
+
+
+
+
+
+
+Programming languages
+
+
+
+B
+Bon
+Go
+
+
+
+
+
+
+
+
+Software
+
+
+
+Belle
+ed
+grep
+sam
+Space Travel
+Thompson shell
+
+
+
+
+
+
+
+
+Other
+
+
+
+UTF-8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=UTF-8&amp;oldid=690644320"					
+				Categories: EncodingsCharacter encodingUnicode Transformation FormatsHidden categories: CS1 Japanese-language sources (ja)All articles with unsourced statementsArticles with unsourced statements from August 2014Articles that may contain original research from August 2015All articles that may contain original researchArticles with unsourced statements from August 2015Articles needing additional references from October 2009All articles needing additional referencesArticles with unsourced statements from October 2015				
+							
+		
+		
+			

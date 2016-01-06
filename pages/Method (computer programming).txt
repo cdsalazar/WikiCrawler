@@ -1,0 +1,240 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Method (computer programming)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				A method (or message) in object-oriented programming (OOP) is a procedure associated with an object class. An object is made up of behavior and data. Data is represented as properties of the object and behavior as methods. Methods are also the interface an object presents to the outside world. For example a window object would have methods such as open and close. One of the most important capabilities that a method provides is method overriding. The same name (e.g., area) can be used for multiple different kinds of classes. This allows the sending objects to invoke behaviors and to delegate the implementation of those behaviors to the receiving object. For example an object can send an area message to another object and the appropriate formula will be invoked whether the receiving object is a rectangle,circle, triangle, etc.
+Methods also provide the interface that other classes use to access and modify the data properties of an object. This is known as encapsulation. Encapsulation and overriding are the two primary distinguishing features between methods and procedure calls.[1]
+
+
+
+Contents
+
+
+1 Overriding and overloading
+2 Accessor, mutator and manager methods
+
+2.1 Constructors
+2.2 Destructors
+
+2.2.1 Finalizers
+
+
+
+
+3 Abstract methods
+
+3.1 Example
+
+
+4 Class methods
+5 Special methods
+
+5.1 Static methods
+5.2 Copy-assignment operators
+5.3 Operator methods
+
+
+6 Methods in C++
+
+6.1 Virtual methods
+
+
+7 Notes
+8 References
+9 See also
+
+
+
+Overriding and overloading[edit]
+Method overriding and overloading are two of the most significant ways that a method differs from a conventional procedure or function call. Overriding refers to a subclass redefining the implementation of a method of its superclass. For example findArea may be a method defined on a shape class. The various subclasses: rectangle, circle, triangle, etc. would each define the appropriate formula to calculate their area. The idea is to look at objects as "black boxes" so that changes to the internals of the object can be made with minimal impact on the other objects that use it. This is known as encapsulation and is meant to make code easier to maintain and re-use.
+Method overloading on the other hand refers to differentiating the code used to handle a message based on the parameters of the method. If one views the receiving object as the first parameter in any method then overriding is just a special case of overloading where the selection is based only on the first argument.[2] The following simple Java example illustrates the difference:[3]
+
+
+public class class1
+{
+	int f(int x)
+	{
+		return x+3;
+	}
+}
+
+public class class2 extends class1
+{
+	@Override
+	int f(int x) // overriding
+	{
+		return x*x;
+	}
+	int f(int x, int y) // overloading
+	{
+		return x*y;
+	}
+}
+
+Accessor, mutator and manager methods[edit]
+Accessor methods are used to read data values of an object. Mutator methods are used to modify the data of an object. Manager methods are used to initialize and destroy objects of a class, e.g. constructors and destructors.
+These methods provide an abstraction layer that facilitates encapsulation and modularity. For example, if a bank-account class provides a getBalance() accessor method to retrieve the current balance (rather than directly accessing the balance data fields), then later revisions of the same code can implement a more complex mechanism for balance retrieval (e.g., a database fetch), without the dependent code needing to be changed. The concepts of encapsulation and modularity are not unique to object-oriented programming. Indeed, in many ways the object-oriented approach is simply the logical extension of previous paradigms such as abstract data types and structured programming.[4]
+Constructors[edit]
+A constructor is a method that is called at the beginning of an object's lifetime to create and initialize the object, a process called construction (or instantiation). Initialization may include acquisition of resources. Constructors may have parameters but usually do not return values in most languages. See the following example in Java:
+
+
+public class Main
+{
+	String name;
+	int roll;
+	Main(String _name, int _roll) { //constructor method
+		(this).name = _name;
+		(this).roll = _roll;
+	}
+	
+}
+
+Destructors[edit]
+A destructor is a method that is called automatically at the end of an object's lifetime, a process called destruction. Destruction in most languages does not allow destructor method arguments nor return values. Destruction can be implemented so as to perform cleanup chores and other tasks at object destruction.
+Finalizers[edit]
+In garbage-collected languages, such as Java, C#, and Python, destructors are known as finalizers. They have a similar purpose and function to destructors, but because of the differences between languages that utilize garbage-collection and languages with manual memory management, the sequence in which they are called is different.
+Abstract methods[edit]
+An abstract method is one with only a signature and no implementation body. It is often used to specify that a subclass must provide an implementation of the method. Abstract methods are used to specify interfaces in some computer languages.[5]
+Example[edit]
+The following Java code shows an abstract class that needs to be extended:
+
+
+abstract class Main {
+    abstract int rectangle(int h, int w); // abstract method signature
+}
+
+The following subclass extends the main class:
+
+
+public class Main2 extends Main {
+	
+    @Override
+    int rectangle(int h, int w)
+    {
+        return h * w;
+    }
+	
+}
+
+Class methods[edit]
+Class methods are methods that are called on a class rather than an instance. They are typically used as part of an object meta-model. I.e, for each class defined an instance of the class object in the meta-model is created. Meta-model protocols allow classes to be created and deleted. In this sense they provide the same functionality as constructors and destructors described above. But in some languages such as the Common Lisp Object System (CLOS) the meta-model allows the developer to dynamically alter the object model at run time: e.g., to create new classes, redefine the class hierarchy, modify properties, etc.
+Special methods[edit]
+Special methods are very language-specific and a language may support none, some, or all of the special methods defined here. A language's compiler may automatically generate default special methods or a programmer may be allowed to optionally define special methods. Most special methods cannot be directly called, but rather the compiler generates code to call them at appropriate times.
+Static methods[edit]
+Static methods are meant to be relevant to all the instances of a class rather than to any specific instance. They are similar to static variables in that sense. An example would be a static method to sum the values of all the variables of an instance for a class. For example, if there were a Product class it might have a static method to compute the average price of all products.
+In Java, a commonly-used static method is:
+
+Math.max(double a, double b)
+
+This static method has no owning object and does not run on an instance. It receives all information from its arguments.[6]
+A static method can be invoked even if no instances of the class exist yet. Static methods are called "static" because they are resolved at compile time based on the class they are called on and not dynamically as in the case with instance methods which are resolved polymorphically based on the runtime type of the object. Therefore, static methods cannot be overridden.[7]
+Copy-assignment operators[edit]
+Copy-assignment operators define actions to be performed by the compiler when a class object is assigned to a class object of the same type.
+Operator methods[edit]
+Operator methods define or redefine operator symbols and define the operations to be performed with the symbol and the associated method parameters. C++ Example:
+
+
+class data
+{
+public:
+	string name;
+	int roll;
+	bool operator &lt; (const data&amp; p) const
+	{
+		return roll &lt; p.roll;
+	}
+	bool operator == (const data&amp; p) const
+	{
+		return (name == p.name) and (roll == p.roll);
+	}
+};
+
+Methods in C++[edit]
+Some procedural languages were extended with object-oriented capabilities in order to leverage the large skill sets and legacy code for those languages but still provide the benefits of object-oriented development. Perhaps the most well known example was the object-oriented extension of C known as C++. Due to the design requirements to add the object-oriented paradigm on to an existing procedural language message passing in C++ had some unique capabilities and terminologies. For example, in C++ a method was also known as a member function. C++ also had the concept of virtual methods:
+Virtual methods[edit]
+Virtual methods are the means by which a C++ class can achieve polymorphic behavior. Non-virtual methods, or regular methods, are those which do not participate in polymorphism.
+C++ Example:
+
+
+#include &lt;iostream&gt;
+#include &lt;memory&gt;
+
+class Super
+{
+public:
+	virtual void iAm() { std::cout &lt;&lt; "I'm the super class!\n"; }
+};
+
+class Sub : public Super
+{
+public:
+	void iAm() { std::cout &lt;&lt; "I'm the subclass!\n"; }
+};
+
+int main()
+{
+	std::unique_ptr&lt;Super&gt; inst1(new Super());
+	std::unique_ptr&lt;Super&gt; inst2(new Sub());
+
+	inst1-&gt;iAm(); // calls Super::iAm()
+	inst2-&gt;iAm(); // calls Sub::iAm()
+}
+
+Notes[edit]
+
+
+^ "What is an Object?". oracle.com. Oracle Corporation. Retrieved 13 December 2013.&#160;
+^ http://www.codeproject.com/Articles/16407/METHOD-Overload-Vs-Overriding
+^ John Suzuki (2000-02-18). "What is an overloaded method?". http://www.jguru.com/: j Guru. Retrieved 2011-08-12. Overloaded methods are multiple methods in the same class that share the same name but have different parameter lists. Overloaded methods cannot have the same parameter lists with different return types.&#160;
+^ Meyer, Bertrand (1988). Object-Oriented Software Construction. Cambridge: Prentice Hall International Series in Computer Science. pp.&#160;52–54. ISBN&#160;0-13-629049-3.&#160;
+^ "Abstract Methods and Classes". oracle.com. Oracle Java Documentation. Retrieved 11 December 2014.&#160;
+^ Martin, Robert C. (2009). Clean Code: A Handbook of Agile Software Craftsmanship. Prentice Hall. p.&#160;296. ISBN&#160;978-0-13-235088-4.&#160;
+^ http://www.javabeat.net/qna/49-can-we-override-static-methods-what-is-metho/
+
+
+References[edit]
+
+
+JANA, DEBASISH (1 January 2005). C++ AND OBJECT-ORIENTED PROGRAMMING PARADIGM. PHI Learning Pvt. Ltd. ISBN&#160;978-81-203-2871-6.&#160;
+Sengupta, Probal (1 August 2004). Object-Oriented Programming: Fundamentals And Applications. PHI Learning Pvt. Ltd. ISBN&#160;978-81-203-1258-6.&#160;
+Svenk, Goran (2003). Object-oriented Programming: Using C++ for Engineering and Technology. Cengage Learning. ISBN&#160;0-7668-3894-3.&#160;
+Balagurusamy (2013). Object Oriented Programming with C++. Tata McGraw-Hill Education. ISBN&#160;978-1-259-02993-6.&#160;
+Kirch-Prinz, Ulla; Prinz, Peter (2002). A Complete Guide to Programming in C++. Jones &amp; Bartlett Learning. ISBN&#160;978-0-7637-1817-6.&#160;
+Conger, David (2006). Creating Games in C++: A Step-by-step Guide. New Riders. ISBN&#160;978-0-7357-1434-2.&#160;
+Skinner, M. T. (1992). The Advanced C++ Book. Silicon Press. ISBN&#160;978-0-929306-10-0.&#160;
+Love (1 September 2005). Linux Kernel Development. Pearson Education. ISBN&#160;978-81-7758-910-8.&#160;
+DEHURI, SATCHIDANANDA; JAGADEV, ALOK KUMAR; RATH, AMIYA KUMAR (8 May 2007). OBJECT-ORIENTED PROGRAMMING USING C++. PHI Learning Pvt. Ltd. ISBN&#160;978-81-203-3085-6.&#160;
+
+
+See also[edit]
+
+Subroutine
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Method_(computer_programming)&amp;oldid=688941004"					
+				Categories: Method (computer programming)Hidden categories: Articles with example C++ code				
+							
+		
+		
+			

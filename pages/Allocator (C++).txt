@@ -1,0 +1,252 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+
+			Allocator (C++)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In C++ computer programming, allocators are an important component of the C++ Standard Library. The standard library provides several data structures, such as list and set, commonly referred to as containers. A common trait among these containers is their ability to change size during the execution of the program. To achieve this, some form of dynamic memory allocation is usually required. Allocators handle all the requests for allocation and deallocation of memory for a given container. The C++ Standard Library provides general-purpose allocators that are used by default, however, custom allocators may also be supplied by the programmer.
+Allocators were invented by Alexander Stepanov as part of the Standard Template Library (STL). They were originally intended as a means to make the library more flexible and independent of the underlying memory model, allowing programmers to utilize custom pointer and reference types with the library. However, in the process of adopting STL into the C++ standard, the C++ standardization committee realized that a complete abstraction of the memory model would incur unacceptable performance penalties. To remedy this, the requirements of allocators were made more restrictive. As a result, the level of customization provided by allocators is more limited than was originally envisioned by Stepanov.
+Nevertheless, there are many scenarios where customized allocators are desirable. Some of the most common reasons for writing custom allocators include improving performance of allocations by using memory pools, and encapsulating access to different types of memory, like shared memory or garbage-collected memory. In particular, programs with many frequent allocations of small amounts of memory may benefit greatly from specialized allocators, both in terms of running time and memory footprint.
+
+
+
+Contents
+
+
+1 Background
+2 Requirements
+3 Custom allocators
+
+3.1 Usage
+3.2 Enhancements to allocators in C++11
+
+
+4 Example
+5 References
+6 External links
+
+
+
+Background[edit]
+Further information: Standard Template Library
+Alexander Stepanov and Meng Lee presented the Standard Template Library to the C++ standards committee in March 1994.[1] The library received preliminary approval, although a few issues were raised. In particular, Stepanov was requested to make the library containers independent of the underlying memory model,[2] which led to the creation of allocators. Consequently, all of the STL container interfaces had to be rewritten to accept allocators.
+In adapting STL to be included in the C++ Standard Library, Stepanov worked closely with several members of the standards committee, including Andrew Koenig and Bjarne Stroustrup, who observed that custom allocators could potentially be used to implement persistent storage STL containers, which Stepanov at the time considered an "important and interesting insight".[2]
+
+
+From the point of view of portability, all the machine-specific things which relate to the notion of address, pointer, and so on, are encapsulated within a tiny, well-understood mechanism. [2]
+—Alex Stepanov, designer of the Standard Template Library
+
+
+
+The original allocator proposal incorporated some language features that had not yet been accepted by the committee, namely the ability to use template arguments that are themselves templates. Since these features could not be compiled by any existing compiler, there was, according to Stepanov, "an enormous demand on Bjarne [Stroustrup]'s and Andy [Koenig]'s time trying to verify that we were using these non-implemented features correctly."[2] Where the library had previously used pointer and reference types directly, it would now only refer to the types defined by the allocator. Stepanov later described allocators as follows: "A nice feature of STL is that the only place that mentions the machine-related types (...) is encapsulated within roughly 16 lines of code."[2]
+While Stepanov had originally intended allocators to completely encapsulate the memory model, the standards committee realized that this approach would lead to unacceptable efficiency degradations.[3][4] To remedy this, additional wording was added to the allocator requirements. In particular, container implementations may assume that the allocator's type definitions for pointers and related integral types are equivalent to those provided by the default allocator, and that all instances of a given allocator type always compare equal,[5][6] effectively contradicting the original design goals for allocators and limiting the usefulness of allocators that carry state.[4]
+Stepanov later commented that, while allocators "are not such a bad [idea] in theory (...) [u]nfortunately they cannot work in practice". He observed that to make allocators really useful, a change to the core language with regards to references was necessary.[7]
+The 2011 revision of the C++ Standard removed the weasel words requiring that allocators of a given type always compare equal and use normal pointers. These changes make stateful allocators much more useful and allow allocators to manage out-of-process shared memory.[8][9] The current purpose of allocators is to give the programmer control over memory allocation within containers, rather than to adapt the address model of the underlying hardware. In fact, the revised standard eliminated the ability of allocators to represent extensions to the C++ address model, formally (and deliberately) eliminating their original purpose.[10]
+Requirements[edit]
+Any class that fulfills the allocator requirements can be used as an allocator. In particular, a class A capable of allocating memory for an object of type T must provide the types A::pointer, A::const_pointer, A::reference, A::const_reference, and A::value_type for generically declaring objects and references (or pointers) to objects of type T. It should also provide type A::size_type, an unsigned type which can represent the largest size for an object in the allocation model defined by A, and similarly, a signed integral A::difference_type that can represent the difference between any two pointers in the allocation model.[11]
+Although a conforming standard library implementation is allowed to assume that the allocator's A::pointer and A::const_pointer are simply typedefs for T* and T const*, library implementors are encouraged to support more general allocators.[12]
+An allocator, A, for objects of type T must have a member function with the signature A::pointer A::allocate(size_type n, A&lt;void&gt;::const_pointer hint = 0). This function returns a pointer to the first element of a newly allocated array large enough to contain n objects of type T; only the memory is allocated, and the objects are not constructed. Moreover, an optional pointer argument (that points to an object already allocated by A) can be used as a hint to the implementation about where the new memory should be allocated in order to improve locality.[13] However, the implementation is free to ignore the argument.
+The corresponding void A::deallocate(A::pointer p, A::size_type n) member function accepts any pointer that was returned from a previous invocation of the A::allocate member function and the number of elements to deallocate (but not destruct).
+The A::max_size() member function returns the largest number of objects of type T that could be expected to be successfully allocated by an invocation of A::allocate; the value returned is typically A::size_type(-1) / sizeof(T).[14] Also, the A::address member function returns an A::pointer denoting the address of an object, given an A::reference.
+Object construction and destruction is performed separately from allocation and deallocation.[14] The allocator is required to have two member functions, A::construct and A::destroy, which handles object construction and destruction, respectively. The semantics of the functions should be equivalent to the following:[11]
+
+
+template &lt;typename T&gt;
+void A::construct(A::pointer p, A::const_reference t) { new ((void*) p) T(t); }
+
+template &lt;typename T&gt;
+void A::destroy(A::pointer p){ ((T*)p)-&gt;~T(); }
+
+The above code uses the placement new syntax, and calls the destructor directly.
+Allocators should be copy-constructible. An allocator for objects of type T can be constructed from an allocator for objects of type U. If an allocator, A, allocates a region of memory, R, then R can only be deallocated by an allocator that compares equal to A.[11]
+Allocators are required to supply a template class member template &lt;typename U&gt; struct A::rebind { typedef A&lt;U&gt; other; };, which enables the possibility of obtaining a related allocator, parameterized in terms of a different type. For example, given an allocator type IntAllocator for objects of type int, a related allocator type for objects of type long could be obtained using IntAllocator::rebind&lt;long&gt;::other.[14]
+Custom allocators[edit]
+One of the main reasons for writing a custom allocator is performance. Utilizing a specialized custom allocator may substantially improve the performance or memory usage, or both, of the program.[4][15] The default allocator uses operator new to allocate memory.[16] This is often implemented as a thin layer around the C heap allocation functions,[17] which are usually optimized for infrequent allocation of large memory blocks. This approach may work well with containers that mostly allocate large chunks of memory, like vector and deque.[15] However, for containers that require frequent allocations of small objects, such as map and list, using the default allocator is generally slow.[4][17] Other common problems with a malloc-based allocator include poor locality of reference,[4] and excessive memory fragmentation.[4][17]
+A popular approach to improve performance is to create a memory pool-based allocator.[15] Instead of allocating memory every time an item is inserted or removed from a container, a large block of memory (the memory pool) is allocated beforehand, possibly at the startup of the program. The custom allocator will serve individual allocation requests by simply returning a pointer to memory from the pool. Actual deallocation of memory can be deferred until the lifetime of the memory pool ends. An example of memory pool-based allocators can be found in the Boost C++ Libraries.[15]
+Another viable use of custom allocators is for debugging memory-related errors.[18] This could be achieved by writing an allocator that allocates extra memory in which it places debugging information.[19] Such an allocator could be used to ensure that memory is allocated and deallocated by the same type of allocator, and also provide limited protection against overruns.[19]
+
+
+In short, this paragraph (...) is the Standard's "I have a dream" speech for allocators. Until that dream becomes common reality, programmers concerned about portability will limit themselves to custom allocators with no state
+—Scott Meyers, Effective STL
+
+
+
+The subject of custom allocators has been treated by many C++ experts and authors, including Scott Meyers in Effective STL and Andrei Alexandrescu in Modern C++ Design. Meyers emphasises that C++98 requires all instances of an allocator to be equivalent, and notes that this in effect forces portable allocators to not have state. Although the C++98 Standard did encourage library implementors to support stateful allocators,[12] Meyers calls the relevant paragraph "a lovely sentiment" that "offers you next to nothing", characterizing the restriction as "draconian".[4]
+In The C++ Programming Language, Bjarne Stroustrup, on the other hand, argues that the "apparently [d]raconian restriction against per-object information in allocators is not particularly serious",[3] pointing out that most allocators do not need state, and have better performance without it. He mentions three use cases for custom allocators, namely, memory pool allocators, shared memory allocators, and garbage collected memory allocators. He presents an allocator implementation that uses an internal memory pool for fast allocation and deallocation of small chunks of memory, but notes that such an optimization may already be performed by the allocator provided by the implementation.[3]
+Usage[edit]
+When instantiating one of the standard containers, the allocator is specified through a template argument, which defaults to std::allocator&lt;T&gt;:[20]
+
+
+namespace std {
+  template &lt;class T, class Allocator = allocator&lt;T&gt; &gt; class vector;
+// ...
+
+Like all C++ class templates, instantiations of standard library containers with different allocator arguments are distinct types. A function expecting an std::vector&lt;int&gt; argument will therefore only accept a vector instantiated with the default allocator.
+Enhancements to allocators in C++11[edit]
+The C++11 standard has enhanced the allocator interface to allow "scoped" allocators, so that containers with "nested" memory allocations, such as vector of strings or a map of lists of sets of user-defined types, can ensure that all memory is sourced from the container's allocator. [21]
+Example[edit]
+
+
+//__gnu_cxx::new_allocator&lt; typename &gt; Class Template Reference
+//https://gcc.gnu.org/onlinedocs/gcc-4.9.0/libstdc++/api/a00057.html
+/**
+ processor	: 0
+ vendor_id	: AuthenticAMD
+ cpu family	: 16
+ model		: 6
+ model name	: AMD Athlon(tm) II X2 270 Processor
+ stepping	: 3
+ microcode	: 0x10000c8
+ cpu MHz		: 2000.000
+ cache size	: 1024 KB
+ ...
+ processor	: 1
+ vendor_id	: AuthenticAMD
+ cpu family	: 16
+ model		: 6
+ model name	: AMD Athlon(tm) II X2 270 Processor
+ stepping	: 3
+ microcode	: 0x10000c8
+ cpu MHz		: 800.000
+ cache size	: 1024 KB
+ ...
+ Linux debian 3.14-2-686-pae #1 SMP Debian 3.14.15-2 (2014-08-09) i686 GNU/Linux
+ ...
+ gcc (Debian 4.9.1-12) 4.9.1
+ Copyright (C) 2014 Free Software Foundation, Inc.
+ This is free software; see the source for copying conditions.  There is NO
+ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+...
+java@debian:~/java/eclipse$ ldd /usr/lib/i386-linux-gnu/libstdc++.so.6.0.20
+	linux-gate.so.1 (0xb7733000)
+	libm.so.6 =&gt; /lib/i386-linux-gnu/i686/cmov/libm.so.6 (0xb75da000)
+	libc.so.6 =&gt; /lib/i386-linux-gnu/i686/cmov/libc.so.6 (0xb742f000)
+	/lib/ld-linux.so.2 (0xb7734000)
+	libgcc_s.so.1 =&gt; /lib/i386-linux-gnu/libgcc_s.so.1 (0xb7411000)
+
+ */
+#include &lt;iostream&gt;
+using namespace std;
+using namespace __gnu_cxx;
+
+class RequiredAllocation
+{
+public:
+	RequiredAllocation ();
+	~RequiredAllocation ();
+	std::basic_string&lt;char&gt; s = "hello world!\n";
+};
+
+RequiredAllocation::RequiredAllocation ()
+{
+	cout &lt;&lt; "RequiredAllocation::RequiredAllocation()" &lt;&lt; endl;
+}
+RequiredAllocation::~RequiredAllocation ()
+{
+	cout &lt;&lt; "RequiredAllocation::~RequiredAllocation()" &lt;&lt; endl;
+}
+
+
+
+
+
+void alloc(__gnu_cxx ::new_allocator&lt;RequiredAllocation&gt;* all, unsigned int size, void* pt, RequiredAllocation* t){
+	try
+		{
+			all-&gt;allocate (size, pt);
+			cout &lt;&lt; all-&gt;max_size () &lt;&lt; endl;
+			for (auto&amp; e : t-&gt;s)
+				{
+					cout &lt;&lt; e;
+				}
+		}
+	catch (std::bad_alloc&amp; e)
+		{
+			cout &lt;&lt; e.what () &lt;&lt; endl;
+		}
+}
+
+int
+main ()
+{
+
+	__gnu_cxx ::new_allocator&lt;RequiredAllocation&gt; *all =
+			new __gnu_cxx ::new_allocator&lt;RequiredAllocation&gt; ();
+
+	RequiredAllocation t;
+	void* pt = &amp;t;
+
+	/**
+	 * What happens when new can find no store to allocate? By default, the allocator throws a stan-
+	 * dard-library bad_alloc exception (for an alternative, see §11.2.4.1)
+	 * @C Bjarne Stroustrup  The C++ Programming language
+	 */
+	unsigned int size = 1073741824;
+	alloc(all, size, &amp;pt, &amp;t);
+
+	size = 1;
+	alloc(all, size, &amp;pt, &amp;t);
+
+	return 0;
+}
+
+References[edit]
+
+
+^ Stepanov, Alexander; Meng Lee (7 March 1994). "The Standard Template Library. Presentation to the C++ standards committee" (PDF). Hewlett Packard Libraries. Retrieved 12 May 2009.&#160;
+^ a b c d e Stevens, Al (1995). "Al Stevens Interviews Alex Stepanov". Dr Dobb's Journal. Archived from the original on 1 May 2009. Retrieved 12 May 2009.&#160;
+^ a b c Stroustrup, Bjarne (1997). The C++ Programming Language, 3rd edition. Addison-Wesley.&#160;
+^ a b c d e f g Meyers, Scott (2001). Effective STL: 50 Specific Ways to Improve Your Use of the Standard Template Library. Addison-Wesley.&#160;
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §20.1.5 Allocator requirements [lib.allocator.requirements] para. 4
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §20.4.1 The default allocator [lib.default.allocator]
+^ Lo Russo, Graziano (1997). "An Interview with A. Stepanov". www.stlport.org. Retrieved 13 May 2009.&#160;
+^ Halpern, Pablo (4 February 2008). "Allocator-specific Swap and Move Behavior" (PDF). ISO. Retrieved 21 August 2012.&#160;
+^ Halpern, Pablo (22 October 2009). "Allocators post Removal of C++ Concepts (Rev 1)" (PDF). ISO. Retrieved 21 August 2012.&#160;
+^ Becker, Pete. "LWG Issue 1318: N2982 removes previous allocator capabilities (closed in March, 2011)". ISO. Retrieved 21 August 2012.&#160;
+^ a b c ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §20.1.5 Allocator requirements [lib.allocator.requirements] para. 2
+^ a b ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §20.1.5 Allocator requirements [lib.allocator.requirements] para. 5
+^ Langer, Angelika; Klaus Kreft (1998). "Allocator Types". C++ Report. Retrieved 13 May 2009.&#160;
+^ a b c Austern, Matthew (1 December 2000). "The Standard Librarian: What Are Allocators Good For?". Dr. Dobb's Journal. Archived from the original on 28 April 2009. Retrieved 12 May 2009.&#160;
+^ a b c d Aue, Anthony (1 September 2005). "Improving Performance with Custom Pool Allocators for STL". Dr Dobb's Journal. Retrieved 13 May 2009.&#160;
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §20.4.1.1 allocator members [lib.allocator.members] para. 3
+^ a b c Alexandrescu, Andrei (2001). Modern C++ Design. Addison-Wesley. p.&#160;352. ISBN&#160;0-201-70431-5.&#160;
+^ Vlasceanu, Christian (1 April 2001). "Debugging Memory Errors with Custom Allocators". Dr Dobb's Journal. Retrieved 14 May 2009.&#160;
+^ a b Austern, Matthew (1 December 2001). "The Standard Librarian: A Debugging Allocator". Dr Dobb's Journal. Retrieved 14 May 2009.&#160;
+^ ISO/IEC (2003). ISO/IEC 14882:2003(E): Programming Languages - C++ §23.2 Sequences [lib.sequences] para. 1
+^ Halpern, Pablo (29 February 2008). "The Scoped Allocator Model (Rev 2)" (PDF). ISO. Retrieved 21 August 2012.&#160;
+
+
+
+External links[edit]
+
+CodeGuru: Allocators (STL).
+An introductory article "C++ Standard Allocator, An Introduction and Implementation".
+A custom allocator implementation based on malloc
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Allocator_(C%2B%2B)&amp;oldid=678167550"					
+				Categories: C++ Standard LibraryGeneric programmingHidden categories: Good articlesUse dmy dates from January 2012Articles with example C++ code				
+							
+		
+		
+			

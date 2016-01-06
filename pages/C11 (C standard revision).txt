@@ -1,0 +1,373 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			C11 (C standard revision)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				C11 (formerly C1X) is an informal name for ISO/IEC 9899:2011,[1] the current standard for the C programming language. It replaces the previous C standard, informally known as C99. This new version mainly standardizes features that have already been supported by common contemporary compilers, and includes a detailed memory model to better support multiple threads of execution. Due to delayed availability of conforming C99 implementations, C11 makes certain features optional, to make it easier to comply with the core language standard.[2][3]
+The final draft, N1570,[4] was published in April 2011. The new standard passed its final draft review on October 10, 2011 and was officially ratified by ISO and published as ISO/IEC 9899:2011 on December 8, 2011, with no comments requiring resolution by participating national bodies.
+A standard macro __STDC_VERSION__ is defined with value 201112L to indicate that C11 support is available.[5] Some features of C11 are supported by the GCC starting with version 4.6,[6] Clang starting with version 3.1,[7] and IBM XL C starting with version 12.1.[8]
+
+
+
+Contents
+
+
+1 Changes from C99
+2 Optional features
+3 Criticism
+4 See also
+5 References
+6 External links
+
+
+
+Changes from C99[edit]
+The standard includes several changes to the C99 language and library specifications, such as:[9]
+
+Alignment specification (_Alignas specifier, _Alignof operator, aligned_alloc function, &lt;stdalign.h&gt; header file)
+The _Noreturn function specifier
+Type-generic expressions using the _Generic keyword. For example, the following macro cbrt(x) translates to cbrtl(x), cbrt(x) or cbrtf(x) depending on the type of x:
+
+
+
+
+#define cbrt(x) _Generic((x), long double: cbrtl, \
+                              default: cbrt, \
+                              float: cbrtf)(x)
+
+
+
+Multi-threading support (_Thread_local storage-class specifier, &lt;threads.h&gt; header including thread creation/management functions, mutex, condition variable and thread-specific storage functionality, as well as the _Atomic type qualifier and &lt;stdatomic.h&gt; for uninterruptible object access).
+Improved Unicode support based on the C Unicode Technical Report ISO/IEC TR 19769:2004 (char16_t and char32_t types for storing UTF-16/UTF-32 encoded data, including conversion functions in &lt;uchar.h&gt; and the corresponding u and U string literal prefixes, as well as the u8 prefix for UTF-8 encoded literals).[10]
+Removal of the gets function, deprecated in the previous C language standard revision, ISO/IEC 9899:1999/Cor.3:2007(E), in favor of a new safe alternative, gets_s.
+Bounds-checking interfaces (Annex K).[11]
+Analyzability features (Annex L).
+More macros for querying the characteristics of floating point types, concerning subnormal floating point numbers and the number of decimal digits the type is able to store.
+Anonymous structures and unions, useful when unions and structures are nested, e.g. in struct T { int tag; union { float x; int n; }; };.
+Static assertions, which are evaluated during translation at a later phase than #if and #error, when types are understood by the translator.
+An exclusive create-and-open mode ("…x" suffix) for fopen. This behaves like O_CREAT|O_EXCL in POSIX, which is commonly used for lock files.
+The quick_exit function as a third way to terminate a program, intended to do at least minimal deinitialization if termination with exit fails.[12]
+Macros for the construction of complex values (partly because real + imaginary*I might not yield the expected value if imaginary is infinite or NaN).[13]
+
+Optional features[edit]
+The new revision allows implementations to not support certain parts of the standard — including some that had been mandatory to support in the 1999 revision.[14] Programs can use predefined macros to determine whether an implementation supports a certain feature or not.
+
+Optional features in C11
+
+Feature
+Feature test macro
+Availability in C99[15]
+
+
+Analyzability (Annex L)
+__STDC_ANALYZABLE__
+Not available
+
+
+Bounds-checking interfaces (Annex K)
+__STDC_LIB_EXT1__
+Not available
+
+
+Multithreading (&lt;threads.h&gt;)
+__STDC_NO_THREADS__
+Not available
+
+
+Atomic primitives and types (&lt;stdatomic.h&gt; and the _Atomic type qualifier)[16]
+__STDC_NO_ATOMICS__
+Not available
+
+
+IEC 60559 floating-point arithmetic (Annex F)
+__STDC_IEC_559__
+Optional
+
+
+IEC 60559 compatible complex arithmetic (Annex G)
+__STDC_IEC_559_COMPLEX__
+Optional
+
+
+Complex types (&lt;complex.h&gt;)
+__STDC_NO_COMPLEX__
+Mandatory for hosted implementations
+
+
+Variable length arrays[17]
+__STDC_NO_VLA__
+Mandatory
+
+
+Criticism[edit]
+The optional bounds-checking interfaces (Annex K) remain controversial and have not been widely implemented, and their deprecation or removal from the next standard revision has been proposed.[18] (The open-source Open Watcom C/C++ contains a "Safer C" library that is considered a nearly conforming implementation.[19])
+See also[edit]
+
+
+
+
+Computer programming portal
+
+
+
+
+C99, the previous 1999 standard for the C programming language
+C++11, a version of the C++ programming language standard
+
+References[edit]
+
+
+^ ISO/IEC 9899:2011 - Information technology - Programming languages - C
+^ WG14 N1250 The C1X Charter
+^ WG14 N1460 Subsetting the C Standard
+^ WG14 N1570 Committee Draft — April 12, 2011
+^ "Defect report #411". ISO/IEC JTC1/SC22/WG14 - C. February 2012. Retrieved 2012-05-04.&#160;
+^ GCC 4.6 Release Series — Changes, New Features, and Fixes - GNU Project - Free Software Foundation (FSF)
+^ Clang 3.1 Release Notes
+^ Support for ISO C11 added to IBM XL C/C++ compilers
+^ WG14 N1516 Committee Draft — October 4, 2010
+^ WG14 N1286 — "On Support for TR-19769 and New Character Types", Nick Stoughton, Larry Dwyer
+^ Berin Babcock-McConnell. "API02-C. Functions that read or write to or from an array should take an argument to specify the source or target size".&#160;
+^ WG14 N1327 Abandoning a Process
+^ WG14 N1464 Creation of complex value
+^ WG14 N1548 Committee Draft — December 2, 2010 6.10.8.3 Conditional feature macros
+^ ISO 9899:1999 6.10.8 Predefined macro names
+^ WG14 N1558 Mar 14-18 meeting minutes (draft)
+^ ISO 9899:2011 Programming Languages - C 6.7.6.2&#160;4
+^ WG14 N1969 — "Updated Field Experience With Annex K — Bounds Checking Interfaces", Carlos O'Donell, Martin Sebor
+^ Open Watcom Safer C Library
+
+
+External links[edit]
+
+The C1X Charter
+N1570, the final draft of C1X, dated 12 April 2011
+ISO C Working Group's official website
+Safe C Library of Bounded APIs
+Plum, Thomas (April 6, 2012). "C Finally Gets A New Standard". Dr. Dobb's Journal.&#160;
+Safe C API—Concise solution of buffer overflow, The OWASP Foundation, OWASP AppSec, Beijing 2011
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+C programming language
+
+
+
+
+
+
+
+
+
+ANSI C
+
+C89 and C90
+
+
+C99
+C11
+Embedded C
+MISRA C
+
+
+
+
+
+
+
+
+C features
+
+
+
+Functions
+Header files
+Libraries
+Operators
+String
+Syntax
+Preprocessor
+Data types
+
+
+
+
+
+
+
+
+C standard library functions
+
+
+
+Char (ctype.h)
+File I/O (stdio.h)
+Math (math.h)
+Dynamic memory (stdlib.h)
+String (string.h)
+Time (time.h)
+Variadic (stdarg.h)
+POSIX
+
+
+
+
+
+
+
+
+C standard libraries
+
+
+
+Bionic
+
+libhybris
+
+
+dietlibc
+EGLIBC
+glibc
+klibc
+Microsoft Run-time Library
+musl
+Newlib
+uClibc
+BSD libc
+
+
+
+
+
+
+
+
+Compilers
+
+
+
+Comparison of C compilers
+ACK
+Borland Turbo C
+Clang
+GCC
+LCC
+Pelles C
+PCC
+TCC
+Microsoft Visual Studio Express C++
+Watcom C/C++
+
+
+
+
+
+
+
+
+IDEs
+
+
+
+Comparison of C IDEs
+Anjuta
+Code::Blocks
+CodeLite
+Eclipse
+Geany
+Microsoft Visual Studio
+NetBeans
+
+
+
+
+
+
+
+
+C and other languages
+
+
+
+Compatibility of C and C++
+Comparison of C and Embedded C
+Comparison of C and Pascal
+Comparison of programming languages
+
+
+
+
+
+
+
+
+Descendant languages
+
+
+
+C++
+C#
+D
+Objective-C
+Alef
+Limbo
+Go
+Vala
+
+
+
+
+
+
+
+
+
+
+
+ Category
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=C11_(C_standard_revision)&amp;oldid=686800479"					
+				Categories: C (programming language)Programming language standards				
+							
+		
+		
+			

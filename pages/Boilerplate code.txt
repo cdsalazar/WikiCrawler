@@ -1,0 +1,144 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Boilerplate code
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer programming, boilerplate code or boilerplate is the sections of code that have to be included in many places with little or no alteration. It is often used when referring to languages that are considered verbose, i.e. the programmer must write a lot of code to do minimal jobs.
+The need for boilerplate can be reduced through high-level mechanisms such as metaprogramming (which has the computer automatically write the needed boilerplate text), convention over configuration (which provides good default values, reducing the need to specify program details in every project) and model-driven engineering (which uses models and model-to-code generators, eliminating the need for boilerplate manual code).
+A related term is bookkeeping code, referring to code that is not part of the business logic but is interleaved with it in order to keep data structures updated or handle secondary aspects of the program.
+
+
+
+Contents
+
+
+1 Preamble
+2 In object-oriented programming
+3 HTML
+4 See also
+5 References
+
+
+
+Preamble[edit]
+One form of boilerplate consists of declarations which, while not part of the program logic or the language's essential syntax, are added to the start of a source file as a matter of custom. The following Perl example demonstrates boilerplate:
+
+
+#!/usr/bin/perl
+use warnings;
+use strict;
+
+The first line is a shebang, which identifies the file as a Perl script that can be executed directly on the command line (on Unix/Linux systems.) The other two are pragmas turning on warnings and strict mode, which are mandated by fashionable Perl programming style.
+This next example is a C++ programming language boilerplate, #include guard.
+
+
+#ifndef _MYINTERFACE_H
+#define _MYINTERFACE_H
+
+...
+
+#endif
+
+This sets up, and checks, a global flag to tell the compiler whether the file myinterface.h has already been included. As many interdepending files may be involved in the compilation of a module, this avoids processing the same header multiple times (which would lead to errors due to multiple definitions with the same name).
+In object-oriented programming[edit]
+In object-oriented programs, classes are often provided with methods for getting and setting instance variables. The definitions of these methods can frequently be regarded as boilerplate. Although the code will vary from one class to another, it is sufficiently stereotypical in structure that it would be better generated automatically than written by hand. For example, in the following Java class representing a pet, almost all the code is boilerplate except for the declarations of Pet, name and owner:
+
+
+public class Pet {
+    private PetName name;
+    private Person owner;
+
+    public Pet(PetName name, Person owner) {
+        this.name = name;
+        this.owner = owner;
+    }
+
+    public PetName getName() {
+        return name;
+    }
+
+    public void setName(PetName name) {
+        this.name = name;
+    }
+
+    public Person getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Person owner) {
+        this.owner = owner;
+    }
+}
+
+Note that most of the boilerplate in this example exists to provide encapsulation. If the variables name and owner were declared as public, the accessor and mutator methods would not be needed.
+In some other programming languages it may be possible to achieve the same thing with less boilerplate, when the language has built-in support for such common constructs. For example the equivalent of the above Java code can be expressed in Scala using just one line of code:
+
+
+class Pet(var name: PetName, var owner: Person)
+
+Or in C# using Automatic Properties with compiler generated backing fields:
+
+
+public class Pet
+{
+    public PetName Name { get; set; }
+    public Person Owner { get; set; }
+}
+
+HTML[edit]
+In HTML, the following boilerplate is used as a basic empty template and is present in most web pages.
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+See also[edit]
+
+Directive (programming)
+General-purpose Macro
+Library
+Project Lombok
+Metaprogramming
+Macro
+Preprocessor
+Template processor
+Web template processor
+Web template system
+
+References[edit]
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Boilerplate_code&amp;oldid=672693508"					
+				Categories: Source codeComputer programmingHidden categories: Articles with example Java code				
+							
+		
+		
+			

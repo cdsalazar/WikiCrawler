@@ -1,0 +1,969 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Eclipse (software)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the Eclipse IDE.  For other software called "Eclipse", see Eclipse (disambiguation)#Computing.
+
+Eclipse
+
+
+
+
+
+Eclipse 4.5 Mars in the Java EE perspective
+
+
+
+Developer(s)
+Eclipse Foundation
+
+
+Initial release
+1.0 / 7&#160;November 2001; 14 years ago&#160;(2001-11-07)
+
+
+Stable release
+4.5.1 (Mars) / 2&#160;October 2015; 49 days ago&#160;(2015-10-02)
+
+
+Preview release
+4.6 (Neon) M2
+
+
+Development status
+Active
+
+
+Written in
+Java[1]
+
+
+Operating system
+Cross-platform: Linux, Mac&#160;OS&#160;X, Solaris, Windows
+
+
+Platform
+Java SE, Standard Widget Toolkit
+
+
+Available in
+Multilingual
+
+
+Type
+Programming tool, Integrated development environment (IDE)
+
+
+License
+Eclipse Public License
+
+
+Website
+www.eclipse.org
+
+
+In computer programming, Eclipse is an integrated development environment (IDE). It contains a base workspace and an extensible plug-in system for customizing the environment. Eclipse is written mostly in Java and its primary use is for developing Java applications, but it may also be used to develop applications in other programming languages through the use of plugins, including: Ada, ABAP, C, C++, COBOL, Fortran, Haskell, JavaScript, Lasso, Lua, NATURAL, Perl, PHP, Prolog, Python, R, Ruby (including Ruby on Rails framework), Scala, Clojure, Groovy, Scheme, and Erlang. It can also be used to develop packages for the software Mathematica. Development environments include the Eclipse Java development tools (JDT) for Java and Scala, Eclipse CDT for C/C++ and Eclipse PDT for PHP, among others.
+The initial codebase originated from IBM VisualAge.[2] The Eclipse software development kit (SDK), which includes the Java development tools, is meant for Java developers. Users can extend its abilities by installing plug-ins written for the Eclipse Platform, such as development toolkits for other programming languages, and can write and contribute their own plug-in modules.
+Released under the terms of the Eclipse Public License, Eclipse SDK is free and open-source software (although it is incompatible with the GNU General Public License[3]). It was one of the first IDEs to run under GNU Classpath and it runs without problems under IcedTea.
+
+
+
+Contents
+
+
+1 History
+
+1.1 Licensing
+1.2 Name
+1.3 Releases
+
+
+2 Architecture
+3 Rich Client Platform
+4 Server platform
+5 Web Tools Platform
+6 Modeling platform
+7 Extensions
+8 Alternative distributions
+
+8.1 Eclipse PDT (PHP Development Tools)
+8.2 Eclipse ADT (Android Development Tools)
+
+
+9 See also
+10 Further reading
+11 Sources
+12 References
+13 External links
+
+
+
+History[edit]
+Eclipse was inspired by the Smalltalk-based VisualAge family of integrated development environment (IDE) products.[2] Although fairly successful, a major drawback of the VisualAge products was that developed code was not in a component model; instead, all code for a project was held in a compressed lump (somewhat like a zip file but in a proprietary format called .dat); individual classes could not be easily accessed, certainly not outside the tool. A team primarily at the IBM Cary NC lab developed the new product as a Java-based replacement.[4] In November 2001, a consortium was formed with a board of stewards to further the development of Eclipse as open-source software. It is estimated that IBM had already invested close to $40 million by that time.[5] The original members were Borland, IBM, Merant, QNX Software Systems, Rational Software, Red Hat, SuSE, TogetherSoft and WebGain.[6] The number of stewards increased to over 80 by the end of 2003. In January 2004, the Eclipse Foundation was created.[7]
+Eclipse 3.0 (released on 21 June 2004) selected the OSGi Service Platform specifications as the runtime architecture.[8]
+The Association for Computing Machinery recognized Eclipse with the 2011 ACM Software Systems Award on 26 April 2012.[9]
+Licensing[edit]
+The Eclipse Public License (EPL) is the fundamental license under which Eclipse projects are released.[10] Some projects require dual licensing, for which the Eclipse Distribution License (EDL) is available, although use of this license must be applied for and is considered on a case-by-case basis.
+Eclipse was originally released under the Common Public License, but was later re-licensed under the Eclipse Public License. The Free Software Foundation has said that both licenses are free software licenses, but are incompatible with the GNU General Public License (GPL).[11]
+Name[edit]
+According to Lee Nackman, Chief Technology Officer of IBM's Rational division (originating in 2003) at that time, the name "Eclipse" (dating from at least 2001) was not a wordplay on Sun Microsystems, as the product's primary competition at the time of naming was Microsoft Visual Studio (which it, Eclipse, was to eclipse).[12] Different versions of Eclipse have been named after different celestial bodies, more specifically planets or planets' natural satellites. Examples are: Europa, Ganymede, Callisto, Galileo, Luna, and recently, Mars. The next version coming in 2016 has been named Neon.
+Releases[edit]
+Since 2006 the Foundation has coordinated an annual Simultaneous Release.[13] Each release includes the Eclipse Platform as well as a number of other Eclipse projects.
+As of 2008[update] each Simultaneous Release has occurred on the 4th Wednesday of June.
+
+
+Version Name
+Date
+Platform Version
+Projects
+Main Changes
+
+
+N/A
+21 June 2004
+Old version, no longer supported: 3.0[14]
+
+
+
+
+N/A
+28 June 2005
+Old version, no longer supported: 3.1
+
+
+
+
+Callisto
+30 June 2006
+Old version, no longer supported: 3.2
+Callisto projects[15]
+
+
+
+Europa
+29 June 2007
+Old version, no longer supported: 3.3
+Europa projects[16]
+
+
+
+Ganymede
+25 June 2008
+Old version, no longer supported: 3.4
+Ganymede projects[17]
+
+
+
+Galileo
+24 June 2009
+Old version, no longer supported: 3.5
+Galileo projects[18]
+
+
+
+Helios
+23 June 2010
+Old version, no longer supported: 3.6
+Helios projects[19]
+
+
+
+Indigo
+22 June 2011
+Old version, no longer supported: 3.7
+Indigo projects[20]
+
+
+
+Juno
+27 June 2012
+Old version, no longer supported: 3.8 and 4.2[21]
+[Notes 1]
+
+Juno projects[24]
+
+
+
+Kepler
+26 June 2013
+Old version, no longer supported: 4.3
+Kepler projects[25]
+
+
+
+Luna
+25 June 2014
+Old version, no longer supported: 4.4
+Luna projects[26]
+Integrated Java 8 support (in the previous version this was possible via a "Java 8 patch" plugin)
+
+
+Mars
+24 June 2015
+Current stable version: 4.5
+Mars projects[27]
+
+
+
+Neon
+June 2016 (planned)
+Future release: 4.6
+Neon projects[28]
+
+
+
+
+Legend:
+Old version
+Older version, still supported
+Latest version
+Latest preview version
+Future release
+
+
+
+^ There is a 3.8 release of Eclipse Juno; it is not promoted on the main downloads page, but a packaged distribution is available for download.[22] Eclipse 3.8 provides bugfixes for Indigo &amp; adds Java 7 support, and its maintenance was dual streamed with 4.2.[23] Features and plugins equivalent to a packaged distribution may be added from within the IDE.
+
+Architecture[edit]
+Eclipse uses plug-ins to provide all the functionality within and on top of the runtime system. Its runtime system is based on Equinox, an implementation of the OSGi core framework specification.[citation needed]
+In addition to allowing the Eclipse Platform to be extended using other programming languages, such as C and Python, the plug-in framework allows the Eclipse Platform to work with typesetting languages like LaTeX[29] and networking applications such as telnet and database management systems. The plug-in architecture supports writing any desired extension to the environment, such as for configuration management. Java and CVS support is provided in the Eclipse SDK, with support for other version control systems provided by third-party plug-ins.
+With the exception of a small run-time kernel, everything in Eclipse is a plug-in. This means that every plug-in developed integrates with Eclipse in exactly the same way as other plug-ins; in this respect, all features are "created equal".[citation needed] Eclipse provides plug-ins for a wide variety of features, some of which are through third parties using both free and commercial models. Examples of plug-ins include for UML, for Sequence and other UML diagrams, a plug-in for DB Explorer, and many others.
+The Eclipse SDK includes the Eclipse Java development tools (JDT), offering an IDE with a built-in incremental Java compiler and a full model of the Java source files. This allows for advanced refactoring techniques and code analysis. The IDE also makes use of a workspace, in this case a set of metadata over a flat filespace allowing external file modifications as long as the corresponding workspace "resource" is refreshed afterwards.
+Eclipse implements the graphical control elements of the Java toolkit called SWT, whereas most Java applications use the Java standard Abstract Window Toolkit (AWT) or Swing. Eclipse's user interface also uses an intermediate graphical user interface layer called JFace, which simplifies the construction of applications based on SWT. Eclipse was made to run on Wayland during a GSoC-Project in 2014.[30]
+Language packs being developed by the "Babel project" provide translations into over a dozen natural languages.[31]
+Rich Client Platform [edit]
+Eclipse provides the Rich Client Platform (RCP) for developing general purpose applications. The following components constitute the rich client platform:
+
+Equinox OSGi&#160;– a standard bundling framework.
+Core platform&#160;– boot Eclipse, run plug-ins[citation needed].
+Standard Widget Toolkit (SWT)&#160;– a portable widget toolkit.
+JFace&#160;– viewer classes to bring model view controller programming to SWT, file buffers, text handling, text editors.
+Eclipse Workbench&#160;– views, editors, perspectives, wizards.
+
+Examples of rich client applications based on Eclipse are:
+
+IBM Notes 8 and 9
+Novell/NetIQ Designer for Identity Manager
+Apache Directory Studio
+Remote Component Environment
+
+Server platform[edit]
+Eclipse supports development for Tomcat, GlassFish and many other servers and is often capable of installing the required server (for development) directly from the IDE. It supports remote debugging, allowing the user to watch variables and step through the code of an application that is running on the attached server.
+Web Tools Platform[edit]
+The Eclipse Web Tools Platform (WTP) project is an extension of the Eclipse platform with tools for developing Web and Java EE applications. It includes source and graphical editors for a variety of languages, wizards and built-in applications to simplify development, and tools and APIs to support deploying, running, and testing apps.[32]
+Modeling platform[edit]
+The Modeling project contains all the official projects of the Eclipse Foundation focusing on model-based development technologies. They are all compatible with the Eclipse Modeling Framework created by IBM. Those projects are separated in several categories: Model Transformation, Model Development Tools, Concrete Syntax Development, Abstract Syntax Development, Technology and Research, and Amalgam.
+Model Transformation projects uses EMF based models as an input and produce either a model or text as an output. Model to model transformation projects includes ATL, an open source transformation language and toolkit used to transform a given model or to generate a new model from a given EMF model. Model to text transformation projects contains Acceleo, an implementation of MOFM2T, a standard model to text language from the OMG. Acceleo is an open source code generator that can generate any textual language (Java, PHP, Python, etc.) from EMF based models defined with any metamodel (UML, SysML, etc.).
+Model Development Tools projects are implementations of modeling standard used in the industry like UML or OCL and their toolkit. Among those projects can be found implementations of the following standards:
+
+UML
+SysML
+OCL
+BPMN
+IMM
+SBVR
+XSD
+NEDA
+
+The Concrete Syntax Development project contains the Graphical Modeling Framework, an Eclipse-based framework dedicated to the graphical representation of EMF based models.[citation needed]
+The Abstract Syntax Development project hosts the Eclipse Modeling Framework, core of most of the modeling project of the Eclipse Foundation and the framework available for EMF like CDO, EMF query or EMF validation.
+Technology and Research projects are prototypes of Modeling project, this project is used to host all the modeling projects of the Eclipse Foundation during their incubation phase.[citation needed]
+Amalgam provides the packaging and integration between all the available modeling tools for the Eclipse package dedicated to modeling tools.[33]
+Extensions[edit]
+Eclipse supports a rich selection of extensions, adding support for Python via pydev, Android development via Google's ADT, JavaFX support via e(fx)clipse, and many others at the Eclipse Marketplace, as well as JavaScript and jQuery. Valable is a Vala plug-in for Eclipse.[34]
+Alternative distributions[edit]
+A number of alternative distributions exist in the Eclipse project.
+Eclipse PDT (PHP Development Tools)[edit]
+The PHP (PHP hypertext Preprocessor) Development Tools project provides a PHP Development Tools framework for the Eclipse platform. The project encompasses all development components, including code-completion, develop PHP and facilitate extensibility. It leverages the existing Eclipse Web Tools Platform (WTP) and Dynamic Languages Toolkit (DLTK).[35]
+Eclipse ADT (Android Development Tools)[edit]
+Android Development Tools (ADT) is a Google-provided plugin for the Eclipse IDE that is designed to provide an integrated environment in which to build Android applications. ADT extends the capabilities of Eclipse to let developers set up new Android projects, create an application UI, add packages based on the Android Framework API, debug their applications using the Android SDK tools, and export signed (or unsigned) .apk files in order to distribute their applications. It is free download. It was the official IDE for Android but was replaced by Android Studio (based on IntelliJ IDEA Community Edition).[36]
+See also[edit]
+
+
+
+
+Free software portal
+
+
+
+Java portal
+
+
+
+Computer programming portal
+
+
+
+
+Comparison of integrated development environments
+Comparison of integrated development environments for Java
+List of Eclipse-based software
+List of Eclipse projects
+NetBeans
+Vala
+
+Further reading[edit]
+
+How to develop an Eclipse RCP application
+How to develop an Eclipse Plug-in Part 1
+How to develop an Eclipse Plug-in Part 2
+
+Sources[edit]
+
+
+Silva, Vladimir (11 March 2009). Practical Eclipse Rich Client Platform Projects (1st ed.). Apress. p.&#160;352. ISBN&#160;1-4302-1827-4.&#160;
+Burnette, Ed (12 August 2005). Eclipse IDE Pocket Guide (1st ed.). O'Reilly Media. p.&#160;128. ISBN&#160;978-0-596-10065-0.&#160;
+Holzner, Steve (1 May 2004). Eclipse (1st ed.). O'Reilly Media. p.&#160;317. ISBN&#160;0-596-00641-1.&#160;
+McAffer, Jeff; Lemieux, Jean-Michel; Aniszczyk, Chris (22 May 2010). Eclipse Rich Client Platform (2nd ed.). Addison-Wesley Professional. p.&#160;552. ISBN&#160;0-321-60378-8.&#160;
+
+
+References[edit]
+
+
+^ Lextrait, Vincent (July 2010). "The Programming Languages Beacon, v10.3". Retrieved 5 September 2010.&#160;
+^ a b "Where did Eclipse come from?". Eclipse Wiki. Retrieved 16 March 2008.&#160;
+^ Free Software Foundation, Inc. (5 November 2012). "Various Licenses and Comments About Them".&#160;
+^ Rick DeNatale (15 October 2008). "Will It Go Round in Circles?". Archived from the original on 19 October 2008.&#160;
+^ Milinkovich, Mike. "IBM and Eclipse: A Decade of Software Innovation". Building a Smarter Planet. Retrieved 3 November 2011.&#160;
+^ "About the Eclipse Foundation: History of Eclipse". Eclipse. Retrieved 1 January 2014.&#160;
+^ "About the Eclipse Foundation". The Eclipse Foundation. Retrieved 13 August 2008.&#160;
+^ "OSGi&#160;– the footings of the foundation of the platform". The Eclipse Foundation. Retrieved 25 June 2008.&#160;
+^ "ACM Honors Computing Innovators for Advances in Research, Education, and Industry". Association for Computing Machinery. Retrieved 26 April 2012.&#160;
+^ "Eclipse Public License". Retrieved 24 February 2012.&#160;
+^ "Various Licenses and Comments about Them". Free Software Foundation. 17 May 2007. Retrieved 20 May 2007.&#160;
+^ Darryl K. Taft (20 May 2005). "Eclipse: Behind the Name". eWeek.com. Ziff Davis Enterprise Holdings. Retrieved 11 August 2008.&#160;
+^ http://wiki.eclipse.org/Simultaneous_Release
+^ "Eclipse Foundation". Eclipse.org. 21 June 2004. Retrieved 16 June 2013.&#160;
+^ "Eclipse Callisto Projects". Eclipse. Retrieved 1 February 2014.&#160;
+^ "Europa Simultaneous Release". Eclipsepedia. Retrieved 1 February 2014.&#160;
+^ "Ganymede Simultaneous Release". Eclipsepedia. Retrieved 1 February 2014.&#160;
+^ "Galileo Simultaneous Release". Eclipsepedia. Retrieved 1 February 2014.&#160;
+^ "Category:Helios". Eclipsepedia. Retrieved 1 February 2014.&#160;
+^ "Category:Indigo". Eclipsepedia. Retrieved 1 February 2014.&#160;
+^ "Eclipse Juno Release Train Has Arrived". Eclipse.org. 27 June 2012. Retrieved 16 June 2013.&#160;
+^ http://archive.eclipse.org/eclipse/downloads/drops/R-3.8.2-201301310800/
+^ https://bugs.eclipse.org/bugs/show_bug.cgi?id=389175
+^ "Category:Juno". Eclipsepedia.&#160;
+^ "Category:Kepler". Eclipsepedia. Retrieved 1 February 2014.&#160;
+^ "Category:Luna". Eclipsepedia. Retrieved 1 February 2014.&#160;
+^ "Category:Mars". Eclipsepedia. Retrieved 4 April 2014.&#160;
+^ "Category:Neon". Eclipsepedia. Retrieved 20 April 2014.&#160;
+^ "TeXlipse homepage – LaTeX for Eclipse". TeXlipse. Retrieved 1 January 2014.&#160;
+^ "Eclipse now runs on Wayland". 18 August 2014.&#160;
+^ "Babel Project – Eclipse translation". Eclipse Babel. Retrieved 1 January 2014.&#160;
+^ "Eclipse Web Tools Platform Project". http://eclipse.org/: Eclipse. Retrieved 2 May 2011. The Eclipse Web Tools Platform (WTP) project extends the Eclipse platform with tools for developing Web and Java EE applications. It includes source and graphical editors for a variety of languages, wizards and built-in applications to simplify development, tools to support deploying, running, and testing apps, and APIs for extending its functionality.&#160;
+^ (English) "Amalgation website". Retrieved 5 March 2015.&#160;
+^ Valable
+^ "PHP Development Tools". projects.eclipse.org. Retrieved 1 January 2014.&#160;
+^ Eason, Jamal. "Android Studio 1.0".&#160;
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Eclipse IDE.
+
+
+
+
+
+Wikibooks has a book on the topic of: Eclipse
+
+
+
+Official website
+Eclipse 4 RCP Tutorial Tutorial for Eclipse 4
+Using Eclipse as a Front-End to GDB Debugger
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Eclipse Foundation
+
+
+
+
+
+
+
+
+
+Acceleo
+AspectJ
+BIRT
+Buckminster
+Eclipse
+Equinox
+EclipseLink
+Koneki
+Standard Widget Toolkit
+Mylyn
+Jetty
+JFace
+Remote Application Platform
+Sirius
+Virgo
+
+
+
+
+
+
+
+
+
+
+
+License
+Eclipse Public License
+Website
+www.eclipse.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Eclipse plugins
+
+
+
+
+
+
+
+
+
+Adobe Flex
+Adobe LiveCycle
+Android Development Tools (ADT)
+Aptana
+Avaya Dialog Designer
+Bioclipse
+Borland Together
+Carbide.c++
+CFEclipse
+Collaber
+Collanos
+EasyEclipse
+FindBugs
+G-Eclipse
+Granite data services
+IBM Rational Software
+IBM Websphere Studio Application Developer
+JBoss Tools
+JBuilder
+JFire
+Jtest
+Lomboz
+MyEclipse
+Nodeclipse
+Objecteering
+OptimalJ
+&lt;oXygen/&gt;
+Photran
+PyDev
+RadRails
+Visual Paradigm for UML
+Zend Studio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Free and open-source software
+
+
+
+
+
+
+General
+
+
+
+Alternative terms for free software
+Comparison of open source and closed source
+Comparison of source code hosting facilities
+Free software
+Free software project directories
+Gratis versus libre
+Long-term support
+Open-source software
+Open-source software development
+Outline
+SPDX
+
+
+
+
+
+
+
+
+Software packages
+
+
+
+Audio
+Bioinformatics
+Codecs
+Collaboration
+Configuration management
+Geophysics
+Health
+Mathematics
+Operating systems
+Programming languages
+Routing
+Statistics
+Television
+Video games
+Web applications
+
+Content management systems
+E-commerce
+
+
+Wireless drivers
+Word processors
+Android apps
+iOS apps
+Commercial
+Trademarked
+Formerly proprietary
+
+
+
+
+
+
+
+
+History
+
+
+
+BSD
+GNU
+Haiku
+Linux
+Mozilla
+
+Application Suite
+Firefox
+Thunderbird
+
+
+
+
+
+
+
+
+
+
+Community
+
+
+
+Free software movement
+Open-source movement
+Organizations
+Events
+
+
+
+
+
+
+
+
+Licenses
+
+
+
+Apache
+APSL
+Artistic
+Beerware
+Boost
+BSD
+CC0
+CDDL
+EPL
+GNU GPL
+GNU LGPL
+ISC
+MIT
+MPL
+Ms-PL/RL
+WTFPL
+zlib
+
+
+
+
+
+
+
+
+License types
+and standards
+
+
+
+Comparison of free and open-source software licenses
+Contributor License Agreement
+Copyfree
+Copyleft
+Debian Free Software Guidelines
+Definition of Free Cultural Works
+Free license
+The Free Software Definition
+The Open Source Definition
+Open-source license
+Permissive free software licence
+Public domain
+Viral license
+
+
+
+
+
+
+
+
+Challenges
+
+
+
+Binary blob
+Digital rights management
+Free and open-source graphics device driver
+Lack of wireless driver support
+Hardware restrictions
+License proliferation
+Mozilla software rebranding
+Proprietary software
+SCO–Linux controversies
+Secure boot
+Software patents
+Software security
+Trusted Computing
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+The Cathedral and the Bazaar
+Forking
+Linux distribution
+Microsoft Open Specification Promise
+Revolution OS
+
+
+
+
+
+
+
+
+
+
+
+ Book
+ Category
+ Commons
+ Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for C and C++
+
+
+
+
+
+
+Open source
+
+
+
+Anjuta
+Code::Blocks
+CodeLite
+Dev-C++
+Eclipse
+Geany
+GNAT Programming Studio
+KDevelop
+Kuzya
+MonoDevelop
+NetBeans
+QDevelop
+Qt Creator
+Ultimate++
+wxDev-C++
+
+
+
+
+
+
+
+
+Freeware
+
+
+
+Pelles C
+Oracle Solaris Studio (previously called Sun Studio)
+Visual Studio Express
+Xcode
+
+
+
+
+
+
+
+
+Retail
+
+
+
+C++Builder
+CodeWarrior
+IBM VisualAge
+Visual Studio
+SlickEdit
+
+
+
+
+
+
+
+
+
+
+
+&#160;Category
+ Comparison
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Integrated development environments for Java
+
+
+
+
+
+
+Current
+
+
+
+Android Studio
+BlueJ
+Codenvy
+Eclipse
+JetBrains IntelliJ IDEA
+Greenfoot
+KDevelop
+JBuilder
+JCreator
+JDeveloper
+jGRASP
+MyEclipse
+NetBeans
+IBM Rational Application Developer for WebSphere
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+BrewMaster
+Metrowerks CodeWarrior Pro for Java
+Cosmo Code
+ED for Windows
+Forté for Java (superseded by NetBeans)
+FrIJDE(aka frigid)
+Kalimantan
+Java WebIDE
+Java WorkShop
+JavaMaker
+JFactory
+NetCraft
+Object Engineering Workbench for Java (OEW)
+Roaster
+Scriptum
+SNiFF+
+Sun Java Studio Creator (superseded by NetBeans)
+Teikade
+Visual Age (superseded by Eclipse)
+Visual Café (aka Espresso, superseded by JBuilder)
+Visual J++
+WinGen for Java
+Xelfi (became NetBeans)
+XWPE
+
+
+
+
+
+
+
+
+
+Italics indicate software no longer in development.
+
+Category
+Comparison
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 4768065-9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Eclipse_(software)&amp;oldid=688877346"					
+				Categories: Eclipse (software)Android (operating system) development softwareCode navigation toolsCross-platform free softwareDebuggersFormerly proprietary softwareFree HTML editorsFree integrated development environmentsFree software programmed in Java (programming language)Free UML toolsIBM softwareIntegrated development environmentsJava development toolsJava platformLinux integrated development environmentsLinux programming toolsLinux softwareOS X programming toolsProgramming tools for WindowsOS X text editorsSoftware development kitsSoftware using the Eclipse licenseHidden categories: Articles containing potentially dated statements from 2008All articles containing potentially dated statementsAll articles with unsourced statementsArticles with unsourced statements from September 2013Articles with unsourced statements from January 2012Articles with unsourced statements from January 2014Use dmy dates from October 2015Wikipedia articles with GND identifiers				
+							
+		
+		
+			

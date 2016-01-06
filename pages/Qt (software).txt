@@ -1,0 +1,1693 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Qt (software)
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Qt (toolkit))
+												
+					Jump to:					navigation, 					search
+				
+				For the company formerly known as Qt Software, see Qt Company.
+
+Qt
+
+
+
+
+
+GUI designing in Qt Creator using embedded Qt Designer
+
+
+
+Original author(s)
+Haavard Nord and Eirik Chambe-Eng[1]
+
+
+Developer(s)
+
+
+
+Trolltech (1991–2008)
+Nokia (2008–2011)
+Digia (2012–2014)
+Qt Company (2014-present)
+Qt Project (2011–present)
+
+
+
+
+
+Initial release
+20&#160;May 1995; 20 years ago&#160;(1995-05-20)[1]
+
+
+Stable release
+5.5.1 (October&#160;15, 2015; 31 days ago&#160;(2015-10-15)) [±][2]
+
+
+Preview release
+5.6 Alpha (September&#160;8, 2015; 2 months ago&#160;(2015-09-08)) [±][3]
+
+
+Development status
+Active
+
+
+Written in
+C++
+
+
+Operating system
+Linux (Embedded, Wayland), Unix-like (X11)), OS X, Windows, Windows Phone …
+
+
+Platform
+Cross-platform
+
+
+Type
+Application framework
+
+
+License
+Qt Commercial License[4]
+GPL-3.0[5]
+LGPL-3.0[6][7]
+LGPL-2.1[8]
+
+
+Website
+The Qt Company
+
+
+Qt (/ˈkjuːt/ "cute", or unofficially as Q-T cue-tee[9][10]) is a cross-platform application framework that is widely used for developing application software that can be run on various software and hardware platforms with little or no change in the underlying codebase, while having the power and speed of native applications. Qt is currently being developed both by the Qt Company, a subsidiary of Digia, and the Qt Project under open-source governance, involving individual developers and firms working to advance Qt.[11][12][13] Digia owns the Qt trademark and copyright. Qt is available with both commercial[4] and open source[14] GPL v3, LGPL v3[7] and LGPL v2 licenses.
+
+
+
+Contents
+
+
+1 Purposes and abilities
+2 Software architecture
+3 Supported platforms
+4 Editions
+5 Releases
+
+5.1 Qt 5
+
+
+6 Software modules
+
+6.1 Qt essentials
+6.2 Qt add-ons
+
+
+7 Tools
+8 Programming language bindings
+9 Uses
+
+9.1 Organizations using Qt
+9.2 Software using Qt
+
+
+10 History
+
+10.1 Licensing
+
+
+11 See also
+12 References
+
+12.1 Bibliography
+
+
+13 External links
+
+
+
+Purposes and abilities[edit]
+Qt is used mainly for developing application software with graphical user interfaces (GUIs); however, programs without a GUI can be developed, such as command-line tools and consoles for servers. An example of a non-GUI program using Qt is the Cutelyst web framework.[15] GUI programs created with Qt can have a native-looking interface, in which cases Qt is classified as a widget toolkit.
+Qt uses standard C++ with extensions including signals and slots that simplifies handling of events, and this helps in development of both GUI and server applications which receive their own set of event information and should process them accordingly. Qt supports many compilers, including the GCC C++ compiler and the Visual Studio suite. Qt also provides Qt Quick, that includes a declarative scripting language called QML that allows using JavaScript to provide the logic. With Qt Quick, rapid application development for mobile devices became possible, although logic can be written with native code as well to achieve the best possible performance. Qt can be used in several other programming languages via language bindings. It runs on the major desktop platforms and some of the mobile platforms. It has extensive internationalization support. Non-GUI features include SQL database access, XML parsing, JSON parsing, thread management and network support.
+Software architecture[edit]
+
+
+
+
+Example of Qt usage in Linux-based systems
+
+
+Qt, when it was first released, relied on a few key concepts:
+
+Complete abstraction of the GUI
+When first released, Qt used its own paint engine and controls, emulating the look of the different platforms it runs on when it drew its widgets. This made the porting work easier because very few classes in Qt depended really on the target platform; however, this occasionally led to slight discrepancies where that emulation was imperfect. Recent versions of Qt use the native style APIs of the different platforms, on platforms that have a native widget set, to query metrics and draw most controls, and do not suffer from such issues as much.[16] On some platforms (such as MeeGo and KDE) Qt is the native API. Some other portable graphical toolkits have made different design decisions; for example, wxWidgets uses the toolkits of the target platform for its implementations.
+Signals and slots
+A language construct introduced in Qt for communication between objects[17] which makes it easy to implement the observer pattern while avoiding boilerplate code. The concept is that GUI widgets can send signals containing event information which can be received by other controls using special functions known as slots.
+Metaobject compiler
+The metaobject compiler, termed moc, is a tool that is run on the sources of a Qt program. It interprets certain macros from the C++ code as annotations, and uses them to generate added C++ code with Meta Information about the classes used in the program. This meta information is used by Qt to provide programming features not available natively in C++: signals and slots, introspection and asynchronous function calls.
+
+Supported platforms[edit]
+Main article: List of platforms supported by Qt
+Qt works on many different platforms; the following are officially supported:
+
+
+Platform
+New features
+
+
+Android
+Qt for Android,[18] formerly known as Necessitas.[19]
+
+
+Embedded Linux
+Qt for embedded platforms: personal digital assistant, smartphone, etc.[20]
+
+
+Integrity
+Qt for Integrity[21]
+
+
+iOS
+Qt for iOS platforms (iPhone, iPad)[22]
+
+
+OS X
+Qt for Apple OS X; supports applications on Cocoa[23]
+
+
+QNX
+Qt for QNX[24]
+
+
+VxWorks
+Qt for VxWorks.[25]
+
+
+Wayland
+Qt for Wayland.[26] Qt applications can switch between graphical backends like X and Wayland at load time with the -platform command line option.[27][28] This allows a seamless transition of Qt applications from X11 to Wayland.
+
+
+Windows
+Qt for Microsoft Windows XP, Vista, 7,[29] 8
+
+
+Windows CE
+Qt for Windows CE 6 and Windows Embedded Compact 7.[30]
+
+
+Windows RT
+Support for WinRT-based Windows 8 apps and Windows Phone 8[31] With 5.4 minimum supported version: Windows Phone 8.1[32]
+
+
+X11
+Qt for X Window System (GNU/Linux, FreeBSD, HP-UX, Solaris, AIX, etc.)[33]
+
+
+After Nokia opened the Qt source code to the community on Gitorious various ports appeared. There are also some ports of Qt that may be available, but are not supported anymore. These platforms are listed in List of platforms supported by Qt.
+Editions[edit]
+There are four editions of Qt available, Community, Indie Mobile, Professional and Enterprise.[34] The Community version is under the open source licenses, while the Indie Mobile, Professional and Enterprise versions, which contain additional functionality and libraries, e.g. Charts and Data Visualization, Enterprise Controls, Virtual Keyboard etc.[34] are commercially sold by The Qt Company.
+Qt is available under the following copyright licenses:[14] Qt Commercial License,[4] GNU GPL-3.0,[5] GNU LGPL-3.0[6] and GNU LGPL-2.1[8] (with Qt special exception)[35]
+Releases[edit]
+Main article: List of Qt releases
+Qt 5[edit]
+Qt 5 was officially released on 19 December 2012. This new version marked a major change in the platform, with hardware-accelerated graphics, QML and JavaScript playing a major role. The traditional C++-only QWidgets continued to be supported, but did not benefit from the performance improvements available through the new architecture.[36] Qt5 brings significant improvements to the speed and ease of developing user interfaces.[37]
+Framework development of Qt 5 moved to open governance, taking place at qt-project.org. It is now possible for developers outside Digia to submit patches and have them reviewed.[38]
+
+
+Version
+Release date
+New features
+
+
+5.0
+19 December 2012[39]
+Major overhaul of the Qt 4.x series.
+Complete Wayland support, including the client-side decorations.
+
+
+5.1
+3 July 2013
+New modules and experimental Android and iOS support as technology preview.[40]
+
+
+5.2
+12 December 2013
+First release with official support of Android and iOS.
+
+
+5.3
+20 May 2014
+Focus on stability and usability[41]
+
+
+5.4
+10 December 2014
+
+
+Full WinRT and Windows Phone support
+Introduction of Qt WebEngine based on Chromium internal components that will eventually replace QtWebKit in future versions.
+Dynamic GL switching between graphic backends on Windows (ANGLE or OpenGL)
+Native "look and feel" for Qt Quick Controls backends on Android platforms[42]
+Introduction of Qt WebChannels providing a QObject bridge over WebSockets. Initially only integrated with Qt WebKit, but with Qt WebEngine integration under way for 5.5
+
+
+
+
+5.5
+1 July 2015
+
+Features available in Qt 5.5 according to official Qt.io website:[43]
+
+New modules: Qt 3D, Qt Canvas 3D, Qt Location
+Deprecated modules: Qt WebKit, Qt Declarative (Qt Quick 1), Qt Script
+Bluetooth Low Energy API final release
+On Windows, there will be no more OpenGL-only or ANGLE-only builds and Qt will manage this dynamically
+GStreamer 1.0 support
+New video filtering framework
+Camera and QML MediaPlayer improvement on iOS
+Qt NFC for Linux
+SSL/TLS improvements for Qt Network
+
+
+
+
+5.6
+Alpha release: 8 September 2015
+
+Final release plan: 8 December 2015
+
+Notable improvements:[44]
+
+Deprecated Modules: Qt Script, Qt Enginio
+Removed Modules: Qt WebKit, Qt Declarative (Qt Quick 1)
+Qt Core: Several performance improvements, including reduction of memory usage in dynamic properties, and performance optimisations in QString
+Qt Network: Support HTTP redirection
+Qt Gui: Improved cross-platform OpenGL ES 3.0 and 3.1
+Qt Multimedia: Adding playlist QML type
+Qt WebEngine: Based on Chromium 45, with support for pepper plugins including Flash, API for custom URL schemes, intercepting and blocking network requests and also tracking or blocking cookies
+Qt QML: Reduced memory consumption
+Embedded platforms: support for Intel Atom-based NUCs
+
+
+
+
+Software modules[edit]
+Starting with Qt 4.0 the framework was split into individual modules.[45][46] With Qt 5.0 the architecture was modularized even further.[47][48] Qt is now split into essential and add-on modules.[49]
+Qt essentials[edit]
+
+
+Module
+Description
+
+
+Qt Core
+The only required Qt module, containing classes used by other modules, including the meta-object system, concurrency and threading, containers, event system, plugins and I/O facilities.
+
+
+Qt GUI
+The central GUI module. In Qt 5 this module now depends on OpenGL, but no longer contains any widget classes.
+
+
+Qt Widgets
+Contains classes for classic widget based GUI applications and the QSceneGraph classes. Was split off from QtGui in Qt 5.
+
+
+Qt QML
+Module for QML and JavaScript languages.
+
+
+Qt Quick
+The module for GUI application written using QML2.
+
+
+Qt Quick Controls
+Widget like controls for Qt Quick intended mainly for desktop applications.
+
+
+Qt Quick Layouts
+Layouts for arranging items in Qt Quick.
+
+
+Qt Network
+Network abstraction layer. Complete with TCP, UDP, HTTP, SSL and since Qt 5.3 SPDY support.
+
+
+Qt Multimedia
+Classes for audio, video, radio and camera functionality.
+
+
+Qt Multimedia Widgets
+The widgets from Qt Multimedia.
+
+
+Qt SQL
+Contains classes for database integration using SQL.
+
+
+Qt WebKit
+Qt's WebKit implementation and API.
+
+
+Qt WebKit Widgets
+The widget API for Qt WebKit
+
+
+Qt Test
+Classes for unit testing Qt applications and libraries.
+
+
+Qt add-ons[edit]
+
+
+Module
+Description
+
+
+Active Qt
+Classes for applications which use ActiveX.
+
+
+Qt Bluetooth
+Classes accessing Bluetooth hardware.
+
+
+Qt D-Bus
+Classes for IPC using the D-Bus protocol.
+
+
+Qt NFC
+Classes accessing NFC hardware. Only officially supported on BlackBerry hardware so far (or N9 in the MeeGo port).
+
+
+Qt OpenGL
+Legacy module containing the OpenGL classes from Qt4. In Qt5 the similar functionality in Qt GUI is recommended.
+
+
+Qt Positioning
+Classes for accessing GPS and other location services. Split off from the Qt4 Mobile module of Qt Location. Supported on Android, BlackBerry, iOS and Linux (using GeoClue).
+
+
+Qt Script
+Legacy module for scripting Qt application using ECMAScript/JavaScript. In Qt5, using similar classes in Qt QML is recommended.
+
+
+Qt Sensors
+Classes for accessing various mobile hardware sensors. Used to be part of Qt Mobile in Qt4. Supported on Android, BlackBerry, iOS, WinRT, Mer and Linux.
+
+
+Qt Serial Port
+Classes for access to hardware and virtual serial ports. Supported on Windows, Linux and Mac OS X.
+
+
+Qt WebChannel
+Provides access to Qt objects to HTML/Js over WebSockets.
+
+
+Qt WebEngine
+A new set of Qt Widget and QML webview APIs based on Chromium.
+
+
+Qt WebSockets
+Provides a WebSocket implementation.
+
+
+Qt XML
+Legacy module containing classes for SAX and DOM style XML APIs. Replaced with QXmlStreamReader and QXmlStreamWriter classes in Qt Core.
+
+
+Qt XML Patterns
+Support for XPath, XQuery, XSLT and XML Schema validation.
+
+
+Tools[edit]
+Qt comes with its own set of tools to ease cross-platform development, that is otherwise cumbersome due to different set of development tools. Qt Creator is a cross-platform IDE for C++ and QML. Qt Designer's GUI layout/design functionality is integrated into this relatively new IDE, although Qt Designer can still be called as a standalone tool.
+In addition to Qt Creator, Qt provides a handy makefile generation tool, qmake, a tool that automates the generation of Makefiles for development project across different platforms. Without qmake, one should write different makefiles for each platform, so it is a useful tool for transparent handling of differences in various platforms.
+There are other tools available in Qt, including Qt Designer, Qt Assistant (both are embedded in Qt Creator now), Qt Linguist (for translating GUI), uic (user interface compiler), moc (Meta-object System compiler for handling Signals and slots). Various other converters, compiling and linking also released with Qt.
+Programming language bindings[edit]
+Main articles: List of language bindings for Qt 4 and List of language bindings for Qt 5
+Qt has a range of bindings for various languages,[50] which implement some or all of its feature set.
+Uses[edit]
+Organizations using Qt[edit]
+Because of simplicity, robustness, native performance, cross-platform compatibility and both commercial and open source licenses, many organizations in many parts of the world use Qt. These include but are not limited to European Space Agency,[51] DreamWorks,[52][53] Lucasfilm,[54][55] Panasonic,[56] Philips,[57] Samsung,[58] Siemens,[59] Volvo,[60] Walt Disney Animation Studios,[61] Blizzard Entertainment,[62] Electronic Arts,[63] AMD.
+Software using Qt[edit]
+Main category: Software that uses Qt
+Example applications using Qt are Autodesk Maya,[64][65] Mathematica,[66] Google Earth,[67] the RStudio IDE for the R programming language,[68] Spotify for Linux,[69] the VirtualBox OS virtualization software package, the VLC media player,[70] and AMD's Radeon Software Crimson Edition driver tool application.[71]
+The KDE desktop environment for UNIX-like operating systems[72] uses Qt as its widget toolkit.
+History[edit]
+Haavard Nord and Eirik Chambe-Eng (the original developers of Qt and the CEO and President, respectively, of Trolltech) began development of "Qt" in 1991, three years before the company was incorporated as Quasar Technologies, then changed the name to Troll Tech and then to Trolltech.[1]
+The toolkit was called Qt because the letter Q looked appealing in Haavard's Emacs typeface, and "t" was inspired by Xt, the X toolkit.[1]
+The first two versions of Qt had only two flavors: Qt/X11 for Unix and Qt/Windows for Windows. The Windows platform was only available under a proprietary license, which meant free/open source applications written in Qt for X11 could not be ported to Windows without purchasing the proprietary edition.
+At the end of 2001, Trolltech released Qt 3.0, which added support for Mac OS X. The Mac OS X support was available only in the proprietary license until June 2003, when Trolltech released Qt 3.2 with Mac OS X support available under the GPL.
+In June 2005, Trolltech released Qt 4.0.[73]
+Nokia acquired Trolltech ASA on 17 June 2008 and changed the name first to Qt Software, then to Qt Development Frameworks. Since then it focused on Qt development to turn it into the main development platform for its devices, including a port to the Symbian S60 platform. Version 1.0 of the Nokia Qt SDK was released on 23 June 2010.[74] The source code was made available over Gitorious, a community oriented git source code repository, to gather an even broader community that is not only using Qt but also helping to improve it.
+In February 2011, Nokia announced its decision to drop Symbian technologies and base their future smartphones on Microsoft platform instead. One month later, Nokia announced the sale of Qt's commercial licensing and professional services to Digia, with the immediate goal of taking Qt support to Android, iOS and Windows 8 platforms, and to continue focusing on desktop and embedded development, although Nokia was to remain the main development force behind the framework at that time.
+In March 2011, Nokia sold the commercial licensing part of Qt to Digia creating Qt Commercial. In August 2012, Digia announced that it will acquire Qt from Nokia[75] The Qt team started working in Digia in September 2012.[76] Qt team at Digia, released Qt 5.0 within a month, and released newer versions every 6 months with new features and additional supported platforms.
+Licensing[edit]
+At all times, Qt was available under a commercial license that allows developing proprietary applications with no restrictions on licensing. In addition, Qt has been gradually made available under several increasingly free licenses.
+Until version 1.45, source code for Qt was released under the FreeQt license. This was viewed as not compliant with the open source principle by the Open Source Initiative and the free software definition by Free Software Foundation because, while the source was available, it did not allow the redistribution of modified versions.
+Controversy erupted around 1998 when it became clear that the K Desktop Environment (now known as the KDE Software Compilation) was going to become one of the leading desktop environments for Linux. As it was based on Qt, many people in the free software movement worried that an essential piece of one of their major operating systems would be proprietary.
+With the release of version 2.0 of the toolkit, the license was changed to the Q Public License (QPL), a free software license but one regarded by the Free Software Foundation as incompatible with the GPL. Compromises were sought between KDE and Trolltech whereby Qt would not be able to fall under a more restrictive license than the QPL, even if Trolltech was bought out or went bankrupt. This led to the creation of the KDE Free Qt foundation,[77] which guarantees that Qt would fall under a BSD-style license should no free/open source version of Qt be released during 12 months.[78][79]
+In 2000, Qt/X11 2.2 was released under the GPL v2,[80] ending all controversy regarding GPL compatibility.
+In 2002, members of the KDE on Cygwin project began porting the GPL licensed Qt/X11 code base to Windows.[81] This was in response to Trolltech's refusal to license Qt/Windows under the GPL on the grounds that Windows was not a free/open source software platform.[82][83] The project achieved reasonable success although it never reached production quality.
+This was resolved when Trolltech released Qt/Windows 4 under the GPL in June 2005. Qt&#160;4 now supports the same set of platforms in the free software/open source editions as in the proprietary edition, so it is now possible to create GPL-licensed free/open source applications using Qt on all supported platforms. The GPL v3 with special exception[84] was later added as an added licensing option. The GPL exception allows the final application to be licensed under various GPL-incompatible free software/open source licenses such as the Mozilla Public License 1.1.
+On 14 January 2009, Qt version 4.5 added another option, the LGPL,[85] which should make Qt even more attractive for non-GPL open source projects and for closed applications.[86]
+In March 2011, Nokia sold the commercial licensing part of Qt to Digia creating Qt Commercial.[87] In September 2014, Digia transferred the Qt business and copyrights to their wholly owned subsidiary, the Qt Company.
+See also[edit]
+
+List of widget toolkits
+Android software development
+iOS SDK
+
+References[edit]
+
+
+^ a b c d Blanchette, Jasmin; Summerfield, Mark (June 2006). "A Brief History of Qt". C++ GUI Programming with Qt 4 (1st ed.). Prentice-Hall. pp.&#160;xv–xvii. Retrieved 5 August 2013.&#160;
+^ Tuukka Turunen (2015-10-15). "Qt 5.5.1 released". Retrieved 2015-11-02.&#160;
+^ Lars Knoll (8 September 2015). "Qt 5.6 Alpha released". Qt Project. Retrieved 12 September 2015.&#160;
+^ a b c "Qt Commercial Licenses".&#160;
+^ a b "Qt GNU GPL v. 3.0 Version".&#160;
+^ a b "Qt GNU LGPL v. 3.0 Version".&#160;
+^ a b "Adding LGPL v3 to Qt". 20 August 2014.&#160;
+^ a b "Qt GNU LGPL v. 2.1 Version".&#160;
+^ "That Smartphone Is So Qt". Ashlee Vance. 16 February 2010. Retrieved 19 February 2010.&#160;
+^ "The Qt 4 Dance" (video). Retrieved 7 September 2015.&#160;
+^ Lydia Pintscher (21 October 2011). "KDE Applauds Qt’s Move to Open Governance". KDE.News. Retrieved 8 May 2013.&#160;
+^ Meyer, David (24 October 2011). "Nokia gives Qt open-source governance". ZDNet. Retrieved 8 May 2013.&#160;
+^ Knoll, Lars (6 August 2014). "Defragmenting Qt and Uniting Our Ecosystem".&#160;
+^ a b "Qt Licensing".&#160;
+^ "Cutelyst - Home".&#160;
+^ "Library". Digia. Qt uses the native graphics APIs of each platform it supports, taking full advantage of system resources and ensuring that applications have native look and feel.&#160; 
+^ "Signals &amp; Slots - QtCore 5.1". Qt Project. 4 July 2013. Retrieved 10 Apr 2015.&#160;
+^ "New Features in Qt 5.1 - Support for New Platforms". Digia. 3 July 2013. Retrieved 10 Apr 2015.&#160;
+^ "Necessitas project". Retrieved 10 Apr 2015.&#160;
+^ "Qt Wiki&#160;– Support for Embedded Linux". Qt Project. 12 August 2011. Retrieved 10 Apr 2015.&#160;
+^ "Qt Product pages, Supported platforms". Qt - Product - Qt Framework. The Qt Company. Retrieved 21 November 2014.&#160;
+^ "Supported Platforms". Retrieved 1 February 2014.&#160;
+^ "Qt Wiki&#160;– Support for OS X". Qt Project. 14 August 2011. Retrieved 21 August 2013.&#160;
+^ Qt Blog. "Qt Commercial Formally Supports QNX | Qt Blog". Blog.qt.digia.com. Retrieved 19 March 2013.&#160;
+^ Qt Blog. "Qt Commercial for VxWorks | Qt Blog". Blog.qt.digia.com. Retrieved 19 March 2013.&#160;
+^ Jørgen Lind (18 March 2011). "Multi-process Lighthouse". Qt Project. Retrieved 21 August 2013.&#160;
+^ "Getting started with Lighthouse". Retrieved 25 November 2011.&#160;
+^ Kristian Høgsberg (25 January 2011). "Add wayland lighthouse plugin".&#160;
+^ "Qt Wiki&#160;– Support for Windows". Qt Project. 11 August 2011. Retrieved 11 August 2013.&#160;
+^ Bjoern Breitmeyer (21 August 2013). "The State of WinCE Support in Qt5". KDAB. Retrieved 21 August 2013.&#160;
+^ "Qt for WinRT". Qt Project. Retrieved 9 September 2014.&#160;
+^ https://wiki.qt.io/New-Features-in-Qt-5.4
+^ "Qt Wiki&#160;– Support for Linux/X11". Qt Project. 12 August 2011. Retrieved 21 August 2013.&#160;
+^ a b "Qt Download page". Download Qt. The Qt Company. Retrieved 2014-11-21.&#160;
+^ "Digia Qt LGPL Exception version 1.1".&#160;
+^ "Concern about removal of QWidget classes". Qt5-feedback (Mailing list). 7 October 2011.&#160;
+^ Knoll, Lars (9 May 2011). "Thoughts about Qt 5". Digia. Retrieved 9 May 2011.&#160;
+^ Lars Knoll (21 October 2011). "The Qt Project is live!". Nokia. Retrieved 8 February 2012.&#160;
+^ Qt Blog. "Introducing Qt 5.0 | Qt Blog". Digia. Retrieved 19 March 2013.&#160;
+^ "New Features in Qt 5.1". Digia. 3 July 2013. Retrieved 3 July 2013.&#160;
+^ Knoll, Lars (20 May 2014). "Qt 5.3 Released". blog.qt.io. Retrieved 2015-02-26.&#160;
+^ "Qt 5.4 Alpha Available". Digia. 9 September 2014. Retrieved 8 September 2014.&#160;
+^ Jani Heikkinen (17 March 2015). "New Features in Qt 5.5". Qt Project. Retrieved 31 March 2015.&#160;
+^ Qt Project contributors (9 September 2015). "New Features in Qt 5.6". Qt Project. Retrieved 12 September 2015.&#160;
+^ "Trolltech Releases Qt 4.0". KDE. 28 June 2005. Retrieved 5 August 2013.&#160;
+^ "All Modules | Documentation". Qt Project. Retrieved 8 April 2013.&#160;
+^ Qt Blog (19 December 2012). "Introducing Qt 5.0 | Qt Blog". Digia. Retrieved 8 April 2013.&#160;
+^ Kyle Morris (24 December 2012). "Qt 5.0 - Congratulations to the Qt Project". KDE. Retrieved 5 August 2013.&#160;
+^ "QtDoc 5.1: All Modules". Qt Project. Retrieved 8 April 2013.&#160;
+^ "Programming Language Support &amp; Language Bindings". Qt Project. Retrieved 21 August 2013.&#160;
+^ "Qt in the European Space Agency".&#160;
+^ Behind the Scenes at DreamWorks Animation: Making the Apps that Make the Movies.&#160;
+^ UI &amp; System Design Challenges for the NxG Lighting Tool.&#160;
+^ "Lucasfilm Entertainment Company Ltd.".&#160;
+^ "Qt in Visual Effects".&#160;
+^ "Panasonic selects Qt for HD video system".&#160;
+^ "Qt in IP Communications".&#160;
+^ "Qt in Home Media".&#160;
+^ "Qt helped Siemens deliver a C++ development platform for manufacturing software GUIs".&#160;
+^ "Volvo Mobility Systems". Archived from the original on 14 July 2011.&#160;
+^ "Qt helped Walt Disney reduce development time spent on its cross-platform feature film production application".&#160;
+^ "Blizzard's additions/modifications to Qt".&#160;
+^ "Open Source - Electronic Arts".&#160;
+^ "Qt in Autodesk".&#160;
+^ "Qt in visual effects".&#160;
+^ "Qt delivered advanced, cross-platform C++ GUI for Mathematica’s development team".&#160;
+^ "Google Earth Includes a Web Browser". Googlesystem.blogspot.de. 15 June 2010. Retrieved 8 April 2013.&#160;
+^ Verzani, John. Getting Started with RStudio. O'Reilly Media, Inc. p.&#160;4. ISBN&#160;9781449309039.&#160;
+^ "10 Qt Use Cases You Didn’t Know".&#160;
+^ "Qt Interface".&#160;
+^ Mark Walton (2 November 2015). "AMD Radeon Software Crimson: A new name and a new look for Catalyst".&#160;
+^ "The KDE development platform".&#160;
+^ "Trolltech Releases Qt 4.0 | KDE.news". Dot.kde.org. Retrieved 13 November 2011.&#160;
+^ Niels Weber (23 June 2010). "Nokia Qt SDK 1.0 released". Labs.trolltech.com. Retrieved 13 November 2011.&#160;
+^ Digia Plc (9 August 2012). "Digia to acquire Qt from Nokia". Digia Plc. Retrieved 17 October 2014.&#160;
+^ Digia Plc (18 September 2012). "The journey starts today". Digia Plc. Retrieved 17 October 2014.&#160;
+^ "KDE Free Qt Foundation".&#160;
+^ "KDE Free Qt Foundation announcement". June 1998.&#160;
+^ "Software License Agreement" (PDF). Digia. April 13, 2013.&#160;
+^ "Trolltech offers a choice in licensing with the addition of GPL licensing for the upcoming release of Qt". Qt.nokia.com. Retrieved 13 November 2011.&#160;
+^ "Q../Windows Edition history". 5 June 2006. Archived from the original on 31 July 2010.&#160;
+^ E-mail to the kde-cygwin mailing list by Chris January, 4 February 2003
+^ "Qt Non-commercial FAQ". Trolltech. Archived from the original on 5 October 2003.&#160;
+^ "Nokia Corporation Qt GPL Exception Version 1.3". Doc.trolltech.com. 22 July 1999. Retrieved 13 November 2011.&#160;
+^ Nyström, Sebastian (14 January 2009). "Nokia to license Qt under LGPL". Retrieved 17 September 2013.&#160;
+^ "ICS Whitepaper on the Implications of Qt under LGPL for Commercial and Government users" (PDF). Retrieved 13 November 2011.&#160;
+^ Nystrom, Sebastian (7 March 2011). "Nokia and Digia working together to grow the Qt community". Retrieved 8 July 2011.&#160;
+
+
+Bibliography[edit]
+
+
+Summerfield, Mark (23 August 2010). "Advanced Qt Programming: Creating Great Software with C++ and Qt 4" (1st ed.). Addison-Wesley. ISBN&#160;978-0-321-63590-7.&#160;
+Fitzek, Frank H. P.; Mikkonen, Tommi; Torp, Tony (17 May 2010). "Qt for Symbian" (1st ed.). Wiley. ISBN&#160;0-470-75010-3.&#160;
+Blanchette, Jasmin; Summerfield, Mark (14 February 2008). "C++ GUI Programming with Qt 4" (2nd ed.). Prentice Hall. ISBN&#160;978-0-13-235416-5.&#160;
+Summerfield, Mark (28 October 2007). "Rapid GUI Programming with Python and Qt" (1st ed.). Prentice Hall. ISBN&#160;978-0-13-235418-9.&#160;
+Molkentin, Daniel (19 July 2007). "The Book of Qt 4: The Art of Building Qt Applications" (1st ed.). No Starch Press. ISBN&#160;978-1-59327-147-3.&#160;
+Thelin, Johan (3 August 2007). "Foundations of Qt Development" (1st ed.). Apress. ISBN&#160;978-1-59059-831-3.&#160;
+Dalheimer, Matthias (January 2002). "Programming with Qt" (2nd ed.). O'Reilly Media. ISBN&#160;978-0-596-00064-6.&#160;
+Ezust, Alan; Ezust, Paul (10 September 2006). "An Introduction to Design Patterns in C++ with Qt 4" (2nd ed.). Prentice Hall. ISBN&#160;978-0-13-187905-8.&#160;
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Qt.
+
+
+
+
+
+Wikibooks has a book on the topic of: Qt
+
+
+
+Official website
+Official blog
+Official wiki
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Qt
+
+
+
+
+
+
+Technologies
+
+
+
+Meta-object System
+QML
+QtScript
+Qt Quick
+Signals and slots
+
+
+
+
+
+
+
+
+Tools
+
+
+
+qmake
+Qt Creator
+Qt Linguist
+
+
+
+
+
+
+
+
+Bindings
+
+
+
+PHP-Qt
+PyQt
+PySide
+QtRuby
+Qt Jambi
+hbQT
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Digia
+KDE
+Mer
+
+MeeGo
+
+
+Qt Company
+Qt Project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+KDE
+
+
+
+
+
+
+Software
+Compilation
+
+
+
+KDE 1
+KDE 2
+KDE 3
+KDE SC 4
+
+
+
+
+
+
+
+
+
+
+
+KDE Core
+Applications
+
+
+
+
+Development
+
+
+
+Cervisia
+KDbg
+KDESvn
+KDevelop
+KImageMapEditor
+Kompare
+Lokalize
+Quanta Plus
+Umbrello
+
+
+
+
+
+
+
+
+Education
+
+
+
+Cantor
+GCompris
+KAlgebra
+Kanagram
+Kalzium
+KBibTeX
+KGeography
+KLettres
+KHangMan
+Kig
+Kiten
+kst
+KStars
+KTouch
+KTurtle
+KWordQuiz
+LabPlot
+Marble
+RKWard
+Rocs
+Step
+
+
+
+
+
+
+
+
+Games
+
+
+
+KAtomic
+KBounce
+Kolf
+KMines
+
+
+
+
+
+
+
+
+Graphics
+
+
+
+digiKam
+Gwenview
+Karbon
+KColorEdit
+KolourPaint
+KPhotoAlbum
+KPovModeler
+Krita
+KSnapshot
+Skanlite
+
+
+
+
+
+
+
+
+Internet
+
+
+
+Akregator
+KGet
+KMail
+KMLDonkey
+KNode
+Konqueror
+Konversation
+Kopete
+Kppp
+KRDC
+KTorrent
+Rekonq
+
+
+
+
+
+
+
+
+Multimedia
+
+
+
+Dragon Player
+JuK
+K3b
+K9Copy
+Kaffeine
+Kdenlive
+
+
+
+
+
+
+
+
+Office
+
+
+
+Okular
+Calligra Suite
+
+Words
+Sheets
+Stage
+Flow
+Karbon
+Krita
+Kexi
+Plan
+
+
+KAddressBook
+Kile
+KMyMoney
+Kontact
+KOrganizer
+KPilot
+Tellico
+
+
+
+
+
+
+
+
+System
+
+
+
+Dolphin
+KDE Partition Manager
+KDE System Guard
+KInfoCenter
+Konsole
+Yakuake
+
+
+
+
+
+
+
+
+Utilities
+
+
+
+Ark
+Filelight
+KAlarm
+Kate
+KCalc
+KGPG
+Klipper
+KJots
+Krusader
+KRename
+KWallet
+KWrite
+RSIBreak
+
+
+
+
+
+
+
+
+
+
+
+3rd party
+Applications
+
+
+
+Amarok
+Avogadro
+QGIS
+qBittorrent
+Transmission-Qt
+Mumble
+ChessX
+Clementine
+Freeseer
+Marble
+Mixxx
+Puddletag
+Subsurface
+Trojitá
+
+
+
+
+
+
+
+
+Platform
+
+
+
+
+User interface
+
+
+
+
+Current
+
+
+
+KWin
+KDE Plasma 5
+Oxygen Project
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+KDesktop
+Kicker
+SuperKaramba
+KDE Plasma 4
+Crystal Project
+
+
+
+
+
+
+
+
+
+
+
+Current
+
+
+
+KWin
+SDDM (5–)
+Qt
+KDE Frameworks 5 (5–)
+
+Akonadi
+Flake
+KJS
+KHTML
+KIO
+ThreadWeaver
+Kiosk
+KIPI
+KParts
+Kross
+Phonon
+Solid
+Sonnet
+Soprano
+Strigi
+XMLGUI
+
+
+
+
+
+
+
+
+
+
+Discontinued
+
+
+
+KDElibs (–3)
+DCOP (3)
+KDE Platform 4 (4)
+KDM (–4)
+NEPOMUK (4.13)
+
+
+
+
+
+
+
+
+freedesktop.org
+(shared)
+
+
+
+AppStream
+D-Bus
+GStreamer
+NetworkManager
+Poppler
+Wayland
+X.Org Server
+PulseAudio
+
+
+
+
+
+
+
+
+
+
+
+Packages
+
+
+
+Calligra Suite
+Accessibility
+Bindings
+Education
+Games
+Graphics
+Multimedia
+Network
+SDK
+Utils
+Web Dev
+Extragear
+
+
+
+
+
+
+
+
+Community
+
+
+
+KDE e.V.
+Akademy
+KDE.News
+Konqi
+
+
+
+
+
+
+
+
+People
+
+
+
+Matthias Kalle Dalheimer
+Matthias Ettrich
+Adriaan de Groot
+Frank Karlitschek
+Celeste Lyn Paul
+Nuno Pinheiro
+Cornelius Schumacher
+Aaron Seigo
+David Vignoni
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Project
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+List of widget toolkits
+
+
+
+
+
+
+Low-level
+
+
+
+BeOS, ZETA, Haiku
+Macintosh Toolbox, Carbon
+Intrinsics
+Intuition
+Windows API
+Xlib
+XCB
+
+
+
+
+
+
+
+
+High-level
+
+
+
+
+
+On AmigaOS
+
+
+
+
+BOOPSI
+MUI
+ReAction GUI
+Zune
+
+
+
+
+
+
+
+
+
+On Mac OS
+and OS X
+
+
+
+
+Carbon
+Cocoa
+MacApp
+MacZoop
+PowerPlant
+
+
+
+
+
+
+
+
+
+On Windows
+
+
+
+
+MFC
+OWL
+Silverlight
+SmartWin++
+VCL
+Windows Forms
+WPF
+WTL
+WinRT XAML
+
+
+
+
+
+
+
+
+
+On Unix,
+under X11
+
+
+
+
+Athena (Xaw)
+InterViews
+LessTif
+Motif
+OPEN LOOK
+
+
+
+
+
+
+
+
+
+Cross-platform,
+by language
+
+
+
+
+
+
+C
+
+
+
+
+GTK+
+IUP
+Tk
+wxC
+XForms
+XVT
+
+
+
+
+
+
+
+
+
+C++
+
+
+
+
+CEGUI
+CLX
+FLTK
+FOX toolkit
+GLUI
+Gtkmm
+JUCE
+Qt
+Rogue Wave Views
+TnFOX
+Ultimate++
+VCF
+Wt
+wxWidgets
+YAAF
+
+
+
+
+
+
+
+
+
+Objective-C
+
+
+
+
+GNUstep
+
+
+
+
+
+
+
+
+
+CLI
+
+
+
+
+Gtk#
+Moonlight
+Tao
+wx.NET
+
+
+
+
+
+
+
+
+
+D
+
+
+
+
+DFL
+DlangUI
+DWT
+GtkD
+QtD
+wxD
+
+
+
+
+
+
+
+
+
+Flash
+
+
+
+
+Apache Flex (MXML)
+
+
+
+
+
+
+
+
+
+Haskell
+
+
+
+
+Gtk2Hs
+wxHaskell
+
+
+
+
+
+
+
+
+
+Java
+
+
+
+
+
+
+desktop
+
+
+
+
+AWT
+FXML (JavaFX)
+Qt Jambi
+Swing
+SWT
+wx4j
+
+
+
+
+
+
+
+
+
+web
+
+
+
+
+GWT
+FXML (JavaFX)
+
+
+
+
+
+
+
+
+
+
+
+
+JavaScript
+
+
+
+
+Dojo Toolkit
+Echo
+Ext JS
+Google Closure
+jQuery UI
+Qooxdoo
+YUI
+
+
+
+
+
+
+
+
+
+Common Lisp
+
+
+
+
+CAPI
+CLIM
+Common Graphics
+Ltk
+McCLIM
+
+
+
+
+
+
+
+
+
+Lua
+
+
+
+
+IUP
+wxLua
+
+
+
+
+
+
+
+
+
+Pascal
+
+
+
+
+LCL
+
+
+
+
+
+
+
+
+
+Object Pascal
+
+
+
+
+CLX
+fpGUI
+IP Pascal
+LCL
+
+
+
+
+
+
+
+
+
+Perl
+
+
+
+
+Perl/Tk
+wxPerl
+
+
+
+
+
+
+
+
+
+PHP
+
+
+
+
+PHP-GTK
+PHP-Qt
+wxPHP
+
+
+
+
+
+
+
+
+
+Python
+
+
+
+
+PyGObject
+PyGTK
+Pyjamas
+PyQt
+PySide
+Tkinter
+wxPython
+
+
+
+
+
+
+
+
+
+Ruby
+
+
+
+
+Shoes
+QtRuby
+wxRuby
+
+
+
+
+
+
+
+
+
+Tcl
+
+
+
+
+Tcl/Tk
+
+
+
+
+
+
+
+
+
+XML
+
+
+
+
+Ample SDK
+GladeXML
+Lively Kernel
+Pyjamas
+Rialto Toolkit
+XAML
+XUI
+XUL
+Wt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Qt_(software)&amp;oldid=690713833"					
+				Categories: 1992 softwareApplication programming interfacesC++ librariesCross-platform softwareDeclarative programmingEmbedded LinuxFormerly proprietary softwareFree computer librariesFree software programmed in C++KDEQt (framework)S60 (software platform)Software using the LGPL licenseWidget toolkitsX-based librariesHidden categories: Use dmy dates from October 2014Commons category with local link same as on WikidataOfficial website different in Wikidata and WikipediaArticles with example C++ code				
+							
+		
+		
+			

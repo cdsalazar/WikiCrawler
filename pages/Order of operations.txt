@@ -1,0 +1,282 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Order of operations
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In mathematics and computer programming, the order of operations (or operator precedence) is a collection of rules that define which procedures to perform first in order to evaluate a given mathematical expression.
+For example, in mathematics and most computer languages, multiplication precedes addition.[1] Thus, in the expression 2 + 3 × 4, the answer is 14 (not 20). Brackets, (&#160;and&#160;), {&#160;and&#160;}, or [&#160;and&#160;]&#160;— which have their own rules&#160;— can indicate an alternate order or reinforce the default order to avoid confusion, thus the preceding expression could be changed to (2 + 3) × 4 to produce 20, or 2 + (3 × 4) to produce 14 (the default if there are no brackets).
+Since the introduction of modern algebraic notation, multiplication has taken precedence over addition.[1][2] Thus 3&#160;+&#160;4&#160;×&#160;5 =&#160;4&#160;×&#160;5&#160;+&#160;3 = 23. When exponents were first introduced in the 16th and 17th centuries, exponents took precedence over both addition and multiplication and could be placed only as a superscript to the right of their base.[1] Thus 3&#160;+&#160;52 = 28 and 3&#160;×&#160;52 =&#160;75. To change the order of operations, originally a vinculum (an overline or underline) was used. Today, parentheses or brackets are used to explicitly denote precedence by grouping parts of an expression that should be evaluated first. Thus resulting in (2&#160;+&#160;3)&#160;×&#160;4 =&#160;20 to force addition to precede multiplication or (3&#160;+&#160;5)2 = 64 to force addition to precede exponentiation.
+
+
+
+Contents
+
+
+1 Definition
+
+1.1 Examples
+1.2 Exceptions
+
+
+2 Mnemonics
+3 Special cases
+4 Calculators
+5 Programming languages
+6 See also
+7 Notes
+8 References
+9 External links
+
+
+
+Definition[edit]
+The order of operations used throughout mathematics, science, technology and many computer programming languages is expressed here:[3]
+
+exponents[1] and roots
+multiplication[1] and division[1]
+addition[1] and subtraction[1]
+
+This means that if a mathematical expression is preceded by one binary operator and followed by another, the operator higher on the list should be applied first.[1] The commutative and associative laws of addition and multiplication allow adding terms in any order, and multiplying factors in any order—but mixed operations must obey the standard order of operations.
+It is helpful to treat division as multiplication by the reciprocal (multiplicative inverse) and subtraction as addition of the opposite (additive inverse). Thus 3/4 =&#160;3&#160;÷&#160;4 = 3&#160;•&#160;¼; in other words the quotient of 3 and 4 equals the product of 3 and &#160;¼. Also 3&#160;−&#160;4 = 3&#160;+&#160;(−4); in other words the difference of 3 and 4 equals the sum of positive three and negative four. Thus, 1 − 3 + 7 can be thought of as the sum of 1, negative 3, and 7, and add in any order: (1 − 3) + 7 = −2 + 7 = 5 and in reverse order (7 − 3) + 1 = 4 + 1 = 5, always keeping the negative sign with the 3.
+The root symbol, √, requires a symbol of grouping around the radicand. The usual symbol of grouping is a bar (called vinculum) over the radicand. Other functions use parentheses around the input to avoid ambiguity. The parentheses are sometimes omitted if the input is a monomial. Thus, sin x = sin(x), but sin x + y = sin(x) + y, because x + y is not a monomial.[1] Some calculators and programming languages require parentheses around function inputs, some do not.
+Stacked exponents are applied from the top down, i.e., from right to left.[1][4]
+Symbols of grouping can be used to override the usual order of operations.[1] Grouped symbols can be treated as a single expression.[1] Symbols of grouping can be removed using the associative and distributive laws, also they can be removed if the expression inside the symbol of grouping is sufficiently simplified so no ambiguity results from their removal.
+Examples[edit]
+
+
+
+A horizontal fractional line also acts as a symbol of grouping:
+
+
+
+For ease in reading, other grouping symbols such as braces, sometimes called curly braces { }, or brackets, sometimes called square brackets [ ], are often used along with parentheses ( ). For example:
+
+
+
+Exceptions[edit]
+There exist differing conventions concerning the unary operator − (usually read "minus"). In written or printed mathematics, the expression −32 is interpreted to mean 0&#160;−&#160;(32)&#160;=&#160;−9,[1][5] but in some applications and programming languages, notably the Microsoft Office Excel (and other spreadsheet applications) and the programming language bc, unary operators have a higher priority than binary operators, that is, the unary minus (negation or +/-) has higher precedence than exponentiation, so in those languages −32 will be interpreted as (−3)2&#160;=&#160;9.[6] This does not apply to the binary minus operator −; for example while the formulas =-2^2 and =0+-2^2 return 4 in Microsoft Excel, the formula =0-2^2 returns −4. In cases where there is the possibility that the notation might be misinterpreted, a binary minus operation can be enforced by explicitly specifying a leading 0 (as in 0-2^2 instead of just -2^2), or parentheses can be used to clarify the intended meaning.
+Similarly, there can be ambiguity in the use of the slash ('/') symbol in expressions such as 1/2x. If one rewrites this expression as 1 ÷ 2 × x and then interprets the division symbol as indicating multiplication by the reciprocal, this becomes:
+
+
+
+With this interpretation 1/2x is equal to (1/2)x.[1][7] However, in some of the academic literature, implied multiplication is interpreted as having higher precedence than division, so that 1/2x equals 1/(2x), not (1/2)x. For example, the manuscript submission instructions for the Physical Review journals state that multiplication is of higher precedence than division with a slash,[8] and this is also the convention observed in prominent physics textbooks such as the Course of Theoretical Physics by Landau and Lifshitz and the Feynman Lectures on Physics.[nb 1] Wolfram Alpha changed in early 2013 to treat implied multiplication the same as explicit multiplication. Formerly, implied multiplication without parentheses was assumed to bind more strongly than explicit multiplication. 2x/2x, 2·x/2·x, and 2(x)/2(x) now all yield x2.[9] Newer Texas Instruments calculators (TI-83 or later) also yield x2 in all three cases.[10]
+Mnemonics[edit]
+Mnemonics are often used to help students remember the rules, but the rules taught by the use of acronyms can be misleading. In the United States the acronym PEMDAS is common. It stands for Parentheses, Exponents, Multiplication, Division, Addition, Subtraction. PEMDAS is often expanded to "Please Excuse My Dear Aunt Sally", with the first letter of each word creating the acronym PEMDAS. Canada uses BEDMAS, standing for Brackets, Exponents, Division, Multiplication, Addition, Subtraction. Most common in the UK and Australia[11] are BODMAS and BIDMAS. In some English speaking countries, Parentheses may be called Brackets, or symbols of inclusion and Exponents may be called either Indices, Powers or Orders, which have the same precedence as Roots or Radicals. Since multiplication and division are of equal precedence, M and D are often interchanged, leading to such acronyms as BOMDAS. The original order of operations in most countries was BODMAS, which stands for Brackets, Orders, Division, Multiplication, Addition, Subtraction. This mnemonic was common until exponentials were added into the mnemonic.[12] [13][14]
+These mnemonics may be misleading when written this way, especially if the user is not aware that multiplication and division are of equal precedence, as are addition and subtraction. Using any of the above rules in the order "addition first, subtraction afterward" would also give the wrong answer to the problem:
+
+
+
+
+
+
+
+The correct answer is 9 (and not 5, as if the addition would be carried out first and the result used with the subtraction afterwards). The best way to understand a combination of addition and subtraction is to think of the subtraction as addition of a negative number. In this case, the problem can be seen as the sum of positive ten, negative three, and positive two:
+
+
+
+
+
+
+
+To emphasize that addition and subtraction have the same precedence (and multiplication and division have the same precedence) the mnemonic is sometimes written P E MD AS; or, simply as PEMA.
+All of these acronyms conflate two different ideas, operations on the one hand and symbols of grouping on the other, which can lead to confusion.
+Special cases[edit]
+If exponentiation is indicated by stacked symbols, the usual rule is to work from the top down, because exponention is right-associative in mathematics[1] thus:
+
+[1][4]
+
+which typically is not equal to . However, some computer systems may resolve the ambiguous expression differently. For example, Microsoft Office Excel evaluates a^b^c as (a^b)^c, which is opposite of normally accepted convention of top-down order of execution for exponentiation. 4^3^2 is evaluated to 4096 in Microsoft Excel 2013, the same as (4^3)^2. The expression 4^(3^2), on the other hand, results in 262144 using the same program. Another difference for the same program is -a^b which is evaluated as (−a)^b instead of −(a^b). For compatibility, the same behavior is observed on LibreOffice.
+Calculators[edit]
+Main article: Calculator input methods
+Different calculators follow different orders of operations. Many simple calculators without a stack implement chain input working left to right without any priority given to different operators, for example giving:
+
+
+
+while more sophisticated calculators will use a more standard priority, for example giving:
+
+
+
+The Microsoft Calculator program uses the former in its standard view and the latter in its scientific and programmer views.
+Chain input expects two operands and an operator. When the next operator is pressed, the expression is immediately evaluated and the answer becomes the left hand of the next operator. Advanced calculators allow entry of the whole expression, grouped as necessary, and evaluates only when the user uses the equals sign.
+Calculators may associate exponents to the left or to the right depending on the model. For example, the expression a ^ b ^ c on the TI-92, the TI-30XII and the TI-30XS MultiView (all Texas Instruments calculators) associate two different ways:
+The TI-92 and the TI-30XS MultiView in "MathPrint Mode" associate to the right, that is:
+
+
+
+a ^ b ^ c = a ^ (b ^ c) = 
+
+
+
+whereas, the TI-30XII and the TI-30XS MultiView in "Classic Mode" associate to the left, that is:
+
+
+
+a ^ b ^ c = (a ^ b) ^ c = 
+
+
+
+An expression like 1/2x is interpreted as 1/(2x) by TI-82, but as (1/2)x by TI-83 and every other TI calculator released since 1996,[10] as well as by all Hewlett-Packard calculators with algebraic notation. While the first interpretation may be expected by some users, only the latter is in agreement with the standard rule that multiplication and division are of equal precedence,[15][16] so 1/2x is read one divided by two and the answer multiplied by x.
+When the user is unsure how a calculator will interpret an expression, it is a good idea to use parentheses so there is no ambiguity.
+Calculators that utilize Reverse Polish Notation (RPN), also known as postfix notation, use a stack to enter formulas without the need for parentheses.
+Programming languages[edit]
+Many programming languages use precedence levels that conform to the order commonly used in mathematics, though some, such as APL, Smalltalk or Occam, have no operator precedence rules (in APL, evaluation is strictly right to left; in Smalltalk and Occam, it's strictly left to right).
+In addition, because many operators are not associative, the order within any single level is usually defined by grouping left to right so that 16/4/4 = (16/4)/4 = 1 rather than 16/(4/4) = 16.
+The logical bitwise operators in C (and all programming languages that borrow precedence rules from C, for example, C++, Perl and PHP) have a precedence level that the creator of the C language considered unsatisfactory.[17] However, many programmers have become accustomed to this order. The relative precedence levels of operators found in many C-style languages are as follows:
+
+
+1
+() &#160; [] &#160; -&gt; &#160; . &#160;&#160;::
+Function call, scope, array/member access
+
+
+2
+&#160;! &#160; ~ &#160; - &#160; + &#160; * &#160; &amp; &#160; sizeof &#160; type cast &#160; ++ &#160; -- &#160;
+(most) unary operators, sizeof and type casts (right to left)
+
+
+3
+* &#160; / &#160;&#160;% MOD
+Multiplication, division, modulo
+
+
+4
++ &#160; -
+Addition and subtraction
+
+
+5
+&lt;&lt; &#160; &gt;&gt;
+Bitwise shift left and right
+
+
+6
+&lt; &#160; &lt;= &#160; &gt; &#160; &gt;=
+Comparisons: less-than, ...
+
+
+7
+== &#160;&#160;!=
+Comparisons: equal and not equal
+
+
+8
+&amp;
+Bitwise AND
+
+
+9
+^
+Bitwise exclusive OR (XOR)
+
+
+10
+|
+Bitwise inclusive (normal) OR
+
+
+11
+&amp;&amp;
+Logical AND
+
+
+12
+||
+Logical OR
+
+
+13
+&#160;?&#160;:
+Conditional expression (ternary)
+
+
+14
+= &#160; += &#160; -= &#160; *= &#160; /= &#160;&#160;%= &#160; &amp;= &#160; |= &#160; ^= &#160; &lt;&lt;= &#160; &gt;&gt;=
+Assignment operators (right to left)
+
+
+15
+,
+Comma operator
+
+
+Examples:
+
+!A +&#160;!B ≡ (!A) + (!B)
+++A +&#160;!B ≡ (++A) + (!B)
+A + B * C ≡ A + (B * C)
+A || B &amp;&amp; C ≡ A || (B &amp;&amp; C)
+A &amp;&amp; B == C ≡ A &amp;&amp; (B == C)
+A &amp; B == C ≡ A &amp; (B == C)
+
+Source-to-source compilers that compile to multiple languages need to explicitly deal with the issue of different order of operations across languages. Haxe for example standardizes the order and enforces it by inserting brackets where it is appropriate.[18]
+The accuracy of software developer knowledge about binary operator precedence has been found to closely follow their frequency of occurrence in source code.[19]
+See also[edit]
+
+Associativity
+Common operator notation (for a more formal description)
+Commutativity
+Distributivity
+Hyperoperation
+Operator (programming)
+Operator associativity
+Operator overloading
+Operator precedence in C and C++
+Reverse Polish Notation (RPN)
+
+Notes[edit]
+
+^ For example, the third edition of Mechanics by Landau and Lifshitz contains expressions such as hPz/2π (p. 22), and the first volume of the Feynman Lectures contains expressions such as 1/2√N (p. 6–8). In both books these expressions are written with the convention that the solidus is evaluated last.
+
+References[edit]
+
+^ a b c d e f g h i j k l m n o p q Bronstein, Ilja Nikolaevič; Semendjajew, Konstantin Adolfovič (1987) [1929]. "2.4.1.1.". In Grosche, Günter; Ziegler, Viktor; Ziegler, Dorothea. Taschenbuch der Mathematik (in German) 1. Translated by Ziegler, Viktor. Weiß, Jürgen (23 ed.). Thun and Frankfurt am Main: Verlag Harri Deutsch (and B. G. Teubner Verlagsgesellschaft, Leipzig). pp.&#160;115–120. ISBN&#160;3-87144-492-8.&#160;
+^ "Ask Dr. Math". Math Forum. 22 November 2000. Retrieved 5 March 2012.&#160;
+^ "Order of Operations Lessons". Algebra.Help. Retrieved 5 March 2012.&#160;
+^ a b Olver, Frank W. J.; Lozier, Daniel W.; Boisvert, Ronald F.; Clark, Charles W., eds. (2010). NIST Handbook of Mathematical Functions. National Institute of Standards and Technology (NIST), U.S. Department of Commerce, Cambridge University Press. ISBN&#160;978-0-521-19225-5. MR&#160;2723248.&#160;[1]
+^ Allen R. Angel, Elementary Algebra for College Students 8/E; Chapter 1, Section 9, Objective 3
+^ "Formula Returns Unexpected Positive Value". Support.microsoft.com. 15 August 2005. Retrieved 5 March 2012.&#160;
+^ "division and multiplication have the same priority", http://www.mathcentre.ac.uk/resources/uploaded/mc-ty-rules-2009-1.pdf
+^ "Physical Review Style and Notation Guide" (PDF). American Physical Society. Section IV–E–2–e. Retrieved 5 August 2012.&#160;
+^ "2x/2x, 2*x/2*x, 2(x)/2(x) – Wolfram|Alpha". Wolframalpha.com. Retrieved 11 February 2013.&#160;
+^ a b "Implied Multiplication Versus Explicit Multiplication on TI Graphing Calculators". Texas Instruments. 2011-01-16. 11773. Archived from the original on 2013-02-04. Retrieved 2015-08-24.&#160;
+^ http://syllabus.bos.nsw.edu.au/assets/global/files/maths_s3_sampleu1.doc
+^ http://www.mathcentre.ac.uk/resources/uploaded/mc-ty-rules-2009-1.pdf
+^ "Please Excuse My Dear Aunt Sally (PEMDAS)--Forever!". Education Week - Coach G's Teaching Tips. 1 January 2011.&#160;
+^ "What is PEMDAS? - Definition, Rule &amp; Examples". Study.com.&#160;
+^ Zachary, Joseph L. (1997). "Introduction to scientific programming - Computational problem solving using Maple and C - Operator precedence worksheet". Retrieved 2015-08-25.&#160;
+^ Zachary, Joseph L. (1997). "Introduction to scientific programming - Computational problem solving using Mathematica and C - Operator precedence notebook". Retrieved 2015-08-25.&#160;
+^ Dennis M. Ritchie: The Development of the C Language. In History of Programming Languages, 2nd ed., ACM Press 1996.
+^ 6÷2(1+2)=? Andy Li's Blog. 2 May 2011. Retrieved 31 December 2012.
+^ "Developer beliefs about binary operator precedence" Derek M. Jones, CVu 18(4):14–21
+
+External links[edit]
+
+Order of operations at PlanetMath.org.
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Order_of_operations&amp;oldid=691012454"					
+				Categories: Abstract algebraAlgebraMnemonicsOperators (programming)Hidden categories: CS1 German-language sources (de)Use dmy dates from February 2015				
+							
+		
+		
+			

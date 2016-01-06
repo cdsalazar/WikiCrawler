@@ -1,0 +1,295 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Bottom type
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In type theory, a theory within mathematical logic, the bottom type is the type that has no values. It is also called the zero or empty type, and is sometimes denoted with falsum (⊥).
+A function whose return type is bottom cannot return any value. In the Curry–Howard correspondence, the bottom type corresponds to falsity.
+
+
+
+Contents
+
+
+1 Computer science applications
+2 In programming languages
+3 See also
+4 References
+5 Further reading
+
+
+
+Computer science applications[edit]
+The bottom type is a subtype of all types.[1] (However, the converse is not true—a subtype of all types is not necessarily the bottom type.) It is used to represent the return type of a function that does not return a value: for instance, one which loops forever, signals an exception, or exits.
+Because the bottom type is used to indicate the lack of a normal return, it typically has no values. It contrasts with the top type, which spans all possible values in a system, and a unit type, which has exactly one value. The bottom type is sometimes confused with the so-called "void type", which is actually a unit type, albeit one with no defined operations.
+The bottom type is frequently used for the following purposes:
+
+To signal that a function or computation diverges; in other words, does not return a result to the caller. (This does not necessarily mean that the program fails to terminate; a subroutine may terminate without returning to its caller, or exit via some other means such as a continuation.)
+
+When coupled with the Curry–Howard correspondence interpretation of bottom as "falsity", this yields a computational interpretation of non-constructive logic in terms of control flow operators.[2]
+
+
+As an indication of error; this usage primarily occurs in theoretical languages where distinguishing between errors is unimportant. Production programming languages typically use other methods, such as option types (including tagged pointers) or exception handling.
+
+In Bounded Quantification with Bottom,[1] Pierce says that "Bot" has many uses:
+
+In a language with exceptions, a natural type for the raise construct is raise&#160;∈&#160;exception&#160;-&gt;&#160;Bot, and similarly for other control structures. Intuitively, Bot here is the type of computations that do not return an answer.
+Bot is useful in typing the "leaf nodes" of polymorphic data structures. For example, List(Bot) is a good type for nil.
+Bot is a natural type for the "null pointer" value (a pointer which does not point to any object) of languages like Java: in Java, the null type is the universal subtype of reference types. null is the only value of the null type; and it can be cast to any reference type.[3] However, the null type does not satisfy all the properties of a bottom type as described above, because bottom types cannot have any possible values, and the null type has the value null.
+A type system including both Top and Bot seems to be a natural target for type inference, allowing the constraints on an omitted type parameter to be captured by a pair of bounds: we write S&lt;:X&lt;:T to mean "the value of X must lie somewhere between S and T." In such a scheme, a completely unconstrained parameter is bounded below by Bot and above by Top.
+
+In programming languages[edit]
+Most commonly used languages don't have a way to explicitly denote the empty type. There are a few notable exceptions.
+Haskell does not support empty data types. However, in GHC, there is a flag -XEmptyDataDecls to allow the definition data Empty (with no constructors). The type Empty is not quite empty, as it contains non-terminating programs and the undefined constant. The undefined constant is often used when you want something to have the empty type, because undefined matches any type (so is kind of a "subtype" of all types), and attempting to evaluate undefined will cause the program to abort, therefore it never returns an answer.
+In Common Lisp the symbol NIL, amongst its other uses, is also the name of a type that has no values. It is the complement of T which is the top type. The type named NIL is sometimes confused with the type named NULL, which has one value, namely the symbol NIL itself.
+In Scala, the bottom type is denoted as Nothing. Besides its use for functions that just throw exceptions or otherwise don't return normally, it's also used for covariant parameterized types. For example, Scala's List is a covariant type constructor, so List[Nothing] is a subtype of List[A] for all types A. So Scala's Nil, the object for marking the end of a list of any type, belongs to the type List[Nothing].
+In Rust, the bottom type is denoted by !. It is present in the type signature of functions guaranteed to never return, for example by calling panic!() or looping forever.
+See also[edit]
+
+Haskell's Denotational semantics (Discusses the role of Bottom in the denotational semantics of programming languages)
+Top type
+NaN
+Fail-stop
+
+References[edit]
+
+
+^ a b Pierce, Benjamin C. (1997). "Bounded Quantification with Bottom". CiteSeerX: 10.1.1.17.9230.&#160;
+^ Griffin, Timothy G. (1990). "The Formulae-as-Types Notion of Control". Conf. Record 17th Annual ACM Symp. on Principles of Programming Languages, POPL '90, San Francisco, CA, USA, 17-19 Jan 1990. pp.&#160;47–57.&#160;
+^ "Section 4.1: The Kinds of Types and Values". Java Language Specification (3rd ed.).&#160;
+
+
+Further reading[edit]
+
+Pierce, Benjamin C. (2002). Types and Programming Languages. MIT Press. ISBN&#160;0-262-16209-1.&#160;
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Data types
+
+
+
+
+
+
+Uninterpreted
+
+
+
+Bit
+Byte
+Trit
+Tryte
+Word
+
+
+
+
+
+
+
+
+Numeric
+
+
+
+Bignum
+Complex
+Decimal
+Fixed point
+Floating point
+
+Double precision
+Extended precision
+Half precision
+Minifloat
+Octuple precision
+Quadruple precision
+Single precision
+
+
+Integer
+
+signedness
+
+
+Interval
+Rational
+
+
+
+
+
+
+
+
+Text
+
+
+
+Character
+String
+
+null-terminated
+
+
+
+
+
+
+
+
+
+
+Pointer
+
+
+
+Address
+
+physical
+virtual
+
+
+Reference
+
+
+
+
+
+
+
+
+Composite
+
+
+
+Algebraic data type
+
+generalized
+
+
+Array
+Associative array
+Class
+Dependent
+Equality
+Inductive
+List
+Object
+
+metaobject
+
+
+Option type
+Product
+Record
+Set
+Union
+
+tagged
+
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+Boolean
+Bottom type
+Collection
+Enumerated type
+Exception
+Function type
+Opaque data type
+Recursive data type
+Semaphore
+Stream
+Top type
+Type class
+Unit type
+Void
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Abstract data type
+Data structure
+Generic
+Kind
+
+metaclass
+
+
+Parametric polymorphism
+Primitive data type
+Protocol
+
+interface
+
+
+Subtyping
+Type constructor
+Type conversion
+Type system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Bottom_type&amp;oldid=690853536"					
+				Categories: Data typesType theoryNothing				
+							
+		
+		
+			

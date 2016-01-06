@@ -1,0 +1,301 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Opaque pointer
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer programming, an opaque pointer is a special case of an opaque data type, a datatype declared to be a pointer to a record or data structure of some unspecified type.
+Opaque pointers are present in several programming languages including Ada, C, C++, D and Modula-2.
+If the language is strongly typed, programs and procedures that have no other information about an opaque pointer type T can still declare variables, arrays, and record fields of type T, assign values of that type, and compare those values for equality. However, they will not be able to de-reference such a pointer, and can only change the object's content by calling some procedure that has the missing information.
+Opaque pointers are a way to hide the implementation details of an interface from ordinary clients, so that the implementation may be changed without the need to recompile the modules using it. This benefits the programmer as well since a simple interface can be created, and most details can be hidden in another file.[1] This is important for providing binary code compatibility through different versions of a shared library, for example.
+This technique is described in Design Patterns as the Bridge pattern. It is sometimes referred to as "handle classes",[2] the "Pimpl idiom" (for "pointer to implementation idiom"),[3] "Compiler firewall idiom",[4] "d-pointer" or "Cheshire Cat", especially among the C++ community.[2]
+
+
+
+Contents
+
+
+1 Examples
+
+1.1 Ada
+1.2 C
+1.3 C++
+1.4 C#
+
+
+2 See also
+3 References
+4 External links
+
+
+
+Examples[edit]
+Ada[edit]
+
+
+package Library_Interface is
+
+   type Handle is limited private;
+
+   -- Operations...
+
+private
+   type Hidden_Implementation;    -- Defined in the package body
+   type Handle is access Hidden_Implementation;
+end Library_Interface;
+
+The type Handle is an opaque pointer to the real implementation, that is not defined in the specification. Note that the type is not only private (to forbid the clients from accessing the type directly, and only through the operations), but also limited (to avoid the copy of the data structure, and thus preventing dangling references).
+
+
+package body Library_Interface is
+
+   type Hidden_Implementation is record
+      ...    -- The actual implementation can be anything
+   end record;
+
+   -- Definition of the operations...
+
+end Library_Interface;
+
+These types are sometimes called "Taft types"—named after Tucker Taft, the main designer of Ada 95—because they were introduced in the so-called Taft Amendment to Ada 83.[5]
+C[edit]
+
+
+/* obj.h */
+
+struct obj;
+
+/*
+ * The compiler considers struct obj an incomplete type. Incomplete types
+ * can be used in declarations.
+ */
+
+size_t obj_size(void);
+
+int obj_setid(struct obj *, int);
+
+int obj_getid(struct obj *, int *);
+
+
+
+/* obj.c */
+
+#include "obj.h"
+
+struct obj {
+    int id;
+};
+
+/*
+ * The caller will handle allocation.
+ * Provide the required information only
+ */
+
+size_t
+obj_size(void)
+{
+    return sizeof(struct obj);
+}
+
+int
+obj_setid(struct obj *o, int i)
+{
+    if (o == NULL) return -1;
+    o-&gt;id = i;
+    return 0;
+}
+
+int
+obj_getid(struct obj *o, int *i)
+{
+    if (o == NULL || i == NULL) return -1;
+    *i = o-&gt;id;
+    return 0;
+}
+
+This example demonstrates a way to achieve the information hiding (encapsulation) aspect of object-oriented programming using the C language. If someone wanted to change the declaration of struct obj, it would be unnecessary to recompile any other modules in the program that use the obj.h header file unless the API was also changed.
+C++[edit]
+
+
+//header file:
+class PublicClass {
+public:
+    PublicClass();                              // Constructor
+    PublicClass(const PublicClass&amp;);            // Copy constructor
+    PublicClass(PublicClass&amp;&amp;);                 // Move constructor
+    PublicClass&amp; operator=(const PublicClass&amp;); // Copy assignment operator
+    ~PublicClass();                             // Destructor
+    // Other operations...
+
+private:
+    struct CheshireCat;                         // Not defined here
+    CheshireCat* d_ptr;                         // opaque pointer
+};
+
+
+
+//CPP file:
+#include "PublicClass.h"
+
+struct PublicClass::CheshireCat {
+    int a;
+    int b;
+};
+
+PublicClass:: PublicClass()
+    : d_ptr(new CheshireCat()) {
+    // do nothing
+}
+
+PublicClass:: PublicClass(const PublicClass&amp; other)
+    : d_ptr(new CheshireCat(*other.d_ptr)) {
+    // do nothing
+}
+
+PublicClass:: PublicClass(PublicClass&amp;&amp; other) 
+    : d_ptr(other.d_ptr) {
+    other.d_ptr = nullptr;
+}
+
+PublicClass&amp; PublicClass::operator=(const PublicClass &amp;other) {
+    *d_ptr= *other.d_ptr;
+    return *this;
+}
+
+PublicClass::~ PublicClass() {
+    delete d_ptr;
+}
+
+One type of opaque pointer commonly used in C++ class declarations is the d-pointer. The d-pointer is the only private data member of the class and points to an instance of a struct. Named by Arnt Gulbrandsen of Trolltech, this method allows class declarations to omit private data members, except for the d-pointer itself.[6] The result: (a) more of the class implementation is hidden from view; (b) adding new data members to the private struct does not affect binary compatibility; (c) the header file containing the class declaration only needs to #include those other files needed for the class interface, rather than for its implementation. One side benefit is that compilations are faster because the header file changes less often. The d-pointer is heavily used in the Qt and KDE libraries.
+C#[edit]
+See Private class data pattern
+See also[edit]
+
+Application binary interface
+Handle (computing)
+Programming idiom
+
+References[edit]
+
+
+^ Chris McKillop. "Programming Tools — Opaque Pointers". QNX Software Systems. Retrieved 2005-08-29.&#160;
+^ a b Bruce Eckel (2000). "Chapter 5: Hiding the Implementation". Thinking in C++, Volume 1: Introduction to Standard C++ (2nd ed.). Prentice Hall. ISBN&#160;0-13-979809-9.&#160;
+^ Vladimir Batov (2008-01-25). "Making Pimpl Easy". Dr. Dobb's Journal. Retrieved 2008-05-07.&#160;
+^ Herb Sutter. The Joy of Pimpls (or, More About the Compiler-Firewall Idiom)
+^ Robert A. Duff (2002-07-29). "Re: What's its name again?". Newsgroup:&#160;comp.lang.ada. Retrieved 2007-10-11.&#160;
+^ Using a d-Pointer — Why and how KDE implements opaque pointers
+
+
+External links[edit]
+
+
+
+The Wikibook Ada Programming has a page on the topic of: Taft types
+
+
+
+The Pimpl idiom
+Compilation Firewalls
+The Fast Pimpl Idiom
+D-Pointers — KDE TechBase
+When you "XOR the pointer with a random number"[1][2], the result is a "really opaque" pointer [3].
+Making Pimpl Easy, Vladimir Batov
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Application binary interface
+
+
+
+
+
+
+ABI parts and conventions
+
+
+
+Alignment
+Calling convention
+Call stack
+Library
+
+static
+
+
+Machine code
+Memory segmentation
+Name mangling
+Object code
+Opaque pointer
+Position-independent code
+Register allocation
+Relocation
+System call
+Virtual method table
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Binary code compatibility
+Foreign function interface
+Language binding
+Linker
+
+dynamic
+
+
+Loader
+Year 2038 problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Opaque_pointer&amp;oldid=683105195"					
+				Categories: Data typesC++Hidden categories: Articles with example C++ code				
+							
+		
+		
+			

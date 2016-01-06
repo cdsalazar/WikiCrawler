@@ -1,0 +1,343 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			C++ Technical Report 1
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				C++ Technical Report 1 (TR1) is the common name for ISO/IEC TR 19768, C++ Library Extensions, which was a document proposing additions to the C++ standard library for the C++03 language standard. The additions include regular expressions, smart pointers, hash tables, and random number generators. TR1 was not a standard itself, but rather a draft document. However, most of its proposals became part of the later official standard, C++11. Before C++11 was standardized, vendors used this document as a guide to create extensions. The report's goal was "to build more widespread existing practice for an expanded C++ standard library."
+The report was first circulated in draft form in 2005 as Draft Technical Report on C++ Library Extensions, then published in 2007 as an ISO/IEC standard as ISO/IEC TR 19768:2007.
+
+
+
+Contents
+
+
+1 Overview
+2 Components
+
+2.1 General utilities
+2.2 Function objects
+2.3 Metaprogramming and type traits
+2.4 Numerical facilities
+
+2.4.1 Random number generation
+2.4.2 Mathematical special functions
+
+
+2.5 Containers
+
+2.5.1 Tuple types
+2.5.2 Fixed size array
+2.5.3 Hash tables
+
+
+2.6 Regular expressions
+2.7 C compatibility
+
+
+3 Technical Report 2
+4 See also
+5 Notes
+6 References
+7 External links
+
+
+
+Overview[edit]
+Compilers did not need to include the TR1 components in order to conform to the C++ standard, because TR1 proposals were not part of the standard itself, only a set of possible additions that were still to be ratified. However, most of TR1 was available from Boost, and several compiler/library distributors implemented all or some of the components. TR1 is not the complete list of additions to the library to appear in the next standard, C++11. For example, C++11 includes a thread support library that is not available in TR1.
+The new components were defined in the std::tr1 namespace to distinguish them from the then-current standard library.
+There is also a second technical report, C++ Technical Report 2, planned to be published after C++11.[1]
+Components[edit]
+TR1 includes the following components:
+General utilities[edit]
+Reference wrapper – enables passing references, rather than copies, into algorithms or function objects. The feature was based on Boost.Ref.[2] A wrapper reference is obtained from an instance of the template class reference_wrapper. Wrapper references are similar to normal references (‘&amp;’) of the C++ language. To obtain a wrapper reference from any object the template class ref is used (for a constant reference cref is used).
+Wrapper references are useful above all for template functions, when argument deduction would not deduce a reference (e.g. when forwarding arguments):
+
+
+#include &lt;iostream&gt;
+#include &lt;tr1/functional&gt;
+
+void f( int &amp;r )  { ++r; }
+
+template&lt; class Funct, class Arg &gt;
+void g( Funct f, Arg t )
+{
+  f(t);
+}
+
+int main()
+{
+  int i = 0;
+
+  g( f, i );                   // 'g&lt; void(int &amp;r), int &gt;' is instantiated
+  std::cout &lt;&lt; i &lt;&lt; "\n";      // Output: 0
+
+  g( f, std::tr1::ref(i) );    // 'g&lt; void(int &amp;r), reference_wrapper&lt;int&gt; &gt;' is instanced
+  std::cout &lt;&lt; i &lt;&lt; "\n";      // Output: 1
+}
+
+Smart pointers – adds several classes that simplify object lifetime management in complex cases. Three main classes are added:
+
+shared_ptr – a reference-counted smart pointer
+weak_ptr – a variant of shared_ptr that doesn't increase the reference count
+
+The proposal is based on Boost Smart Pointer library.[3]
+Function objects[edit]
+These four modules are added to the &lt;functional&gt; header file:
+Polymorphic function wrapper (function) – can store any callable function (function pointers, member function pointers, and function objects) that uses a specified function call signature. The type does not depend on the kind of the callable used. Based on Boost.Function[4]
+Function object binders (bind) – can bind any parameter parameters to function objects. Function composition is also allowed. This is a generalized version of the standard std::bind1st and std::bind2nd bind functions. The feature is based on Boost Bind library.[5]
+Function return types (result_of) – determines the type of a call expression.
+mem_fn – enhancement to the standard std::mem_fun and std::mem_fun_ref. Allows pointers to member functions to be treated as function objects. Based on Boost Mem Fn library.[6]
+Metaprogramming and type traits[edit]
+There is now &lt;type_traits&gt; header file that contains many useful trait meta-templates, such as is_pod, has_virtual_destructor, remove_extent, etc. It facilitates metaprogramming by enabling queries on and transformation between different types. The proposal is based on Boost Type Traits library.[7]
+Numerical facilities[edit]
+Random number generation[edit]
+
+new &lt;random&gt; header file – variate_generator, mersenne_twister, poisson_distribution, etc.
+utilities for generating random numbers using any of several Pseudorandom number generators, engines, and probability distributions
+
+Mathematical special functions[edit]
+Some features of TR1, such as the mathematical special functions and certain C99 additions, are not included in the Visual C++ implementation of TR1. The Mathematical special functions library was not standardized in C++11.
+
+additions to the &lt;cmath&gt;/&lt;math.h&gt; header files – beta, legendre, etc.
+
+These functions will likely be of principal interest to programmers in the engineering and scientific disciplines.
+The following table shows all 23 special functions described in TR1.
+
+
+Function name
+Function prototype
+Mathematical expression
+
+
+Associated Laguerre polynomials
+double assoc_laguerre( unsigned n, unsigned m, double x )&#160;;
+
+
+
+Associated Legendre polynomials
+double assoc_legendre( unsigned l, unsigned m, double x )&#160;;
+
+
+
+Beta function
+double beta( double x, double y )&#160;;
+
+
+
+Complete elliptic integral of the first kind
+double comp_ellint_1( double k )&#160;;
+
+
+
+Complete elliptic integral of the second kind
+double comp_ellint_2( double k )&#160;;
+
+
+
+Complete elliptic integral of the third kind
+double comp_ellint_3( double k, double nu )&#160;;
+
+
+
+Confluent hypergeometric functions
+double conf_hyperg( double a, double c, double x )&#160;;
+
+
+
+Regular modified cylindrical Bessel functions
+double cyl_bessel_i( double nu, double x )&#160;;
+
+
+
+Cylindrical Bessel functions of the first kind
+double cyl_bessel_j( double nu, double x )&#160;;
+
+
+
+Irregular modified cylindrical Bessel functions
+double cyl_bessel_k( double nu, double x )&#160;;
+
+
+
+Cylindrical Neumann functions
+Cylindrical Bessel functions of the second kind
+
+double cyl_neumann( double nu, double x )&#160;;
+
+
+
+Incomplete elliptic integral of the first kind
+double ellint_1( double k, double phi )&#160;;
+
+
+
+Incomplete elliptic integral of the second kind
+double ellint_2( double k, double phi )&#160;;
+
+
+
+Incomplete elliptic integral of the third kind
+double ellint_3( double k, double nu, double phi )&#160;;
+
+
+
+Exponential integral
+double expint( double x )&#160;;
+
+
+
+Hermite polynomials
+double hermite( unsigned n, double x )&#160;;
+
+
+
+Hypergeometric series
+double hyperg( double a, double b, double c, double x )&#160;;
+
+
+
+Laguerre polynomials
+double laguerre( unsigned n, double x )&#160;;
+
+
+
+Legendre polynomials
+double legendre( unsigned l, double x )&#160;;
+
+
+
+Riemann zeta function
+double riemann_zeta( double x )&#160;;
+
+
+
+Spherical Bessel functions of the first kind
+double sph_bessel( unsigned n, double x )&#160;;
+
+
+
+Spherical associated Legendre functions
+double sph_legendre( unsigned l, unsigned m, double theta )&#160;;
+
+
+
+Spherical Neumann functions
+Spherical Bessel functions of the second kind
+
+double sph_neumann( unsigned n, double x )&#160;;
+
+
+
+Each function has two additional variants. Appending the suffix ‘f’ or ‘l’ to a function name gives a function that operates on float or long double values respectively. For example:
+
+
+float sph_neumannf( unsigned n, float x ) ;
+long double sph_neumannl( unsigned n, long double x ) ;
+
+Containers[edit]
+Tuple types[edit]
+
+new &lt;tuple&gt; header file – tuple
+based on Boost Tuple library[8]
+vaguely an extension of the standard std::pair
+fixed size collection of elements, which may be of different types
+
+Fixed size array[edit]
+
+new &lt;array&gt; header file – array
+taken from Boost Array library[9]
+as opposed to dynamic array types such as the standard std::vector
+
+Hash tables[edit]
+
+new &lt;unordered_set&gt;, &lt;unordered_map&gt; header files
+they implement the unordered_set, unordered_multiset, unordered_map, and unordered_multimap classes, analogous to set, multiset, map, and multimap, respectively
+
+unfortunately, unordered_set and unordered_multiset cannot be used with the set_union, set_intersection, set_difference, set_symmetric_difference, and includes standard library functions, which work for set and multiset
+
+
+new implementation, not derived from an existing library, not fully API compatible with existing libraries
+like all hash tables, often provide constant time lookup of elements but the worst case can be linear in the size of the container
+
+Regular expressions[edit]
+
+new &lt;regex&gt; header file – regex, regex_match, regex_search, regex_replace, etc.
+based on Boost RegEx library[10]
+pattern matching library
+
+C compatibility[edit]
+C++ is designed to be compatible with the C programming language, but is not a strict superset of C due to diverging standards. TR1 attempts to reconcile some of these differences through additions to various headers in the C++ library, such as &lt;complex&gt;, &lt;locale&gt;, &lt;cmath&gt;, etc. These changes help to bring C++ more in line with the C99 version of the C standard (not all parts of C99 are included in TR1).
+Technical Report 2[edit]
+In 2005, a request for proposals for a TR2 was made with a special interest in Unicode, XML/HTML, Networking and usability for novice programmers.[3].
+Some of the proposals included:
+
+Threads [4]
+The Asio C++ library (networking [5][6]).
+Signals/Slots [7][8]
+Filesystem Library [9] – Based on the Boost Filesystem Library, for query/manipulation of paths, files and directories.
+Boost Any Library [10]
+Lexical Conversion Library [11]
+New String Algorithms [12]
+Toward a More Complete Taxonomy of Algebraic Properties for Numeric Libraries in TR2 [13]
+Adding heterogeneous comparison lookup to associative containers for TR2 [14]
+
+After the call was issued for proposals for TR2, ISO procedures were changed, so there will not be a TR2. Instead, enhancements to C++ will be published in a number of Technical Specifications. Some of the proposals listed above are already included in the C++ standard or in draft versions of the Technical Specifications.
+See also[edit]
+
+C++11, standard for the C++ programming language; the library improvements were based on TR1
+C11 (C standard revision), the most recent standard for the C programming language
+Boost library, a large collection of portable C++ libraries, several of which were included in TR1
+Standard Template Library, part of the current C++ Standard Library
+
+Notes[edit]
+
+
+^ [1]
+^ Chapter 22. Boost.Ref – Boost 1.48.0
+^ Smart Pointers – Boost 1.48.0
+^ Chapter 9. Boost.Function – Boost 1.48.0
+^ Boost: bind.hpp documentation – Boost 1.48.0
+^ Boost: mem_fn.hpp documentation – Boost 1.48.0
+^ [2]
+^ The Boost Tuple Library – Boost 1.48.0
+^ Chapter 3. Boost.Array – Boost 1.48.0
+^ Boost.Regex – Boost 1.36.0
+
+
+References[edit]
+
+ISO/IEC JTC1/SC22/WG21 (2005-06-24). "Draft Technical Report on C++ Library Extensions" (PDF).&#160;
+"ISO/IEC TR 19768:2007".&#160;
+Becker, Peter (2006). The C++ Standard Library Extensions: A Tutorial and Reference. Addison-Wesley Professional. ISBN&#160;0-321-41299-0.&#160;
+
+External links[edit]
+
+Scott Meyers' Effective C++: TR1 Information – contains links to the TR1 proposal documents which provide background and rationale for the TR1 libraries.
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=C%2B%2B_Technical_Report_1&amp;oldid=670521781"					
+				Categories: C++ Standard Library				
+							
+		
+		
+			

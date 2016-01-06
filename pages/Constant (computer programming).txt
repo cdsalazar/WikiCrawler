@@ -1,0 +1,226 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Constant (computer programming)
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In computer programming, a constant is an identifier with an associated value which cannot be altered by the program during normal execution – the value is constant.[a] This is contrasted with a variable, which is an identifier with a value that can be changed during normal execution – the value is variable. Constants are useful for both programmers and compilers: for programmers they are a form of self-documenting code and allow reasoning about correctness; while for compilers they allow compile-time and run-time checks that constancy assumptions are not violated, and allow or simplify some compiler optimizations.
+There are various specific realizations of the general notion of a constant, with subtle distinctions that are often overlooked. The most significant are: compile-time (statically-valued) constants, run-time (dynamically-valued) constants, immutable objects, and constant types (const).
+Typical examples of compile-time constants include mathematical constants, values from standards (here maximum transmission unit), or internal configuration values (here characters per line), such as these C examples:
+
+
+const float PI = 3.1415927;  // maximal single float precision
+const unsigned int MTU = 1500;  // Ethernet v2, RFC 894
+const unsigned int COLUMNS = 80;
+
+Typical examples of run-time constants are values calculated based on inputs to a function, such as this C++ example:
+
+
+void f(std::string s) {
+  const size_t l = s.length();
+  // ...
+}
+
+
+
+
+Contents
+
+
+1 Use
+2 Comparison with literals and macros
+3 Dynamically-valued constants
+4 Constant function parameters
+5 Object-oriented constants
+
+5.1 Java
+5.2 C#
+
+
+6 By paradigm
+7 Naming conventions
+8 See also
+9 Notest
+10 References
+
+
+
+Use[edit]
+Some programming languages make an explicit syntactic distinction between constant and variable symbols, for example considering assignment to a constant to be a syntax error, while in other languages they are considered syntactically the same (both simply an identifier), and the difference in treatment is semantic (assignment to an identifier is syntactically valid, but if the identifier is a constant it is semantically invalid).
+Although a constant's value is defined only once, a constant may be referenced many times in a program. Using a constant instead of specifying a value multiple times in the program does not only simplify code maintenance (as in don't repeat yourself), but it can also supply a meaningful name for it and can consolidate such constant bindings to a standard code location (for example, at the beginning or in a separate file).
+Comparison with literals and macros[edit]
+There are several main ways to express a data value that doesn't change during program execution that are consistent across a wide variety of programming languages. One very basic way is by simply writing a literal number, character, or string into the program code, which is straightforward in C, C++, and similar languages.
+In assembly language, literal numbers and characters are done using the "immediate mode" instructions available on most microprocessors. The name "immediate" comes from the values being available immediately from the instruction stream, as opposed to loading them indirectly by looking up a memory address.[1] On the other hand, values longer than the microprocessor's word length, such as strings and arrays, are handled indirectly and assemblers generally provide a "data" pseudo-op to embed such data tables in a program.
+Another way is by defining a symbolic macro. Many high-level programming languages, and many assemblers, offer a macro facility where the programmer can define, generally at the beginning of a source file or in a separate definition file, names for different values. A preprocessor then replaces these names with the appropriate values before compiling, resulting in something functionally identical to using literals, with the speed advantages of immediate mode. Because it can be difficult to maintain code where all values are written literally, if a value is used in any repetitive or non-obvious way, it is often done as a macro.
+A third way is by declaring and defining a variable as being "constant". A global or static variable can be declared (or a symbol defined in assembly) with a keyword qualifier such as const, constant, or final meaning that its value will be set at compile time and should not be changeable at runtime. Compilers generally put static constants in the text section of an object file along with the code itself, as opposed to the data section where non-const initialized data is kept, though some have an option to produce a section specifically dedicated to constants, if so desired. Memory protection can be applied to this area to prevent overwriting of constant variables by errant pointers.
+These "constant variables" differ from literals in a number of ways. Compilers generally place a constant in a single memory location identified by symbol, rather than spread throughout the executable as with a macro. While this precludes the speed advantages of immediate mode, there are advantages in memory efficiency, and debuggers can work with these constants at runtime. Also while macros may be redefined accidentally by conflicting header files in C and C++, conflicting constants are detected at compile time.
+Depending upon the language, constants can be untyped or typed. In C and C++, macros provide the former, while const provides the latter:
+
+
+#define PI 3.1415926535
+
+const float pi2 = 3.1415926535;
+
+while in Ada, there are universal numeric types that can be used, if desired:
+
+
+pi : constant := 3.1415926535;
+
+pi2 : constant float := 3.1415926535;
+
+with the untyped variant being implicitly converted to the appropriate type upon each use.[2]
+Dynamically-valued constants[edit]
+Besides the static constants described above, many procedural languages such as Ada and C++ extend the concept of constantness toward global variables that are created at initialization time, local variables that are automatically created at runtime on the stack or in registers, to dynamically allocated memory that is accessed by pointer, and to parameter lists in function headers.
+Dynamically-valued constants do not designate a variable as residing in a specific region of memory, nor are the values set at compile time. In C++ code such as
+
+
+float func(const float ANYTHING) {
+    const float XYZ = someGlobalVariable*someOtherFunction(ANYTHING);
+    ...
+}
+
+the expression that the constant is initialized to are not themselves constant. Use of constantness is not necessary here for program legality or semantic correctness, but has three advantages:
+
+It is clear to the reader that the object will not be modified further, once set
+Attempts to change the value of the object (by later programmers who do not fully understand the program logic) will be rejected by the compiler
+The compiler may be able to perform code optimizations knowing that the value of the object will not change once created.[3]
+
+Dynamically-valued constants originated as a language feature with ALGOL 68.[3] Studies of Ada and C++ code have shown that dynamically-valued constants are used infrequently, typically for 1% or less of objects, when they could be used much more, as some 40–50% of local, non-class objects are actually invariant once created.[3][4] On the other hand, such "immutable variables" tend to be the default in functional languages since they favour programming styles with no side-effect (e.g., recursion) or make most declarations immutable by default. Some functional languages even forbid side-effects entirely.
+Constantness is often used in function declarations, as a promise that when an object is passed by reference, the called function will not change it. Depending on the syntax, either a pointer or the object being pointed to may be constant, however normally the latter is desired. Especially in C++ and C, the discipline of ensuring that the proper data structures are constant throughout the program is called const-correctness.
+Constant function parameters[edit]
+In C/C++, it is possible to declare the parameter of a function or method as constant. This is a guarantee that this parameter cannot be modified after the first assignment (inadvertently). If the parameter is a pre-defined (built-in) type, it is called by value and cannot be modified. If it is a user-defined type, the variable is the pointer address, which cannot be modified either. However, the content of the object can be modified without limits. Declaring parameters as constants may be a way to signalise that this value should not be changed, but the programmer must keep in mind that checks about modification of an object cannot be done by the compiler.
+Besides this feature, it is in C/C++ also possible to declare a function or method as const. This prevents such functions or methods from modifying anything but local variables.
+In C#, the keyword const exists, but does not have the same effect for function parameters, as it is the case in C/C++. There is, however, a way to "stir" the compiler to do make the check, albeit it is a bit tricky.[5]
+To get the same effect, first, two interfaces are defined
+
+
+public interface IReadable
+{
+    IValueInterface aValue { get; }
+}
+
+public interface IWritable : IReadable
+{
+    IValueInterface aValue { set; }
+}
+
+public class AnObject : IWritable
+{
+    private ConcreteValue _aValue;
+
+    public IValueInterface aValue
+    {
+        get { return _aValue; }
+        set { _aValue = value as ConcreteValue; }
+    }
+}
+
+Then, the defined methods select the right interface with read-only or read/write capabilities:
+
+
+public void doSomething(IReadable aVariable)
+{
+    // Cannot modify aVariable!
+}
+
+public void doSomethingElse(IWritable aVariable)
+{
+    // Can modify aVariable, so be careful!
+}
+
+Object-oriented constants[edit]
+A constant data structure or object is referred to as "immutable" in object-oriented parlance. An object being immutable confers some advantages in program design. For instance, it may be "copied" simply by copying its pointer or reference, avoiding a time-consuming copy operation and conserving memory.
+Object-oriented languages such as C++ extend constantness even further. Individual members of a struct or class may be made const even if the class is not. Conversely, the mutable keyword allows a class member to be changed even if an object was instantiated as const.
+Even functions can be const in C++. The meaning here is that only a const function may be called for an object instantiated as const; a const function doesn't change any non-mutable data.
+C# has both a const and a readonly qualifier; its const is only for compile-time constants, while readonly can be used in constructors and other runtime applications.
+Java[edit]
+Java has a qualifier called final that prevents changing a reference and makes sure it will never point to a different object. This does not prevent changes to the referred object itself. Java's final is basically equivalent to a const pointer in C++. It does not provide the other features of const.
+In Java, the qualifier final states that the affected data member or variable is not assignable, as below:
+
+
+final int i = 3;
+i = 4; // Error! Cannot modify a "final" object
+
+It must be decidable by the compilers where the variable with the final marker is initialized, and it must be performed only once, or the class will not compile. Java's final and C++'s const keywords have the same meaning when applied with primitive variables.
+
+
+const int i = 3; // C++ declaration
+i = 4; // Error!
+
+Considering pointers, a final reference in Java means something similar to const pointer in C++. In C++, one can declare a "const pointer type".
+
+
+Foo *const bar = mem_location; // const pointer type
+
+Here, bar must be initialised at the time of declaration and cannot be changed again, but what it points is modifiable. I.e. *bar = value is valid. It just can't point to another location. Final reference in Java work the same way except it can be declared uninitialized.
+
+
+final Foo i; // a Java declaration
+
+Note: Java does not support pointers.[6] It is because pointers (with restrictions) are the default way of accessing objects in Java, and Java does not use stars to indicate them. For example, i in the last example is a pointer and can be used to access the instance.
+One can also declare a pointer to "read-only" data in C++.
+
+
+const Foo *bar;
+
+Here bar can be modified to point anything, anytime; just that pointed value cannot be modified through bar pointer. There is no equivalent mechanism in Java. Thus there are also no const methods. Const-correctness cannot be enforced in Java, although by use of interfaces and defining a read-only interface to the class and passing this around, one can ensure that objects can be passed around the system in a way that they cannot be modified. Java collections framework provides a way to create unmodifiable wrapper of a Collection via Collections.unmodifiableCollection() and similar methods.
+Methods in Java can be declared "final", but that has a completely unrelated meaning - it means that the method cannot be overridden in subclasses.
+C#[edit]
+In C#, the qualifier readonly has the same effect on data members that final does in Java and the const does in C++; the const modifier in C# has an effect similar (yet typed and class-scoped) to that of #define in C++. (The other, inheritance-inhibiting effect of Java's final when applied to methods and classes is induced in C# with the aid of a third keyword, sealed.)
+Unlike C++, C# does not permit methods and parameters to be marked as const. However one may also pass around read-only subclasses, and the .NET Framework provides some support for converting mutable collections to immutable ones which may be passed as read-only wrappers.
+By paradigm[edit]
+Treatment of constants varies significantly by programming paradigm. Const-correctness is an issue in imperative languages like C++ because by default name bindings typically create variables, which can vary, as the name suggests, and thus if one wishes to mark a binding as constant this requires some additional indication.[b] In other programming language paradigms related issues arise, with some analogs to const-correctness found.
+In functional programming, data are typically constant by default, rather than variable by default. Instead of assigning a value to a variable (a storage space with a name and potentially variable value), one creates a binding of a name to a value, such as by the let construct in many dialects of Lisp. In some functional languages, particularly multiparadigm ones such as Common Lisp, modifying data is commonplace, while in others it is avoided or considered exceptional; this is the case for Scheme (another Lisp dialect), which uses the set! construct to modify data, with the ! exclamation point drawing attention to this. Such languages achieve the goals of const-correctness by default, drawing attention to modification rather than constantness.
+In a number of object-oriented languages (OOLs) there is the concept of an immutable object, which is particularly used for basic types like strings; notable examples include Java, JavaScript, Python, and C#. These languages vary in whether user-defined types can be marked as immutable, and may allow particular fields (attributes) of an object or type to be marked as immutable.
+In some multiparadigm languages that allow both object-oriented and functional styles, both of these features may be combined. For example, in OCaml object fields are immutable by default and must be explicitly marked with the mutable keyword to be mutable, while in Scala bindings are explicitly immutable, defined with val for "value" or explicitly mutable, defined with var for "variable".
+Naming conventions[edit]
+Naming conventions for constant variables vary. Some simply name them as they would any other variable. Others use capitals and underscores for constants in a way similar to their traditional use for symbolic macros, such as SOME_CONSTANT.[7] In Hungarian notation, a "k" prefix signifies constants as well as macros and enumerated types.
+See also[edit]
+
+Address constants for the IBM/360 and Z/Architecture platform
+
+Notest[edit]
+
+
+^ In some cases the expectation of constancy can be circumvented, e.g. using self-modifying code or by overwriting the memory location where the value is stored.
+^ This is not universal: in Ada input parameters and loop parameters are implicitly constant, for instance.
+
+
+References[edit]
+
+
+^ Ex. IBM Systems Information. Instruction Set - Assembler Language Reference for PowerPC.
+^ Booch, Grady (1983). Software Engineering with Ada. Benjamin Cummings. pp.&#160;116–117. ISBN&#160;0-8053-0600-5.&#160;
+^ a b c Schilling, Jonathan L. (April 1995). "Dynamically-Valued Constants: An Underused Language Feature". SIGPLAN Notices 30 (4): 13–20. doi:10.1145/202176.202177.&#160;
+^ Perkins, J. A. Programming Practices: Analysis of Ada Source Developed for the Air Force, Army, and Navy. Proceedings TRI-Ada '89. pp.&#160;342–354. doi:10.1145/74261.74287.&#160;
+^ Timwi (2010-09-09). "Read-only ("const"-like) function parameters of C#". http://stackoverflow.com/: Stack Overflow. Retrieved 2012-05-06. [...] Then you can declare methods whose parameter type “tells” whether it plans on changing the variable or not:. [...] This mimics compile-time checks similar to constness in C++. As Eric Lippert correctly pointed out, this is not the same as immutability. But as a C++ programmer I think you know that.&#160;
+^ "Oracle Technology Network for Java Developers | Oracle Technology Network | Oracle". Java.sun.com. 2013-08-14. Retrieved 2013-08-18.&#160;
+^ Microsoft Office XP Developer: Constant Names
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Constant_(computer_programming)&amp;oldid=684986385"					
+				Categories: Programming constructsHidden categories: Articles with example Java code				
+							
+		
+		
+			

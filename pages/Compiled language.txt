@@ -1,0 +1,281 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Compiled language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article includes a list of references, related reading or external links, but its sources remain unclear because it lacks inline citations. Please improve this article by introducing more precise citations. (January 2013)
+
+
+A compiled language is a programming language whose implementations are typically compilers (translators that generate machine code from source code), and not interpreters (step-by-step executors of source code, where no pre-runtime translation takes place).
+The term is somewhat vague; in principle any language can be implemented with a compiler or with an interpreter. A combination of both solutions is also common: a compiler can translate the source code into some intermediate form (often called bytecode), which is then passed to an interpreter which executes it.
+
+
+
+Contents
+
+
+1 Advantages and disadvantages
+2 Languages
+3 Tools
+4 See also
+5 External links
+
+
+
+Advantages and disadvantages[edit]
+Programs compiled into native code at compile time tend to be quicker than those translated at run time, due to the overhead of the translation process. New technologies such as Just-in-time compilation, and general improvements in the translation process are starting to narrow this gap, though. The mixed solution using bytecode tends to have efficiency somewhere in between.
+Low-level programming languages are typically compiled, especially when efficiency is the primary concern, rather than cross-platform support. For low level languages, there are more one-to-one correspondences between the programmed code and the hardware operations performed by machine code, making it easier for programmers to control CPU and memory usage in fine detail.
+With some effort it is always possible to write compilers even for traditionally interpreted languages. For example, Common lisp can be compiled to Java bytecode, which is interpreted by the Java virtual machine; C code, which is compiled to native machine code; or compiled directly to native code. Programming languages that support multiple compilation targets give greater control to the developer to choose either execution speed or cross-platform compatibility.
+Languages[edit]
+Some languages that are commonly considered to be compiled:
+
+Ada
+ALGOL
+
+Algol 60
+Algol 68
+SMALL
+
+
+BASIC
+C
+
+C++
+Objective-C
+C# (to bytecode)
+D
+
+
+CLEO
+COBOL
+Cobra
+Common Lisp
+Delphi
+Eiffel
+
+Sather
+Ubercode
+
+
+Erlang(to bytecode)
+Factor (later versions)
+Forth
+Fortran
+Go
+Haskell
+Haxe (to bytecode or C++)
+IBM RPG
+Java (to bytecode)
+JOVIAL
+G
+Lisp
+Lush
+Mercury
+ML
+
+Standard ML
+
+Alice
+
+
+OCaml
+
+
+Modula-2
+Modula-3
+Open-URQ
+PureBasic
+Pascal
+PL/I
+Rust
+Scala
+Seed7
+Swift
+Visual Basic
+Visual Foxpro
+Visual Prolog
+
+Tools[edit]
+
+ANTLR
+CodeWorker
+Lex
+Flex
+GNU bison
+Yacc
+
+See also[edit]
+
+Compiler
+Interpreter (computing)
+Interpreted language
+
+External links[edit]
+
+Compiled Languages at DMOZ
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+This programming-language-related article is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Compiled_language&amp;oldid=690545034"					
+				Categories: Programming language topic stubsProgramming language classificationHidden categories: Articles lacking in-text citations from January 2013All articles lacking in-text citationsArticles with DMOZ linksAll stub articles				
+							
+		
+		
+			

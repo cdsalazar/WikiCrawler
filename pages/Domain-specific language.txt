@@ -1,0 +1,570 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Domain-specific language
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Programming paradigms
+
+
+
+
+Action
+Agent-oriented
+Array-oriented
+Automata-based
+Concurrent computing
+
+Relativistic programming
+
+
+Data-driven
+Declarative (contrast: Imperative)
+
+Constraint
+
+Constraint logic
+
+Concurrent constraint logic
+
+
+
+
+Dataflow
+
+Flow-based
+Cell-oriented (spreadsheets)
+Reactive
+
+
+Functional
+
+Functional logic
+Purely functional
+
+
+Logic
+
+Abductive logic
+Answer set
+Concurrent logic
+Functional logic
+Inductive logic
+
+
+
+
+End-user programming
+Event-driven
+
+Service-oriented
+Time-driven
+
+
+Expression-oriented
+Feature-oriented
+Function-level (contrast: Value-level)
+Generic
+Imperative (contrast: Declarative)
+
+Literate
+Procedural
+
+
+Inductive programming
+Language-oriented
+
+Natural language programming
+Discipline-specific
+Domain-specific
+Grammar-oriented
+
+Dialecting
+
+
+Intentional
+
+
+Metaprogramming
+
+Automatic
+Reflective
+
+Attribute-oriented
+
+
+Homoiconic
+Template
+
+Policy-based
+
+
+
+
+Non-structured (contrast: Structured)
+
+Array
+
+
+Nondeterministic
+Parallel computing
+
+Process-oriented
+
+
+Point-free style
+
+Concatenative
+
+
+Semantic
+Structured (contrast: Non-structured)
+
+Block-structured
+Modular (contrast: Monolithic)
+Object-oriented (OOP)
+
+Class-based
+Concurrent
+Prototype-based
+By separation of concerns:
+
+Aspect-oriented
+Role-oriented
+Subject-oriented
+
+
+
+
+Recursive
+
+
+Value-level (contrast: Function-level)
+Probabilistic
+Concept
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+A domain-specific language (DSL) is a computer language specialized to a particular application domain. This is in contrast to a general-purpose language (GPL), which is broadly applicable across domains, and lacks specialized features for a particular domain. There are a wide variety of DSLs, ranging from widely used languages for common domains, such as HTML for web pages, down to languages used by only one or a few pieces of software, such as Emacs Lisp for GNU Emacs and XEmacs. DSLs can be further subdivided by the kind of language, and include domain-specific markup languages, domain-specific modeling languages (more generally, specification languages), and domain-specific programming languages. Special-purpose computer languages have always existed in the computer age, but the term "domain-specific language" has become more popular due to the rise of domain-specific modeling. Simpler DSLs, particularly ones used by a single application, are sometimes informally called mini-languages.
+The line between general-purpose languages and domain-specific languages is not always sharp, as a language may have specialized features for a particular domain but be applicable more broadly, or conversely may in principle be capable of broad application but in practice used primarily for a specific domain. For example, Perl was originally developed as a text-processing and glue language, for the same domain as AWK and shell scripts, but has since become a general-purpose programming language. By contrast, PostScript is a Turing complete language, and in principle can be used for any task, but in practice is narrowly used as a page description language.
+
+
+
+Contents
+
+
+1 Use
+2 Overview
+
+2.1 In design and implementation
+2.2 Programming tools
+
+
+3 Domain-specific language topics
+
+3.1 Usage patterns
+3.2 Design goals
+3.3 Idioms
+
+
+4 Examples
+
+4.1 Game Maker Language
+4.2 Unix shell scripts
+4.3 ColdFusion Markup Language
+4.4 Erlang OTP
+4.5 FilterMeister
+4.6 MediaWiki templates
+4.7 Software engineering uses
+4.8 Metacompilers
+4.9 Unreal Engine before version 4 and other games
+4.10 Rules Engines for Policy Automation
+4.11 Statistical modelling languages
+4.12 Generate model and services to multiple programming Languages
+4.13 Other examples
+
+
+5 Advantages and disadvantages
+6 See also
+7 References
+8 Further reading
+9 External links
+
+
+
+Use[edit]
+The design and use of appropriate DSLs is a key part of domain engineering, by using a language suitable to the domain at hand – this may consist of using an existing DSL or GPL, or developing a new DSL. Language-Oriented Programming considers the creation of special-purpose languages for expressing problems a standard part of the problem solving process. Creating a domain-specific language (with software to support it), rather than reusing an existing language, can be worthwhile if the language allows a particular type of problem or solution to be expressed more clearly than an existing language would allow and the type of problem in question reappears sufficiently often. Pragmatically, a DSL may be specialized to a particular problem domain, a particular problem representation technique, a particular solution technique, or other aspect of a domain.
+Overview[edit]
+A domain-specific language is created specifically to solve problems in a particular domain and is not intended to be able to solve problems outside it (although that may be technically possible). In contrast, general-purpose languages are created to solve problems in many domains. The domain can also be a business area. Some examples of business areas include:
+
+domain-specific language for life insurance policies developed internally in large insurance enterprise
+domain-specific language for combat simulation
+domain-specific language for salary calculation
+domain-specific language for billing
+
+A domain-specific language is somewhere between a tiny programming language and a scripting language, and is often used in a way analogous to a programming library. The boundaries between these concepts are quite blurry, much like the boundary between scripting languages and general-purpose languages.
+In design and implementation[edit]
+Domain-specific languages are languages (or often, declared syntaxes or grammars) with very specific goals in design and implementation. A domain-specific language can be one of a visual diagramming language, such as those created by the Generic Eclipse Modeling System, programmatic abstractions, such as the Eclipse Modeling Framework, or textual languages. For instance, the command line utility grep has a regular expression syntax which matches patterns in lines of text. The sed utility defines a syntax for matching and replacing regular expressions. Often, these tiny languages can be used together inside a shell to perform more complex programming tasks.
+The line between domain-specific languages and scripting languages is somewhat blurred, but domain-specific languages often lack low-level functions for filesystem access, interprocess control, and other functions that characterize full-featured programming languages, scripting or otherwise. Many domain-specific languages do not compile to byte-code or executable code, but to various kinds of media objects: GraphViz exports to PostScript, GIF, JPEG, etc., where Csound compiles to audio files, and a ray-tracing domain- specific language like POV compiles to graphics files. A computer language like SQL presents an interesting case: it can be deemed a domain-specific language because it is specific to a specific domain (in SQL's case, accessing and managing relational databases), and is often called from another application, but SQL has more keywords and functions than many scripting languages, and is often thought of as a language in its own right, perhaps because of the prevalence of database manipulation in programming and the amount of mastery required to be an expert in the language.
+Further blurring this line, many domain-specific languages have exposed APIs, and can be accessed from other programming languages without breaking the flow of execution or calling a separate process, and can thus operate as programming libraries.
+Programming tools[edit]
+Some domain-specific languages expand over time to include full-featured programming tools, which further complicates the question of whether a language is domain-specific or not. A good example is the functional language XSLT, specifically designed for transforming one XML graph into another, which has been extended since its inception to allow (particularly in its 2.0 version) for various forms of filesystem interaction, string and date manipulation, and data typing.
+In model-driven engineering many examples of domain-specific languages may be found like OCL, a language for decorating models with assertions or QVT, a domain-specific transformation language. However languages like UML are typically general purpose modeling languages.
+To summarize, an analogy might be useful: a Very Little Language is like a knife, which can be used in thousands of different ways, from cutting food to cutting down trees. A domain-specific language is like an electric drill: it is a powerful tool with a wide variety of uses, but a specific context, namely, putting holes in things. A General Purpose Language is a complete workbench, with a variety of tools intended for performing a variety of tasks. Domain-specific languages should be used by programmers who, looking at their current workbench, realize they need a better drill, and find that a particular domain-specific language provides exactly that.
+Domain-specific language topics[edit]
+Usage patterns[edit]
+There are several usage patterns for domain-specific languages:[1][2]
+
+processing with standalone tools, invoked via direct user operation, often on the command line or from a Makefile (e.g., grep for regular expression matching, sed, lex, yacc, the GraphViz tool set, etc.)
+domain-specific languages which are implemented using programming language macro systems, and which are converted or expanded into a host general purpose language at compile-time or read-time
+embedded (or internal) domain-specific languages, implemented as libraries which exploit the syntax of their host general purpose language or a subset thereof, while adding domain-specific language elements (data types, routines, methods, macros etc.). (e.g. Embedded SQL, LINQ)
+domain-specific languages which are called (at runtime) from programs written in general purpose languages like C or Perl, to perform a specific function, often returning the results of operation to the "host" programming language for further processing; generally, an interpreter or virtual machine for the domain-specific language is embedded into the host application (e.g. format strings, a regular expression engine)
+domain-specific languages which are embedded into user applications (e.g., macro languages within spreadsheets) and which are (1) used to execute code that is written by users of the application, (2) dynamically generated by the application, or (3) both.
+
+Many domain-specific languages can be used in more than one way.[citation needed] DSL code embedded in a host language may have special syntax support, such as regexes in sed, AWK, Perl or JavaScript, or may be passed as strings.
+Design goals[edit]
+Adopting a domain-specific language approach to software engineering involves both risks and opportunities. The well-designed domain-specific language manages to find the proper balance between these.
+Domain-specific languages have important design goals that contrast with those of general-purpose languages:
+
+domain-specific languages are less comprehensive.
+domain-specific languages are much more expressive in their domain.
+domain-specific languages should exhibit minimum redundancy according to the following subjective definition.
+
+Redundancy of a program is defined as the average number of textual insertions, deletions, or replacements necessary to correctly implement a single stand-alone change in requirements.[citation needed] For a language, this is averaged over programs in the problem domain. This measure is useful because, the smaller it is, the less likely that bugs can be introduced by incompletely implementing changes.[citation needed]
+Idioms[edit]
+In programming, idioms are methods imposed by programmers to handle common development tasks, e.g.:
+
+Ensure data is saved before the window is closed.
+Before conducting expensive tests, perform cheap tests that can rule out need for expensive tests.
+Edit code whenever command-line parameters change because they affect program behavior.
+
+General purpose programming languages rarely support such idioms, but domain-specific languages can describe them, e.g.:
+
+A script can automatically save data.
+A smart test harness can learn what good tests are.
+A domain-specific language can parameterize command line input.
+
+Examples[edit]
+Examples of domain-specific languages include HTML, Logo for pencil-like drawing, Verilog and VHDL hardware description languages, MATLAB and GNU Octave for matrix programming, Mathematica, Maple and Maxima for symbolic mathematics, Specification and Description Language for reactive and distributed systems, spreadsheet formulas and macros, SQL for relational database queries, YACC grammars for creating parsers, regular expressions for specifying lexers, the Generic Eclipse Modeling System for creating diagramming languages, Csound for sound and music synthesis, and the input languages of GraphViz and GrGen, software packages used for graph layout and graph rewriting.
+Game Maker Language[edit]
+The GML scripting language used by GameMaker: Studio is a domain-specific language targeted at novice programmers to easily be able to learn programming. While the language serves as a blend of multiple languages including Delphi, C++, and BASIC, there is a lack of structures, data types, and other features of a full-fledged programming language. Many of the built-in functions are sandboxed for the purpose of easy portability. The language primarily serves to make it easy for anyone to pick up the language and develop a game.
+Unix shell scripts[edit]
+Unix shell scripts give a good example of a domain-specific language for data organization. They can manipulate data in files or user input in many different ways. Domain abstractions and notations include streams (such as stdin and stdout) and operations on streams (such as redirection and pipe). These abstractions combine to make a robust language to talk about the flow and organization of data.
+The language consists of a simple interface (a script) for running and controlling processes that perform small tasks. These tasks represent the idioms of organizing data into a desired format such as tables, graphs, charts, etc.
+These tasks consist of simple control-flow and string manipulation mechanisms that cover a lot of common usages like searching and replacing string in files, or counting occurrences of strings (frequency counting).
+Even though Unix scripting languages are Turing complete, they differ from general purpose languages.
+In practice, scripting languages are used to weave together small Unix tools such as AWK (e.g., gawk), ls, sort or wc.
+ColdFusion Markup Language[edit]
+ColdFusion's associated scripting language is another example of a domain-specific language for data-driven websites. This scripting language is used to weave together languages and services such as Java, .NET, C++, SMS, email, email servers, http, ftp, exchange, directory services, and file systems for use in websites.
+The ColdFusion Markup Language (CFML) includes a set of tags that can be used in ColdFusion pages to interact with data sources, manipulate data, and display output. CFML tag syntax is similar to HTML element syntax.
+Erlang OTP[edit]
+The Erlang Open Telecom Platform was originally designed for use inside Ericsson as a domain-specific language. The language itself offers a platform of libraries to create finite state machines, generic servers and event managers that quickly allow an engineer to deploy applications, or support libraries, that have been shown in industry benchmarks to outperform other languages intended for a mixed set of domains, such as C and C++. The language is now officially open source and can be downloaded from their website.
+FilterMeister[edit]
+FilterMeister is a programming environment, with a programming language that is based on C, for the specific purpose of creating Photoshop-compatible image processing filter plug-ins; FilterMeister runs as a Photoshop plug-in itself and it can load and execute scripts or compile and export them as independent plug-ins. Although the FilterMeister language reproduces a significant portion of the C language and function library, it contains only those features which can be used within the context of Photoshop plug-ins and adds a number of specific features only useful in this specific domain.
+MediaWiki templates[edit]
+The Template feature of MediaWiki is an embedded domain-specific language whose fundamental purpose is to support the creation of page templates and the transclusion (inclusion by reference) of MediaWiki pages into other MediaWiki pages.
+A detailed description of that domain-specific language can be found at the corresponding article at the Wikimedia Foundation's Meta-Wiki.
+Software engineering uses[edit]
+There has been much interest in domain-specific languages to improve the productivity and quality of software engineering. Domain-specific language could possibly provide a robust set of tools for efficient software engineering. Such tools are beginning to make their way into development of critical software systems.
+The Software Cost Reduction Toolkit[3] is an example of this. The toolkit is a suite of utilities including a specification editor to create a requirements specification, a dependency graph browser to display variable dependencies, a consistency checker to catch missing cases in well-formed formulas in the specification, a model checker and a theorem prover to check program properties against the specification, and an invariant generator that automatically constructs invariants based on the requirements.
+A newer development is language-oriented programming, an integrated software engineering methodology based mainly on creating, optimizing, and using domain-specific languages.
+Metacompilers[edit]
+For more details on this topic, see Metacompiler.
+Complementing language-oriented programming, as well as all other forms of domain-specific languages, are the class of compiler writing tools called metacompilers. A metacompiler is not only useful for generating parsers and code generators for domain-specific languages, but a metacompiler itself compiles a domain-specific metalanguage specifically designed for the domain of metaprogramming.
+Besides parsing domain-specific languages, metacompilers are useful for generating a wide range of software engineering and analysis tools. The meta-compiler methodology is often found in program transformation systems.
+Metacompilers that played a significant role in both computer science and the computer industry include Meta-II[4] and its descendent TreeMeta.[5]
+Unreal Engine before version 4 and other games[edit]
+Unreal and Unreal Tournament unveiled a language called UnrealScript. This allowed for rapid development of modifications compared to the competitor Quake (using the Id Tech 2 engine). The Id Tech engine used standard C code meaning C had to be learned and properly applied, while UnrealScript was optimized for ease of use and efficiency. Similarly, the development of more recent games introduced their own specific languages, one more common example is Lua for scripting.
+Rules Engines for Policy Automation[edit]
+Various Business Rules Engines have been developed for automating policy and business rules used in both government and private industry. ILOG, Oracle Policy Automation, DTRules, Drools and others provide support for DSLs aimed to support various problem domains. DTRules goes so far as to define an interface for the use of multiple DSLs within a Rule Set.
+The purpose of Business Rules Engines is to define a representation of business logic in as human readable fashion as possible. This allows both subject matter experts and developers to work with and understand the same representation of the business logic. Most Rules Engines provide both an approach to simplifying the control structures for business logic (for example, using Declarative Rules or Decision Tables) coupled with alternatives to programming syntax in favor of DSLs.
+Statistical modelling languages[edit]
+Statistical modellers have developed domain-specific languages such as Bugs, Jags, and Stan. These languages provide a syntax for describing a Bayesian model, and generate a method for solving it using simulation.
+Generate model and services to multiple programming Languages[edit]
+Generate object handling and services based on a Interface Description Language for a domain specific language such as JavaScript for web applications, HTML for documentation, C++ for high performance code, etc. This is done by cross language frameworks such as Apache Thrift or Google Protocol Buffers.
+Other examples[edit]
+Other prominent examples of domain-specific languages include:
+
+Emacs Lisp
+Game Description Language
+OpenGL Shading Language
+
+Advantages and disadvantages[edit]
+Some of the advantages:[1][2]
+
+Domain-specific languages allow solutions to be expressed in the idiom and at the level of abstraction of the problem domain. The idea is domain experts themselves may understand, validate, modify, and often even develop domain-specific language programs. However, this is seldom the case.[6]
+Domain-specific languages allow validation at the domain level. As long as the language constructs are safe any sentence written with them can be considered safe.[citation needed]
+Domain-specific languages can help to shift the development of business information systems from traditional software developers to the typically larger group of domain-experts who (despite having less technical expertise) have deeper knowledge of the domain.[7]
+
+Some of the disadvantages:
+
+Cost of learning a new language vs. its limited applicability
+Cost of designing, implementing, and maintaining a domain-specific language as well as the tools required to develop with it (IDE)
+Finding, setting, and maintaining proper scope.
+Difficulty of balancing trade-offs between domain-specificity and general-purpose programming language constructs.
+Potential loss of processor efficiency compared with hand-coded software.
+Proliferation of similar non-standard domain-specific languages, for example, a DSL used within one insurance company versus a DSL used within another insurance company.[8]
+Non-technical domain experts can find it hard to write or modify DSL programs by themselves.[6]
+Increased difficulty of integrating the DSL with other components of the IT system (as compared to integrating with a general-purpose language).
+Low supply of experts in a particular DSL tends to raise labor costs.
+Harder to find code examples.
+
+See also[edit]
+
+
+
+
+
+This "see also" section may contain an excessive number of suggestions. Please ensure that only the most relevant suggestions are given and that they are not red links, and consider integrating suggestions into the article itself. (December 2013)
+
+
+
+Architecture description language
+Cognitive dimensions of notations
+Combinator library
+Domain analysis
+Domain-specific entertainment language
+Domain-specific modeling
+Domain-specific multimodeling
+Configuration file
+Fluent interface
+Metacompiler
+Metalinguistic abstraction
+Metamodeling
+Model-driven engineering
+Multi-paradigm programming language
+Programming domain
+Programming paradigm
+Specification and Description Language
+Probabilistic programming language (PLL)
+
+References[edit]
+
+
+^ a b Marjan Mernik, Jan Heering, and Anthony M. Sloane. When and how to develop domain-specific languages. ACM Computing Surveys, 37(4):316–344, 2005.doi:10.1145/1118890.1118892
+^ a b Diomidis Spinellis. Notable design patterns for domain specific languages. Journal of Systems and Software, 56(1):91–99, February 2001. doi:10.1016/S0164-1212(00)00089-3
+^ http://chacs.nrl.navy.mil/publications/CHACS/1998/1998heitmeyer-WIFT.pdf
+^ Shorre, D.V., META II a syntax-oriented compiler writing language, Proceedings of the 1964 19th ACM National Conference, pp. 41.301–41.3011, 1964
+^ C. Stephen Carr, David A. Luther, Sherian Erdmann, 'The TREE-META Compiler-Compiler System: A Meta Compiler System for the Univac 1108 and General Electric 645', University of Utah Technical Report RADC-TR-69-83.
+^ a b Freudenthal, Margus (1 January 2009). "Domain Specific Languages in a Customs Information System". IEEE Software. doi:10.1109/MS.2009.152.&#160;
+^ Aram, Michael; Neumann, Gustaf (2015-07-01). "Multilayered analysis of co-development of business information systems" (PDF). Journal of Internet Services and Applications 6 (1). doi:10.1186/s13174-015-0030-8.&#160;
+^ Miotto, Eric. "On the integration of domain-specific and scientific bodies of knowledge in Model Driven Engineering" (PDF).&#160;
+
+
+
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (September 2009)
+
+
+Further reading[edit]
+
+Dunlavey, "Building Better Applications: a Theory of Efficient Software Development" International Thomson Publishing ISBN 0-442-01740-5, 1994.
+Constance Heitmeyer. Using the SCR Toolset to Specify Software Requirements. Proceedings, Second IEEE Workshop on Industrial Strength Formal Specification Techniques, Boca Raton, FL, Oct. 19, 1998.
+Marjan Mernik, Jan Heering, and Anthony M. Sloane. When and how to develop domain-specific languages. ACM Computing Surveys, 37(4):316–344, 2005. [1] doi:10.1145/1118890.1118892
+Diomidis Spinellis. Notable design patterns for domain specific languages. Journal of Systems and Software, 56(1):91–99, February 2001. doi:10.1016/S0164-1212(00)00089-3
+Terence Parr. The Definitive ANTLR Reference: Building Domain-Specific Languages. ISBN 978-0-9787392-5-6
+James Larus. Spending Moore's Dividend. ISSN:0001-0782. Communications of the ACM. Volume 52, Issue 5 (May 2009).
+Werner Schuster (June 15, 2007). "What's a Ruby DSL and what isn't?". C4Media. Retrieved 2009-09-08.&#160;
+Martin Fowler. Domain Specific Languages. ISBN 978-0-321-71294-3
+Marco Brambilla, Jordi Cabot, Manuel Wimmer, Model Driven Software Engineering in Practice, foreword by Richard Soley (OMG Chairman), Morgan &amp; Claypool, USA, 2012, Synthesis Lectures on Software Engineering #1. 182 pages. ISBN paperback: 9781608458820, ISBN ebook: 9781608458837. http://www.mdse-book.com
+
+External links[edit]
+
+"Minilanguages", The Art of Unix Programming, by Eric S. Raymond
+Martin Fowler on domain-specific languages and Language Workbenches. Also in a video presentation
+Domain-Specific Languages: An Annotated Bibliography
+One Day Compilers: Building a small domain-specific language using OCaml
+Usenix Association: Conference on Domain-Specific Languages (DSL '97) and 2nd Conference on Domain-Specific Languages (DSL '99)
+Internal Domain-Specific Languages
+jEQN example of internal Domain-Specific Language for the Modeling and Simulation of Extended Queueing Networks.
+
+
+Articles
+
+
+External DSLs with Eclipse technology
+"Building Domain-Specific Languages over a Language Framework". CiteSeerX: 10.1.1.50.4685.&#160;
+Using Acceleo with GMF&#160;: Generating presentations from a MindMap DSL modeler
+UML vs. Domain-Specific Languages
+Sagar Sen; et al. "Meta-model Pruning". CiteSeerX: 10.1.1.156.6008.&#160;
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Types of programming languages
+
+
+
+
+
+
+
+
+
+Array
+Aspect-oriented
+Class-based
+Concatenative
+Concurrent
+Data-structured
+Dataflow
+Declarative
+Domain-specific
+Dynamic
+Esoteric
+Event-driven
+Extensible
+Functional
+Imperative
+Logic
+Macro
+Metaprogramming
+Multi-paradigm
+Object-based
+Object-oriented
+Pipeline
+Procedural
+Prototype-based
+Reflective
+Rule-based
+Scripting
+Synchronous
+Templating
+
+
+
+
+
+
+
+
+
+
+
+Assembly
+Compiled
+Interpreted
+Machine
+
+
+
+
+
+
+
+
+
+
+
+Low-level
+High-level
+Very high-level
+
+
+
+
+
+
+
+
+
+
+
+First generation
+Second generation
+Third generation
+Fourth generation
+Fifth generation
+
+
+
+
+
+
+
+
+
+
+
+Non-English-based
+Off-side rule
+Visual
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+GND: 7585264-0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Domain-specific_language&amp;oldid=689874432"					
+				Categories: Domain-specific programming languagesProgramming language classificationHidden categories: All articles with unsourced statementsArticles with unsourced statements from September 2009Articles with unsourced statements from September 2014Articles with unsourced statements from September 2011Articles with excessive see also sections from December 2013Articles lacking in-text citations from September 2009All articles lacking in-text citationsWikipedia articles with GND identifiers				
+							
+		
+		
+			

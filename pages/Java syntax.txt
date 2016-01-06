@@ -1,0 +1,1866 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Java syntax
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article includes a list of references, but its sources remain unclear because it has insufficient inline citations. Please help to improve this article by introducing more precise citations. (January 2014)
+
+
+
+
+
+
+A snippet of Java code with keywords highlighted in bold blue font
+
+
+The syntax of the Java programming language is the set of rules defining how a Java program is written and interpreted.
+The syntax is mostly derived from C and C++. Unlike C++, Java is almost exclusively an object-oriented language. There are no global functions or variables, all code belongs to classes and all values are objects. The only exception is the primitive types, which are not represented by a class instance due to performance reasons (though can be automatically converted to objects and vice versa via autoboxing). Some features like operator overloading or unsigned integer types are omitted to simplify the language and to avoid possible programming mistakes.
+Java syntax is constantly improved in major JDK releases. The latest improvements to the language happened in Java SE 8(Java SE 7 introduced such language features as try-with-resources statements and binary literals).
+
+
+
+Contents
+
+
+1 Basics
+
+1.1 Identifier
+1.2 Keywords
+1.3 Literals
+1.4 Variables
+1.5 Code blocks
+1.6 Comments
+
+
+2 Program structure
+
+2.1 Main method
+2.2 Packages
+2.3 Import declaration
+
+2.3.1 Type import declaration
+2.3.2 Static import declaration
+
+
+
+
+3 Operators
+4 Control structures
+
+4.1 Conditional statements
+
+4.1.1 if statement
+4.1.2 switch statement
+
+
+4.2 Iteration statements
+
+4.2.1 while loop
+4.2.2 do ... while loop
+4.2.3 for loop
+4.2.4 Enhanced for loop
+
+
+4.3 Jump statements
+
+4.3.1 Labels
+4.3.2 break statement
+4.3.3 continue statement
+4.3.4 return statement
+
+
+4.4 Exception handling statements
+
+4.4.1 try-catch-finally statements
+4.4.2 try-with-resources statements
+4.4.3 throw statement
+
+
+4.5 Thread concurrency control
+4.6 assert statement
+
+
+5 Primitive types
+
+5.1 Boxing and unboxing
+
+
+6 Reference types
+
+6.1 Arrays
+
+6.1.1 Initializers
+6.1.2 Multi-dimensional arrays
+
+
+6.2 Classes
+
+6.2.1 Declaration
+6.2.2 Initialization
+6.2.3 Accessing members
+6.2.4 Modifiers
+
+6.2.4.1 Access modifiers
+
+
+6.2.5 Constructors and initializers
+6.2.6 Methods
+
+6.2.6.1 Modifiers
+6.2.6.2 Varargs
+
+
+6.2.7 Fields
+
+6.2.7.1 Modifiers
+
+
+6.2.8 Inheritance
+
+6.2.8.1 Overriding methods
+6.2.8.2 Abstract classes
+
+
+6.2.9 Enumerations
+
+
+6.3 Interfaces
+
+6.3.1 Implementing an interface
+6.3.2 Inheritance
+6.3.3 Annotations
+
+6.3.3.1 Annotation types
+6.3.3.2 Usage of annotations
+
+
+
+
+
+
+7 Generics
+
+7.1 Generic classes
+7.2 Generic methods and constructors
+7.3 Generic interfaces
+
+
+8 See also
+9 References
+10 External links
+
+
+
+Basics[edit]
+Identifier[edit]
+An identifier is the name of an element in the code. There are certain standard naming conventions to follow when selecting names for elements. Identifiers in Java are case-sensitive.
+An identifier can contain:
+
+Any Unicode character that is a letter (including numeric letters like Roman numerals) or digit.
+Currency sign (such as $).
+Connecting punctuation character (such as _).
+
+An identifier cannot:
+
+start with a digit.
+be equal to a reserved keyword, null literal or boolean literal.
+
+Keywords[edit]
+Main article: Java keywords
+
+
+abstract
+continue
+for
+new
+switch
+
+
+assert[Note 1]
+default
+goto[Note 2]
+package
+synchronized
+
+
+boolean
+do
+if
+private
+this
+
+
+break
+double
+implements
+protected
+throw
+
+
+byte
+else
+import
+public
+throws
+
+
+case
+enum[Note 3]
+instanceof
+return
+transient
+
+
+catch
+extends
+int
+short
+try
+
+
+char
+final
+interface
+static
+void
+
+
+class
+finally
+long
+strictfp[Note 4]
+volatile
+
+
+const[Note 2]
+float
+native
+super
+while
+
+
+
+^ Keyword was introduced in J2SE 1.4
+^ a b Keyword is not used
+^ Keyword was introduced in J2SE 5.0
+^ Keyword was introduced in J2SE 1.2
+
+Literals[edit]
+
+
+Integers
+
+
+binary (introduced in Java SE 7)
+0b11110101 (0b followed by a binary number)
+
+
+octal
+0365 (0 followed by an octal number)
+
+
+hexadecimal
+0xF5 (0x followed by a hexadecimal number)
+
+
+decimal
+245 (decimal number)
+
+
+Floating-point values
+
+
+float
+23.5F, .5f, 1.72E3F (decimal fraction with an optional exponent indicator, followed by F)
+
+
+0x.5FP0F, 0x.5P-6f (0x followed by a hexadecimal fraction with a mandatory exponent indicator and a suffix F)
+
+
+double
+23.5D, .5, 1.72E3D (decimal fraction with an optional exponent indicator, followed by optional D)
+
+
+0x.5FP0, 0x.5P-6D (0x followed by a hexadecimal fraction with a mandatory exponent indicator and an optional suffix D)
+
+
+Character literals
+
+
+char
+'a', 'Z', '\u0231' (character or a character escape, enclosed in single quotes)
+
+
+Boolean literals
+
+
+boolean
+true, false
+
+
+null literal
+
+
+null reference
+null
+
+
+String literals
+
+
+String
+"Hello, World" (sequence of characters and character escapes enclosed in double quotes)
+
+
+Characters escapes in strings
+
+
+Unicode character
+\u3876 (\u followed by the hexadecimal unicode code point up to U+FFFF)
+
+
+Octal escape
+\352 (octal number not exceeding 377, preceded by backslash)
+
+
+Line feed
+\n
+
+
+Carriage return
+\r
+
+
+Form feed
+\f
+
+
+Backslash
+\\
+
+
+Single quote
+\'
+
+
+Double quote
+\"
+
+
+Tab
+\t
+
+
+Backspace
+\b
+
+
+Integer literals are of int type by default unless long type is specified by appending L or l suffix to the literal, e.g. 367L. Since Java SE 7 it is possible to include underscores between the digits of a number to increase readability, for example a number 145608987 may be written as 145_608_987.
+Variables[edit]
+Variables are identifiers associated with values. They are declared by writing the variable's type and name, and are optionally initialized in the same statement by assigning a value.
+
+
+int count;      //Declaring an uninitialized variable called 'count', of type 'int'
+count = 35;     //Initializing the variable
+int count = 35; //Declaring and initializing the variable at the same time
+
+Multiple variables of the same type can be declared and initialized in one statement using comma as a delimiter.
+
+
+int a, b;         //Declaring multiple variables of the same type
+int a = 2, b = 3; //Declaring and initializing multiple variables of the same type
+
+Code blocks[edit]
+The separators { and } are used to signify a code block and a new scope. Class members and the body of a method are examples of what can live inside these braces in various contexts.
+Inside of method bodies you can use the braces to create new scopes like so:
+
+
+void doSomething() {
+    int a;
+
+    {
+        int b;
+        a = 1;
+    }
+
+    a = 2;
+    b = 3; // Illegal because the variable is declared in an inner scope.
+}
+
+Comments[edit]
+Java has three kinds of comments: traditional comments, end-of-line comments and documentation comments.
+Traditional comments, also known as block comments, start with /* and end with */, they may span across multiple lines. This type of comment was derived from C and C++.
+
+
+/* This is a multi-line comment.
+It may occupy more than one line. */
+
+End-of-line comments start with // and extend to the end of the current line. This comment type is also present in C++ and in modern C.
+
+
+// This is an end-of-line comment
+
+Documentation comments are processed by Javadoc tool to generate documentation from source files. This type of comment is identical to traditional comments, except it starts with /** and follows conventions defined by the Javadoc tool. Technically these comments are a special kind of traditional comment and they are not specifically defined in the language specification.
+
+
+/**
+ * This is a documentation comment.
+ * 
+ * @author John Doe
+ */
+
+Program structure[edit]
+Java applications consist of collections of classes. Classes exist in packages but can also be nested inside other classes.
+Main method[edit]
+Whether it is a console or a graphical interface application the program must have an entrypoint of some sort. The entrypoint of the Java application is the main method. There can be more than one class with main method, but the main class is always defined externally (e.g. in a manifest file). The method must be static and is passed command-line arguments as an array of strings. Unlike C++ or C# it never returns a value and must return void.
+
+
+public static void main(String[] args) {
+}
+
+Packages[edit]
+Packages are a part of a class name and they are used to group and/or distinguish named entities from other ones. Another purpose of packages is to govern code access together with access modifiers. For example, java.io.InputStream is a fully qualified class name for the class InputStream which is located in the package java.io.
+A package is declared at the start of the file with the package declaration:
+
+
+package myapplication.mylibrary;
+
+public class MyClass {
+}
+
+Classes with the public modifier must be placed in the files with the same name and java extension and put into nested folders corresponding to the package name. The above class myapplication.mylibrary.MyClass will have the following path: "myapplication/mylibrary/MyClass.java".
+Import declaration[edit]
+Type import declaration[edit]
+A type import declaration allows a named type to be referred to by a simple name rather than the full name including the package. Import declarations can be single type import declarations or import-on-demand declarations. Import declarations must be placed at the top of a code file after the package declaration.
+
+
+import java.util.Random; // Single type declaration
+
+public class ImportsTest {
+    public static void main(String[] args) {
+        /* The following line is equivalent to
+         * java.util.Random random = new java.util.Random();
+         * It would've been incorrect without the import declaration */
+        Random random = new Random();
+    }
+}
+
+Import-on-demand declarations allow to import all the types of the package, in the case of type import, or members, in the case of static import, as they are mentioned in the code.
+
+
+import java.util.*;  /*This form of importing classes makes all classes
+    in package java.util available by name, could be used instead of the
+    import declaration in the previous example. */
+import java.*; /*This statement is legal, but does nothing, since there
+    are no classes directly in package java. All of them are in packages
+    within package java. This does not import all available classes.*/
+
+Static import declaration[edit]
+This type of declaration has been available since J2SE 5.0. Static import declarations allow access to static members defined in another class, interface, annotation, or enum; without specifying the class name:
+
+
+import static java.lang.System.out; //'out' is a static field in java.lang.System
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        /* The following line is equivalent to:
+
+           System.out.println("Hello World!");
+
+           and would have been incorrect without the import declaration. */
+        out.println("Hello World!");
+    }
+}
+
+Import-on-demand declarations allow to import all the fields of the type:
+
+
+import static java.lang.System.*;
+    /* This form of declaration makes all
+       fields in the java.lang.System class available by name, and may be used instead
+       of the import declaration in the previous example. */
+
+Enum constants may also be used with static import. For example, this enum is in the package called screen:
+
+
+public enum ColorName {
+    RED, BLUE, GREEN
+};
+
+It is possible to use static import declarations in another class to retrieve the enum constants:
+
+
+import screen.ColorName;
+import static screen.ColorName.*;
+
+public class Dots {
+    /* The following line is equivalent to 'ColorName foo = ColorName.RED',
+       and it would have been incorrect without the static import. */
+    ColorName foo = RED;
+
+    void shift() {
+        /* The following line is equivalent to:
+
+           if (foo == ColorName.RED) foo = ColorName.BLUE; */
+        if (foo == RED) foo = BLUE;
+    }
+}
+
+Operators[edit]
+Operators in Java are similar to those in C++. However, there is no delete operator due to garbage collection mechanisms in Java, and there are no operations on pointers since Java does not support them. Another difference is that Java has an unsigned right shift operator (&gt;&gt;&gt;), while C's right shift operator's signedness is type-dependent. Operators in Java cannot be overloaded.
+
+
+Precedence
+Operator
+Description
+Associativity
+
+
+1
+()
+Method invocation
+Left-to-right
+
+
+[]
+Array access
+
+
+.
+Class member selection
+
+
+2
+++ --
+Postfix increment and decrement[1]
+
+
+3
+++ --
+Prefix increment and decrement
+Right-to-left
+
+
++ -
+Unary plus and minus
+
+
+! ~
+Logical NOT and bitwise NOT
+
+
+(type) val
+Type cast
+
+
+new
+Class instance or array creation
+
+
+4
+* / %
+Multiplication, division, and modulus (remainder)
+Left-to-right
+
+
+5
++ -
+Addition and subtraction
+
+
++
+String concatenation
+
+
+6
+&lt;&lt; &gt;&gt; &gt;&gt;&gt;
+Bitwise left shift, signed right shift and unsigned right shift
+
+
+7
+&lt; &lt;=
+Relational “less than” and “less than or equal to”
+
+
+&gt; &gt;=
+Relational “greater than” and “greater than or equal to”
+
+
+instanceof
+Type comparison
+
+
+8
+== !=
+Relational “equal to” and “not equal to”
+
+
+9
+&amp;
+Bitwise and logical AND
+
+
+10
+^
+Bitwise and logical XOR (exclusive or)
+
+
+11
+|
+Bitwise and logical OR (inclusive or)
+
+
+12
+&amp;&amp;
+Logical conditional-AND
+
+
+13
+||
+Logical conditional-OR
+
+
+14
+c&#160;? t&#160;: f
+Ternary conditional (see ?:)
+Right-to-left
+
+
+15
+=
+Simple assignment
+
+
++= -=
+Assignment by sum and difference
+
+
+*= /= %=
+Assignment by product, quotient, and remainder
+
+
+&lt;&lt;= &gt;&gt;= &gt;&gt;&gt;=
+Assignment by bitwise left shift, signed right shift and unsigned right shift
+
+
+&amp;= ^= |=
+Assignment by bitwise AND, XOR, and OR
+
+
+Control structures[edit]
+Conditional statements[edit]
+if statement[edit]
+if statements in Java are similar to those in C and use the same syntax:
+
+
+if (i == 3) doSomething();
+
+if statement may include optional else block, in which case it becomes an if-then-else statement:
+
+
+if (i == 2) {
+    doSomething();
+} else {
+    doSomethingElse();
+}
+
+Like C, else-if construction does not involve any special keywords, it is formed as a sequence of separate if-then-else statements:
+
+
+if (i == 3) {
+    doSomething();
+} else if (i == 2) {
+    doSomethingElse();
+} else {
+    doSomethingDifferent();
+}
+
+Also, note that the ?: operator can be used in place of simple if statement, for example
+
+
+int a = 1;
+int b = 2;
+int minVal = (a &lt; b) ? a : b;
+
+switch statement[edit]
+Switch statements in Java can use byte, short, char, and int (note: not long) primitive data types or their corresponding wrapper types. Starting with J2SE 5.0, it is possible to use enum types. Starting with Java SE 7, it is possible to use Strings. Other reference types cannot be used in switch statements.
+Possible values are listed using case labels. These labels in Java may contain only constants (including enum constants and string constants). Execution will start after the label corresponding to the expression inside the brackets. An optional default label may be present to declare that the code following it will be executed if none of the case labels correspond to the expression.
+Code for each label ends with the break keyword. It is possible to omit it causing the execution to proceed to the next label, however, a warning will usually be reported during compilation.
+
+
+switch (ch) {
+    case 'A':
+        doSomething(); // Triggered if ch == 'A'
+        break;
+    case 'B':
+    case 'C':
+        doSomethingElse(); // Triggered if ch == 'B' or ch == 'C'
+        break;
+    default:
+        doSomethingDifferent(); // Triggered in any other case
+        break;
+}
+
+Iteration statements[edit]
+Iteration statements are statements that are repeatedly executed when a given condition is evaluated as true. Since J2SE 5.0 Java has four forms of such statements.
+while loop[edit]
+In the while loop the test is done before each iteration.
+
+
+while (i &lt; 10) {
+    doSomething();
+}
+
+do ... while loop[edit]
+In the do ... while loop the test is done after each iteration. Consequently, the code is always executed at least once.
+
+
+// doSomething() is called at least once
+do {
+    doSomething();
+} while (i &lt; 10);
+
+for loop[edit]
+for loops in Java include an initializer, a condition and a counter expression. It is possible to include several expressions of the same kind using comma as delimiter (except in the condition). However, unlike C, comma is just a delimiter and not an operator.
+
+
+for (int i = 0; i &lt; 10; i++) {
+    doSomething();
+}
+ 
+// A more complex loop using two variables
+for (int i = 0, j = 9; i &lt; 10; i++, j -= 3) {
+    doSomething();
+}
+
+Like C, all three expressions are optional; the following loop will be infinite:
+
+
+for (;;) {
+    doSomething();
+}
+
+Enhanced for loop[edit]
+Enhanced for loops have been available since J2SE 5.0. This type of loop uses built-in iterators over arrays and collections to return each item in the given collection. Every element will be returned and reachable in the context of the code block. When the block has been executed the next item will be returned until there are no items remaining. Unlike C# this kind of loop does not involve a special keyword but instead uses a different notation style.
+
+
+for (int i : intArray) {
+    doSomething(i);
+}
+
+Jump statements[edit]
+Labels[edit]
+Labels are given points in code used by break and continue statements. Despite the presence of the goto keyword, it cannot be used to jump to specific points in the code.
+
+
+start:
+someMethod();
+
+break statement[edit]
+The break statement breaks out of the closest loop or switch statement. Execution continues in the statement after the terminated statement, if any.
+
+
+for (int i = 0; i &lt; 10; i++) {
+    while (true) {
+        break;
+    }
+    // Will break to this point
+}
+
+It is possible to break out of the outer loop using labels:
+
+
+outer:
+for (int i = 0; i &lt; 10; i++) {
+    while (true) {
+        break outer;
+    }
+}
+// Will break to this point
+
+continue statement[edit]
+The continue statement discontinues the current iteration of the current control statement and begins the next iteration. The following while loop in the code below reads characters by calling getChar(), skipping the statements in the body of the loop if the characters are spaces:
+
+
+int ch;
+while (ch = getChar()) {
+    if (ch == ' ') {
+        continue; // Skips the rest of the while-loop
+    }
+
+    // Rest of the while-loop, will not be reached if ch == ' '
+    doSomething();
+}
+
+Labels can be specified in continue statements, as they can in break statements:
+
+
+outer:
+for (String str : stringsArr) {
+    char[] strChars = str.toCharArray();
+    for (char ch : strChars) {
+        if (ch == ' ') {
+            /* Continues the outer cycle and the next
+            string is retrieved from stringsArr */
+            continue outer;
+        }
+        doSomething(ch);
+    }
+}
+
+return statement[edit]
+The return statement is used to end method execution and to return a value. A value returned by the method is written after the return keyword. If the method returns anything but void, it must use the return statement to return some value.
+
+
+void doSomething(boolean streamClosed) {
+    // If streamClosed is true, execution is stopped
+    if (streamClosed) {
+        return;
+    }
+    readFromStream();
+}
+
+int calculateSum(int a, int b) {
+    int result = a + b;
+    return result;
+}
+
+return statement ends execution immediately, except for one case: if the statement is encountered within a try block and it is complemented by a finally, control is passed to the finally block.
+
+
+void doSomething(boolean streamClosed) {
+    try {
+        if (streamClosed) {
+            return;
+        }
+        readFromStream();
+    } finally {
+        /* Will be called last even if 
+        readFromStream() was not called */
+        freeResources();
+    }
+}
+
+Exception handling statements[edit]
+try-catch-finally statements[edit]
+Exceptions are managed within try ... catch blocks.
+
+
+try {
+    // Statements that may throw exceptions
+    methodThrowingExceptions();
+} catch (Exception ex) {
+    // Exception caught and handled here
+    reportException(ex);
+} finally {
+    // Statements always executed after the try/catch blocks
+    freeResources();
+}
+
+The statements within the try block are executed, and if any of them throws an exception, execution of the block is discontinued and the exception is handled by the catch block. There may be multiple catch blocks, in which case the first block with an exception variable whose type matches the type of the thrown exception is executed.
+Java SE 7 also introduced multi-catch clauses besides uni-catch clauses. This type of catch clauses allows Java to handle different types of exceptions in a single block provided they are not subclasses of each other.
+
+
+try {
+    methodThrowingExceptions();
+} catch (IOException | IllegalArgumentException ex) {
+    //Both IOException and IllegalArgumentException will be caught and handled here
+    reportException(ex);
+}
+
+If no catch block matches the type of the thrown exception, the execution of the outer block (or method) containing the try ... catch statement is discontinued, and the exception is passed up and outside the containing block (or method). The exception is propagated upwards through the call stack until a matching catch block is found within one of the currently active methods. If the exception propagates all the way up to the top-most main method without a matching catch block being found, a textual description of the exception is written to the standard output stream.
+The statements within the finally block are always executed after the try and catch blocks, whether or not an exception was thrown and even if a return statement was reached. Such blocks are useful for providing clean-up code that is guaranteed to always be executed.
+The catch and finally blocks are optional, but at least one or the other must be present following the try block.
+try-with-resources statements[edit]
+try-with-resources statements are a special type of try-catch-finally statements introduced as an implementation of the dispose pattern in Java SE 7. In a try-with-resources statement the try keyword is followed by initialization of one or more resources that are released automatically when the try block execution is finished. Resources must implement java.lang.AutoCloseable. try-with-resources statements are not required to have a catch or finally block unlike normal try-catch-finally statements.
+
+
+try (FileOutputStream fos = new FileOutputStream("filename");
+    XMLEncoder xEnc = new XMLEncoder(fos))
+{
+    xEnc.writeObject(object);
+} catch (IOException ex) {
+    Logger.getLogger(Serializer.class.getName()).log(Level.SEVERE, null, ex);
+}
+
+throw statement[edit]
+throw statement is used to throw an exception and end block (or method) execution. Thrown exception instance is written after the throw statement.
+
+
+void methodThrowingExceptions(Object obj) {
+    if (obj == null) {
+        // Throws exception of NullPointerException type
+        throw new NullPointerException();
+    }
+    // Will not be called, if object was null
+    doSomethingWithObject(obj);
+}
+
+Thread concurrency control[edit]
+Java has built-in tools for multi-thread programming. For the purposes of thread synchronization the synchronized statement is included in Java language.
+To make a code block synchronized, it is preceded by the synchronized keyword followed by the lock object inside the brackets. When the executing thread reaches the synchronized block, it acquires a mutual exclusion lock, executes the block, then releases the lock. No threads may enter this block until the lock is released. Any non-null reference type may be used as the lock.
+
+
+/* Acquires lock on someObject. It must be of
+a reference type and must be non-null */
+synchronized (someObject) {
+    // Synchronized statements
+}
+
+assert statement[edit]
+assert statements have been available since J2SE 1.4. These types of statements are used to make assertions in the source code, which can be turned on and off during execution for specific classes or packages. To declare an assertion the assert keyword is used followed by a conditional expression. If it evaluates to false during when the statement is executed, an exception is thrown. This statement may include a colon followed by another expression, which will act as the exception's detail message.
+
+
+// If n equals 0, AssertionError is thrown
+assert n != 0;
+/* If n equals 0, AssertionError will be thrown
+with the message after the colon */
+assert n != 0 : "n was equal to zero";
+
+Primitive types[edit]
+Primitive types in Java include integer types, floating-point numbers, UTF-16 code units and a boolean type. There are no unsigned types in Java except char type, which is used to represent UTF-16 code units. The lack of unsigned types is offset by introducing unsigned right shift operation (&gt;&gt;&gt;), which is not present in C++. Nevertheless, criticisms have been levelled about the lack of compatibility with C and C++ this causes.[2]
+
+
+Primitive Types
+
+
+Type Name
+Wrapper class
+Value
+Range
+Size
+Default Value
+
+
+byte
+java.lang.Byte
+integer
+−128 through +127
+8-bit (1-byte)
+0
+
+
+short
+java.lang.Short
+integer
+−32,768 through +32,767
+16-bit (2-byte)
+0
+
+
+int
+java.lang.Integer
+integer
+−2,147,483,648 through +2,147,483,647
+32-bit (4-byte)
+0
+
+
+long
+java.lang.Long
+integer
+−9,223,372,036,854,775,808 through
++9,223,372,036,854,775,807
+64-bit (8-byte)
+0
+
+
+float
+java.lang.Float
+floating point number
+±1.401298E−45 through ±3.402823E+38
+32-bit (4-byte)
+0.0f[3]
+
+
+double
+java.lang.Double
+floating point number
+±4.94065645841246E−324 through
+±1.79769313486232E+308
+64-bit (8-byte)
+0.0
+
+
+boolean
+java.lang.Boolean
+Boolean
+true or false
+1-bit (1-bit)
+false
+
+
+char
+java.lang.Character
+UTF-16 code unit (BMP character
+or a part of a surrogate pair)
+'\u0000' through '\uFFFF'
+16-bit (2-byte)
+'\u0000'
+
+
+char does not necessarily correspond to a single character. It may represent a part of a surrogate pair, in which case Unicode code point is represented by a sequence of two char values.
+Boxing and unboxing[edit]
+This language feature was introduced in J2SE 5.0. Boxing is the operation of converting a value of a primitive type into a value of a corresponding reference type, which serves as a wrapper for this particular primitive type. Unboxing is the reverse operation of converting a value of a reference type (previously boxed) into a value of a corresponding primitive type. Neither operation requires an explicit conversion.
+Example:
+
+
+int foo = 42; // Primitive type
+Integer bar = foo; /* foo is boxed to bar, bar is of Integer type,
+                      which serves as a wrapper for int */
+int foo2 = bar; // Unboxed back to primitive type
+
+Reference types[edit]
+Reference types include class types, interface types, and array types. When the constructor is called an object is created on the heap and a reference is assigned to the variable. When a variable of an object gets out of scope the reference is broken and when there are no references left the object gets marked as garbage. The garbage collector will then collect and destroy it some time afterwards.
+A reference variable is null when it does not reference any object.
+Arrays[edit]
+Arrays in Java are created at runtime, just like class instances. Array length is defined at creation and cannot be changed.
+
+
+int[] numbers = new int[5];
+numbers[0] = 2;
+numbers[1] = 5;
+int x = numbers[0];
+
+Initializers[edit]
+
+
+// Long syntax
+int[] numbers = new int[] {20, 1, 42, 15, 34};
+// Short syntax
+int[] numbers2 = {20, 1, 42, 15, 34};
+
+Multi-dimensional arrays[edit]
+In Java multi-dimensional arrays are represented as arrays of arrays. Technically they are represented by arrays of references to other arrays.
+
+
+int[][] numbers = new int[3][3];
+numbers[1][2] = 2;
+
+int[][] numbers2 = {{2, 3, 2}, {1, 2, 6}, {2, 4, 5}};
+
+Due to the nature of the multi-dimensional arrays, sub-arrays may vary in length, so multi-dimensional arrays are not bound to be rectangular unlike C:
+
+
+int[][] numbers = new int[2][]; //Initialization of the first dimension only
+
+numbers[0] = new int[3];
+numbers[1] = new int[2];
+
+Classes[edit]
+Classes are fundamentals of an object-oriented language such as Java. They contain members that store and manipulate data. Classes are divided into top-level and nested. Nested classes are classes placed inside another class that may access the private members of the enclosing class. Nested classes include member classes (which may be defined with the static modifier for simple nesting or without it for inner classes), local classes and anonymous classes.
+Declaration[edit]
+
+
+Top-level class
+
+
+
+class Foo {
+    // Class members
+}
+
+
+
+
+Inner class
+
+
+
+class Foo { // Top-level class
+    class Bar { // Inner class
+    }
+}
+
+
+
+
+Nested class
+
+
+
+class Foo { // Top-level class
+    static class Bar { // Nested class
+    }
+}
+
+
+
+
+Local class
+
+
+
+class Foo {
+    void bar() {
+        class Foobar {// Local class within a method
+        }
+    }
+}
+
+
+
+
+Anonymous class
+
+
+
+class Foo {
+    void bar() {
+        new Object() {// Creation of a new anonymous class extending Object
+        };
+    }
+}
+
+
+
+
+Initialization[edit]
+To use non-static members of the class it must be instantiated. It is done by using the new keyword and calling the class constructor.
+
+
+Foo foo = new Foo();
+
+Accessing members[edit]
+Members of both instances and static classes are accessed with the . operator.
+Accessing an instance member
+Instance members can be accessed through the name of a variable.
+
+
+String foo = "Hello";
+String bar = foo.toUpperCase();
+
+Accessing a static class member
+Static members are accessed by using the name of the class or any other type. This does not require the creation of a class instance. Static members are declared using the static modifier.
+
+
+public class Foo {
+    public static void doSomething() {
+    }
+}
+
+// Calling the static method
+Foo.doSomething();
+
+Modifiers[edit]
+Modifiers are keywords used to modify declarations of types and type members. Most notably there is a sub-group containing the access modifiers.
+
+abstract - Specifies that a class only serves as a base class and cannot be instantiated.
+
+
+static - Used only for member classes, specifies that the member class does not belong to a specific instance of the containing class.
+
+
+final - Classes marked as final cannot be extended from and cannot have any subclasses.
+
+
+strictfp - Specifies that all floating-point operations must be carried out conforming to IEEE 754 and forbids using enhanced precision to store intermediate results.
+
+Access modifiers[edit]
+The access modifiers, or inheritance modifiers, set the accessibility of classes, methods, and other members. Members marked as public can be reached from anywhere. If a class or its member does not have any modifiers, default access is assumed.
+
+
+public class Foo {
+    int go() {
+        return 0;
+    }
+
+    private class Bar {
+    }
+}
+
+The following table shows whether code within a class has access to the class or method depending on the accessing class location and the modifier for the accessed class or class member:
+
+
+Modifier
+Same class or nested class
+Other class inside the same package
+Extended Class inside another package
+Non-extended inside another package
+
+
+private
+yes
+no
+no
+no
+
+
+default (package private)
+yes
+yes
+no
+no
+
+
+protected
+yes
+yes
+yes
+no
+
+
+public
+yes
+yes
+yes
+yes
+
+
+
+
+
+
+This image describes the class member scope within classes and packages.
+
+
+Constructors and initializers[edit]
+A constructor is a special method called when an object is initialized. Its purpose is to initialize the members of the object. The main differences between constructors and ordinary methods are that constructors are called only when an instance of the class is created and never return anything. Constructors are declared as common methods, but they are named after the class and no return type is specified:
+
+
+class Foo {
+    String str;
+
+    Foo() { // Constructor with no arguments
+        // Initialization
+    }
+
+    Foo(String str) { // Constructor with one argument
+        this.str = str;
+    }
+}
+
+Initializers are blocks of code that are executed when a class or an instance of a class is created. There are two kinds of initializers, static initializers and instance initializers. The purpose of static initializers is to initialize static fields when the class is created. They are declared using static keyword:
+
+
+class Foo {
+    static {
+        // Initialization
+    }
+}
+
+Any class is created only once, therefore static initializers aren't called more than once. On the contrary, instance initializers are automatically called before the call to a constructor every time an instance of the class is created. Unlike constructors instance initializers can't take any arguments and generally they can't throw any checked exceptions (except in several special cases). Instance initializers are declared in a block without any keywords:
+
+
+class Foo {
+    {
+        // Initialization
+    }
+}
+
+Since Java has a garbage collection mechanism, there are no destructors. However, every object has a finalize() method called prior to garbage collection, which could be overridden to implement finalization.
+Methods[edit]
+All the statements in Java must reside within methods. Methods are similar to functions except they belong to classes. A method has a return value, a name and usually some parameters initialized when it is called with some arguments. Similar to C++, methods returning nothing have return type declared as void. Unlike in C++, methods in Java are not allowed to have default argument values and methods are usually overloaded instead.
+
+
+class Foo {
+    int bar(int a, int b) {
+        return (a*2) + b;
+    }
+
+    /* Overloaded method with the same name but different set of arguments */
+    int bar(int a) {
+        return a*2;
+    }
+}
+
+A method is called using . notation on an object, or in the case of a static method, also on the name of a class.
+
+
+Foo foo = new Foo();
+int result = foo.bar(7, 2); // Non-static method is called on foo
+
+int finalResult = Math.abs(result); // Static method call
+
+Methods throwing exceptions use throws keyword to indicate that. All checked exceptions are mandatory to be declared.
+
+
+void openStream() throws IOException { // Indicates that IOException may be thrown
+}
+
+Modifiers[edit]
+
+abstract - Abstract methods can be present only in abstract classes, such methods have no body and must be overridden in a subclass unless it is abstract itself.
+static - Makes the method static and accessible without creation of a class instance. However static methods cannot access non-static members in the same class.
+final - Declares that the method cannot be overridden in a subclass.
+native - Indicates that this method is implemented through JNI in platform-dependent code. Actual implementation happens outside Java code, and such methods have no body.
+strictfp - Declares strict conformance to IEEE 754 in carrying out floating-point operations.
+synchronized - Declares that a thread executing this method must acquire monitor. For synchronized methods the monitor is the class instance or java.lang.Class if the method is static.
+Access modifiers - Identical to those used with classes.
+
+Varargs[edit]
+This language feature was introduced in J2SE 5.0. The last argument of the method may be declared as a variable arity parameter, in which case the method becomes a variable arity method (as opposed to fixed arity methods) or simply varargs method. This allows one to pass a variable number of values, of the declared type, to the method as parameters - including no parameters. These values will be available inside the method as an array.
+
+
+void printReport(String header, int... numbers) { //numbers represents varargs
+    System.out.println(header);
+    for (int num : numbers) {
+        System.out.println(num);
+    }
+}
+
+// Calling varargs method
+printReport("Report data", 74, 83, 25, 96);
+
+Fields[edit]
+Fields, or class variables, can be declared inside the class body to store data.
+
+
+class Foo {
+    double bar;
+}
+
+Fields can be initialized directly when declared.
+
+
+class Foo {
+    double bar = 2.3;
+}
+
+Modifiers[edit]
+
+static - Makes the field a static member.
+final - Allows the field to be initialized only once in a constructor or inside initialization block or during its declaration, whichever is earlier.
+transient - Indicates that this field will not be stored during serialization.
+volatile - If a field is declared volatile, it is ensured that all threads see a consistent value for the variable.
+
+Inheritance[edit]
+Classes in Java may only inherit from one class. A class may derive from any class that is not marked as final. Inheritance is declared using extends keyword. A class may reference itself using this keyword and its direct superclass using super keyword.
+
+
+class Foo {
+
+}
+
+class Foobar extends Foo {
+
+}
+
+If a class does not specify the superclass, it implicitly inherits from java.lang.Object class. Thus all classes in Java are subclasses of Object class.
+Overriding methods[edit]
+Unlike C++, all non-final methods in Java are virtual and can be overridden by the inheriting classes.
+
+
+class Operation {
+    public int doSomething() {
+        return 0;
+    }
+}
+
+class NewOperation extends Operation {
+    @Override
+    public int doSomething() {
+        return 1;
+    }
+}
+
+Abstract classes[edit]
+An Abstract Class is a class that is incomplete, or to be considered incomplete. Normal classes may have abstract methods, that is, methods that are declared but not yet implemented, only if they are abstract classes. A class C has abstract methods if any of the following is true:
+C explicitly contains a declaration of an abstract method.
+Any of C's superclasses has an abstract method and C neither declares nor inherits a method that implements it.
+A direct superinterface of C declares or inherits a method (which is therefore necessarily abstract) and C neither declares nor inherits a method that implements it.
+A subclass of an abstract class that is not itself abstract may be instantiated, resulting in the execution of a constructor for the abstract class and, therefore, the execution of the field initializers for instance variables of that class.
+
+
+package org.dwwwp.test;
+
+/**
+ * @author jcrypto
+ */
+public class AbstractClass {
+    private static final String hello;
+
+    static {
+        System.out.println(AbstractClass.class.getName() + ": static block runtime");
+        hello = "hello from " + AbstractClass.class.getName();
+    }
+
+    {
+        System.out.println(AbstractClass.class.getName() + ": instance block runtime");
+    }
+
+    public AbstractClass() {
+        System.out.println(AbstractClass.class.getName() + ": constructor runtime");
+    }
+
+    public static void hello() {
+        System.out.println(hello);
+    }
+}
+
+
+
+package org.dwwwp.test;
+
+/**
+ * @author jcrypto
+ */
+public class CustomClass extends AbstractClass {
+
+    static {
+        System.out.println(CustomClass.class.getName() + ": static block runtime");
+    }
+
+    {
+        System.out.println(CustomClass.class.getName() + ": instance block runtime");
+    }
+
+    public CustomClass() {
+        System.out.println(CustomClass.class.getName() + ": constructor runtime");
+    }
+
+    public static void main(String[] args) {
+        CustomClass nc = new CustomClass();
+        hello();
+        //AbstractClass.hello();//also valid
+    }
+}
+
+Output:
+
+
+org.dwwwp.test.AbstractClass: static block runtime
+org.dwwwp.test.CustomClass: static block runtime
+org.dwwwp.test.AbstractClass: instance block runtime
+org.dwwwp.test.AbstractClass: constructor runtime
+org.dwwwp.test.CustomClass: instance block runtime
+org.dwwwp.test.CustomClass: constructor runtime
+hello from org.dwwwp.test.AbstractClass
+
+Enumerations[edit]
+This language feature was introduced in J2SE 5.0. Technically enumerations are a kind of class containing enum constants in its body. Each enum constant defines an instance of the enum type. Enumeration classes cannot be instantiated anywhere except in the enumeration class itself.
+
+
+enum Season {
+    WINTER, SPRING, SUMMER, AUTUMN
+}
+
+Enum constants are allowed to have constructors, which are called when the class is loaded:
+
+
+public enum Season {
+    WINTER("Cold"), SPRING("Warmer"), SUMMER("Hot"), AUTUMN("Cooler");
+
+    Season(String description) {
+        this.description = description;
+    }
+
+    private final String description;
+
+    public String getDescription() {
+        return description;
+    }
+}
+
+Enumerations can have class bodies, in which case they are treated like anonymous classes extending the enum class:
+
+
+public enum Season {
+    WINTER {
+        String getDescription() {return "cold";}
+    },
+    SPRING {
+        String getDescription() {return "warmer";}
+    },
+    SUMMER {
+        String getDescription() {return "hot";}
+    },
+    FALL {
+        String getDescription() {return "cooler";}
+    };
+}
+
+Interfaces[edit]
+Interfaces are data structures that contain member definitions and not actual implementation. They are useful to define a contract between members in different types that have different implementations. Every interface is implicitly abstract. The only modifier allowed to use with interfaces apart from access modifiers is strictfp, which has the same effect as for classes.
+
+
+interface ActionListener {
+    int ACTION_ADD = 0;
+    int ACTION_REMOVE = 1;
+ 
+    void actionSelected(int action);
+}
+
+Implementing an interface[edit]
+An interface is implemented by a class using the implements keyword. It is allowed to implement more than one interface, in which case they are written after implements keyword in a comma-separated list. Class implementing an interface must override all its methods, otherwise it must be declared as abstract.
+
+
+interface RequestListener {
+    int requestReceived();
+}
+
+class ActionHandler implements ActionListener, RequestListener {
+    public void actionSelected(int action) {
+    }
+
+    public int requestReceived() {
+    }
+}
+
+//Calling method defined by interface
+RequestListener listener = new ActionHandler(); /*ActionHandler can be
+                                   represented as RequestListener...*/
+listener.requestReceived(); /*...and thus is known to implement
+                            requestReceived() method*/
+
+Inheritance[edit]
+Interfaces can inherit from other interfaces just like classes. Unlike classes it is allowed to inherit from multiple interfaces. However, it is possible that several interfaces have a field with the same name, in which case it becomes a single ambiguous member, which cannot be accessed.
+
+
+/* Class implementing this interface must implement methods of both
+ActionListener and RequestListener */
+interface EventListener extends ActionListener, RequestListener {
+    
+}
+
+Annotations[edit]
+Main article: Java annotation
+Annotations in Java are a way to embed metadata into code. This language feature was introduced in J2SE 5.0.
+Annotation types[edit]
+Java has a set of predefined annotation types, but it is allowed to define new ones. An annotation type declaration is a special type of an interface declaration. They are declared in the same way as the interfaces, except the interface keyword is preceded by the @ sign. All annotations are implicitly extended from java.lang.annotation.Annotation and cannot be extended from anything else.
+
+
+@interface BlockingOperations {
+}
+
+Annotations may have the same declarations in the body as the common interfaces, in addition they are allowed to include enums and annotations. The main difference is that abstract method declarations must not have any parameters or throw any exceptions. Also they may have a default value, which is declared using the default keyword after the method name:
+
+
+@interface BlockingOperations {
+    boolean fileSystemOperations();
+    boolean networkOperations() default false;
+}
+
+Usage of annotations[edit]
+Annotations may be used in any kind of declaration, whether it is package, class (including enums), interface (including annotations), field, method, parameter, constructor, or local variable. Also they can be used with enum constants. Annotations are declared using the @ sign preceding annotation type name, after which element-value pairs are written inside brackets. All elements with no default value must be assigned a value.
+
+
+@BlockingOperations(/*mandatory*/ fileSystemOperations = true,
+/*optional*/ networkOperations = true)
+void openOutputStream() { //Annotated method
+}
+
+Besides the generic form, there are two other forms to declare an annotation, which are shorthands. Marker annotation is a short form, it is used when no values are assigned to elements:
+
+
+@Unused // Shorthand for @Unused()
+void travelToJupiter() {
+}
+
+The other short form is called single element annotation. It is used with annotations types containing only one element or in the case when multiple elements are present, but only one elements lacks a default value. In single element annotation form the element name is omitted and only value is written instead:
+
+
+/* Equivalent for @BlockingOperations(fileSystemOperations = true).
+networkOperations has a default value and
+does not have to be assigned a value */
+
+@BlockingOperations(true)
+void openOutputStream() {
+}
+
+Generics[edit]
+Main article: Generics in Java
+Generics, or parameterized types, or parametric polymorphism is one of the major features introduced in J2SE 5.0. Before generics were introduced, it was required to declare all the types explicitly. With generics it became possible to work in a similar manner with different types without declaring the exact types. The main purpose of generics is to ensure type safety and to detect runtime errors during compilation. Unlike C#, information on the used parameters is not available at runtime due to type erasure.
+Generic classes[edit]
+Classes can be parameterized by adding a type variable inside angle brackets (&lt; and &gt;) following the class name. It makes possible the use of this type variable in class members instead of actual types. There can be more than one type variable, in which case they are declared in a comma-separated list.
+It is possible to limit a type variable to a subtype of some specific class or declare an interface that must be implemented by the type. In this case the type variable is appended by the extends keyword followed by a name of the class or the interface. If the variable is constrained by both class and interface or if there are several interfaces, the class name is written first, followed by interface names with &amp; sign used as the delimiter.
+
+
+/* This class has two type variables, T and V. T must be 
+a subtype of ArrayList and implement Formattable interface */
+public class Mapper&lt;T extends ArrayList &amp; Formattable, V&gt; {
+    public void add(T array, V item) {
+        // array has add method because it is an ArrayList subclass
+        array.add(item);
+    }
+}
+
+When a variable of a parametrized type is declared or an instance is created, its type is written exactly in the same format as in the class header, except actual type is written in the place of the type variable declaration.
+
+
+/* Mapper is created with CustomList as T and Integer as V.
+CustomList must be a subclass of ArrayList and implement Formattable */
+Mapper&lt;CustomList, Integer&gt; mapper = new Mapper&lt;CustomList, Integer&gt;();
+
+Since Java SE 7 it is possible to use a diamond (&lt;&gt;) in place of type arguments in which case the latter will be inferred. The following code in Java SE 7 is equivalent to the code in the previous example:
+
+
+Mapper&lt;CustomList, Integer&gt; mapper = new Mapper&lt;&gt;();
+
+When declaring a variable for a parametrized type, it is possible to use wildcards instead of explicit type names. Wildcards are expressed by writing ? sign instead of the actual type. It is possible to limit possible types to the subclasses or superclasses of some specific class by writing the extends keyword or the super keyword correspondingly followed by the class name.
+
+
+/* Any Mapper instance with CustomList as the first parameter
+may be used regardless of the second one.*/
+Mapper&lt;CustomList, ?&gt; mapper;
+mapper = new Mapper&lt;CustomList, Boolean&gt;();
+mapper = new Mapper&lt;CustomList, Integer&gt;();
+
+/* Will not accept types that use anything but
+a subclass of Number as the second parameter */
+void addMapper(Mapper&lt;?, ? extends Number&gt; mapper) {
+}
+
+Generic methods and constructors[edit]
+Usage of generics may be limited to some particular methods, this concept applies to constructors as well. To declare a parameterized method, type variables are written before the return type of the method in the same format as for the generic classes. In the case of constructor, type variables are declared before the constructor name.
+
+
+class Mapper {
+    // The class itself is not generic, the constructor is
+    &lt;T, V&gt; Mapper(T array, V item) {
+    }
+}
+
+/* This method will accept only arrays of the same type as
+the searched item type or its subtype*/
+static &lt;T, V extends T&gt; boolean contains(T item, V[] arr) {
+    for (T currentItem : arr) {
+        if (item.equals(currentItem)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+Generic interfaces[edit]
+Interfaces can be parametrized in the similar manner as the classes.
+
+
+interface Expandable&lt;T extends Number&gt; {
+    void addItem(T item);
+}
+
+// This class is parametrized
+class Array&lt;T extends Number&gt; implements Expandable&lt;T&gt; {
+    void addItem(T item) {
+    }
+}
+
+// And this is not and uses an explicit type instead
+class IntegerArray implements Expandable&lt;Integer&gt; {
+    void addItem(Integer item) {
+    }
+}
+
+See also[edit]
+
+
+
+
+Java portal
+
+
+
+
+Java Platform, Standard Edition
+
+References[edit]
+
+
+^ "Operators (The Java™ Tutorials &gt; Learning the Java Language &gt; Language Basics)". docs.oracle.com. Oracle and/or its affiliates. Retrieved 2015-06-16.&#160;
+^ Owens, Sean. "Java and unsigned int, unsigned short, unsigned byte, unsigned long, etc. (Or rather, the lack thereof)".&#160;
+^ "Primitive Data Types".&#160;
+
+
+
+
+Patrick Naughton, Herbert Schildt. Java 2: The Complete Reference, third edition. The McGraw-Hill Companies, 1999. ISBN 0-07-211976-4
+Vermeulen; Ambler; Bumgardner; Metz; Misfeldt; Shur; Thompson (2000). The Elements of Java Style. Cambridge University Press. ISBN&#160;0-521-77768-2.&#160;
+Gosling, James; Joy, Bill; Steele, Guy; Bracha, Gillad (2005). Java Language Specification (3rd ed.). Addison-Wesley Professional. Retrieved 2008-12-03.&#160;
+
+
+External links[edit]
+
+
+
+Wikibooks has a book on the topic of: Java Programming/Syntax
+
+
+
+The Java Language Specification, Third edition Authoritative description of the Java language
+Java SE 8 API Javadocs
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Java
+
+
+
+
+
+
+Java platforms
+
+
+
+Java language
+JVM
+Micro Edition
+Standard Edition
+Enterprise Edition
+Java Card
+Android SDK
+
+
+
+
+
+
+
+
+
+
+
+Oracle technologies
+
+
+
+Squawk
+Java Development Kit
+OpenJDK
+Java virtual machine
+JavaFX
+Maxine VM
+
+
+
+
+
+
+
+
+Platform technologies
+
+
+
+Applets
+Servlets
+MIDlets
+JSP
+Web Start (JNLP)
+
+
+
+
+
+
+
+
+Major third-party technologies
+
+
+
+Eclipse
+GNU Classpath
+GWT
+Harmony
+Hibernate
+IcedTea
+Jazelle
+Spring
+Struts
+TopLink
+WildFly
+
+
+
+
+
+
+
+
+History
+
+
+
+Java version history
+Java Community Process
+Sun Microsystems
+Free Java implementations
+
+
+
+
+
+
+
+
+Major programming languages
+
+
+
+BeanShell
+Clojure
+Groovy
+Oxygene
+Java Tcl
+JRuby
+Jython
+Processing
+Rhino
+Scala
+more…
+
+
+
+
+
+
+
+
+Java conferences
+
+
+
+JavaOne
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Java_syntax&amp;oldid=672772443"					
+				Categories: Java (programming language)Hidden categories: Articles lacking in-text citations from January 2014All articles lacking in-text citations				
+							
+		
+		
+			
