@@ -1,0 +1,190 @@
+
+
+
+
+Adaptive software development - Wikipedia, the free encyclopedia
+document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );
+window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Adaptive_software_development","wgTitle":"Adaptive software development","wgCurRevisionId":679738944,"wgRevisionId":679738944,"wgArticleId":2839721,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Software development process","Agile software development"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Adaptive_software_development","wgRelevantArticleId":2839721,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Adaptive_Software_Development","wikilove-recipient":"","wikilove-anon":0,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising"],"wgInternalRedirectTargetUrl":"/wiki/Adaptive_software_development","wgWikibaseItemId":"Q352498","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.bannerController","skins.vector.js"]);
+} );
+
+
+
+a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{behavior:url("/w/static/1.27.0-wmf.7/skins/Vector/csshover.min.htc")}
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Adaptive software development
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Adaptive Software Development)
+												
+					Jump to:					navigation, 					search
+				
+				Adaptive software development (ASD) is a software development process that grew out of rapid application development work by Jim Highsmith and Sam Bayer. It embodies the principle that continuous adaptation of the process to the work at hand is the normal state of affairs.
+Adaptive software development replaces the traditional waterfall cycle with a repeating series of speculate, collaborate, and learn cycles. This dynamic cycle provides for continuous learning and adaptation to the emergent state of the project. The characteristics of an ASD life cycle are that it is mission focused, feature based, iterative, timeboxed, risk driven, and change tolerant.
+The word speculate refers to the paradox of planning – it is more likely to assume that all stakeholders are comparably wrong for certain aspects of the project’s mission, while trying to define it. During speculation, the project is initiated and adaptive cycle planning is conducted. Adaptive cycle planning uses project initiation information—the customer’s mission statement, project constraints (e.g., delivery dates or user descriptions), and basic requirements—to define the set of release cycles (software increments) that will be required for the project.
+Collaboration refers to the efforts for balancing the work based on predictable parts of the environment (planning and guiding them) and adapting to the uncertain surrounding mix of changes caused by various factors, such as technology, requirements, stakeholders, software vendors�. The learning cycles, challenging all stakeholders, are based on the short iterations with design, build and testing. During these iterations the knowledge is gathered by making small mistakes based on false assumptions and correcting those mistakes, thus leading to greater experience and eventually mastery in the problem domain.[1]
+References[edit]
+
+
+^ "Messy, Exciting, and Anxiety-Ridden: Adaptive Software Development".&#160;
+
+
+
+Adaptive Software Development: A Collaborative Approach to Managing Complex Systems, Highsmith, J.A., 2000 New York: Dorset House, 392pp, ISBN 0-932633-40-4
+Agile Project Management: Creating Innovative Products, Addison-Wesley, Jim Highsmith, March 2004, 277pp, ISBN 0-321-21977-5
+Lev Virine &amp; Michael Trumper (2007). Project Decisions: The Art and Science. Management Concepts. ISBN&#160;978-1-56726-217-9.&#160;
+"Adaptive SD".&#160;
+Software Engineering:A Practitioner's Approach, Roger Pressman, Bruce Maxim. ISBN 978-0078022128ua:Adaptive Software Development
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Adaptive_software_development&amp;oldid=679738944"					
+				Categories: Software development processAgile software development				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						DeutschFrançaisItalianoNederlandsPortuguêsУкраїнська					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 6 September 2015, at 13:34.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

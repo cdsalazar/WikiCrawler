@@ -1,0 +1,405 @@
+
+
+
+
+Network switch - Wikipedia, the free encyclopedia
+document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );
+window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Network_switch","wgTitle":"Network switch","wgCurRevisionId":691548126,"wgRevisionId":691548126,"wgArticleId":40614,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from January 2009","Articles needing cleanup from November 2014","All pages needing cleanup","Articles with sections that need to be turned into prose from November 2014","Ethernet","Networking hardware"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Network_switch","wgRelevantArticleId":40614,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wikilove-recipient":"","wikilove-anon":0,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgGatherPageImageThumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Cisco_small_business_SG300-28_28-port_Gigabit_Ethernet_rackmount_switch.jpg/100px-Cisco_small_business_SG300-28_28-port_Gigabit_Ethernet_rackmount_switch.jpg","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising"],"wgWikibaseItemId":"Q4503","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.bannerController","skins.vector.js"]);
+} );
+
+
+
+a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{behavior:url("/w/static/1.27.0-wmf.7/skins/Vector/csshover.min.htc")}
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Network switch
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+Avaya ERS 2550T-PWR, a 50-port Ethernet switch
+
+
+A network switch (also called switching hub, bridging hub, officially MAC bridge[1]) is a computer networking device that connects devices together on a computer network, by using packet switching to receive, process and forward data to the destination device. Unlike less advanced network hubs, a network switch forwards data only to one or multiple devices that need to receive it, rather than broadcasting the same data out of each of its ports.[2]
+A network switch is a multiport network bridge that uses hardware addresses to process and forward data at the data link layer (layer 2) of the OSI model. Switches can also process data at the network layer (layer 3) by additionally incorporating routing functionality that most commonly uses IP addresses to perform packet forwarding; such switches are commonly known as layer-3 switches or multilayer switches.[3] Beside most commonly used Ethernet switches, they exist for various types of networks, including Fibre Channel, Asynchronous Transfer Mode, and InfiniBand. The first Ethernet switch was introduced by Kalpana in 1990.[4]
+
+
+
+Contents
+
+
+1 Overview
+
+1.1 Network design
+1.2 Applications
+1.3 Microsegmentation
+
+
+2 Role of switches in a network
+3 Layer-specific functionality
+
+3.1 Layer 1 (hubs vs. higher-layer switches)
+3.2 Layer 2
+3.3 Layer 3
+3.4 Layer 4
+3.5 Layer 7
+
+
+4 Types of switches
+
+4.1 Form factors
+4.2 Configuration options
+
+4.2.1 Typical switch management features
+
+
+
+
+5 Traffic monitoring on a switched network
+6 See also
+7 References
+8 External links
+
+
+
+Overview[edit]
+
+
+
+
+
+
+
+
+Cisco small business SG300-28 28-port Gigabit Ethernet rackmount switch and its internals
+
+
+A switch is a device in a computer network that electrically and logically connects together other devices. Multiple data cables are plugged into a switch to enable communication between different networked devices. Switches manage the flow of data across a network by transmitting a received message only to the one or more devices for which the message was intended. Each networked device connected to a switch can be identified using a MAC address, allowing the switch to regulate the flow of traffic. This maximizes the security and efficiency of the network.
+Essentially, when replacing a repeater hub with an Ethernet switch, the single large collision domain is split up into smaller ones, reducing the probability and scope of collisions and, as a result, increasing the potential throughput. Because broadcasts are still being forwarded to all connected devices, the newly formed network segment continues to be a broadcast domain.
+Due to these features, a switch may be seen as more "intelligent" than a repeater hub, which simply retransmits messages out of every port of the hub but the receiving one, unable to distinguish different recipients, and greatly degrading the overall efficiency of the network.
+Network design[edit]
+An Ethernet switch operates at the data link layer (layer&#160;2) of the OSI model to create a separate collision domain for each switch port. Each device connected to a switch port can transfer data to any of the other ones at a time, and the transmissions will not interfere&#160;–  with the limitation that, in half duplex mode, each switch port can only either receive from or transmit to its connected device at a certain time. In full duplex mode, each switch port can simultaneously transmit and receive, assuming the connected device also supports full duplex mode.[5]
+In the case of using a repeater hub, only a single transmission could take place at a time for all ports combined, so they would all share the bandwidth and run in half duplex. Necessary arbitration would also result in collisions, requiring retransmissions.
+Applications[edit]
+The network switch plays an integral role in most modern Ethernet local area networks (LANs). Mid-to-large sized LANs contain a number of linked managed switches. Small office/home office (SOHO) applications typically use a single switch, or an all-purpose converged device such as a residential gateway to access small office/home broadband services such as DSL or cable Internet. In most of these cases, the end-user device contains a router and components that interface to the particular physical broadband technology. User devices may also include a telephone interface for Voice over IP (VoIP) protocol.
+Microsegmentation[edit]
+Segmentation involves the use of a bridge or a switch (or a router) to split a larger collision domain into smaller ones in order to reduce collision probability, and to improve overall network throughput. In the extreme case (i.e. microsegmentation), each device is located on a dedicated switch port. In contrast to an Ethernet hub, there is a separate collision domain on each of the switch ports. This allows computers to have dedicated bandwidth on point-to-point connections to the network and also to run in full-duplex without collisions. Full-duplex mode has only one transmitter and one receiver per "collision domain", making collisions impossible.
+Role of switches in a network[edit]
+Switches may operate at one or more layers of the OSI model, including the data link and network layers. A device that operates simultaneously at more than one of these layers is known as a multilayer switch.
+In switches intended for commercial use, built-in or modular interfaces make it possible to connect different types of networks, including Ethernet, Fibre Channel, RapidIO, ATM, ITU-T G.hn and 802.11. This connectivity can be at any of the layers mentioned. While the layer-2 functionality is adequate for bandwidth-shifting within one technology, interconnecting technologies such as Ethernet and token ring is performed easier at layer 3 or via routing.[6] Devices that interconnect at the layer&#160;3 are traditionally called routers, so layer&#160;3 switches can also be regarded as relatively primitive and specialized routers.[7]
+Where there is a need for a great deal of analysis of network performance and security, switches may be connected between WAN routers as places for analytic modules. Some vendors provide firewall,[8][9] network intrusion detection,[10] and performance analysis modules that can plug into switch ports. Some of these functions may be on combined modules.[11]
+In other cases, the switch is used to create a mirror image of data that can go to an external device. Since most switch port mirroring provides only one mirrored stream, network hubs can be useful for fanning out data to several read-only analyzers, such as intrusion detection systems and packet sniffers.
+Layer-specific functionality[edit]
+Main article: Multilayer switch
+
+
+
+
+A modular network switch with three network modules (a total of 24 Ethernet and 14 Fast Ethernet ports) and one power supply.
+
+
+While switches may learn about topologies at many layers, and forward at one or more layers, they do tend to have common features. Other than for high-performance applications, modern commercial switches use primarily Ethernet interfaces.
+At any layer, a modern switch may implement power over Ethernet (PoE), which avoids the need for attached devices, such as a VoIP phone or wireless access point, to have a separate power supply. Since switches can have redundant power circuits connected to uninterruptible power supplies, the connected device can continue operating even when regular office power fails.
+Layer 1 (hubs vs. higher-layer switches)[edit]
+A network hub, or a repeater, is a simple network device that does not manage any of the traffic coming through it. Any packet entering a port is flooded out or "repeated" on every other port, except for the port of entry. Since every packet is repeated on every other port, packet collisions affect the entire network, limiting its overall capacity.
+A network switch creates the layer 1 end-to-end connection only virtually, while originally it was mandatory. The bridging function of a switch uses information taken from layer 2 to select for each packet the particular port(s) it has to be forwarded to, removing the requirement that every node is presented with all traffic. As a result, the connection lines are not "switched" literally, instead they only appear that way on the packet level.
+There are specialized applications in which a network hub can be useful, such as copying traffic to multiple network sensors. High-end network switches usually have a feature called port mirroring that provides the same functionality.
+By the early 2000s, there was little price difference between a hub and a low-end switch.[12]
+Layer 2[edit]
+A network bridge, operating at the data link layer, may interconnect a small number of devices in a home or the office. This is a trivial case of bridging, in which the bridge learns the MAC address of each connected device.
+Single bridges also can provide extremely high performance in specialized applications such as storage area networks.
+Classic bridges may also interconnect using a spanning tree protocol that disables links so that the resulting local area network is a tree without loops. In contrast to routers, spanning tree bridges must have topologies with only one active path between two points. The older IEEE 802.1D spanning tree protocol could be quite slow, with forwarding stopping for 30 seconds while the spanning tree reconverged. A Rapid Spanning Tree Protocol was introduced as IEEE 802.1w. The newest standard Shortest path bridging (IEEE 802.1aq) is the next logical progression and incorporates all the older Spanning Tree Protocols (IEEE 802.1D STP, IEEE 802.1w RSTP, IEEE 802.1s MSTP) that blocked traffic on all but one alternative path. IEEE 802.1aq (Shortest Path Bridging SPB) allows all paths to be active with multiple equal cost paths, provides much larger layer 2 topologies (up to 16 million compared to the 4096 VLANs limit),[13] faster convergence, and improves the use of the mesh topologies through increase bandwidth and redundancy between all devices by allowing traffic to load share across all paths of a mesh network.[14][15][16][17]
+While layer 2 switch remains more of a marketing term than a technical term,[citation needed] the products that were introduced as "switches" tended to use microsegmentation and full duplex to prevent collisions among devices connected to Ethernet. By using an internal forwarding plane much faster than any interface, they give the impression of simultaneous paths among multiple devices. 'Non-blocking' devices use a forwarding plane or equivalent method fast enough to allow full duplex traffic for each port simultaneously.
+Once a bridge learns the addresses of its connected nodes, it forwards data link layer frames using a layer 2 forwarding method. There are four forwarding methods a bridge can use, of which the second through fourth method were performance-increasing methods when used on "switch" products with the same input and output port bandwidths:
+
+Store and forward: the switch buffers and verifies each frame before forwarding it; a frame is received in its entirety before it is forwarded.
+Cut through: the switch starts forwarding after the frame's destination address is received. When the outgoing port is busy at the time, the switch falls back to store-and-forward operation. There is no error checking with this method.
+Fragment free: a method that attempts to retain the benefits of both store and forward and cut through. Fragment free checks the first 64 bytes of the frame, where addressing information is stored. According to Ethernet specifications, collisions should be detected during the first 64 bytes of the frame, so frames that are in error because of a collision will not be forwarded. This way the frame will always reach its intended destination. Error checking of the actual data in the packet is left for the end device.
+Adaptive switching: a method of automatically selecting between the other three modes.
+
+While there are specialized applications, such as storage area networks, where the input and output interfaces are the same bandwidth, this is not always the case in general LAN applications. In LANs, a switch used for end user access typically concentrates lower bandwidth and uplinks into a higher bandwidth.
+Layer 3[edit]
+Within the confines of the Ethernet physical layer, a layer-3 switch can perform some or all of the functions normally performed by a router. The most common layer-3 capability is awareness of IP multicast through IGMP snooping. With this awareness, a layer-3 switch can increase efficiency by delivering the traffic of a multicast group only to ports where the attached device has signaled that it wants to listen to that group.
+Layer 4[edit]
+While the exact meaning of the term layer-4 switch is vendor-dependent, it almost always starts with a capability for network address translation, but then adds some type of load distribution based on TCP sessions.[18]
+The device may include a stateful firewall, a VPN concentrator, or be an IPSec security gateway.
+Layer 7[edit]
+Layer-7 switches may distribute the load based on uniform resource locators (URLs), or by using some installation-specific technique to recognize application-level transactions. A layer-7 switch may include a web cache and participate in a content delivery network (CDN).[19]
+Types of switches[edit]
+
+
+
+
+
+This section is in a list format that may be better presented using prose. You can help by converting this section to prose, if appropriate. Editing help is available. (November 2014)
+
+
+
+
+
+
+A rack-mounted 24-port 3Com switch
+
+
+Form factors[edit]
+
+Desktop, not mounted in an enclosure, typically intended to be used in a home or office environment outside a wiring closet.
+Rack-mounted, a switch that mounts in an equipment rack.
+Chassis, with swappable module cards.
+DIN rail–mounted, normally seen in industrial environments.
+
+Configuration options[edit]
+
+Unmanaged switches&#160;–  these switches have no configuration interface or options. They are plug and play. They are typically the least expensive switches, and therefore often used in a small office/home office environment. Unmanaged switches can be desktop or rack mounted.
+Managed switches&#160;–  these switches have one or more methods to modify the operation of the switch. Common management methods include: a command-line interface (CLI) accessed via serial console, telnet or Secure Shell, an embedded Simple Network Management Protocol (SNMP) agent allowing management from a remote console or management station, or a web interface for management from a web browser. Examples of configuration changes that one can do from a managed switch include: enabling features such as Spanning Tree Protocol or port mirroring, setting port bandwidth, creating or modifying virtual LANs (VLANs), etc. Two sub-classes of managed switches are marketed today:
+
+Smart (or intelligent) switches&#160;–  these are managed switches with a limited set of management features. Likewise "web-managed" switches are switches which fall into a market niche between unmanaged and managed. For a price much lower than a fully managed switch they provide a web interface (and usually no CLI access) and allow configuration of basic settings, such as VLANs, port-bandwidth and duplex.[20]
+Enterprise managed (or fully managed) switches&#160;–  these have a full set of management features, including CLI, SNMP agent, and web interface. They may have additional features to manipulate configurations, such as the ability to display, modify, backup and restore configurations. Compared with smart switches, enterprise switches have more features that can be customized or optimized, and are generally more expensive than smart switches. Enterprise switches are typically found in networks with larger number of switches and connections, where centralized management is a significant savings in administrative time and effort. A stackable switch is a version of enterprise-managed switch.
+
+
+
+Typical switch management features[edit]
+
+
+
+
+A couple of managed D-Link Gigabit Ethernet rackmount switches, connected to the Ethernet ports on a few patch panels using Category&#160;6 patch cables (all equipment is installed in a standard 19-inch rack)
+
+
+
+Turn particular port range on or off
+Link bandwidth and duplex settings
+Priority settings for ports
+IP management by IP clustering
+MAC filtering and other types of "port security" features which prevent MAC flooding
+Use of Spanning Tree Protocol (STP) and Shortest Path Bridging (SPB) technologies
+Simple Network Management Protocol (SNMP) monitoring of device and link health
+Port mirroring (also known as: port monitoring, spanning port, SPAN port, roving analysis port or link mode port)
+Link aggregation (also known as bonding, trunking or teaming) allows the use of multiple ports for the same connection achieving higher data transfer rates
+VLAN settings. Creating VLANs can serve security and performance goals by reducing the size of the broadcast domain
+802.1X network access control
+IGMP snooping
+
+Traffic monitoring on a switched network[edit]
+Unless port mirroring or other methods such as RMON, SMON or sFlow are implemented in a switch,[21] it is difficult to monitor traffic that is bridged using a switch because only the sending and receiving ports can see the traffic. These monitoring features are rarely present on consumer-grade switches.
+Two popular methods that are specifically designed to allow a network analyst to monitor traffic are:
+
+Port mirroring&#160;–  the switch sends a copy of network packets to a monitoring network connection.
+SMON&#160;–  "Switch Monitoring" is described by RFC 2613 and is a protocol for controlling facilities such as port mirroring.
+
+Another method to monitor may be to connect a layer-1 hub between the monitored device and its switch port. This will induce minor delay, but will provide multiple interfaces that can be used to monitor the individual switch port.
+See also[edit]
+
+
+
+
+Computer networking portal
+
+
+
+
+
+Bridging (networking)
+Console server
+Energy-Efficient Ethernet
+Fibre Channel switch
+Fully switched network
+LAN switching
+Local area network
+Packet switch
+Router (computing)
+Stackable switch
+Telephone exchange
+Turing switch
+Wide area network
+
+
+References[edit]
+
+
+^ IEEE 802.1D
+^ "Hubs Versus Switches&#160;–  Understand the Tradeoffs" (PDF). ccontrols.com. 2002. Retrieved 2013-12-10.&#160;
+^ Thayumanavan Sridhar (September 1998). "Layer 2 and Layer 3 Switch Evolution". cisco.com. The Internet Protocol Journal 1 (2). Cisco Systems. Retrieved 2014-08-05.&#160;
+^ Robert J. Kohlhepp (2000-10-02). "The 10 Most Important Products of the Decade". Network Computing. Retrieved 2008-02-25.&#160;
+^ "Cisco Networking Academy's Introduction to Basic Switching Concepts and Configuration". Cisco Systems. 2014-03-31. Retrieved 2015-08-17.&#160;
+^ Joe Efferson; Ted Gary; Bob Nevins (February 2002). "Token-Ring to Ethernet Migration" (PDF). IBM. p.&#160;13. Retrieved 2015-08-11.&#160;
+^ Thayumanavan Sridhar (September 1998). "The Internet Protocol Journal - Volume&#160;1, No.&#160;2: Layer&#160;2 and Layer&#160;3 Switch Evolution". Cisco Systems. Retrieved 2015-08-11.&#160;
+^ Cisco Catalyst 6500 Series Firewall Services Module, Cisco Systems,2007
+^ Switch 8800 Firewall Module, 3Com Corporation, 2006
+^ Cisco Catalyst 6500 Series Intrusion Detection System (IDSM-2) Module, Cisco Systems,2007
+^ Getting Started with Check Point Fire Wall-1, Checkpoint Software Technologies Ltd., n.d.
+^ Matthew Glidden (October 2001). "Switches and Hubs". About This Particular Macintosh blog. Retrieved June 9, 2011.&#160;
+^ Shuang Yu. "IEEE APPROVES NEW IEEE 802.1aq™ SHORTEST PATH BRIDGING STANDARD". IEEE Standards Association. Retrieved 19 June 2012. Using the IEEE’s next-generation VLAN, called a Service Interface Identifier (I-SID), it is capable of supporting 16 million unique services compared to the VLAN limit of four thousand.&#160;
+^ Peter Ashwood-Smith (24 Feb 2011). "Shortest Path Bridging IEEE 802.1aq Overview" (PDF). Huawei. Retrieved 11 May 2012.&#160;
+^ Jim Duffy (11 May 2012). "Largest Illinois healthcare system uproots Cisco to build $40M private cloud". PC Advisor. Retrieved 11 May 2012. Shortest Path Bridging will replace Spanning Tree in the Ethernet fabric.&#160;
+^ "IEEE Approves New IEEE 802.1aq Shortest Path Bridging Standard". Tech Power Up. 7 May 2012. Retrieved 11 May 2012.&#160;
+^ D. Fedyk, Ed.,; P. Ashwood-Smith, Ed.,; D. Allan, A. Bragg,; P. Unbehagen (April 2012). "IS-IS Extensions Supporting IEEE 802.1aq". IETF. Retrieved 12 May 2012.&#160;
+^ S. Sathaye (January 1999), The Ins and Outs of Layer 4+ Switching, NANOG 15, It usually means one of two things: - 1. Layer 4 information is used to prioritize and queue traffic (routers have done this for years) - 2. Layer 4 information is used to direct application sessions to different servers (next generation load balancing).&#160;
+^ How worried is too worried? Plus, a Global Crossing Story., NANOG mailing list archives, S. Gibbard,October 2001
+^ Tech specs for a sample HP "web-managed" switch at the Wayback Machine (archived December 13, 2007)
+^ Remote Network Monitoring Management Information Base, RFC 2819, S. Waldbusser,May 2000
+
+
+External links[edit]
+
+Five datacenter switches compared -- Network World, 2010
+Understanding the different types of Ethernet Switches - Cisco Blogs
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Network_switch&amp;oldid=691548126"					
+				Categories: EthernetNetworking hardwareHidden categories: All articles with unsourced statementsArticles with unsourced statements from January 2009Articles needing cleanup from November 2014All pages needing cleanupArticles with sections that need to be turned into prose from November 2014				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةAsturianuবাংলাБългарскиBosanskiCatalàČeštinaDanskDeutschEestiΕλληνικάEspañolEuskaraفارسیFrançaisGalego한국어HrvatskiBahasa IndonesiaInterlinguaItalianoעבריתLatviešuLietuviųMagyarМакедонскиമലയാളംBahasa MelayuNederlands日本語Norsk bokmålPolskiPortuguêsRomânăРусскийSimple EnglishSlovenčinaSlovenščinaСрпски / srpskiSrpskohrvatski / српскохрватскиSuomiSvenskaதமிழ்ไทยTürkçeУкраїнськаTiếng Việt中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 20 November 2015, at 15:24.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

@@ -1,0 +1,845 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Spanning Tree Protocol
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Internet protocol suite
+
+
+Application layer
+
+
+
+
+BGP
+DHCP
+DNS
+FTP
+HTTP
+IMAP
+LDAP
+MGCP
+NNTP
+NTP
+POP
+ONC/RPC
+RTP
+RTSP
+RIP
+SIP
+SMTP
+SNMP
+SSH
+Telnet
+TLS/SSL
+XMPP
+more...
+
+
+
+
+Transport layer
+
+
+
+
+TCP
+UDP
+DCCP
+SCTP
+RSVP
+more...
+
+
+
+
+Internet layer
+
+
+
+
+IP
+
+IPv4
+IPv6
+
+
+ICMP
+ICMPv6
+ECN
+IGMP
+IPsec
+more...
+
+
+
+
+Link layer
+
+
+
+
+ARP
+NDP
+OSPF
+Tunnels
+
+L2TP
+
+
+PPP
+MAC
+
+Ethernet
+DSL
+ISDN
+FDDI
+
+
+more...
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+The Spanning Tree Protocol (STP) is a network protocol that ensures a loop-free topology for Ethernet networks. The basic function of STP is to prevent bridge loops and the broadcast radiation that results from them. Spanning tree also allows a network design to include spare (redundant) links to provide automatic backup paths if an active link fails, without the danger of bridge loops, or the need for manual enabling or disabling of these backup links.
+Spanning Tree Protocol (STP) was originally standardized as IEEE 802.1D, in 802.1d-1998, but much of the functionality (spanning tree, rapid spanning tree, multiple spanning tree) previously specified in 802.1D, 801.1s, 802.1w has been incorporated into IEEE 802.1Q-2014[1]
+As the name suggests, it creates a spanning tree within a network of connected layer-2 bridges (typically Ethernet switches), and disables those links that are not part of the spanning tree, leaving a single active path between any two network nodes. STP is based on an algorithm that was invented by Radia Perlman while she was working for Digital Equipment Corporation.[2][3]
+
+
+
+Contents
+
+
+1 Protocol operation
+
+1.1 Data rate and STP path cost
+1.2 Bridge Protocol Data Units
+1.3 Bridge Protocol Data Unit fields
+
+
+2 Evolutions and extensions
+
+2.1 Rapid Spanning Tree Protocol
+
+2.1.1 Rapid Spanning Tree Operation
+
+
+2.2 Per-VLAN Spanning Tree and Per-VLAN Spanning Tree Plus
+2.3 Rapid Per-VLAN Tree
+2.4 VLAN Spanning Tree Protocol
+2.5 Multiple Spanning Tree Protocol
+2.6 Shortest path bridging
+
+2.6.1 System ID Extension
+
+
+
+
+3 See also
+4 Notes
+5 References
+6 External links
+
+
+
+Protocol operation[edit]
+A local area network (LAN) can be depicted as a graph whose nodes are bridges and LAN segments (or cables), and whose edges are the interfaces connecting the bridges to the segments. To break loops in the LAN while maintaining access to all LAN segments, the bridges collectively compute a spanning tree.[a] The spanning tree that the bridges compute using the Spanning Tree Protocol can be determined using the following rules. The example network at the right, below, will be used to illustrate the rules.
+
+
+
+
+
+1. An example network. The numbered boxes represent bridges (the number represents the bridge ID). The lettered clouds represent network segments.
+
+
+
+
+
+
+2. The smallest bridge ID is 3. Therefore, bridge 3 is the root bridge.
+
+
+
+
+
+
+3. Assuming that the cost of traversing any network segment is 1, the least cost path from bridge 4 to the root bridge goes through network segment c. Therefore, the root port for bridge 4 is the one on network segment c.
+
+
+
+
+
+
+4. The least cost path to the root from network segment e goes through bridge 92. Therefore, the designated port for network segment e is the port that connects bridge 92 to network segment e.
+
+
+
+
+
+
+5. This diagram illustrates all port states as computed by the spanning tree algorithm. Any active port that is not a root port or a designated port is a blocked port.
+
+
+
+
+
+
+6. After link failure the spanning tree algorithm computes and spans new least-cost tree.
+
+
+
+Select a root bridge. The root bridge of the spanning tree is the bridge with the smallest (lowest) bridge ID. Each bridge has a configurable priority number and a MAC address; the bridge ID contains both numbers combined together - bridge priority + MAC (32768.0200.0000.1111). The bridge priority default is 32768 and can only be configured in multiples of 4096.[b] When comparing two bridge IDs, the priority portions are compared first and the MAC addresses are compared only if the priorities are equal. The switch with the lowest priority of all the switches will be the root; if there is a tie, then the switch with the lowest priority and lowest MAC address will be the root. For example, if switches A (MAC=0200.0000.1111) and B (MAC=0200.0000.2222) both have a priority of 32768 then switch A will be selected as the root bridge.[c] If the network administrators would like switch B to become the root bridge, they must set its priority to be less than 32768.[d]
+Determine the least cost paths to the root bridge. The computed spanning tree has the property that messages from any connected device to the root bridge traverse a least cost path, i.e., a path from the device to the root that has minimum cost among all paths from the device to the root. The cost of traversing a path is the sum of the costs of the segments on the path. Different technologies have different default costs. An administrator can configure the cost of traversing a particular network segment. The property that messages always traverse least-cost paths to the root is guaranteed by the following two rules.
+Least cost path from each bridge. After the root bridge has been chosen, each bridge determines the cost of each possible path from itself to the root. From these, it picks one with the smallest cost (a least-cost path). The port connecting to that path becomes the root port (RP) of the bridge.
+Least cost path from each network segment. The bridges on a network segment collectively determine which bridge has the least-cost path from the network segment to the root. The port connecting this bridge to the network segment is then the designated port (DP) for the segment.
+Disable all other root paths. Any active port that is not a root port or a designated port is a blocked port (BP).
+Modifications in case of ties. The above rules over-simplify the situation slightly, because it is possible that there are ties, for example, the root bridge may have two or more ports on the same LAN segment, two or more ports on a single bridge are attached to least-cost paths to the root or two or more bridges on the same network segment have equal least-cost paths to the root. To break such ties:
+Breaking ties for root ports. When multiple paths from a bridge are least-cost paths, the chosen path uses the neighbor bridge with the lower bridge ID. The root port is thus the one connecting to the bridge with the lowest bridge ID. For example, in figure 3, if switch 4 was connected to network segment d instead of segment f, there would be two paths of length 2 to the root, one path going through bridge 24 and the other through bridge 92. Because there are two least cost paths, the lower bridge ID (24) would be used as the tie-breaker in choosing which path to use.
+Breaking ties for designated ports. When the root bridge has more than one port on a single LAN segment, the bridge ID is effectively tied, as are all root path costs (all equal zero). The designated port then becomes the port on that LAN segment with the lowest port ID. It's put into Forwarding mode while all other ports on the root bridge on that same LAN segment become non-designated ports and are put into blocking mode.[4] Not all bridge/switch manufacturers follow this rule, instead making all root bridge ports designated ports, and putting them all in forwarding mode. A final tie-breaker is required as noted in the section "The final tie-breaker."
+When more than one bridge on a segment leads to a least-cost path to the root, the bridge with the lower bridge ID is used to forward messages to the root. The port attaching that bridge to the network segment is the designated port for the segment. In figure 4, there are two least cost paths from network segment d to the root, one going through bridge 24 and the other through bridge 92. The lower bridge ID is 24, so the tie breaker dictates that the designated port is the port through which network segment d is connected to bridge 24. If bridge IDs were equal, then the bridge with the lowest MAC address would have the designated port. In either case, the loser sets the port as being blocked.
+The final tie-breaker. In some cases, there may still be a tie, as when the root bridge has multiple active ports on the same LAN segment (see above, "Breaking ties for designated ports") with equally low root path costs and bridge IDs, or, in other cases, multiple bridges are connected by multiple cables and multiple ports. In each case, a single bridge may have multiple candidates for its root port. In these cases, candidates for the root port have already received BPDUs offering equally-low (i.e. the "best") root path costs and equally-low (i.e. the "best") bridge IDs, and the final tie breaker goes to the port that received the lowest (i.e. the "best") port priority ID, or port ID.[5]
+In summary, the sequence of events to determine the best received BPDU (which is the best path to the root) is
+
+Lowest root bridge ID - Determines the root bridge
+Lowest cost to the root bridge - Favors the upstream switch with the least cost to root
+Lowest sender bridge ID - Serves as a tie breaker if multiple upstream switches have equal cost to root
+Lowest sender port ID - Serves as a tie breaker if a switch has multiple (non-Etherchannel) links to a single upstream switch, where:
+
+Bridge ID = priority (4 bits) + locally assigned system ID extension (12 bits) + ID [MAC address] (48 bits); the default bridge priority is 32768, and
+Port ID = priority (4 bits) + ID (Interface number) (12 bits); the default port priority is 128.
+
+
+
+Data rate and STP path cost[edit]
+The access speeds of the links determine the path cost that STP/RSTP assumes. The STP path cost default was originally calculated by the formula 1 Gigabit / second/bandwidth. When faster speeds became available the default values were adjusted as otherwise speeds above 1&#160;Gbit/s would have been indistinguishable by STP. Its successor RSTP uses a similar formula with a larger numerator: 20 Terabit / second/bandwidth. These formulas lead to the sample values in the table below:[6]:154
+
+
+Data rate
+STP cost (802.1D-1998)
+RSTP cost (802.1W-2004, default value)[6]:154
+
+
+4&#160;Mbit/s
+250
+5,000,000
+
+
+10&#160;Mbit/s
+100
+2,000,000
+
+
+16&#160;Mbit/s
+62
+1,250,000
+
+
+100&#160;Mbit/s
+19
+200,000
+
+
+1&#160;Gbit/s
+4
+20,000
+
+
+2&#160;Gbit/s
+3
+10,000
+
+
+10&#160;Gbit/s
+2
+2,000
+
+
+Bridge Protocol Data Units[edit]
+Main article: Bridge Protocol Data Unit
+The above rules describe one way of determining what spanning tree will be computed by the algorithm, but the rules as written require knowledge of the entire network. The bridges have to determine the root bridge and compute the port roles (root, designated, or blocked) with only the information that they have. To ensure that each bridge has enough information, the bridges use special data frames called Bridge Protocol Data Units (BPDUs) to exchange information about bridge IDs and root path costs.
+A bridge sends a BPDU frame using the unique MAC address of the port itself as a source address, and a destination address of the STP multicast address 01:80:C2:00:00:00.
+There are two types of BPDUs in the original STP specification[6]:63 (the Rapid Spanning Tree (RSTP) extension uses a specific RSTP BPDU):
+
+Configuration BPDU (CBPDU), used for Spanning Tree computation
+Topology Change Notification (TCN) BPDU, used to announce changes in the network topology
+
+BPDUs are exchanged regularly (every 2 seconds by default) and enable switches to keep track of network changes and to start and stop forwarding at ports as required.
+When a device is first attached to a switch port, it will not immediately start to forward data. It will instead go through a number of states while it processes BPDUs and determines the topology of the network. When a host is attached such as a computer, printer or server the port will always go into the forwarding state, albeit after a delay of about 30 seconds while it goes through the listening and learning states (see below). The time spent in the listening and learning states is determined by a value known as the forward delay (default 15 seconds and set by the root bridge). However, if instead another switch is connected, the port may remain in blocking mode if it is determined that it would cause a loop in the network. Topology Change Notification (TCN) BPDUs are used to inform other switches of port changes. TCNs are injected into the network by a non-root switch and propagated to the root. Upon receipt of the TCN, the root switch will set a Topology Change flag in its normal BPDUs. This flag is propagated to all other switches to instruct them to rapidly age out their forwarding table entries.
+STP switch port states:
+
+Blocking - A port that would cause a switching loop if it were active. No user data is sent or received over a blocking port, but it may go into forwarding mode if the other links in use fail and the spanning tree algorithm determines the port may transition to the forwarding state. BPDU data is still received in blocking state. Prevents the use of looped paths.
+Listening - The switch processes BPDUs and awaits possible new information that would cause it to return to the blocking state. It does not populate the MAC address table and it does not forward frames.
+Learning - While the port does not yet forward frames it does learn source addresses from frames received and adds them to the filtering database (switching database). It populates the MAC address table, but does not forward frames.
+Forwarding - A port receiving and sending data, normal operation. STP still monitors incoming BPDUs that would indicate it should return to the blocking state to prevent a loop.
+Disabled - Not strictly part of STP, a network administrator can manually disable a port
+
+To prevent the delay when connecting hosts to a switch and during some topology changes, Rapid STP was developed, which allows a switch port to rapidly transition into the forwarding state during these situations.
+Bridge Protocol Data Unit fields[edit]
+IEEE 802.1D and IEEE 802.1aq BPDUs have the following format:
+
+ 1. Protocol ID:       2 bytes (0x0000 IEEE 802.1D)
+ 2. Version ID:        1 byte (0x00 Config &amp; TCN / 0x02 RST / 0x03 MSTP / 0x04 SPT  BPDU) 
+ 3. BPDU Type:         1 byte (0x00 Config BPDU, 0x80 TCN BPDU, 0x02 RST BPDU)
+ 4. Flags:             1 byte
+   bits  : usage
+       1 : 0 or 1 for Topology Change
+       2 : 0 (unused) or 1 for Proposal in RST/MST/SPT BPDU
+     3-4 : 00 (unused) or
+           01 for Port Role Alternate/Backup in RST/MST/SPT BPDU
+           10 for Port Role Root in RST/MST/SPT BPDU
+           11 for Port Role Designated in RST/MST/SPT BPDU
+       5 : 0 (unused) or 1 for Learning in RST/MST/SPT BPDU
+       6 : 0 (unused) or 1 for Forwarding in RST/MST/SPT BPDU
+       7 : 0 (unused) or 1 for Agreement in RST/MST/SPT BPDU
+       8 : 0 or 1 for Topology Change Acknowledgement
+ 5. Root ID:           8 bytes (CIST Root ID in MST/SPT BPDU)
+   bits  : usage
+     1-4 : Root Bridge Priority
+    5-16 : Root Bridge System ID Extension
+   17-64 : Root Bridge MAC Address
+ 6. Root Path Cost:    4 bytes (CIST External Path Cost in MST/SPT BPDU)
+ 7. Bridge ID:         8 bytes (CIST Regional Root ID in MST/SPT BPDU)
+   bits  : usage
+     1-4 : Bridge Priority 
+    5-16 : Bridge System ID Extension
+   17-64 : Bridge MAC Address
+  8. Port ID:          2 bytes
+  9. Message Age:      2 bytes in 1/256 secs
+ 10. Max Age:          2 bytes in 1/256 secs
+ 11. Hello Time:       2 bytes in 1/256 secs
+ 12. Forward Delay:    2 bytes in 1/256 secs
+ 13. Version 1 Length: 1 byte (0x00 no ver 1 protocol info present. RST, MST, SPT BPDU only)
+ 14. Version 3 Length: 2 bytes (MST, SPT BPDU only)
+ 
+ The TCN BPDU includes fields 1-3 only. 
+
+Evolutions and extensions[edit]
+The first spanning tree protocol was invented in 1985 at the Digital Equipment Corporation by Radia Perlman.[2] In 1990, the IEEE published the first standard for the protocol as 802.1D,[7] based on the algorithm designed by Perlman. Subsequent versions were published in 1998[8] and 2004,[9] incorporating various extensions.
+Although the purpose of a standard is to promote interworking of equipment from different vendors, different implementations of a standard are not guaranteed to work, due for example to differences in default timer settings. The IEEE encourages vendors to provide a "Protocol Implementation Conformance Statement", declaring which capabilities and options have been implemented,[9] to help users determine whether different implementations will interwork correctly.
+Also, the original Perlman-inspired Spanning Tree Protocol, called DEC STP, is not a standard and differs from the IEEE version in message format as well as timer settings. Some bridges implement both the IEEE and the DEC versions of the Spanning Tree Protocol, but their interworking can create issues for the network administrator, as illustrated by the problem discussed in an on-line Cisco document.[10]
+Rapid Spanning Tree Protocol[edit]
+In 2001, the IEEE introduced Rapid Spanning Tree Protocol (RSTP) as 802.1w. RSTP provides significantly faster spanning tree convergence after a topology change, introducing new convergence behaviors and bridge port roles to do this. RSTP was designed to be backwards-compatible with standard STP.
+While STP can take 30 to 50 seconds to respond to a topology change, RSTP is typically able to respond to changes within 3&#160;×&#160;Hello times (default: 3 times 2 seconds) or within a few milliseconds of a physical link failure. The Hello time is an important and configurable time interval that is used by RSTP for several purposes; its default value is 2 seconds.[11][12]
+Standard IEEE 802.1D-2004 incorporates RSTP and obsoletes the original STP standard.[13]
+Rapid Spanning Tree Operation[edit]
+RSTP adds new bridge port roles in order to speed convergence following a link failure. The number of states a port can be in has been reduced to three instead of STP's original five.
+RSTP bridge port roles
+
+Root - A forwarding port that is the best port from non-root bridge to root bridge
+Designated - A forwarding port for every LAN segment
+Alternate - An alternate path to the root bridge. This path is different from using the root port
+Backup - A backup/redundant path to a segment where another bridge port already connects
+Disabled - Not strictly part of STP, a network administrator can manually disable a port
+
+RSTP switch port states:
+
+Discarding - No user data is sent over the port
+Learning - The port is not forwarding frames yet, but is populating its MAC-address-table
+Forwarding - The port is fully operational
+
+
+Detection of root switch failure is done in 3 hello times, which is 6 seconds if the default hello times have not been changed.
+Ports may be configured as edge ports if they are attached to a LAN that has no other bridges attached. These edge ports transition directly to the forwarding state. RSTP still continues to monitor the port for BPDUs in case a bridge is connected. RSTP can also be configured to automatically detect edge ports. As soon as the bridge detects a BPDU coming to an edge port, the port becomes a non-edge port.
+RSTP calls the connection between two or more switches as a "link-type" connection. A port that operates in full-duplex mode is assumed to be point-to-point link, whereas a half-duplex port (through a hub) is considered a shared port by default. This automatic link type setting can be overridden by explicit configuration. RSTP improves convergence on point-to-point links by reducing the Max-Age time to 3 times Hello interval, removing the STP listening state, and exchanging a handshake between two switches to quickly transition the port to forwarding state. RSTP does not do anything differently from STP on shared links.
+Unlike in STP, RSTP will respond to BPDUs sent from the direction of the root bridge. An RSTP bridge will "propose" its spanning tree information to its designated ports. If another RSTP bridge receives this information and determines this is the superior root information, it sets all its other ports to discarding. The bridge may send an "agreement" to the first bridge confirming its superior spanning tree information. The first bridge, upon receiving this agreement, knows it can rapidly transition that port to the forwarding state bypassing the traditional listening/learning state transition. This essentially creates a cascading effect away from the root bridge where each designated bridge proposes to its neighbors to determine if it can make a rapid transition. This is one of the major elements that allows RSTP to achieve faster convergence times than STP.
+As discussed in the port role details above, RSTP maintains backup details regarding the discarding status of ports. This avoids timeouts if the current forwarding ports were to fail or BPDUs were not received on the root port in a certain interval.
+RSTP will revert to legacy STP on an interface if a legacy version of an STP BPDU is detected on that port.
+
+
+Per-VLAN Spanning Tree and Per-VLAN Spanning Tree Plus[edit]
+In Ethernet switched environments where multiple Virtual LANs exist, it is often desirable to create multiple spanning trees so that traffic from different VLANs uses different links. Cisco's proprietary versions of Spanning Tree Protocol, Per-VLAN Spanning Tree (PVST) and Per-VLAN Spanning Tree Plus (PVST+), create a separate spanning tree for each VLAN. Both PVST and PVST+ protocols are Cisco proprietary protocols, and few switches from other vendors support them. They use a different multicast address: 01:00:0C:CC:CC:CD. Some devices from Force10 Networks, Alcatel-Lucent, Extreme Networks, Avaya, and BLADE Network Technologies support PVST+.[14][15][16] Extreme Networks does so with two limitations: Lack of support on ports where the VLAN is untagged/native, and also on the VLAN with ID 1. PVST works only with ISL (Cisco's proprietary protocol for VLAN encapsulation) due to its embedded Spanning Tree ID. This is the default protocol on Cisco switches that support ISL. Due to high penetration of the IEEE 802.1Q VLAN trunking standard and PVST's dependence on ISL, Cisco defined an additional PVST+ standard that is compatible with 802.1Q encapsulation. This became the default protocol for Cisco switches when Cisco discontinued and removed ISL support from its switches. PVST+ can tunnel across an MSTP Region.[17]
+Rapid Per-VLAN Tree[edit]
+This is Cisco's proprietary version of Rapid Spanning Tree Protocol. It creates a spanning tree for each VLAN, just like PVST. Cisco refers to this as Rapid Per-VLAN Spanning Tree (RPVST).
+VLAN Spanning Tree Protocol[edit]
+In Juniper Networks environment, if compatibility to Cisco's proprietary PVST protocol is required, VLAN Spanning Tree Protocol (VSTP) can be configured. VSTP maintains a separate spanning-tree instance for each VLAN configured in the switch. The VSTP protocol is only supported by the EX and MX Series from Juniper Networks. There are two restrictions to the compatibility of VSTP:
+
+VSTP supports only 253 different spanning-tree topologies. If there are more than 253 VLANs, it is recommended to configure RSTP in addition to VSTP, and VLANs beyond 253 will be handled by RSTP.
+MVRP does not support VSTP. If this protocol is in use, VLAN membership for trunk interfaces must be statically configured [1].
+
+By default, VSTP uses the RSTP protocol as its core spanning-tree protocol, but usage of STP can be forced if the network includes old bridges [2].
+For more information about configuring VSTP on Juniper Networks switches, see the official documentation Understanding VSTP.
+Multiple Spanning Tree Protocol[edit]
+The Multiple Spanning Tree Protocol (MSTP), originally defined in IEEE 802.1s and later merged into IEEE 802.1Q-2005, defines an extension to RSTP to further develop the usefulness of virtual LANs (VLANs). This Multiple Spanning Tree Protocol configures a separate Spanning Tree for each VLAN group and blocks all but one of the possible alternate paths within each Spanning Tree.
+If there is only one Virtual LAN (VLAN) in the network, single (traditional) STP works appropriately. If the network contains more than one VLAN, the logical network configured by single STP would work, but it is possible to make better use of the alternate paths available by using an alternate spanning tree for different VLANs or groups of VLANs.
+MSTP allows formation of MST regions that can run multiple MST instances (MSTI). Multiple regions and other STP bridges are interconnected using one single common spanning tree (CST).
+MSTP is similar to Cisco Systems' Multiple Instances Spanning Tree Protocol (MISTP), and is an evolution of the Spanning Tree Protocol and the Rapid Spanning Tree Protocol. It was introduced in IEEE 802.1s as an amendment to 802.1Q, 1998 edition. Standard IEEE 802.1Q-2005 now includes MSTP.
+Unlike some proprietary per-VLAN spanning tree implementations,[18] MSTP includes all of its spanning tree information in a single BPDU format. Not only does this reduce the number of BPDUs required on a LAN to communicate spanning tree information for each VLAN, but it also ensures backward compatibility with RSTP (and in effect, classic STP too). MSTP does this by encoding additional region information after the standard RSTP BPDU as well as a number of MSTI messages (from 0 to 64 instances, although in practice many bridges support fewer). Each of these MSTI configuration messages conveys the spanning tree information for each instance. Each instance can be assigned a number of configured VLANs and frames (packets) assigned to these VLANs operate in this spanning tree instance whenever they are inside the MST region. In order to avoid conveying their entire VLAN to spanning tree mapping in each BPDU, bridges encode an MD5 digest of their VLAN to instance table in the MSTP BPDU. This digest is then used by other MSTP bridges, along with other administratively configured values, to determine if the neighboring bridge is in the same MST region as itself.
+MSTP is fully compatible with RSTP bridges, in that an MSTP BPDU can be interpreted by an RSTP bridge as an RSTP BPDU. This not only allows compatibility with RSTP bridges without configuration changes, but also causes any RSTP bridges outside of an MSTP region to see the region as a single RSTP bridge, regardless of the number of MSTP bridges inside the region itself. In order to further facilitate this view of an MST region as a single RSTP bridge, the MSTP protocol uses a variable known as remaining hops as a time to live counter instead of the message age timer used by RSTP. The message age time is only incremented once when spanning tree information enters an MST region, and therefore RSTP bridges will see a region as only one "hop" in the spanning tree. Ports at the edge of an MST region connected to either an RSTP or STP bridge or an endpoint are known as boundary ports. As in RSTP, these ports can be configured as edge ports to facilitate rapid changes to the forwarding state when connected to endpoints.
+Shortest path bridging[edit]
+Main article: Shortest Path Bridging
+The IEEE approved the IEEE 802.1aq standard May 2012,[19] also known and documented in most books as Shortest Path Bridging (SPB). SPB allows all links to be active through multiple equal cost paths, and provides much larger layer 2 topologies, faster convergence, and improves the use of the mesh topologies through increased bandwidth between all devices by allowing traffic to load share across all paths on a mesh network.[20][21] SPB consolidates multiple existing functionalities, including Spanning Tree Protocol (STP), Multiple Spanning Tree Protocol (MSTP), Rapid Spanning Tree Protocol (RSTP), Link aggregation, and Multiple MAC Registration Protocol (MMRP) into a one link state protocol.[22] SPB is designed to virtually eliminate human error during configuration and preserves the plug-and-play nature that established Ethernet as the de facto protocol at Layer 2.[22]
+System ID Extension[edit]
+The bridge ID, or BID, is a field inside a BPDU packet. It is eight bytes in length. The first two bytes are the bridge priority, an unsigned integer of 0-65,535. The last six bytes are a MAC address supplied by the bridge. Prior to IEEE 802.1D-2004, the first two bytes gave a 16 bit bridge priority. Since IEEE 802.1D-2004, the first four bits are a configurable priority, and the last twelve bits carry the bridge system ID extension. In the case of MST, the bridge system ID extension carries the MSTP instance number. Some vendors set the bridge system ID extension to carry a VLAN ID allowing a different spanning tree per VLAN, such as Cisco's PVST.
+See also[edit]
+
+Bridge Protocol Data Unit
+Distributed minimum spanning tree
+EtherChannel
+Ethernet Automatic Protection Switching
+Flex Links
+Media Redundancy Protocol
+Minimum spanning tree
+Shortest Path Bridging, a replacement for the Spanning Tree Protocols
+TRILL (Transparent Interconnection of Lots of Links)
+Unidirectional Link Detection
+Virtual Link Trunking
+
+Notes[edit]
+
+
+^ The spanning tree is not necessarily a minimum cost spanning tree. A network administrator can reduce the cost of a spanning tree, if necessary, by altering some of the configuration parameters in such a way as to affect the choice of the root of the spanning tree.
+^ Spanning tree incorporated 802.1t, and per 802.1t, uses the 4 most-significant bits of the 802.1d two-octet priority field as priority, and the least-significant 12 bits of that field as the extended system ID.
+^ The original 802.1d envisioned the possibility of the root bridge having more than one port on the same LAN segment, and in that case, the port with the lowest port ID would become the designated port for that LAN segment, and put into forwarding mode, while its other ports on that same LAN segment became non-designated ports put into blocking mode. Not all bridge manufacturers follow that rule, some making all ports designated ports and putting them all into forwarding mode.
+^ Alternatively the network administrator can configure the spanning tree a root primary/secondary. When configuring the root primary and root secondary the switch will automatically change the priority accordingly, 24576 and 28672 respectively with the default configuration.
+
+
+References[edit]
+
+
+^ Bridges and Bridged Networks
+^ a b Perlman, Radia (1985). "An Algorithm for Distributed Computation of a Spanning Tree in an Extended LAN". ACM SIGCOMM Computer Communication Review 15 (4): 44–53. doi:10.1145/318951.319004.&#160;
+^ Perlman, Radia (2000). Interconnections, Second Edition. USA: Addison-Wesley. ISBN&#160;0-201-63448-1.&#160;
+^ 802.1d-1998 section 8.3.1: The Designated Port for each LAN is the Bridge Port for which the value of the Root Path Cost is the lowest: if two or more Ports have the same value of Root Path Cost, then first the Bridge Identifier of their Bridges, and their Port Identifiers are used as tie breakers.
+^ 802.1d-1998 section 8.3.2 b) A Bridge that receives a Configuration BPDU on what it decides is its Root Port conveying better information (i.e. highest priority Root Identifier, lowest Root Path Cost, highest priority transmitting Bridge and Port), passes that information on to all the LANs for which it believes itself to be the Designated Bridge.
+^ a b c "802.1D IEEE Standard for Local and Metropolitan Area Networks. Media Access Control (MAC) Bridges" (PDF). IEEE. 2004. Retrieved 19 April 2012.&#160;
+^ LAN/MAN Standards Committee of the IEEE Computer Society, ed. (1990). ANSI/IEEE Std 802.1D. IEEE.&#160;
+^ LAN/MAN Standards Committee of the IEEE Computer Society, ed. (1998). ANSI/IEEE Std 802.1D, 1998 Edition, Part 3: Media Access Control (MAC) Bridges. IEEE.&#160;
+^ a b LAN/MAN Standards Committee of the IEEE Computer Society, ed. (2004). ANSI/IEEE Std 802.1D - 2004: IEEE Standard for Local and Metropolitan Area Networks: Media Access Control (MAC) Bridges. IEEE.&#160;
+^ "Understanding Issues Related to Inter-VLAN Bridging" (PDF). Cisco Systems, Inc. 11072.&#160;
+^ Waldemar Wojdak (March 2003). "Rapid Spanning Tree Protocol: A new solution from an old technology". CompactPCI Systems. Retrieved 2008-08-04.&#160;
+^ "Understanding Rapid Spanning Tree Protocol (802.1w)". Retrieved 2008-11-27.&#160;
+^ IEEE 802.1D-2004, IEEE, 2004-06-04, Since the original Spanning Tree Protocol (STP) has been removed from the 2004 revision of IEEE Std 802.1D, an implementation of RSTP is required for any claim of conformance for an implementation of IEEE Std 802.1Q-2003 that refers to the current revision of IEEE Std 802.1D&#160;
+^ "Technical Documentation". Force10. Retrieved 2011-01-25.&#160;
+^ "ExtremeXOS Operating System, Version 12.5" (PDF). Extreme Networks. 2010. Retrieved 2011-01-25.&#160;
+^ "BLADE PVST+ Interoperability with Cisco" (PDF). 2006. Retrieved 2011-01-25.&#160;
+^ "Bridging Between IEEE 802.1Q VLANs". Cisco Systems. Retrieved 2011-01-25.&#160;
+^ "CiscoWorks LAN Management Solution 3.2 Deployment Guide". August 2009. Retrieved 2010-01-25.&#160;
+^ Shuang Yu (8 May 2012). "IEEE APPROVES NEW IEEE 802.1aq™ SHORTEST PATH BRIDGING STANDARD". IEEE. Retrieved 2 June 2012.&#160;
+^ Peter Ashwood-Smith (24 Feb 2011). "Shortest Path Bridging IEEE 802.1aq Overview" (PDF). Huawei. Retrieved 11 May 2012.&#160;
+^ Jim Duffy (11 May 2012). "Largest Illinois healthcare system uproots Cisco to build $40M private cloud". PC Advisor. Retrieved 11 May 2012. Shortest Path Bridging will replace Spanning Tree in the Ethernet fabric.&#160;
+^ a b "IEEE Approves New IEEE 802.1aq Shortest Path Bridging Standard". Tech Power Up. 7 May 2012. Retrieved 11 May 2012.&#160;
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Spanning tree protocol.
+
+
+
+Cisco home page for the Spanning-Tree protocol family (discusses CST, MISTP, PVST, PVST+, RSTP, STP)
+Educational explanation of STP www.cisco.com
+STP article in the Wireshark wiki Includes a sample PCAP-file of captured STP traffic.
+Perlman, Radia. "Algorhyme". University of California at Berkeley. Archived from the original on 2011-07-19. Retrieved 2011-09-01.&#160;
+IEEE Standards
+
+ANSI/IEEE 802.1D-2004 standard, section 17 discusses RSTP (Regular STP is no longer a part of this standard. This is pointed out in section 8.)
+ANSI/IEEE 802.1Q-2005 standard, section 13 discusses MSTP
+
+
+RFCs
+
+RFC 2674-1999, proposed standard, Definitions of Managed Objects for Bridges with Traffic Classes, Multicast Filtering and Virtual LAN Extensions
+RFC 1525-1993, - SBRIDGEMIB, proposed standard, Definitions of Managed Objects for Source Routing Bridges
+RFC 1493-1993 - BRIDGEMIB, draft standard, Definitions of Managed Objects for Bridges
+
+
+Spanning Tree Direct vs Indirect Link Failures - CCIE Study
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+IEEE standards
+
+
+
+
+
+
+Current
+
+
+
+488
+730
+754
+
+Revision
+
+
+854
+828
+829
+896
+1003
+1014
+1016
+1076
+1149.1
+1154
+1164
+1275
+1278
+1284
+1355
+1394
+1451
+1497
+1516
+1541
+1547
+1584
+1588
+1596
+1603
+1613
+1666
+1667
+1675
+1685
+1800
+1801
+1815
+1850
+1900
+1901
+1902
+1904
+1905
+2030
+11073
+12207
+14764
+16085
+16326
+29148
+42010
+
+
+
+
+
+
+
+
+802 series
+
+
+
+
+
+802.1
+
+
+
+
+D
+p
+Q
+Qat
+Qay
+w
+X
+ab
+ad
+AE
+ag
+ah
+ak
+aq
+ax
+az
+
+
+
+
+
+
+
+
+
+802.11
+
+
+
+
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+n
+p
+r
+s
+u
+v
+w
+y
+ac
+ad
+af
+ah
+ai
+
+
+
+
+
+
+
+.2
+.3
+.4
+.5
+.6
+.7
+.8
+.9
+.10
+.12
+.14
+.15
+
+.1
+.4
+.4a
+
+
+.16
+
+d · e
+
+
+.17
+.18
+.20
+.21
+.22
+
+
+
+
+
+
+
+
+Proposed
+
+
+
+P1363
+P1619
+P1699
+P1823
+P1906.1
+
+
+
+
+
+
+
+
+Superseded
+
+
+
+754-1985
+830
+1219
+1233
+1362
+1364
+1471
+
+
+
+
+
+
+
+
+
+
+
+See also
+IEEE Standards Association
+Category:IEEE standards
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Spanning_Tree_Protocol&amp;oldid=688540823"					
+				Categories: Network protocolsLink protocolsNetwork topologySpanning treeFault-tolerant computer systemsEthernet standardsHidden categories: Commons category with local link same as on Wikidata				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						БългарскиCatalàČeštinaDeutschEestiEspañolEuskaraفارسیFrançais한국어Bahasa IndonesiaItalianoעבריתLatviešuМакедонскиNederlands日本語PolskiPortuguêsРусскийSlovenčinaСрпски / srpskiSvenskaไทยУкраїнськаייִדיש中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 1 November 2015, at 16:16.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

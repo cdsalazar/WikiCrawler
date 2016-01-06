@@ -1,0 +1,1000 @@
+
+
+
+
+Control engineering - Wikipedia, the free encyclopedia
+document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );
+window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Control_engineering","wgTitle":"Control engineering","wgCurRevisionId":691530494,"wgRevisionId":691530494,"wgArticleId":7011,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages with citations lacking titles","Pages with citations having bare URLs","All articles with unsourced statements","Articles with unsourced statements from May 2008","Articles with a promotional tone from November 2015","All articles with a promotional tone","Electrical engineering","Control engineering","Systems engineering","Engineering disciplines"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Control_engineering","wgRelevantArticleId":7011,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wikilove-recipient":"","wikilove-anon":0,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgGatherPageImageThumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Space_Shuttle_Columbia_launching.jpg/100px-Space_Shuttle_Columbia_launching.jpg","wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising"],"wgWikibaseItemId":"Q4917288","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.bannerController","skins.vector.js"]);
+} );
+
+
+
+a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{behavior:url("/w/static/1.27.0-wmf.7/skins/Vector/csshover.min.htc")}
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Control engineering
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+Control systems play a critical role in space flight
+
+
+Control engineering or control systems engineering is the engineering discipline that applies control theory to design systems with desired behaviors. The practice uses sensors to measure the output performance of the device being controlled and those measurements can be used to give feedback to the input actuators that can make corrections toward desired performance. When a device is designed to perform without the need of human inputs for correction it is called automatic control (such as cruise control for regulating the speed of a car). Multi-disciplinary in nature, control systems engineering activities focus on implementation of control systems mainly derived by mathematical modeling of systems of a diverse range.
+
+
+
+Contents
+
+
+1 Overview
+2 History
+3 Control theory
+4 Control systems
+5 Control engineering education
+6 Recent advancement
+7 See also
+8 References
+9 Further reading
+10 External links
+
+
+
+Overview[edit]
+Modern day control engineering is a relatively new field of study that gained significant attention during the 20th century with the advancement of technology. It can be broadly defined or classified as practical application of control theory. Control engineering has an essential role in a wide range of control systems, from simple household washing machines to high-performance F-16 fighter aircraft. It seeks to understand physical systems, using mathematical modeling, in terms of inputs, outputs and various components with different behaviors, use control systems design tools to develop controllers for those systems and implement controllers in physical systems employing available technology. A system can be mechanical, electrical, fluid, chemical, financial and even biological, and the mathematical modeling, analysis and controller design uses control theory in one or many of the time, frequency and complex-s domains, depending on the nature of the design problem.
+History[edit]
+Automatic control systems were first developed over two thousand years ago. The first feedback control device on record is thought to be the ancient Ktesibios's water clock in Alexandria, Egypt around the third century B.C. It kept time by regulating the water level in a vessel and, therefore, the water flow from that vessel. This certainly was a successful device as water clocks of similar design were still being made in Baghdad when the Mongols captured the city in 1258 A.D. A variety of automatic devices have been used over the centuries to accomplish useful tasks or simply to just entertain. The latter includes the automata, popular in Europe in the 17th and 18th centuries, featuring dancing figures that would repeat the same task over and over again; these automata are examples of open-loop control. Milestones among feedback, or "closed-loop" automatic control devices, include the temperature regulator of a furnace attributed to Drebbel, circa 1620, and the centrifugal flyball governor used for regulating the speed of steam engines by James Watt in 1788.
+In his 1868 paper "On Governors", James Clerk Maxwell was able to explain instabilities exhibited by the flyball governor using differential equations to describe the control system. This demonstrated the importance and usefulness of mathematical models and methods in understanding complex phenomena, and signaled the beginning of mathematical control and systems theory. Elements of control theory had appeared earlier but not as dramatically and convincingly as in Maxwell's analysis.
+Control theory made significant strides in the next 100 years. New mathematical techniques made it possible to control, more accurately, significantly more complex dynamical systems than the original flyball governor. These techniques include developments in optimal control in the 1950s and 1960s, followed by progress in stochastic, robust, adaptive and optimal control methods in the 1970s and 1980s. Applications of control methodology have helped make possible space travel and communication satellites, safer and more efficient aircraft, cleaner auto engines, cleaner and more efficient chemical processes.
+Before it emerged as a unique discipline, control engineering was practiced as a part of mechanical engineering and control theory was studied as a part of electrical engineering since electrical circuits can often be easily described using control theory techniques. In the very first control relationships, a current output was represented with a voltage control input. However, not having proper technology to implement electrical control systems, designers left with the option of less efficient and slow responding mechanical systems. A very effective mechanical controller that is still widely used in some hydro plants is the governor. Later on, previous to modern power electronics, process control systems for industrial applications were devised by mechanical engineers using pneumatic and hydraulic control devices, many of which are still in use today.
+Control theory[edit]
+Main article: Control theory
+There are two major divisions in control theory, namely, classical and modern, which have direct implications over the control engineering applications. The scope of classical control theory is limited to single-input and single-output (SISO) system design, except when analyzing for disturbance rejection using a second input. The system analysis is carried out in the time domain using differential equations, in the complex-s domain with the Laplace transform, or in the frequency domain by transforming from the complex-s domain. Many systems may be assumed to have a second order and single variable system response in the time domain. A controller designed using classical theory often requires on-site tuning due to incorrect design approximations. Yet, due to the easier physical implementation of classical controller designs as compared to systems designed using modern control theory, these controllers are preferred in most industrial applications. The most common controllers designed using classical control theory are PID controllers. A less common implementation may include either or both a Lead or Lag filter. The ultimate end goal is to meet a requirements set typically provided in the time-domain called the Step response, or at times in the frequency domain called the Open-Loop response. The Step response characteristics applied in a specification are typically percent overshoot, settling time, etc. The Open-Loop response characteristics applied in a specification are typically Gain and Phase margin and bandwidth. These characteristics may be evaluated through simulation including a dynamic model of the system under control coupled with the compensation model.
+In contrast, modern control theory is carried out in the state space, and can deal with multi-input and multi-output (MIMO) systems. This overcomes the limitations of classical control theory in more sophisticated design problems, such as fighter aircraft control, with the limitation that no frequency domain analysis is possible. In modern design, a system is represented to the greatest advantage as a set of decoupled first order differential equations defined using state variables. Nonlinear, multivariable, adaptive and robust control theories come under this division. Matrix methods are significantly limited for MIMO systems where linear independence cannot be assured in the relationship between inputs and outputs. Being fairly new, modern control theory has many areas yet to be explored. Scholars like Rudolf E. Kalman and Aleksandr Lyapunov are well-known among the people who have shaped modern control theory.
+Control systems[edit]
+Control engineering is the engineering discipline that focuses on the modeling of a diverse range of dynamic systems (e.g. mechanical systems) and the design of controllers that will cause these systems to behave in the desired manner. Although such controllers need not be electrical many are and hence control engineering is often viewed as a subfield of electrical engineering. However, the falling price of microprocessors is making the actual implementation of a control system essentially trivial[citation needed]. As a result, focus is shifting back to the mechanical and process engineering discipline, as intimate knowledge of the physical system being controlled is often desired.
+Electrical circuits, digital signal processors and microcontrollers can all be used to implement control systems. Control engineering has a wide range of applications from the flight and propulsion systems of commercial airliners to the cruise control present in many modern automobiles.
+In most of the cases, control engineers utilize feedback when designing control systems. This is often accomplished using a PID controller system. For example, in an automobile with cruise control the vehicle's speed is continuously monitored and fed back to the system, which adjusts the motor's torque accordingly. Where there is regular feedback, control theory can be used to determine how the system responds to such feedback. In practically all such systems stability is important and control theory can help ensure stability is achieved.
+Although feedback is an important aspect of control engineering, control engineers may also work on the control of systems without feedback. This is known as open loop control. A classic example of open loop control is a washing machine that runs through a pre-determined cycle without the use of sensors.
+Control engineering education[edit]
+At many universities, control engineering courses are taught in electrical and electronic engineering, mechatronics engineering, mechanical engineering, and aerospace engineering. In others, control engineering is connected to computer science, as most control techniques today are implemented through computers, often as embedded systems (as in the automotive field). The field of control within chemical engineering is often known as process control. It deals primarily with the control of variables in a chemical process in a plant. It is taught as part of the undergraduate curriculum of any chemical engineering program and employs many of the same principles in control engineering. Other engineering disciplines also overlap with control engineering as it can be applied to any system for which a suitable model can be derived. However, specialised control engineering departments do exist, for example, the Department of Automatic Control and Systems Engineering at the University of Sheffield [1] and the Department of Systems Engineering at the United States Naval Academy.[2]
+Control engineering has diversified applications that include science, finance management, and even human behavior. Students of control engineering may start with a linear control system course dealing with the time and complex-s domain, which requires a thorough background in elementary mathematics and Laplace transform, called classical control theory. In linear control, the student does frequency and time domain analysis. Digital control and nonlinear control courses require Z transformation and algebra respectively, and could be said to complete a basic control education.
+Recent advancement[edit]
+Originally, control engineering was all about continuous systems. Development of computer control tools posed a requirement of discrete control system engineering because the communications between the computer-based digital controller and the physical system are governed by a computer clock. The equivalent to Laplace transform in the discrete domain is the Z-transform. Today, many of the control systems are computer controlled and they consist of both digital and analog components.
+Therefore, at the design stage either digital components are mapped into the continuous domain and the design is carried out in the continuous domain, or analog components are mapped into discrete domain and design is carried out there. The first of these two methods is more commonly encountered in practice because many industrial systems have many continuous systems components, including mechanical, fluid, biological and analog electrical components, with a few digital controllers.
+Similarly, the design technique has progressed from paper-and-ruler based manual design to computer-aided design and now to computer-automated design or CAutoD which has been made possible by evolutionary computation. CAutoD can be applied not just to tuning a predefined control scheme, but also to controller structure optimisation, system identification and invention of novel control systems, based purely upon a performance requirement, independent of any specific control scheme.[3][4]
+
+
+
+
+
+This section contains content that is written like an advertisement. Please help improve it by removing promotional content and inappropriate external links, and by adding encyclopedic content written from a neutral point of view. (November 2015)
+
+
+Resilient Control Systems extends the traditional focus on addressing only plant disturbances to frameworks, architectures and methods that address multiple types of unexpected disturbance. In particular, adapting and transforming behaviors of the control system in response to malicious actors, abnormal failure modes, undesirable human action, etc. Development of resilience technologies require the involvement of multidisciplinary teams to holistically address the performance challenges.
+See also[edit]
+
+Adaptive control
+Advanced process control
+Building automation
+Coefficient diagram method
+Computer-automated design (CAutoD, CAutoCSD)
+Control reconfiguration
+Control theory
+Feedback
+H-infinity
+Intelligent control
+Laplace transform
+List of control engineering topics
+Model predictive control
+Nonlinear control
+Optimal control
+PID controller
+Process control
+Quantitative feedback theory
+Robotic unicycle
+Robust control
+Servomechanism
+State space
+Sliding mode control
+Systems engineering
+Testing controller
+VisSim
+Control Engineering (magazine)
+EICASLAB
+Time series
+
+References[edit]
+
+
+^ "ACSE - The University of Sheffield". Retrieved 17 March 2015.&#160;
+^ USNA Weapons and Systems Engineering http://www.usna.edu/WSE/. Retrieved 19 November 2014.&#160; Missing or empty |title= (help)
+^ Tan, K.C. and Li, Y. (2001) Performance-based control system design automation via evolutionary computing. Engineering Applications of Artificial Intelligence, 14 (4). pp. 473-486. ISSN 0952-1976, http://eprints.gla.ac.uk/3807/
+^ Li, Y., et al. (2004). CAutoCSD - Evolutionary search and optimisation enabled computer automated control system design. International Journal of Automation and Computing, 1(1). pp.76-88. ISSN 1751-8520, http://eprints.gla.ac.uk/3818/
+
+
+Further reading[edit]
+
+Christopher Kilian (2005). Modern Control Technology. Thompson Delmar Learning. ISBN&#160;1-4018-5806-6.&#160;
+Bennett, Stuart (June 1986). A history of control engineering, 1800-1930. IET. ISBN&#160;978-0-86341-047-5.&#160;
+Bennett, Stuart (1993). A history of control engineering, 1930-1955. IET. ISBN&#160;978-0-86341-299-8.&#160;
+Arnold Zankl (2006). Milestones in Automation: From the Transistor to the Digital Factory. Wiley-VCH. ISBN&#160;3-89578-259-9.&#160;
+
+External links[edit]
+
+
+
+Wikibooks has a book on the topic of: Control Systems
+
+
+
+Control Labs Worldwide
+The Michigan Chemical Engineering Process Dynamics and Controls Open Textbook
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Systems engineering
+
+
+
+
+
+
+Subfields
+
+
+
+Aerospace engineering
+Biological systems engineering
+Configuration management
+Earth systems engineering and management
+Electrical engineering
+Enterprise systems engineering
+Performance engineering
+Reliability engineering
+Safety engineering
+
+
+
+
+
+
+
+
+Processes
+
+
+
+Requirements engineering
+Functional specification
+System integration
+Verification and validation
+Design review
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Business process
+System
+System lifecycle
+V-Model
+Systems development life cycle
+
+
+
+
+
+
+
+
+Tools
+
+
+
+Decision-making
+Function modelling
+IDEF
+Optimization
+Planning
+Statistical analysis
+System dynamics
+Systems Modeling Language
+Systems analysis
+Systems modeling
+Work breakdown structure
+
+
+
+
+
+
+
+
+People
+
+
+
+James S. Albus
+Wernher von Braun
+Harold Chestnut
+Arthur David Hall III
+Derek Hitchins
+Robert E. Machol
+Simon Ramo
+Joseph Francis Shea
+John N. Warfield
+
+
+
+
+
+
+
+
+Related fields
+
+
+
+Control engineering
+Computer engineering
+Industrial engineering
+Operations research
+Project management
+Quality management
+Risk management
+Software engineering
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Technology
+
+
+
+
+
+
+
+
+
+Outline of technology
+Outline of applied science
+
+
+
+
+
+
+
+
+Fields
+
+
+
+
+Agriculture
+
+
+
+Agricultural engineering
+Aquaculture
+Fisheries science
+Food chemistry
+Food engineering
+Food microbiology
+Food technology
+GURT
+ICT
+Nutrition
+
+
+
+
+
+
+
+
+Biomedical
+
+
+
+Bioinformatics
+Biological engineering
+Biomechatronics
+Biomedical engineering
+Biotechnology
+Cheminformatics
+Genetic engineering
+Healthcare science
+Medical research
+Medical technology
+Nanomedicine
+Neuroscience
+Neurotechnology
+Pharmacology
+Reproductive technology
+Tissue engineering
+
+
+
+
+
+
+
+
+Buildings and
+Construction
+
+
+
+Acoustical engineering
+Architectural engineering
+Building services engineering
+Civil engineering
+Construction engineering
+Domestic technology
+Facade engineering
+Fire protection engineering
+Safety engineering
+Sanitary engineering
+Structural engineering
+
+
+
+
+
+
+
+
+Educational
+
+
+
+Educational software
+Digital technologies in education
+ICT in education
+Impact
+Multimedia learning
+Virtual campus
+Virtual education
+
+
+
+
+
+
+
+
+Energy
+
+
+
+Nuclear engineering
+Nuclear technology
+Petroleum engineering
+Soft energy technology
+
+
+
+
+
+
+
+
+Environmental
+
+
+
+Clean technology
+Clean coal technology
+Ecological design
+Ecological engineering
+Ecotechnology
+Environmental engineering
+Environmental engineering science
+Green building
+Green nanotechnology
+Landscape engineering
+Renewable energy
+Sustainable design
+Sustainable engineering
+
+
+
+
+
+
+
+
+Industrial
+
+
+
+Automation
+Business informatics
+Engineering management
+Enterprise engineering
+Financial engineering
+Industrial biotechnology
+Industrial engineering
+Metallurgy
+Mining engineering
+Productivity improving technologies
+Research and development
+Tribology
+
+
+
+
+
+
+
+
+IT and
+communications
+
+
+
+Artificial intelligence
+Broadcast engineering
+Computer engineering
+Computer science
+Financial technology
+Information technology
+Music technology
+Ontology engineering
+RF engineering
+Software engineering
+Telecommunications engineering
+Visual technology
+Web engineering
+
+
+
+
+
+
+
+
+Military
+
+
+
+Army engineering maintenance
+Electronic warfare
+Military communications
+Military engineering
+Stealth technology
+
+
+
+
+
+
+
+
+Transport
+
+
+
+Aerospace engineering
+Automotive engineering
+Naval architecture
+Space technology
+Traffic engineering
+Transport engineering
+
+
+
+
+
+
+
+
+
+
+
+
+Others
+
+
+
+
+applied science
+
+
+
+Cryogenics
+Electro-optics
+Electronics
+Engineering geology
+Engineering physics
+Hydraulics
+Materials science
+Microfabrication
+Nanoengineering
+
+
+
+
+
+
+
+
+engineering (list)
+
+
+
+Audio
+Biochemical
+Ceramic
+Chemical
+Polymer
+Control
+Electrical
+Electronic
+Entertainment
+Geotechnical
+Hydraulic
+Mechanical
+Mechatronics
+Optical
+Protein
+Quantum
+Robotics
+
+Animatronics
+
+
+Systems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Components
+
+
+
+Infrastructure
+Invention
+
+Timeline
+
+
+Knowledge
+Machine
+Skill
+
+Craft
+
+
+Tool
+
+Gadget
+
+
+
+
+
+
+
+
+
+
+Scales
+
+
+
+Femtotechnology
+Picotechnology
+Nanotechnology
+Microtechnology
+Macro-engineering
+Megascale engineering
+
+
+
+
+
+
+
+
+History
+
+
+
+Prehistoric technology
+Neolithic Revolution
+Ancient technology
+Medieval technology
+Renaissance technology
+Industrial Revolution
+
+Second
+
+
+Jet Age
+Digital Revolution
+Information Age
+
+
+
+
+
+
+
+
+Theories and
+concepts
+
+
+
+Appropriate technology
+Collingridge dilemma
+Critique of technology
+Diffusion of innovations
+Disruptive innovation
+Dual-use technology
+Ephemeralization
+High tech
+Hype cycle
+Low-technology
+Mature technology
+Strategy of Technology
+Technicism
+Techno-progressivism
+Technocapitalism
+Technocentrism
+Technocracy
+Technocriticism
+Technoetic
+Technogaianism
+Technological alliance
+Technological apartheid
+Technological change
+Technological convergence
+Technological determinism
+Technological escalation
+Technological evolution
+Technological fix
+Technological innovation system
+Technological momentum
+Technological nationalism
+Technological paradigm
+Technological rationality
+Technological revival
+Technological revolution
+Technological self-efficacy
+Technological singularity
+
+Singularitarianism
+
+
+Technological somnambulism
+Technological transitions
+Technological unemployment
+Technological utopianism
+Technology lifecycle
+
+Technology acceptance model
+Technology adoption lifecycle
+
+
+Technomancy
+Technorealism
+Technoromanticism
+Technoscience
+Transhumanism
+
+
+
+
+
+
+
+
+Other
+
+
+
+Emerging technologies
+
+List
+
+
+Fictional technology
+Technopaganism
+High-technology business districts
+Kardashev scale
+List of technologies
+Philosophy of technology
+
+Ethics of technology / Technoethics
+
+
+Science, technology and society
+
+Technology dynamics
+Science and technology by country
+
+
+STEM fields
+
+Pre-STEM
+women
+
+
+STEAM fields
+Technology alignment
+Technology assessment
+Technology brokering
+Technology companies
+Technology demonstration
+Technology education
+
+Technical universities and colleges
+
+
+Technology evangelist
+Technology fusion
+Technology governance
+Technology integration
+Technology journalism
+Technology management
+Technology museum
+Technology policy
+Technology shock
+Technology strategy
+Technology and society
+Technology transfer
+Technophilia
+Technophobia
+Technoself
+Technosexual
+Technosignature
+Technostress
+Terotechnology
+
+
+
+
+
+
+
+
+
+
+
+ Book
+ Category
+ Commons
+ Portal
+ Wikiquotes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Control_engineering&amp;oldid=691530494"					
+				Categories: Electrical engineeringControl engineeringSystems engineeringEngineering disciplinesHidden categories: Pages with citations lacking titlesPages with citations having bare URLsAll articles with unsourced statementsArticles with unsourced statements from May 2008Articles with a promotional tone from November 2015All articles with a promotional tone				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةCatalàDeutschEspañolفارسیFrançaisGaeilgeहिन्दीBahasa IndonesiaItalianoעברית日本語Norsk bokmålNorsk nynorskPortuguêsРусскийSimple EnglishСрпски / srpskiSvenskaதமிழ்ไทยTürkçeУкраїнськаاردوWinaray中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 20 November 2015, at 12:39.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

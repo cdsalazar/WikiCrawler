@@ -1,0 +1,544 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Types of radio emissions
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (August 2014)
+
+
+The International Telecommunication Union uses an internationally agreed system for classifying radio frequency signals. Each type of radio emission is classified according to its bandwidth, method of modulation, nature of the modulating signal, and type of information transmitted on the carrier signal. It is based on characteristics of the signal, not on the transmitter used.
+An emission designation is of the form BBBB 123 45, where BBBB is the bandwidth of the signal, 1 is a letter indicating the type of modulation used of the main carrier (not including any subcarriers which is why FM stereo is F8E and not D8E), 2 is a digit representing the type of modulating signal again of the main carrier, 3 is a letter corresponding to the type of information transmitted, 4 is a letter indicating the practical details of the transmitted information, and 5 is a letter that represents the method of multiplexing. The 4 and 5 fields are optional.
+This designation system was agreed at the 1979 World Administrative Radio Conference (WARC 79), and gave rise to the Radio Regulations that came into force on 1 January 1982. A similar designation system had been in use under prior Radio Regulations.
+
+
+
+Contents
+
+
+1 Designation details
+
+1.1 Bandwidth
+1.2 Type of modulation
+1.3 Type of modulating signal
+1.4 Type of transmitted information
+1.5 Details of information
+1.6 Multiplexing
+
+
+2 Common examples
+
+2.1 Broadcasting
+2.2 Two-way radio
+2.3 Low-speed data
+
+
+3 Notes and references
+4 Further reading
+
+
+
+Designation details[edit]
+Bandwidth[edit]
+The bandwidth (BBBB above) is expressed as four characters: three digits and one letter. The letter occupies the position normally used for a decimal point, and indicates what unit of frequency is used to express the bandwidth. The letter H indicates Hertz, K indicates kiloHertz, M indicates megaHertz, and G indicates gigaHertz. For instance, "500H" means 500&#160;Hz, and "2M50" means 2.5&#160;MHz. The first character must be a digit between 1 and 9; it may not be the digit&#160;0 or a letter.
+Type of modulation[edit]
+
+
+Character
+Description
+
+
+N
+Unmodulated carrier
+
+
+A
+Double-sideband amplitude modulation (e.g. AM broadcast radio)
+
+
+H
+Single-sideband with full carrier (e.g. as used by CHU)
+
+
+R
+Single-sideband with reduced or variable carrier
+
+
+J
+Single-sideband with suppressed carrier (e.g. Shortwave utility and amateur stations)
+
+
+B
+Independent sideband (two sidebands containing different signals)
+
+
+C
+Vestigial sideband (e.g. NTSC)
+
+
+F
+Frequency modulation (e.g. FM broadcast radio)
+
+
+G
+Phase modulation
+
+
+D
+Combination of AM and FM or PM
+
+
+P
+Sequence of pulses without modulation
+
+
+K
+Pulse amplitude modulation
+
+
+L
+Pulse width modulation (e.g. as used by WWVB)
+
+
+M
+Pulse position modulation
+
+
+Q
+Sequence of pulses, phase or frequency modulation within each pulse
+
+
+V
+Combination of pulse modulation methods
+
+
+W
+Combination of any of the above
+
+
+X
+None of the above
+
+
+Type of modulating signal[edit]
+
+
+Character
+Description
+
+
+0
+No modulating signal
+
+
+1
+One channel containing digital information, no subcarrier
+
+
+2
+One channel containing digital information, using a subcarrier
+
+
+3
+One channel containing analogue information
+
+
+7
+More than one channel containing digital information
+
+
+8
+More than one channel containing analogue information
+
+
+9
+Combination of analogue and digital channels
+
+
+X
+None of the above
+
+
+Types 4 and 5 were removed from use with the 1982 Radio Regulations. In previous editions, they had indicated facsimile and video, respectively.
+Type of transmitted information[edit]
+
+
+Character
+Description
+
+
+N
+No transmitted information
+
+
+A
+Aural telegraphy, intended to be decoded by ear, such as Morse code
+
+
+B
+Electronic telegraphy, intended to be decoded by machine (radioteletype and digital modes)
+
+
+C
+Facsimile (still images)
+
+
+D
+Data transmission, telemetry or telecommand (remote control)
+
+
+E
+Telephony (voice or music intended to be listened to by a human)
+
+
+F
+Video (television signals)
+
+
+W
+Combination of any of the above
+
+
+X
+None of the above
+
+
+Details of information[edit]
+
+
+Character
+Description
+
+
+A
+Two-condition code, elements vary in quantity and duration
+
+
+B
+Two-condition code, elements fixed in quantity and duration
+
+
+C
+Two-condition code, elements fixed in quantity and duration, error-correction included
+
+
+D
+Four-condition code, one condition per "signal element"
+
+
+E
+Multi-condition code, one condition per "signal element"
+
+
+F
+Multi-condition code, one character represented by one or more conditions
+
+
+G
+Monophonic broadcast-quality sound
+
+
+H
+Stereophonic or quadraphonic broadcast-quality sound
+
+
+J
+Commercial-quality sound (non-broadcast)
+
+
+K
+Commercial-quality sound—frequency inversion and-or "band-splitting" employed
+
+
+L
+Commercial-quality sound, independent FM signals, such as pilot tones, used to control the demodulated signal
+
+
+M
+Greyscale images or video
+
+
+N
+Full-color images or video
+
+
+W
+Combination of two or more of the above
+
+
+X
+None of the above
+
+
+Multiplexing[edit]
+
+
+Character
+Description
+
+
+N
+None used
+
+
+C
+Code-division (excluding spread spectrum)
+
+
+F
+Frequency-division
+
+
+T
+Time-division
+
+
+W
+Combination of Frequency-division and Time-division
+
+
+X
+None of the above
+
+
+Common examples[edit]
+Broadcasting[edit]
+
+A3E or A3E&#160;G&#160;
+ordinary amplitude modulation used for low frequency and medium frequency AM broadcasting
+
+
+F8E, F8E&#160;H&#160;
+FM broadcasting for radio transmissions on VHF, and as the audio component of analogue television transmissions.
+
+
+C3F, C3F&#160;N&#160;
+Analogue PAL, SÉCAM, or NTSC television video signals (formerly type A5C, until 1982)
+
+
+C7W&#160;
+ATSC digital television, commonly on VHF or UHF
+
+
+G7W&#160;
+DVB-T, ISDB-T, or DTMB digital television, commonly on VHF or UHF
+
+Two-way radio[edit]
+
+A3E&#160;
+AM speech communication – used for aeronautical communications
+
+
+F3E&#160;
+FM speech communication – often used for marine radio and many other VHF communications
+
+
+20K0&#160;F3E&#160;
+Wide FM, 20.0&#160;kHz width, ±5&#160;kHz deviation, still widely used for Ham Radio, NOAA weather radio, marine, and aviation users [1]
+
+
+11K2&#160;F3E&#160;
+Narrow FM, 11.25&#160;kHz bandwidth, ±2.5&#160;kHz deviation – All Part&#160;90 Land Mobile Radio Service (LMRS) users were required to upgrade to narrowband equipment by 2013-01-01. [2] [3] [4]
+
+
+6K00&#160;F3E&#160;
+Even Narrower FM, future roadmap for Land Mobile Radio Service (LMRS), already required on 700&#160;MHz public safety band
+
+
+J3E&#160;
+SSB speech communication, used on HF bands by marine, aeronautical and amateur users
+
+
+R3E&#160;
+SSB with reduced carrier (AME) speech communication, primarily used on HF bands by the military (a.k.a. compatible sideband)
+
+Low-speed data[edit]
+
+N0N&#160;
+Continuous, unmodulated carrier, formerly common for radio direction finding (RDF) in marine and aeronautical navigation.
+
+
+A1A&#160;
+Signalling by keying the carrier directly, a.k.a. Continuous Wave (CW) or On-Off Keying (OOK), currently used in amateur radio. This is often but not necessarily Morse code.
+
+
+A2A&#160;
+Signalling by transmitting a modulated tone with a carrier, so that it can easily be heard using an ordinary AM receiver. It was formerly widely used for station identification of non-directional beacons, usually but not exclusively Morse code (an example of a modulated continuous wave, as opposed to A1A, above).
+
+
+F1B&#160;
+Frequency-shift keying (FSK) telegraphy, such as RTTY.[1]
+
+
+F1C&#160;
+High frequency Radiofax
+
+
+F2D&#160;
+Data transmission by frequency modulation of a radio frequency carrier with an audio frequency FSK subcarrier. Often called AFSK/FM.
+
+
+J2B&#160;
+Phase-shift keying such as PSK31 (BPSK31)
+
+There is some overlap in signal types, so a transmission might legitimately be described by two or more designators. In such cases, there is usually a preferred conventional designator.
+Notes and references[edit]
+
+
+^ The designators F1B and F1D should be used for FSK radiotelegraphy and data transmissions, no matter how the radio frequency signal is generated (common examples are Audio FSK used to modulate an SSB transmitter or direct FSK modulation of an FM transmitter via varactor diode). However, occasionally the alternatives J2B and J2D are used to designate FSK signals generated by audio modulation of an SSB transmitter.
+
+
+Further reading[edit]
+
+"Complete List of Radio Regulations". Retrieved 2011-12-17.&#160;
+Radio Regulations, ITU, Geneva, 1982
+Radio Regulations, Edition of 2004, Volume 2 - Appendices, Appendix 1, ITU, Geneva, 2004
+Radiocommunications Vocabulary, Recommendation ITU-R V.573-4, ITU-R, Geneva, 2000
+Determination of Necessary Bandwidths Including Examples for their Calculation, Recommendation ITU-R SM.1138, Geneva, 1995
+Emission characteristics of radio transmissions, Australian Communications Authority, Canberra
+Notes Regarding Designation of Emission, Industry Canada, 1982
+Eckersley, R.J. Amateur Radio Operating Manual, 3rd edition, Radio Society of Great Britain, 1985, ISBN 0-900612-69-X
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Types_of_radio_emissions&amp;oldid=667428523"					
+				Categories: Radio modulation modesRadio communicationsHidden categories: Articles needing additional references from August 2014All articles needing additional references				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						БългарскиDeutschFrançaisPolski					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 18 June 2015, at 01:01.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

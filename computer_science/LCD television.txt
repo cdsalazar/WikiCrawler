@@ -1,0 +1,621 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			LCD television
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about Liquid-crystal-display (LCD)-based televisions.  For LCD technology, see Liquid-crystal display.
+Further information: Comparison CRT, LCD, Plasma
+
+
+
+
+A generic LCD TV, with speakers on either side of the screen.
+
+
+Liquid-crystal-display televisions (LCD TV) are television sets that use LCD display technology to produce images. LCD televisions are thinner and lighter than cathode ray tube (CRTs) of similar display size, and are available in much larger sizes. When manufacturing costs fell, this combination of features made LCDs practical for television receivers.
+In 2007, LCD televisions surpassed sales of CRT-based televisions worldwide for the first time,[citation needed] and their sales figures relative to other technologies are accelerating. LCD TVs are quickly displacing the only major competitors in the large-screen market, the plasma display panel and rear-projection television. LCDs are, by far, the most widely produced and sold television display type.
+LCDs also have a variety of disadvantages. Other technologies address these weaknesses, including organic light-emitting diodes (OLED), FED and SED, but as of 2014[update] none of these have entered widespread production for TV displays.
+
+
+
+Contents
+
+
+1 Description
+
+1.1 Basic LCD concepts
+1.2 Addressing sub-pixels
+1.3 Building a display
+
+
+2 Comparison
+
+2.1 Packaging
+2.2 Efficiency
+2.3 Image quality
+
+2.3.1 Response time
+2.3.2 Contrast ratio
+2.3.3 Color gamut
+
+
+
+
+3 History
+
+3.1 Early efforts
+3.2 High-definition
+3.3 Market takeover
+3.4 Recent research
+3.5 Competing systems
+
+
+4 Environmental effects
+5 See also
+6 References
+7 External links
+
+
+
+Description[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2009)
+
+
+Basic LCD concepts[edit]
+
+
+
+
+LCD television at home together with PlayStation 3 and some other equipment
+
+
+LCD televisions produce a black and colored image by selectively filtering a white light. The light was provided by a series of cold cathode fluorescent lamps (CCFLs) at the back of the screen. Today, most LCD-TV displays use white or colored LEDs as backlighting instead. Millions of individual LCD shutters, arranged in a grid, open and close to allow a metered amount of the white light through. Each shutter is paired with a colored filter to remove all but the red, green or blue (RGB) portion of the light from the original white source. Each shutter–filter pair forms a single sub-pixel. The sub-pixels are so small that when the display is viewed from even a short distance, the individual colors blend together to produce a single spot of color, a pixel. The shade of color is controlled by changing the relative intensity of the light passing through the sub-pixels.
+Liquid crystals encompass a wide range of (typically) rod-shaped polymers that naturally form into thin, ordered layers, as opposed to the more random alignment of a normal liquid. Some of these, the nematic liquid crystals, also show an alignment effect between the layers. The particular direction of the alignment of a nematic liquid crystal can be set by placing it in contact with an alignment layer or director, which is essentially a material with microscopic grooves in it, on the supporting substrates. When placed on a director, the layer in contact will align itself with the grooves, and the layers above will subsequently align themselves with the layers below, the bulk material taking on the director's alignment. In the case of a Twisted Nematic (TN) LCD, this effect is utilized by using two directors arranged at right angles and placed close together with the liquid crystal between them. This forces the layers to align themselves in two directions, creating a twisted structure with each layer aligned at a slightly different angle to the ones on either side.
+LCD shutters consist of a stack of three primary elements. On the bottom and top of the shutter are polarizer plates set at right angles. Normally light cannot travel through a pair of polarizers arranged in this fashion, and the display would be black. The polarizers also carry the directors to create the twisted structure aligned with the polarizers on either side. As the light flows out of the rear polarizer, it will naturally follow the liquid crystal's twist, exiting the front of the liquid crystal having been rotated through the correct angle, that allows it to pass through the front polarizer. LCDs are normally transparent in this mode of operation.
+To turn a shutter off, a voltage is applied across it from front to back. The rod-shaped molecules align themselves with the electric field instead of the directors, distorting the twisted structure. The light no longer changes polarization as it flows through the liquid crystal, and can no longer pass through the front polarizer. By controlling the voltage applied across the liquid crystal, the amount of remaining twist can be selected. This allows the transparency of the shutter to be controlled. To improve switching time, the cells are placed under pressure, which increases the force to re-align themselves with the directors when the field is turned off.
+Several other variations and modifications have been used in order to improve performance in certain applications. In-Plane Switching displays (IPS and S-IPS) offer wider viewing angles and better color reproduction, but are more difficult to construct and have slightly slower response times. Vertical Alignment (VA, S-PVA and MVA) offer higher contrast ratios and good response times, but suffer from color shifting when viewed from the side. In general, all of these displays work in a similar fashion by controlling the polarization of the light source.
+Addressing sub-pixels[edit]
+
+
+
+
+A close-up (300×) view of a typical LCD display, clearly showing the sub-pixel structure. The "notch" at the lower left of each sub-pixel is the thin-film transistor. The associated capacitors and addressing lines are located around the shutter, in the dark areas.
+
+
+In order to address a single shutter on the display, a series of electrodes is deposited on the plates on either side of the liquid crystal. One side has horizontal stripes that form rows, the other has vertical stripes that form columns. By supplying voltage to one row and one column, a field will be generated at the point where they cross. Since a metal electrode would be opaque, LCDs use electrodes made of a transparent conductor, typically indium tin oxide.
+Since addressing a single shutter requires power to be supplied to an entire row and column, some of the field always leaks out into the surrounding shutters. Liquid crystals are quite sensitive, and even small amounts of leaked field will cause some level of switching to occur. This partial switching of the surrounding shutters blurs the resulting image. Another problem in early LCD systems was the voltages needed to set the shutters to a particular twist was very low, but that voltage was too low to make the crystals re-align with reasonable performance. This resulted in slow response times and led to easily visible "ghosting" on these displays on fast-moving images, like a mouse cursor on a computer screen. Even scrolling text often rendered as an unreadable blur, and the switching speed was far too slow to use as a useful television display.
+In order to attack these problems, modern LCDs use an active matrix design. Instead of powering both electrodes, one set, typically the front, is attached to a common ground. On the rear, each shutter is paired with a thin-film transistor that switches on in response to widely separated voltage levels, say 0 and +5 volts. A new addressing line, the gate line, is added as a separate switch for the transistors. The rows and columns are addressed as before, but the transistors ensure that only the single shutter at the crossing point is addressed; any leaked field is too small to switch the surrounding transistors. When switched on, a constant and relatively high amount of charge flows from the source line through the transistor and into an associated capacitor. The capacitor is charged up until it holds the correct control voltage, slowly leaking this through the crystal to the common ground. The current is very fast and not suitable for fine control of the resulting store charge, so pulse code modulation is used to accurately control the overall flow. Not only does this allow for very accurate control over the shutters, since the capacitor can be filled or drained quickly, but the response time of the shutter is dramatically improved as well.
+Building a display[edit]
+A typical shutter assembly consists of a sandwich of several layers deposited on two thin glass sheets forming the front and back of the display. For smaller display sizes (under 30&#160;inches), the glass sheets can be replaced with plastic.
+The rear sheet starts with a polarizing film, the glass sheet, the active matrix components and addressing electrodes, and then the director. The front sheet is similar, but lacks the active matrix components, replacing those with the patterned color filters. Using a multi-step construction process, both sheets can be produced on the same assembly line. The liquid crystal is placed between the two sheets in a patterned plastic sheet that divides the liquid into individual shutters and keeps the sheets at a precise distance from each other.
+The critical step in the manufacturing process is the deposition of the active matrix components. These have a relatively high failure rate, which renders those pixels on the screen "always on". If there are enough broken pixels, the screen has to be discarded. The number of discarded panels has a strong effect on the price of the resulting television sets, and the major downward fall in pricing between 2006 and 2008 was due mostly to improved processes.
+To produce a complete television, the shutter assembly is combined with control electronics and backlight. The backlight for small sets can be provided by a single lamp using a diffuser or frosted mirror to spread out the light, but for larger displays a single lamp is not bright enough and the rear surface is instead covered with a number of separate lamps. Achieving even lighting over the front of an entire display remains a challenge, and bright and dark spots are not uncommon.
+Comparison[edit]
+
+
+
+
+A 19" Sony LCD TV
+
+
+Packaging[edit]
+In a CRT the electron beam is produced by heating a metal filament, which "boils" electrons off its surface. The electrons are then accelerated and focused in an electron gun, and aimed at the proper location on the screen using electromagnets. The majority of the power budget of a CRT goes into heating the filament, which is why the back of a CRT-based television is hot. Since the electrons are easily deflected by gas molecules, the entire tube has to be held in vacuum. The atmospheric force on the front face of the tube grows with the area, which requires ever-thicker glass. This limits practical CRTs to sizes around 30&#160;inches; displays up to 40&#160;inches were produced but weighed several hundred pounds, and televisions larger than this had to turn to other technologies like rear-projection.
+The lack of vacuum in an LCD television is one of its advantages; there is a small amount of vacuum in sets using CCFL backlights, but this is arranged in cylinders which are naturally stronger than large flat plates. Removing the need for heavy glass faces allows LCDs to be much lighter than other technologies. For instance, the Sharp LC-42D65, a fairly typical 42-inch LCD television, weighs 55&#160;lbs including a stand,[1] while the late-model Sony KV-40XBR800, a 40" 4:3 CRT weighs a massive 304&#160;lbs without a stand, almost six times the weight.[2]
+LCD panels, like other flat panel displays, are also much thinner than CRTs. Since the CRT can only bend the electron beam through a critical angle while still maintaining focus, the electron gun has to be located some distance from the front face of the television. In early sets from the 1950s the angle was often as small as 35 degrees off-axis, but improvements, especially computer assisted convergence, allowed that to be dramatically improved and, late in their evolution, folded. Nevertheless, even the best CRTs are much deeper than an LCD; the KV-40XBR800 is 26&#160;inches deep,[2] while the LC-42D65U is less than 4&#160;inches thick[1]&#160;– its stand is much deeper than the screen in order to provide stability.
+LCDs can, in theory, be built at any size, with production yields being the primary constraint. As yields increased, common LCD screen sizes grew, from 14 to 30", to 42", then 52", and 65" sets are now widely available. This allowed LCDs to compete directly with most in-home projection television sets, and in comparison to those technologies direct-view LCDs have a better image quality. Experimental and limited run sets are available with sizes over 100&#160;inches.
+Efficiency[edit]
+LCDs are relatively inefficient in terms of power use per display size, because the vast majority of light that is being produced at the back of the screen is blocked before it reaches the viewer. To start with, the rear polarizer filters out over half of the original un-polarized light. Examining the image above, you can see that a good portion of the screen area is covered by the cell structure around the shutters, which removes another portion. After that, each sub-pixel's color filter removes the majority of what is left to leave only the desired color. Finally, to control the color and luminance of a pixel as a whole, some light is lost when passing the front polarizer in the on-state by the imperfect operation of the shutters.
+For these reasons the backlighting system has to be extremely powerful. In spite of using highly efficient CCFLs, most sets use several hundred watts of power, more than would be required to light an entire house with the same technology. As a result, LCD televisions using CCFLs end up with overall power usage similar to a CRT of the same size. Using the same examples, the KV-40XBR800 dissipates 245&#160;W,[2] while the LC-42D65 dissipates 235&#160;W.[1] Plasma displays are worse; the best are on par with LCDs, but typical sets draw much more.[3]
+Modern LCD sets have attempted to address the power use through a process known as "dynamic lighting" (originally introduced for other reasons, see below). This system examines the image to find areas that are darker, and reduces the backlighting in those areas. CCFLs are long cylinders that run the length of the screen, so this change can only be used to control the brightness of the screen as a whole, or at least wide horizontal bands of it. This makes the technique suitable only for particular types of images, like the credits at the end of a movie. In 2009 some manufacturers[4] made some TVs using HCFL (more power efficient than CCFL). Sets using distributed LEDs behind the screen, with each LED lighting only a small number of pixels, typically a 16 by 16 patch, allow for better local dimming by dynamically adjusting the brightness of much smaller areas, which is suitable for a much wider set of images.
+Another ongoing area of research is to use materials that optically route light in order to re-use as much of the signal as possible. One potential improvement is to use microprisms or dichromic mirrors to split the light into R, G and B, instead of absorbing the unwanted colors in a filter. A successful system would improve efficiency by three times. Another would be to direct the light that would normally fall on opaque elements back into the transparent portion of the shutters.
+Several newer technologies, OLED, FED and SED, have lower power use as one of their primary advantages. All of these technologies directly produce light on a sub-pixel basis, and use only as much power as that light level requires. Sony has demonstrated 36" FED units displaying very bright images drawing only 14&#160;W, less than 1/10 as much as a similarly sized LCD. OLEDs and SEDs are similar to FEDs in power terms. The lower power requirements make these technologies particularly interesting in low-power uses like laptop computers and mobile phones. These sorts of devices were the market that originally bootstrapped LCD technology, due to its light weight and thinness.
+Image quality[edit]
+
+
+
+
+A traveler pocket-size LCD TV
+
+
+Early LCD sets were widely derided for their poor overall image quality, most notably the ghosting on fast-moving images, poor contrast ratio, and muddy colors. In spite of many predictions that other technologies would always beat LCDs, massive investment in LCD production, manufacturing, and electronic image processing has addressed many of these concerns.
+Response time[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2009)
+
+
+For 60 frames per second video, common in North America, each pixel is lit for 17&#160;ms before it has to be re-drawn (at 50 frames per second, it's 20&#160;ms in Europe). Early LCD displays had response times on the order of hundreds of milliseconds, which made them useless for television. A combination of improvements in materials technology since the 1970s greatly improved this, as did the active matrix techniques. By 2000, LCD panels with response times around 20&#160;ms were relatively common in computer roles. This was still not fast enough for television use.
+A major improvement, pioneered by NEC, led to the first practical LCD televisions. NEC noticed that liquid crystals take some time to start moving into their new orientation, but stop rapidly. If the initial movement could be accelerated, the overall performance would be increased. NEC's solution was to boost the voltage during the "spin up period" when the capacitor is initially being charged, and then dropping back to normal levels to fill it to the required voltage. A common method is to double the voltage, but halve the pulse width, delivering the same total amount of power. Named "Overdrive" by NEC, the technique is now widely used on almost all LCDs.
+Another major improvement in response time was achieved by adding memory to hold the contents of the display&#160;– something that a television needs to do anyway, but was not originally required in the computer monitor role that bootstrapped the LCD industry. In older displays the active matrix capacitors were first drained, and then recharged to the new value with every refresh. But in most cases, the vast majority of the screen's image does not change from frame to frame. By holding the before and after values in computer memory, comparing them, and only resetting those sub-pixels that actually changed, the amount of time spent charging and discharging the capacitors was reduced. Moreover, the capacitors are not drained completely; instead, their existing charge level is either increased or decreased to match the new value, which typically requires fewer charging pulses. This change, which was isolated to the driver electronics and inexpensive to implement, improved response times by about two times.
+Together, along with continued improvements in the liquid crystals themselves, and by increasing refresh rates from 60&#160;Hz to 120 and 240&#160;Hz, response times fell from 20&#160;ms in 2000 to about 2&#160;ms in the best modern displays. But even this is not really fast enough because the pixel will still be switching while the frame is being displayed. Conventional CRTs are well under 1&#160;ms, and plasma and OLED displays boast times on the order of 0.001&#160;ms.
+One way to further improve the effective refresh rate is to use "super-sampling", and it is becoming increasingly common on high-end sets. Since the blurring of the motion occurs during the transition from one state to another, this can be reduced by doubling the refresh rate of the LCD panel, and building intermediate frames using various motion compensation techniques. This smooths out the transitions, and means the backlighting is turned on only when the transitions are settled. A number of high-end sets offer 120&#160;Hz (in North America) or 100&#160;Hz (in Europe) refresh rates using this technique. Another solution is to only turn the backlighting on once the shutter has fully switched. In order to ensure that the display does not flicker, these systems fire the backlighting several times per refresh, in a fashion similar to movie projection where the shutter opens and closes several times per frame.
+Contrast ratio[edit]
+Even in a fully switched-off state, liquid crystals allow some light to leak through the shutters. This limits their contrast ratios to about 1600:1 on the best modern sets, when measured using the ANSI measurement (ANSI IT7.215-1992). Manufacturers often quote the "Full On/Off" contrast ratio instead, which is about 25% greater for any given set.[5]
+This lack of contrast is most noticeable in darker scenes. To display a color close to black, the LCD shutters have to be turned to almost full opacity, limiting the number of discrete colors they can display. This leads to "posterizing" effects and bands of discrete colors that become visible in shadows, which is why many reviews of LCD TVs mention the "shadow detail".[6] In comparison, the highest-end LED TVs offer regular contrast ratios of 5,000,000:1.
+Since the total amount of light reaching the viewer is a combination of the backlighting and shuttering, modern sets can use "dynamic backlighting" or local dimming to improve the contrast ratio and shadow detail. If a particular area of the screen is dark, a conventional set will have to set its shutters close to opaque to cut down the light. However, if the backlighting is reduced by half in that area, the shuttering can be reduced by half, and the number of available shuttering levels in the sub-pixels doubles. This is the main reason high-end sets offer dynamic lighting (as opposed to power savings, mentioned earlier), allowing the contrast ratio across the screen to be dramatically improved. While the LCD shutters are capable of producing about 1000:1 contrast ratio, by adding 30 levels of dynamic backlighting this is improved to 30,000:1.
+However, the area of the screen that can be dynamically adjusted is a function of the backlighting source. CCFLs are thin tubes that light up many rows (or columns) across the entire screen at once, and that light is spread out with diffusers. The CCFL must be driven with enough power to light the brightest area of the portion of the image in front of it, so if the image is light on one side and dark on the other, this technique cannot be used successfully. Displays backlit by full arrays of LEDs have an advantage, because each LED lights only a small patch of the screen. This allows the dynamic backlighting to be used on a much wider variety of images. Edge-lit displays do not enjoy this advantage. These displays have LEDs only along the edges and use a light guide plate covered with thousands of convex bumps that reflect light from the side-firing LEDs out through the LCD matrix and filters. LEDs on edge-lit displays can be dimmed only globally, not individually. For cost reasons, most of LCD TVs have edge-lit backlighting.
+The massive on-paper boost this method provides is the reason many sets now place the "dynamic contrast ratio" in their specifications sheets. There is widespread debate in the audio-visual world as to whether or not dynamic contrast ratios are real, or simply marketing speak.[7][8] Reviewers commonly note that even the best LCD displays cannot match the contrast ratios or deep blacks of plasma displays, in spite of being rated, on paper, as having much higher ratios. However, since 2014 there are no major manufacturers of plasma displays left. Contrast leaders are now displays based on OLEDs.
+Color gamut[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2009)
+
+
+Color on an LCD television is produced by filtering down a white source and then selectively shuttering the three primary colors relative to each other. The accuracy and quality of the resulting colors are thus dependent on the backlighting source and its ability to evenly produce white light. The CCFLs used in early LCD televisions were not particularly white, and tended to be strongest in greens. Modern backlighting has improved this, and sets commonly quote a color space covering about 75% of the NTSC 1953 color gamut. Using white LEDs as the backlight improves this further.
+In September 2009 Nanoco, a UK company, announced that it had signed a joint development agreement with a major Japanese electronics company under which it will design and develop quantum dots (QD) for use in LED backlights in LCD televisions.[9] Quantum dots are valued for displays, because they emit light in very specific Gaussian distributions.[10] This can result in a display that more accurately renders the colors that the human eye can perceive. To generate white light best suited as an LCD backlight, parts of the light of a blue-emitting LED are transformed by quantum dots into small-bandwidth green and red light such that the combined white light allows for a nearly ideal color gamut generated by the color filters of the LCD panel. In addition, efficiency is improved, as intermediate colors (wavelengths) are not present anymore and don't have to be filtered out by the RGB color filters of the LCD screen. US company QD Vision worked with Sony to launch LCD TVs using this technique under the marketing label Triluminos in 2013.
+At the Consumer Electronics Show 2015, Samsung Electronics, LG Electronics, the Chinese TCL Corporation and Sony showed QD-enhanced LED-backlighting of LCD TVs.[11] [12]
+History[edit]
+
+
+
+
+An LCD TV hanging on a wall in the Taipei World Trade Center during the Computex Taipei show in 2008.
+
+
+Early efforts[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2009)
+
+
+Passive matrix LCDs first became common in the 1980s for various portable computer roles. At the time they competed with plasma displays in the same market space. The LCDs had very slow refresh rates that blurred the screen even with scrolling text, but their light weight and low cost were major benefits. Screens using reflective LCDs required no internal light source, making them particularly well suited to laptop computers.
+Refresh rates of early devices were too slow to be useful for television. Portable televisions were a target application for LCDs. LCDs consumed far less battery power then even the miniature tubes used in portable televisions of the era. The earliest commercially made LCD TV was the Casio TV-10 made in 1983.[13] Resolutions were limited to standard definition, although a number of technologies were pushing displays towards the limits of that standard; Super VHS offered improved color saturation, and DVDs added higher resolutions as well. Even with these advances, screen sizes over 30" were rare as these formats would start to appear blocky at normal seating distances when viewed on larger screens. Projection systems were generally limited to situations where the image had to be viewed by a larger audience.
+Nevertheless, some experimentation with LCD televisions took place during this period. In 1988, Sharp Corporation introduced the first commercial LCD television, a 14" model with active matrix addressing using thin-film transistors (TFT). These were offered primarily as boutique items for discerning customers, and were not aimed at the general market. At the same time, plasma displays could easily offer the performance needed to make a high quality display, but suffered from low brightness and very high power consumption. However, a series of advances led to plasma displays outpacing LCDs in performance improvements, starting with Fujitsu's improved construction techniques in 1979, Hitachi's improved phosphors in 1984, and AT&amp;T's elimination of the black areas between the sub-pixels in the mid-1980s. By the late 1980s, plasma displays were far in advance of LCDs.
+High-definition[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2009)
+
+
+It was the slow standardization of high definition television that first produced a market for new television technologies. In particular, the wider 16:9 aspect ratio of the new material was difficult to build using CRTs; ideally a CRT should be perfectly circular in order to best contain its internal vacuum, and as the aspect ratio becomes more rectangular it becomes more difficult to make the tubes. At the same time, the much higher resolutions these new formats offered were lost at smaller screen sizes, so CRTs faced the twin problems of becoming larger and more rectangular at the same time. LCDs of the era were still not able to cope with fast-moving images, especially at higher resolutions, and from the mid-1990s the plasma display was the only real offering in the high resolution space.
+Through the halting introduction of HDTV in the mid-1990s into the early 2000s, plasma displays were the primary high-definition display technology. However, their high cost, both manufacturing and on the street, meant that older technologies like CRTs maintained a footprint in spite of their disadvantages. LCD, however, was widely considered to be unable to scale into the same space, and it was widely believed that the move to high-definition would push it from the market entirely.
+This situation changed rapidly. Contrary to early optimism, plasma displays never saw the massive economies of scale that were expected, and remained expensive. Meanwhile, LCD technologies like Overdrive started to address their ability to work at television speeds. Initially produced at smaller sizes, fitting into the low-end space that plasmas could not fill, LCDs started to experience the economies of scale that plasmas failed to achieve. By 2004, 32" models were widely available, 42" sets were becoming common, and much larger prototypes were being demonstrated.
+Market takeover[edit]
+Although plasmas continued to hold an arguable picture quality edge over LCDs, and even a price advantage for sets at the critical 42" size and larger, LCD prices started falling rapidly in 2006 while their screen sizes were increasing at a similarly rapid rate. By late 2006, several vendors were offering 42" LCDs, albeit at a price premium, encroaching on plasma's only stronghold. More critically, LCDs offer higher resolutions and true 1080p support, while plasmas were stuck at 720p, which made up for the price difference.[14]
+Predictions that prices for LCDs would drop rapidly through 2007 led to a "wait and see" attitude in the market, and sales of all large-screen televisions stagnated while customers watched to see if this would happen.[14] Plasmas and LCDs reached price parity in 2007, at which point the LCD's higher resolution was a winning point for many sales.[14] By late 2007, it was clear that LCDs were going to outsell plasmas during the critical Christmas sales season.[15][16] This was in spite of the fact that plasmas continued to hold an image quality advantage, but as the president of Chunghwa Picture Tubes noted after shutting down their plasma production line, "Globally, so many companies, so many investments, so many people have been working in this area, on this product. So they can improve so quickly."[14]
+When the sales figures for the 2007 Christmas season were finally tallied, pundits were surprised to find that LCDs had not only outsold plasma, but also outsold CRTs during the same period.[17] This evolution drove competing large-screen systems from the market almost overnight. Plasma had overtaken rear-projection systems in 2005.[18] The same was true for CRTs, which lasted only a few months longer; Sony ended sales of their famous Trinitron in most markets in 2007, and shut down the final plant in March 2008.[19] The February 2009 announcement that Pioneer Electronics was ending production of the plasma screens was widely considered the tipping point in that technology's history as well.[20]
+LCD's dominance in the television market accelerated rapidly.[14] It was the only technology that could scale both up and down in size, covering both the high-end market for large screens in the 40 to 50" class, as well as customers looking to replace their existing smaller CRT sets in the 14 to 30" range. Building across these wide scales quickly pushed the prices down across the board.[17]
+In 2008, LCD TV shipments were up 33 percent year-on-year compared to 2007 to 105 million units.[21] In 2009, LCD TV shipments raised to 146 million units (69% from the total of 211 million TV shipments).[22] In 2010, LCD TV shipments reached 187.9 million units (from an estimated total of 247 million TV shipments).[23][24]
+Current sixth-generation panels by major manufacturers such as Sony, Sharp Corporation, LG Display, Panasonic and Samsung have announced larger sized models:
+
+In October 2004, Sharp announced the successful manufacture of a 65" panel.
+In March 2005, Samsung announced an 82" LCD panel.[25]
+In August 2006, LG Display Consumer Electronics announced a 100" LCD television[26]
+In January 2007, Sharp displayed a 108" LCD panel under the AQUOS brand name at CES in Las Vegas.[27]
+
+Recent research[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2009)
+
+
+Some manufacturers are also experimenting with extending color reproduction of LCD televisions. Although current LCD panels are able to deliver all sRGB colors using an appropriate combination of backlight's spectrum and optical filters, manufacturers want to display even more colors. One of the approaches is to use a fourth, or even fifth and sixth color in the optical color filter array. Another approach is to use two sets of suitably narrowband backlights (e.g. LEDs), with slightly differing colors, in combination with broadband optical filters in the panel, and alternating backlights each consecutive frame. Fully using the extended color gamut will naturally require an appropriately captured material and some modifications to the distribution channel. Otherwise, the only use of the extra colors would be to let the looker boost the color saturation of the TV picture beyond what was intended by the producer, but avoiding the otherwise unavoidable loss of detail ("burnout") in saturated areas.
+Competing systems[edit]
+In spite of LCD's current dominance of the television field, there are several other technologies being developed that address its shortcomings. Whereas LCDs produce an image by selectively blocking a backlight OLED, FED and SED all produce light directly on the front face of the display. In comparison to LCDs, all of these technologies offer better viewing angles, much higher brightness and contrast ratio (as much as 5,000,000:1), and better color saturation and accuracy, and use less power. In theory, they are less complex and less expensive to build.
+Actually manufacturing these screens has proved more difficult than originally imagined. Sony abandoned their FED project in March 2009,[28] but continue work on their OLED sets. Canon continues development of their SED technology, but announced that they will not attempt to introduce sets to market for the foreseeable future.[29]
+Samsung has been displaying OLED sets at 14.1, 31 and 40&#160;inch sizes for some time, and at the SID 2009 trade show in San Antonio they announced that the 14.1 and 31&#160;inch sets are "production ready".[30]
+Environmental effects[edit]
+See also: Electronic waste
+The production of LCD screens uses nitrogen trifluoride (NF3) as an etching fluid during the production of the thin-film components. NF3 is a potent greenhouse gas, and its relatively long half-life may make it a potentially harmful contributor to global warming. A report in Geophysical Research Letters suggested that its effects were theoretically much greater than better-known sources of greenhouse gasses like carbon dioxide. As NF3 was not in widespread use at the time, it was not made part of the Kyoto Protocols and has been deemed "the missing greenhouse gas".[31]
+Critics of the report point out that it assumes that all of the NF3 produced would be released to the atmosphere. In reality, the vast majority of NF3 is broken down during the cleaning processes; two earlier studies found that only 2 to 3% of the gas escapes destruction after its use.[32] Furthermore, the report failed to compare NF3's effects with what it replaced, perfluorocarbon, another powerful greenhouse gas, of which anywhere from 30 to 70% escapes to the atmosphere in typical use.[32]
+See also[edit]
+
+Ambilight, Philips Electronics technology
+Comparison of display technologies
+Large-screen television technology
+LED TV
+Sony
+Pixel Plus
+Quattron, an LCD TV technology from Sharp which utilizes a fourth pixel color, yellow
+TFT-LCD, a detailed discussion of LCD panels technology
+
+References[edit]
+
+
+^ a b c "LC-42D65", sharp.com
+^ a b c "Sony KV-40XBR800 FD Trinitron XBR Wega", sony.com, see "Dimensions Diagrams"
+^ "The chart: 139 HDTVs' power consumption compared", cnet
+^ http://news.sel.sony.com/en/press_room/consumer/television/release/38249.html
+^ "What is Contrast: Defining and Measuring Contrast Ratio", Practical Home Theatre Guide
+^ Al Griffin, "Sony Bravia KDL-40XBR2 40-inch LCD HDTV", Sound &amp; Vision Magazine, November 2006
+^ David Field, "Opinion: Dynamic contrast ratio is the new evil in displays", iTnews, 3 October 2008
+^ "The Contrast Ratio Game", Practical Home Theater Guide, 23 August 2007
+^ http://www.nanocogroup.com/content/Library/NewsandEvents/articles/Nanoco_Signs_Agreement_with_Major_Japanese_Electronics_Company/136.aspx
+^ CES 2015 - What the Heck are Quantum Dots? IEEE Spectrum, January 2, 2015. Retrieved January 12, 2015
+^ CES 2015 - Placing bets on the New TV Technologies. IEEE Spectrum, January 7, 2015. Retrieved January 12, 2015
+^ http://www.cnet.com/news/lg-leaps-quantum-dot-rivals-with-new-tv/
+^ "Frank's Handheld-TVs: Part 1".&#160;
+^ a b c d e Reuters, "Shift to large LCD TVs over plasma", MSNBC, 27 November 2006
+^ Phillip Swann, "Sam's Club CEO: LCD Will Surpass Plasma", TVPredictions, 29 October 2007
+^ http://news.zdnet.com/2100-9584_22-6138290.html
+^ a b Wolfgang Gruener, "LCD TVs outship CRT TVs for the first time", TG Daily, 19 February 2008
+^ "Plasma TV sales overtake projection units, says report" EETimes, 17 August 2005
+^ MarketWatch, "Sony to stop making old-style cathode ray tube TVs", Wall Street Journal ', 3 March 2008
+^ Jose Fermoso, "Pioneer’s Kuro Killing: A Tipping Point in the Plasma Era", newteevee.com, 21 February 2009
+^ Flat Panel TV Sales Dropped in Q4 2008, February 18, 2009, Geoff Duncan, Digital Trends, retrieved at September 12, 2011
+^ Global LCD TV Shipments Reached 146M Units in 2009, Faster Growth Than 2008, February 22, 2010, Display Search, retrieved at September 12, 2011
+^ LCD TV Market Ten Times Larger Than Plasma TVs On Units-Shipped Basis, 20 February 2011, Jonathan Sutton, hdtvtest.co.uk, retrieved at September 12, 2011
+^ Global LCD TV Market to Grow 31% in 2010, Slowing to 13% in 2011, January 3, 2011, retrieved at September 12, 2011
+^ SAMSUNG United States - Main
+^ About Philips - Royal Philips
+^ "Sharp Unveils 108-Inch Flat-Panel TV". Fox News. 8 January 2007.&#160;
+^ "Sony's Field Emission Technologies closing its doors", Engadget
+^ Robin Harding, "Canon clear to launch new type of TV", Financial Times, 2 December 2008
+^ "SMD unveils production ready OLED-TVs and AMOLEDs at SID 2009"
+^ "NF3 used in plasma and LCD screens"
+^ a b Hannah Hoag, "The missing greenhouse gas", Nature Reports Climate Change, 10 July 2008
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to LCD TVs.
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Display technology
+
+
+
+
+
+
+Video displays
+
+
+
+
+
+Current generation
+
+
+
+
+Eidophor
+Electroluminescent display (ELD)
+Electronic paper
+
+E Ink
+Gyricon
+
+
+Light emitting diode display (LED)
+Cathode ray tube (CRT) (Monoscope)
+Liquid-crystal display (LCD)
+
+TFT
+TN
+LED
+Blue Phase
+IPS
+
+
+Plasma display panel (PDP)
+
+ALiS
+
+
+Digital Light Processing (DLP)
+Liquid crystal on silicon (LCoS)
+
+
+
+
+
+
+
+
+
+Next generation
+
+
+
+
+Organic light-emitting diode (OLED)
+
+AMOLED
+
+
+Organic light-emitting transistor (OLET)
+Surface-conduction electron-emitter display (SED)
+Field emission display (FED)
+Laser TV
+
+Quantum dot
+Liquid crystal
+
+
+MEMS display
+
+IMoD
+TMOS
+DMS
+
+
+Quantum dot display (QD-LED)
+Ferro liquid display (FLD)
+Thick-film dielectric electroluminescent technology (TDEL)
+Telescopic pixel display (TPD)
+Laser-powered phosphor display (LPD)
+
+
+
+
+
+
+
+
+
+
+
+Non-video
+
+
+
+Electromechanical
+
+Flip-dot
+Split-flap
+Vane
+
+
+Electronic paper
+Eggcrate
+Nixie tube
+Vacuum fluorescent display (VFD)
+Light-emitting electrochemical cell (LEC)
+Lightguide display
+Dot-matrix display
+Seven-segment display (SSD)
+Fourteen-segment display (FSD)
+Sixteen-segment display (SISD)
+
+
+
+
+
+
+
+
+3D display
+
+
+
+Stereoscopic
+Autostereoscopic
+Multiscopic
+Hologram
+
+Holographic display
+Computer-generated holography
+
+
+Volumetric
+Multi-layer
+Musion Eyeliner
+Fog display
+
+
+
+
+
+
+
+
+Static media
+
+
+
+Movie projector
+Neon sign
+Destination sign
+Slide projector
+Transparency
+Laser beam
+
+
+
+
+
+
+
+
+Related articles
+
+
+
+History of display technology
+Large-screen television technology
+Optimum HDTV viewing distance
+High-dynamic-range imaging (HDRI)
+Color Light Output
+Flexible display
+
+
+
+
+
+
+
+
+
+Comparison of display technology
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=LCD_television&amp;oldid=689403253"					
+				Categories: Liquid crystal displaysTelevision technologyTelevision terminologyHidden categories: All articles with unsourced statementsArticles with unsourced statements from December 2010Articles containing potentially dated statements from 2014All articles containing potentially dated statementsArticles needing additional references from June 2009All articles needing additional referencesCommons category without a link on Wikidata				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						Ελληνικά한국어Հայերենहिन्दीಕನ್ನಡPortuguêsSlovenčinaతెలుగుTürkçe					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 6 November 2015, at 22:49.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

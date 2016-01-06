@@ -1,0 +1,222 @@
+
+
+
+
+Norman E. Gibbs - Wikipedia, the free encyclopedia
+document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );
+window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Norman_E._Gibbs","wgTitle":"Norman E. Gibbs","wgCurRevisionId":659832765,"wgRevisionId":659832765,"wgArticleId":14345760,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles with VIAF identifiers","Wikipedia articles with LCCN identifiers","Wikipedia articles with ISNI identifiers","1941 births","2002 deaths","American computer scientists","20th-century American mathematicians","21st-century American mathematicians","American educators","Carnegie Mellon University faculty","Purdue University alumni","Software engineering researchers","Ursinus College alumni","Guilford College faculty"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Norman_E._Gibbs","wgRelevantArticleId":14345760,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Norman_Gibbs","wikilove-recipient":"","wikilove-anon":0,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgULSAcceptLanguageList":["en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising"],"wgInternalRedirectTargetUrl":"/wiki/Norman_E._Gibbs","wgWikibaseItemId":"Q7052180","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.bannerController","skins.vector.js"]);
+} );
+
+
+
+a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{behavior:url("/w/static/1.27.0-wmf.7/skins/Vector/csshover.min.htc")}
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Norman E. Gibbs
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Norman Gibbs)
+												
+					Jump to:					navigation, 					search
+				
+				For the American football player, see Norman Gibbs (Canadian football).
+Norman E. Gibbs (November 27, 1941 - April 25, 2002) was an American software engineer, scholar and educational leader.
+He studied to a B.Sc. in mathematics at Ursinus College (1964) and M.Sc. (1966) and Ph.D. (1969) in Computer Science at Purdue University, advised by Robert R. Korfhage. His research area was cycle generation, an area in graph theory.[1] Gibbs joined the faculty at Bowdoin College in Maine, Arizona State University and College of William and Mary (mathematics) in Virginia before moving to Pittsburgh, joining Carnegie Mellon University as professor of computer science and becoming the first director of the educational program at the Software Engineering Institute (1987–97). Since then he was chief information officer at Guilford College in Greensboro and University of Connecticut, jointly serving as professor of Operations and Information management. He eventually worked for Ball State University as chair of computer science (2000–02).[2]
+Articles[edit]
+
+A cycle generation algorithm for finite undirected linear graphs, in Jnl. of the ACM, 16(4):564-68, 1969.
+Tridiagonalization by permutations, in Comm. of the ACM, 17(1):20-24, 1974 (with William G. Poole, jr.)
+Basic cycle generation, in Comm. of the ACM, 18(5):275-76, 1975
+An Algorithm for Reducing the Bandwidth and Profile of a Sparse Matrix, in SIAM Jnr. of Numerical Analysis, 13(2):236-250, 1976 (with W. G. Poole and Paul K. Stockmeyer
+A hybrid profile reduction algorithm, ACM Trans. on Math. Softw., 2(4):378-387, 1976
+An introductory computer science course for all majors, ACM SIGCSE, 9(3):34-38, 1977
+A model curriculum for a liberal arts degree in computer science, Comm. of the ACM, 29(3):202-210, 1986 (with Allen B. Tucker)
+A Master of Software Engineering Curriculum: Recommendations from the Software Engineering Institute, IEEE Computer, 22(9):59-71, 1989 (With Gary A. Ford)
+Software Engineering and Computer Science: The Impending Split?, in Educ. &amp; Computing. 7(1-2):111-17, 1991
+
+Books[edit]
+
+Principles of data structures and algorithms with Pascal ((William C. Brown Publ.,1987). With Robert R. Korfhage
+Software Engineering Education: The Educational Needs of the Software Community (editor, with Richard E. Farley, 1987)
+
+References[edit]
+
+
+^ Algorithm 491 from Comm. of the ACM.
+^ Norm Gibbs - a leader in Software engineering education from IEEE.
+
+
+
+
+
+
+
+Authority control
+
+
+
+WorldCat
+VIAF: 108583237
+LCCN: n86116797
+ISNI: 0000 0001 1002 9331
+SUDOC: 169264718
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Norman_E._Gibbs&amp;oldid=659832765"					
+				Categories: 1941 births2002 deathsAmerican computer scientists20th-century American mathematicians21st-century American mathematiciansAmerican educatorsCarnegie Mellon University facultyPurdue University alumniSoftware engineering researchersUrsinus College alumniGuilford College facultyHidden categories: Wikipedia articles with VIAF identifiersWikipedia articles with LCCN identifiersWikipedia articles with ISNI identifiers				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+											
+				Add links			
+		
+				
+		
+		
+							
+											 This page was last modified on 29 April 2015, at 08:20.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

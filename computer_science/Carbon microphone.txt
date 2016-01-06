@@ -1,0 +1,646 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Carbon microphone
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+Carbon microphone from Western Electric telephone handset, around 1976.
+
+
+
+
+
+
+A disassembled Ericsson carbon microphone with carbon particles visible
+
+
+The carbon microphone, also known as carbon button microphone, button microphone, or carbon transmitter, is a type of microphone, a transducer that converts sound to an electrical audio signal. It consists of two metal plates separated by granules of carbon. One plate is very thin and faces toward the speaking person, acting as a diaphragm. Sound waves striking the diaphragm cause it to vibrate, exerting a varying pressure on the granules, which in turn changes the electrical resistance between the plates. Higher pressure lowers the resistance as the granules are pushed closer together. A steady direct current is passed between the plates through the granules. The varying resistance results in a modulation of the current, creating a varying electric current that reproduces the varying pressure of the sound wave. In telephony, this undulating current is directly passed through the telephone wires to the central office. In public address systems or recording devices it is amplified by an audio amplifier. The frequency response of the carbon microphone, however, is limited to a narrow range, and the device produces significant electrical noise.
+Before the proliferation of vacuum tube amplifiers in the 1920s, carbon microphones were the only practical means of obtaining high-level audio signals. They were widely used in telephone systems until the 1980s, while other applications used different microphone designs much earlier. Their low cost, inherently high output and frequency response characteristic were well suited for telephony. For plain old telephone service (POTS), carbon-microphone based telephones can still be used without modification. Carbon microphones, usually modified telephone transmitters, were widely used in early AM radio broadcasting systems, but their limited frequency response, as well as a fairly high noise level, led to their abandonment in those applications by the late 1920s. They continued to be widely used for low-end public address, and military and amateur radio applications for some decades afterward.[1]
+
+
+
+Contents
+
+
+1 History
+2 Use as amplifier
+3 Early radio applications
+4 Current usage
+5 References
+6 Bibliography
+7 External links
+
+
+
+History[edit]
+
+
+
+
+David Edward Hughes invented a carbon microphone in the 1870s.
+
+
+The first microphone that enabled proper voice telephony was the (loose-contact) carbon microphone (then called transmitter). This was independently developed by David Edward Hughes in England and Emile Berliner and Thomas Edison in the US. Although Edison was awarded the first patent in mid-1877, Hughes had demonstrated his working device in front of many witnesses some years earlier, and most historians credit him with its invention.[2][3][4][5]
+Hughes' device used loosely packed carbon granules - the varying pressure exerted on the granules by the diaphragm from the acoustic waves caused the resistance of the carbon to vary proportionally, allowing a relatively accurate electrical reproduction of the sound signal. Hughes also coined the word microphone. He demonstrated his apparatus to the Royal Society by magnifying the sound of insects scratching through a sound box. Contrary to Edison, Hughes decided not to take out a patent; instead, he made his invention a gift to the world.[6]
+In America, Edison and Berliner fought a long legal battle over the patent rights. Ultimately a federal court awarded Edison full rights to the invention, stating "Edison preceded Berliner in the transmission of speech...The use of carbon in a transmitter is, beyond controversy, the invention of Edison" and the Berliner patent was ruled invalid.[7][8]
+The carbon microphone is the direct prototype of today's microphones and was critical in the development of telephony, broadcasting and the recording industries.[9] Later, carbon granules were used between carbon buttons. Carbon microphones were widely used in telephones from 1890 until the 1980s.[8]
+Use as amplifier[edit]
+
+
+
+
+Operation of carbon microphone. When a sound wave presses on the conducting diaphragm, the granules of carbon are pressed together and decrease their electrical resistance.
+
+
+Carbon microphones can be used as amplifiers.[10] This capability was used in early telephone repeaters, making long distance phone calls possible in the era before vacuum tube amplifiers. In these repeaters, a magnetic telephone receiver (an electrical-to-mechanical transducer) was mechanically coupled to a carbon microphone. Because a carbon microphone works by varying a current passed through it, instead of generating a signal voltage as with most other microphone types, this arrangement could be used to boost weak signals and send them down the line. These amplifiers were mostly abandoned with the development of vacuum tubes, which offered higher gain and better sound quality. Even after vacuum tubes were in common use, carbon amplifiers continued to be used during the 1930s in portable audio equipment such as hearing aids. The Western Electric 65A carbon amplifier was 1.2" in diameter and 0.4" high and weighed less than 1.4 ounces.[11] Such carbon amplifiers did not require the heavy bulky batteries and power supplies used by vacuum tube amplifiers. By the 1950s, carbon amplifiers for hearing aids had been replaced by miniature vacuum tubes (only to be shortly replaced by transistors).[citation needed] However, carbon amplifiers are still being produced and sold.[12]
+An illustration of the amplification provided by carbon microphones was the oscillation caused by feedback, that resulted in an audible squeal from the old "candlestick telephone" if its earphone was placed near the carbon microphone.
+Early radio applications[edit]
+Early AM radio transmitters relied on carbon microphones for voice modulation of the radio signal. In the first long-distance audio transmissions by Reginald Fessenden in 1906, a continuous wave from an Alexanderson alternator was fed directly to the transmitting antenna through a water-cooled carbon microphone. Later systems using vacuum tube oscillators often used the output from a carbon microphone to modulate the grid bias of the oscillator or output tube to achieve modulation.
+Current usage[edit]
+Apart from legacy telephone installations in Third World countries, carbon microphones are still used today in certain niche applications in the developed world. An example is the Shure 104c,[13] which is still in demand because of its wide compatibility with existing equipment.
+The principal advantage of carbon microphones over other microphone designs is that they can produce high-level audio signals from very low DC voltages, without needing any form of additional amplification or batteries. This is particularly useful in remote locations served by very long telephone lines, where the electrical resistance of the wires can lead to severe DC voltage drop. Most all-electronic telephones need at least three volts DC to work, and so will often become useless in such situations, whereas carbon transmitter telephones will continue to work down to a fraction of a volt. Even where they do work, electronic telephones also suffer from the so-called "cliff effect", whereby they abruptly stop working when the line voltage falls below the critical level. In particular, this means that one telephone on a "party line" may tend to "hog" all the line current, cutting the others off. With carbon microphones, all receivers on the same line will still operate, albeit with reduced output.
+Carbon microphones are also widely used in safety-critical applications such as mining and chemical manufacturing, where higher line voltages cannot be used, due to the risk of sparking and consequent explosions. Carbon-based telephone systems are also resistant to damage from high-voltage transients, such as those produced by lightning strikes, and electromagnetic pulses of the type generated by nuclear explosions, and so are still maintained as backup communication systems in critical military installations.
+References[edit]
+
+^ Heil, B. The Microphone: A Short Illustrated History. QST, 90(6), 50
+^ Paul J. Nahin (2002). Oliver Heaviside: The Life, Work, and Times of an Electrical Genius of the Victorian Age. JHU Press. p.&#160;67.&#160;
+^ Bob Estreich. "David Edward Hughes".&#160;
+^ Huurdeman, Anton (2003). The Worldwide History of Telecommunications. John Wiley &amp; Sons.&#160;
+^ "David Hughes". Retrieved 2013-12-30.&#160;
+^ "A brief history of microphones" (PDF). Retrieved 2012-12-17.&#160;
+^ Inventors Hall of Fame, E. Berliner, U.S. Patent 0,463,569 filed June 1877, issued November 1891
+^ a b IEEE Global History Network: Carbon Transmitter. New Brunswick, NJ: IEEE History Center [1]
+^ "David Edward Hughes: Concertinist and Inventor" (PDF). Retrieved 2012-12-17.&#160;
+^ Examples of amplifiers that were based on carbon microphones:
+
+By 1904 Herbert E. Shreeve had developed a carbon amplifier for relaying telephone signals over long distances. Also, the (U.S.) Western Electric company used a carbon amplifier in its No. 66B hearing aid. See: Electro-mechanical amplifiers.
+A mechanical telephone relay, which was invented by Herbert E. Shreeve, an engineer with the Western Electric Co., was patented in 1905. See: Herbert E. Shreeve, "Telephone-current reinforcer or relay," U.S. patent no. 791,655 (filed: July 8, 1904&#160;; issued: June 6, 1905). See also: Herbert E. Shreeve, "Telephone-current reinforcer or relay," U.S. patent no. 791,656 (filed: Feb. 28, 1904&#160;; issued: June 6, 1905).
+The Acousticon hearing aid employed a carbon amplifier. See: The Hearing Aid Museum.
+Other early hearing aids that were based on carbon amplifiers are mentioned here: Washington University School of Medicine: Timeline of hearing devices and early deaf education
+In 1924, the Siemens Corp. of Germany patented a carbon-amplifier hearing aid. See: Siemens Hearing Instruments: 1924 carbon amplifier.
+
+
+^ Douglas Self. "Electro-Mechanical amplifiers (Western Electric 65A carbon amplifier in 66B hearing aid)".&#160;
+^ "GN 0686 Netcom In-Line Carbon Amplifier". Headset-Plus.com.&#160;
+^ "Model 104C Guide" (PDF). Shure Incorporated.&#160;
+
+Bibliography[edit]
+
+Josephson, Matthew, Edison: A Biography, Wiley, 1992, ISBN 0-471-54806-5
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Carbon microphones.
+
+
+
+Edison's invention of the carbon (graphite) microphone by Frank Dyer
+T A Edison, U.S. Patent 0,474,230 Speaking Telegraph (graphite microphone), filed April 1877, issued May 1892
+T A Edison, U.S. Patent 0,203,016 Improvement in Speaking Telephones (compressed lamp black button insulated from diaphragm), filed March 1878, issued April, 1878
+T A Edison, U.S. Patent 0,222,390 Carbon Telephone (carbon granules microphone), filed Nov 1878, issued Dec 1879
+E. Berliner, U.S. Patent 0,222,652 Improvement in Electrical Contact Telephones (carbon diaphragm with carbon contact pin), filed August 1879, issued December 16, 1879
+A C White, U.S. Patent 0,485,311 Telephone (solid back carbon microphone), filed March 24, 1892, issued November 1, 1892 (Bell engineer)
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications
+
+
+
+
+
+
+History
+
+
+
+
+Beacon
+Broadcasting
+Communications satellite
+Computer network
+Drums
+Electrical telegraph
+Fax
+Heliographs
+Hydraulic telegraph
+Internet
+Mass media
+Mobile phone
+Optical telecommunication
+Optical telegraphy
+Photophone
+Prepaid mobile phone
+Radio
+Radiotelephone
+Satellite communications
+Smoke signals
+Telecommunications history
+Telegraphy
+Telephone
+The Telephone Cases
+Television
+Timeline of communication technology
+Undersea telegraph line
+Videoconferencing
+Videophone
+Videotelephony
+
+
+
+
+
+
+
+
+Pioneers
+
+
+
+Edwin Howard Armstrong
+John Logie Baird
+Alexander Graham Bell
+Tim Berners-Lee
+Jagadish Chandra Bose
+Vint Cerf
+Claude Chappe
+Lee de Forest
+Philo Farnsworth
+Reginald Fessenden
+Elisha Gray
+Innocenzo Manzetti
+Guglielmo Marconi
+Antonio Meucci
+Alexander Stepanovich Popov
+Johann Philipp Reis
+Nikola Tesla
+Camille Papin Tissot
+Alfred Vail
+Charles Wheatstone
+Vladimir K. Zworykin
+
+
+
+
+
+
+
+
+Transmission
+media
+
+
+
+Coaxial cable
+Free-space optical
+Molecules (nanoscale networking)
+Optical fiber
+Radio waves
+Telephone lines
+Terrestrial microwave
+
+
+
+
+
+
+
+
+Network topology
+and switching
+
+
+
+Links
+Nodes
+Terminal node
+Network switching&#160;(circuit
+packet)
+Telephone exchange
+
+
+
+
+
+
+
+
+Multiplexing
+
+
+
+Space-division
+Frequency-division
+Time-division
+Polarization-division
+Orbital angular-momentum
+Code-division
+
+
+
+
+
+
+
+
+Networks
+
+
+
+ARPANET
+BITNET
+Cellular network
+Computer
+Ethernet
+FidoNet
+Internet
+ISDN
+LAN
+Mobile
+NGN
+Public Switched Telephone
+Radio
+Telecommunications equipment
+Television
+Telex
+WAN
+Wireless
+World Wide Web
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Thomas Edison
+
+
+
+
+
+
+Discoveries &amp; inventions
+
+
+
+List of Edison patents
+Carbon microphone
+Edison's Phonograph Doll
+Edison screw
+Etheric force
+Kinetoscope
+Phonograph
+Phonomotor
+Quadruplex telegraph
+Tasimeter
+
+
+
+
+
+
+
+
+Advancements
+
+
+
+Consolidated Edison
+Edison–Lalande cell
+Fluoroscopy
+Incandescent light bulb
+Movie camera
+Nickel–iron battery
+Thermionic emission
+Ticker tape
+
+
+
+
+
+
+
+
+Ventures
+
+
+
+Thomas A. Edison, Inc.
+Edison and Swan Electric Light Company
+Edison Gower-Bell Telephone Company of Europe, Ltd.
+Edison Illuminating Company
+Edison Machine Works
+Edison Manufacturing Company
+Edison Ore-Milling Company
+Edison Portland Cement Company
+Edison Records
+Edison Storage Battery Company
+Edison Studios
+General Electric
+Motion Picture Patents Company
+Mine Safety Appliances
+Oriental Telephone Company
+
+
+
+
+
+
+
+
+Monuments
+
+
+
+birthplace
+Black Maria
+Depot Museum
+Memorial Tower and Museum
+National Historical Park
+State Park
+Storage Battery Company Building
+General Electric Research Laboratory
+Winter Estates
+
+
+
+
+
+
+
+
+Friends &amp; family
+
+
+
+Charles Edison (son)
+Theodore Miller Edison (son)
+
+
+
+
+
+
+
+
+Films
+
+
+
+Young Tom Edison (1940)
+Edison, the Man (1940)
+"The Wizard of Evergreen Terrace" (1998)
+
+
+
+
+
+
+
+
+Literature
+
+
+
+The Future Eve (1886)
+Edison's Conquest of Mars (1898)
+Tales from the Bully Pulpit (2004)
+
+
+
+
+
+
+
+
+Productions
+
+
+
+The Execution of Mary Stuart (1895)
+The Kiss (1896)
+A Night of Terror (1911)
+
+
+
+
+
+
+
+
+Terms
+
+
+
+Edisonade
+Edisonian approach
+
+
+
+
+
+
+
+
+Related
+
+
+
+Thomas Edison in popular culture
+War of Currents
+Pearl Street Station
+Edison Museum
+Thomas Edison House
+Edison Hotel
+Telephonoscope
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Carbon_microphone&amp;oldid=689808395"					
+				Categories: American inventionsHistory of the telephoneMicrophonesThomas EdisonHidden categories: All articles with unsourced statementsArticles with unsourced statements from March 2008Commons category with local link same as on Wikidata				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						BosanskiCatalàDanskDeutschEspañolFrançaisGalegoҚазақшаNederlandsРусскийSlovenščinaСрпски / srpski中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 9 November 2015, at 15:06.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

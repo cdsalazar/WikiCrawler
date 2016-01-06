@@ -1,0 +1,710 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Refractive index
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Refraction index)
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+A ray of light being refracted in a plastic block.
+
+
+In optics the refractive index or index of refraction n of an optical medium is a dimensionless number that describes how light, or any other radiation, propagates through that medium. It is defined as
+
+
+
+where c is the speed of light in vacuum and v is the phase velocity of light in the medium.
+
+
+
+
+Refraction of a light ray.
+
+
+The refractive index determines how much light is bent, or refracted, when entering a material. This is the historically first use of refractive indices and is described by Snell's law of refraction, n1 sin θ1 = n2 sin θ2, where θ1 and θ2 are the angles of incidence and refraction, respectively, of a ray crossing the interface between two media with refractive indices n1 and n2. The refractive indices also determine the amount of light that is reflected when reaching the interface, as well as the critical angle for total internal reflection and Brewster's angle.[1]
+The refractive index can be seen as the factor by which the speed and the wavelength of the radiation are reduced with respect to their vacuum values: the phase velocity of light in a medium is v = c/n, and similarly the wavelength in that medium is λ = λ0/n, where λ0 is the wavelength of that light in vacuum. This implies that vacuum has a refractive index of 1, and that the frequency (f = v/λ) of the wave is not affected by the refractive index.
+The refractive index varies with the wavelength of light. This is called dispersion and causes the splitting of white light into its constituent colors in prisms and rainbows, and chromatic aberration in lenses. Light propagation in absorbing materials can be described using a complex-valued refractive index.[2] The imaginary part then handles the attenuation, while the real part accounts for refraction.
+The concept of refractive index is widely used within the full electromagnetic spectrum, from X-rays to radio waves. It can also be used with wave phenomena such as sound. In this case the speed of sound is used instead of that of light and a reference medium other than vacuum must be chosen.[3]
+
+
+
+Contents
+
+
+1 Definition
+2 History
+3 Typical values
+
+3.1 Refractive index below unity
+3.2 Negative refractive index
+
+
+4 Microscopic explanation
+5 Dispersion
+6 Complex refractive index
+7 Relations to other quantities
+
+7.1 Optical path length
+7.2 Refraction
+7.3 Total internal reflection
+7.4 Reflectivity
+7.5 Lenses
+7.6 Microscope resolution
+7.7 Relative permittivity and permeability
+7.8 Density
+7.9 Group index
+7.10 Momentum (Abraham–Minkowski controversy)
+7.11 Other relations
+7.12 Refractivity
+
+
+8 Nonscalar, nonlinear, or nonhomogeneous refraction
+
+8.1 Birefringence
+8.2 Nonlinearity
+8.3 Inhomogeneity
+
+
+9 Refractive index measurement
+
+9.1 Homogeneous media
+9.2 Refractive index variations
+
+
+10 Applications
+11 See also
+12 References
+13 External links
+
+
+
+Definition[edit]
+The refractive index n of an optical medium is defined as the ratio of the speed of light in vacuum, c = 7008299792458000000♠299792458&#160;m/s, and the phase velocity v of light in the medium,[1]
+
+
+
+The phase velocity is the speed at which the crests or the phase of the wave moves, which may be different from the group velocity, the speed at which the pulse of light or the envelope of the wave moves.
+The definition above is sometimes referred to as the absolute refractive index or the absolute index of refraction to distinguish it from definitions where the speed of light in other reference media than vacuum is used.[1] Historically air at a standardized pressure and temperature have been common as a reference medium.
+History[edit]
+
+
+
+
+Thomas Young coined the term index of refraction.
+
+
+Thomas Young was presumably the person who first used, and invented, the name "index of refraction", in 1807.[4] At the same time he changed this value of refractive power into a single number, instead of the traditional ratio of two numbers. The ratio had the disadvantage of different appearances. Newton, who called it the "proportion of the sines of incidence and refraction", wrote it as a ratio of two numbers, like "529 to 396" (or "nearly 4 to 3"; for water).[5] Hauksbee, who called it the "ratio of refraction", wrote it as a ratio with a fixed numerator, like "10000 to 7451.9" (for urine).[6] Hutton wrote it as a ratio with a fixed denominator, like 1.3358 to 1 (water).[7]
+Young did not use a symbol for the index of refraction, in 1807. In the next years, others started using different symbols: n, m, and µ.[8][9][10] The symbol n gradually prevailed.
+Typical values[edit]
+
+
+
+
+Diamonds have a very high refractive index of 2.42.
+
+
+
+Selected refractive indices at λ=589&#160;nm. For references, see the extended List of refractive indices.
+
+Material
+n
+
+
+Vacuum
+7000100000000000000♠1
+
+
+Gases at 0&#160;°C and 1&#160;atm
+
+
+Air
+7000100029300000000♠1.000293
+
+
+Helium
+7000100003600000000♠1.000036
+
+
+Hydrogen
+7000100013200000000♠1.000132
+
+
+Carbon dioxide
+7000100045000000000♠1.00045
+
+
+Liquids at 20&#160;°C
+
+
+Water
+1.333
+
+
+Ethanol
+1.36
+
+
+Olive oil
+1.47
+
+
+Solids
+
+
+Ice
+1.309
+
+
+Soda-lime glass
+1.46
+
+
+PMMA (Plexiglas)
+1.49
+
+
+Crown glass (typical)
+1.52
+
+
+Flint glass (typical)
+1.62
+
+
+Cubic zirconia
+2.15
+
+
+Diamond
+2.42
+
+
+See also: List of refractive indices
+For visible light most transparent media have refractive indices between 1 and 2. A few examples are given in the adjacent table. These values are measured at the yellow doublet sodium D-line, with a wavelength of 589 nanometers, as is conventionally done.[11] Gases at atmospheric pressure have refractive indices close to 1 because of their low density. Almost all solids and liquids have refractive indices above 1.3, with aerogel as the clear exception. Aerogel is a very low density solid that can be produced with refractive index in the range from 1.002 to 1.265.[12] Diamond lies at the other end of the range with a refractive index as high as 2.42. Most plastics have refractive indices in the range from 1.3 to 1.7, but some high-refractive-index polymers can have values as high as 1.76.[13]
+For infrared light refractive indices can be considerably higher. Germanium is transparent in the wavelength region from 2 to 14&#160;µm and has a refractive index of about 4, making it an important material for infrared optics.[14]
+Refractive index below unity[edit]
+According to the theory of relativity, no information can travel faster than the speed of light in vacuum, but this does not mean that the refractive index cannot be lower than 1. The refractive index measures the phase velocity of light, which does not carry information.[15] The phase velocity is the speed at which the crests of the wave move and can be faster than the speed of light in vacuum, and thereby give a refractive index below 1. This can occur close to resonance frequencies, for absorbing media, in plasmas, and for X-rays. In the X-ray regime the refractive indices are lower than but very close to 1 (exceptions close to some resonance frequencies).[16] As an example, water has a refractive index of 6999999999740000000♠0.99999974 = 1 − 6993260000000000000♠2.6×10−7 for X-ray radiation at a photon energy of 6985480652946099999♠30&#160;keV (0.04&#160;nm wavelength).[16]
+Negative refractive index[edit]
+See also: Negative index metamaterials
+
+
+
+
+A split-ring resonator array arranged to produce a negative index of refraction for microwaves.
+
+
+Recent research has also demonstrated the existence of materials with a negative refractive index, which can occur if permittivity and permeability have simultaneous negative values.[17] This can be achieved with periodically constructed metamaterials. The resulting negative refraction (i.e., a reversal of Snell's law) offers the possibility of the superlens and other exotic phenomena.[18]
+Microscopic explanation[edit]
+At the microscale, an electromagnetic wave's phase velocity is slowed in a material because the electric field creates a disturbance in the charges of each atom (primarily the electrons) proportional to the electric susceptibility of the medium. (Similarly, the magnetic field creates a disturbance proportional to the magnetic susceptibility.) As the electromagnetic fields oscillate in the wave, the charges in the material will be "shaken" back and forth at the same frequency.[1]:67 The charges thus radiate their own electromagnetic wave that is at the same frequency, but usually with a phase delay, as the charges may move out of phase with the force driving them (see sinusoidally driven harmonic oscillator). The light wave traveling in the medium is the macroscopic superposition (sum) of all such contributions in the material: the original wave plus the waves radiated by all the moving charges. This wave is typically a wave with the same frequency but shorter wavelength than the original, leading to a slowing of the wave's phase velocity. Most of the radiation from oscillating material charges will modify the incoming wave, changing its velocity. However, some net energy will be radiated in other directions or even at other frequencies (see scattering).
+Depending on the relative phase of the original driving wave and the waves radiated by the charge motion, there are several possibilities:
+
+If the electrons emit a light wave which is 90° out of phase with the light wave shaking them, it will cause the total light wave to travel more slowly. This is called "normal refraction", is observed for transparent materials like glass or water, and corresponds to a refractive index which is real and greater than 1.[19]
+If the electrons emit a light wave which is 270° out of phase with the light wave shaking them, it will cause the total light wave to travel more quickly. This is called "anomalous refraction", and is observed close to absorption lines, with X-rays, and in some microwave systems. It corresponds to a refractive index less than 1. (Even though the phase velocity of light is greater than the speed of light in vacuum c, the signal velocity is not, as discussed above.) If the response is sufficiently strong and out-of-phase, the result is a negative refractive index.[19]
+If the electrons emit a light wave which is 180° out of phase with the light wave shaking them, it will destructively interfere with the original light to reduce the total light intensity. This is light absorption in opaque materials and corresponds to an imaginary refractive index.
+If the electrons emit a light wave which is in phase with the light wave shaking them, it will amplify the light wave. This is rare, but occurs in lasers due to stimulated emission. It corresponds to an imaginary index of refraction, with the opposite sign to that of absorption.
+
+For most materials at visible-light frequencies, the phase is somewhere between 90° and 180°, corresponding to a combination of both refraction and absorption.
+Dispersion[edit]
+Main article: Dispersion (optics)
+
+
+
+
+Light of different colors has slightly different refractive indices in water and therefore shows up at different positions in the rainbow.
+
+
+
+
+
+
+In a prism dispersion causes different colors to refract at different angles, splitting white light into a rainbow of colors.
+
+
+
+
+
+
+The variation of refractive index with wavelength for various glasses.
+
+
+The refractive index of materials varies with the wavelength (and frequency) of light.[20] This is called dispersion and causes prisms and rainbows to divide white light into its constituent spectral colors.[21] As the refractive index varies with wavelength, so will the refraction angle as light goes from one material to another. Dispersion also causes the focal length of lenses to be wavelength dependent. This is a type of chromatic aberration, which often needs to be corrected for in imaging systems. In regions of the spectrum where the material does not absorb light, the refractive index tends to decrease with increasing wavelength, and thus increase with frequency. This is called "normal dispersion", in contrast to "anomalous dispersion", where the refractive index increases with wavelength.[20] For visible light normal dispersion means that the refractive index is higher for blue light than for red.
+For optics in the visual range, the amount of dispersion of a lens material is often quantified by the Abbe number:[21]
+
+
+
+For a more accurate description of the wavelength dependence of the refractive index, the Sellmeier equation can be used.[22] It is an empirical formula that works well in describing dispersion. Sellmeier coefficients are often quoted instead of the refractive index in tables.
+Because of dispersion, it is usually important to specify the vacuum wavelength of light for which a refractive index is measured. Typically, measurements are done at various well-defined spectral emission lines; for example, nD usually denotes the refractive index at the Fraunhofer "D" line, the centre of the yellow sodium double emission at 589.29 nm wavelength.[11]
+Complex refractive index[edit]
+See also: Mathematical descriptions of opacity
+
+
+
+
+
+This section needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (September 2014)
+
+
+
+
+
+
+A graduated neutral density filter showing light absorption in the upper half.
+
+
+When light passes through a medium, some part of it will always be attenuated. This can be conveniently taken into account by defining a complex refractive index,
+
+
+
+Here, the real part n is the refractive index and indicates the phase velocity, while the imaginary part κ is called the extinction coefficient — although κ can also refer to the mass attenuation coefficient—[23]:3 and indicates the amount of attenuation when the electromagnetic wave propagates through the material.[1]:128
+That κ corresponds to attenuation can be seen by inserting this refractive index into the expression for electric field of a plane electromagnetic wave traveling in the z-direction. We can do this by relating the complex wave number k to the complex refractive index n through k = 2πn/λ0, with λ0 being the vacuum wavelength; this can be inserted into the plane wave expression as
+
+
+
+Here we see that κ gives an exponential decay, as expected from the Beer–Lambert law. Since intensity is proportional to the square of the electric field, it will depend on the depth into the material as exp(−4πκz/λ0), and the attenuation coefficient becomes α = 4πκ/λ0.[1]:128 This also relates it to the penetration depth, the distance after which the intensity is reduced by 1/e, δp = 1/α = λ0/(4πκ).
+Both n and κ are dependent on the frequency. In most circumstances κ &gt; 0 (light is absorbed) or κ = 0 (light travels forever without loss). In special situations, especially in the gain medium of lasers, it is also possible that κ &lt; 0, corresponding to an amplification of the light.
+An alternative convention uses n = n − iκ instead of n = n + iκ, but where κ &gt; 0 still corresponds to loss. Therefore these two conventions are inconsistent and should not be confused. The difference is related to defining sinusoidal time dependence as Re[exp(−iωt)] versus Re[exp(+iωt)]. See Mathematical descriptions of opacity.
+Dielectric loss and non-zero DC conductivity in materials cause absorption. Good dielectric materials such as glass have extremely low DC conductivity, and at low frequencies the dielectric loss is also negligible, resulting in almost no absorption. However, at higher frequencies (such as visible light), dielectric loss may increase absorption significantly, reducing the material's transparency to these frequencies.
+The real, n, and imaginary, κ, parts of the complex refractive index are related through the Kramers–Kronig relations. In 1986 A.R. Forouhi and I. Bloomer deduced an equation describing κ as a function of photon energy, E, applicable to amorphous materials. Forouhi and Bloomer then applied the Kramers–Kronig relation to derive the corresponding equation for n as a function of E. The same formalism was applied to crystalline materials by Forouhi and Bloomer in 1988.
+The refractive index and extinction coefficient, n and κ, cannot be measured directly. They must be determined indirectly from measurable quantities that depend on them, such as reflectance, R, or transmittance, T, or ellipsometric parameters, ψ and δ. The determination of n and κ from such measured quantities will involve developing a theoretical expression for R or T, or ψ and δ in terms of a valid physical model for n and κ. By fitting the theoretical model to the measured R or T, or ψ and δ using regression analysis, n and κ can be deduced.
+For X-ray and extreme ultraviolet radiation the complex refractive index deviates only slightly from unity and usually has a real part smaller than 1. It is therefore normally written as n = 1 − δ + iκ (or n = 1 − δ − iκ with the alternative convention mentioned above).[2]
+Relations to other quantities[edit]
+Optical path length[edit]
+
+
+
+
+The colors of a soap bubble are determined by the optical path length through the thin soap film in a phenomenon called thin-film interference.
+
+
+Optical path length (OPL) is the product of the geometric length d of the path light follows through a system, and the index of refraction of the medium through which it propagates,[24]
+
+
+
+This is an important concept in optics because it determines the phase of the light and governs interference and diffraction of light as it propagates. According to Fermat's principle, light rays can be characterized as those curves that optimize the optical path length.[1]:68–69
+Refraction[edit]
+
+
+
+
+Refraction of light at the interface between two media of different refractive indices, with n2 &gt; n1. Since the phase velocity is lower in the second medium (v2 &lt; v1), the angle of refraction θ2 is less than the angle of incidence θ1; that is, the ray in the higher-index medium is closer to the normal.
+
+
+When light moves from one medium to another, it changes direction, i.e. it is refracted. If it moves from a medium with refractive index n1 to one with refractive index n2, with an incidence angle to the surface normal of θ1, the refraction angle θ2 can be calculated from Snell's law:[25]
+
+
+
+When light enters a material with higher refractive index, the angle of refraction will be smaller than the angle of incidence and the light will be refracted towards the normal of the surface. The higher the refractive index, the closer to the normal direction the light will travel. When passing into a medium with lower refractive index, the light will instead be refracted away from the normal, towards the surface.
+Total internal reflection[edit]
+
+
+
+
+Total internal reflection can be seen at the air-water boundary.
+
+
+If there is no angle θ2 fulfilling Snell's law, i.e.,
+
+
+
+the light cannot be transmitted and will instead undergo total internal reflection.[26]:49–50 This occurs only when going to a less optically dense material, i.e., one with lower refractive index. To get total internal reflection the angles of incidence θ1 must be larger than the critical angle[27]
+
+
+
+Reflectivity[edit]
+Apart from the transmitted light there is also a reflected part. The reflection angle is equal to the incidence angle, and the amount of light that is reflected is determined by the reflectivity of the surface. The reflectivity can be calculated from the refractive index and the incidence angle with the Fresnel equations, which for normal incidence reduces to[26]:44
+
+
+
+For common glass in air, n1 = 1 and n2 = 1.5, and thus about 4% of the incident power is reflected.[28] At other incidence angles the reflectivity will also depend on the polarization of the incoming light. At a certain angle called Brewster's angle, p-polarized light (light with the electric field in the plane of incidence) will be totally transmitted. Brewster's angle can be calculated from the two refractive indices of the interface as [1]:245
+
+
+
+Lenses[edit]
+
+
+
+
+The power of a magnifying glass is determined by the shape and refractive index of the lens.
+
+
+The focal length of a lens is determined by its refractive index n and the radii of curvature R1 and R2 of its surfaces. The power of a thin lens in air is given by the Lensmaker's formula:[29]
+
+
+
+where f is the focal length of the lens.
+Microscope resolution[edit]
+The resolution of a good optical microscope is mainly determined by the numerical aperture (NA) of its objective lens. The numerical aperture in turn is determined by the refractive index n of the medium filling the space between the sample and the lens and the half collection angle of light θ according to[30]:6
+
+
+
+For this reason oil immersion is commonly used to obtain high resolution in microscopy. In this technique the objective is dipped into a drop of high refractive index immersion oil on the sample under study.[30]:14
+Relative permittivity and permeability[edit]
+The refractive index of electromagnetic radiation equals
+
+
+
+where εr is the material's relative permittivity, and μr is its relative permeability.[31]:229 The refractive index is used for optics in Fresnel equations and Snell's law; while the relative permittivity and permeability are used in Maxwell's equations and electronics. Most naturally occurring materials are non-magnetic at optical frequencies, that is μr is very close to 1, [32] therefore n is approximately √εr. In this particular case, the complex relative permittivity εr, with real and imaginary parts εr and ɛ̃r, and the complex refractive index n, with real and imaginary parts n and κ (the latter called the "extinction coefficient"), follow the relation
+
+
+
+and their components are related by:[33]
+
+
+
+
+and:
+
+
+
+
+where  is the complex modulus.
+Density[edit]
+
+
+
+
+Relation between the refractive index and the density of silicate and borosilicate glasses.[34]
+
+
+In general, the refractive index of a glass increases with its density. However, there does not exist an overall linear relation between the refractive index and the density for all silicate and borosilicate glasses. A relatively high refractive index and low density can be obtained with glasses containing light metal oxides such as Li2O and MgO, while the opposite trend is observed with glasses containing PbO and BaO as seen in the diagram at the right.
+Many oils (such as olive oil) and ethyl alcohol are examples of liquids which are more refractive, but less dense, than water, contrary to the general correlation between density and refractive index.
+For gases, n − 1 is proportional to the density of the gas as long as the chemical composition does not change.[35] This means that it is also proportional to the pressure and inversely proportional to the temperature for ideal gases.
+Group index[edit]
+Sometimes, a "group velocity refractive index", usually called the group index is defined:[citation needed]
+
+
+
+where vg is the group velocity. This value should not be confused with n, which is always defined with respect to the phase velocity. When the dispersion is small, the group velocity can be linked to the phase velocity by the relation[26]:22
+
+
+
+where λ is the wavelength in the medium. In this case the group index can thus be written in terms of the wavelength dependence of the refractive index as
+
+
+
+When the refractive index of a medium is known as a function of the vacuum wavelength (instead of the wavelength in the medium), the corresponding expressions for the group velocity and index are (for all values of dispersion) [36]
+
+
+
+
+where λ0 is the wavelength in vacuum.
+Momentum (Abraham–Minkowski controversy)[edit]
+Main article: Abraham–Minkowski controversy
+In 1908, Hermann Minkowski calculated the momentum p of a refracted ray as follows:[37]
+
+
+
+where E is energy of the photon, c is the speed of light in vacuum and n is the refractive index of the medium. In 1909, Max Abraham proposed the following formula for this calculation:[38]
+
+
+
+A 2010 study suggested that both equations are correct, with the Abraham version being the kinetic momentum and the Minkowski version being the canonical momentum, and claims to explain the contradicting experimental results using this interpretation.[39]
+Other relations[edit]
+As shown in the Fizeau experiment, when light is transmitted through a moving medium, its speed relative to a stationary observer is:
+
+
+
+The refractive index of a substance can be related to its polarizability with the Lorentz–Lorenz equation or to the molar refractivities of its constituents by the Gladstone–Dale relation.
+Refractivity[edit]
+In atmospheric applications, the refractivity is taken as N = n – 1. Atmospheric refractivity is often expressed as either[40] N = 7006100000000000000♠106(n – 1)[41][42] or N = 7008100000000000000♠108(n – 1)[43] The multiplication factors are used because the refractive index for air, n deviates from unity by at most a few parts per ten thousand.
+Molar refractivity, on the other hand, is a measure of the total polarizability of a mole of a substance and can be calculated from the refractive index as
+
+
+
+where ρ is the density, and M is the molar mass.[26]:93
+Nonscalar, nonlinear, or nonhomogeneous refraction[edit]
+So far, we have assumed that refraction is given by linear equations involving a spatially constant, scalar refractive index. These assumptions can break down in different ways, to be described in the following subsections.
+Birefringence[edit]
+Main article: Birefringence
+
+
+
+
+A calcite crystal laid upon a paper with some letters showing double refraction.
+
+
+
+
+
+
+Birefringent materials can give rise to colors when placed between crossed polarizers. This is the basis for photoelasticity.
+
+
+In some materials the refractive index depends on the polarization and propagation direction of the light.[44] This is called birefringence or optical anisotropy.
+In the simplest form, uniaxial birefringence, there is only one special direction in the material. This axis is known as the optical axis of the material.[1]:230 Light with linear polarization perpendicular to this axis will experience an ordinary refractive index no while light polarized in parallel will experience an extraordinary refractive index ne.[1]:236 The birefringence of the material is the difference between these indices of refraction, Δn = ne − no.[1]:237 Light propagating in the direction of the optical axis will not be affected by the birefringence since the refractive index will be no independent of polarization. For other propagation directions the light will split into two linearly polarized beams. For light traveling perpendicularly to the optical axis the beams will have the same direction.[1]:233 This can be used to change the polarization direction of linearly polarized light or to convert between linear, circular and elliptical polarizations with waveplates.[1]:237
+Many crystals are naturally birefringent, but isotropic materials such as plastics and glass can also often be made birefringent by introducing a preferred direction through, e.g., an external force or electric field. This can be utilized in the determination of stresses in structures using photoelasticity. The birefringent material is then placed between crossed polarizers. A change in birefringence will alter the polarization and thereby the fraction of light that is transmitted through the second polarizer.
+In the more general case of trirefringent materials described by the field of crystal optics, the dielectric constant is a rank-2 tensor (a 3 by 3 matrix). In this case the propagation of light cannot simply be described by refractive indices except for polarizations along principal axes.
+Nonlinearity[edit]
+Main article: Nonlinear optics
+The strong electric field of high intensity light (such as output of a laser) may cause a medium's refractive index to vary as the light passes through it, giving rise to nonlinear optics.[1]:502 If the index varies quadratically with the field (linearly with the intensity), it is called the optical Kerr effect and causes phenomena such as self-focusing and self-phase modulation.[1]:264 If the index varies linearly with the field (a nontrivial linear coefficient is only possible in materials that do not possess inversion symmetry), it is known as the Pockels effect.[1]:265
+Inhomogeneity[edit]
+
+
+
+
+A gradient-index lens with a parabolic variation of refractive index (n) with radial distance (x). The lens focuses light in the same way as a conventional lens.
+
+
+If the refractive index of a medium is not constant, but varies gradually with position, the material is known as a gradient-index or GRIN medium and is described by gradient index optics.[1]:273 Light traveling through such a medium can be bent or focused, and this effect can be exploited to produce lenses, some optical fibers and other devices. Introducing GRIN elements in the design of an optical system can greatly simplify the system, reducing the number of elements by as much as a third while maintaining overall performance.[1]:276 The crystalline lens of the human eye is an example of a GRIN lens with a refractive index varying from about 1.406 in the inner core to approximately 1.386 at the less dense cortex.[1]:203 Some common mirages are caused by a spatially varying refractive index of air.
+Refractive index measurement[edit]
+Homogeneous media[edit]
+Main articles: Refractometry and Refractometer
+
+
+
+
+The principle of many refractometers.
+
+
+The refractive index of liquids or solids can be measured with refractometers. They typically measure some angle of refraction or the critical angle for total internal reflection. The first laboratory refractometers sold commercially were developed by Ernst Abbe in the late 19th century.[45] The same principles are still used today. In this instrument a thin layer of the liquid to be measured is placed between two prisms. Light is shone through the liquid at incidence angles all the way up to 90°, i.e., light rays parallel to the surface. The second prism should have an index of refraction higher than that of the liquid, so that light only enters the prism at angles smaller than the critical angle for total reflection. This angle can then be measured either by looking through a telescope, or with a digital photodetector placed in the focal plane of a lens. The refractive index n of the liquid can then be calculated from the maximum transmission angle θ as n = nG sin θ, where nG is the refractive index of the prism.[46]
+
+
+
+
+A handheld refractometer used to measure sugar content of fruits.
+
+
+This type of devices are commonly used in chemical laboratories for identification of substances and for quality control. Handheld variants are used in agriculture by, e.g., wine makers to determine sugar content in grape juice, and inline process refractometers are used in, e.g., chemical and pharmaceutical industry for process control.
+In gemology a different type of refractometer is used to measure index of refraction and birefringence of gemstones. The gem is placed on a high refractive index prism and illuminated from below. A high refractive index contact liquid is used to achieve optical contact between the gem and the prism. At small incidence angles most of the light will be transmitted into the gem, but at high angles total internal reflection will occur in the prism. The critical angle is normally measured by looking through a telescope.[47]
+Refractive index variations[edit]
+Main article: Phase-contrast imaging
+
+
+
+
+A differential interference contrast microscopy image of yeast cells.
+
+
+Unstained biological structures appear mostly transparent under Bright-field_microscopy as most cellular structures do not attenuate appreciable quantities of light. Nevertheless, the variation in the materials that constitutes these structures also corresponds to a variation in the refractive index. The following techniques convert such variation into measurable amplitude differences:
+To measure the spatial variation of refractive index in a sample phase-contrast imaging methods are used. These methods measure the variations in phase of the light wave exiting the sample. The phase is proportional to the optical path length the light ray has traversed, and thus gives a measure of the integral of the refractive index along the ray path. The phase cannot be measured directly at optical or higher frequencies, and therefore needs to be converted into intensity by interference with a reference beam. In the visual spectrum this is done using Zernike phase-contrast microscopy, differential interference contrast microscopy (DIC) or interferometry.
+Zernike phase-contrast microscopy introduces a phase shift to the low spatial frequency components of the image with a phase-shifting annulus in the Fourier plane of the sample, so that high-spatial-frequency parts of the image can interfere with the low-frequency reference beam. In DIC the illumination is split up into two beams that are given different polarizations, are phase shifted differently, and are shifted transversely with slightly different amounts. After the specimen, the two parts are made to interfere, giving an image of the derivative of the optical path length in the direction of the difference in transverse shift.[30] In interferometry the illumination is split up into two beams by a partially reflective mirror. One of the beams is let through the sample before they are combined to interfere and give a direct image of the phase shifts. If the optical path length variations are more than a wavelength the image will contain fringes.
+There exist several phase-contrast X-ray imaging techniques to determine 2D or 3D spatial distribution of refractive index of samples in the X-ray regime.[48]
+Applications[edit]
+
+
+
+
+
+This section does not cite any references (sources). Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (September 2014)
+
+
+The refractive index is a very important property of the components of any optical instrument that uses refraction. It determines the focusing power of lenses, the dispersive power of prisms, and generally the path of light through the system. It is the increase in refractive index in the core that guides the light in an optical fiber, and the variations in refractive index that reduces the reflectivity of a surface treated with an anti-reflective coating.
+Since refractive index is a fundamental physical property of a substance, it is often used to identify a particular substance, confirm its purity, or measure its concentration. Refractive index is used to measure solids, liquids, and gases. Most commonly it is used to measure the concentration of a solute in an aqueous solution. It can also be used as a useful tool to differentiate between different types of gemstone, due to the unique chatoyance each individual stone displays. A refractometer is the instrument used to measure refractive index. For a solution of sugar, the refractive index can be used to determine the sugar content (see Brix).
+In GPS, the index of refraction is utilized in ray-tracing to account for the radio propagation delay due to the Earth's electrically neutral atmosphere. It is also used in Satellite link design for the computation of radiowave attenuation in the atmosphere.
+See also[edit]
+
+
+Fermat's principle
+Calculation of glass properties
+Clausius–Mossotti relation
+Ellipsometry
+Index-matching material
+Index ellipsoid
+Laser Schlieren Deflectometry
+Optical properties of water and ice
+
+
+
+References[edit]
+
+
+^ a b c d e f g h i j k l m n o p q r s Hecht, Eugene (2002). Optics. Addison-Wesley. ISBN&#160;0-321-18878-0.&#160;
+^ a b Attwood, David (1999). Soft X-rays and extreme ultraviolet radiation: principles and applications. p.&#160;60. ISBN&#160;0-521-02997-X.&#160;
+^ Kinsler, Lawrence E. (2000). Fundamentals of Acoustics. John Wiley. p.&#160;136. ISBN&#160;0-471-84789-5.&#160;
+^ Young, Thomas (1807). A course of lectures on natural philosophy and the mechanical arts. p.&#160;413.&#160;
+^ Newton, Isaac (1730). Opticks: Or, A Treatise of the Reflections, Refractions, Inflections and Colours of Light. p.&#160;247.&#160;
+^ Hauksbee, Francis (1710). "A Description of the Apparatus for Making Experiments on the Refractions of Fluids". Philosophical Transactions of the Royal Society of London 27 (325–336): 207. doi:10.1098/rstl.1710.0015.&#160;
+^ Hutton, Charles (1795). Philosophical and mathematical dictionary. p.&#160;299.&#160;
+^ von Fraunhofer, Joseph (1817). "Bestimmung des Brechungs und Farbenzerstreuungs Vermogens verschiedener Glasarten". Denkschriften der Königlichen Akademie der Wissenschaften zu München 5: 208.&#160; Exponent des Brechungsverhältnisses is index of refraction
+^ Brewster, David (1815). "On the structure of doubly refracting crystals". Philosophical Magazine 45: 126. doi:10.1080/14786441508638398.&#160;
+^ Herschel, John F.W. (1828). On the Theory of Light. p.&#160;368.&#160;
+^ a b "Forensic Science Communications, Glass Refractive Index Determination". FBI Laboratory Services. Retrieved 2014-09-08.&#160;
+^ Tabata, M.; et al. (2005). "Development of Silica Aerogel with Any Density" (PDF). 2005 IEEE Nuclear Science Symposium Conference Record.&#160;
+^ Naoki Sadayori and Yuji Hotta "Polycarbodiimide having high index of refraction and production method thereof" US patent 2004/0158021 A1 (2004)
+^ Tosi, Jeffrey L., article on Common Infrared Optical Materials in the Photonics Handbook, accessed on 2014-09-10
+^ Als-Nielsen, J.; McMorrow, D. (2011). Elements of Modern X-ray Physics. Wiley-VCH. p.&#160;25. ISBN&#160;978-0-470-97395-0. One consequence of the real part of n being less than unity is that it implies that the phase velocity inside the material, c/n, is larger than the velocity of light, c. This does not, however, violate the law of relativity, which requires that only signals carrying information do not travel faster than c. Such signals move with the group velocity, not with the phase velocity, and it can be shown that the group velocity is in fact less than c.&#160;
+^ a b "X-Ray Interactions With Matter". The Center for X-Ray Optics. Retrieved 2011-08-30.&#160;
+^ Veselago, V. G. (1968). "The electrodynamics of substances with simultaneously negative values of ε and μ". Soviet Physics Uspekhi 10 (4): 509–514. Bibcode:1968SvPhU..10..509V. doi:10.1070/PU1968v010n04ABEH003699.&#160; |access-date= requires |url= (help)
+^ Shalaev, V. M. (2007). "Optical negative-index metamaterials". Nature Photonics (Nature Publishing Group) 1: 41–48. Bibcode:2007NaPho...1...41S. doi:10.1038/nphoton.2006.49. Retrieved 2014-09-07.&#160;
+^ a b Feynman, Richard P. (2011). Feynman Lectures on Physics 1: Mainly Mechanics, Radiation, and Heat. Basic Books. ISBN&#160;978-0-465-02493-3.&#160;
+^ a b R. Paschotta, article on chromatic dispersion in the Encyclopedia of Laser Physics and Technology, accessed on 2014-09-08
+^ a b Carl R. Nave, page on Dispersion in HyperPhysics, Department of Physics and Astronomy, Georgia State University, accessed on 2014-09-08
+^ R. Paschotta, article on Sellmeier formula in the Encyclopedia of Laser Physics and Technology, accessed on 2014-09-08
+^ Dresselhaus, M. S. (1999). "Solid State Physics Part II Optical Properties of Solids" (PDF). Course 6.732 Solid State Physics. MIT. Retrieved 2015-01-05.&#160;
+^ R. Paschotta, article on optical thickness in the Encyclopedia of Laser Physics and Technology, accessed on 2014-09-08
+^ R. Paschotta, article on refraction in the Encyclopedia of Laser Physics and Technology, accessed on 2014-09-08
+^ a b c d Born, Max; Wolf, Emil (1999). Principles of Optics (7th expanded ed.). ISBN&#160;978-0-521-78449-8.&#160;
+^ R. Paschotta, article on [href="https://www.rp-photonics.com/total_internal_reflection.html total internal reflection] in the Encyclopedia of Laser Physics and Technology, accessed on 2014-09-08
+^ Swenson, Jim; Incorporates Public Domain material from the U.S. Department of Energy (November 10, 2009). "Refractive Index of Minerals". Newton BBS, Argonne National Laboratory, US DOE. Retrieved 2010-07-28.&#160;
+^ Carl R. Nave, page on the Lens-Maker's Formula in HyperPhysics, Department of Physics and Astronomy, Georgia State University, accessed on 2014-09-08
+^ a b c Carlsson, Kjell (2007). "Light microscopy" (PDF). Retrieved 2015-01-02.&#160;
+^ Bleaney, B.; Bleaney, B.I. (1976). Electricity and Magnetism (Third ed.). Oxford University Press. ISBN&#160;0-19-851141-8.&#160;
+^ Urzhumov, Yaroslav A.; Urzhumov, Yaroslav A (2005). "Electric and magnetic properties of sub-wavelength plasmonic crystals". Journal of Optics A: Pure and Applied Optics 7 (2): S23. Bibcode:2005JOptA...7S..23S. doi:10.1088/1464-4258/7/2/003.&#160;
+^ Wooten, Frederick (1972). Optical Properties of Solids. New York City: Academic Press. p.&#160;49. ISBN&#160;0-12-763450-9.&#160;(online pdf)
+^ "Calculation of the Refractive Index of Glasses". Statistical Calculation and Development of Glass Properties.&#160;
+^ Stone, Jack A.; Zimmerman, Jay H. (2011-12-28). "Index of refraction of air". Engineering metrology toolbox. National Institute of Standards and Technology (NIST). Retrieved 2014-01-11.&#160;
+^ Bor, Z.; Osvay, K.; Rácz, B.; Szabó, G. (1990). "Group refractive index measurement by Michelson interferometer". Optics Communications 78 (2): 109–112. Bibcode:1990OptCo..78..109B. doi:10.1016/0030-4018(90)90104-2.&#160;
+^ Minkowski, Hermann (1908). "Die Grundgleichung für die elektromagnetischen Vorgänge in bewegten Körpern". Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse: 53–111.&#160;
+^ Abraham, Max (1909). "Zur Elektrodynamik bewegter Körper". Rendiconti del Circolo Matematico di Palermo 28 (1).&#160;
+^ Barnett, Stephen (2010-02-07). "Resolution of the Abraham-Minkowski Dilemma". Phys. Rev. Lett. 104 (7): 070401. Bibcode:2010PhRvL.104g0401B. doi:10.1103/PhysRevLett.104.070401. PMID&#160;20366861.&#160;
+^ Young, A. T. (2011), Refractivity of Air, retrieved 31 July 2014&#160;
+^ Barrell, H.; Sears, J. E. (1939), "The Refraction and Dispersion of Air for the Visible Spectrum", Philosophical Transactions of the Royal Society of London, A, Mathematical and Physical Sciences 238 (786): 1–64, Bibcode:1939RSPTA.238....1B, doi:10.1098/rsta.1939.0004, JSTOR&#160;91351&#160; |access-date= requires |url= (help)
+^ Aparicio, Josep M.; Laroche, Stéphane (2011-06-02). "An evaluation of the expression of the atmospheric refractivity for GPS signals". Journal of Geophysical Research (American Geophysical Union) 116 (D11): D11104. Bibcode:2011JGRD..11611104A. doi:10.1029/2010JD015214. Retrieved 13 January 2014.&#160;
+^ Ciddor, P. E. (1996), "Refractive Index of Air: New Equations for the Visible and Near Infrared", Applied Optics 35 (9): 1566–1573, Bibcode:1996ApOpt..35.1566C, doi:10.1364/ao.35.001566&#160;
+^ R. Paschotta, article on birefringence in the Encyclopedia of Laser Physics and Technology, accessed on 2014-09-09
+^ "The Evolution of the Abbe Refractometer". Humboldt State University, Richard A. Paselk. 1998. Retrieved 2011-09-03.&#160;
+^ "Refractometers and refractometry". Refractometer.pl. 2011. Retrieved 2011-09-03.&#160;
+^ "Refractometer". The Gemology Project. Retrieved 2011-09-03.&#160;
+^ Fitzgerald, Richard (July 2000). "Phase‐Sensitive X‐Ray Imaging". Physics Today 53 (7): 23. Bibcode:2000PhT....53g..23F. doi:10.1063/1.1292471.&#160;
+
+
+External links[edit]
+
+NIST calculator for determining the refractive index of air
+Dielectric materials
+Science World
+Filmetrics' online database Free database of refractive index and absorption coefficient information
+RefractiveIndex.INFO Refractive index database featuring online plotting and parameterisation of data
+sopra-sa.com Refractive index database as text files (sign-up required)
+LUXPOP Thin film and bulk index of refraction and photonics calculations
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Refractive_index&amp;oldid=690761136"					
+				Categories: Dimensionless numbersPhysical quantitiesRefractionHidden categories: Pages using citations with accessdate and no URLArticles needing additional references from September 2014All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from June 2015				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةAzərbaycancaБългарскиBosanskiCatalàČeštinaCymraegDanskDeutschEestiΕλληνικάEspañolEsperantoفارسیFrançaisGaeilgeGalego한국어Հայերենहिन्दीHrvatskiBahasa IndonesiaItalianoעבריתLatviešuLietuviųMagyarമലയാളംBahasa MelayuМонголNederlands日本語NordfriiskNorsk bokmålNorsk nynorskPolskiPortuguêsRomânăРусскийScotsSeelterskSlovenčinaSlovenščinaСрпски / srpskiSrpskohrvatski / српскохрватскиSuomiSvenskaதமிழ்ไทยTürkçeУкраїнськаTiếng Việt中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 15 November 2015, at 14:36.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

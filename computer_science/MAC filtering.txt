@@ -1,0 +1,187 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			MAC filtering
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (November 2015)
+
+
+In computer networking, MAC Filtering (or GUI filtering, or layer 2 address filtering) refers to a security access control method whereby the 48-bit address assigned to each network card is used to determine access to the network.
+MAC addresses are uniquely assigned to each card, so using MAC filtering on a network permits and denies network access to specific devices through the use of blacklists and whitelists. While the restriction of network access through the use of lists is straightforward, an individual person is not identified by a MAC address, rather a device only, so an authorized person will need to have a whitelist entry for each device that he or she would use to access the network.
+While giving a wireless network some additional protection, MAC filtering can be circumvented by scanning a valid MAC (via airodump-ng) and then spoofing one's own MAC into a validated one. This can be done in the Windows Registry or by using commandline tools on a Linux platform. MAC Address filtering is often referred to as Security through obscurity. Unfortunately, using MAC Filtering may lead to a false sense of security. Also Referencing to ip blocking.
+MAC filtering is not an effective control in wireless networking as attackers can eavesdrop on wireless transmissions. However MAC filtering is more effective in wired networks, since it is more difficult for attackers to identify authorized MACs.
+MAC filtering is also used on enterprise wireless networks with multiple access points to prevent clients from communicating with each other. The access point can be configured to only allows clients to talk to the default gateway, but not other wireless clients. It increases the efficiency of access to network
+Port security[edit]
+Many devices that support MAC filtering do so on a device basis. Whitelisted MAC addresses are allowed through any port on the device and blacklisted MAC addresses are blocked on all ports. Other devices, such as Cisco Catalyst switches, support MAC filtering on a port-by-port basis. This is referred to as port security. Port security may be configured statically with a list, dynamically based on the first given number of addresses detected, or a combination of these two methods. When port security is configured, the default settings are to allow only one MAC address per port, and to shut down the port if the allowed number of addresses is exceeded.[1]
+References[edit]
+
+
+^ "Configuring Port Security". Cisco. Retrieved 14 November 2015.&#160;
+
+
+External links[edit]
+
+
+
+Wikiversity has learning materials about Port security
+
+
+
+
+
+
+This article relating to communication is a stub. You can help Wikipedia by expanding it.
+
+
+v
+t
+e
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=MAC_filtering&amp;oldid=690729436"					
+				Categories: Network addressingMedia access controlCommunication stubsHidden categories: Articles needing additional references from November 2015All articles needing additional referencesAll stub articles				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						DeutschFrançaisPortuguês					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 15 November 2015, at 08:15.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

@@ -1,0 +1,259 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Transmission medium
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about transmission of signals.  For biological transmission, see Vector (molecular biology).
+
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (January 2013)
+
+
+
+
+
+
+
+This article may require cleanup to meet Wikipedia's quality standards. No cleanup reason has been specified. Please help improve this article if you can. (July 2008)
+
+
+
+
+
+
+
+
+A transmission medium is a material substance (solid, liquid, gas, or plasma) that can propagate energy waves. For example, the transmission medium for sounds is usually air, but solids and liquids may also act as transmission media for sound.
+The absence of a material medium in vacuum may also constitute a transmission medium for electromagnetic waves such as light and radio waves. While material substance is not required for electromagnetic waves to propagate, such waves are usually affected by the transmission media they pass through, for instance by absorption or by reflection or refraction at the interfaces between media.
+The term transmission medium also refers to a technical device that employs the material substance to transmit or guide waves. Thus, an optical fiber or a copper cable is a transmission medium. Not only this but also is able to guide the transmission of networks.
+A transmission medium can be classified as a:
+
+Linear medium, if different waves at any particular point in the medium can be superposed;
+Bounded medium, if it is finite in extent, otherwise unbounded medium;
+Uniform medium or homogeneous medium, if its physical properties are unchanged at different points;
+Isotropic medium, if its physical properties are the same in different directions.
+
+
+
+
+
+Coaxial cable, one example of a transmission medium
+
+
+Electromagnetic radiation can be transmitted through an optical medium, such as optical fiber, or through twisted pair wires, coaxial cable, or dielectric-slab waveguides. It may also pass through any physical material that is transparent to the specific wavelength, such as water, air, glass, or concrete. Sound is, by definition, the vibration of matter, so it requires a physical medium for transmission, as do other kinds of mechanical waves and heat energy. Historically, science incorporated various aether theories to explain the transmission medium. However, it is now known that electromagnetic waves do not require a physical transmission medium, and so can travel through the "vacuum" of free space. Regions of the insulative vacuum can become conductive for electrical conduction through the presence of free electrons, holes, or ions.
+Transmission and reception of data is performed in four steps.
+
+The data is coded as binary numbers at the sender end
+A carrier signal is modulated as specified by the binary representation of the data
+At the receiving end, the incoming signal is demodulated into the respective binary numbers
+Decoding of the binary numbers is performed[1]
+
+
+
+
+Contents
+
+
+1 Telecommunications
+
+1.1 Types of transmissions
+
+
+2 See also
+3 References
+
+
+
+Telecommunications[edit]
+A physical medium in data communications is the transmission path over which a signal propagates.
+Many transmission media are used as communications channel.
+For telecommunications purposes in the United States, Federal Standard 1037C, transmission media are classified as one of the following:
+
+Guided (or bounded)—waves are guided along a solid medium such as a transmission line.
+Wireless (or unguided)—transmission and reception are achieved by means of an antenna.
+
+One of the most common physical medias used in networking is copper wire. Copper wire to carry signals to long distances using relatively low amounts of power. The unshielded twisted pair (UTP) is eight strands of copper wire, organized into four pairs.[2]
+Another example of a physical medium is optical fiber, which has emerged as the most commonly used transmission medium for long-distance communications. Optical fiber is a thin strand of glass that guides light along its length. Four major factors favor optical fiber over copper- data rates, distance, installation, and costs. Optical fiber can carry huge amounts of data compared to copper. It can be run for hundreds of miles without the need for signal repeaters, in turn, reducing maintenance costs and improving the reliability of the communication system because repeaters are a common source of network failures. Glass is lighter than copper allowing for less need for specialized heavy-lifting equipment when installing long-distance optical fiber. Optical fiber for indoor applications cost approximately a dollar a foot, the same as copper.[3]
+Multimode and single mode are two types of commonly used optical fiber. Multimode fiber uses LEDs as the light source and can carry signals over shorter distances, about 2 kilometers. Single mode can carry signals over distances of tens of miles.
+Wireless media may carry surface waves or skywaves, either longitudinally or transversely, and are so classified.
+In both communications, communication is in the form of electromagnetic waves. With guided transmission media, the waves are guided along a physical path; examples of guided media include phone lines, twisted pair cables, coaxial cables, and optical fibers. Unguided transmission media are methods that allow the transmission of data without the use of physical means to define the path it takes. Examples of this include microwave, radio or infrared. Unguided media provide a means for transmitting electromagnetic waves but do not guide them; examples are propagation through air, vacuum and seawater.
+The term direct link is used to refer to the transmission path between two devices in which signals propagate directly from transmitters to receivers with no intermediate devices, other than amplifiers or repeaters used to increase signal strength. This term can apply to both guided and unguided media.
+Types of transmissions[edit]
+A transmission may be simplex, half-duplex, or full-duplex.
+In simplex transmission, signals are transmitted in only one direction; one station is a transmitter and the other is the receiver. In the half-duplex operation, both stations may transmit, but only one at a time. In full duplex operation, both stations may transmit simultaneously. In the latter case, the medium is carrying signals in both directions at same time.
+There are two types of transmission media&#160;:
+• Guided • Unguided
+Guided Media&#160;:
+• Unshielded Twisted Pair (UTP) • Shielded Twisted Pair • Coaxial Cable • Optical Fiber
+Unguided Media&#160;: Transmission media then looking at analysis of using them unguided transmission media is data signals that flow through the air. They are not guided or bound to a channel to follow. Following are unguided media used for data communication&#160;:
+• Radio Transmission • Microwave •
+See also[edit]
+
+Vacuum permittivity
+Transmission (telecommunications)
+Excitable medium
+Duplex (telecommunications)
+Luminiferous aether
+
+References[edit]
+
+
+^ Agrawal, Manish (2010). Business Data Communications. John Wiley &amp; Sons, Inc. p.&#160;54. ISBN&#160;0470483369.&#160;
+^ Agrawal, Manish (2010). Business Data Communications. John Wiley &amp; Sons, Inc. p.&#160;37. ISBN&#160;0470483369.&#160;
+^ Agrawal, Manish (2010). Business Data Communications. John Wiley &amp; Sons, Inc. pp.&#160;41–43. ISBN&#160;0470483369.&#160;
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Transmission_medium&amp;oldid=688340756"					
+				Categories: Electromagnetic radiationHidden categories: Articles needing additional references from January 2013All articles needing additional referencesArticles needing cleanup from July 2008All articles needing cleanupCleanup tagged articles without a reason field from July 2008Wikipedia pages needing cleanup from July 2008				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةБългарскиČeštinaDeutschEspañolEuskaraفارسی한국어Bahasa IndonesiaItalianoעבריתМакедонски日本語PolskiSimple EnglishSlovenčinaSvenska粵語中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 31 October 2015, at 07:34.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

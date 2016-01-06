@@ -1,0 +1,485 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Network performance
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Network Performance Evaluation)
+												
+					Jump to:					navigation, 					search
+				
+				Network performance refers to measures of service quality of a network as seen by the customer.
+There are many different ways to measure the performance of a network, as each network is different in nature and design. Performance can also be modeled and simulated instead of measured; one example of this is using state transition diagrams to model queuing performance or to use a Network Simulator
+
+
+
+Contents
+
+
+1 Performance measures
+
+1.1 Bandwidth
+1.2 Throughput
+1.3 Latency
+1.4 Jitter
+1.5 Error rate
+1.6 Interplay of factors
+
+
+2 Algorithms and protocols
+3 Examples of latency or throughput dominated systems
+
+3.1 Satellite telephony
+3.2 Deep space communication
+3.3 Even deeper space communication
+3.4 Offline data transport
+
+
+4 See also
+5 Notes
+6 References
+7 External links
+
+
+
+Performance measures[edit]
+The following measures are often considered important:
+
+Bandwidth commonly measured in bits/second is the maximum rate that information can be transferred
+Throughput is the actual rate that information is transferred
+Latency the delay between the sender and the receiver decoding it, this is mainly a function of the signals travel time, and processing time at any nodes the information traverses
+Jitter variation in packet delay at the receiver of the information
+Error rate the number of corrupted bits expressed as a percentage or fraction of the total sent
+
+Bandwidth[edit]
+Main article: Bandwidth (computing)
+The available channel bandwidth and achievable signal-to-noise ratio determine the maximum possible throughput. It is not generally possible to send more data than dictated by the Shannon-Hartley Theorem.
+Throughput[edit]
+Main article: throughput
+Throughput is the number of messages successfully delivered per unit time. Throughput is controlled by available bandwidth, as well as the available signal-to-noise ratio and hardware limitations. Throughput for the purpose of this article will be understood to be measured from the arrival of the first bit of data at the receiver, to decouple the concept of throughput from the concept of latency. For discussions of this type the terms 'throughput' and 'bandwidth' are often used interchangeably.
+The Time Window is the period over which the throughput is measured. Choice of an appropriate time window will often dominate calculations of throughput, and whether latency is taken into account or not will determine whether the latency affects the throughput or not.
+Latency[edit]
+Main article: Latency (engineering)
+The speed of light imposes a minimum propagation time on all electromagnetic signals. It is not possible to reduce the latency below
+
+
+
+where s is the distance and cm is the speed of light in the medium
+Other delays also occur in intermediate nodes. In packet switched networks delays can occur due to queueing.
+Jitter[edit]
+Main article: Jitter
+Jitter is the undesired deviation from true periodicity of an assumed periodic signal in electronics and telecommunications, often in relation to a reference clock source. Jitter may be observed in characteristics such as the frequency of successive pulses, the signal amplitude, or phase of periodic signals. Jitter is a significant, and usually undesired, factor in the design of almost all communications links (e.g., USB, PCI-e, SATA, OC-48). In clock recovery applications it is called timing jitter.[1]
+Error rate[edit]
+Main article: Bit error rate
+In digital transmission, the number of bit errors is the number of received bits of a data stream over a communication channel that have been altered due to noise, interference, distortion or bit synchronization errors.
+The bit error rate or bit error ratio (BER) is the number of bit errors divided by the total number of transferred bits during a studied time interval. BER is a unitless performance measure, often expressed as a percentage.
+The bit error probability pe is the expectation value of the BER. The BER can be considered as an approximate estimate of the bit error probability. This estimate is accurate for a long time interval and a high number of bit errors.
+Interplay of factors[edit]
+All of the factors above, coupled with user requirements and user perceptions, play a role in determining the perceived 'fastness' or utility, of a network connection. The relationship between throughput, latency, and user experience is most aptly understood in the context of a shared network medium, and as a scheduling problem. For systems that are heavily dominated by either latency or throughput considerations.
+Algorithms and protocols[edit]
+For some systems, latency and throughput are coupled entities. In TCP/IP, latency can also directly affect throughput. In TCP connections, the large bandwidth-delay product of high latency connections, combined with relatively small TCP window sizes on many devices, effectively causes the throughput of a high latency connection to drop sharply with latency. This can be remedied with various techniques, such as increasing the TCP congestion window size, or more drastic solutions, such as packet coalescing, TCP acceleration, and forward error correction, all of which are commonly used for high latency satellite links.
+TCP acceleration converts the TCP packets into a stream that is similar to UDP. Because of this, the TCP acceleration software must provide its own mechanisms to ensure the reliability of the link, taking the latency and bandwidth of the link into account, and both ends of the high latency link must support the method used.
+In Media access control (MAC) layer, performance issues such as throughput and end-to-end delay are also addressed.
+Examples of latency or throughput dominated systems[edit]
+Many systems can be characterized as dominated either by throughput limitations or by latency limitations in terms of end-user utility or experience. In some cases, hard limits such as the speed of light present unique problems to such systems and nothing can be done to correct this. Other systems allow for significant balancing and optimization for best user experience.
+Satellite telephony[edit]
+A telecom satellite in geosynchronous orbit imposes a path length of at least 71000&#160;km between transmitter and receiver.[2] which means a minimum delay between message request and message receipt, or latency of 473 ms. This delay can be very noticeable and affects satellite phone service regardless of available throughput capacity.
+Deep space communication[edit]
+These long path length considerations are exacerbated when communicating with space probes and other long-range targets beyond Earth's atmosphere. The Deep Space Network implemented by NASA is one such system that must cope with these problems. Largely latency driven, the GAO has criticized the current architecture.[3] Several different methods have been proposed to handle the intermittent connectivity and long delays between packets, such as delay-tolerant networking.[4]
+Even deeper space communication[edit]
+At interstellar distances, the difficulties in designing radio systems that can achieve any throughput at all are massive. In these cases, maintaining communication is a bigger issue than how long that communication takes.
+Offline data transport[edit]
+Transportation is concerned almost entirely with throughput, which is why physical deliveries of backup tape archives are still largely done by vehicle.
+See also[edit]
+
+Bitrate
+Measuring network throughput
+Network traffic measurement
+Response time
+
+Notes[edit]
+
+
+^ Wolaver, 1991, p.211
+^ Roddy, 2001, 67 - 90
+^ U.S. Government Accounting Office (GAO), 2006
+^ Kevin Fall, 2003
+
+
+References[edit]
+
+Rappaport, Theodore S. (2002). Wireless communications&#160;: principles and practice (2 ed.). Upper Saddle River, NJ: Prentice Hall PTR. ISBN&#160;0-13-042232-0.&#160;
+Roddy, Dennis (2001). Satellite communications (3. ed.). New York [u.a.]: McGraw-Hill. ISBN&#160;0-07-137176-1.&#160;
+Fall, Kevin, "A Delay-Tolerant Network Architecture for Challenged Internets", Intel Corporation, February, 2003, Doc No: IRB-TR-03-003
+Government Accountability Office (GAO) report 06-445, NASA'S DEEP SPACE NETWORK: Current Management Structure is Not Conducive to Effectively Matching Resources with Future Requirements, April 27, 2006
+
+External links[edit]
+
+NASA's Deep Space Network Website
+It's the Latency, Stupid
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sub-disciplines of computing
+
+
+
+
+
+
+
+
+
+Hardware
+Software
+Firmware
+
+
+
+
+
+
+
+
+Information system
+
+
+
+Information security
+Multimedia database
+Intelligent database
+Big data
+Knowledge-based systems
+Recommender System
+Geographic information systems
+Decision support system
+Data engineering
+Knowledge engineering
+Fuzzy logic
+Data analysis
+System analysis and design
+Project management
+Knowledge management
+Data integration
+High-performance computing
+Semantic web
+
+
+
+
+
+
+
+
+Computer science
+
+
+
+Database management system
+Communications system
+Computational geometry
+Machine learning
+Data mining
+Parallel programming
+Coding theory
+Theory of computation
+Constraint programming
+Computational biology (Bioinformatics)
+Design and analysis of algorithms
+Information retrieval
+Computational science
+Symbolic computation
+Distributed computing
+Evolutionary computation
+Natural computation
+Combinatorial optimization
+Parallel processing
+
+
+
+
+
+
+
+
+Computer engineering
+
+
+
+Multimedia
+Satellite navigation (GNSS)
+Embedded systems
+Real-time computing
+Computer architecture
+Pair programming
+System programming
+Neural networks
+Speech recognition
+Signal analysis
+Computer vision (Visual computing)
+IC Design
+Voice over IP
+Speech synthesis
+Human-Computer Interaction
+Microprocessor
+Image processing
+Natural language processing
+Speech processing
+Digital signal processing
+
+
+
+
+
+
+
+
+Software engineering
+
+
+
+Software maintenance
+Formal methods
+Software quality
+Software quality assurance
+Measurement Software
+Fault-tolerant software
+Software testing
+Enterprise architecture
+Software architecture
+Software engineering economics
+Agile software development
+Software design pattern
+Software modelling
+Systems analyst
+Object-oriented analysis and design (UML)
+Requirements analysis
+Software development
+Software configuration management
+Software project management
+Software engineering management
+Software development process (Software release life cycle)
+Software design
+Software deployment
+Software enhancement
+
+
+
+
+
+
+
+
+Computer network
+
+
+
+Network security
+Secure electronic transaction
+Network Performance Evaluation (QoS)
+Cloud computing
+Routing
+Distributed systems (Distributed database)
+Information theory
+Wireless network
+Next-generation network
+Cellular network
+Optical transport network (Optical networking)
+Cryptography
+Network simulation
+Pattern recognition
+Network administrators
+Network equipment
+Network design
+Ubiquitous and Mobile computing
+Data center
+Mobile communications
+Digital communication
+Communications satellite
+Telecommunication (Telecommunications network)
+
+
+
+
+
+
+
+
+Business informatics
+
+
+
+ITIL
+ITSM
+Enterprise resource planning
+Electronic business
+Business intelligence
+Human Resources Development
+Security management
+Configuration management
+Technology management
+Power management
+Service management
+Project management
+Systems management
+Network management
+Content management
+Customer relationship management
+Incident management
+Asset management
+Integrated management
+Communications management
+System administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Network_performance&amp;oldid=682063211"					
+				Categories: Network performanceComputing comparisonsInformation theory				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						Español日本語					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 21 September 2015, at 08:59.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

@@ -1,0 +1,747 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Virtual world
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				"Game-based world" redirects here. For fictional universes, see Fictional universe.
+
+
+
+
+
+It has been suggested that MUVE be merged into this article. (Discuss) Proposed since July 2014.
+
+
+
+
+
+
+A yellow submarine created in Second Life
+
+
+A virtual world or massively multiplayer online world (MMOW) is a computer-based simulated environment[1] populated by many users who can create a personal avatar, and simultaneously and independently explore the virtual world, participate in its activities and communicate with others.[2] These avatars can be textual, two or three-dimensional graphical representations, or live video avatars with auditory and touch sensations.[3][4] In general, virtual worlds allow for multiple users.[5]
+The user accesses a computer-simulated world which presents perceptual stimuli to the user, who in turn can manipulate elements of the modeled world and thus experience a degree of presence.[6] Such modeled worlds and their rules may draw from the reality or fantasy worlds. Example rules are gravity, topography, locomotion, real-time actions, and communication. Communication between users can range from text, graphical icons, visual gesture, sound, and rarely, forms using touch, voice command, and balance senses.
+Massively multiplayer online games depict a wide range of worlds, including those based on science fiction, the real world, super heroes, sports, horror, and historical milieus. The most common form of such games are fantasy worlds, whereas those based on the real world are relatively rare.[original research?] [7] Most MMORPGs have real-time actions and communication. Players create a character who travels between buildings, towns, and worlds to carry out business or leisure activities. Communication is usually textual, but real-time voice communication is also possible. The form of communication used can substantially affect the experience of players in the game.[8]
+Virtual worlds are not limited to games but, depending on the degree of immediacy presented, can encompass computer conferencing and text based chatrooms. Sometimes, emoticons or 'smilies' are available to show feeling or facial expression. Emoticons often have a keyboard shortcut.[9] Edward Castronova is an economist who has argued that "synthetic worlds" is a better term for these cyberspaces, but this term has not been widely adopted.
+
+
+
+Contents
+
+
+1 History
+2 Virtual world concepts
+
+2.1 Economy
+2.2 Geography
+2.3 Research
+2.4 Virtual worlds and real life
+
+
+3 Hardware
+4 Application domains
+
+4.1 Social
+4.2 Medical
+4.3 Commercial
+
+4.3.1 E-commerce (legal)
+
+
+4.4 Entertainment
+
+4.4.1 Single-player games
+
+
+
+
+5 Use in Education
+
+5.1 Language
+5.2 Business
+
+
+6 In fiction
+7 Future
+8 See also
+9 Citations
+10 References
+11 External links
+
+
+
+History[edit]
+The concept of virtual worlds significantly predates computers. The Roman naturalist, Pliny the Elder, expressed an interest in perceptual illusion.[10][11] In the twentieth century, the cinematographer Morton Heilig explored the creation of the Sensorama, a theatre experience designed to stimulate the senses of the audience—vision, sound, balance, smell, even touch (via wind)--and so draw them more effectively into the productions[12]
+Among the earliest virtual worlds implemented by computers were virtual reality simulators, such as the work of Ivan Sutherland. Such devices are characterized by bulky headsets and other types of sensory input simulation. Contemporary virtual worlds, in particular the multi-user online environments, emerged mostly independently of this research, fueled instead by the gaming industry but drawing on similar inspiration.[13] While classic sensory-imitating virtual reality relies on tricking the perceptual system into experiencing an immersive environment, virtual worlds typically rely on mentally and emotionally engaging content which gives rise to an immersive experience.
+Maze War was the first networked, 3D multi-user first person shooter game. Maze introduced the concept of online players in 1973-1974 as "eyeball 'avatars' chasing each other around in a maze.”[14] It was played on ARPANET, or Advanced Research Projects Agency Network, a precursor to the Internet funded by the United States Department of Defense for use in university and research laboratories. The initial game could only be played on an Imlac, as it was specifically designed for this type of computer.
+The first virtual worlds presented on the Internet were communities and chat rooms, some of which evolved into MUDs and MUSHes. The first MUD, known as MUD1, was released in 1978. The acronym originally stood for Multi-User Dungeon, but later also came to mean Multi-User Dimension and Multi-User Domain. A MUD is a virtual world with many players interacting in real time.[15] The early versions were text-based, offering only limited graphical representation and often using a Command Line Interface. Users interact in role-playing or competitive games by typing commands and can read or view descriptions of the world and other players. Such early worlds began the MUD heritage that eventually led to massively multiplayer online role-playing games, more commonly known as MMORPGs, a genre of role-playing games in which a large number of players interact within a virtual world.
+Some prototype virtual worlds were WorldsAway, a two-dimensional chat environment where users designed their own avatars; Dreamscape, an interactive community featuring a virtual world by CompuServe; Cityspace, an educational networking and 3D computer graphics project for children; and The Palace, a 2-dimensional community driven virtual world. However, credit for the first online virtual world usually goes to Habitat, developed in 1987 by LucasFilm Games for the Commodore 64 computer, and running on the Quantum Link service (the precursor to America Online).[16]
+In 1996, the city of Helsinki, Finland with Helsinki Telephone Company (since Elisa Group) launched what was called the first online virtual 3D depiction intended to map an entire city. The Virtual Helsinki project was eventually renamed Helsinki Arena 2000 project and parts of the city in modern and historical context were rendered in 3D.[17]
+In 1999, Whyville.net the first virtual world specifically for children [18] was launched with a base in game-based learning and one of the earliest virtual currency-based economies.[19]
+Virtual world concepts[edit]
+Definitions for a "virtual world" include:
+
+a "synchronous, persistent network of people, represented as avatars, facilitated by networked computers", by Mark W. Bell in 2008[5]
+"an automated, shared, persistent environment with and through which people can interact in real time by means of a virtual self", by Richard Bartle in 2010 [20]
+"A persistent, simulated and immersive environment, facilitated by networked computers, providing multiple users with avatars and communication tools with which to act and interact in-world and in real-time.", by Carina Girvan in 2013[21]
+
+There is no generally accepted definition of virtual world, but they do require that the world be persistent; in other words, the world must continue to exist even after a user exits the world, and user-made changes to the world should be preserved.[22] While the interaction with other participants is done in real-time, time consistency is not always maintained in online virtual worlds. For example, EverQuest time passes faster than real-time despite using the same calendar and time units to present game time.
+As virtual world is a general term, the virtual environment supports varying degrees of play and gaming. Some uses of the term include
+
+Massively multiplayer online games (MMOGs) games in which a large number of players interact within a virtual world. The concept of MMO has spread to other game types such as sports, real-time strategy and others. The persistence criterion is the only criterion that separates virtual worlds from video games,[5] meaning that some MMO versions of RTS and FPS games resemble virtual worlds; Destiny is a video game that is such a pseudo virtual world. Emerging concepts include basing the terrain of such games on real satellite photos, such as those available through the Google Maps API or through a simple virtual geocaching of "easter eggs" on WikiMapia or similar mash-ups, where permitted; these concepts are virtual worlds making use of mixed reality.
+Collaborative virtual environments (CVEs) designed for collaborative work in a virtual environment.
+Massively multiplayer online real-life games (MMORLGs), also called virtual social worlds,[23] where the user can edit and alter their avatar at will, allowing them to play a more dynamic role, or multiple roles.
+
+Economy[edit]
+A virtual economy is the emergent property of the interaction between participants in a virtual world. While the designers have a great deal of control over the economy by the encoded mechanics of trade, it is nonetheless the actions of players that define the economic conditions of a virtual world. The economy arises as a result of the choices that players make under the scarcity of real and virtual resources such as time or currency.[2][13][clarification needed][24] Participants have a limited time in the virtual world, as in the real world, which they must divide between task such as collecting resources, practicing trade skills, or engaging in less productive fun play. The choices they make in their interaction with the virtual world, along with the mechanics of trade and wealth acquisition, dictate the relative values of items in the economy. The economy in virtual worlds is typically driven by in-game needs such as equipment, food, or trade goods. Virtual economies like that of Second Life, however, are almost entirely player-produced with very little link to in-game needs. While the relevance of virtual world economics to physical world economics has been questioned, it has been shown the users of virtual worlds respond to economic stimuli (such as the law of supply and demand) in the same way that people do in the physical world.[25] In fact, there are often very direct corollaries between physical world economic decisions and virtual world economic decisions, such as the decision by prisoners of war in World War II to adopt cigarettes as currency and the adoption of Stones of Jordan as currency in Diablo II.[24]
+The value of objects in a virtual economy is usually linked to their usefulness and the difficulty of obtaining them. The investment of real world resources (time, membership fees, etc.) in acquisition of wealth in a virtual economy may contribute to the real world value of virtual objects.[13][clarification needed] This real world value is made obvious by the trade of virtual items on online market sites like eBay, PlayerUp, IGE for wow gold.[26][27][28] Recent legal disputes also acknowledge the value of virtual property, even overriding the mandatory EULA which many software companies use to establish that virtual property has no value and/or that users of the virtual world have no legal claim to property therein.[29][30]
+Some industry analysts[who?] have moreover observed that there is a secondary industry growing behind the virtual worlds, made up by social networks, websites and other projects completely devoted to virtual worlds communities and gamers. Special websites such as GamerDNA, Koinup and others which serve as social networks for virtual worlds users are facing some crucial issues as the DataPortability of avatars across many virtual worlds and MMORPGs.[31]
+Virtual worlds offer advertisers the potential for virtual advertisements, such as the in-game advertising already found in a number of video games.
+Geography[edit]
+The geography of virtual worlds can vary widely because the role of geography and space is an important design component over which the developers of virtual worlds have control and may choose to alter.[24] Virtual worlds are, at least superficially, digital instantiations of three-dimensional space. As a result, considerations of geography in virtual worlds (such as World of Warcraft) often revolve around “spatial narratives” in which players act out a nomadic hero’s journey along the lines of that present in The Odyssey.[32] The creation of fantastic places is also a reoccurring theme in the geographic study of virtual worlds, although, perhaps counterintuitively, the heaviest users of virtual worlds often downgrade the sensory stimuli of the world’s fantastic places in order to make themselves more efficient at core tasks in the world, such as killing monsters [33] However, the geographic component of some worlds may only be a geographic veneer atop an otherwise nonspatial core structure.[24] For instance, while imposing geographic constraints upon users when they quest for items, these constraints may be removed when they sell items in a geographically unconstrained auction house. In this way, virtual worlds may provide a glimpse into what the future economic geography of the physical world may be like as more and more goods become digital.[24]
+Research[edit]
+Virtual spaces can serve a variety of research and educational goals[34] and may be useful for examining human behaviour.[34] Offline- and virtual-world personalities differ from each other but are nevertheless significantly related which has a number of implications for self-verification, self-enhancement and other personality theories.[35][36] Panic and agoraphobia have also been studied in a virtual world.[37]
+Given the large engagement, especially of young children in virtual worlds, there has been a steady growth in research studies involving the social, educational and even emotional impact of virtual worlds on children. The John D. and Catherine T. MacArthur Foundation for example have funded research into virtual worlds including, for example, how preteens explore and share information about reproductive health.[38] A larger set of studies on children's social and political use of the virtual world Whyville.net has also been published in the book "Connected Play: Tweens in a Virtual World" Authored by Yasmin B. Kafai, Deborah A. Fields, and Mizuko Ito.[39] Several other research publications now specifically address the use of virtual worlds for education.[18]
+Other research focused more on adults explores the reasons for indulging and the emotions of virtual world users. Many users seek an escape or a comfort zone in entering these virtual worlds, as well as a sense of acceptance and freedom. Virtual worlds allow users to freely explore many facets of their personalities in ways that are not easily available to them in real life.[40] However, users may not be able to apply this new information outside of the virtual world. Thus, virtual worlds allow for users to flourish within the world and possibly become addicted to their new virtual life which may create a challenge as far as dealing with others and in emotionally surviving within their real lives. One reason for this freedom of exploration can be attributed to the anonymity that virtual worlds provide. It gives the individual the ability to be free from social norms, family pressures or expectations they may face in their personal real world lives.[40] The avatar persona experiences an experience similar to an escape from reality like drug or alcohol usage for numbing pain or hiding behind it. The avatar no longer represents a simple tool or mechanism manipulated in cyberspace. Instead, it has become the individual’s bridge between the physical and virtual world, a conduit through which to express oneself among other social actors.[41] The avatar becomes the person’s alter ego; the vehicle to which one utilizes to exist among others who are all seeking the same satisfaction.
+While greatly facilitating ease of interaction across time and geographic boundaries, the virtual world presents an unreal environment with instant connection and gratification. Online encounters are employed as seemingly fulfilling alternatives to “live person” relationships (Toronto, 2009).[42] When one is ashamed, insecure, lost or just looking for something different and stimulating to engage in, virtual worlds are the perfect environment for its users. A person has unlimited access to an infinite array of opportunities to fulfill every fantasy, grant every wish, or satisfy every desire. He or she can face any fear or conquer any enemy, all at the click of a mouse (Toronto, 2009).[42] Ultimately, virtual worlds are the place to go when real life becomes overbearing or boring. While in real life individuals hesitate to communicate their true opinions, it is easier to do so online because they don’t ever have to meet the people they are talking with (Toronto, 2009).[42] Thus, virtual worlds are basically a psychological escape.
+Another area of research related to virtual worlds is the field of navigation. Specifically, this research investigates whether or not virtual environments are adequate learning tools in regards to real-world navigation. Psychologists at Saint Michael’s College found that video game experience corresponded with ability to navigate virtual environments and complete objectives; however, that experience did not correlate with an increased ability to navigate real, physical environments.[43] An extensive study at the University of Washington conducted multiple experiments involving virtual navigation. One experiment had two groups of subjects, the first of which examined maps of a virtual environment, and the second of which navigated the virtual environment. The groups of subjects then completed an objective in the virtual environment. There was little difference between the two groups’ performances, and what difference there was, it was in favor of the map-users. The test subjects, though, were generally unfamiliar with the virtual world interface, likely leading to some impaired navigation, and thus bias in the yielded analysis of the experiments. The study concluded that the interface objects made natural navigation movements impossible, and perhaps less intrusive controls for the virtual environment would reduce the effect of the impairment.[44]
+Virtual worlds and real life[edit]
+Some virtual worlds have off-line, real world components and applications. Handipoints, for example, is a children's virtual world that tracks chores via customizable chore charts and lets children get involved in their household duties offline. They complete chores and use the website and virtual world to keep track of their progress and daily tasks. There are also online platforms such as Uniiverse which are designed to re-connect people to the real world via virtual means. Users can post activities and services on-line and meet up off-line to share the experience.[45]
+Hardware[edit]
+Unlike most video games, which are usually navigated using various free-ranging human interface devices (HIDs), virtual worlds are usually navigated (as of 2009) using HIDs which are designed and oriented around flat, 2-dimensional graphical user interfaces; as most comparatively-inexpensive computer mice are manufactured and distributed for 2-dimensional UI navigation, the lack of 3D-capable HID usage among most virtual world users is likely due to both the lack of penetration of 3D-capable devices into non-niche, non-gaming markets as well as the generally-higher pricing of such devices compared to 2-dimensional HIDs. Even those users who do make use of HIDs which provide such features as six degrees of freedom often have to switch between separate 3D and 2D devices in order to navigate their respectively-designed interfaces.
+Like video gamers, some users of virtual world clients may also have a difficult experience with the necessity of proper graphics hardware (such as the more advanced graphics processing units distributed by Nvidia and AMD) for the sake of reducing the frequency of less-than-fluid graphics instances in the navigation of virtual worlds. However, in part for this reason, a growing number of virtual world engines, especially serving children, are entirely browser-based requiring no software down loads or specialized computer hardware. The first virtual world of this kind was Whyville.net, launched in 1999,[18] built by Numedeon inc. which obtained an early patent for its browser-based implementation.[46]
+Application domains[edit]
+
+
+Play media
+
+
+A film made in Second Life using machinima.
+
+
+Social[edit]
+
+
+
+
+
+This section needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (April 2008)
+
+
+Although the social interactions of participants in virtual worlds are often viewed in the context of 3D Games, other forms of interaction are common as well, including forums, blogs, wikis, chatrooms, instant messaging, and video-conferences. Communities are born in places which have their own rules, topics, jokes, and even language. Members of such communities can find like-minded people to interact with, whether this be through a shared passion, the wish to share information, or a desire to meet new people and experience new things. Users may develop personalities within the community adapted to the particular world they are interacting with, which can impact the way they think and act. Internet friendships and participation online communities tend to complement existing friendships and civic participation rather than replacing or diminishing such interactions.[47][48]
+Systems that have been designed for a social application include:
+
+Active Worlds
+Kaneva
+Onverse
+SmallWorlds
+There.com
+Twinity
+Whyville
+
+Medical[edit]
+Disabled or chronically invalided people of any age can benefit enormously from experiencing the mental and emotional freedom gained by temporarily leaving their disabilities behind and doing, through the medium of their avatars, things as simple and potentially accessible to able, healthy people as walking, running, dancing, sailing, fishing, swimming, surfing, flying, skiing, gardening, exploring and other physical activities which their illnesses or disabilities prevent them from doing in real life. They may also be able to socialise, form friendships and relationships much more easily and avoid the stigma and other obstacles which would normally be attached to their disabilities. This can be much more constructive, emotionally satisfying and mentally fulfilling than passive pastimes such as television watching, playing computer games, reading or more conventional types of internet use.[citation needed]
+The Starlight Children's Foundation helps hospitalised children (suffering from painful diseases or autism for example) to create a comfortable and safe environment which can expand their situation, experience interactions (when the involvement of a multiple cultures and players from around the world is factored in) they may not have been able to experience without a virtual world, healthy or sick. Virtual worlds also enable them to experience and act beyond the restrictions of their illness and help to relieve stress.[49]
+Virtual worlds can help players become more familiar and comfortable with actions they may in real-life feel reluctant or embarrassed. For example, in World of Warcraft, /dance is the emote for a dance move which a player in the virtual world can "emote" quite simply. And a familiarization with said or similar "emotes" or social skills (such as, encouragement, gratitude, problem-solving, and even kissing) in the virtual world via avatar can make the assimilation to similar forms of expression, socialization, interaction in real life smooth. Interaction with humans through avatars in the virtual world has potential to seriously expand the mechanics of one's interaction with real-life interactions.[original research?]
+Commercial[edit]
+As businesses compete in the real world, they also compete in virtual worlds. As there has been an increase in the buying and selling of products online (e-commerce) this twinned with the rise in the popularity of the internet, has forced businesses to adjust to accommodate the new market.
+Many companies and organizations now incorporate virtual worlds as a new form of advertising. There are many advantages to using these methods of commercialization. An example of this would be Apple creating an online store within Second Life. This allows the users to browse the latest and innovative products. Players cannot actually purchase a product but having these “virtual stores” is a way of accessing a different clientele and customer demographic. The use of advertising within "virtual worlds" is a relatively new idea. This is because Virtual Worlds is a relatively new technology. Before companies would use an advertising company to promote their products. With the introduction of the prospect of commercial success within a Virtual World, companies can reduce cost and time constraints by keeping this "in-house". An obvious advantage is that it will reduce any costs and restrictions that could come into play in the real world.
+Using virtual worlds gives companies the opportunity to gauge customer reaction and receive feedback. Feedback can be crucial to the development of a project as it will inform the creators exactly what users want.[50]
+Using virtual worlds as a tool allows companies to test user reaction and give them feedback on products. This can be crucial as it will give the companies an insight as to what the market and customers want from new products, which can give them a competitive edge. Competitive edge is crucial in the ruthless world that is today's business.
+Another use of virtual worlds business is where players can create a gathering place. Many businesses can now be involved in business-to-business commercial activity and will create a specific area within a virtual world to carry out their business. Within this space all relevant information can be held. This can be useful for a variety of reasons. Players can conduct business with companies on the other side of the world, so there are no geographical limitations, it can increase company productivity. Knowing that there is an area where help is on hand can aid the employees. Sun Microsystems have created an island in Second Life dedicated for the sole use of their employees. This is a place where people can go and seek help, exchange new ideas or to advertise a new product.
+Gronstedt identifies additional business applications, including: simulations, collaboration, role-playing, mentoring, and data-visualization.[51]
+According to trade media company Virtual Worlds Management,[52] commercial investments in the "virtual worlds" sector were in excess of USD 425 million in Q4 2007,[53] and totaled USD 184 million in Q1 2008.[54] However, the selection process for defining a "virtual worlds" company in this context has been challenged by one industry blog.[55]
+E-commerce (legal)[edit]
+A number of virtual worlds have incorporated systems for sale of goods through virtual interfaces and using virtual currencies. Transfers of in-world credits typically are not bound by laws governing commerce. Such transactions may lack the oversight and protections associated with real-world commerce, and there is potential for fraudulent transactions. One example is that of Ginko Financial, a bank system featured in Second Life where avatars could deposit their real life currency after converted to Linden Dollars for a profit. In July 2007, residents of Second Life crowded around the ATM's in an unsuccessful attempt to withdraw their money. After a few days the ATM's along with the banks disappeared altogether. Around $700,000 in real world money was reported missing from residents in Second Life. An investigation was launched but nothing substantial ever came of finding and punishing the avatar known as Nicholas Portocarrero who was the head of Ginko Financial.[56]
+Civil and criminal laws exist in the real world and are put in place to govern people’s behavior. Virtual Worlds such as Eve Online and Second Life also have people and systems that govern them.[57]
+Providers of online virtual spaces have more than one approach to the governing of their environments. Second Life for instance was designed with the expectation being on the residents to establish their own community rules for appropriate behaviour. On the other hand, some virtual worlds such as Habbo enforce clear rules for behaviour,[57] as seen in their terms and conditions.[58]
+In some instances virtual worlds don’t need established rules of conduct because actions such as ‘killing’ another avatar is impossible. However, if needed to, rule breakers can be punished with fines being payable through their virtual bank account, alternatively a players suspension may be put into effect.[57]
+Instances of real world theft from a virtual world do exist, Eve Online had an incident where a bank controller stole around 200bn credits and exchanged them for real world cash amounting to £3,115.[59] The player in question has now been suspended as trading in-game cash for real money is against Eve Online’s terms and conditions.[60]
+Entertainment[edit]
+There are many MMORPG virtual worlds out on many platforms. Most notable are IMVU for Windows, PlayStation Home for PlayStation 3, and Second Life for Windows. Many Virtual worlds have shut down since launch however. Notable shutdowns are The Sims Online, The Sims Bustin Out Online Weekend Mode, and PlayStation Home.
+
+see also: MMOG
+
+Single-player games[edit]
+Some single-player video games contain virtual worlds populated by non-player characters (NPC). Many of these allow players to save the current state of this world instance to allow stopping and restarting the virtual world at a later date. (This can be done with some multiplayer environments as well.)
+The virtual worlds found in video games are often split into discrete levels.
+Single-player games such as Minecraft allow players to optionally create their own world without other players, and then combine skills from the game to work together with other players and create bigger and more intricate environments. These environments can then be accessed by other players, if the server is available to other players then they may be able to modify parts of it, such as the structure of the environment.
+Use in Education[edit]
+See also: Virtual learning environment and Online communication between school and home
+Virtual worlds represent a powerful new medium for instruction and education that presents many opportunities but also some challenges.[61] Persistence allows for continuing and growing social interactions, which themselves can serve as a basis for collaborative education. The use of virtual worlds can give teachers the opportunity to have a greater level of student participation. It allows users to be able to carry out tasks that could be difficult in the real world due to constraints and restrictions, such as cost, scheduling or location. Virtual worlds have the capability to adapt and grow to different user needs, for example, classroom teachers are able to use virtual worlds in their classroom leveraging their interactive whiteboard with the open source project Edusim. They can be a good source of user feedback, the typical paper-based resources have limitations that Virtual Worlds can overcome.[62]
+Multi-user virtual worlds with easy-to-use affordances for building are useful in project-based learning. For example, Active Worlds is used to support classroom teachers in Virginia Beach City Public Schools, the out-of-school NASA RealWorld-InWorld Engineering Design Challenge, and many after school and in school programs in EDUni-NY. Projects range from tightly scaffolded reflection spaces to open building based on student-centered designs. New York Museums AMNH and NYSci have used the medium to support STEM learning experiences for their program participants.
+Virtual world can also be used with virtual learning environments, as in the case of what is done in the Sloodle project, which aims to merge Second Life with Moodle.[62][63] Another project similar to Sloodle is Utherverse Academy.[64]
+Virtual worlds allow users with specific needs and requirements to access and use the same learning materials from home as they would be receiving if they were physically present. This can help users to keep up to date with the relevant information and needs while also feeling as though involved. Having the option to be able to attend a presentation via a virtual world from home or from their workplace, can help the user to be more at ease and comfortable. Although virtual worlds are a good way of communicating and interacting between students and teachers, they do not completely substitute for actual face-to-face meetings, in that downsides include losing certain body language cues and other more personal aspects.
+Some virtual worlds also offer an environment where simulation-based activities and games allow users to experiment various phenomenon and learn the underlying physics and principles. An example is Whyville launched in 1999,[19] which targets kids and teenagers, offering them many opportunities to experiment, understand and learn. Topics covered in Whyville vary from physics to nutrition to ecology. Whyville also has a strong entrepreneurial structure based on user created virtual content sold in the internal virtual economy. VirBELA is a unity based virtual world that embeds business simulations as a way to assess and develop global leadership skills of students and professionals from around the world.
+Language[edit]
+Main article: Virtual World Language Learning
+Language learning is the most widespread type of education in virtual worlds.[65]
+Business[edit]
+Online training overcomes constraints such as distance, infrastructure, accommodation costs and tight scheduling. Although video conferencing may be the most common tool, virtual worlds have been adopted by the business environment for training employees.[66] For example, Second Life has been used in business schools.[67] Another example is Virtonomics, where it simulates the basic principles and processes of businesses in a competitive virtual environment.
+Virtual training content resembles traditional tutorials and testing of user knowledge. Despite the lack of face to face contact and impaired social linking, learning efficiency may not be adversely affected as adults need autonomy in learning and are more self-directed than younger students.[citation needed]
+Some companies and public places allow free virtual access to their facilities as an alternative to a video or picture.
+In fiction[edit]
+Virtual worlds, virtual reality, and cyberspace are quite popular fictional motifs. A prominent example is the work of William Gibson. The first was probably John M. Ford's 1980 novel Web of Angels. Virtual worlds are integral to Tron, Neuromancer, The Lawnmower Man, The Lawnmower Man 2, Ready Player One, Epic, Snow Crash, .hack//Sign, Real Drive, Sword Art Online, Summer Wars, The Matrix, Ghost in the Shell, and the French animated television series Code Lyoko and Code Lyoko Evolution, and the Cyber World in the popular Viz Media series MegaMan NT Warrior. In the Planiverse, a 1984 novel by A.K. Dewdney, college students create a virtual world called 2DWorld, leading to contact with Arde, a two-dimensional parallel universe. In the cyberpunk, computers, psychological thirteen-episode anime entitled Serial Experiments Lain, the main focus is about the Wired, which is a virtual reality-world that governs the sum of all electronic communication and machines; outer receptors are used to mentally transport a person into the Wired itself as a uniquely different virtual avatar.
+The fourth series of the New Zealand TV series The Tribe featured the birth of Reality Space and the Virtual World that was created by Ram, the computer genius-wizard leader of The Technos.
+In 2009, BBC Radio 7 commissioned Planet B, set in a virtual world in which a man searches for his girlfriend, believed to be dead, but in fact still alive within the world, called "Planet B". The series is the biggest-ever commission for an original drama series.[68]
+In the novel Holo.Wars: The Black Hats, three virtual worlds overlap and are possibly a majority of the milieu in the book.[69]
+Future[edit]
+Virtual worlds may lead to a "mobility" of labor that may impact national and organizational competitiveness in a manner similar to the changes seen with the mobility of goods and then the mobility of labor.[50]
+Virtual worlds may increasingly function as centers of commerce, trade, and business.[70] With the increased growth of virtual asset trade being seen: In Second Life, revenue has reached approximately 7 million US Dollars per month.[71] Real world brands such as Coca-Cola have used virtual worlds to advertise their brand.
+See also[edit]
+
+Active Worlds
+Blaxxun
+Entropia Universe
+GoJiyo[72]
+Jibe[73]
+Kaneva
+Lyoko
+Metaverse
+Microsoft V-Chat
+NECA Project
+OpenSimulator
+Open Wonderland
+ReactionGrid[74]
+Second Life
+Simulated reality
+SmallWorlds
+Transreality gaming
+Unifier[75]
+VirBELA[76]
+Virtual economy
+Virtual globe
+Virtual reality
+Web3D Consortium
+Woozworld
+
+Citations[edit]
+
+
+^ Bartle, Richard (2003). Designing Virtual Worlds. New Riders. ISBN&#160;0-13-101816-7.&#160;
+^ a b Aichner, T. and Jacob, F. (March 2015). "Measuring the Degree of Corporate Social Media Use". International Journal of Market Research 57 (2): 257–275.&#160;
+^ Biocca &amp; Levy 1995, pp.&#160;40–44
+^ Begault 1994
+^ a b c Bell, Mark W. (2008). "Toward a Definition of "Virtual Worlds"". Journal of Virtual Worlds Research 1 (1). Retrieved 2012-07-29.&#160;
+^ Singhal, Sandeep; Zyda, Michael (1999). Networked Virtual Environments: Design and Implementation. ACM Press/Addison-Wesley Publishing Co.&#160; |access-date= requires |url= (help)
+^ "List of known MMORPGs". Mmorpg.com. Retrieved 2012-07-29.&#160;
+^ Clive Thompson (2004-12-31). "Voice Chat Can Really Kill the Mood on WoW". Wired.com. Retrieved 2012-07-29.&#160;
+^ Biocca &amp; Levy 1995, p.&#160;47
+^ Pliny: A Virtual World[dead link]
+^ Biocca &amp; Levy 1995, pp.&#160;6–8
+^ "A Virtual World". Itleadership.org. 2010-10-20. Retrieved 2012-07-29.&#160;
+^ a b c Castronova 2005
+^ "29th Feb". Digibarn.com. 2004-11-07. Retrieved 2012-07-29.&#160;
+^ Mitchell, Don. “From MUDs To Virtual Worlds”, Microsoft Research, March 23, 1995. Accessed February 28, 2008.
+^ Robert Rossney (June 1996). "Metaworlds" (4.06). Wired. Retrieved 2008-02-26.&#160;
+^ "Helsinki Goes Virtual",The Infowin Newsclips Archive for 1997
+^ a b c "Design For Learning In Virtual Worlds.". Routledge.&#160; Missing or empty |url= (help); |access-date= requires |url= (help)
+^ a b Richard Lee Colvin (2002-07-08). "Cartoon lips, virtual fashion and physics". The Los Angeles Times. Retrieved 2002-07-08.&#160;
+^ Bartle, Richard (2010). "From MUDs to MMORPGs: the history of virtual worlds". Springere. pp.&#160;23–39. doi:10.1007/978-1-4020-9789-8_2.&#160; |access-date= requires |url= (help)
+^ Girvan, Carina (2013), What is a Virtual World? Definition and Classification (TCD-CS-2013-10) (PDF), Dublin, Ireland: School of Computer Science and Statistics (SCSS) at Trinity College Dublin&#160;
+^ "Virtual Worlds Review definition". Virtualworldsreview.com. 1999-02-22. Retrieved 2012-07-29.&#160;
+^ Kaplan, Andreas M.; Haenlein, Michael (2009). "The fairyland of Second Life: About virtual social worlds and how to use them". Business Horizons 52 (6)
+^ a b c d e Robinson, E. H. (2014). "The Aspatial Economics of Virtual Worlds". The Journal of Virtual Worlds Research 7 (1): 1–21.&#160;
+^ Castronova, Edward, et al. "A Test of the Law of Demand in a Virtual World: Exploring the Petri Dish." Discoveries in Gaming and Computer-Mediated Simulations: New Interdisciplinary Applications (2011): 301.
+^ "CNN.com - Material gains from virtual world - Oct 25, 2004". CNN. 2004. Retrieved 2004-10-25.&#160;
+^ "Securing Gaming Account Transactions", Securing Gaming Account Transactions
+^ "The Decline and Fall of an Ultra Rich Online Gaming Empire". Wired. 2008-11-24.&#160;
+^ Sinrod, Eric J. “Virtual world litigation for real”, “Cnet News”, June 13, 2007. Accessed March 6, 2008.
+^ "IGE Sued by World of Warcraft Player". EscapistMagazine. 2007-06-01.&#160;
+^ Brady Forrest, "Wow and Cottage Industries", O'Really Radar, December 4, 2006
+^ Krzywinska, T. (2006). Blood Scythes, Festivals, Quests, and Backstories. Games and Culture, 1(4), 383–396.
+^ Golub, A. (2010). Being in the World (of Warcraft): Raiding, Realism, and Knowledge Production in a Massively Multiplayer Online Game. Anthropological Quarterly, 83(1), 17–45.
+^ a b Robert J. Bloomfield (May 25, 2007) Worlds for Study: Invitation - Virtual Worlds for Studying Real-World Business (and Law, and Politics, and Sociology, and....). Working Paper Series
+^ Doodson, J. (2009)The relationship and differences between physical- and virtual-world personality. Conference paper presented at University of Exeter.
+^ Doodson, J. (2009).The relationship and differences between physical and virtual world-personality. Undergraduate dissertation. University of Bath.
+^ Keely Moore, Brenda K. Wiederhold, Mark D. Wiederhold, Giuseppe Riva. Panic and Agoraphobia in a Virtual World CyberPsychology &amp; Behavior. June 2002, 5(3): 197-202
+^ "Thomas &amp; Kafai: Tweens and Reproductive Health in Virtual Worlds, 2008-08-09". Retrieved 1 October 2014.&#160;
+^ "Connected Play: Tweens in a Virtual World (The John D and Catherine T. MacArthur Foundation Series on Digital Media and Learning).". MIT Press.&#160; Missing or empty |url= (help); |access-date= requires |url= (help)
+^ a b Indalecio, Tina. Psychology Today. How Much Of An Individual’s Virtual Identity, Is Really - Real? Exploring Identity in the Virtual World - Is that REALLY you? 1991-2012. Sussex Publishers, LLC. 30 April 2010
+^ McCreery, Michael Patrick. UNLV University Libraries. University of Nevada, Las Vegas. "Personality, Presence, And The Virtual Self: A Fivefactor Model Approach To Behavioral Analysis Within A Virtual Environment". 201.
+^ a b c Toronto, Ellen. "Time Out Of Mind: Dissociation In The Virtual World." Psychoanalytic Psychology 26.2 (2009): 117-133. PsycARTICLES. Web. 11 October 2012.
+^ Bousquet et al. “Video game experience predicts virtual, but not real navigation performance.” Computers in Human Behavior. Volume 27. Issue 1 (January 2011)&#160;: 552-560. Web. [1]
+^ Satalich, Glenna (1995). "Navigation and Wayfinding in Virtual Reality: Finding Proper Tools and Cues to Enhance Navigation Awareness". M.S. thesis. University of Washington, USA.
+^ Poquérusse, Jessie. "The Neuroscience of Sharing". Retrieved 16 August 2012.&#160;
+^ {{URL=http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsearch-bool.html&amp;r=13&amp;f=G&amp;l=50&amp;co1=AND&amp;d=PTXT&amp;s1=7,925,703&amp;OS=7,925,703&amp;RS=7,925,703}}
+^ Schroeder, Ralph (1999). Social Life in Virtual Worlds: Structure and Interaction in Multi-User Virtual Reality Technology, Communications &amp; Strategies, no. 33, 1st quarter, p. 137.]
+^ Katz, James and Aspden, Philip (1997). "A Nation of Strangers, Communications of the ACM, 40 (12), pp. 81-86.
+^ UT Dallas (November 18, 2007). "Avatars Help Asperger Syndrome Patients Learn to Play the Game of Life".&#160;
+^ a b Wasko, Molly; Teigland, Robin; Leidner, Dorothy; Jarvenpaa, Sirkka (2011). "Stepping into the Internet: New Ventures in Virtual Worlds" (PDF). MIS Quarterly 35 (3).&#160;
+^ Gronstedt, Anders (February 14, 2008). Training in Virtual Worlds (Infoline ASTD). ASTD. ISBN&#160;1562865226.&#160;
+^ "The leading virtual worlds trade media company. in New York". Virtual Worlds Management. Retrieved 2012-07-29.&#160;
+^ "Virtual Worlds Management". Virtual Worlds Management. 2008-01-23. Retrieved 2012-07-29.&#160;
+^ "Virtual Worlds Management". Virtual Worlds Management. 2008-04-22. Retrieved 2012-07-29.&#160;
+^ "Worlds In Motion - Analysis: Virtual Worlds And Investment, Q1 2008". Worldsinmotion.biz. Retrieved 2012-07-29.&#160;
+^ Talbot, David. “The Fleecing of the Avatars.” Technology Review 111.1 (Jan. 2008): 58-62.
+^ a b c Haskins, Walaika (July 31, 2008), Who polices Virtual Worlds? Access date: February 2013.
+^ Habbo Hotel (blog), Habbo Hotel House Rules Access date: February 2013.
+^ BBC (July 3, 2009), Billions stolen in online robbery Access date: February 2013.
+^ Stockley, Mark (October 1, 2009), Who polices crime in a virtual world? Access date: February 2013.
+^ Kluge, Stacy; Riley, Elizabeth (2008). "Teaching in Virtual Worlds: Opportunities and Challenges" (PDF). Issues in Informing Science and Information Technology 5.&#160;
+^ a b "Learning in a Virtual World for Real Life". doi:10.13140/rg.2.1.5029.3602.&#160;
+^ Livingstone, D.; Kemp, J. "Integrating Web-Based and 3D Learning Environments: Second Life Meets Moodle" (PDF). UPGRADE (European Journal for the Informatics Professional) 9 (3): 8–14.&#160;
+^ Uther Academy. Retrieved 26 August 2014.[better&#160;source&#160;needed]
+^ "8D Taps Language Learners, Bots, Microtransactions". Virtual World News. 2009-05-29. Retrieved 2009-06-22.&#160;
+^ Bloomfield, Robert J. (May 25, 2007). "Worlds for Study: Invitation - Virtual Worlds for Studying Real-World Business (and Law, and Politics, and Sociology, and....)". Working Paper Series. SSRN&#160;988984.&#160;
+^ Murray, Sarah (October 27, 2008). "Technology: Networking widens EMBA net". FT.com.&#160;
+^ Hemley, Matthew (2008-09-30). "BBC radio launches major cross-station sci-fi season". The Stage. Retrieved 2009-03-04.&#160;
+^ Gonzales, R. M. "Holo.Wars: The Black Hats". Amazon.&#160;
+^ Book, Betsy (March, 2006), Virtual Worlds: today and in the future Access date: February 2013.
+^ (August 4, 2011) Report: Second Life Making $100M a Year Access date: February 8, 2013
+^ GoJiyo
+^ Jibe
+^ Reaction Grid
+^ Unifier
+^ VirBELA
+
+
+References[edit]
+
+Bartle, Richard (2003). Designing Virtual Worlds. New Riders. ISBN&#160;0-13-101816-7.&#160;
+Begault, Durand R. (1994). 3-D Sound for Virtual Reality and Multimedia (PDF). San Diego, CA, USA: Academic Press Professional, Inc. ISBN&#160;0-12-084735-3. hdl:2060/20010044352. Retrieved 2008-03-02.&#160;
+Biocca, Frank; Levy, Mark R. (1995). Communication in the Age of Virtual Reality. Lawrence Erlbaum Associates. ISBN&#160;0-8058-1550-3.&#160;
+Castronova, Edward (December 2001). "Virtual worlds: a first-hand account of market and society on the cyberian frontier". CESifo Working Paper No. 618. Munich: CESifo. Retrieved 2008-03-03.&#160;
+Castronova, Edward (2005). Synthetic Worlds: The Business and Culture of Online Games. University of Chicago Press. ISBN&#160;0-226-09626-2.&#160;
+Castronova, Edward (2007). Exodus to the Virtual World: How Online Fun is Changing Reality. Palgrave Macmillan. ISBN&#160;1-4039-8412-3.&#160;
+Cherbakov, Luba, etc. (2009). "Virtual Spaces: Enabling Immersive Collaborative Enterprise, Part 1: Introduction to the opportunities and technologies". USA: developerWorks. Retrieved 2009-10-23.&#160;
+Combs, Nate (June 7, 2004). "A virtual world by any other name?". Retrieved 2013-11-12.&#160;
+Kaplan, Andreas M.; Haenlein, Michael (2009). "Consumer use and business potential of virtual worlds: The case of Second Life". International Journal on Media Management 11 (3).&#160;
+Kaplan, Andreas M.; Haenlein, Michael (2009). "The fairyland of Second Life: About virtual social worlds and how to use them". Business Horizons 52 (6).&#160;
+Lastowka, Greg (2010). Virtual Justice (PDF). Yale University Press. ISBN&#160;978-0-300-14120-7.&#160;
+Grau, Oliver (2003). Virtual Art. From Illusion to Immersion. MIT Press, Cambridge.&#160;
+Linden Lab (2009). "The Open University in Second Life: An Education Case Study" (PDF). Retrieved 2009-07-07.&#160;
+Mennecke, Brian E. (2008). "Second Life and other Virtual Worlds: A Roadmap for Research" (PDF). Communications of the AIS 20 (20).&#160;
+Wasko, Molly; Teigland, Robin; Leidner, Dorothy; Jarvenpaa, Sirkka (2011). "Stepping into the Internet: New Ventures in Virtual Worlds" (PDF). MIS Quarterly 35 (3).&#160;
+
+External links[edit]
+
+Journal of Virtual Worlds Research
+NVWN - Nordic Virtual Worlds Network
+IBM VUC - Virtual Universe Community
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Virtual reality · Mixed reality · Reality
+
+
+
+
+
+
+Concepts
+
+
+
+Virtuality
+Virtual cinematography
+Augmented reality
+Augmented virtuality
+Real life
+Projection augmented model
+Reality–virtuality continuum
+Artificial reality
+Simulated reality
+Ubiquitous computing
+Virtual world (Persistent world)
+Multimodal interaction
+Telepresence
+Immersion
+
+
+
+
+
+
+
+
+Technology
+
+
+
+Compositing
+Camera resectioning
+Haptic suit
+Head-mounted display (Optical head-mounted display)
+Head-up display
+Image-based modeling and rendering
+Real-time computer graphics
+Virtual retinal display
+Wearable computer
+Stereoscopy (Computer stereo vision, Computer vision)
+Chroma key
+Visual hull
+Free viewpoint television
+Omnidirectional treadmill
+Hidden surface determination
+
+
+
+
+
+
+
+
+Tracking
+
+
+
+Motion capture
+Tracking system
+Types
+
+Optical
+Inertial
+Magnetic
+
+
+Devices
+
+Wired glove
+Gametrak
+HoloLens
+PlayStation Move
+Leap Motion
+Kinect
+Sixense TrueMotion
+
+
+
+
+
+
+
+
+
+
+Immersive devices
+
+
+
+Personal
+
+Google Cardboard
+HTC Vive
+Oculus Rift
+Samsung Gear VR
+PlayStation VR
+Razer OSVR
+
+
+Rooms
+
+AlloSphere
+Cave
+TreadPort
+
+
+History
+
+Sensorama
+Virtual Boy
+Famicom 3D System
+Sword of Damocles
+Sega VR
+Virtuality
+
+
+
+
+
+
+
+
+
+
+Applications
+
+
+
+Pervasive game
+ARToolKit
+Interactive art (Virtual graffiti)
+
+
+
+
+
+
+
+
+See also
+
+
+
+Simulated reality in fiction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Multiplayer video games
+
+
+
+
+
+
+Player(s)
+
+
+
+Cooperative gameplay
+Multiplayer online game
+Massively multiplayer online game
+MUD
+Massively multiplayer online role-playing game
+
+
+
+
+
+
+
+
+Genres
+
+
+
+Strategy
+Role-playing
+Action
+Arcade
+Simulation
+
+
+
+
+
+
+
+
+History
+
+
+
+History of online games
+History of massively multiplayer online games
+Chronology of massively multiplayer online strategy video games
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Virtual economy
+
+Virtual tax
+
+
+Social interaction in MMORPGs
+Virtual world
+
+Persistent world
+
+
+Non-player character
+Multiple character control
+
+
+
+
+
+
+
+
+See also
+
+
+
+Online game
+
+Browser game
+Persistent browser-based game
+Online gaming in China
+
+
+Social networking service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Virtual_world&amp;oldid=691114944"					
+				Categories: Video game gameplayVirtual realityPersistent worldsCyberpunk themesHidden categories: Pages using citations with accessdate and no URLAll articles with dead external linksArticles with dead external links from July 2012Pages using web citations with no URLAll articles lacking reliable referencesArticles lacking reliable references from August 2014Articles to be merged from July 2014All articles to be mergedAll articles that may contain original researchArticles that may contain original research from November 2013Wikipedia articles needing clarification from March 2008All articles with specifically marked weasel-worded phrasesArticles with specifically marked weasel-worded phrases from September 2015Articles needing additional references from April 2008All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from January 2014Articles that may contain original research from April 2012Articles with unsourced statements from December 2012Articles containing video clips				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةБългарскиCatalàČeštinaDeutschEestiEspañolEsperantoفارسیFrançais한국어עבריתМакедонски日本語PortuguêsРусскийSvenskaதமிழ்Türkçe中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 17 November 2015, at 19:23.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

@@ -1,0 +1,416 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Compositing
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about visual effects.  For the process of combining several democratic motions, see compositing (democracy).  For the technique of compositing typeset by hand, see typesetting.  For compositing in graphic design and still photography, see photomontage.  For other uses, see Compositing (disambiguation).
+
+
+
+
+Four images of the same subject, removed from their original backgrounds and composited onto a new background.
+
+
+Compositing is the combining of visual elements from separate sources into single images, often to create the illusion that all those elements are parts of the same scene. Live-action shooting for compositing is variously called "chroma key", "blue screen", "green screen" and other names. Today, most, though not all, compositing is achieved through digital image manipulation. Pre-digital compositing techniques, however, go back as far as the trick films of Georges Méliès in the late 19th century; and some are still in use.
+
+
+
+Contents
+
+
+1 Basic procedure
+2 Typical applications
+3 Physical compositing
+4 Multiple exposure
+5 Background projection
+6 Matting
+7 Advantages of digital mattes
+8 See also
+9 References
+10 Further reading
+11 External links
+
+
+
+Basic procedure[edit]
+All compositing involves the replacement of selected parts of an image with other material, usually, but not always, from another image. In the digital method of compositing, software commands designate a narrowly defined color as the part of an image to be replaced. Then the software replaces every pixel within the designated color range with a pixel from another image, aligned to appear as part of the original. For example, one could record a television weather presenter positioned in front of a plain blue or green background, while compositing software replaces only the designated blue or green color with weather maps.
+Typical applications[edit]
+In television studios, blue or green screens may back news-readers to allow the compositing of stories behind them, before being switched to full-screen display. In other cases, presenters may be completely within compositing backgrounds that are replaced with entire “virtual sets” executed in computer graphics programs. In sophisticated installations, subjects, cameras, or both can move about freely while the computer-generated imagery (CGI) environment changes in real time to maintain correct relationships between the camera angles, subjects, and virtual “backgrounds.”
+Virtual sets are also used in motion pictures filmmaking, some of which are photographed entirely in blue or green screen environments; as for example in Sky Captain and the World of Tomorrow. More commonly, composited backgrounds are combined with sets – both full-size and models – and vehicles, furniture, and other physical objects that enhance the “reality” of the composited visuals. “Sets” of almost unlimited size can be created digitally because compositing software can take the blue or green color at the edges of a backing screen and extend it to fill the rest of the frame outside it. That way, subjects recorded in modest areas can be placed in large virtual vistas. Most common of all, perhaps, are set extensions: digital additions to actual performing environments. In the film Gladiator, for example, the arena and first tier seats of the Roman Colosseum were actually built, while the upper galleries (complete with moving spectators) were computer graphics, composited onto the image above the physical set. For motion pictures originally recorded on film, high-quality video conversions called “digital intermediates” are created to enable compositing and the other operations of computerized post production. Digital compositing is a form of matting, one of four basic compositing methods. The others are physical compositing, multiple exposure, and background projection.
+Physical compositing[edit]
+In physical compositing the separate parts of the image are placed together in the photographic frame and recorded in a single exposure. The components are aligned so that they give the appearance of a single image. The most common physical compositing elements are partial models and glass paintings.
+Partial models are typically used as set extensions such as ceilings or the upper stories of buildings. The model, built to match the actual set but on a much smaller scale, is hung in front of the camera, aligned so that it appears to be part of the set. Models are often quite large because they must be placed far enough from the camera so that both they and the set far beyond them are in sharp focus.[1]
+Glass shots are made by positioning a large pane of glass so that it fills the camera frame, and is far enough away to be held in focus along with the background visible through it. The entire scene is painted on the glass, except for the area revealing the background where action is to take place. This area is left clear. Photographed through the glass, the live action is composited with the painted area. A classic example of a glass shot is the approach to Ashley Wilkes’ plantation in Gone with the Wind. The plantation and fields are all painted, while the road and the moving figures on it are photographed through the glass area left clear.
+A variant uses the opposite technique: most of the area is clear, except for individual elements (photo cutouts or paintings) affixed to the glass. For example, a ranch house could be added to an empty valley by placing an appropriately scaled and positioned picture of it between the valley and the camera.
+Multiple exposure[edit]
+
+
+
+
+The Playhouse composited using multiple exposures to show nine copies of Buster Keaton on screen at once.
+
+
+An in-camera multiple exposure is made by recording on only one part of each film frame, rewinding the film to exactly the same start point, exposing a second part, and repeating the process as needed. The resulting negative is a composite of all the individual exposures. (By contrast, a “double exposure” records multiple images on the entire frame area, so that all are partially visible through one another.) Exposing one section at a time is made possible by enclosing the camera lens (or the whole camera) in a light-tight box fitted with maskable openings, each one corresponding to one of the action areas. Only one opening is revealed per exposure, to record just the action positioned in front of it.
+Multiple exposure is difficult because the action in each recording must match that of the others; multiple exposure composites therefore typically contain only two or three elements. However, as early as 1900 Georges Méliès used seven-fold exposure in L'homme-orchestre/The One-man Band; and in the 1921 film The Playhouse, Buster Keaton used multiple exposures to appear simultaneously as nine different actors on a stage, perfectly synchronizing all nine performances.
+Background projection[edit]
+Background projection throws the background image on a screen behind the subjects in the foreground while the camera makes a composite by photographing both at once. The foreground elements conceal the parts of the background image behind them. Sometimes, the background is projected from the front, reflecting off the screen but not the foreground subjects because the screen is made of highly directional, exceptionally reflective material. (The prehistoric opening of 2001: A Space Odyssey uses front projection.) However, rear projection has been a far more common technique.
+In rear projection, (often called process shooting) background images (called “plates”, whether they are still pictures or moving) are photographed first. For example, a camera car may drive along streets or roads while photographing the changing scene behind it. In the studio, the resulting “background plate” is loaded into a projector with the film "flipped" (reversed), because it will be projected onto (and through) the back of a translucent screen. A car containing the performers is aligned in front of the screen so that the scenery appears through its rear and/or side windows. A camera in front of the car records both the foreground action and the projected scenery, as the performers pretend to drive.
+Like multiple exposure, rear projection is technically difficult. The projector and camera motors must be synchronized to avoid flicker and perfectly aligned behind and before the screen. The foreground must be lit to prevent light spill onto the screen behind it. (For night driving scenes, the foreground lights are usually varied as the car “moves” along.) The projector must use a very strong light source so that the projected background is as bright as the foreground. Color filming presents additional difficulties, but can be quite convincing, as in several shots in the famous crop duster sequence in Alfred Hitchcock’s North by Northwest. (Much of the sequence, however, was shot on location.) Because of its complexity, rear projection has been largely replaced by digital compositing with, for example, the car positioned in front of a blue or green screen.
+Matting[edit]
+
+Main article: Matte (filmmaking)
+Traditional matting is the process of compositing two different film elements by printing them, one at a time, onto a duplicate strip of film. After one component is printed on the duplicate, the film is re-wound and the other component is added. Since the film cannot be exposed twice without creating a double exposure, the blank second area must be masked while the first is printed; then the freshly exposed first area must be masked while the second area is printed. Each masking is performed by a “traveling matte:” a specially altered duplicate shot which lies on top of the copy film stock.
+Like its digital successor, traditional matte photography uses a uniformly colored backing – usually (but not always) a special blue or green (fig. 1). Because a matching filter on the camera lens screens out only the backing color, the background area records as black, which, on the camera’s negative film, will develop clear (fig. 2).
+First, a print from the original negative is made on high-contrast film, which records the backing as opaque and the foreground subject as clear (fig. 3). A second high-contrast copy is then made from the first, rendering the backing clear and the foreground opaque (fig. 4).
+Next, a three-layer sandwich of film is run through an optical printer. On the bottom is the unexposed copy film. Above it is the first matte, whose opaque backing color masks the background. On top is the negative of the foreground action. On this pass, the foreground is copied while the background is shielded from exposure by the matte (fig. 5).
+Then the process is repeated; but this time, the copy film is masked by the reverse matte, which excludes light from the foreground area already exposed (fig. 6). The top layer contains the background scene (fig. 7), which is now exposed only in the areas protected during the previous pass. The result is a positive print of the combined background and foreground (fig. 8). A copy of this composite print yields a “dupe negative” (fig. 9) that will replace the original foreground shot in the film’s edited negative.
+Advantages of digital mattes[edit]
+Digital matting has replaced the traditional approach for two reasons. In the old system, the five separate strips of film (foreground and background originals, positive and negative mattes, and copy stock) could drift slightly out of registration, resulting in halos and other edge artifacts in the result. Done correctly, digital matting is perfect, down to the single-pixel level. Also, the final dupe negative was a “third generation” copy, and film loses quality each time it is copied. Digital images can be copied without quality loss.
+This means that multi-layer digital composites can easily be made. For example, models of a space station, a space ship, and a second space ship could be shot separately against blue screen, each "moving" differently. (In such shots, it is the camera that moves, not the model). The individual shots could then be composited with one another, and finally with a star background. With pre-digital matting, the several extra passes through the optical printer would degrade the film quality and increase the probability of edge artifacts. Elements crossing behind or before one another would pose additional problems.
+See also[edit]
+
+Alpha compositing
+Broadcast designer
+Character generator
+Clean feed (TV)
+Compositing window manager
+Deep image compositing
+Digital asset
+Digital compositing
+Digital on-screen graphic (Bug or DOG)
+Graphics coordinator
+Motion graphic design
+Primatte chromakey technology
+
+References[edit]
+
+
+^ Professional Cinematography, Clarke, Charles G., A.S.C., Los Angeles, 1964, p 152 ff.
+
+
+Further reading[edit]
+
+T. Porter and T. Duff, "Compositing Digital Images", Proceedings of SIGGRAPH '84, 18 (1984).
+Ron Brinkmann, The Art and Science of Digital Compositing (ISBN 0-12-133960-2)
+Steve Wright, Digital Compositing for Film and Video, Second Edition (ISBN 0-240-80760-X)
+American Cinematographer Manual, 2nd ed., Mascelli, Joseph V., A.S.C. and Miller, Arthur, A.S.C, eds. Los Angeles, 1966, p.&#160;500 ff.
+
+External links[edit]
+
+
+
+Look up compositing in Wiktionary, the free dictionary.
+
+
+http://www.videomaker.com/article/10914-green-screen-lighting
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Virtual reality · Mixed reality · Reality
+
+
+
+
+
+
+Concepts
+
+
+
+Virtuality
+Virtual cinematography
+Augmented reality
+Augmented virtuality
+Real life
+Projection augmented model
+Reality–virtuality continuum
+Artificial reality
+Simulated reality
+Ubiquitous computing
+Virtual world (Persistent world)
+Multimodal interaction
+Telepresence
+Immersion
+
+
+
+
+
+
+
+
+Technology
+
+
+
+Compositing
+Camera resectioning
+Haptic suit
+Head-mounted display (Optical head-mounted display)
+Head-up display
+Image-based modeling and rendering
+Real-time computer graphics
+Virtual retinal display
+Wearable computer
+Stereoscopy (Computer stereo vision, Computer vision)
+Chroma key
+Visual hull
+Free viewpoint television
+Omnidirectional treadmill
+Hidden surface determination
+
+
+
+
+
+
+
+
+Tracking
+
+
+
+Motion capture
+Tracking system
+Types
+
+Optical
+Inertial
+Magnetic
+
+
+Devices
+
+Wired glove
+Gametrak
+HoloLens
+PlayStation Move
+Leap Motion
+Kinect
+Sixense TrueMotion
+
+
+
+
+
+
+
+
+
+
+Immersive devices
+
+
+
+Personal
+
+Google Cardboard
+HTC Vive
+Oculus Rift
+Samsung Gear VR
+PlayStation VR
+Razer OSVR
+
+
+Rooms
+
+AlloSphere
+Cave
+TreadPort
+
+
+History
+
+Sensorama
+Virtual Boy
+Famicom 3D System
+Sword of Damocles
+Sega VR
+Virtuality
+
+
+
+
+
+
+
+
+
+
+Applications
+
+
+
+Pervasive game
+ARToolKit
+Interactive art (Virtual graffiti)
+
+
+
+
+
+
+
+
+See also
+
+
+
+Simulated reality in fiction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Compositing&amp;oldid=679811404"					
+				Categories: Mixed realityVisual effects				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةDeutschFrançaisGaeilgeItalianoMagyar日本語PolskiRomânăРусскийSuomiУкраїнська					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 6 September 2015, at 22:49.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

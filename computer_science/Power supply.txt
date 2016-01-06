@@ -1,0 +1,428 @@
+
+
+
+
+Power supply - Wikipedia, the free encyclopedia
+document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );
+window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Power_supply","wgTitle":"Power supply","wgCurRevisionId":686331670,"wgRevisionId":686331670,"wgArticleId":219042,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia references cleanup from November 2011","All articles needing references cleanup","Articles covered by WikiProject Wikify from November 2011","All articles covered by WikiProject Wikify","Articles needing additional references from April 2011","All articles needing additional references","Wikipedia articles needing clarification from November 2011","Commons category with local link different than on Wikidata","Power supplies"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Power_supply","wgRelevantArticleId":219042,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wikilove-recipient":"","wikilove-anon":0,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgGatherPageImageThumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Netzgeraet.jpg/100px-Netzgeraet.jpg","wgULSAcceptLanguageList":["en-us"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising"],"wgWikibaseItemId":"Q204157","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.bannerController","skins.vector.js"]);
+} );
+
+
+
+a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{behavior:url("/w/static/1.27.0-wmf.7/skins/Vector/csshover.min.htc")}
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Power supply
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For the Budgie album, see Power Supply (album).  For the EP by Anamanaguchi, see Power Supply (EP).
+
+
+
+
+
+
+
+
+This article has multiple issues. Please help improve it or discuss these issues on the talk page.
+
+
+
+
+
+
+
+
+This article has an unclear citation style. The references used may be made clearer with a different or consistent style of citation, footnoting, or external linking. (November 2011)
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (April 2011)
+
+
+
+
+
+
+
+
+
+
+
+
+A simple desktop power supply with power output connector seen at lower-left and power input connector (not shown) located at the rear
+
+
+A power supply is an electronic device that supplies electric energy to an electrical load. The primary function of a power supply is to convert one form of electrical energy to another and, as a result, power supplies are sometimes referred to as electric power converters. Some power supplies are discrete, stand-alone devices, whereas others are built into larger devices along with their loads. Examples of the latter include power supplies found in desktop computers and consumer electronics devices.
+Every power supply must obtain the energy it supplies to its load, as well as any energy it consumes while performing that task, from an energy source. Depending on its design, a power supply may obtain energy from various types of energy sources, including electrical energy transmission systems, energy storage devices such as a batteries and fuel cells, electromechanical systems such as generators and alternators, solar power converters, or another power supply.
+All power supplies have a power input, which receives energy from the energy source, and a power output that delivers energy to the load. In most power supplies the power input and output consist of electrical connectors or hardwired circuit connections, though some power supplies employ wireless energy transfer in lieu of galvanic connections for the power input or output. Some power supplies have other types of inputs and outputs as well, for functions such as external monitoring and control.
+
+
+
+Contents
+
+
+1 General classification
+
+1.1 Functional
+1.2 Mechanical
+1.3 Power conversion method
+
+
+2 Types
+
+2.1 DC power supply
+
+2.1.1 AC-to-DC supply
+2.1.2 Linear regulator
+
+
+2.2 AC power supplies
+2.3 Switched-mode power supply
+2.4 Programmable power supply
+2.5 Uninterruptible power supply
+2.6 High voltage power supply
+
+
+3 Specification
+4 Power supply applications
+
+4.1 Computer power supply
+4.2 Welding power supply
+4.3 AC adapter
+
+
+5 Overload protection
+
+5.1 Current limiting
+
+
+6 Terminology
+7 References
+8 See also
+9 External links
+
+
+
+General classification[edit]
+
+
+
+
+A rackmount, adjustable regulated power supply
+
+
+Functional[edit]
+Power supplies are categorized in various ways, including by functional features. For example, a regulated power supply is one that maintains constant output voltage or current despite variations in load current or input voltage. Conversely, the output of an unregulated power supply can change significantly when its input voltage or load current changes. Adjustable power supplies allow the output voltage or current to be programmed by mechanical controls (e.g., knobs on the power supply front panel), or by means of a control input, or both. An adjustable regulated power supply is one that is both adjustable and regulated. An isolated power supply has a power output that is electrically independent of its power input; this is in contrast to other power supplies that share a common connection between power input and output.
+Mechanical[edit]
+Power supplies are packaged in different ways and classified accordingly. A bench power supply is a stand-alone desktop unit used in applications such as circuit test and development. Open frame power supplies have only a partial mechanical enclosure, sometimes consisting of only a mounting base; these are typically built into machinery or other equipment. Rack mount power supplies are designed to be secured into standard electronic equipment racks.
+Power conversion method[edit]
+Power supplies can be broadly divided into linear and switching types. Linear power converters process the input power directly, with all active power conversion components operating in their linear operating regions. In switching power converters, the input power is converted to AC or to DC pulses before processing, by components that operate predominantly in non-linear modes (e.g., transistors that spend most of their time in cutoff or saturation). Power is "lost" (converted to heat) when components operate in their linear regions and, consequently, switching converters are usually more efficient than linear converters because their components spend less time in linear operating regions.
+Types[edit]
+DC power supply[edit]
+A DC power supply is one that supplies a voltage of fixed polarity (either positive or negative) to its load. Depending on its design, a DC power supply may be powered from a DC source or from an AC source such as the power mains.
+AC-to-DC supply[edit]
+
+
+
+
+Schematic of basic AC-to-DC power supply, showing (from L-R) transformer, full-wave bridge rectifier, filter capacitor and resistor load
+
+
+Some DC power supplies use AC mains electricity as an energy source. Such power supplies will sometimes employ a transformer to convert the input voltage to a higher or lower AC voltage. A rectifier is used to convert the transformer output voltage to a varying DC voltage, which in turn is passed through an electronic filter to convert it to an unregulated DC voltage. The filter removes most, but not all of the AC voltage variations; the remaining voltage variations are known as ripple. The electric load's tolerance of ripple dictates the minimum amount of filtering that must be provided by a power supply. In some applications, high ripple is tolerated and therefore no filtering is required. For example, in some battery charging applications it is possible to implement a mains-powered DC power supply with nothing more than a transformer and a single rectifier diode, with a resistor in series with the output to limit charging current.
+Linear regulator[edit]
+The function of a linear voltage regulator is to convert a varying DC voltage to a constant, often specific, lower DC voltage. In addition, they often provide a current limiting function to protect the power supply and load from overcurrent (excessive, potentially destructive current).
+A constant output voltage is required in many power supply applications, but the voltage provided by many energy sources will vary with changes in load impedance. Furthermore, when an unregulated DC power supply is the energy source, its output voltage will also vary with changing input voltage. To circumvent this, some power supplies use a linear voltage regulator to maintain the output voltage at a steady value, independent of fluctuations in input voltage and load impedance. Linear regulators can also reduce the magnitude of ripple and noise present appearing on the output voltage.
+AC power supplies[edit]
+An AC power supply typically takes the voltage from a wall outlet (mains supply) and lowers it to the desired voltage. Some filtering may take place as well.
+Switched-mode power supply[edit]
+Main article: Switched-mode power supply
+In a switched-mode power supply (SMPS), the AC mains input is directly rectified and then filtered to obtain a DC voltage. The resulting DC voltage is then switched on and off at a high frequency by electronic switching circuitry, thus producing an AC current that will pass through a high-frequency transformer or inductor. Switching occurs at a very high frequency (typically 10&#160;kHz — 1&#160;MHz), thereby enabling the use of transformers and filter capacitors that are much smaller, lighter, and less expensive than those found in linear power supplies operating at mains frequency. After the inductor or transformer secondary, the high frequency AC is rectified and filtered to produce the DC output voltage. If the SMPS uses an adequately insulated high-frequency transformer, the output will be electrically isolated from the mains; this feature is often essential for safety.
+Switched-mode power supplies are usually regulated, and to keep the output voltage constant, the power supply employs a feedback controller that monitors current drawn by the load. The switching duty cycle increases as power output requirements increase.
+SMPSs often include safety features such as current limiting or a crowbar circuit to help protect the device and the user from harm.[1] In the event that an abnormal high-current power draw is detected, the switched-mode supply can assume this is a direct short and will shut itself down before damage is done. PC power supplies often provide a power good signal to the motherboard; the absence of this signal prevents operation when abnormal supply voltages are present.
+Some SMPSs have an absolute limit on their minimum current output.[2] They are only able to output above a certain power level and cannot function below that point. In a no-load condition the frequency of the power slicing circuit increases to great speed, causing the isolated transformer to act as a Tesla coil, causing damage due to the resulting very high voltage power spikes. Switched-mode supplies with protection circuits may briefly turn on but then shut down when no load has been detected. A very small low-power dummy load such as a ceramic power resistor or 10-watt light bulb can be attached to the supply to allow it to run with no primary load attached.
+Power factor has become an issue of concern for computer manufacturers. Switched mode power supplies have traditionally been a source of power line harmonics and have a very poor power factor. The rectifier input stage distorts the waveshape of current drawn from the supply; this can produce adverse effects on other loads. The distorted current causes extra heating in the wires and distribution equipment. Switched mode power supplies in a building can result in poor power quality for other utility customers. Customers may face higher electric bills for a low power factor load.
+Some switch-mode power supplies use filters or additional switching stages in the incoming rectifier circuit to improve the waveform of the current taken from the AC line. This adds to the circuit complexity. Many computer power supplies built in the last few years now include power factor correction built right into the switched-mode supply, and may advertise the fact that they offer 1.0 power factor.
+Programmable power supply[edit]
+
+
+
+
+Programmable power supplies
+
+
+A programmable power supply is one that allows remote control of its operation through an analog input or digital interface such as RS232 or GPIB. Controlled properties may include voltage, current, and in the case of AC output power supplies, frequency. They are used in a wide variety of applications, including automated equipment testing, crystal growth monitoring, semiconductor fabrication, and x-ray generators.
+Programmable power supplies typically employ an integral microcomputer to control and monitor power supply operation. Power supplies equipped with a computer interface may use proprietary communication protocols or standard protocols and device control languages such as SCPI.
+Uninterruptible power supply[edit]
+Main article: Uninterruptible power supply
+An uninterruptible power supply (UPS) takes its power from two or more sources simultaneously. It is usually powered directly from the AC mains, while simultaneously charging a storage battery. Should there be a dropout or failure of the mains, the battery instantly takes over so that the load never experiences an interruption. In a computer installation, this gives the operators time to shut down the system in an orderly way. Other UPS schemes may use an internal combustion engine or turbine to continuously supply power to a system in parallel with power coming from the AC. The engine-driven generators would normally be idling, but could come to full power in a matter of a few seconds in order to keep vital equipment running without interruption. Such a scheme might be found in hospitals or telephone central offices.
+High voltage power supply[edit]
+
+
+
+
+A 30 kV high voltage power supply with Federal Standard connector, used in electron microscopes
+
+
+A high voltage power supply is one that outputs hundreds or thousands of volts. A special output connector is used that prevents arcing, insulation breakdown and accidental human contact. Federal Standard connectors are typically used for applications above 20 kV, though other types of connectors (e.g., SHV connector) may be used at lower voltages. Some high voltage power supplies provide an analog input that can be used to control the output voltage, effectively allowing them to function as high-voltage amplifiers, albeit with very limited bandwidth. High voltage power supplies are commonly used to accelerate and manipulate electron and ion beams in equipment such as x-ray generators, electron microscopes, and focused ion beam columns, and in a variety of other applications, including electrophoresis and electrostatics.
+High voltage power supplies typically apply the bulk of their input energy to a power inverter, which in turn drives a voltage multiplier or a high turns ratio, high voltage transformer, or both (usually a transformer followed by a multiplier) to produce high voltage. The high voltage is passed out of the power supply through the special connector, and is also applied to a voltage divider that converts it to a low voltage metering signal compatible with low voltage circuitry. The metering signal is used by a closed-loop controller that regulates the high voltage by controlling inverter input power, and it may also be conveyed out of the power supply to allow external circuitry to monitor the high voltage output.
+Specification[edit]
+The suitability of a particular power supply for an application is determined by various attributes of the power supply, which are typically listed in the power supply's specification. Commonly specified attributes for a power supply include:
+
+Input voltage type (AC or DC) and range
+Efficiency of power conversion
+The amount of voltage and current it can supply to its load
+How stable its output voltage or current is under varying line and load conditions
+How long it can supply energy without refueling or recharging (applies to power supplies that employ portable energy sources)
+Operating and storage temperature ranges
+
+Power supply applications[edit]
+Computer power supply[edit]
+Main article: Power supply unit (computer)
+A modern computer power supply is a switch-mode power supply that converts AC power from the mains supply, to several DC voltages. Switch-mode supplies replaced linear supplies due to cost, weight, and size improvement. The diverse collection of output voltages also have widely varying current draw requirements.
+Welding power supply[edit]
+Main article: Welding power supply
+Arc welding uses electricity to melt the surfaces of the metals in order to join them together through coalescence. The electricity is provided by a welding power supply, and can either be AC or DC. Arc welding typically requires high currents typically between 100 and 350 amperes. Some types of welding can use as few as 10 amperes, while some applications of spot welding employ currents as high as 60,000 amperes for an extremely short time. Older welding power supplies consisted of transformers or engines driving generators. More recent supplies use semiconductors and microprocessors reducing their size and weight.
+AC adapter[edit]
+
+
+
+
+Switched mode mobile phone charger
+
+
+Main article: AC adapter
+A power supply that is built into an AC mains power plug is known as a "plug pack" or "plug-in adapter", or by slang terms such as "wall wart". They are even more diverse than their names; often with either the same kind of DC plug offering different voltage or polarity, or a different plug offering the same voltage. "Universal" adapters attempt to replace missing or damaged ones, using multiple plugs and selectors for different voltages and polarities. Replacement power supplies must match the voltage of, and supply at least as much current as, the original power supply.
+The least expensive AC units consist only of a small transformer, while DC adapters include a few additional diodes. Whether or not a load is connected to the power adapter, the transformer has a magnetic field continuously present and normally cannot be completely turned off unless unplugged.
+Because they consume standby power, they are sometimes known as "electricity vampires" and may be plugged into a power strip to allow turning them off.
+In contrast, switched-mode power supplies can cut off leaky electrolyte-capacitors, use powerless MOSFETs, and reduce their working frequency to get a gulp of energy once in a while to power, for example, a clock, which would otherwise need a battery.[further explanation needed]
+Overload protection[edit]
+Power supplies often have protection from short circuit or overload that could damage the supply or cause a fire. Fuses and circuit breakers are two commonly used mechanisms for overload protection.[3]
+A fuse contains a short piece of wire which melts if too much current flows. This effectively disconnects the power supply from its load, and the equipment stops working until the problem that caused the overload is identified and the fuse is replaced. Some power supplies use a very thin wire link soldered in place as a fuse. Fuses in power supply units may be replaceable by the end user, but fuses in consumer equipment may require tools to access and change.
+A circuit breaker contains an element that heats, bends and triggers a spring which shuts the circuit down. Once the element cools, and the problem is identified the breaker can be reset and the power restored.
+Some PSUs use a thermal cutout buried in the transformer rather than a fuse. The advantage is it allows greater current to be drawn for limited time than the unit can supply continuously. Some such cutouts are self resetting, some are single use only.
+Current limiting[edit]
+Some supplies use current limiting instead of cutting off power if overloaded. The two types of current limiting used are electronic limiting and impedance limiting. The former is common on lab bench PSUs, the latter is common on supplies of less than 3 watts output.
+A foldback current limiter reduces the output current to much less than the maximum non-fault current.
+Terminology[edit]
+
+SCP - Short circuit protection
+OPP - Overpower (overload) protection
+OCP - Overcurrent protection
+OTP - Overtemperature protection
+OVP - Overvoltage protection
+UVP - Undervoltage protection
+UPS - Uninterruptable Power Supply
+PSU - Power Supply Unit
+SMPSU - Switch-Mode Power Supply Unit
+
+References[edit]
+
+
+^ Quoting US patent #4937722, High efficiency direct coupled switched mode power supply: The power supply can also include crowbar circuit protecting it against damage by clamping the output to ground if it exceeds a particular voltage. http://www.patentstorm.us/patents/4937722-description.html
+^ Quoting US Patent #5402059: A problem can occur when loads on the output of a switching power supply become disconnected from the supply. When this occurs, the output current from the power supply becomes reduced (or eliminated if all loads become disconnected). If the output current becomes small enough, the output voltage of the power supply can reach the peak value of the secondary voltage of the transformer of the power supply. This occurs because with a very small output current, the inductor in the L-C low-pass filter does not drop much voltage (if any at all). The capacitor in the L-C low-pass filter therefore charges up to the peak voltage of the secondary of the transformer. This peak voltage is generally considerably higher than the average voltage of the secondary of the transformer. The higher voltage which occurs across the capacitor, and therefore also at the output of the power supply, can damage components within the power supply. The higher voltage can also damage any remaining electrical loads connected to the power supply. http://www.patentstorm.us/patents/5402059-description.html
+^ Malmstadt, Enke and Crouch, Electronics and Instrumentation for Scientists, The Benjamin/Cummings Publishing Company, Inc., 1981, ISBN 0-8053-6917-1, Chapter 3.
+
+
+See also[edit]
+
+Capacitive power supply
+Electricity generation
+Extra high tension
+Mains power around the world
+Motor–generator
+Power cord
+Sense (electronics)
+Voltage regulator
+Wall wart
+
+External links[edit]
+
+
+
+Look up power supply in Wiktionary, the free dictionary.
+
+
+
+
+
+Wikimedia Commons has media related to Power supplies.
+
+
+
+Introduction to Bench Power Supplies - B&amp;K Precision
+Understanding Linear Power Supply Operation
+Load Power Sources for Peak Efficiency, James Colotti, EDN 1979 October 5
+
+
+
+
+
+Electronics portal
+
+
+
+Energy portal
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Power_supply&amp;oldid=686331670"					
+				Categories: Power suppliesHidden categories: Wikipedia references cleanup from November 2011All articles needing references cleanupArticles covered by WikiProject Wikify from November 2011All articles covered by WikiProject WikifyArticles needing additional references from April 2011All articles needing additional referencesWikipedia articles needing clarification from November 2011Commons category with local link different than on Wikidata				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةAzərbaycancaবাংলাBosanskiCatalàDanskDeutschEestiΕλληνικάEspañolEuskaraفارسیFrançais한국어Հայերենहिन्दीHrvatskiBahasa IndonesiaItalianoעבריתBasa JawaMagyarമലയാളംBahasa MelayuNederlands日本語Norsk bokmålNorsk nynorskPolskiPortuguêsРусскийSlovenčinaСрпски / srpskiSrpskohrvatski / српскохрватскиSvenskaไทยTürkçeУкраїнськаاردو中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 18 October 2015, at 14:11.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

@@ -1,0 +1,1031 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Data Matrix
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For other uses, see Data matrix (disambiguation).
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (February 2010)
+
+
+
+
+
+
+An example of a Data Matrix code, encoding the text: "Wikipedia, the free encyclopedia"
+
+
+A Data Matrix code is a two-dimensional matrix barcode consisting of black and white "cells" or modules arranged in either a square or rectangular pattern. The information to be encoded can be text or numeric data. Usual data size is from a few bytes up to 1556 bytes. The length of the encoded data depends on the number of cells in the matrix. Error correction codes are often used to increase reliability: even if one or more cells are damaged so it is unreadable, the message can still be read. A Data Matrix symbol can store up to 2,335 alphanumeric characters.
+Data Matrix symbols are rectangular in shape and usually square and are composed of "cells": little squares that represent bits. Depending on the coding used, a "light" cell represents a 0 and a "dark" cell is a 1, or vice versa. Every Data Matrix is composed of two solid adjacent borders in an "L" shape (called the "finder pattern") and two other borders consisting of alternating dark and light "cells" or modules (called the "timing pattern"). Within these borders are rows and columns of cells encoding information. The finder pattern is used to locate and orient the symbol while the timing pattern provides a count of the number of rows and columns in the symbol. As more data is encoded in the symbol, the number of cells (rows and columns) increases. Each code is unique. Symbol sizes vary from 10×10 to 144×144 in the new version ECC 200, and from 9×9 to 49×49 in the old version ECC 000 - 140.
+
+
+
+Contents
+
+
+1 Applications
+
+1.1 Food industry
+1.2 Art
+
+
+2 Technical specifications
+
+2.1 Data Matrix ECC 200
+2.2 Data Matrix ECC 000–140
+
+
+3 Standards
+4 Encoding
+
+4.1 Text modes
+4.2 EDIFACT mode
+4.3 Base 256 mode
+
+
+5 Patent issues
+6 See also
+7 References
+8 External links
+
+
+
+Applications[edit]
+
+
+
+
+A data matrix on a Mini PCI card, encoding the serial number 15C06E115AZC72983004
+
+
+The most popular application for Data Matrix is marking small items, due to the code’s ability to encode fifty characters in a symbol that is readable at 2 or 3&#160;mm2 and the fact that the code can be read with only a 20% contrast ratio[citation needed]. The Data Matrix is scalable, with commercial applications as small as 300 micrometres (laser etched on a 600 micrometre silicon device) and as large as a 1 metre (3&#160;ft) square (painted on the roof of a boxcar). Fidelity of the marking and reading systems are the only limitation.
+The United States of America's Electronic Industries Alliance (EIA) recommends using Data Matrix for labeling small electronic components.[1]
+Data Matrix codes are becoming common on printed media such as labels and letters.[citation needed] The code can be read quickly by a barcode reader which allows the media to be tracked, for example when a parcel has been dispatched to the recipient.
+
+
+
+
+Marking surfaces
+
+
+For industrial engineering purposes, Data Matrix codes can be marked directly onto components, ensuring that only the intended component is identified with the Data Matrix encoded data. The codes can be marked onto components with various methods, but within the aerospace industry these are commonly industrial ink-jet, dot-peen marking, laser marking, and electrolytic chemical etching (ECE). These methods give a permanent mark which can last up to the lifetime of the component.
+Data Matrix codes are usually verified using specialist camera equipment and software.[further explanation needed] This verification ensures the code conforms to the relevant standards, and ensures readability for the lifetime of the component. After the component enters service, the Data Matrix code can then be read by a reader camera, which decodes the Data Matrix data which can then be used for a number of purposes, such as movement tracking or inventory stock checks.
+
+
+
+
+Reading Data Matrix code with mobile phone (Semacode project)
+
+
+Data Matrix codes, along with other Open Source codes such as 1D Barcodes can also be read with mobile phones by downloading code specific mobile applications. Although the majority of these mobile readers are capable of reading Data Matrix,[citation needed] few extend the decoding to enable mobile access and interaction, whereupon the codes can be used securely and across media; for example, in track and trace, anti-counterfeit, e.govt, and banking solutions.
+Food industry[edit]
+Data matrix codes are used in the food industry in autocoding systems to prevent food products being packaged and dated incorrectly. Codes are maintained internally on a food manufacturers database and associated with each unique product, e.g. ingredient variations. For each product run the unique code is supplied to the printer. Label artwork is required to allow the 2D data matrix to be positioned for optimal scanning. For black on white codes testing isn't required unless print quality is an issue, but all colour variations need to be tested before production to ensure they are readable.[2]
+Art[edit]
+In May 2006 a German computer programmer, Bernd Hopfengärtner, created a large data matrix in a wheat field (in a fashion similar to crop circles). The message read "Hello, World!".[3] In June 2011 the Parisian tattoo artist K.A.R.L., as part of a promotion for Ballantine's scotch whisky,[4] created the world's first animated tattoo utilizing a Data Matrix code in a collaborative process streamed live on Facebook.[5][6]
+Technical specifications[edit]
+
+
+
+
+Data Matrix code for 'Wikipedia', coloured to show data (green), padding (yellow), error correction (red), finder and timing (magenta) and unused (orange).
+
+
+Data Matrix symbols are made up of modules arranged within a perimeter finder and timing pattern. It can encode up to 3,116 characters from the entire ASCII character set (with extensions). The symbol consists of data regions which contain modules set out in a regular array. Large symbols contain several regions. Each data region is delimited by a finder pattern, and this is surrounded on all four sides by a quiet zone border (margin). (Note: The modules may be round or square- no specific shape is defined in the standard. For example, dot-peened cells are generally round.)
+Data Matrix ECC 200[edit]
+ECC 200 is the newest version of Data Matrix and uses Reed-Solomon codes for error and erasure recovery. ECC 200 allows the routine reconstruction of the entire encoded data string when the symbol has sustained 30% damage, assuming the matrix can still be accurately located. Data Matrix has an error rate of less than 1 in 10 million characters scanned.[7]
+Symbols have an even number of rows and an even number of columns. Most of the symbols are square with sizes from 10×10 to 144×144. Some symbols however are rectangular with sizes from 8×18 to 16×48 (even values only). All symbols utilizing the ECC 200 error correction can be recognized by the upper right corner module being the same as the background color. (binary 0).
+Additional capabilities that differentiate ECC 200 symbols from the earlier standards include:
+
+Inverse reading symbols (light images on a dark background)
+Specification of the character set (via Extended Channel Interpretations)
+Rectangular symbols
+Structured append (linking of up to 16 symbols to encode larger amounts of data)
+
+Data Matrix ECC 000–140[edit]
+Older versions of Data Matrix include ECC 000, ECC 050, ECC 080, ECC 100, ECC 140. Instead of using Reed-Solomon codes like ECC 200, ECC 000–140 use a convolution based error correction. Each of these varies in the amount of error correction they offer, with ECC 000 offering none, and ECC 140 offering the greatest. For error detection at decode time, even in the case of ECC 000, each of these versions also encode a Cyclic Redundancy Check (CRC) on the bit pattern. As an added measure, the placement of each bit in the code is determined by bit-placement tables included in the specification. These older versions always have an odd number of modules, and can be made in sizes ranging from 9×9 to 49×49. All symbols utilizing the ECC 000 through 140 error correction can be recognized by the upper right corner module being the inverse of the background color. (binary 1).
+According to ISO/IEC 16022, "ECC 000–140 should only be used in closed applications where a single party controls both the production and reading of the symbols and is responsible for overall system performance."
+Standards[edit]
+Data Matrix was invented by International Data Matrix, Inc. (ID Matrix) which was merged into RVSI/Acuity CiMatrix, who were acquired by Siemens AG in October, 2005 and Microscan Systems in September 2008. Data Matrix is covered today by several ISO/IEC standards and is in the public domain for many applications, which means it can be used free of any licensing or royalties.
+
+ISO/IEC 16022:2006—Data Matrix bar code symbology specification
+ISO/IEC 15415—2-D Print Quality Standard
+ISO/IEC 15418:2009—Symbol Data Format Semantics (GS1 Application Identifiers and ASC MH10 Data Identifiers and maintenance)
+ISO/IEC 15424:2008—Data Carrier Identifiers (including Symbology Identifiers) [IDs for distinguishing different bar code types]
+ISO/IEC 15434:2006—Syntax for high-capacity ADC media (format of data transferred from scanner to software, etc.)
+ISO/IEC 15459—Unique Identifiers
+
+Encoding[edit]
+
+
+
+
+Industrial Data Matrix code readers
+
+
+The encoding process is described in documents published by ISO web site.[8] Open source software for encoding and decoding the ECC-200 variant of Data Matrix has been published[9][10]
+The diagrams below illustrate the placement of the message data within a Data Matrix symbol. The message is "Wikipedia", and it is arranged in a somewhat complicated diagonal pattern starting near the upper-left corner. Some characters are split in two pieces, such as the initial W, and the third 'i' is in "corner pattern 2" rather than the usual L-shaped arrangement. Also shown are the end-of-message code (marked End), the padding (P) and error correction (E) bytes, and four modules of unused space (X).
+
+
+
+
+
+
+There are multiple encoding modes used to store different kinds of messages. The default mode stores one ASCII character per 8-bit codeword. Control codes are provided to switch between modes, as shown below.
+
+
+Codeword
+Interpretation
+
+
+0
+Not used
+
+
+1 – 128
+ASCII data (ASCII value + 1)
+
+
+129
+End of message
+
+
+130 – 229
+Digit pairs 00 – 99
+
+
+230
+Begin C40 encoding
+
+
+231
+Begin Base 256 encoding
+
+
+232
+FNC1
+
+
+233
+Structured append. Allows a message to be split across multiple symbols.
+
+
+234
+Reader programming
+
+
+235
+Set high bit of the following character
+
+
+236
+05 Macro
+
+
+237
+06 Macro
+
+
+238
+Begin ANSI X12 encoding
+
+
+239
+Begin Text encoding
+
+
+240
+Begin EDIFACT encoding
+
+
+241
+Extended Channel Interpretation code
+
+
+242 – 255
+Not used
+
+
+Text modes[edit]
+The C40, Text and X12 modes are potentially more compact for storing text messages. They are similar to DEC Radix-50, using character codes in the range 0–39, and three of these codes are combined to make a number up to 40³=64000, which is packed into two bytes (maximum value 65536) as follows:
+
+V = C1*1600 + C2*40 + C3 + 1
+B1 = floor(V/256)
+B2 = V mod 256
+
+The resulting value of B1 is in the range 0–249. The special value 254 is used to return to ASCII encoding mode.
+Character code interpretations are shown in the table below. The C40 and Text modes have four separate sets. Set 0 is the default, and contains codes that temporarily select a different set for the next character. The only difference is that they reverse upper-and lower-case letters. C40 is primarily upper-case, with lower-case letters in Set 3. Text is the other way around. Set 1, containing ASCII control codes, and set 2, containing punctuation symbols are identical in C40 and Text mode.
+
+
+Code
+C40
+Text
+X12
+
+
+set 0
+set 1
+set 2
+set 3
+set 0
+set 3
+
+
+0
+set 1
+NUL
+&#160;!
+'
+set 1
+'
+CR
+
+
+1
+set 2
+SOH
+"
+a
+set 2
+A
+*
+
+
+2
+set 3
+STX
+#
+b
+set 3
+B
+&gt;
+
+
+3
+space
+ETX
+$
+c
+space
+C
+space
+
+
+4
+0
+EOT
+&#160;%
+d
+0
+D
+0
+
+
+5
+1
+ENQ
+&amp;
+e
+1
+E
+1
+
+
+6
+2
+ACK
+‘
+f
+2
+F
+2
+
+
+7
+3
+BEL
+(
+g
+3
+G
+3
+
+
+8
+4
+BS
+)
+h
+4
+H
+4
+
+
+9
+5
+HT
+*
+i
+5
+I
+5
+
+
+10
+6
+LF
++
+j
+6
+J
+6
+
+
+11
+7
+VT
+,
+k
+7
+K
+7
+
+
+12
+8
+FF
+-
+l
+8
+L
+8
+
+
+13
+9
+CR
+.
+m
+9
+M
+9
+
+
+14
+A
+SO
+/
+n
+a
+N
+A
+
+
+15
+B
+SI
+&#160;:
+o
+b
+O
+B
+
+
+16
+C
+DLE
+&#160;;
+p
+c
+P
+C
+
+
+17
+D
+DC1
+&lt;
+q
+d
+Q
+D
+
+
+18
+E
+DC2
+=
+r
+e
+R
+E
+
+
+19
+F
+DC3
+&gt;
+s
+f
+S
+F
+
+
+20
+G
+DC4
+&#160;?
+t
+g
+T
+G
+
+
+21
+H
+NAK
+@
+u
+h
+U
+H
+
+
+22
+I
+SYN
+[
+v
+i
+V
+I
+
+
+23
+J
+ETB
+\
+w
+j
+W
+J
+
+
+24
+K
+CAN
+]
+x
+k
+X
+K
+
+
+25
+L
+EM
+^
+y
+l
+Y
+L
+
+
+26
+M
+SUB
+_
+z
+m
+Z
+M
+
+
+27
+N
+ESC
+FNC1
+{
+n
+{
+N
+
+
+28
+O
+FS
+
+|
+o
+|
+O
+
+
+29
+P
+GS
+
+}
+p
+}
+P
+
+
+30
+Q
+RS
+hibit
+~
+q
+~
+Q
+
+
+31
+R
+US
+
+DEL
+r
+DEL
+R
+
+
+32
+S
+
+
+
+s
+
+S
+
+
+33
+T
+
+
+
+t
+
+T
+
+
+34
+U
+
+
+
+u
+
+U
+
+
+35
+V
+
+
+
+v
+
+V
+
+
+36
+W
+
+
+
+w
+
+W
+
+
+37
+X
+
+
+
+x
+
+X
+
+
+38
+Y
+
+
+
+y
+
+Y
+
+
+39
+Z
+
+
+
+z
+
+Z
+
+
+EDIFACT mode[edit]
+EDIFACT mode uses six bits per character, with four characters packed into three bytes. It can store digits, upper-case letters, and many punctuation marks, but has no support for lower-case letters.
+
+
+Code
+Meaning
+
+
+0 – 30
+ASCII codes 64 – 94
+
+
+31
+Return to ASCII mode
+
+
+32 – 63
+ASCII codes 32 – 63
+
+
+Base 256 mode[edit]
+Base 256 mode data starts with a length indicator, followed by a number of data bytes. A length of 1 to 249 is encoded as a single byte, and longer lengths are stored as two bytes.
+
+L1 = floor(length / 250) + 249, L2 = length mod 250
+
+It is desirable to avoid long strings of zeros in the coded message, because they become large blank areas in the Data Matrix symbol, which may cause a scanner to lose synchronization. (The default ASCII encoding does not use zero for this reason.) In order to make that less likely, the length and data bytes are obscured by adding a pseudorandom value R(n), where n is the position in the byte stream.
+
+R(n) = (149 × n) mod 255 + 1
+
+Patent issues[edit]
+Prior to the expiration of U.S. Patent 5,612,524, intellectual property company Acacia Technologies claimed that Data Matrix was partially covered by its contents. As the patent owner, Acacia allegedly contacted Data Matrix users demanding license fees related to the patent.
+Cognex Corporation, a large manufacturer of 2D barcode devices, filed a declaratory judgment complaint on March 13, 2006 after receiving information that Acacia had contacted its customers demanding licensing fees. On May 19, 2008 Judge Joan N. Ericksen of the U.S. District Court in Minnesota ruled in favor of Cognex. The ruling held that the '524 patent, which claimed to cover a system for capturing and reading 2D symbology codes, is both invalid and unenforceable due to inequitable conduct by the defendants during the procurement of the patent.
+Notably, since the '524 patent expired in November 2007, a ruling against Cognex wouldn't have affected current use of Data Matrix codes. However, it would have established that use of Data Matrix prior to November 2007 could potentially be covered by the '524 patent.
+A German Patent Application DE 4107020 was filed in 1991, and published in 1992. This patent is not cited in the above US patent applications and might invalidate them.
+See also[edit]
+
+PDF417
+Aztec Code
+High Capacity Color Barcode
+MaxiCode
+Nintendo e-Reader
+QR Code
+Semacode
+SPARQCode
+Trusted paper key
+
+References[edit]
+
+
+^ Stevenson, Rick (December 2005). "Laser Marking Matrix Codes on PCBs" (PDF). Printed Circuit Design and Manufacture. Retrieved 2007-05-31.&#160;
+^ Food Industry 2D Barcode Specification 7 June 2012
+^ German man programs "Hello World" into wheat field
+^ http://www.digitalbuzzblog.com/the-worlds-first-animated-tattoo/
+^ http://www.youtube.com/watch?v=f3qv2dSXQXk
+^ https://www.facebook.com/ballantines
+^ http://www.ohio.edu/industrialtech/aidc/activities/research.cfm
+^ ISO e-commerce page for this standard http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=44230
+^ https://code.google.com/p/zxing/
+^ http://www.libdmtx.org
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to DataMatrix.
+
+
+
+GS1 DataMatrix: An introduction and technical overview of the most advanced GS1 Application Identifiers compliant symbology
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Barcodes
+
+
+
+
+
+
+Linear barcodes
+
+
+
+Automatic Car Identification
+Code 11
+Code 39
+Code 93
+Code 128
+Codabar
+European Article Number
+GS1 DataBar
+ITF-14
+Interleaved 2 of 5
+MSI Barcode
+Patch Code
+Pharmacode
+Plessey
+Telepen
+UPC
+
+
+
+
+
+
+
+
+
+
+
+UPC-A
+MaxiCode
+
+
+
+
+
+
+
+
+
+Post office barcodes
+
+
+
+CPC Binary Barcode
+Facing Identification Mark
+PostBar
+POSTNET
+RM4SCC
+Intelligent Mail barcode
+PLANET
+
+
+
+
+
+
+
+
+2D barcodes (stacked)
+
+
+
+GS1 DataBar
+PDF417
+
+
+
+
+
+
+
+
+2D barcodes (matrix)
+
+
+
+Aztec Code
+Data Matrix
+EZcode
+MaxiCode
+QR code
+Semacode
+
+
+
+
+
+
+
+
+Polar coordinate barcodes
+
+
+
+MaxiCode
+ShotCode
+
+
+
+
+
+
+
+
+Other
+
+
+
+High Capacity Color Barcode (Microsoft Tag)
+
+
+
+
+
+
+
+
+Technological issues
+
+
+
+Barcode reader
+Barcode printer
+
+
+
+
+
+
+
+
+Other data tags
+
+
+
+RFID
+Bokode
+
+
+
+
+
+
+
+
+Related topics
+
+
+
+Supply Chain Management
+Object hyperlinking
+Matrix
+Mobile tagging
+CueCat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Data_Matrix&amp;oldid=672341242"					
+				Categories: BarcodesHidden categories: Use dmy dates from July 2015Articles needing additional references from February 2010All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from November 2012Articles with unsourced statements from October 2012Wikipedia articles needing clarification from October 2012Commons category with local link same as on Wikidata				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةAzərbaycancaDeutschEspañolفارسیFrançaisItalianoBahasa MelayuNederlandsNorsk bokmålPolskiРусскийTürkçe					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 20 July 2015, at 22:37.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

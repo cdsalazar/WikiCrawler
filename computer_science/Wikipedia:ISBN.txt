@@ -1,0 +1,424 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Wikipedia:ISBN
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				For reader help, see Help:ISBN.
+You may be looking for Wikipedia:It should be noted.
+
+
+
+
+This essay is a how-to guide detailing process on some aspect or aspects of Wikipedia's norms and practices. It is not one of Wikipedia's policies or guidelines; where something is inconsistent with this page, please defer to those.
+
+
+
+
+Shortcuts:
+WP:ISBN
+WP:ISBNs
+
+
+
+
+
+The MediaWiki software uses magic links to automatically create links for identifiers such as International Standard Book Numbers (ISBN) without requiring any markup. For example, ISBN 978-0-300-14424-6 is rendered as ISBN 978-0-300-14424-6, which links to Special:BookSources/9780300144246.
+
+
+
+Contents
+
+
+1 Linking
+
+1.1 Magic link
+1.2 Template parameter
+
+
+2 ISBN cleanup / maintenance templates
+3 Types
+4 ISBN links and search
+5 Uses and limitations of ISBNs
+6 SBNs: a precursor to ISBNs
+7 Missing or invalid ISBNs
+8 See also
+
+
+
+Linking[edit]
+Magic link[edit]
+An ISBN may be linked by simply typing "ISBN", a space, and the ISBN. When you save your edit, the magic link is created automatically by the server if the ISBN is properly formatted. Any characters other than a space between "ISBN" and the number will prevent the link from being created.
+
+
+Markup
+Renders as
+
+
+
+
+ISBN 0-14-020652-3 (valid ISBN preceded by correct "ISBN") 
+
+
+ISBN 0-14-020652-3
+
+
+
+
+
+ISBN: 0-14-020652-3 (valid ISBN preceded by incorrect "ISBN:") 
+
+
+ISBN: 0-14-020652-3
+
+
+
+
+
+ISBN 020652-3 (ISBN with wrong length) 
+
+
+ISBN 020652-3
+
+
+
+
+
+
+
+A properly formatted but invalid ISBN due to a wrong checksum digit still creates the magic link. When a reader clicks on the link, an error message appears.
+
+
+Markup
+Renders as
+
+
+
+
+ISBN 0-14-020652-4 (invalid ISBN preceded by correct "ISBN") 
+
+
+ISBN 0-14-020652-4
+
+
+
+
+
+
+
+Template parameter[edit]
+An ISBN can be included in templates such as the Citation Style 1 series by means of the |isbn= parameter.
+The linking is done internally to the template using a module or a subtemplate. The "ISBN" string links to the article "International Standard Book Number", and the ISBN number acts like a magic link.
+
+Fishman, Stephen (31 May 2006). The Public Domain: How to Find &amp; Use Copyright-free Writings, Music, Art &amp; More. Nolo. ISBN&#160;978-1413304541.&#160;
+
+ISBN cleanup / maintenance templates[edit]
+Missing ISBNs can be noted with {{Lacking ISBN}} for a whole article or section, or {{ISBN missing}} for a specific reference. Possible erroneous ISBNs can be noted using {{Please check ISBN}}.
+Types[edit]
+ISBNs come in two styles, containing 10 digits or 13 digits, and are known as "ISBN-10" and "ISBN-13" numbers. Please use the ISBN-13 if available. The ISBN-13 is often found near the barcode and will start with either 978- or 979-.
+ISBN-10 and ISBN-13 use different check digit algorithms to compute the last digit of the ISBN. The following tools will convert any ISBN-10 to an ISBN-13 along with the correct check digit value.
+
+ISBN converter of the U.S. Library of Congress
+ISBN converter of ISBN.org
+
+Stylistically, please:
+
+Use 13-digit ISBNs, if available, as these are now standard as of January 1, 2007, and issued to new books.
+Use hyphens if they are included, as they divide the number into meaningful parts; the placement of hyphens varies between books.
+
+
+
+
+ISBN reports
+Formats for 13-digit ISBN:
+
+ISBN 9781234567897
+ISBN 978-1-234-56789-7
+
+Incorrect:
+
+[[ISBN]] 9781234567897
+ISBN 978 1 234 56789 7
+ISBN-13: 9781234567897
+ISBN: 9781234567897
+
+Correctly formatted ISBN generate links: ISBN 9781234567897
+
+
+The MediaWiki software only recognizes "ISBN" followed by a space, and then the number. Spaces and hyphens within the number are not a problem (including hyphens is preferred if their proper placement is known), but ISBN numbers starting with "ISBN-10:" and "ISBN-13:" are not automatically recognized by the MediaWiki software unless "-10:" and "-13:" are removed. The actual ISBN starts after the colon for "ISBN-10:" and "ISBN-13:" numbers. There is no need to add quotation marks or wikicode brackets of any kind.
+Here is an example of a book listing. Look on that page under "product details." There one can find these two ISBNs for that book:
+
+ISBN-10: 1413304540
+ISBN-13: 978-1413304541
+
+ISBN 1413304540 &#160; produces ISBN 1413304540
+ISBN 978-1413304541 &#160; produces ISBN 978-1413304541
+
+
+
+Using "Click to Look Inside!" (a feature of the listing available above the cover picture) reveals that the proper hyphen placement is:
+
+ISBN-10: 1-4133-0454-0
+
+ISBN 1-4133-0454-0 &#160; produces ISBN 1-4133-0454-0
+ISBN 978-1-4133-0454-1 &#160; produces ISBN 978-1-4133-0454-1
+
+
+
+In tables (or other applications) where the letters ISBN would be redundant the ISBNT template may be used instead.
+
+{{ISBNT|1-4133-0454-0}} &#160; produces 1-4133-0454-0
+{{ISBNT|978-1-4133-0454-1}} &#160; produces 978-1-4133-0454-1
+
+ISBN links and search[edit]
+In addition to identifying (a particular edition of) a book, ISBNs allow one to search for the book, both at libraries and bookstores.
+You can enter an ISBN number on this Wikipedia ISBN search page. Spaces and hyphens in the ISBN do not matter.
+ISBN links, or the ISBN search, take users to a special book source page, Wikipedia:Book sources. The page contains links to library catalogs and bookstores where one may search for the book corresponding to the ISBN. Note that you can also link directly to the [[Special:BookSources/...]] page — this may occasionally be useful when appearance is an issue. For example; one of the above ISBNs could be searched with this wikilink: Special:BookSources/9781413304541
+Uses and limitations of ISBNs[edit]
+ISBNs only identify a particular edition of a book, and a reader with only an ISBN will not see the full range of versions of the book.
+Please do not use ISBNs alone to identify books: add a proper citation as well as the ISBN. Also note that ISBNs are not required of citations; popular citation styles like Chicago, MLA, and APA do not use ISBNs. See Wikipedia:Manual of Style, Wikipedia:Cite your sources.
+To suggest additions to the page, see Wikipedia talk:Book sources.
+Note that books before about 1970 usually do not have an ISBN (although if published in the UK during the 1960s, they may have an SBN). One place to get the numbers is the Library of Congress catalog, although this will tend to give an American ISBN over, say, an Indian (see one of the National Depository Centres) or Australian (see National Library Australia) ISBN. For a Canadian number, you can use the Canadian ISBN Service System – CISS. If you are adding an ISBN, remember to add only the ISBN for the edition actually cited in the article; a different edition may have different pagination which does not correspond with the citations in the article, and in some cases may even have significantly different content.
+Also, note that a registered ISBN, even one which appears with a corresponding book page on a major book distributor database such as Amazon.com, is not definite proof that such a book exists. The ISBN is assigned before the book is actually produced, so the publisher can advertise it — but not all such plans come to fruition, any more than in other enterprises. In addition, ISBN and Amazon.com registration seems to have been abused in attempted hoaxes on Wikipedia in the past. National library catalog systems are worth checking: if a book is published in the UK, it has to be sent to the British Library, and if the British Library includes physical dimensions of a book in their catalog system, there's a fair chance it actually exists!
+Books are, of course, an excellent source of their own ISBNs; however, a tiny proportion are printed wrongly.
+SBNs: a precursor to ISBNs[edit]
+In the United Kingdom, before ISBNs were created, there was the Standard Book Number (SBN). To turn an SBN into an ISBN, simply add a preceding zero. So SBN 670459046 becomes ISBN 0670459046.
+Missing or invalid ISBNs[edit]
+Articles that do not have any ISBNs can be tagged using {{Lacking ISBN}}. Entries that are missing the ISBN can be tagged with {{ISBN missing}}.
+Entries with invalid ISBNs can be tagged with {{Please check ISBN}} or {{Listed Invalid ISBN}}.
+See also[edit]
+
+m:Help:ISBN links
+mw:Markup spec/BNF/Magic links - markup specification for ISBN, PMID and RFC
+Wikipedia:List of ISBN ranges
+Wikipedia:List of pages with Invalid ISBNs
+Category:Catalog lookup templates
+Category:International Standard Book Number
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Citation metadata in Wikipedia
+
+
+
+
+
+
+Identifiers
+
+
+
+COinS
+Digital object identifier
+ISBN
+ISSN
+ORCID
+PubMed
+
+
+
+
+
+
+
+
+Meta pages
+
+
+
+Wikipedia:Citing sources
+Wikipedia:COinS
+Wikipedia:Digital Object Identifier
+Wikipedia:ISBN
+Wikipedia:ISSN
+Wikipedia:ORCID
+Wikipedia:PMID
+
+
+
+
+
+
+
+
+Bots
+
+
+
+Citation bot
+
+
+
+
+
+
+
+
+Templates
+
+
+
+Authority control
+Bibcode
+doi
+
+doi-inline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Wikipedia:ISBN&amp;oldid=690849558"					
+				Categories: Wikipedia how-toWikipedia resources for researchers				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Project page
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata item					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةDanskDeutsch한국어IlokanoBahasa IndonesiaItalianoMagyarBahasa Melayu日本語PolskiRomânăSimple English中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 16 November 2015, at 02:00.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

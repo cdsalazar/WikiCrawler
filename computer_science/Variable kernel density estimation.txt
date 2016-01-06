@@ -1,0 +1,228 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Variable kernel density estimation
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				In statistics, adaptive or "variable-bandwidth" kernel density estimation is a form of kernel density estimation in which the size of the kernels used in the estimate are varied depending upon either the location of the samples or the location of the test point. It is a particularly effective technique when the sample space is multi-dimensional. [1]
+
+
+
+Contents
+
+
+1 Rationale
+2 Balloon estimators
+3 Use for statistical classification
+4 External links
+5 References
+
+
+
+Rationale[edit]
+Given a set of samples, , we wish to estimate the density, , at a test point, :
+
+
+
+
+
+
+
+
+
+where n is the number of samples, K is the "kernel", h is its width and D is the number of dimensions in . The kernel can be thought of as a simple, linear filter.
+Using a fixed filter width may mean that in regions of low density, all samples will fall in the tails of the filter with very low weighting, while regions of high density will find an excessive number of samples in the central region with weighting close to unity. To fix this problem, we vary the width of the kernel in different regions of the sample space. There are two methods of doing this: balloon and pointwise estimation. In a balloon estimator, the kernel width is varied depending on the location of the test point. In a pointwise estimator, the kernel width is varied depending on the location of the sample.[1]
+For multivariate estimators, the parameter, h, can be generalized to vary not just the size, but also the shape of the kernel. This more complicated approach will not be covered here.
+Balloon estimators[edit]
+A common method of varying the kernel width is to make it inversely proportional to the density at the test point:
+
+
+
+where k is a constant. If we back-substitute the estimated PDF, and assuming a Gaussian kernel function, we can show that W is a constant:[2]
+
+
+
+A similar derivation holds for any kernel whose normalising function is of the order hD, although with a different constant factor in place of the (2 π)D/2 term. This produces a generalization of the k-nearest neighbour algorithm. That is, a uniform kernel function will return the KNN technique.[2]
+There are two components to the error: a variance term and a bias term. The variance term is given as:[1]
+
+.
+
+The bias term is found by evaluating the approximated function in the limit as the kernel width becomes much larger than the sample spacing. By using a Taylor expansion for the real function, the bias term drops out:
+
+
+
+An optimal kernel width that minimizes the error of each estimate can thus be derived.
+Use for statistical classification[edit]
+The method is particularly effective when applied to statistical classification. There are two ways we can proceed: the first is to compute the PDFs of each class separately, using different bandwidth parameters, and then compare them as in Taylor.[3] Alternatively, we can divide up the sum based on the class of each sample:
+
+
+
+where ci is the class of the ith sample. The class of the test point may be estimated through maximum likelihood.
+Many kernels, Gaussian for instance, are smooth. Consequently, estimates of joint or conditional probabilities are both continuous and differentiable. This makes it easy to search for a border between two classes by zeroing the difference between the conditional probabilities:
+
+
+
+For example, we can use a one-dimensional root-finding algorithm to zero R along a line between two samples that straddle the class border. The border can be thus sampled as many times as necessary. The border samples along with estimates of the gradients of R determine the class of a test point through a dot-product:
+
+
+
+
+
+
+
+
+
+where  sample the class border and c is the estimated class. The value of R, which determines the conditional probabilities, may be extrapolated to the test point:
+
+
+
+[2]
+Two-class classifications are easy to generalize to multiple classes.
+External links[edit]
+
+libAGF - A library for multivariate, adaptive kernel density estimation.
+
+References[edit]
+
+^ a b c D. G. Terrell; D. W. Scott (1992). "Variable kernel density estimation". Annals of Statistics 20: 1236–1265. doi:10.1214/aos/1176348768.&#160;
+^ a b c Mills, Peter (2011). "Efficient statistical classification of satellite measurements" (PDF). International Journal of Remote Sensing 32 (21). doi:10.1080/01431161.2010.507795.&#160;
+^ Taylor, Charles (1997). "Classification and kernel density estimation". Vistas in Astronomy 41 (3): 411–417. doi:10.1016/s0083-6656(97)00046-9.&#160;
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Variable_kernel_density_estimation&amp;oldid=688870533"					
+				Categories: Classification algorithmsStatistical classificationEstimation of densitiesNonparametric statistics				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+											
+				Add links			
+		
+				
+		
+		
+							
+											 This page was last modified on 3 November 2015, at 15:28.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

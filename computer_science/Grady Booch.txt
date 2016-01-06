@@ -1,0 +1,787 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Grady Booch
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+Grady Booch
+
+
+
+Grady Booch in 2011
+
+
+
+Born
+(1955-02-27) February 27, 1955 (age&#160;60)
+
+
+Institutions
+
+
+
+IBM
+Rational Software
+
+
+
+
+
+Alma mater
+University of California, Santa Barbara (MS)
+
+
+Known&#160;for
+
+
+
+Booch method
+Unified Modeling Language
+
+
+
+
+
+Notable awards
+
+
+
+IBM Fellow (2003)
+Turing Lecture (2007)
+
+
+
+
+
+Website
+www.ibm.com/developerworks/mydeveloperworks/blogs/gradybooch
+
+
+Grady Booch (born February 27, 1955) is an American software engineer, best known for developing the Unified Modeling Language with Ivar Jacobson and James Rumbaugh. He is recognized internationally for his innovative work in software architecture, software engineering, and collaborative development environments.[1][2][3][4][5][6][7]
+
+
+
+Contents
+
+
+1 Education
+2 Career and research
+
+2.1 IBM 1130
+2.2 Booch method
+2.3 Design patterns
+2.4 IBM Research - Almaden
+2.5 Publications
+
+
+3 Awards and honors
+4 References
+
+
+
+Education[edit]
+Booch earned his bachelor's degree in 1977 from the United States Air Force Academy and a master's degree in electrical engineering in 1979 from the University of California, Santa Barbara.[8]
+Career and research[edit]
+Booch served as Chief Scientist of Rational Software Corporation since its founding in 1981 and through its acquisition by IBM in 2003, where he kept working until March, 2008. Afterwards he became Chief Scientist, Software Engineering in IBM Research, and series editor for Benjamin Cummings.
+Booch has devoted his life's work to improving the art and the science of software development. In the 1980s, Booch wrote one of the more popular books on programming in Ada. Grady Booch is best known for developing the Unified Modeling Language with Ivar Jacobson and James Rumbaugh in the 1990s.
+IBM 1130[edit]
+Booch got his first exposure to programming on an IBM 1130.[9]
+
+... I pounded the doors at the local IBM sales office until a salesman took pity on me. After we chatted for a while, he handed me a Fortran [manual]. I'm sure he gave it to me thinking, "I'll never hear from this kid again." I returned the following week saying, "This is really cool. I've read the whole thing and have written a small program. Where can I find a computer?" The fellow, to my delight, found me programming time on an IBM 1130 on weekends and late-evening hours. That was my first programming experience, and I must thank that anonymous IBM salesman for launching my career. Thank you, IBM.
+
+Booch method[edit]
+
+
+
+
+Class diagram
+
+
+Booch developed the Booch method of software development, which he presents in his 1991/94 book, Object Oriented Analysis and Design. He advises adding more classes to simplify complex code. The Booch method is a technique used in software engineering. It is an object modeling language and methodology that was widely used in object-oriented analysis and design. It was developed by Booch while at Rational Software.
+The notation aspect of the Booch method has now been superseded by the Unified Modeling Language (UML), which features graphical elements from the Booch method along with elements from the object-modeling technique (OMT) and object-oriented software engineering (OOSE).
+Methodological aspects of the Booch method have been incorporated into several methodologies and processes, the primary such methodology being the Rational Unified Process (RUP).
+Design patterns[edit]
+Booch is also an advocate of design patterns. For instance, he wrote the foreword to Design Patterns, an early and highly influential book in the field.
+IBM Research - Almaden[edit]
+He now is part of IBM Research - Almaden, serving as Chief Scientist for Software Engineering, where he continues his work on the Handbook of Software Architecture and also leads several projects in software engineering that are beyond the constraints of immediate product horizons. Grady continues to engage with customers working on real problems and maintains deep relationships with academia and other research organizations around the world. Grady is one of the original authors of the Unified Modeling Language (UML) and was also one of the original developers of several of Rational's products. Grady has served as architect and architectural mentor for numerous complex software-intensive systems around the world in just about every domain imaginable.
+Publications[edit]
+Grady Booch published several articles and books. A selection:
+
+
+Software Engineering with Ada.[10]
+Object Solutions: Managing the Object-Oriented Project. [11]
+The Unified Software Development Process. With Ivar Jacobson and James Rumbaugh. [12]
+The Complete UML Training Course. With James Rumbaugh and Ivar Jacobson. [13]
+The Unified Modeling Language Reference Manual, Second Edition. With James Rumbaugh and Ivar Jacobson. [14]
+The Unified Modeling Language User Guide, Second Edition. With James Rumbaugh and Ivar Jacobson. [15]
+Object-Oriented Analysis and Design with Applications. [16]
+
+
+Awards and honors[edit]
+In 1995 he was inducted as a Fellow of the Association for Computing Machinery.[17] He was named an IBM Fellow in 2003, soon after his entry into IBM, and assumed his current role on March 18, 2008. He was recognized as an IEEE Fellow in 2010.[18] In 2012, the British Computer Society announced Booch would receive the Lovelace Medal and give the 2013 Lovelace Lecture.[19] He gave the Turing Lecture in 2007.
+References[edit]
+
+
+^ "A podcast interview with Grady Booch on Software Engineering Radio".&#160;
+^ ""The Promise, The Limits, The Beauty of Software" talk at Yahoo!".&#160;
+^ "There is joy in software. Podcast".&#160;
+^ "Grady Booch On Architecture podcast series".&#160;
+^ "Zen and the Art of Architecture: the Innovation Interview with Grady Booch Part 1".&#160;
+^ "Zen and the Art of Architecture: the Innovation Interview with Grady Booch Part 2".&#160;
+^ "Zen and the Art of Architecture: the Innovation Interview with Grady Booch Part 3".&#160;
+^ Swaine, Michael (2007-03-09). "Dr. Dobb's Excellence in Programming Award". Dr. Dobb's Journal.&#160;
+^ Booch, Grady (2003-04-03). "Quote from interview: Grady Booch polishes his crystal ball". IBM accessdate=2007-01-16.&#160;
+^ Benjamin/Cummings (1983) ISBN 0-8053-0604-8.
+^ Pearson Education (1995) ISBN 0-8053-0594-7.
+^ Prentice Hall (1999) ISBN 978-0-201-57169-1.
+^ Prentice Hall (2000) ISBN 0-13-087014-5.
+^ Addison-Wesley (2004) ISBN 978-0-321-24562-5.
+^ Addison-Wesley (2005) ISBN 978-0-321-26797-9.
+^ Addison-Wesley (2007) ISBN 0-201-89551-X.
+^ "ACM: Fellows Award / Grady Booch". Fellows.acm.org. Retrieved 2013-03-19.&#160;
+^ "Fellow Class of 2010". IEEE. Retrieved 2013-03-19.&#160;
+^ "Grady Booch presented with BCS Lovelace Medal". BCS. 29 May 2012. Retrieved 11 December 2013.&#160;
+
+
+
+
+
+Wikimedia Commons has media related to Grady Booch.
+
+
+
+
+
+Wikiquote has quotations related to: Grady Booch
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software engineering
+
+
+
+
+
+
+Fields
+
+
+
+Computer programming
+Requirements engineering
+Software deployment
+Software design
+Software maintenance
+Software testing
+Systems analysis
+Formal methods
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Data modeling
+Enterprise architecture
+Functional specification
+Modeling language
+Orthogonality
+Programming paradigm
+Software
+Software archaeology
+Software architecture
+Software configuration management
+Software development methodology
+Software development process
+Software quality
+Software quality assurance
+Software verification and validation
+Structured analysis
+
+
+
+
+
+
+
+
+Orientations
+
+
+
+Agile
+Aspect-oriented
+Object orientation
+Ontology
+Service orientation
+SDLC
+
+
+
+
+
+
+
+
+Models
+
+
+
+
+
+Developmental
+
+
+
+
+Agile
+EUP
+Executable UML
+Incremental model
+Iterative model
+Prototype model
+RAD
+UP
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+SPICE
+CMMI
+Data model
+ER model
+Function model
+Information model
+Metamodeling
+Object model
+Systems model
+View model
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+IDEF
+UML
+SysML
+
+
+
+
+
+
+
+
+
+
+
+
+Software
+engineers
+
+
+
+
+Kent Beck
+Grady Booch
+Fred Brooks
+Barry Boehm
+Ward Cunningham
+Tom DeMarco
+Edsger W. Dijkstra
+Martin Fowler
+C. A. R. Hoare
+Watts Humphrey
+Michael A. Jackson
+Ivar Jacobson
+Stephen J. Mellor
+Bertrand Meyer
+David Parnas
+Winston W. Royce
+James Rumbaugh
+Niklaus Wirth
+Edward Yourdon
+Victor Basili
+
+
+
+
+
+
+
+
+Related fields
+
+
+
+Computer science
+Computer engineering
+Project management
+Risk management
+Systems engineering
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Unified Modeling Language
+
+
+
+
+
+
+Actors
+
+
+
+Organizations
+
+Object Management Group
+UML Partners
+
+
+Persons
+
+Grady Booch
+Ivar Jacobson
+James Rumbaugh
+
+
+
+
+
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+
+Object oriented
+
+
+
+Object-oriented programming
+Object-oriented analysis and design
+Object-oriented modeling
+
+
+
+
+
+
+
+
+Structure
+
+
+
+Actor
+Attribute
+Artifact
+Class
+Component
+Interface
+Object
+Package
+Profile diagram
+
+
+
+
+
+
+
+
+Behavior
+
+
+
+Activity
+Event
+Message
+Method
+State
+Use case
+
+
+
+
+
+
+
+
+Relationships
+
+
+
+Aggregation
+Association
+Composition
+Dependency
+Generalization (or Inheritance)
+
+
+
+
+
+
+
+
+Extensibility
+
+
+
+Profile
+Stereotype
+
+
+
+
+
+
+
+
+Other
+
+
+
+Multiplicity
+
+
+
+
+
+
+
+
+
+
+
+Diagrams
+
+
+
+
+Structure
+
+
+
+Class
+Component
+Composite structure
+Deployment
+Object
+Package
+
+
+
+
+
+
+
+
+Behaviour
+
+
+
+Activity
+State Machine
+Use case
+
+
+
+
+
+
+
+
+Interaction
+
+
+
+Communications
+Sequence
+Interaction overview
+Timing
+
+
+
+
+
+
+
+
+
+
+
+Derived languages
+
+
+
+Systems Modeling Language (SysML)
+UML eXchange Format (UXF)
+XML Metadata Interchange (XMI)
+Executable UML (xUML)
+
+
+
+
+
+
+
+
+Other topics
+
+
+
+Glossary of UML terms
+Rational Unified Process
+Comparison of UML tools
+UML colors
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+WorldCat
+VIAF: 30231529
+LCCN: n82067109
+ISNI: 0000 0001 1755 0736
+GND: 133871452
+SUDOC: 029118808
+BNF: cb12081154j (data)
+NDL: 00512142
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Grady_Booch&amp;oldid=691160253"					
+				Categories: 1955 birthsAda (programming language)American computer scientistsFellows of the Association for Computing MachineryIBM employeesLiving peopleAmerican software engineersUnified Modeling LanguageUnited States Air Force Academy alumniUniversity of California, Santa Barbara alumniFellow Members of the IEEEIBM FellowsHidden categories: Commons category with page title same as on WikidataWikipedia articles with VIAF identifiersWikipedia articles with LCCN identifiersWikipedia articles with ISNI identifiersWikipedia articles with GND identifiersWikipedia articles with BNF identifiers				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						DeutschEspañolفارسیFrançais한국어ItalianoMalagasyNederlands日本語PolskiPortuguêsРусскийУкраїнська中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 18 November 2015, at 01:01.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

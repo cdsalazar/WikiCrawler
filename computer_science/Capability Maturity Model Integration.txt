@@ -1,0 +1,851 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Capability Maturity Model Integration
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+It has been suggested that this article be merged with Capability Maturity Model. (Discuss) Proposed since October 2015.
+
+
+Capability Maturity Model Integration (CMMI) is a process improvement training and appraisal program and service administered and marketed by Carnegie Mellon University (CMU) and required by many DoD and U.S. Government contracts, especially in software development. CMU claims CMMI can be used to guide process improvement across a project, division, or an entire organization. CMMI defines the following maturity levels for processes: Initial, Managed and Defined. Currently supported is CMMI Version 1.3. CMMI is registered in the U.S. Patent and Trademark Office by CMU.
+
+
+
+Contents
+
+
+1 CMMI Overview
+2 History
+3 CMMI topics
+
+3.1 CMMI representation
+3.2 CMMI model framework
+3.3 Maturity levels in CMMI for development
+3.4 Maturity levels in CMMI for services
+3.5 CMMI models
+3.6 Appraisal
+3.7 CMMI Security Guides
+
+
+4 Applications
+5 See also
+6 References
+7 Official sources
+8 External links
+
+
+
+CMMI Overview[edit]
+
+
+
+
+Characteristics of the Maturity levels.[1]
+
+
+CMMI currently addresses three areas of interest:
+
+Product and service development — CMMI for Development (CMMI-DEV),
+Service establishment, management, — CMMI for Services (CMMI-SVC), and
+Product and service acquisition — CMMI for Acquisition (CMMI-ACQ).
+
+CMMI was developed by a group of experts from industry, government, and the Software Engineering Institute (SEI) at CMU. CMMI models provide guidance for developing or improving processes that meet the business goals of an organization. A CMMI model may also be used as a framework for appraising the process maturity of the organization.[1] By January of 2013, the entire CMMI product suite was transferred from the SEI to the CMMI Institute, a newly created organization at Carnegie Mellon.[2]
+CMMI originated in software engineering but has been highly generalized over the years to embrace other areas of interest, such as the development of hardware products, the delivery of all kinds of services, and the acquisition of products and services. The word "software" does not appear in definitions of CMMI. This generalization of improvement concepts makes CMMI extremely abstract. It is not as specific to software engineering as its predecessor, the Software CMM (CMM, see below).
+History[edit]
+CMMI was developed by the CMMi project, which aimed to improve the usability of maturity models by integrating many different models into one framework. The project consisted of members of industry, government and the Carnegie Mellon Software Engineering Institute (SEI). The main sponsors included the Office of the Secretary of Defense (OSD) and the National Defense Industrial Association.
+CMMI is the successor of the capability maturity model (CMM) or Software CMM. The CMM was developed from 1987 until 1997. In 2002, CMMI Version 1.1 was released, Version 1.2 followed in August 2006, and CMMI Version 1.3 in November 2010. Some of the major changes in CMMI V1.3 [3] are the support of Agile Software Development,[4] improvements to high maturity practices [5] and alignment of the representation (staged and continuous).[6]
+According to the Software Engineering Institute (SEI, 2008), CMMI helps "integrate traditionally separate organizational functions, set process improvement goals and priorities, provide guidance for quality processes, and provide a point of reference for appraising current processes."[7]
+CMMI topics[edit]
+CMMI representation[edit]
+CMMI exists in two representations: continuous and staged.[1] The continuous representation is designed to allow the user to focus on the specific processes that are considered important for the organization's immediate business objectives, or those to which the organization assigns a high degree of risks. The staged representation is designed to provide a standard sequence of improvements, and can serve as a basis for comparing the maturity of different projects and organizations. The staged representation also provides for an easy migration from the SW-CMM to CMMI.[1]
+CMMI model framework[edit]
+For more details on this topic, see Process area (CMMI).
+Depending on the CMMI areas of interest (acquisition, services, development) used, the process areas it contains will vary.[8] Process areas are the areas that will be covered by the organization's processes. The table below lists the collection of seventeen CMMI core process areas that are present for all CMMI areas of interest in CMMI Version 1.3.
+
+Capability Maturity Model Integration (CMMI) Core Process Areas
+
+Abbreviation
+Name
+Area
+Maturity Level
+
+
+CAR
+Causal Analysis and Resolution
+Support
+5
+
+
+CM
+Configuration Management
+Support
+2
+
+
+DAR
+Decision Analysis and Resolution
+Support
+3
+
+
+IPM
+Integrated Project Management
+Project Management
+3
+
+
+MA
+Measurement and Analysis
+Support
+2
+
+
+OPD
+Organizational Process Definition
+Process Management
+3
+
+
+OPF
+Organizational Process Focus
+Process Management
+3
+
+
+OPM
+Organizational Performance Management
+Process Management
+5
+
+
+OPP
+Organizational Process Performance
+Process Management
+4
+
+
+OT
+Organizational Training
+Process Management
+3
+
+
+PMC
+Project Monitoring and Control
+Project Management
+2
+
+
+PP
+Project Planning
+Project Management
+2
+
+
+PPQA
+Process and Product Quality Assurance
+Support
+2
+
+
+QPM
+Quantitative Project Management
+Project Management
+4
+
+
+REQM
+Requirements Management
+Project Management
+2
+
+
+RSKM
+Risk Management
+Project Management
+3
+
+
+SAM
+Supplier Agreement Management
+Support
+2
+
+
+Maturity levels in CMMI for development[edit]
+There are five maturity levels. Maturity level ratings are awarded for levels 2 through 5. The process areas below and their maturity levels are listed for the CMMI for Development model:
+Maturity Level 2 - Managed
+
+CM - Configuration Management
+MA - Measurement and Analysis
+PMC - Project Monitoring and Control
+PP - Project Planning
+PPQA - Process and Product Quality Assurance
+REQM - Requirements Management
+SAM - Supplier Agreement Management
+
+Maturity Level 3 - Defined
+
+DAR - Decision Analysis and Resolution
+IPM - Integrated Project Management
+OPD - Organizational Process Definition
+OPF - Organizational Process Focus
+OT - Organizational Training
+PI - Product Integration
+RD - Requirements Development
+RSKM - Risk Management
+TS - Technical Solution
+VAL - Validation
+VER - Verification
+
+Maturity Level 4 - Quantitatively Managed
+
+OPP - Organizational Process Performance
+QPM - Quantitative Project Management
+
+Maturity Level 5 - Optimizing
+
+CAR - Causal Analysis and Resolution
+OPM - Organizational Performance Management
+
+Maturity levels in CMMI for services[edit]
+The process areas below and their maturity levels are listed for the CMMI for Services model:
+Maturity Level 2 - Managed
+
+CM - Configuration Management
+MA - Measurement and Analysis
+PPQA - Process and Product Quality Assurance
+REQM - Requirements Management
+SAM - Supplier Agreement Management
+SD - Service Delivery
+WMC - Work Monitoring and Control
+WP - Work Planning
+
+Maturity Level 3 - Defined
+
+CAM - Capacity and Availability Management
+DAR - Decision Analysis and Resolution
+IRP - Incident Resolution and Prevention
+IWM - Integrated Work Managements
+OPD - Organizational Process Definition
+OPF - Organizational Process Focus
+OT - Organizational Training
+RSKM - Risk Management
+SCON - Service Continuity
+SSD - Service System Development
+SST - Service System Transition
+STSM - Strategic Service Management
+
+Maturity Level 4 - Quantitatively Managed
+
+OPP - Organizational Process Performance
+QWM - Quantitative Work Management
+
+Maturity Level 5 - Optimizing
+
+CAR - Causal Analysis and Resolution
+OPM - Organizational Performance Management
+
+CMMI models[edit]
+CMMI best practices are published in documents called models, each of which addresses a different area of interest. The current release, CMMI Version 1.3, provides models for three areas of interest: development, acquisition, and services.
+
+CMMI for Development (CMMI-DEV), v1.3 was released in November 2010. It addresses product and service development processes.
+CMMI for Acquisition (CMMI-ACQ), v1.3 was released in November 2010. It addresses supply chain management, acquisition, and outsourcing processes in government and industry.
+CMMI for Services (CMMI-SVC), v1.3 was released in November 2010. It addresses guidance for delivering services within an organization and to external customers.
+
+Appraisal[edit]
+An organization cannot be certified in CMMI; instead, an organization is appraised. Depending on the type of appraisal, the organization can be awarded a maturity level rating (1-5) or a capability level achievement profile.
+Many organizations find value in measuring their progress by conducting an appraisal. Appraisals are typically conducted for one or more of the following reasons:
+
+To determine how well the organization’s processes compare to CMMI best practices, and to identify areas where improvement can be made
+To inform external customers and suppliers of how well the organization’s processes compare to CMMI best practices
+To meet the contractual requirements of one or more customers
+
+Appraisals of organizations using a CMMI model[9] must conform to the requirements defined in the Appraisal Requirements for CMMI (ARC) document. There are three classes of appraisals, A, B and C, which focus on identifying improvement opportunities and comparing the organization’s processes to CMMI best practices. Of these, class A appraisal is the most formal and is the only one that can result in a level rating. Appraisal teams use a CMMI model and ARC-conformant appraisal method to guide their evaluation of the organization and their reporting of conclusions. The appraisal results can then be used (e.g., by a process group) to plan improvements for the organization.
+The Standard CMMI Appraisal Method for Process Improvement (SCAMPI) is an appraisal method that meets all of the ARC requirements.[10] Results of a SCAMPI appraisal may be published (if the appraised organization approves) on the CMMI Web site of the SEI: Published SCAMPI Appraisal Results. SCAMPI also supports the conduct of ISO/IEC 15504, also known as SPICE (Software Process Improvement and Capability Determination), assessments etc.
+This approach promotes that members of the EPG and PATs be trained in the CMMI, that an informal (SCAMPI C) appraisal be performed, and that process areas be prioritized for improvement. More modern approaches, that involve the deployment of commercially available, CMMI-compliant processes, can significantly reduce the time to achieve compliance. SEI has maintained statistics on the "time to move up" for organizations adopting the earlier Software CMM as well as CMMI.[11] These statistics indicate that, since 1987, the median times to move from Level 1 to Level 2 is 23 months, and from Level 2 to Level 3 is an additional 20 months. Since the release of the CMMI, the median times to move from Level 1 to Level 2 is 5 months, with median movement to Level 3 another 21 months. These statistics are updated and published every six months in a maturity profile.[citation needed]
+The Software Engineering Institute’s (SEI) Team Software Process methodology and the use of CMMI models can be used to raise the maturity level. A new product called Accelerated Improvement Method[12] (AIM) combines the use of CMMI and the TSP.[13]
+CMMI Security Guides[edit]
+To address user security concerns, two unofficial security guides are available. Considering the Case for Security Content in CMMI for Services has one process area, Security Management.[14] Security by Design with CMMI for Development, Version 1.3 has the following process areas:
+
+OPSD - Organizational Preparedness for Secure Development
+SMP - Secure Management in Projects
+SRTS - Security Requirements and Technical Solution
+SVV - Security Verification and Validation
+
+While they do not affect maturity or capability levels, these process areas can be reported in appraisal results.[15]
+Applications[edit]
+The SEI published that 60 organizations measured increases of performance in the categories of cost, schedule, productivity, quality and customer satisfaction.[16] The median increase in performance varied between 14% (customer satisfaction) and 62% (productivity). However, the CMMI model mostly deals with what processes should be implemented, and not so much with how they can be implemented. These results do not guarantee that applying CMMI will increase performance in every organization. A small company with few resources may be less likely to benefit from CMMI; this view is supported by the process maturity profile (page 10). Of the small organizations (&lt;25 employees), 70.5% are assessed at level 2: Managed, while 52.8% of the organizations with 1001–2000 employees are rated at the highest level (5: Optimizing).
+Interestingly, Turner &amp; Jain (2002) argue that although it is obvious there are large differences between CMMI and agile methods, both approaches have much in common. They believe neither way is the 'right' way to develop software, but that there are phases in a project where one of the two is better suited. They suggest one should combine the different fragments of the methods into a new hybrid method. Sutherland et al. (2007) assert that a combination of Scrum and CMMI brings more adaptability and predictability than either one alone. David J. Anderson (2005) gives hints on how to interpret CMMI in an agile manner.
+CMMI Roadmaps,[17] which are a goal-driven approach to selecting and deploying relevant process areas from the CMMI-DEV model, can provide guidance and focus for effective CMMI adoption. There are several CMMI roadmaps for the continuous representation, each with a specific set of improvement goals. Examples are the CMMI Project Roadmap,[18] CMMI Product and Product Integration Roadmaps [19] and the CMMI Process and Measurements Roadmaps.[20] These roadmaps combine the strengths of both the staged and the continuous representations.
+The combination of the project management technique earned value management (EVM) with CMMI has been described (Solomon, 2002). To conclude with a similar use of CMMI, Extreme Programming (XP), a software engineering method, has been evaluated with CMM/CMMI (Nawrocki et al., 2002). For example, the XP requirements management approach, which relies on oral communication, was evaluated as not compliant with CMMI.
+CMMI can be appraised using two different approaches: staged and continuous. The staged approach yields appraisal results as one of five maturity levels. The continuous approach yields one of four capability levels. The differences in these approaches are felt only in the appraisal; the best practices are equivalent and result in equivalent process improvement results.
+See also[edit]
+
+CMMI Version 1.3
+Software Engineering Process Group
+Capability Immaturity Model
+Capability Maturity Model
+Enterprise Architecture Assessment Framework
+People Capability Maturity Model
+Process area (CMMI)
+
+References[edit]
+
+
+^ a b c d Sally Godfrey (2008) What is CMMI&#160;?. NASA presentation. Accessed 8 dec 2008.
+^ [1]
+^ Major changes in CMMI Version 1.3
+^ CMMI V1.3: Agile
+^ CMMI V1.3, High Maturity Practices Clarified
+^ Deploying the CMMI V1.3
+^ CMMI Overview. Software Engineering Institute. Accessed 16 February 2011.
+^ Overview of the CMMI Version 1.3 Process Areas
+^ For the latest published CMMI appraisal results see the SEI Web site.
+^ "Standard CMMI Appraisal Method for Process Improvement (SCAMPISM) A, Version 1.2: Method Definition Document". CMU/SEI-2006-HB-002. Software Engineering Institute. 2006. Retrieved 23 September 2006.&#160;
+^ "Process Maturity Profile". Retrieved 2011-02-16.&#160;
+^ http://www.sei.cmu.edu/process/high-performance.cfm
+^ http://www.sei.cmu.edu/tsp/
+^ Eileer Forrester and Kieran Doyle. Considering the Case for Security Content in CMMI for Services (October 2010)
+^ Siemens AG Corporate Technology. Security by Design with CMMI for Development, Version 1.3, (May 2013)
+^ "CMMI Performance Results of CMMI". Retrieved 2006-09-23.&#160;
+^ CMMI Roadmaps
+^ CMMI Project Roadmap
+^ CMMI Product and Product Integration Roadmaps
+^ CMMI Process and Measurements Roadmaps
+
+
+CMMI Level process
+Official sources[edit]
+
+SEI reports
+
+
+"CMMI for Development, Version 1.3" (PDF). CMMI-DEV (Version 1.3, November 2010). Carnegie Mellon University Software Engineering Institute. 2010. Retrieved 16 February 2011.&#160;
+"CMMI for Acquisition, Version 1.3" (PDF). CMMI-ACQ (Version 1.3, November 2010). Carnegie Mellon University Software Engineering Institute. 2010. Retrieved 16 February 2011.&#160;
+"CMMI for Services, Version 1.3" (PDF). CMMI-SVC (Version 1.3, November 2010). Carnegie Mellon University Software Engineering Institute. 2010. Retrieved 16 February 2011.&#160;
+"Process Maturity Profile (Current and Past Releases)" (PDF). CMMI for Development SCAMPI Class A Appraisal Results. Software Engineering Institute. Retrieved 16 February 2011.&#160;
+"Appraisal Requirements for CMMI, Version 1.2 (ARC, V1.2)" (PDF). Carnegie Mellon University Software Engineering Institute. 2006. Retrieved 16 February 2011.&#160;
+"Standard CMMI Appraisal Method for Process Improvement (SCAMPI) A Versiions 1.2: Method Definition Document" (doc). Carnegie Mellon University Software Engineering Institute. 2006. Retrieved 22 August 2006.&#160;
+CMMI Guidebook Acquirer Team (2007). "Understanding and Leveraging a Supplier's CMMI Efforts: A Guidebook for Acquirers" (PDF). CMU/SEI-2007-TR-004. Software Engineering Institute. Retrieved 23 August 2007.&#160;
+
+
+SEI Web pages
+
+
+"CMMI Version 1.3 Information Center". Software Engineering Institute. 2011. Retrieved 16 February 2011.&#160;
+"SEI Partner List". Software Engineering Institute. Retrieved 28 October 2006.&#160;
+"Optimiza formal announcement as CMMI-L3 and published on SEI website.". Software Engineering Institute. Retrieved 15 March 2011.&#160;
+SCAMPI Appraisal Results. The complete SEI list of published SCAMPI appraisal results.
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Capability Maturity Model Integration.
+
+
+
+CMMI Institute, official website
+Capability Maturity Model Integration at DMOZ
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Carnegie Mellon University
+
+
+
+
+
+
+Academics
+
+
+
+College of Engineering
+College of Fine Arts
+Dietrich College of Humanities and Social Sciences
+H. John Heinz III College
+Mellon College of Science
+School of Computer Science
+Tepper School of Business
+Margaret Morrison Carnegie College (defunct)
+
+
+
+
+
+
+
+
+
+
+
+Branch Campuses
+
+
+
+Australia
+Qatar
+Rwanda
+Silicon Valley
+
+
+
+
+
+
+
+
+Student life
+
+
+
+Traditions
+Greek Life
+Scotch'n'Soda
+Miller Gallery
+The Tartan
+WRCT
+University Athletic Association
+
+
+
+
+
+
+
+
+Research
+
+
+
+Pittsburgh Supercomputing Center
+Software Engineering Institute
+Robotics Institute
+Human Computer Interaction Institute
+Language Technologies Institute
+Pittsburgh Life Sciences Greenhouse
+Carnegie School
+
+
+
+
+
+
+
+
+People
+
+
+
+Andrew Carnegie
+Mellon family
+Alumni and faculty
+
+
+
+
+
+
+
+
+Projects and legacies
+
+
+
+Alice
+Andrew Project
+BLISS
+CMMI
+Mach
+3M computer
+Center for PostNatural History
+Conflict Kitchen
+Robot Hall of Fame
+Waffle Shop: A Reality Show
+YinzCam
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software engineering
+
+
+
+
+
+
+Fields
+
+
+
+Computer programming
+Requirements engineering
+Software deployment
+Software design
+Software maintenance
+Software testing
+Systems analysis
+Formal methods
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Data modeling
+Enterprise architecture
+Functional specification
+Modeling language
+Orthogonality
+Programming paradigm
+Software
+Software archaeology
+Software architecture
+Software configuration management
+Software development methodology
+Software development process
+Software quality
+Software quality assurance
+Software verification and validation
+Structured analysis
+
+
+
+
+
+
+
+
+Orientations
+
+
+
+Agile
+Aspect-oriented
+Object orientation
+Ontology
+Service orientation
+SDLC
+
+
+
+
+
+
+
+
+Models
+
+
+
+
+
+Developmental
+
+
+
+
+Agile
+EUP
+Executable UML
+Incremental model
+Iterative model
+Prototype model
+RAD
+UP
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+SPICE
+CMMI
+Data model
+ER model
+Function model
+Information model
+Metamodeling
+Object model
+Systems model
+View model
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+IDEF
+UML
+SysML
+
+
+
+
+
+
+
+
+
+
+
+
+Software
+engineers
+
+
+
+
+Kent Beck
+Grady Booch
+Fred Brooks
+Barry Boehm
+Ward Cunningham
+Tom DeMarco
+Edsger W. Dijkstra
+Martin Fowler
+C. A. R. Hoare
+Watts Humphrey
+Michael A. Jackson
+Ivar Jacobson
+Stephen J. Mellor
+Bertrand Meyer
+David Parnas
+Winston W. Royce
+James Rumbaugh
+Niklaus Wirth
+Edward Yourdon
+Victor Basili
+
+
+
+
+
+
+
+
+Related fields
+
+
+
+Computer science
+Computer engineering
+Project management
+Risk management
+Systems engineering
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Capability_Maturity_Model_Integration&amp;oldid=685907714"					
+				Categories: Maturity modelsSoftware development processStandardsCarnegie Mellon University softwareHidden categories: Articles to be merged from October 2015All articles to be mergedAll articles with unsourced statementsArticles with unsourced statements from November 2013Commons category with local link same as on WikidataArticles with DMOZ linksUse dmy dates from February 2011				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةCatalàČeštinaDeutschEspañolFrançais한국어Bahasa IndonesiaעבריתMagyar日本語Norsk bokmålOʻzbekcha/ўзбекчаPortuguêsРусскийSlovenčinaSuomiSvenskaதமிழ்ไทยTürkçeУкраїнська中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 15 October 2015, at 19:13.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

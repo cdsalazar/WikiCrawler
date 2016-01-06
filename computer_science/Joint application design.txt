@@ -1,0 +1,229 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Joint application design
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (October 2013)
+
+
+Joint application design (JAD) is a process used in the prototyping life cycle area of the Dynamic Systems Development Method (DSDM) to collect business requirements while developing new information systems for a company. "The JAD process also includes approaches for enhancing user participation, expediting development, and improving the quality of specifications." It consists of a workshop where “knowledge workers and IT specialists meet, sometimes for several days, to define and review the business requirements for the system.”[1] The attendees include high level management officials who will ensure the product provides the needed reports and information at the end. This acts as “a management process which allows Corporate Information Services (IS) departments to work more effectively with users in a shorter time frame.”[2]
+Through JAD workshops the knowledge workers and IT specialists are able to resolve any difficulties or differences between the two parties regarding the new information system. The workshop follows a detailed agenda in order to guarantee that all uncertainties between parties are covered and to help prevent any miscommunications. Miscommunications can carry far more serious repercussions if not addressed until later on in the process. (See below for Key Participants and Key Steps to an Effective JAD). In the end, this process will result in a new information system that is feasible and appealing to both the designers and end users.
+"Although the JAD design is widely acclaimed, little is actually known about its effectiveness in practice." According to Journal of Systems and Software, a field study was done at three organizations using JAD practices to determine how JAD influenced system development outcomes. The results of the study suggest that organizations realized modest improvement in systems development outcomes by using the JAD method. JAD use was most effective in small, clearly focused projects and less effective in large complex projects.
+
+
+
+Contents
+
+
+1 Origin
+2 Key participants
+3 9 Key Steps
+4 Advantages
+5 Challenges
+6 References
+7 Bibliography
+
+
+
+Origin[edit]
+Joint Application is a term originally used to describe a software development process pioneered and successfully deployed during the mid-1970s by the New York Telephone Co's Systems Development Center under the direction of Dan Gielan. Following a series of remarkably successful implementations of this methodology, Gielan lectured extensively in various forums on the methodology, its benefits and best practices. of IBM Canada created and named JAD in 1974, or Joint Application Design, as it is currently used in software development. While working at IBM in Regina, Saskatchewan, Arnie Lind, a Senior Systems Engineer at the time, was searching for a better way to implement applications at IBM's customers. The existing method entailed application developers spending months learning the specifics of a particular department or job function, and then developing an application for the function or department. In addition to significant development backlog delays, this process resulted in applications taking years to develop, and often not being fully accepted by the application users.
+Arnie Lind's idea was simple: rather than have application developers learn about people's jobs, why not teach the people doing the work how to write an application? Arnie pitched the concept to IBM Canada's Vice President Carl Corcoran (later President of IBM Canada), and Carl approved a pilot project. Arnie and Carl together named the methodology JAD, an acronym for Joint Application Design, after Carl Corcoran rejected the acronym JAL, or Joint Application Logistics, upon realizing that Arnie Lind's initials were JAL (John Arnold Lind).
+The pilot project was an emergency room project for the Saskatchewan Government. Arnie developed the JAD methodology, and put together a one-week seminar, involving primarily nurses and administrators from the emergency room, but also including some application development personnel. The project was a huge success, as the one-week seminar produced a detailed application framework, which was then coded and implemented in less than one month, versus an average of 18 months for traditional application development. And because the users themselves designed the system, they immediately adopted and liked the application. After the pilot project, IBM was very supportive of the JAD methodology, as they saw it as a way to more quickly implement computing applications, running on IBM hardware.
+Arnie Lind spent the next 13 years at IBM Canada continuing to develop the JAD methodology, and traveling around the world performing JAD seminars, and training IBM employees in the methods and techniques of JAD. JADs were performed extensively throughout IBM Canada, and the technique also spread to IBM in the United States. Arnie Lind trained several people at IBM Canada to perform JADs, including Tony Crawford and Chuck Morris. Arnie Lind retired from IBM in 1987, and continued to teach and perform JADs on a consulting basis, throughout Canada, the United States, and Asia.
+The JAD process was formalized by Tony Crawford and Chuck Morris of IBM in the late 1970s. It was then deployed at Canadian International Paper. JAD was used in IBM Canada for a while before being brought back to the US. Initially, IBM used JAD to help sell and implement a software program they sold, called COPICS. It was widely adapted to many uses (system requirements, grain elevator design, problem-solving, etc.). Tony Crawford later developed JAD-Plan and then JAR (Joint Application Requirements).
+Originally, JAD was designed to bring system developers and users of varying backgrounds and opinions together in a productive as well as creative environment. The meetings were a way of obtaining quality requirements and specifications. The structured approach provides a good alternative to traditional serial interviews by system analysts.
+Key participants[edit]
+Executive Sponsor: The executive who charters the project, the system owner. They must be high enough in the organization to be able to make decisions and provide the necessary strategy, planning, and direction.
+Subject Matter Experts: These are the business users, the IS professionals, and the outside experts that will be needed for a successful workshop. This group is the backbone of the meeting; they will drive the changes.
+Facilitator/Session Leader: meeting and directs traffic by keeping the group on the meeting agenda. The facilitator is responsible for identifying those issues that can be solved as part of the meeting and those which need to be assigned at the end of the meeting for follow-up investigation and resolution. The facilitator serves the participants and does not contribute information to the meeting.
+Scribe/Modeller/Recorder/Documentation Expert: Records and publish the proceedings of the meeting and does not contribute information to the meeting.
+Observers: Generally members of the application development team assigned to the project. They are to sit behind the participants and are to silently observe the proceedings.
+9 Key Steps[edit]
+
+Identify project objectives and limitations: It is vital to have clear objectives for the workshop and for the project as a whole. The pre-workshop activities, the planning and scoping, set the expectations of the workshop sponsors and participants. Scoping identifies the business functions that are within the scope of the project. It also tries to assess both the project design and implementation complexity. The political sensitivity of the project should be assessed. Has this been tried in the past? How many false starts were there? How many implementation failures were there? Sizing is important. For best results, systems projects should be sized so that a complete design - right down to screens and menus - can be designed in 8 to 10 workshop days.
+Identify critical success factors: It is important to identify the critical success factors for both the development project and the business function being studied. How will we know that the planned changes have been effective? How will success be measured? Planning for outcomes assessment helps to judge the effectiveness and the quality of the implemented system over its entire operational life.
+Define project deliverables: In general, the deliverables from a workshop are documentation and a design. It is important to define the form and level of detail of the workshop documentation. What types of diagrams will be provided? What type or form of narrative will be supplied? It is a good idea to start using a CASE tool for diagramming support right from the start. Most of the available tools have good to great diagramming capabilities but their narrative support is generally weak. The narrative is best produced with your standard word processing software.
+Define the schedule of workshop activities: Workshops vary in length from one to five days. The initial workshop for a project should not be less than three days. It takes the participants most of the first day to get comfortable with their roles, with each other, and with the environment. The second day is spent learning to understand each other and developing a common language with which to communicate issues and concerns. By the third day, everyone is working together on the problem and real productivity is achieved. After the initial workshop, the team-building has been done. Shorter workshops can be scheduled for subsequent phases of the project, for instance, to verify a prototype. However, it will take the participants from one to three hours to re-establish the team psychology of the initial workshop.
+Select the participants: These are the business users, the IS professionals, and the outside experts that will be needed for a successful workshop. These are the true "back bones" of the meeting who will drive the changes.
+Prepare the workshop material: Before the workshop, the project manager and the facilitator perform an analysis and build a preliminary design or straw man to focus the workshop. The workshop material consists of documentation, worksheets, diagrams, and even props that will help the participants understand the business function under investigation.
+Organize workshop activities and exercises: The facilitator must design workshop exercises and activities to provide interim deliverables that build towards the final output of the workshop. The pre-workshop activities help design those workshop exercises. For example, for a Business Area Analysis, what's in it? A decomposition diagram? A high-level entity-relationship diagram? A normalized data model? A state transition diagram? A dependency diagram? All of the above? None of the above? It is important to define the level of technical diagramming that is appropriate to the environment. The most important thing about a diagram is that it must be understood by the users. Once the diagram choice is made, the facilitator designs exercises into the workshop agenda to get the group to develop those diagrams. A workshop combines exercises that are serially oriented to build on one another, and parallel exercises, with each sub-team working on a piece of the problem or working on the same thing for a different functional area. High-intensity exercises led by the facilitator energize the group and direct it towards a specific goal. Low-intensity exercises allow for detailed discussions before decisions. The discussions can involve the total group or teams can work out the issues and present a limited number of suggestions for the whole group to consider. To integrate the participants, the facilitator can match people with similar expertise from different departments. To help participants learn from each other, the facilitator can mix the expertise. It's up to the facilitator to mix and match the sub-team members to accomplish the organizational, cultural, and political objectives of the workshop. A workshop operates on both the technical level and the political level. It is the facilitator's job to build consensus and communications, to force issues out early in the process. There is no need to worry about the technical implementation of a system if the underlying business issues cannot be resolved.
+Prepare, inform, educate the workshop participants: All of the participants in the workshop must be made aware of the objectives and limitations of the project and the expected deliverables of the workshop. Briefing of participants should take place 1 to 5 days before the workshop. This briefing may be teleconferenced if participants are widely dispersed. The briefing document might be called the Familiarization Guide, Briefing Guide, Project Scope Definition, or the Management Definition Guide - or anything else that seems appropriate. It is a document of eight to twelve pages, and it provides a clear definition of the scope of the project for the participants. The briefing itself lasts two to four hours. It provides the psychological preparation everyone needs to move forward into the workshop.
+Coordinate workshop logistics: Workshops should be held off-site to avoid interruptions. Projectors, screens, PCs, tables, markers, masking tape, Post-It notes, and lots of other props should be prepared. What specific facilities and props are needed is up to the facilitator. They can vary from simple flip charts to electronic white boards. In any case, the layout of the room must promote the communication and interaction of the participants.
+
+Advantages[edit]
+
+JAD decreases time and costs associated with requirements elicitation process. During 2-4 weeks information not only is collected, but requirements, agreed upon by various system users, are identified. Experience with JAD allows companies to customize their systems analysis process into even more dynamic ones like Double Helix, a methodology for mission-critical work.
+JAD sessions help bring experts together giving them a chance to share their views, understand views of others, and develop the sense of project ownership.
+The methods of JAD implementation are well-known, as it is "the first accelerated design technique available on the market and probably best known", and can easily be applied by any organization.
+Easy integration of CASE tools into JAD workshops improves session productivity and provides systems analysts with discussed and ready to use models.
+
+Challenges[edit]
+
+Without multifaceted preparation for a JAD session, professionals' valuable time can be easily wasted. If JAD session organizers do not study the elements of the system being evaluated, an incorrect problem could be addressed, incorrect people could be invited to participate, and inadequate problem-solving resources could be used.
+JAD workshop participants should include employees able to provide input on most, if not all, of the pertinent areas of the problem. This is why particular attention should be paid during participant selection. The group should consist not only of employees from various departments who will interact with the new system, but from different hierarchies of the organizational ladder. The participants may have conflicting points of view, but meeting will allow participants to see issues from different viewpoints. JAD brings to light a better model outline with better understanding of underlying processes.
+The facilitator has an obligation to ensure all participants&#160;–  not only the most vocal ones&#160;–  have a chance to offer their opinions, ideas, and thoughts.
+
+References[edit]
+
+
+^ Haag, Stephen; Cummings, Maeve; McCubbrey, Donald J. (2006). "Phase 2: Analysis". Information Management Systems for the Information Age. McGraw-Hill Ryerson. ISBN&#160;978-0-07-281947-2.&#160;
+^ Jennerich, Bill (November 1990). "Joint Application Design: Business Requirements Analysis for Successful Re-Engineering". Retrieved 2009-02-06.&#160;
+
+
+Bibliography[edit]
+
+Yatco, Mei C. (1999). "Joint Application Design/Development". University of Missouri-St. Louis. Retrieved 2009-02-06.&#160;
+Soltys, Roman; Anthony Crawford (1999). "JAD for business plans and designs". Retrieved 2009-02-06.&#160;
+Dennis, Alan R.; Hayes, Glenda S.; Daniels, Robert M., Jr. (Spring 1999). "Business Process Modeling with Group Support Systems". Journal of Management Information Systems 15 (4): 115–142. Retrieved 2015-05-14.&#160;
+Botkin, John C. "Customer Involved Participation as Part of the Application Development Process". Retrieved 1999-11-09.&#160; Check date values in: |access-date= (help)
+Moeller, Walter E. "Facilitated Information Gathering Sessions: An Information Engineering Technique". Retrieved 2010-03-22.&#160;
+Bill Jennerich "Joint Application Design -- Business Requirements Analysis for Successful Re-engineering." 18:50, 26 June 2006 (UTC)[1] Last update time unknown. Accessed on Nov. 14, 1999.
+Gary Rush "The History of JAD -- MGR Consulting Newsletter." July 2006 [2]
+Davidson, E.J. (1999). Joint application design (JAD) in practice. Journal of Systems &amp; Software, 45(3),215-223. Retrieved from Scienc Direct Database. [3]
+Gottesdiener, Ellen; Requirements by Collaboration: Workshops for Defining Needs, Addison-Wesley, 2002, ISBN 0-201-78606-0.
+Wood, Jane and Silver, Denise; Joint Application Development, John Wiley &amp; Sons Inc, ISBN 0-471-04299-4
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Joint_application_design&amp;oldid=662388343"					
+				Categories: Software requirementsSoftware development processInformation systemsHidden categories: Articles needing additional references from October 2013All articles needing additional referencesCS1 errors: dates				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةEspañol한국어NederlandsPolskiPortuguêsSuomi					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 15 May 2015, at 02:10.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

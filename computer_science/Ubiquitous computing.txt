@@ -1,0 +1,1248 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Ubiquitous computing
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (October 2015)
+
+
+Ubiquitous computing (ubicomp) is a concept in software engineering and computer science where computing is made to appear anytime and everywhere. In contrast to desktop computing, ubiquitous computing can occur using any device, in any location, and in any format. A user interacts with the computer, which can exist in many different forms, including laptop computers, tablets and terminals in everyday objects such as a fridge or a pair of glasses. The underlying technologies to support ubiquitous computing include Internet, advanced middleware, operating system, mobile code, sensors, microprocessors, new I/O and user interfaces, networks, mobile protocols, location and positioning and new materials.
+This paradigm is also described as pervasive computing,[1] ambient intelligence,[2] ambient media[3] or 'everyware'.[4] Each term emphasizes slightly different aspects. When primarily concerning the objects involved, it is also known as physical computing, the Internet of Things, haptic computing,[5] and 'things that think'. Rather than propose a single definition for ubiquitous computing and for these related terms, a taxonomy of properties for ubiquitous computing has been proposed, from which different kinds or flavors of ubiquitous systems and applications can be described.[6]
+Ubiquitous computing touches on a wide range of research topics, including distributed computing, mobile computing, location computing, mobile networking, context-aware computing, sensor networks, human-computer interaction, and artificial intelligence.
+
+
+
+Contents
+
+
+1 Core concepts
+2 History
+3 Examples
+4 Issues
+5 See also
+6 References
+7 Further reading
+8 External links
+
+
+
+Core concepts[edit]
+At their core, all models of ubiquitous computing share a vision of small, inexpensive, robust networked processing devices, distributed at all scales throughout everyday life and generally turned to distinctly common-place ends. For example, a domestic ubiquitous computing environment might interconnect lighting and environmental controls with personal biometric monitors woven into clothing so that illumination and heating conditions in a room might be modulated, continuously and imperceptibly. Another common scenario posits refrigerators "aware" of their suitably tagged contents, able to both plan a variety of menus from the food actually on hand, and warn users of stale or spoiled food.
+Ubiquitous computing presents challenges across computer science: in systems design and engineering, in systems modelling, and in user interface design. Contemporary human-computer interaction models, whether command-line, menu-driven, or GUI-based, are inappropriate and inadequate to the ubiquitous case. This suggests that the "natural" interaction paradigm appropriate to a fully robust ubiquitous computing has yet to emerge - although there is also recognition in the field that in many ways we are already living in a ubicomp world (see also the main article on Natural User Interface). Contemporary devices that lend some support to this latter idea include mobile phones, digital audio players, radio-frequency identification tags, GPS, and interactive whiteboards.
+Mark Weiser proposed three basic forms for ubiquitous system devices (see also smart device): tabs, pads and boards.
+
+Tabs: wearable centimetre sized devices
+Pads: hand-held decimetre-sized devices
+Boards: metre sized interactive display devices.
+
+These three forms proposed by Weiser are characterized by being macro-sized, having a planar form and on incorporating visual output displays. If we relax each of these three characteristics we can expand this range into a much more diverse and potentially more useful range of Ubiquitous Computing devices. Hence, three additional forms for ubiquitous systems have been proposed:[6]
+
+Dust: miniaturized devices can be without visual output displays, e.g. Micro Electro-Mechanical Systems (MEMS), ranging from nanometres through micrometers to millimetres. See also Smart dust.
+Skin: fabrics based upon light emitting and conductive polymers, organic computer devices, can be formed into more flexible non-planar display surfaces and products such as clothes and curtains, see OLED display. MEMS device can also be painted onto various surfaces so that a variety of physical world structures can act as networked surfaces of MEMS.
+Clay: ensembles of MEMS can be formed into arbitrary three dimensional shapes as artefacts resembling many different kinds of physical object (see also Tangible interface).
+
+In his book The Rise of the Network Society, Manuel Castells suggests that there is an ongoing shift from already-decentralised, stand-alone microcomputers and mainframes towards entirely pervasive computing. In his model of a pervasive computing system, Castells uses the example of the Internet as the start of a pervasive computing system. The logical progression from that paradigm is a system where that networking logic becomes applicable in every realm of daily activity, in every location and every context. Castells envisages a system where billions of miniature, ubiquitous inter-communication devices will be spread worldwide, "like pigment in the wall paint".
+Ubiquitous computing may be seen to consist of many layers, each with their own roles, which together form a single system:
+Layer 1: task management layer
+
+Monitors user task, context and index
+Map user's task to need for the services in the environment
+To manage complex dependencies
+
+Layer 2: environment management layer
+
+To monitor a resource and its capabilities
+To map service need, user level states of specific capabilities
+
+Layer 3: environment layer
+
+To monitor a relevant resource
+To manage reliability of the resources
+
+History[edit]
+Mark Weiser coined the phrase "ubiquitous computing" around 1988, during his tenure as Chief Technologist of the Xerox Palo Alto Research Center (PARC). Both alone and with PARC Director and Chief Scientist John Seely Brown, Weiser wrote some of the earliest papers on the subject, largely defining it and sketching out its major concerns.[7][8][9]
+Recognizing that the extension of processing power into everyday scenarios would necessitate understandings of social, cultural and psychological phenomena beyond its proper ambit, Weiser was influenced by many fields outside computer science, including "philosophy, phenomenology, anthropology, psychology, post-Modernism, sociology of science and feminist criticism". He was explicit about "the humanistic origins of the ‘invisible ideal in post-modernist thought'",[9] referencing as well the ironically dystopian Philip K. Dick novel Ubik.
+Andy Hopper from Cambridge University UK proposed and demonstrated the concept of "Teleporting" - where applications follow the user wherever he/she moves.
+Roy Want, while a researcher and student working under Andy Hopper at Cambridge University, worked on the "Active Badge System", which is an advanced location computing system where personal mobility that is merged with computing.
+Bill Schilit (now at Google) also did some earlier work in this topic, and participated in the early Mobile Computing workshop held in Santa Cruz in 1996.
+Dr. Ken Sakamura of the University of Tokyo, Japan leads the Ubiquitous Networking Laboratory (UNL), Tokyo as well as the T-Engine Forum. The joint goal of Sakamura's Ubiquitous Networking specification and the T-Engine forum, is to enable any everyday device to broadcast and receive information.[10][11]
+MIT has also contributed significant research in this field, notably Things That Think consortium (directed by Hiroshi Ishii, Joseph A. Paradiso and Rosalind Picard) at the Media Lab[12] and the CSAIL effort known as Project Oxygen.[13] Other major contributors include University of Washington's Ubicomp Lab (directed by Shwetak Patel), Georgia Tech's College of Computing, Cornell University's People Aware Computing Lab, NYU's Interactive Telecommunications Program, UC Irvine's Department of Informatics, Microsoft Research, Intel Research and Equator,[14] Ajou University UCRi &amp; CUS.[15]
+Examples[edit]
+One of the earliest ubiquitous systems was artist Natalie Jeremijenko's "Live Wire", also known as "Dangling String", installed at Xerox PARC during Mark Weiser's time there. This was a piece of string attached to a stepper motor and controlled by a LAN connection; network activity caused the string to twitch, yielding a peripherally noticeable indication of traffic. Weiser called this an example of calm technology.[16]
+A present manifestation of this trend is the widespread diffusion of mobile phones. Many of mobile phones supporting high speed data transmission, video services, and mobile devices with powerful computational ability. Although these mobile devices are not necessarily manifestations of Ubiquitous Computing, there are examples, such as Japan’s Yaoyorozu (“Eight Million Gods”) Project in which mobile devices, coupled with radio frequency identification tags demonstrate that Ubiquitous Computing is already present in some form.[17]
+Ambient Devices has produced an "orb", a "dashboard", and a "weather beacon": these decorative devices receive data from a wireless network and report current events, such as stock prices and the weather, like the Nabaztag produced by Violet Snowden.
+The Australian futurist Mark Pesce has produced a highly configurable 52-LED LAMP enabled lamp which uses Wi-Fi named MooresCloud after Moore's Law.[18]
+The Unified Computer Intelligence Corporation has launched a device called Ubi - The Ubiquitous Computer that is designed to allow voice interaction with the home and provide constant access to information.[19]
+Ubiquitous Computing research has focused on building an environment in which computers allow humans to focus attention on select aspects of the environment and operate in supervisory and policy-making roles. Ubiquitous Computing emphasizes the creation of a human computer interface that can interpret and support a user’s intentions. For example, MIT’s Project Oxygen seeks to create a system in which computation is as pervasive as air:
+
+In the future, computation will be human centered. It will be freely available everywhere, like batteries and power sockets, or oxygen in the air we breathe…We will not need to carry our own devices around with us. Instead, configurable generic devices, either handheld or embedded in the environment, will bring computation to us, whenever we need it and wherever we might be. As we interact with these “anonymous” devices, they will adopt our information personalities. They will respect our desires for privacy and security. We won’t have to type, click, or learn new computer jargon. Instead, we’ll communicate naturally, using speech and gestures that describe our intent…
+
+This is a fundamental transition that does not seek to escape the physical world and “enter some metallic, gigabyte-infested cyberspace” but rather brings computers and communications to us, making them “synonymous with the useful tasks they perform”.[17]
+Network robots link ubiquitous networks with robots, contributing to the creation of new lifestyles and solutions to address a variety of social problems including the aging of population and nursing care.[20]
+Issues[edit]
+Privacy is easily the most often-cited criticism of ubiquitous computing (ubicomp), and may be the greatest barrier to its long-term success.[21]
+An article by Linda Little and Pam Briggs on this privacy issue, states that: "These are the kinds of privacy principles that have been established by the industry - but over the past two years, we have been trying to understand whether such principles reflect the concerns of the ordinary citizen. Some of the key research questions we have been addressing are: What are users' key concerns regarding privacy management in a ubiquitous context and do they reflect 'expert' privacy principles? Do these concerns vary as a function of context? Will users have enough confidence in privacy management procedures to hand-over management and administration of their privacy preferences? Motahari, et al., (2007) argue people do not have a complete understanding of the threats to their privacy. While users of ubicomp systems are aware of inappropriate use of their personal information, legal obligations and inadequate security they are less aware of setting preferences for who has access and any social inferences that can be made by observations by other people. They further argue a holistic approach is needed as traditional approaches and current investigations are not enough to address privacy threats in ubiquitous computing. Recognising - in line with a number of other researchers (Harper &amp; Singleton, 2001; Paine, et al., 2007) - that privacy concerns are likely to be highly situation-dependent, we have developed a method of enquiry which displays a rich context to the user in order to elicit more detailed information about those privacy factors that underpin our acceptance of ubiquitous computing".[22]
+Public policy problems are often “preceded by long shadows, long trains of activity”, emerging slowly, over decades or even the course of a century. There is a need for a long-term view to guide policy decision making, as this will assist in identifying long-term problems or opportunities related to the Ubiquitous Computing environment. This information can reduce uncertainty and guide the decisions of both policy makers and those directly involved in system development (Wedemeyer et al. 2001). One important consideration is the degree to which different opinions form around a single problem. Some issues may have strong consensus about their importance, even if there are great differences in opinion regarding the cause or solution. For example, few people will differ in their assessment of a highly tangible problem with physical impact such as terrorists using new weapons of mass destruction to destroy human life. The problem statements outlined above that address the future evolution of the human species or challenges to identity have clear cultural or religious implications and are likely to have greater variance in opinion about them.[17]
+There is still the issue, what actually 'content' is in an ubiquitous environment. Where in other media environment the interface is clearly distinct, in an ubiquitous environment 'content' differs. Artur Lugmayr defined such a smart environment by describing it as ambient media. It is constituted of the communication of information in ubiquitous and pervasive environments. The concept of ambient media relates to ambient media form, ambient media content, and ambient media technology. It's principles have been established by Artur Lugmayr and are manifestation, morphing, intelligence, and experience.[23]
+See also[edit]
+
+
+List of ubiquitous computing research centers
+Augmented reality
+Ambient intelligence
+Calm technology
+Computer accessibility
+Context-aware pervasive systems
+Human-centered computing (discipline)
+Human-computer interaction
+Mobile interaction
+Natural user interface
+Pervasive game
+Pervasive informatics
+Physical computing
+Radio-frequency identification
+Sensor grid
+Smart, Connected Products
+Sentient computing
+Smart device
+System on Chip
+Task computing
+Transreality gaming
+Ubiquitous commerce
+Ubiquitous learning
+Ubiquitous robot
+User experience
+Virtual reality
+Wearable computer
+Ambient media
+Internet of Things
+
+
+References[edit]
+
+
+^ Nieuwdorp, E. (2007). "The pervasive discourse". Computers in Entertainment 5 (2): 13. doi:10.1145/1279540.1279553.&#160;
+^ Hansmann, Uwe (2003). Pervasive Computing: The Mobile World. Springer. ISBN&#160;3-540-00218-9.&#160;
+^ Lugmayr, Artur; Risse, Thomas; Stockleben, Bjoern; Laurila, Kari; Kaario, Juha (September 2009). "Semantic ambient media—an introduction". Multimedia Tools and Applications 44 (3): 337–359. doi:10.1007/s11042-009-0282-z.&#160;
+^ Greenfield, Adam (2006). Everyware: the dawning age of ubiquitous computing. New Riders. pp.&#160;11–12. ISBN&#160;0-321-38401-6.&#160;
+^ "World Haptics Conferences". Haptics Technical Committee. Retrieved 2007-10-13.&#160;
+^ a b Poslad, Stefan (2009). Ubiquitous Computing Smart Devices, Smart Environments and Smart Interaction. Wiley. ISBN&#160;978-0-470-03560-3.&#160;
+^ Weiser, Mark (1991). "The Computer for the 21st Century". Retrieved 2012-12-19.&#160;
+^ Weiser; Gold; Brown (1999-05-11). "Ubiquitous computing". Retrieved 2008-05-07.&#160;
+^ a b Weiser, Mark (1996-03-17). "Ubiquitous computing". Retrieved 2007-11-03.&#160;
+^ "IEEE Xplore Abstract - T-Engine: Japan's ubiquitous computing architecture is ready for prime time". Ieeexplore.ieee.org. doi:10.1109/MPRV.2005.40. Retrieved 2015-10-13.&#160;
+^ "The name of T-Engine Forum was changed to TRON Forum". T-engine.org. 2015-04-01. Retrieved 2015-10-13.&#160;
+^ "MIT Media Lab - Things That Think Consortium". MIT. Retrieved 2007-11-03.&#160;
+^ "MIT Project Oxygen: Overview". MIT. Retrieved 2007-11-03.&#160;
+^ "Equator". UCL. Retrieved 2009-11-19.&#160;
+^ "Center_of_excellence_for_Ubiquitous_System". CUS. Retrieved 2008-05-04.&#160;
+^ Weiser, Mark; Rich Gold; John Seely Brown (1999). "The origins of ubiquitous computing research at PARC in the late 1980s". IBM systems journal 38 (4): 693. doi:10.1147/sj.384.0693.&#160;
+^ a b c Winter, Jenifer (December 2008). "Emerging Policy Problems Related to Ubiquitous Computing: Negotiating Stakeholders’ Visions of the Future". Knowledge, Technology, &amp; Policy 21 (4): 191–203. doi:10.1007/s12130-008-9058-4.&#160;
+^ Fingas, Jon (2012-10-13). "MooresCloud Light runs Linux, puts LAMP on your lamp (video)". Engadget.com. Retrieved 2015-10-13.&#160;
+^ "Ubi Cloud". Theubi.com. Retrieved 2015-10-13.&#160;
+^ [1] Archived October 24, 2007 at the Wayback Machine
+^ Hong, Jason (2005). "An architecture for privacy-sensitive ubiquitous computing". p.&#160;310.&#160;
+^ Little, Linda; Briggs, Pam (2009). "Privacy Factors for Successful Ubiquitous Computing". International Journal of E-Business Research 5 (2): 20.&#160;
+^ "NOVATICA: General information in English". Ati.es. 2015-09-27. Retrieved 2015-10-13.&#160;
+
+
+Further reading[edit]
+
+Adam Greenfield's book Everyware: The Dawning Age of Ubiquitous Computing (ISBN 0-321-38401-6).
+
+External links[edit]
+
+International Conference on Pervasive Computing (Pervasive)
+Pervasive Computing (IEEE)
+Pervasive and Mobile Computing journal, PMC (Elsevier)
+Proceedings of the Semantic Ambient Media Workshop Series (iAMEA)
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Major fields of computer science
+
+
+
+
+
+
+
+Note: Computer science can also be divided into different topics or fields according to the ACM Computing Classification System.
+
+
+
+
+
+
+Hardware
+
+
+
+Printed circuit board
+Peripheral
+Integrated circuit
+Very-large-scale integration
+Energy consumption
+Electronic design automation
+
+
+
+
+
+
+
+
+Computer systems
+organization
+
+
+
+Computer architecture
+Embedded system
+Real-time computing
+Dependability
+
+
+
+
+
+
+
+
+Networks
+
+
+
+Network architecture
+Network protocol
+Network components
+Network scheduler
+Network performance evaluation
+Network service
+
+
+
+
+
+
+
+
+Software organization
+
+
+
+Interpreter
+Middleware
+Virtual machine
+Operating system
+Software quality
+
+
+
+
+
+
+
+
+Software notations
+and tools
+
+
+
+Programming paradigm
+Programming language
+Compiler
+Domain-specific language
+Modeling language
+Software framework
+Integrated development environment
+Software configuration management
+Software library
+Software repository
+
+
+
+
+
+
+
+
+Software development
+
+
+
+Software development process
+Requirements analysis
+Software design
+Software implementation
+Software verification and validation
+Software maintenance
+Programming team
+Open-source model
+
+
+
+
+
+
+
+
+Theory of computation
+
+
+
+Model of computation
+Formal language
+Automata theory
+Computational complexity theory
+Logic
+Semantics
+
+
+
+
+
+
+
+
+Algorithms
+
+
+
+Algorithm design
+Analysis of algorithms
+Randomized algorithm
+Computational geometry
+
+
+
+
+
+
+
+
+Mathematics
+of computing
+
+
+
+Discrete mathematics
+Probability
+Statistics
+Mathematical software
+Information theory
+Mathematical analysis
+Numerical analysis
+
+
+
+
+
+
+
+
+Information
+systems
+
+
+
+Database management system
+Information storage systems
+Enterprise information system
+Social information systems
+Geographic information system
+Decision support system
+Process control system
+Multimedia information system
+Data mining
+Digital library
+Computing platform
+Digital marketing
+World Wide Web
+Information retrieval
+
+
+
+
+
+
+
+
+Security
+
+
+
+Cryptography
+Formal methods
+Security services
+Intrusion detection system
+Hardware security
+Network security
+Information security
+Application security
+
+
+
+
+
+
+
+
+Human–computer
+interaction
+
+
+
+Interaction design
+Social computing
+Ubiquitous computing
+Visualization
+Accessibility
+
+
+
+
+
+
+
+
+Concurrency
+
+
+
+Concurrent computing
+Parallel computing
+Distributed computing
+Multithreading
+Multiprocessing
+
+
+
+
+
+
+
+
+Artificial
+intelligence
+
+
+
+Natural language processing
+Knowledge representation and reasoning
+Computer vision
+Automated planning and scheduling
+Search methodology
+Control method
+Philosophy of artificial intelligence
+Distributed artificial intelligence
+
+
+
+
+
+
+
+
+Machine learning
+
+
+
+Supervised learning
+Unsupervised learning
+Reinforcement learning
+Multi-task learning
+Machine learning algorithms
+Cross-validation
+
+
+
+
+
+
+
+
+Graphics
+
+
+
+Animation
+Rendering
+Image manipulation
+Graphics processing unit
+Mixed reality
+Virtual reality
+Image compression
+Solid modeling
+
+
+
+
+
+
+
+
+Applied
+computing
+
+
+
+E-commerce
+Enterprise software
+Computational mathematics
+Computational physics
+Computational chemistry
+Computational biology
+Computational social science
+Computational engineering
+Computational healthcare
+Digital art
+Electronic publishing
+Cyberwarfare
+Electronic voting
+Video game
+Word processing
+Operations research
+Educational technology
+Document management
+
+
+
+
+
+
+
+
+
+
+
+ Computer science portal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Virtual reality · Mixed reality · Reality
+
+
+
+
+
+
+Concepts
+
+
+
+Virtuality
+Virtual cinematography
+Augmented reality
+Augmented virtuality
+Real life
+Projection augmented model
+Reality–virtuality continuum
+Artificial reality
+Simulated reality
+Ubiquitous computing
+Virtual world (Persistent world)
+Multimodal interaction
+Telepresence
+Immersion
+
+
+
+
+
+
+
+
+Technology
+
+
+
+Compositing
+Camera resectioning
+Haptic suit
+Head-mounted display (Optical head-mounted display)
+Head-up display
+Image-based modeling and rendering
+Real-time computer graphics
+Virtual retinal display
+Wearable computer
+Stereoscopy (Computer stereo vision, Computer vision)
+Chroma key
+Visual hull
+Free viewpoint television
+Omnidirectional treadmill
+Hidden surface determination
+
+
+
+
+
+
+
+
+Tracking
+
+
+
+Motion capture
+Tracking system
+Types
+
+Optical
+Inertial
+Magnetic
+
+
+Devices
+
+Wired glove
+Gametrak
+HoloLens
+PlayStation Move
+Leap Motion
+Kinect
+Sixense TrueMotion
+
+
+
+
+
+
+
+
+
+
+Immersive devices
+
+
+
+Personal
+
+Google Cardboard
+HTC Vive
+Oculus Rift
+Samsung Gear VR
+PlayStation VR
+Razer OSVR
+
+
+Rooms
+
+AlloSphere
+Cave
+TreadPort
+
+
+History
+
+Sensorama
+Virtual Boy
+Famicom 3D System
+Sword of Damocles
+Sega VR
+Virtuality
+
+
+
+
+
+
+
+
+
+
+Applications
+
+
+
+Pervasive game
+ARToolKit
+Interactive art (Virtual graffiti)
+
+
+
+
+
+
+
+
+See also
+
+
+
+Simulated reality in fiction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Ambient intelligence
+
+
+
+
+
+
+Concepts
+
+
+
+Context awareness
+Internet of Things
+Object hyperlinking
+Profiling
+Spime
+Supranet
+Ubiquitous computing
+Web of Things
+Wireless sensor networks
+
+
+
+
+
+
+
+
+Technologies
+
+
+
+6LoWPAN
+ANT+
+DASH7
+IEEE 802.15.4
+Internet 0
+Machine to machine
+Radio-frequency identification
+Smartdust
+Tera-play
+XBee
+
+
+
+
+
+
+
+
+Platforms
+
+
+
+Arduino
+Contiki
+Electric Imp
+Gadgeteer
+ioBridge
+Netduino
+Raspberry Pi
+TinyOS
+Wiring
+Xively
+NodeMCU
+
+
+
+
+
+
+
+
+Applications
+
+
+
+Ambient device
+CeNSE
+Connected car
+Home automation
+HomeOS
+Internet refrigerator
+Nabaztag
+Smart city
+Smart TV
+Smarter Planet
+
+
+
+
+
+
+
+
+Pioneers
+
+
+
+Kevin Ashton
+Adam Dunkels
+Stefano Marzano
+Donald Norman
+Roel Pieper
+Josef Preishuber-Pflügl
+John Seely Brown
+Bruce Sterling
+Mark Weiser
+
+
+
+
+
+
+
+
+Other
+
+
+
+Ambient Devices
+AmbieSense
+Ebbits project
+IPSO Alliance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sub-disciplines of computing
+
+
+
+
+
+
+
+
+
+Hardware
+Software
+Firmware
+
+
+
+
+
+
+
+
+Information system
+
+
+
+Information security
+Multimedia database
+Intelligent database
+Big data
+Knowledge-based systems
+Recommender System
+Geographic information systems
+Decision support system
+Data engineering
+Knowledge engineering
+Fuzzy logic
+Data analysis
+System analysis and design
+Project management
+Knowledge management
+Data integration
+High-performance computing
+Semantic web
+
+
+
+
+
+
+
+
+Computer science
+
+
+
+Database management system
+Communications system
+Computational geometry
+Machine learning
+Data mining
+Parallel programming
+Coding theory
+Theory of computation
+Constraint programming
+Computational biology (Bioinformatics)
+Design and analysis of algorithms
+Information retrieval
+Computational science
+Symbolic computation
+Distributed computing
+Evolutionary computation
+Natural computation
+Combinatorial optimization
+Parallel processing
+
+
+
+
+
+
+
+
+Computer engineering
+
+
+
+Multimedia
+Satellite navigation (GNSS)
+Embedded systems
+Real-time computing
+Computer architecture
+Pair programming
+System programming
+Neural networks
+Speech recognition
+Signal analysis
+Computer vision (Visual computing)
+IC Design
+Voice over IP
+Speech synthesis
+Human-Computer Interaction
+Microprocessor
+Image processing
+Natural language processing
+Speech processing
+Digital signal processing
+
+
+
+
+
+
+
+
+Software engineering
+
+
+
+Software maintenance
+Formal methods
+Software quality
+Software quality assurance
+Measurement Software
+Fault-tolerant software
+Software testing
+Enterprise architecture
+Software architecture
+Software engineering economics
+Agile software development
+Software design pattern
+Software modelling
+Systems analyst
+Object-oriented analysis and design (UML)
+Requirements analysis
+Software development
+Software configuration management
+Software project management
+Software engineering management
+Software development process (Software release life cycle)
+Software design
+Software deployment
+Software enhancement
+
+
+
+
+
+
+
+
+Computer network
+
+
+
+Network security
+Secure electronic transaction
+Network Performance Evaluation (QoS)
+Cloud computing
+Routing
+Distributed systems (Distributed database)
+Information theory
+Wireless network
+Next-generation network
+Cellular network
+Optical transport network (Optical networking)
+Cryptography
+Network simulation
+Pattern recognition
+Network administrators
+Network equipment
+Network design
+Ubiquitous and Mobile computing
+Data center
+Mobile communications
+Digital communication
+Communications satellite
+Telecommunication (Telecommunications network)
+
+
+
+
+
+
+
+
+Business informatics
+
+
+
+ITIL
+ITSM
+Enterprise resource planning
+Electronic business
+Business intelligence
+Human Resources Development
+Security management
+Configuration management
+Technology management
+Power management
+Service management
+Project management
+Systems management
+Network management
+Content management
+Customer relationship management
+Incident management
+Asset management
+Integrated management
+Communications management
+System administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+Authority control
+
+
+
+NDL: 01003351
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Ubiquitous_computing&amp;oldid=689989880"					
+				Categories: Ubiquitous computingHidden categories: Articles needing additional references from October 2015All articles needing additional references				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						CatalàDanskDeutschEspañolفارسیFrançais한국어ItalianoNederlands日本語PolskiPortuguêsSuomiУкраїнська中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 10 November 2015, at 16:58.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

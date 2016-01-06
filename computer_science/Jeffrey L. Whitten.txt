@@ -1,0 +1,233 @@
+
+
+
+
+Jeffrey L. Whitten - Wikipedia, the free encyclopedia
+document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );
+window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Jeffrey_L._Whitten","wgTitle":"Jeffrey L. Whitten","wgCurRevisionId":659343203,"wgRevisionId":659343203,"wgArticleId":40839348,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles with VIAF identifiers","1947 births","Living people","American computer scientists","Information systems researchers","Systems engineers","Purdue University alumni","Purdue University faculty"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Jeffrey_L._Whitten","wgRelevantArticleId":40839348,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Whitten,_Jeffery_L.","wikilove-recipient":"","wikilove-anon":0,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising"],"wgInternalRedirectTargetUrl":"/wiki/Jeffrey_L._Whitten","wgWikibaseItemId":"Q15429198","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.bannerController","skins.vector.js"]);
+} );
+
+
+
+a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{behavior:url("/w/static/1.27.0-wmf.7/skins/Vector/csshover.min.htc")}
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Jeffrey L. Whitten
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Whitten, Jeffery L.)
+												
+					Jump to:					navigation, 					search
+				
+				Jeffrey L. Whitten (born ca 1955) is an American computer scientist, and Professor of Information Technology at Purdue University, known with Kevin C. Dittman and Lonnie D. Bentley as co-author of the textbook Systems Analysis and Design Methods, which is now in its 7th edition.[1]
+
+
+
+Contents
+
+
+1 Biography
+2 Work
+3 Selected publications
+4 References
+5 External links
+
+
+
+Biography[edit]
+In the 1970s Whitten studied at the Purdue University, where he received his B.S. in Industrial Management with a minor in Computer Science minor in 1976, and his M.S. in Computer Science and Management Information Systems in 1979.[2]
+After graduation Whitten started academic career at the Purdue University Computer Technology department as Assistant Professor, where he developed the systems analysis and design curriculum. In 1984 he was promoted Assistant Professor and started with Lonnie D. Bentley developing the curriculum into book Systems Analysis and Design Methods, first published in 1988 by Irwin/McGraw-Hill. This book "defragmented its market and maintained its #1 market position through seven editions spanning twenty years. More than 700 schools adopted it during that period."[2] In 1995 he was appointed Professor of Computer Information Systems &amp; Technology.
+In 1987 at Purdue University Whitten was Acting Department Head Department of Computer Technology,[3] from 1988 to 2003 he chaired that department, and from 2003 to 2010 directed the central IT organization at the Purdue University. From 2003 to 2010 Whitten was also Associate Vice President for IT Enterprise Applications (ITEA) at Purdue's.[2]
+In the period 1979-84 twice Whitten was awarded the James G. Dwyer Award as the best teacher in the Purdue University School of Technology.[2]
+Work[edit]
+Whitten research interests are in the fields of business process modeling, Enterprise Architecture frameworks and "Systems and computational thinking and its practical applications to systems development."[2]
+Selected publications[edit]
+
+Bentley, Lonnie D., Kevin C. Dittman, and Jeffrey L. Whitten. Systems analysis and design methods. (1986, 1997, 2004).
+Whitten, Jeffrey L., and Lonnie D. Bentley. Using Excelerator for systems analysis and design. (1987).
+Whitten, Jeffrey L., Lonnie Bentley, Victor M. Barlow. Projects and cases for use with Systems analysis and design methods. Irwin, 1989
+Bentley, Lonnie D., and Jeffrey L. Whitten. Systems analysis and design for the global enterprise. McGraw-Hill Irwin, 2007.
+Whitten, Jeffrey L., and Lonnie D. Bentley. Introduction to systems analysis and design. McGraw Hill Irwin, 2008.
+
+References[edit]
+
+
+^ Walls, Joseph G., George R. Widmeyer, and Omar A. El Sawy. "Building an information system design theory for vigilant EIS." Information systems research 3.1 (1992): 36-59.
+^ a b c d e Jeffrey L Whitten. Professor
+^ DM, Data Management. (1987) Vol. 25. p. 29
+
+
+External links[edit]
+
+Jeffrey L. Whitten at Purdue University
+
+
+
+
+
+
+Authority control
+
+
+
+VIAF: 35896897
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Jeffrey_L._Whitten&amp;oldid=659343203"					
+				Categories: 1947 birthsLiving peopleAmerican computer scientistsInformation systems researchersSystems engineersPurdue University alumniPurdue University facultyHidden categories: Wikipedia articles with VIAF identifiers				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+											
+				Add links			
+		
+				
+		
+		
+							
+											 This page was last modified on 26 April 2015, at 20:03.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

@@ -1,0 +1,666 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Systems analysis
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the interdisciplinary field.  For the analysis of systems in electrical engineering, see system analysis.
+
+
+
+
+
+This article may require cleanup to meet Wikipedia's quality standards. The specific problem is: the article has formatting issues. Please help improve this article if you can. (July 2014)
+
+
+"Systems analysis is a problem solving technique that decomposes a system into its component pieces for the purpose of the studying how well those component parts work and interact to accomplish their purpose".[1] According to the Merriam-Webster dictionary, systems analysis is "the process of studying a procedure or business in order to identify its goals and purposes and create systems and procedures that will achieve them in an efficient way". Analysis and synthesis, as scientific methods, always go hand in hand; they complement one another. Every synthesis is built upon the results of a preceding analysis, and every analysis requires a subsequent synthesis in order to verify and correct its results.
+This field is closely related to requirements analysis or operations research. It is also "an explicit formal inquiry carried out to help someone (referred to as the decision maker) identify a better course of action and make a better decision than she might otherwise have made."[2]
+
+
+
+Contents
+
+
+1 Overview
+2 Information technology
+3 Practitioners
+4 See also
+5 References
+6 Selected publications
+7 External links
+
+
+
+Overview[edit]
+The terms analysis and synthesis stem from Greek, meaning "to take apart" and "to put together," respectfully. These terms are used in many scientific disciplines, from mathematics and logic to economics and psychology, to denote similar investigative procedures. Analysis is defined as "the procedure by which we break down an intellectual or substantial whole into parts," while synthesis means "the procedure by which we combine separate elements or components in order to form a coherent whole." [3] Systems analysis researchers apply methodology to the systems involved, forming an overall picture. System analysis is used in every field where something is developed. Analysis can also be a series of components that perform organic functions together, such as system engineering. Systems engineering is an interdisciplinary field of engineering that focuses on how complex engineering projects should be designed and managed.
+Information technology[edit]
+The development of a computer-based information system includes a systems analysis phase. This helps produce the data model, a precursor to creating or enhancing a database (see Christopher J. Date "An Introduction to Database Systems"). There are a number of different approaches to system analysis. When a computer-based information system is developed, systems analysis (according to the Waterfall model) would constitute the following steps:
+
+The development of a feasibility study: determining whether a project is economically, socially, technologically and organizationally feasible
+Fact-finding measures, designed to ascertain the requirements of the system's end-users (typically involving interviews, questionnaires, or visual observations of work on the existing system)
+Gauging how the end-users would operate the system (in terms of general experience in using computer hardware or software), what the system would be used for and so on
+
+Another view outlines a phased approach to the process. This approach breaks systems analysis into 5 phases:
+
+Scope Definition: denoting an instrument for observing, viewing, or examining
+Problem analysis: analyzing the problem that arises
+Requirements analysis: determining the conditions that need to be met
+Logical design: looking at the logical relationship among the objects
+Decision analysis: making a final decision
+
+Use cases are widely used systems analysis modeling tools for identifying and expressing the functional requirements of a system. Each use case is a business scenario or event for which the system must provide a defined response. Use cases evolved from object-oriented analysis.
+Practitioners[edit]
+Practitioners of systems analysis are often called up to dissect systems that have grown haphazardly to determine the current components of the system. This was shown during the year 2000 re-engineering effort as business and manufacturing processes were examined as part of the Y2K automation upgrades.[4] Employment utilizing systems analysis include systems analyst, business analyst, manufacturing engineer, systems architect, enterprise architect, software architect, etc.
+While practitioners of systems analysis can be called upon to create new systems, they often modify, expand or document existing systems (processes, procedures and methods). Researchers and practitioners rely on system analysis. Activity system analysis has been already applied to various research and practice studies including business management, educational reform, educational technology, etc.
+A set of components interact with each other to accomplish some specific purpose. Systems are all around us. Our body is itself a system. A business is also a system. People, money, machine, market and material are the components of business system that work together that achieve the common goal of the organization
+See also[edit]
+
+
+
+
+
+
+Related topics
+
+
+Systems thinking
+System architecture
+Software architecture
+Enterprise architecture
+Systems analyst
+Systems design
+Policy analysis
+Program designer
+Cybernetics
+Systems theory
+
+
+
+
+
+
+Types of Systems analysis
+
+
+Accident Analysis
+Business analysis
+Logico-linguistic modeling
+Morphological analysis
+Soft systems methodology
+Software prototyping
+Spiral model
+Waterfall model
+
+
+
+
+
+
+Systems thinkers
+
+
+Russell L. Ackoff
+Howard T. Odum
+Henry Paynter
+Jay Forrester
+Donella Meadows
+Gregory Bateson
+Stewart Brand
+Buckminster Fuller
+Robert S. McNamara
+Stafford Beer
+Gordon Pask
+Ludwig von Bertalanffy
+
+
+
+
+
+
+References[edit]
+
+^ Systems Analysis and Design for the Global Enterprise by Lonnie D. Bentley p.160 7th edition
+^ SYSTEMS ANALYSIS
+^ Tom Ritchey, Analysis and .
+^ Géza HUSI: Mechatronics Control Systems
+
+Selected publications[edit]
+
+Bentley, Lonnie D., Kevin C. Dittman, and Jeffrey L. Whitten. Systems analysis and design methods. (1986, 1997, 2004).
+Hawryszkiewycz, Igor T. Introduction to systems analysis and design. Prentice Hall PTR, 1994.
+Whitten, Jeffery L., Lonnie D. Bentley, and Kevin C. Dittman. Fundamentals of systems analysis and design methods. (2004).
+
+External links[edit]
+
+
+
+Look up systems analysis in Wiktionary, the free dictionary.
+
+
+
+Introduction to Social Macrodynamics
+A useful set of guides and a case study about the practical application of business and systems analysis methods
+A comprehensive description of the discipline of systems analysis from Simmons College, Boston, MA, USA (Archive of original from www.simmons.edu)
+Systems Analysis and Design introductory level lessons
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Systems engineering
+
+
+
+
+
+
+Subfields
+
+
+
+Aerospace engineering
+Biological systems engineering
+Configuration management
+Earth systems engineering and management
+Electrical engineering
+Enterprise systems engineering
+Performance engineering
+Reliability engineering
+Safety engineering
+
+
+
+
+
+
+
+
+Processes
+
+
+
+Requirements engineering
+Functional specification
+System integration
+Verification and validation
+Design review
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Business process
+System
+System lifecycle
+V-Model
+Systems development life cycle
+
+
+
+
+
+
+
+
+Tools
+
+
+
+Decision-making
+Function modelling
+IDEF
+Optimization
+Planning
+Statistical analysis
+System dynamics
+Systems Modeling Language
+Systems analysis
+Systems modeling
+Work breakdown structure
+
+
+
+
+
+
+
+
+People
+
+
+
+James S. Albus
+Wernher von Braun
+Harold Chestnut
+Arthur David Hall III
+Derek Hitchins
+Robert E. Machol
+Simon Ramo
+Joseph Francis Shea
+John N. Warfield
+
+
+
+
+
+
+
+
+Related fields
+
+
+
+Control engineering
+Computer engineering
+Industrial engineering
+Operations research
+Project management
+Quality management
+Risk management
+Software engineering
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sub-disciplines of computing
+
+
+
+
+
+
+
+
+
+Hardware
+Software
+Firmware
+
+
+
+
+
+
+
+
+Information system
+
+
+
+Information security
+Multimedia database
+Intelligent database
+Big data
+Knowledge-based systems
+Recommender System
+Geographic information systems
+Decision support system
+Data engineering
+Knowledge engineering
+Fuzzy logic
+Data analysis
+System analysis and design
+Project management
+Knowledge management
+Data integration
+High-performance computing
+Semantic web
+
+
+
+
+
+
+
+
+Computer science
+
+
+
+Database management system
+Communications system
+Computational geometry
+Machine learning
+Data mining
+Parallel programming
+Coding theory
+Theory of computation
+Constraint programming
+Computational biology (Bioinformatics)
+Design and analysis of algorithms
+Information retrieval
+Computational science
+Symbolic computation
+Distributed computing
+Evolutionary computation
+Natural computation
+Combinatorial optimization
+Parallel processing
+
+
+
+
+
+
+
+
+Computer engineering
+
+
+
+Multimedia
+Satellite navigation (GNSS)
+Embedded systems
+Real-time computing
+Computer architecture
+Pair programming
+System programming
+Neural networks
+Speech recognition
+Signal analysis
+Computer vision (Visual computing)
+IC Design
+Voice over IP
+Speech synthesis
+Human-Computer Interaction
+Microprocessor
+Image processing
+Natural language processing
+Speech processing
+Digital signal processing
+
+
+
+
+
+
+
+
+Software engineering
+
+
+
+Software maintenance
+Formal methods
+Software quality
+Software quality assurance
+Measurement Software
+Fault-tolerant software
+Software testing
+Enterprise architecture
+Software architecture
+Software engineering economics
+Agile software development
+Software design pattern
+Software modelling
+Systems analyst
+Object-oriented analysis and design (UML)
+Requirements analysis
+Software development
+Software configuration management
+Software project management
+Software engineering management
+Software development process (Software release life cycle)
+Software design
+Software deployment
+Software enhancement
+
+
+
+
+
+
+
+
+Computer network
+
+
+
+Network security
+Secure electronic transaction
+Network Performance Evaluation (QoS)
+Cloud computing
+Routing
+Distributed systems (Distributed database)
+Information theory
+Wireless network
+Next-generation network
+Cellular network
+Optical transport network (Optical networking)
+Cryptography
+Network simulation
+Pattern recognition
+Network administrators
+Network equipment
+Network design
+Ubiquitous and Mobile computing
+Data center
+Mobile communications
+Digital communication
+Communications satellite
+Telecommunication (Telecommunications network)
+
+
+
+
+
+
+
+
+Business informatics
+
+
+
+ITIL
+ITSM
+Enterprise resource planning
+Electronic business
+Business intelligence
+Human Resources Development
+Security management
+Configuration management
+Technology management
+Power management
+Service management
+Project management
+Systems management
+Network management
+Content management
+Customer relationship management
+Incident management
+Asset management
+Integrated management
+Communications management
+System administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Systems_analysis&amp;oldid=684290033"					
+				Categories: FuturologyFinancial analystsManagementSystems analysisSystems engineeringSystems theoryTechnology assessmentHidden categories: Articles needing cleanup from July 2014All articles needing cleanupCleanup tagged articles with a reason field from July 2014Wikipedia pages needing cleanup from July 2014				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةAzərbaycancaБеларускаяCatalàDeutschEestiEspañolفارسیFrançaisGaeilge한국어ՀայերենעבריתҚазақшаNederlands日本語ਪੰਜਾਬੀPolskiPortuguêsRomânăРусскийShqipSlovenčinaSvenskaไทยTürkçeУкраїнськаWinaray中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 5 October 2015, at 18:57.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

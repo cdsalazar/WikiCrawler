@@ -1,0 +1,225 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Optical switch
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				This article is about the optical component.  For the optoelectronic component, see Slotted optical switch.
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (June 2014)
+
+
+In telecommunication, an optical switch is a switch that enables signals in optical fibers or integrated optical circuits (IOCs) to be selectively switched from one circuit to another.
+
+
+
+Contents
+
+
+1 Terminology
+2 Operation
+3 Functionality
+4 Performance
+5 Applications
+6 Patents
+7 See also
+8 External links
+9 Notes
+10 References
+
+
+
+Terminology[edit]
+The word applies on several levels. In commercial terms (such as "the telecom optical switch market size") it refers to any piece of circuit switching equipment between fibers. The majority of installed systems in this category actually use electronic switching between fiber transponders. Systems that perform this function by routing light beams are often referred to as "photonic" switches, independent of how the light itself is switched. Away from telecom, an optical switch is the unit that actually switches light between fibers, and a photonic switch is one that does this by exploiting nonlinear material properties to steer light (i.e., to switch wavelengths or signals within a given fiber).
+Hence a certain portion of the optical switch market is made up of photonic switches. These will contain within them an optical switch, which will, in some cases, be a photonic switch.
+Operation[edit]
+An optical switch may operate by mechanical means, such as physically shifting an optical fiber to drive one or more alternative fibers, or by electro-optic effects, magneto-optic effects, or other methods. Slow optical switches, such as those using moving fibers, may be used for alternate routing of an optical switch transmission path, such as routing around a fault. Fast optical switches, such as those using electro-optic or magneto-optic effects, may be used to perform logic operations; also included in this category are semiconductor optical amplifiers, which are optoelectronic devices that can be used as optical switches and be integrated with discrete or integrated microelectronic circuits.
+Functionality[edit]
+The functionality of any switch can be described in terms of the connections it can establish.[1] As stated in Telcordia GR-1073, a connection is the association between two ports on a switch and is indicated as a pair of port identifiers (i, j ), where i and j are two ports between which the connection is established. A connection identifies the transmission path between two ports. An optical signal can be applied to either one of the connected ports. However, the nature of the signal emerging at the other port depends on the optical switch and the state of the connection. A connection can be in the on state or the off state. A connection is said to be in the on state if an optical signal applied to one port emerges at the other port with essentially zero loss in optical energy. A connection is said to be in the off state if essentially zero optical energy emerges at the other port.
+Connections established in optical switches can be unidirectional or bidirectional. A unidirectional connection only allows optical signal transmission in one direction between the connected ports. A bidirectional connection allows optical signal transmission in both directions over the connection. Connections in passive and transparent optical switches are bidirectional, i.e., if a connection (i, j ) is set up, optical transmission is possible from i to j and from j to i.
+A device is optically “transparent” if the optical signal launched at the input remains optical throughout its transmission path in the device and appears as an optical signal at the output. Optically transparent devices operate over a range of wavelengths called the passband.
+A passive optical switch does not have optical gain elements. An active optical switch has optical gain elements. An all-optical switch is a transparent optical switch in which the actuating signal is also optical. Thus, in an all-optical switch, an optical signal is used to switch the path another optical signal takes through the switch.
+Performance[edit]
+Various parameters are defined and specified to quantify the performance of optical switches. The steady state performance of an optical switch (or optical switching matrix) is measured by its ability to effectively transmit optical power from an input port to any one of N output ports over the “on” state transmission path, and its ability to effectively isolate input power sources from all non-active ports over the “off” state transmission paths. Other key optical performance parameters include transmission efficiency over a range of wavelengths, the ability to minimize input optical power reflected back into the input fiber, transmission balance, and bidirectional transmission. The optical switch (or switching matrix) transient behavior is another important characteristic that is specified by its speed of response to control stimulation via the time interval it takes to either transmit or block the optical signal on any given output port.
+Two rates can be associated with switches: the switching rate and the signal transmission rate. The switching rate is the rate at which a switch changes states. The signal transmission rate is the modulation rate of information passing through a switch. The signal transmission rate is usually much greater than the switching rate. (If the switching rate approaches or exceeds the transmission rate, then the switch can be called an optical modulator.)
+A switch’s ability to sustain its steady state and transient performance specifications under stressful environmental conditions and over time is also an important characteristic.
+Applications[edit]
+Optical switching technology is driven by the need to provide flexibility in optical network connectivity. Prime applications are optical protection, test systems, and remotely reconfigurable add-drop multiplexers. Possible future applications include remote optical provisioning and restoration.
+Current switching applications include passive protection switching for service restoration following a disruption, such as a fiber cut. One common application for switches is in Remote Fiber Test Systems (RFTSs) that can monitor and locate a fault on a fiber transmission line.[2] An emerging application of optical switches is optical cross-connection. Optical cross-connects utilize optical switching fabrics to establish an interconnection between multiple optical inputs and outputs.
+Patents[edit]
+A 2011 search on “optical switch” [1] yielded some 8,000 patents, roughly categorized as follows:
+
+MEMS approaches involving arrays of micromirrors that can deflect an optical signal to the appropriate receiver (e.g., US 6396976&#160;);
+Piezoelectric Beam Steering involving piezoelectric ceramics providing enhanced optical switching characteristics
+Inkjet methods involving the intersection of two waveguides so that light is deflected from one to the other when an inkjet-like bubble is created (e.g., US 6212308&#160;);
+Liquid crystals (e.g., US 4948229&#160;) that rotate polarized light either 0 degrees or 90 degrees depending on the applied electric field;
+Thermal methods (e.g., US 5037169&#160;) that vary the refraction index in one leg of an interferometer to switch the signal;
+Nonlinear methods (e.g., US 5319492&#160;) that vary the diffraction pattern in a medium by taking advantage of the material nonlinear properties to deflect light to the desired receiver;
+Acousto-optic methods that change the refraction index as a result of strain induced by an acoustic field to deflect light (e.g., US 6922498&#160;);
+Amplifiers and attenuators in output fibers that adjust the signal to the digital “0” power range (when the fiber is not switched to) or to the normal power range when it is (e.g., US 7027211&#160;).
+
+See also[edit]
+
+Optical cross-connect
+Optical buffer
+Optical transistor
+Optical mesh network
+
+External links[edit]
+
+Catalyst: Photonic Chip - ABC TV Science
+AlO Bonding for Photonic Packages
+
+Notes[edit]
+
+
+^ GR-1073-CORE, Generic Requirements for Single-mode Fiber Optic Switches, Telcordia.
+^ GR-1295-CORE, Generic Requirements for Remote Fiber Testing Systems (RFTSs), Telcordia.
+
+
+References[edit]
+
+&#160;This article incorporates&#160;public domain material from the General Services Administration document "Federal Standard 1037C".
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Optical_switch&amp;oldid=659390700"					
+				Categories: Fiber-optic communicationsHidden categories: Articles needing additional references from June 2014All articles needing additional referencesWikipedia articles incorporating text from the Federal Standard 1037C				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						Bahasa Indonesiaעברית中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 27 April 2015, at 01:53.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

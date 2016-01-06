@@ -1,0 +1,1385 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Optical Transport Network
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Optical transport network)
+												
+					Jump to:					navigation, 					search
+				
+				ITU-T defines an Optical Transport Network (OTN) as a set of Optical Network Elements (ONE) connected by optical fiber links, able to provide functionality of transport, multiplexing, switching, management, supervision and survivability of optical channels carrying client signals.[1] An ONE may Re-time, Re-Amplify, Re-shape (3R) but it does not have to be 3R— it can be purely photonic.
+
+
+
+Contents
+
+
+1 Standards
+2 Equipment
+
+2.1 Switch fabric
+2.2 FEC Latency
+
+
+3 See also
+4 References
+5 External links
+
+
+
+Standards[edit]
+OTN was designed to provide support for optical networking using wavelength-division multiplexing (WDM) unlike its predecessor SONET/SDH.
+ITU-T Recommendation G.709 is commonly called Optical Transport Network (OTN) (also called digital wrapper technology or optical channel wrapper). As of December 2009 OTN has standardized the following line rates.
+
+
+Signal
+Approximate data rate (Gbit/s)
+Applications
+
+
+OTU1
+2.66
+Transports SONET OC-48 or synchronous digital hierarchy (SDH) STM-16 signal
+
+
+OTU2
+10.70
+Transports an OC-192, STM-64 or wide area network (WAN) physical layer (PHY) for 10 Gigabit Ethernet (10GBASE-W)
+
+
+OTU2e
+11.09
+Transports a 10 Gigabit Ethernet local area network (LAN) PHY coming from IP/Ethernet switches and routers at full line rate (10.3 Gbit/s). This is specified in G.Sup43.
+
+
+OTU2f
+11.32
+Transports a 10 Fibre Channel.
+
+
+OTU3
+43.01
+Transports an OC-768 or STM-256 signal or a 40 Gigabit Ethernet signal.[2]
+
+
+OTU3e2
+44.58
+Transports up to four OTU2e signals
+
+
+OTU4
+112
+Transports a 100 Gigabit Ethernet signal
+
+
+The OTUk (k=1/2/2e/3/3e2/4) is an information structure into which another information structure called ODUk (k=1/2/2e/3/3e2/4) is mapped. The ODUk signal is the server layer signal for client signals. The following ODUk information structures are defined in ITU-T Recommendation G.709
+
+
+Signal
+Data Rate (Gbit/s)
+Typical Applications
+
+
+ODU0
+1.24416
+Transport of a timing transparent transcoded (compressed) 1000BASE-X signal[3] or a stream of packets (such as Ethernet, MPLS or IP) using Generic Framing Procedure
+
+
+ODU1
+2.49877512605042
+Transport of two ODU0 signals or a STS-48/STM-16 signal or a stream of packets (such as Ethernet, MPLS or IP) using Generic Framing Procedure.
+
+
+ODU2
+10.0372739240506
+Transport of up to eight ODU0 signals or up to four ODU1 signals or a STS-192/STM-64 signal or a WAN PHY (10GBASE-W) or a stream of packets (such as Ethernet, MPLS or IP) using Generic Framing Procedure
+
+
+ODU2e
+10.3995253164557
+Transport of a 10 Gigabit Ethernet signal or a timing transparent transcoded (compressed) Fibre Channel 10GFC signal
+
+
+ODU3
+40.3192189830509
+Transport of up to 32 ODU0 signals or up to 16 ODU1 signals or up to four ODU2 signals or a STS-768/STM-256 signal or a timing transparent transcoded 40 Gigabit Ethernet signal or a stream of packets (such as Ethernet, MPLS or IP) using Generic Framing Procedure
+
+
+ODU3e2
+41.7859685595012
+Transport of up to four ODU2e signals
+
+
+ODU4
+104.794445814978
+Transport of up to 80 ODU0 signals or up to 40 ODU1 signals or up to ten ODU2 signals or up to two ODU3 signals or a 100 Gigabit Ethernet signal
+
+
+ODUflex (CBR)
+239⁄238 x client bit rate[3]
+Transport of a constant bitrate signal such as Fibre Channel 8GFC, InfiniBand or Common Public Radio Interface
+
+
+ODUflex (GFP)
+any configured rate[3]
+Transport of a stream of packets (such as Ethernet, MPLS or IP) using Generic Framing Procedure
+
+
+Equipment[edit]
+At a very high level the typical signals that OTN equipment at the Optical Channel layer processes are:
+
+OTN
+SONET/SDH
+Ethernet/FibreChannel
+Packets
+
+A few of the key functions performed on these signals are:
+
+Protocol processing of all the signals . Some of the more complex processes are:
+
+Forward error correction (FEC) on OTN signals
+Multiplexing and de-multiplexing of OTN signals
+Mapping and de-mapping of non-OTN signals into and out of OTN signals
+
+
+Packet processing in conjunction with mapping/de-mapping of packet into and out of OTN signals
+
+Switch fabric[edit]
+The OTN signals at all data-rates have the same frame structure but the frame period reduces as the data-rate increases. As a result, the Time-Slot Interchange (TSI) technique of implementing SONET/SDH switch fabrics is not directly applicable to OTN switch fabrics. OTN switch fabrics are typically implemented using Packet Switch Fabrics.
+FEC Latency[edit]
+On a point-to-point OTN link there is latency due to forward error correction (FEC) processing.
+See also[edit]
+
+G.709
+
+References[edit]
+
+
+^ ITU-T OTN definitions
+^ OTN offers transparent service delivery, Retrieved June 2, 2007
+^ a b c "ODU0 and ODUflex — A Future-Proof Solution for OTN Client Mapping" (PDF). TPACK A/S. February 2010. Archived from the original (PDF) on 12 March 2012.&#160;
+
+
+External links[edit]
+
+Anritsu Poster - Details of all OTN areas including breakdown of the full frame
+Optical Transport Network (OTN) Tutorial, ITU-T, only covers G.709 (2003/03)
+OTN – Transporting Ethernet and SDH/SONET - JDSU Poster
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Optical telecommunication
+
+
+
+
+
+
+Basic
+
+
+
+Smoke signal
+Beacon
+Hydraulic telegraph
+Ships flags
+Semaphore line
+Heliograph
+Signal lamp
+
+
+
+
+
+
+
+
+Advanced
+
+
+
+Fiber-optic telecommunication
+Free-space optical telecommunication
+Optical wireless
+Optical fiber
+
+cable
+connector
+
+
+Optical Carrier
+Photophone
+Intensity modulation
+Modulating retro-reflector
+Optical Transport Network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications
+
+
+
+
+
+
+History
+
+
+
+
+Beacon
+Broadcasting
+Communications satellite
+Computer network
+Drums
+Electrical telegraph
+Fax
+Heliographs
+Hydraulic telegraph
+Internet
+Mass media
+Mobile phone
+Optical telecommunication
+Optical telegraphy
+Photophone
+Prepaid mobile phone
+Radio
+Radiotelephone
+Satellite communications
+Smoke signals
+Telecommunications history
+Telegraphy
+Telephone
+The Telephone Cases
+Television
+Timeline of communication technology
+Undersea telegraph line
+Videoconferencing
+Videophone
+Videotelephony
+
+
+
+
+
+
+
+
+Pioneers
+
+
+
+Edwin Howard Armstrong
+John Logie Baird
+Alexander Graham Bell
+Tim Berners-Lee
+Jagadish Chandra Bose
+Vint Cerf
+Claude Chappe
+Lee de Forest
+Philo Farnsworth
+Reginald Fessenden
+Elisha Gray
+Innocenzo Manzetti
+Guglielmo Marconi
+Antonio Meucci
+Alexander Stepanovich Popov
+Johann Philipp Reis
+Nikola Tesla
+Camille Papin Tissot
+Alfred Vail
+Charles Wheatstone
+Vladimir K. Zworykin
+
+
+
+
+
+
+
+
+Transmission
+media
+
+
+
+Coaxial cable
+Free-space optical
+Molecules (nanoscale networking)
+Optical fiber
+Radio waves
+Telephone lines
+Terrestrial microwave
+
+
+
+
+
+
+
+
+Network topology
+and switching
+
+
+
+Links
+Nodes
+Terminal node
+Network switching&#160;(circuit
+packet)
+Telephone exchange
+
+
+
+
+
+
+
+
+Multiplexing
+
+
+
+Space-division
+Frequency-division
+Time-division
+Polarization-division
+Orbital angular-momentum
+Code-division
+
+
+
+
+
+
+
+
+Networks
+
+
+
+ARPANET
+BITNET
+Cellular network
+Computer
+Ethernet
+FidoNet
+Internet
+ISDN
+LAN
+Mobile
+NGN
+Public Switched Telephone
+Radio
+Telecommunications equipment
+Television
+Telex
+WAN
+Wireless
+World Wide Web
+
+
+
+
+
+
+
+
+By continent
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Africa
+
+
+
+
+
+
+Sovereign states
+
+
+
+Algeria
+Angola
+Benin
+Botswana
+Burkina Faso
+Burundi
+Cameroon
+Cape Verde
+Central African Republic
+Chad
+Comoros
+Democratic Republic of the Congo
+Republic of the Congo
+Djibouti
+Egypt
+Equatorial Guinea
+Eritrea
+Ethiopia
+Gabon
+The Gambia
+Ghana
+Guinea
+Guinea-Bissau
+Ivory Coast (Côte d'Ivoire)
+Kenya
+Lesotho
+Liberia
+Libya
+Madagascar
+Malawi
+Mali
+Mauritania
+Mauritius
+Morocco
+Mozambique
+Namibia
+Niger
+Nigeria
+Rwanda
+São Tomé and Príncipe
+Senegal
+Seychelles
+Sierra Leone
+Somalia
+South Africa
+South Sudan
+Sudan
+Swaziland
+Tanzania
+Togo
+Tunisia
+Uganda
+Zambia
+Zimbabwe
+
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+
+Sahrawi Arab Democratic Republic
+Somaliland
+
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+
+
+Mayotte&#160;/ Réunion&#160;(France)
+Saint Helena&#160;/ Ascension Island&#160;/ Tristan da Cunha&#160;(United Kingdom)
+Western Sahara
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Asia
+
+
+
+
+
+
+Sovereign states
+
+
+
+Afghanistan
+Armenia
+Azerbaijan
+Bahrain
+Bangladesh
+Bhutan
+Brunei
+Cambodia
+China
+Cyprus
+East Timor (Timor-Leste)
+Egypt
+Georgia
+India
+Indonesia
+Iran
+Iraq
+Israel
+Japan
+Jordan
+Kazakhstan
+North Korea
+South Korea
+Kuwait
+Kyrgyzstan
+Laos
+Lebanon
+Malaysia
+Maldives
+Mongolia
+Myanmar
+Nepal
+Oman
+Pakistan
+Philippines
+Qatar
+Russia
+Saudi Arabia
+Singapore
+Sri Lanka
+Syria
+Tajikistan
+Thailand
+Turkey
+Turkmenistan
+United Arab Emirates
+Uzbekistan
+Vietnam
+Yemen
+
+
+
+
+
+
+
+
+States with
+limited recognition
+
+
+
+Abkhazia
+Nagorno-Karabakh
+Northern Cyprus
+Palestine
+South Ossetia
+Taiwan
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+British Indian Ocean Territory
+Christmas Island
+Cocos (Keeling) Islands
+Hong Kong
+Macau
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Europe
+
+
+
+
+
+
+Sovereign states
+
+
+
+Albania
+Andorra
+Armenia
+Austria
+Azerbaijan
+Belarus
+Belgium
+Bosnia and Herzegovina
+Bulgaria
+Croatia
+Cyprus
+Czech Republic
+Denmark
+Estonia
+Finland
+France
+Georgia
+Germany
+Greece
+Hungary
+Iceland
+Ireland
+Italy
+Kazakhstan
+Latvia
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Malta
+Moldova
+Monaco
+Montenegro
+Netherlands
+Norway
+Poland
+Portugal
+Romania
+Russia
+San Marino
+Serbia
+Slovakia
+Slovenia
+Spain
+Sweden
+Switzerland
+Turkey
+Ukraine
+United Kingdom
+
+
+
+
+
+
+
+
+States with limited
+recognition
+
+
+
+Abkhazia
+Kosovo
+Nagorno-Karabakh
+Northern Cyprus
+South Ossetia
+Transnistria
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+Åland
+Faroe Islands
+Gibraltar
+Guernsey
+Jersey
+Isle of Man
+Svalbard
+
+
+
+
+
+
+
+
+Other entities
+
+
+
+European Union
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in North America
+
+
+
+
+
+
+Sovereign states
+
+
+
+Antigua and Barbuda
+Bahamas
+Barbados
+Belize
+Canada
+Costa Rica
+Cuba
+Dominica
+Dominican Republic
+El Salvador
+Grenada
+Guatemala
+Haiti
+Honduras
+Jamaica
+Mexico
+Nicaragua
+Panama
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Trinidad and Tobago
+United States
+
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+
+Anguilla
+Aruba
+Bermuda
+Bonaire
+British Virgin Islands
+Cayman Islands
+Curaçao
+Greenland
+Guadeloupe
+Martinique
+Montserrat
+Navassa Island
+Puerto Rico
+Saint Barthélemy
+Saint Martin
+Saint Pierre and Miquelon
+Saba
+Sint Eustatius
+Sint Maarten
+Turks and Caicos Islands
+United States Virgin Islands
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in Oceania
+
+
+
+
+
+
+Sovereign states
+
+
+
+Australia
+Federated States of Micronesia
+Fiji
+Kiribati
+Marshall Islands
+Nauru
+New Zealand
+Palau
+Papua New Guinea
+Samoa
+Solomon Islands
+Tonga
+Tuvalu
+Vanuatu
+
+
+
+
+
+
+
+
+Associated states
+of New Zealand
+
+
+
+Cook Islands
+Niue
+
+
+
+
+
+
+
+
+Dependencies
+and other territories
+
+
+
+American Samoa
+Christmas Island
+Cocos (Keeling) Islands
+Easter Island
+French Polynesia
+Guam
+Hawaii
+New Caledonia
+Norfolk Island
+Northern Mariana Islands
+Pitcairn Islands
+Tokelau
+Wallis and Futuna
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Telecommunications in South America
+
+
+
+
+
+
+Sovereign states
+
+
+
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Guyana
+Paraguay
+Peru
+Suriname
+Uruguay
+Venezuela
+
+
+
+
+
+
+
+
+
+Dependencies and
+other territories
+
+
+
+
+Falkland Islands
+French Guiana
+South Georgia and the South Sandwich Islands
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Telecommunications
+ Telecommunication
+ Telecommunication
+ Mass surveillance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sub-disciplines of computing
+
+
+
+
+
+
+
+
+
+Hardware
+Software
+Firmware
+
+
+
+
+
+
+
+
+Information system
+
+
+
+Information security
+Multimedia database
+Intelligent database
+Big data
+Knowledge-based systems
+Recommender System
+Geographic information systems
+Decision support system
+Data engineering
+Knowledge engineering
+Fuzzy logic
+Data analysis
+System analysis and design
+Project management
+Knowledge management
+Data integration
+High-performance computing
+Semantic web
+
+
+
+
+
+
+
+
+Computer science
+
+
+
+Database management system
+Communications system
+Computational geometry
+Machine learning
+Data mining
+Parallel programming
+Coding theory
+Theory of computation
+Constraint programming
+Computational biology (Bioinformatics)
+Design and analysis of algorithms
+Information retrieval
+Computational science
+Symbolic computation
+Distributed computing
+Evolutionary computation
+Natural computation
+Combinatorial optimization
+Parallel processing
+
+
+
+
+
+
+
+
+Computer engineering
+
+
+
+Multimedia
+Satellite navigation (GNSS)
+Embedded systems
+Real-time computing
+Computer architecture
+Pair programming
+System programming
+Neural networks
+Speech recognition
+Signal analysis
+Computer vision (Visual computing)
+IC Design
+Voice over IP
+Speech synthesis
+Human-Computer Interaction
+Microprocessor
+Image processing
+Natural language processing
+Speech processing
+Digital signal processing
+
+
+
+
+
+
+
+
+Software engineering
+
+
+
+Software maintenance
+Formal methods
+Software quality
+Software quality assurance
+Measurement Software
+Fault-tolerant software
+Software testing
+Enterprise architecture
+Software architecture
+Software engineering economics
+Agile software development
+Software design pattern
+Software modelling
+Systems analyst
+Object-oriented analysis and design (UML)
+Requirements analysis
+Software development
+Software configuration management
+Software project management
+Software engineering management
+Software development process (Software release life cycle)
+Software design
+Software deployment
+Software enhancement
+
+
+
+
+
+
+
+
+Computer network
+
+
+
+Network security
+Secure electronic transaction
+Network Performance Evaluation (QoS)
+Cloud computing
+Routing
+Distributed systems (Distributed database)
+Information theory
+Wireless network
+Next-generation network
+Cellular network
+Optical transport network (Optical networking)
+Cryptography
+Network simulation
+Pattern recognition
+Network administrators
+Network equipment
+Network design
+Ubiquitous and Mobile computing
+Data center
+Mobile communications
+Digital communication
+Communications satellite
+Telecommunication (Telecommunications network)
+
+
+
+
+
+
+
+
+Business informatics
+
+
+
+ITIL
+ITSM
+Enterprise resource planning
+Electronic business
+Business intelligence
+Human Resources Development
+Security management
+Configuration management
+Technology management
+Power management
+Service management
+Project management
+Systems management
+Network management
+Content management
+Customer relationship management
+Incident management
+Asset management
+Integrated management
+Communications management
+System administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Optical_Transport_Network&amp;oldid=683317585"					
+				Categories: Optical Transport Network				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						DeutschفارسیItalianoPortuguêsУкраїнська					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 29 September 2015, at 15:09.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

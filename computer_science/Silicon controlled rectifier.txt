@@ -1,0 +1,550 @@
+
+
+
+
+Silicon controlled rectifier - Wikipedia, the free encyclopedia
+document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );
+window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Silicon_controlled_rectifier","wgTitle":"Silicon controlled rectifier","wgCurRevisionId":686770958,"wgRevisionId":686770958,"wgArticleId":319515,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Solid state switches","Power electronics"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Silicon_controlled_rectifier","wgRelevantArticleId":319515,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Silicon_Controlled_Rectifier","wikilove-recipient":"","wikilove-anon":0,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgGatherPageImageThumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Thyristor_circuit_symbol.svg/100px-Thyristor_circuit_symbol.svg.png","wgULSAcceptLanguageList":["en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising"],"wgInternalRedirectTargetUrl":"/wiki/Silicon_controlled_rectifier","wgWikibaseItemId":"Q3629214","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.bannerController","skins.vector.js"]);
+} );
+
+
+
+a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{behavior:url("/w/static/1.27.0-wmf.7/skins/Vector/csshover.min.htc")}
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Silicon controlled rectifier
+									
+									From Wikipedia, the free encyclopedia
+								  (Redirected from Silicon Controlled Rectifier)
+												
+					Jump to:					navigation, 					search
+				
+				
+Silicon controlled rectifier
+
+
+Silicon controlled rectifier
+
+
+
+Type
+Passive
+
+
+Invented
+Gordon Hall and Frank W. "Bill" Gutzwiller
+
+
+First production
+General Electric, 1957
+
+
+Pin configuration
+anode, gate and cathode
+
+
+Electronic symbol
+
+
+
+
+
+A silicon controlled rectifier or semiconductor-controlled rectifier is a four-layer solid-state current-controlling device. The name "silicon controlled rectifier" is General Electric's trade name for a type of thyristor. The SCR was developed by a team of power engineers led by Gordon Hall[1] and commercialized by Frank W. "Bill" Gutzwiller in 1957.
+Some sources define silicon controlled rectifiers and thyristors as synonymous,[2] other sources define silicon controlled rectifiers as a proper subset of the set of thyristors, those being devices with at least four layers of alternating n- and p-type material.[3][4] According to Bill Gutzwiller, the terms "SCR" and "controlled rectifier" were earlier, and "thyristor" was applied later, as usage of the device spread internationally.[5]
+SCRs are unidirectional devices (i.e. can conduct current only in one direction) as opposed to TRIACs, which are bidirectional (i.e. current can flow through them in either direction). SCRs can be triggered normally only by currents going into the gate as opposed to TRIACs, which can be triggered normally by either a positive or a negative current applied to its gate electrode.
+
+
+
+Contents
+
+
+1 Construction
+2 Modes of operation
+
+2.1 Forward blocking mode
+2.2 Forward conduction mode
+2.3 Reverse blocking mode
+
+
+3 Thyristor turn-on methods
+4 Application of SCRs
+5 Compared to SCSs
+6 Compared to TRIACs
+
+6.1 See also
+6.2 References
+
+
+7 Further reading
+
+7.1 External links
+
+
+
+
+
+Construction[edit]
+The silicon control rectifier (SCR) consists of four layers of semiconductors, which form NPNP or PNPN structures. It has three junctions, labeled J1, J2 and J3, and three terminals. The anode terminal of an SCR is connected to the p-type material of a PNPN structure, and the cathode terminal is connected to the n-type layer, while the gate of the SCR is connected to the p-type material nearest to the cathode.[6]
+An SCR consists of four layers of alternating p- and n-type semiconductor materials. Silicon is used as the intrinsic semiconductor, to which the proper dopants are added. The junctions are either diffused or alloyed. The planar construction is used for low-power SCRs (and all the junctions are diffused). The mesa-type construction is used for high-power SCRs. In this case, junction J2 is obtained by the diffusion method, and then the outer two layers are alloyed to it, since the PNPN pellet is required to handle large currents. It is properly braced with tungsten or molybdenum plates to provide greater mechanical strength. One of these plates is hard-soldered to a copper stud, which is threaded for attachment of heat sink. The doping of PNPN depends on the application of SCR, since its characteristics are similar to those of the thyratron. Today, the term "thyristor" applies to the larger family of multilayer devices that exhibit bistable state-change behaviour, that is, switching either on or off.
+The operation of an SCR and other thyristors can be understood in terms of a pair of tightly coupled bipolar junction transistors, arranged to cause the self-latching action:
+
+
+
+Modes of operation[edit]
+There are three modes of operation for an SCR depending upon the biasing given to it:
+
+Forward blocking mode (off state)
+Forward conduction mode (on state)
+Reverse blocking mode (off state)
+
+Forward blocking mode[edit]
+In this mode of operation, the anode is given a positive voltage while the cathode is given a negative voltage, keeping the gate at zero potential i.e. disconnected. In this case junction J1 and J3 are forward-biased, while J2 is reverse-biased, due to which only a small leakage current exists from the anode to the cathode until the applied voltage reaches its breakover value, at which J2 undergoes avalanche breakdown, and at this breakover voltage it starts conducting, but below breakover voltage it offers very high resistance to the current and is said to be in the off state.
+Forward conduction mode[edit]
+SCR can be brought from blocking mode to conduction mode in two ways: either by increasing the voltage across anode to cathode beyond breakover voltage or by applying positive pulse at gate. Once SCR starts conducting, no more gate voltage is required to maintain it in the on state. There are two ways to turn it off: 1. Reduce the current through it below a minimal value called the holding current and 2. With the gate turned off, short out the anode and cathode momentarily with a push-button switch or transistor across the junction.
+Reverse blocking mode[edit]
+SCRs are available with reverse blocking capability, which adds to the forward voltage drop because of the need to have a long, low-doped P1 region. (If one cannot determine which region is P1, a labeled diagram of layers and junctions can help). Usually, the reverse blocking voltage rating and forward blocking voltage rating are the same. The typical application for reverse blocking SCR is in current-source inverters.
+SCRs incapable of blocking reverse voltage are known as asymmetrical SCR, abbreviated ASCR. They typically have a reverse breakdown rating in the tens of volts. ASCRs are used where either a reverse conducting diode is applied in parallel (for example, in voltage-source inverters) or where reverse voltage would never occur (for example, in switching power supplies or DC traction choppers).
+Asymmetrical SCRs can be fabricated with a reverse conducting diode in the same package. These are known as RCTs, for reverse conducting thyristors.
+Thyristor turn-on methods[edit]
+
+forward-voltage triggering
+gate triggering
+dv/dt triggering
+temperature triggering
+light triggering
+
+Forward-voltage triggering occurs when the anode–cathode forward voltage is increased with the gate circuit opened. This is known as avalanche breakdown, during which junction J2 will break down. At sufficient voltages, the thyristor changes to its on state with low voltage drop and large forward current. In this case, J1 and J3 are already forward-biased.
+Application of SCRs[edit]
+SCRs are mainly used in devices where the control of high power, possibly coupled with high voltage, is demanded. Their operation makes them suitable for use in medium- to high-voltage AC power control applications, such as lamp dimming, regulators and motor control.
+SCRs and similar devices are used for rectification of high-power AC in high-voltage direct-current power transmission. They are also used in the control of welding machines, mainly MTAW (metal tungsten arc welding) and GTAW (gas tungsten arc welding) process.
+Compared to SCSs[edit]
+A silicon controlled switch (SCS) behaves nearly the same way as an SCR, aside from a few distinctions. Unlike an SCR, a SCS switches off when a positive voltage/input current is applied to another anode gate lead. Unlike an SCR, a SCS can also be triggered into conduction when a negative voltage/output current is applied to that same lead.
+SCSs are useful in practically all circuits that need a switch that turns on/off through two distinct control pulses. This includes power-switching circuits, logic circuits, lamp drivers, counters, etc.
+Compared to TRIACs[edit]
+TRIACs resemble SCRs in that they both act as electrically controlled switches. Unlike SCRs, TRIACS can pass current in either direction. Thus, TRIACs are particularly useful for AC applications. TRIACs have three leads: a gate lead and two conducting leads, referred to as MT1 and MT2. If no current/voltage is applied to the gate lead, the TRIAC switches off. On the other hand, if the trigger voltage is applied to the gate lead, the TRIAC switches on.
+TRIACs are suitable for light-dimming circuits, phase-control circuits, AC power-switching circuits, AC motor control circuits, etc.
+See also[edit]
+
+Dimmer
+High-voltage direct current
+Gate turn-off thyristor
+Insulated-gate bipolar transistor
+Integrated gate-commutated thyristor
+Thyristor
+TRIAC
+Voltage regulator
+Snubber
+Crowbar (circuit)
+DIAC
+BJT
+
+References[edit]
+
+
+^ Ward, Jack. "The Early History of the Silicon Controlled Rectifier". p.&#160;6. Retrieved 12 April 2014.&#160;
+^ Christiansen, Donald; Alexander, Charles K. (2005); Standard Handbook of Electrical Engineering (5th ed.). McGraw-Hill, ISBN 0-07-138421-9
+^ International Electrotechnical Commission 60747-6 standard
+^ Dorf, Richard C., editor (1997), Electrical Engineering Handbook (2nd ed.). CRC Press, IEEE Press, Ron Powers Publisher, ISBN 0-8493-8574-1
+^ Ward, Jack. "The Early History of the Silicon Controlled Rectifier". p.&#160;7. Retrieved 12 April 2014.&#160;
+^ http://www.daenotes.com/electronics/industrial-electronics/silicon-controlled-rectifiers-scr
+
+
+Further reading[edit]
+
+ON Semiconductor (November 2006). Thyristor Theory and Design Considerations (PDF) (rev.1, HBD855/D ed.). p.&#160;240.&#160;
+G. K. Mithal. Industrial and Power Electronics.&#160;
+K. B. Khanchandani. Power Electronics.&#160;
+
+External links[edit]
+
+SCR at AllAboutCircuits
+SCR Circuit Design
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Electronic components
+
+
+
+
+
+
+Semiconductor devices
+
+
+
+Avalanche diode
+Bipolar junction transistor (BJT)
+Darlington transistor
+DIAC
+Diode
+Field-effect transistor (FET)
+Heterostructure barrier varactor
+Insulated-gate bipolar transistor (IGBT)
+Integrated circuit (IC)
+JFET
+Light-emitting diode (LED)
+Memistor
+Memristor
+MOSFET
+Photodetector
+Photodiode
+PIN diode
+Schottky diode
+Silicon-controlled rectifier (SCR)
+Thyristor
+Transistor
+TRIAC
+Unijunction transistor (UJT)
+Varicap
+Zener diode
+
+
+
+
+
+
+
+
+Voltage regulators
+
+
+
+Linear regulator
+Low-dropout regulator
+Switching regulator
+Buck
+Boost
+Buck-boost
+Split-pi
+Ćuk
+SEPIC
+Charge pump
+Switched capacitor
+
+
+
+
+
+
+
+
+Vacuum tubes
+
+
+
+Audion
+Beam tetrode
+Barretter
+Compactron
+Diode
+Fleming valve
+Heptode
+Hexode
+Nonode
+Nuvistor
+Octode
+Pentagrid
+Pentode
+Photomultiplier
+Selectron tube
+Tetrode
+Triode
+Williams tube
+
+
+
+
+
+
+
+
+Vacuum tubes (RF)
+
+
+
+Backward-wave oscillator (BWO)
+Cavity magnetron
+Crossed-field amplifier (CFA)
+Gyrotron
+Inductive output tube (IOT)
+Klystron
+Maser
+Phototube
+Traveling-wave tube (TWT)
+
+
+
+
+
+
+
+
+Cathode ray tubes
+
+
+
+Beam deflection tube
+Charactron
+Iconoscope
+Magic eye tube
+Monoscope
+Storage tube
+Video camera tube
+
+
+
+
+
+
+
+
+Gas-filled tubes
+
+
+
+Cold cathode
+Crossatron
+Dekatron
+Geiger–Müller tube
+Ignitron
+Krytron
+Mercury-arc valve
+Neon lamp
+Nixie tube
+Thyratron
+Trigatron
+Voltage-regulator tube
+
+
+
+
+
+
+
+
+Adjustable
+
+
+
+Potentiometer
+Variable capacitor
+
+
+
+
+
+
+
+
+Passive
+
+
+
+Connector
+
+Audio and video
+Electrical power
+RF
+
+
+Electrolytic detector
+Ferrite
+Fuse
+
+resettable
+
+
+Resistor
+Thermistor
+Transformer
+Varistor
+Wollaston wire
+
+
+
+
+
+
+
+
+Reactive
+
+
+
+Capacitor (types)
+Ceramic resonator
+Crystal oscillator
+Inductor
+Relay Switches (Reed relay, Mercury switch)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Silicon_controlled_rectifier&amp;oldid=686770958"					
+				Categories: Solid state switchesPower electronics				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						CatalàDeutschEspañolفارسیहिन्दीမြန်မာဘာသာSvenskaไทย					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 21 October 2015, at 05:43.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

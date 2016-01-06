@@ -1,0 +1,994 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Software development process
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				
+
+
+
+
+It has been suggested that this article be merged into Software development. (Discuss) Proposed since August 2014.
+
+
+
+
+
+
+
+This article needs additional citations for verification. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2010)
+
+
+
+
+Software development process
+
+
+Core activities
+
+
+
+
+Requirements
+Design
+Construction
+Testing
+Debugging
+Deployment
+Maintenance
+
+
+
+
+Paradigms and models
+
+
+
+
+Software engineering
+Waterfall
+Prototyping
+Incremental
+V-Model
+Dual Vee Model
+Spiral
+IID
+Agile
+Lean
+DevOps
+
+
+
+
+Methodologies and frameworks
+
+
+
+
+Cleanroom
+TSP
+PSP
+RAD
+DSDM
+MSF
+Scrum
+Kanban
+UP
+XP
+TDD
+ATDD
+BDD
+FDD
+DDD
+MDD
+
+
+
+
+Supporting disciplines
+
+
+
+
+Configuration management
+Documentation
+Software Quality assurance (SQA)
+Project management
+User experience
+
+
+
+
+Tools
+
+
+
+
+Compiler
+Debugger
+Profiler
+GUI designer
+Modeling
+IDE
+Build automation
+Testing
+
+
+
+
+Standards and BOKs
+
+
+
+
+CMMI
+IEEE standards
+ISO 9001
+ISO/IEC standards
+SWEBOK
+PMBOK
+
+
+
+
+
+
+
+v
+t
+e
+
+
+
+
+
+In software engineering, a software development methodology (also known as a system development methodology, software development life cycle, software development process, software process) is a splitting of software development work into distinct phases (or stages) containing activities with the intent of better planning and management. It is often considered a subset of the systems development life cycle. The methodology may include the pre-definition of specific deliverables and artifacts that are created and completed by a project team to develop or maintain an application.[1]
+Common methodologies include waterfall, prototyping, iterative and incremental development, spiral development, rapid application development, extreme programming and various types of agile methodology. Some people consider a life-cycle "model" a more general term for a category of methodologies and a software development "process" a more specific term to refer to a specific process chosen by a specific organization. For example, there are many specific software development processes that fit the spiral life-cycle model.
+
+
+
+Contents
+
+
+1 In practice
+2 History
+3 Approaches
+
+3.1 Waterfall development
+3.2 Prototyping
+3.3 Incremental development
+3.4 Iterative and incremental development
+3.5 Spiral development
+3.6 Rapid application development
+3.7 Agile development
+3.8 Code and fix
+3.9 Lightweight methodologies
+3.10 Other
+
+
+4 Process meta-models
+5 Formal methods
+6 See also
+7 References
+8 External links
+
+
+
+In practice[edit]
+
+
+
+
+The three basic approaches applied to software development methodology frameworks.
+
+
+A variety of such frameworks have evolved over the years, each with its own recognized strengths and weaknesses. One software development methodology framework is not necessarily suitable for use by all projects. Each of the available methodology frameworks are best suited to specific kinds of projects, based on various technical, organizational, project and team considerations.[1]
+Software development organizations implement process methodologies to ease the process of development. Sometimes, contractors may require methodologies employed, an example is the U.S. defense industry, which requires a rating based on process models to obtain contracts. The international standard for describing the method of selecting, implementing and monitoring the life cycle for software is ISO/IEC 12207.
+A decades-long goal has been to find repeatable, predictable processes that improve productivity and quality. Some try to systematize or formalize the seemingly unruly task of designing software. Others apply project management techniques to designing software. Without effective project management, software projects can easily be delivered late or over budget. With large numbers of software projects not meeting their expectations in terms of functionality, cost, or delivery schedule,[citation needed] it is effective project management that appears to be lacking.
+Organizations may create a Software Engineering Process Group (SEPG), which is the focal point for process improvement. Composed of line practitioners who have varied skills, the group is at the center of the collaborative effort of everyone in the organization who is involved with software engineering process improvement.
+A particular development team may also agree to programming environment details, such as which integrated development environment is used, and one or more dominant programming paradigms, programming style rules, or choice of specific software libraries or software frameworks. These details are generally not dictated by the choice of model or general methodology.
+History[edit]
+The software development methodology (also known as SDM) framework didn't emerge until the 1960s. According to Elliott (2004) the systems development life cycle (SDLC) can be considered to be the oldest formalized methodology framework for building information systems. The main idea of the SDLC has been "to pursue the development of information systems in a very deliberate, structured and methodical way, requiring each stage of the life cycle from inception of the idea to delivery of the final system, to be carried out rigidly and sequentially"[2] within the context of the framework being applied. The main target of this methodology framework in the 1960s was "to develop large scale functional business systems in an age of large scale business conglomerates. Information systems activities revolved around heavy data processing and number crunching routines".[2]
+Methodologies, processes, and frameworks range from specific proscriptive steps that can be used directly by an organization in day-to-day work, to flexible frameworks that an organization uses to generate a custom set of steps tailored to the needs of a specific project or group. In some cases a "sponsor" or "maintenance" organization distributes an official set of documents that describe the process. Specific examples include:
+
+1970s
+
+
+Structured programming since 1969
+Cap Gemini SDM, originally from PANDATA, the first English translation was published in 1974. SDM stands for System Development Methodology
+
+
+1980s
+
+
+Structured systems analysis and design method (SSADM) from 1980 onwards
+Information Requirement Analysis/Soft systems methodology
+
+
+1990s
+
+
+Object-oriented programming (OOP) developed in the early 1960s, and became a dominant programming approach during the mid-1990s
+Rapid application development (RAD), since 1991
+Dynamic systems development method (DSDM), since 1994
+Scrum, since 1995
+Team software process, since 1998
+Rational Unified Process (RUP), maintained by IBM since 1998
+Extreme programming, since 1999
+
+
+2000s
+
+
+Agile Unified Process (AUP) maintained since 2005 by Scott Ambler
+
+Approaches[edit]
+Several software development approaches have been used since the origin of information technology, in two main categories. Typically an approach or a combination of approaches is chosen by management or a development team.
+"Traditional" methodologies such as waterfall that have distinct phases are sometimes known as software development life cycle (SDLC) methodologies, though this term could also be used more generally to refer to any methodology. A "life cycle" approach with distinct phases is in contrast to Agile approaches which define a process of iteration, but where design, construction, and deployment of different pieces can occur simultaneously.
+Waterfall development[edit]
+Main article: Waterfall model
+
+
+
+
+The activities of the software development process represented in the waterfall model. There are several other models to represent this process.
+
+
+The waterfall model is a sequential development approach, in which development is seen as flowing steadily downwards (like a waterfall) through several phases, typically:
+
+Requirements analysis resulting in a software requirements specification
+Software design
+Implementation
+Testing
+Integration, if there are multiple subsystems
+Deployment (or Installation)
+Maintenance
+
+The first formal description of the method is often cited as an article published by Winston W. Royce[3] in 1970 although Royce did not use the term "waterfall" in this article. The basic principles are:[1]
+
+Project is divided into sequential phases, with some overlap and splashback acceptable between phases.
+Emphasis is on planning, time schedules, target dates, budgets and implementation of an entire system at one time.
+Tight control is maintained over the life of the project via extensive written documentation, formal reviews, and approval/signoff by the user and information technology management occurring at the end of most phases before beginning the next phase.
+
+The waterfall model is a traditional engineering approach applied to software engineering. A strict waterfall approach discourages revisiting and revising any prior phase once it is complete. This "inflexibility" in a pure waterfall model has been a source of criticism by supporters of other more "flexible" models. It has been widely blamed for several large-scale government projects running over budget, over time and sometimes failing to deliver on requirements due to the Big Design Up Front approach. Except when contractually required, the waterfall model has been largely superseded by more flexible and versatile methodologies developed specifically for software development. See Criticism of Waterfall model.
+The waterfall model is also commonly taught with the mnemonic A Dance in the Dark Every Monday, representing Analysis, Design, Implementation, Testing, Documentation and Execution, and Maintenance.[citation needed]
+Prototyping[edit]
+Software prototyping, is the development approach of activities during software development, the creation of prototypes, i.e., incomplete versions of the software program being developed.
+The basic principles are:[1]
+
+Not a standalone, complete development methodology, but rather an approach to handle selected parts of a larger, more traditional development methodology (i.e. incremental, spiral, or rapid application development (RAD)).
+Attempts to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process.
+User is involved throughout the development process, which increases the likelihood of user acceptance of the final implementation.
+Small-scale mock-ups of the system are developed following an iterative modification process until the prototype evolves to meet the users’ requirements.
+While most prototypes are developed with the expectation that they will be discarded, it is possible in some cases to evolve from prototype to working system.
+A basic understanding of the fundamental business problem is necessary to avoid solving the wrong problems.
+
+Incremental development[edit]
+Various methods are acceptable for combining linear and iterative systems development methodologies, with the primary objective of each being to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process.
+The basic principles are:[1]
+
+A series of mini-Waterfalls are performed, where all phases of the Waterfall are completed for a small part of a system, before proceeding to the next increment, or
+Overall requirements are defined before proceeding to evolutionary, mini-Waterfall development of individual increments of a system, or
+The initial software concept, requirements analysis, and design of architecture and system core are defined via Waterfall, followed by iterative Prototyping, which culminates in installing the final prototype, a working system.
+
+Iterative and incremental development[edit]
+Main article: Iterative and incremental development
+Iterative development[4] prescribes the construction of initially small but ever-larger portions of a software project to help all those involved to uncover important issues early before problems or faulty assumptions can lead to disaster.
+Spiral development[edit]
+
+
+
+
+Spiral model (Boehm, 1988)
+
+
+Main article: Spiral model
+In 1988, Barry Boehm published a formal software system development "spiral model," which combines some key aspect of the waterfall model and rapid prototyping methodologies, in an effort to combine advantages of top-down and bottom-up concepts. It provided emphasis in a key area many felt had been neglected by other methodologies: deliberate iterative risk analysis, particularly suited to large-scale complex systems.
+The basic principles are:[1]
+
+Focus is on risk assessment and on minimizing project risk by breaking a project into smaller segments and providing more ease-of-change during the development process, as well as providing the opportunity to evaluate risks and weigh consideration of project continuation throughout the life cycle.
+"Each cycle involves a progression through the same sequence of steps, for each part of the product and for each of its levels of elaboration, from an overall concept-of-operation document down to the coding of each individual program."[5]
+Each trip around the spiral traverses four basic quadrants: (1) determine objectives, alternatives, and constraints of the iteration; (2) evaluate alternatives; Identify and resolve risks; (3) develop and verify deliverables from the iteration; and (4) plan the next iteration.[6]
+Begin each cycle with an identification of stakeholders and their "win conditions", and end each cycle with review and commitment.[7]
+
+Rapid application development[edit]
+
+
+
+
+Rapid Application Development (RAD) Model
+
+
+Rapid application development (RAD) is a software development methodology, which favors iterative development and the rapid construction of prototypes instead of large amounts of up-front planning. The "planning" of software developed using RAD is interleaved with writing the software itself. The lack of extensive pre-planning generally allows software to be written much faster, and makes it easier to change requirements.
+The rapid development process starts with the development of preliminary data models and business process models using structured techniques. In the next stage, requirements are verified using prototyping, eventually to refine the data and process models. These stages are repeated iteratively; further development results in "a combined business requirements and technical design statement to be used for constructing new systems".[8]
+The term was first used to describe a software development process introduced by James Martin in 1991. According to Whitten (2003), it is a merger of various structured techniques, especially data-driven Information Engineering, with prototyping techniques to accelerate software systems development.[8]
+The basic principles of rapid application development are:[1]
+
+Key objective is for fast development and delivery of a high quality system at a relatively low investment cost.
+Attempts to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process.
+Aims to produce high quality systems quickly, primarily via iterative Prototyping (at any stage of development), active user involvement, and computerized development tools. These tools may include Graphical User Interface (GUI) builders, Computer Aided Software Engineering (CASE) tools, Database Management Systems (DBMS), fourth-generation programming languages, code generators, and object-oriented techniques.
+Key emphasis is on fulfilling the business need, while technological or engineering excellence is of lesser importance.
+Project control involves prioritizing development and defining delivery deadlines or “timeboxes”. If the project starts to slip, emphasis is on reducing requirements to fit the timebox, not in increasing the deadline.
+Generally includes joint application design (JAD), where users are intensely involved in system design, via consensus building in either structured workshops, or electronically facilitated interaction.
+Active user involvement is imperative.
+Iteratively produces production software, as opposed to a throwaway prototype.
+Produces documentation necessary to facilitate future development and maintenance.
+Standard systems analysis and design methods can be fitted into this framework.
+
+Agile development[edit]
+Main article: Agile software development
+"Agile software development" refers to a group of software development methodologies based on iterative development, where requirements and solutions evolve via collaboration between self-organizing cross-functional teams. The term was coined in the year 2001 when the Agile Manifesto was formulated.
+Agile software development uses iterative development as a basis but advocates a lighter and more people-centric viewpoint than traditional approaches. Agile processes fundamentally incorporate iteration and the continuous feedback that it provides to successively refine and deliver a software system.
+There are many agile methodologies, including:
+
+Dynamic systems development method (DSDM)
+Kanban
+Scrum
+
+Code and fix[edit]
+Main article: Cowboy coding
+"Code and fix" development is not so much a deliberate strategy as a result of schedule pressure on software developers.[9] Without much of a design in the way, programmers immediately begin producing code. At some point, testing begins (often late in the development cycle), and the unavoidable bugs must then be fixed before the product can be shipped. Programming without a planned-out design is also known as cowboy coding.
+Lightweight methodologies[edit]
+Main article: Lightweight methodology
+A lightweight methodology has a small number of rules. Some of these methodologies are also considered "agile".
+
+Adaptive Software Development by Jim Highsmith, described in his 1999 book Adaptive Software Development
+Crystal Clear family of methodologies with Alistair Cockburn,
+Extreme Programming (XP), promoted by people such as Kent Beck and Martin Fowler. In extreme programming, the phases are carried out in extremely small (or "continuous") steps compared to the older, "batch" processes. The (intentionally incomplete) first pass through the steps might take a day or a week, rather than the months or years of each complete step in the Waterfall model. First, one writes automated tests, to provide concrete goals for development. Next is coding (by programmers working in pairs, a technique known as "pair programming"), which is complete when all the tests pass, and the programmers can't think of any more tests that are needed. Design and architecture emerge from refactoring, and come after coding. The same people who do the coding do design. (Only the last feature — merging design and code — is common to all the other agile processes.) The incomplete but functional system is deployed or demonstrated for (some subset of) the users (at least one of which is on the development team). At this point, the practitioners start again on writing tests for the next most important part of the system.[10]
+Feature Driven Development (FDD) developed (1999) by Jeff De Luca and Peter Coad
+ICONIX - UML-based object modeling with use cases, a lightweight precursor to the Rational Unified Process
+
+Other[edit]
+Other high-level software project methodologies include:
+
+Chaos model - The main rule is always resolve the most important issue first.
+Incremental funding methodology - an iterative approach
+Structured systems analysis and design method - a specific version of waterfall
+Slow programming, as part of the larger Slow Movement, emphasizes careful and gradual work without (or minimal) time pressures. Slow programming aims to avoid bugs and overly quick release schedules.
+V-Model (software development) - an extension of the waterfall model
+Unified Process (UP) is an iterative software development methodology framework, based on Unified Modeling Language (UML). UP organizes the development of software into four phases, each consisting of one or more executable iterations of the software at that stage of development: inception, elaboration, construction, and guidelines. Many tools and products exist to facilitate UP implementation. One of the more popular versions of UP is the Rational Unified Process (RUP).
+
+Process meta-models[edit]
+Some "process models" are abstract descriptions for evaluating, comparing, and improving the specific process adopted by an organization.
+
+ISO/IEC 12207 is the international standard describing the method to select, implement, and monitor the life cycle for software.
+The Capability Maturity Model Integration (CMMI) is one of the leading models and based on best practice. Independent assessments grade organizations on how well they follow their defined processes, not on the quality of those processes or the software produced. CMMI has replaced CMM.
+ISO 9000 describes standards for a formally organized process to manufacture a product and the methods of managing and monitoring progress. Although the standard was originally created for the manufacturing sector, ISO 9000 standards have been applied to software development as well. Like CMMI, certification with ISO 9000 does not guarantee the quality of the end result, only that formalized business processes have been followed.
+ISO/IEC 15504 Information technology — Process assessment also known as Software Process Improvement Capability Determination (SPICE), is a "framework for the assessment of software processes". This standard is aimed at setting out a clear model for process comparison. SPICE is used much like CMMI. It models processes to manage, control, guide and monitor software development. This model is then used to measure what a development organization or project team actually does during software development. This information is analyzed to identify weaknesses and drive improvement. It also identifies strengths that can be continued or integrated into common practice for that organization or team.
+Soft systems methodology - a general method for improving management processes
+Method engineering - a general method for improving information system processes
+
+Formal methods[edit]
+Formal methods are mathematical approaches to solving software (and hardware) problems at the requirements, specification, and design levels. Formal methods are most likely to be applied to safety-critical or security-critical software and systems, such as avionics software. Software safety assurance standards, such as DO-178B, DO-178C, and Common Criteria demand formal methods at the highest levels of categorization.
+For sequential software, examples of formal methods include the B-Method, the specification languages used in automated theorem proving, RAISE, and the Z notation.
+Formalization of software development is creeping in, in other places, with the application of Object Constraint Language (and specializations such as Java Modeling Language) and especially with model-driven architecture allowing execution of designs, if not specifications.
+For concurrent software and systems, Petri nets, process algebra, and finite state machines (which are based on automata theory - see also virtual finite state machine or event driven finite state machine) allow executable software specification and can be used to build up and validate application behavior.
+Another emerging trend in software development is to write a specification in some form of logic—usually a variation of first-order logic (FOL)—and then to directly execute the logic as though it were a program. The OWL language, based on Description Logic (DL), is an example. There is also work on mapping some version of English (or another natural language) automatically to and from logic, and executing the logic directly. Examples are Attempto Controlled English, and Internet Business Logic, which do not seek to control the vocabulary or syntax. A feature of systems that support bidirectional English-logic mapping and direct execution of the logic is that they can be made to explain their results, in English, at the business or scientific level.
+See also[edit]
+
+Computer-aided software engineering (some of these tools support specific methodologies)
+List of software development philosophies
+Outline of software engineering
+Project management
+Software development
+Software development effort estimation
+Software release life cycle
+
+References[edit]
+
+
+^ a b c d e f g Centers for Medicare &amp; Medicaid Services (CMS) Office of Information Service (2008). Selecting a development approach. Webarticle. United States Department of Health and Human Services (HHS). Re-validated: March 27, 2008. Retrieved 27 Oct 2008.
+^ a b Geoffrey Elliott (2004) Global Business Information Technology: an integrated systems approach. Pearson Education. p.87.
+^ Wasserfallmodell &gt; Entstehungskontext, Markus Rerych, Institut für Gestaltungs- und Wirkungsforschung, TU-Wien. Accessed on line November 28, 2007.
+^ ieeecomputersociety.org
+^ Barry Boehm (1996., "A Spiral Model of Software Development and Enhancement". In: ACM SIGSOFT Software Engineering Notes (ACM) 11(4):14-24, August 1986
+^ Richard H. Thayer, Barry W. Boehm (1986). Tutorial: software engineering project management. Computer Society Press of the IEEE. p.130
+^ Barry W. Boehm (2000). Software cost estimation with Cocomo II: Volume 1.
+^ a b Whitten, Jeffrey L.; Lonnie D. Bentley, Kevin C. Dittman. (2003). Systems Analysis and Design Methods. 6th edition. ISBN 0-256-19906-X.
+^ McConnell, Steve. "7: Lifecycle Planning". Rapid Development. Redmond, Washington: Microsoft Press. p.&#160;140.&#160;
+^ Kent Beck, Extreme Programming, 2000.
+
+
+External links[edit]
+
+
+
+Wikimedia Commons has media related to Software development methodology.
+
+
+
+Selecting a development approach at cms.hhs.gov.
+Gerhard Fischer, "The Software Technology of the 21st Century: From Software Reuse to Collaborative Software Design", 2001
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Software engineering
+
+
+
+
+
+
+Fields
+
+
+
+Computer programming
+Requirements engineering
+Software deployment
+Software design
+Software maintenance
+Software testing
+Systems analysis
+Formal methods
+
+
+
+
+
+
+
+
+Concepts
+
+
+
+Data modeling
+Enterprise architecture
+Functional specification
+Modeling language
+Orthogonality
+Programming paradigm
+Software
+Software archaeology
+Software architecture
+Software configuration management
+Software development methodology
+Software development process
+Software quality
+Software quality assurance
+Software verification and validation
+Structured analysis
+
+
+
+
+
+
+
+
+Orientations
+
+
+
+Agile
+Aspect-oriented
+Object orientation
+Ontology
+Service orientation
+SDLC
+
+
+
+
+
+
+
+
+Models
+
+
+
+
+
+Developmental
+
+
+
+
+Agile
+EUP
+Executable UML
+Incremental model
+Iterative model
+Prototype model
+RAD
+UP
+
+
+
+
+
+
+
+
+
+Other
+
+
+
+
+SPICE
+CMMI
+Data model
+ER model
+Function model
+Information model
+Metamodeling
+Object model
+Systems model
+View model
+
+
+
+
+
+
+
+
+
+Languages
+
+
+
+
+IDEF
+UML
+SysML
+
+
+
+
+
+
+
+
+
+
+
+
+Software
+engineers
+
+
+
+
+Kent Beck
+Grady Booch
+Fred Brooks
+Barry Boehm
+Ward Cunningham
+Tom DeMarco
+Edsger W. Dijkstra
+Martin Fowler
+C. A. R. Hoare
+Watts Humphrey
+Michael A. Jackson
+Ivar Jacobson
+Stephen J. Mellor
+Bertrand Meyer
+David Parnas
+Winston W. Royce
+James Rumbaugh
+Niklaus Wirth
+Edward Yourdon
+Victor Basili
+
+
+
+
+
+
+
+
+Related fields
+
+
+
+Computer science
+Computer engineering
+Project management
+Risk management
+Systems engineering
+
+
+
+
+
+
+
+
+
+
+
+ Category
+ Commons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sub-disciplines of computing
+
+
+
+
+
+
+
+
+
+Hardware
+Software
+Firmware
+
+
+
+
+
+
+
+
+Information system
+
+
+
+Information security
+Multimedia database
+Intelligent database
+Big data
+Knowledge-based systems
+Recommender System
+Geographic information systems
+Decision support system
+Data engineering
+Knowledge engineering
+Fuzzy logic
+Data analysis
+System analysis and design
+Project management
+Knowledge management
+Data integration
+High-performance computing
+Semantic web
+
+
+
+
+
+
+
+
+Computer science
+
+
+
+Database management system
+Communications system
+Computational geometry
+Machine learning
+Data mining
+Parallel programming
+Coding theory
+Theory of computation
+Constraint programming
+Computational biology (Bioinformatics)
+Design and analysis of algorithms
+Information retrieval
+Computational science
+Symbolic computation
+Distributed computing
+Evolutionary computation
+Natural computation
+Combinatorial optimization
+Parallel processing
+
+
+
+
+
+
+
+
+Computer engineering
+
+
+
+Multimedia
+Satellite navigation (GNSS)
+Embedded systems
+Real-time computing
+Computer architecture
+Pair programming
+System programming
+Neural networks
+Speech recognition
+Signal analysis
+Computer vision (Visual computing)
+IC Design
+Voice over IP
+Speech synthesis
+Human-Computer Interaction
+Microprocessor
+Image processing
+Natural language processing
+Speech processing
+Digital signal processing
+
+
+
+
+
+
+
+
+Software engineering
+
+
+
+Software maintenance
+Formal methods
+Software quality
+Software quality assurance
+Measurement Software
+Fault-tolerant software
+Software testing
+Enterprise architecture
+Software architecture
+Software engineering economics
+Agile software development
+Software design pattern
+Software modelling
+Systems analyst
+Object-oriented analysis and design (UML)
+Requirements analysis
+Software development
+Software configuration management
+Software project management
+Software engineering management
+Software development process (Software release life cycle)
+Software design
+Software deployment
+Software enhancement
+
+
+
+
+
+
+
+
+Computer network
+
+
+
+Network security
+Secure electronic transaction
+Network Performance Evaluation (QoS)
+Cloud computing
+Routing
+Distributed systems (Distributed database)
+Information theory
+Wireless network
+Next-generation network
+Cellular network
+Optical transport network (Optical networking)
+Cryptography
+Network simulation
+Pattern recognition
+Network administrators
+Network equipment
+Network design
+Ubiquitous and Mobile computing
+Data center
+Mobile communications
+Digital communication
+Communications satellite
+Telecommunication (Telecommunications network)
+
+
+
+
+
+
+
+
+Business informatics
+
+
+
+ITIL
+ITSM
+Enterprise resource planning
+Electronic business
+Business intelligence
+Human Resources Development
+Security management
+Configuration management
+Technology management
+Power management
+Service management
+Project management
+Systems management
+Network management
+Content management
+Customer relationship management
+Incident management
+Asset management
+Integrated management
+Communications management
+System administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Software_development_process&amp;oldid=691240018"					
+				Categories: Software development processFormal methodsMethodologySoftware engineeringHidden categories: Articles to be merged from August 2014All articles to be mergedArticles needing additional references from December 2010All articles needing additional referencesAll articles with unsourced statementsArticles with unsourced statements from August 2015Articles with unsourced statements from November 2012Commons category with local link same as on Wikidata				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةCatalàČeštinaDanskDeutschΕλληνικάEspañolفارسیGalego한국어हिन्दीBahasa IndonesiaItalianoעבריתBasa JawaLietuviųNederlands日本語Norsk bokmålOʻzbekcha/ўзбекчаPolskiPortuguêsРусскийShqipکوردیی ناوەندیSvenskaதமிழ்TürkçeTiếng Việt中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 18 November 2015, at 15:19.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											

@@ -1,0 +1,628 @@
+
+
+
+		
+		
+		
+			
+
+							
+						
+
+			Computational biology
+									
+									From Wikipedia, the free encyclopedia
+								
+												
+					Jump to:					navigation, 					search
+				
+				Computational biology involves the development and application of data-analytical and theoretical methods, mathematical modeling and computational simulation techniques to the study of biological, behavioral, and social systems.[1] The field is broadly defined and includes foundations in computer science, applied mathematics, animation, statistics, biochemistry, chemistry, biophysics, molecular biology, genetics, genomics, ecology, evolution, anatomy, neuroscience, and visualization.[2]
+Computational biology is different from biological computation, which is a subfield of computer science and computer engineering using bioengineering and biology to build computers, but is similar to bioinformatics, which is an interdisciplinary science using computers to store and process biological data.
+
+
+
+Contents
+
+
+1 Introduction
+2 Subfields
+
+2.1 Computational biomodeling
+2.2 Computational genomics (Computational genetics)
+2.3 Computational neuroscience
+2.4 Computational pharmacology
+2.5 Computational evolutionary biology
+2.6 Cancer computational biology
+
+
+3 Software and tools
+
+3.1 Open source software
+
+
+4 Conferences
+5 Journals
+6 Related fields
+7 See also
+8 References
+9 External links
+
+
+
+Introduction[edit]
+Computational Biology, sometimes referred to as bioinformatics, is the science of using biological data to develop algorithms and relations among various biological systems. Prior to the advent of computational biology, biologists were unable to have access to large amounts of data. Researchers were able to develop analytical methods for interpreting biological information, but were unable to share them quickly among colleagues.[3]
+Bioinformatics began to develop in the early 1970s. It was considered the science of analyzing informatics processes of various biological systems. At this time, research in artificial intelligence was using network models of the human brain in order to generate new algorithms. This use of biological data to develop other fields pushed biological researchers to revisit the idea of using computers to evaluate and compare large data sets. By 1982, information was being shared amongst researchers through the use of punch cards. The amount of data being shared began to grow exponentially by the end of the 1980s. This required the development of new computational methods in order to quickly analyze and interpret relevant information.[3]
+Since the late 1990s, computational biology has become an important part of developing emerging technologies for the field of biology.[4] The terms computational biology and evolutionary computation have a similar name, but are not to be confused. Unlike computational biology, evolutionary computation is not concerned with modeling and analyzing biological data. It instead creates algorithms based on the ideas of evolution across species. Sometimes referred to as genetic algorithms, the research of this field can be applied to computational biology. While evolutionary computation is not inherently a part of computational biology, Computational evolutionary biology is a subfield of it.[5]
+Computational biology has been used to help sequence the human genome, create accurate models of the human brain, and assist in modeling biological systems.[3]
+Subfields[edit]
+Computational biomodeling[edit]
+Main article: Modelling biological systems
+Computational biomodeling is a field concerned with building computer models of biological systems. Computational biomodeling aims to develop and use visual simulations in order to assess the complexity of biological systems. This is accomplished through the use of specialized algorithms, and visualization software. These models allow for prediction of how systems will react under different environments. This is useful for determining if a system is robust. A robust biological system is one that “maintain their state and functions against external and internal perturbations”,[6] which is essential for a biological system to survive. Computational biomodeling generates a large archive of such data, allowing for analysis from multiple users. While current techniques focus on small biological systems, researchers are working on approaches that will allow for larger networks to be analyzed and modeled. A majority of researchers believe that this will be essential in developing modern medical approaches to creating new drugs and gene therapy.[6]
+Computational genomics (Computational genetics)[edit]
+
+
+
+
+A partially sequenced genome.
+
+
+Main article: Computational genomics
+Computational genomics is a field within genomics which studies the genomes of cells and organisms. It is often referred to as Computational and Statistical Genetics. The Human Genome Project is one example of computational genomics. This project looks to sequence the entire human genome into a set of data. Once fully implemented, this could allow for doctors to analyze the genome of an individual patient.[7] This opens the possibility of personalized medicine, prescribing treatments based on an individual’s pre-existing genetic patterns. This project has created many similar programs. Researchers are looking to sequence the genomes of animals, plants, bacteria, and all other types of life.[8]
+One of the main tools used in comparing the genomes is homology. Homology is observing the same organ across species and seeing what different functions they have. Research suggests that between 80 to 90% of sequences genes can be identified this way. In order to detect potential cures from genomes, comparisons between genome sequences of related species and mRNA sequences are drawn. This method is not completely accurate however. It may be necessary to include the genome of a primate in order to improve current methods of unique gene therapy.[8]
+This field is still in development. An untouched project in the development in computational genomics is analyzing intergenic regions. Studies show that roughly 97% of the human genome consists of these regions. There are no current methods for determining possible implications of these sequences. Computational genomics will look to expand research in this area and develop new numerical and computational approaches to sequencing these regions.[8]
+Computational neuroscience[edit]
+Main article: Computational neuroscience
+Computational neuroscience is the study of brain function in terms of the information processing properties of the structures that make up the nervous system. It is a subset of the field of neuroscience, and looks to analyze brain data to create practical applications.[9] It looks to model the brain in order to examine specific types aspects of the neurological system. Various types of models of the brain include:
+
+Realistic Brain Models: These models look to represent every aspect of the brain, including as much detail at the cellular level as possible. Realistic models provide the most information about the brain, but also have the largest margin for error. More variables in a brain model create the possibility for more error to occur. These models do not account for parts of the cellular structure that scientists do not know about. Realistic brain models are the most computationally heavy and the most expensive to implement.[10]
+Simplifying Brain Models: These models look to limit the scope of a model in order to assess a specific physical property of the neurological system. This allows for the intensive computational problems to be solved, and reduces the amount of potential error from a realistic brain model.[10]
+
+It is the work of computational neuroscientists to improve the algorithms and data structures currently used to increase the speed of such calculations.
+Computational pharmacology[edit]
+Computational pharmacology (from a computational biology perspective) is “the study of the effects of genomic data to find links between specific genotypes and diseases and then screening drug data”.[11] The pharmaceutical industry requires a shift in methods to analyze drug data. Pharmacists were able to use Microsoft Excel to compare chemical and genomic data related to the effectiveness of drugs. However, the industry has reached what is referred to as the Excel barricade. This arises from the limited number of cells accessible on a spreadsheet. This development led to the need for computational pharmacology. Scientists and researcher develop computational methods to analyze these massive data sets. This allows for an efficient comparison between the notable data points and provide for a more accurate drugs to be developed.[12]
+Analysts project that if major medications fail due to patents, that computational biology will be necessary to replace current drugs on the market. Doctoral students in computational biology are being encouraged to pursue careers in industry rather than take Post-Doctoral positions. This is a direct result of major pharmaceutical companies needing more qualified analysts of the large data sets required for producing new drugs.[12]
+Computational evolutionary biology[edit]
+Computational biology has assisted the field of evolutionary biology in many capacities. This includes:
+
+Using DNA data to evaluate the evolutionary change of a species over time.
+Taking the results of computational genomics in order to evaluate the evolution of genetic disorders within a species.
+Build models of evolutionary systems in order to predict what types of changes will occur in the future.[13]
+
+One method of representing this subfield of computational biology is through the use of trees. A tree is a data structure that splits nodes based on a predefined rule. This tree, developed by M.R. Hezinger, V. King, and T.Warnow implements traversal of evolutionary information in less than polynomial time. This is a particularly quick method, as opposed to some modern methods that take longer than O(n^2) time. These trees have multiple applications to questions in computational evolutionary biology.[14]
+Cancer computational biology[edit]
+Cancer computational biology is a field that aims to determine the future mutations in cancer through an algorithmic approach to analyzing data. Research in this field has led to the use of high-throughput measurement. High throughput measurement allows for the gathering of millions of data points using robotics and other sensing devices. This data is collected from DNA, RNA, and other biological structures. Areas of focus include determining the characteristics of tumors, analyzing molecules that are deterministic in causing cancer, and understanding how the human genome relates to the causation of tumors and cancer.[15]
+Software and tools[edit]
+Computational Biologists use a wide range of software. These range from command line programs to graphical and web-based programs.
+Open source software[edit]
+Open source software provides a platform to develop computational biological methods. Specifically, open source means that anybody can access software developed in research. PLOS cites four main reasons for the use of open source software including:
+
+Reproducibility: This allows for researchers to use the exact methods used to calculate the relations between biological data.
+Faster Development: developers and researchers do not have to reinvent existing code for minor tasks. Instead they can use pre-existing programs to save time on the development and implementation of larger projects.
+Increased quality: Having input from multiple researchers studying the same topic provides a layer of assurance that errors will not be in the code.
+Long-term availability: Open source programs are not tied to any businesses or patents. This allows for them to be posted to multiple web pages and ensure that they are available in the future.[16]
+
+Conferences[edit]
+There are several large conferences that are concerned with computational biology. Some notable examples are Intelligent Systems for Molecular Biology (ISMB), European Conference on Computational Biology (ECCB) and Research in Computational Molecular Biology (RECOMB). MIT hosts a list of upcoming computational biology conferences including ISMB and RECOMB.[17]
+Journals[edit]
+Main article: List of bioinformatics journals
+There are numerous journals dedicated to computational biology. Some notable examples include Journal of Computational Biology and PLoS Computational Biology. The PLOS computational biology journal is a peer-reviewed journal that has many notable research projects in the field of computational biology. They provide reviews on software, tutorials for open source software, and display information on upcoming computational biology conferences. PLOS Computational Biology is an open access journal. The publication may be openly used provided the author is cited.[18] Recently a new open access journal Computational Molecular Biology was launched.
+Related fields[edit]
+Computational biology, bioinformatics and mathematical biology are all interdisciplinary approaches to the life sciences that draw from quantitative disciplines such as mathematics and information science. The NIH describes computational/mathematical biology as the use of computational/mathematical approaches to address theoretical and experimental questions in biology and, by contrast, bioinformatics as the application of information science to understand complex life-sciences data.[1]
+Specifically, the NIH defines
+
+Computational biology: The development and application of data-analytical and theoretical methods, mathematical modeling and computational simulation techniques to the study of biological, behavioral, and social systems.[1]
+
+
+Bioinformatics: Research, development, or application of computational tools and approaches for expanding the use of biological, medical, behavioral or health data, including those to acquire, store, organize, archive, analyze, or visualize such data.[1]
+
+While each field is distinct, there may be significant overlap at their interface.[1]
+See also[edit]
+
+
+International Society for Computational Biology
+List of bioinformatics institutions
+List of biological databases
+Bioinformatics
+Biostatistics
+Computational chemistry
+Computational science
+Computer simulation
+Mathematical biology
+Molecular modeling
+Network biology
+Structural genomics
+Synthetic biology
+Systems biology
+
+
+References[edit]
+
+
+^ a b c d e "NIH working definition of bioinformatics and computational biology" (PDF). Biomedical Information Science and Technology Initiative. 17 July 2000. Retrieved 18 August 2012.&#160;
+^ "About the CCMB". Center for Computational Molecular Biology. Retrieved 18 August 2012.&#160;
+^ a b c Hogeweg, Paulien (7 March 2011). "The Roots of Bioinformatics in Theoretical Biology". PLOS Computational Biology. 3 7.&#160;
+^ Bourne, Philip. "Rise and Demise of Bioinformatics? Promise and Progress".&#160;
+^ Foster, James (June 2001). "ionary Computation". Nature Reviews.&#160;
+^ a b Kitano, Hiroaki (14 November 2002). "Computational systems biology". Nature 420 (6912): 206–10. doi:10.1038/nature01254. PMID&#160;12432404.&#160;
+^ "Genome Sequencing to the Rest of Us". Scientific American.&#160;
+^ a b c Koonin, Eugene (6 March 2001). "Computational Genomics" 11 (5). pp.&#160;155–158. doi:10.1016/S0960-9822(01)00081-1. PMID&#160;11267880.&#160;
+^ "BU Neuroscience".&#160;
+^ a b Sejnowski, Terrence; Christof Koch; Patricia S. Churchland (9 September 1988). "Computational Neuroscience". 4871 241.&#160;
+^ Price, Michael. "Computational Biologists: The Next Pharma Scientists?".&#160;
+^ a b Jessen, Walter. "Pharma’s shifting strategy means more jobs for computational biologists".&#160;
+^ Antonio Carvajal-Rodríguez (2012). "Simulation of Genes and Genomes Forward in Time". Current Genomics (Bentham Science Publishers Ltd.) 11 (1): 58–61. doi:10.2174/138920210790218007. PMC&#160;2851118. PMID&#160;20808525.&#160;
+^ Hezinger, M.; V. King; T. Warnow (May 1999). "Constructing a Tree from Homeomorphic Subtrees, with Applications to Computational Evolutionary Biology". Algorithmica 24 (1). doi:10.1007/pl00009268.&#160;
+^ Yakhini, Zohar. "Cancer Computational Biology". BMC.&#160;
+^ "PLOS Computational Biology".&#160;
+^ "Computational Biology/Bioinformatics Conferences".&#160;
+^ "PLOS Computational Biology".&#160;
+
+
+External links[edit]
+
+bioinformatics.org
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Health informatics
+
+
+
+
+
+
+Health information management
+
+
+
+Clinic management system
+Computerized physician order entry
+DICOM
+Electronic health record
+Health information technology
+Hospital information system
+Personal health record
+Regional Health Information Organization
+
+
+
+
+
+
+
+
+Subdisciplines
+
+
+
+Bioinformatics
+Computational biology
+Consumer health informatics
+Public health informatics
+Translational medicine
+
+
+
+
+
+
+
+
+Medical classification
+
+
+
+Continuity of Care Record
+HRHIS
+ICD
+ISO 27799
+LOINC
+
+
+
+
+
+
+
+
+Professional organizations
+
+
+
+American Association
+Australasian College
+Brazilian Society
+European Federation
+Indian Association
+International Association
+
+
+
+
+
+
+
+
+Other concepts
+
+
+
+Health Level 7
+List of medical and health informatics journals
+openEHR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+t
+e
+
+
+Sub-disciplines of computing
+
+
+
+
+
+
+
+
+
+Hardware
+Software
+Firmware
+
+
+
+
+
+
+
+
+Information system
+
+
+
+Information security
+Multimedia database
+Intelligent database
+Big data
+Knowledge-based systems
+Recommender System
+Geographic information systems
+Decision support system
+Data engineering
+Knowledge engineering
+Fuzzy logic
+Data analysis
+System analysis and design
+Project management
+Knowledge management
+Data integration
+High-performance computing
+Semantic web
+
+
+
+
+
+
+
+
+Computer science
+
+
+
+Database management system
+Communications system
+Computational geometry
+Machine learning
+Data mining
+Parallel programming
+Coding theory
+Theory of computation
+Constraint programming
+Computational biology (Bioinformatics)
+Design and analysis of algorithms
+Information retrieval
+Computational science
+Symbolic computation
+Distributed computing
+Evolutionary computation
+Natural computation
+Combinatorial optimization
+Parallel processing
+
+
+
+
+
+
+
+
+Computer engineering
+
+
+
+Multimedia
+Satellite navigation (GNSS)
+Embedded systems
+Real-time computing
+Computer architecture
+Pair programming
+System programming
+Neural networks
+Speech recognition
+Signal analysis
+Computer vision (Visual computing)
+IC Design
+Voice over IP
+Speech synthesis
+Human-Computer Interaction
+Microprocessor
+Image processing
+Natural language processing
+Speech processing
+Digital signal processing
+
+
+
+
+
+
+
+
+Software engineering
+
+
+
+Software maintenance
+Formal methods
+Software quality
+Software quality assurance
+Measurement Software
+Fault-tolerant software
+Software testing
+Enterprise architecture
+Software architecture
+Software engineering economics
+Agile software development
+Software design pattern
+Software modelling
+Systems analyst
+Object-oriented analysis and design (UML)
+Requirements analysis
+Software development
+Software configuration management
+Software project management
+Software engineering management
+Software development process (Software release life cycle)
+Software design
+Software deployment
+Software enhancement
+
+
+
+
+
+
+
+
+Computer network
+
+
+
+Network security
+Secure electronic transaction
+Network Performance Evaluation (QoS)
+Cloud computing
+Routing
+Distributed systems (Distributed database)
+Information theory
+Wireless network
+Next-generation network
+Cellular network
+Optical transport network (Optical networking)
+Cryptography
+Network simulation
+Pattern recognition
+Network administrators
+Network equipment
+Network design
+Ubiquitous and Mobile computing
+Data center
+Mobile communications
+Digital communication
+Communications satellite
+Telecommunication (Telecommunications network)
+
+
+
+
+
+
+
+
+Business informatics
+
+
+
+ITIL
+ITSM
+Enterprise resource planning
+Electronic business
+Business intelligence
+Human Resources Development
+Security management
+Configuration management
+Technology management
+Power management
+Service management
+Project management
+Systems management
+Network management
+Content management
+Customer relationship management
+Incident management
+Asset management
+Integrated management
+Communications management
+System administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+						Retrieved from "https://en.wikipedia.org/w/index.php?title=Computational_biology&amp;oldid=690898761"					
+				Categories: BioinformaticsComputational biology				
+							
+		
+		
+			Navigation menu
+
+			
+									
+						Personal tools
+						
+							Create accountLog in						
+					
+									
+										
+						Namespaces
+						
+															Article
+															Talk
+													
+					
+										
+												
+							Variants
+						
+
+						
+							
+															
+						
+					
+									
+				
+										
+						Views
+						
+															Read
+															Edit
+															View history
+													
+					
+										
+						More
+
+						
+							
+															
+						
+					
+										
+						
+							Search
+						
+
+						
+							
+														
+						
+					
+									
+			
+			
+				
+						
+			Navigation
+
+			
+									
+						Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store					
+							
+		
+			
+			Interaction
+
+			
+									
+						HelpAbout WikipediaCommunity portalRecent changesContact page					
+							
+		
+			
+			Tools
+
+			
+									
+						What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page					
+							
+		
+			
+			Print/export
+
+			
+									
+						Create a bookDownload as PDFPrintable version					
+							
+		
+			
+			Languages
+
+			
+									
+						العربيةCatalàEspañol한국어Ido日本語PortuguêsРусскийSimple EnglishSvenskaУкраїнськаTiếng Việt中文					
+				Edit links			
+		
+				
+		
+		
+							
+											 This page was last modified on 16 November 2015, at 11:10.
+											Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+									
+							
+											Privacy policy
+											About Wikipedia
+											Disclaimers
+											Contact Wikipedia
+											Developers
+											
